@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-10-14T14:11:33Z",
- "generated_at_taipei": "2026-10-14 22:11",
+ "generated_at_utc": "2026-10-14T14:13:29Z",
+ "generated_at_taipei": "2026-10-14 22:13",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -178,23 +178,22 @@
    "tw_bar_is_intraday": false,
    "us_bar_is_intraday": true
   },
-  "fx/usdtwd": {
-   "status": "fail",
-   "notes": [
-    "台銀 CSV: 0 列（HTTP 200 '<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\"><title>Challeng'）",
-    "台銀網頁表格: 0 列（HTTP 200 1836 bytes）"
-   ]
+  "fx/usdtwd_mid": {
+   "status": "ok",
+   "source": "Yahoo TWD=X 收盤（市場中間價，不是台銀即期賣出）",
+   "rows": 518,
+   "first": "2024-10-14",
+   "last": "2026-10-14",
+   "last_rate": 32.124
   }
  },
- "errors": [
-  "FX: 台銀 CSV: 0 列（HTTP 200 '<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\"><title>Challeng'）；台銀網頁表格: 0 列（HTTP 200 1836 bytes）"
- ],
+ "errors": [],
  "us_cutoff_ny": "2026-10-13",
  "tw_cutoff_taipei": "2026-10-14",
  "summary": {
-  "ok": 15,
+  "ok": 16,
   "stale": 0,
-  "fail": 1
+  "fail": 0
  },
  "cross_check_conflicts": []
 }
