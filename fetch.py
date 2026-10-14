@@ -6,7 +6,7 @@
 輸出：
   data/us/<代號>.csv       date,volume,open,high,low,close（無表頭，只含已收盤的交易日）
   data/tw/<代號>_norm.csv  同上（只含已收盤的交易日；盤中價由排程任務另外抓）
-  data/fx/usdtwd.csv       date,rate（台銀美元即期賣出，近 6 個月）
+  data/fx/usdtwd_mid.csv   date,rate（Yahoo 美元兌台幣收盤，市場中間價；台銀即期賣出由排程任務自己抓）
   data/tv/snapshot.json    TradingView 日線技術面快照（radar.py 使用）
   data/meta.json           每個資料集的來源、列數、日期、核對結果與錯誤
 
@@ -340,73 +340,27 @@ def fetch_tw_quotes(cfg):
 
 
 # ---------------------------------------------------------------- 台銀匯率
-def decode(raw):
-    for enc in ("utf-8-sig", "cp950", "big5"):
-        try:
-            return raw.decode(enc)
-        except UnicodeDecodeError:
-            continue
-    return raw.decode("utf-8", "replace")
-
-
-def bot_csv():
-    """台銀歷史匯率 CSV：每列含「本行賣出」字樣，其後依序是 現金、即期。"""
-    status, raw = http("https://rate.bot.com.tw/xrt/flcsv/0/L6M/USD")
-    text = decode(raw)
-    rows = {}
-    for r in csv.reader(io.StringIO(text)):
-        cells = [c.strip() for c in r]
-        day = next((c for c in cells if re.fullmatch(r"\d{8}", c)), None)
-        if not day or "本行賣出" not in cells:
-            continue
-        k = cells.index("本行賣出")
-        spot = num(cells[k + 2]) if len(cells) > k + 2 else None
-        if spot:
-            rows[f"{day[:4]}-{day[4:6]}-{day[6:8]}"] = spot
-    return rows, f"HTTP {status} {text[:160]!r}"
-
-
-def bot_html():
-    """台銀歷史匯率網頁表格：日期、幣別、現金買入、現金賣出、即期買入、即期賣出。"""
-    status, raw = http("https://rate.bot.com.tw/xrt/quote/l6m/USD")
-    text = decode(raw)
-    rows = {}
-    for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", text, re.S):
-        cells = [re.sub(r"<[^>]+>|&nbsp;", " ", c).strip() for c in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)]
-        cells = [re.sub(r"\s+", " ", c) for c in cells]
-        if len(cells) < 6:
-            continue
-        m = re.search(r"(\d{4})/(\d{2})/(\d{2})", cells[0])
-        spot = num(cells[5])
-        if m and spot:
-            rows[f"{m.group(1)}-{m.group(2)}-{m.group(3)}"] = spot
-    return rows, f"HTTP {status} {len(text)} bytes"
-
-
 def fetch_fx():
-    path = os.path.join(DATA, "fx", "usdtwd.csv")
-    rows, src, notes = {}, None, []
-    for name, fn in (("台銀 CSV", bot_csv), ("台銀網頁表格", bot_html)):
-        try:
-            got, note = fn()
-            notes.append(f"{name}: {len(got)} 列（{note}）")
-            if len(got) >= 20:
-                rows, src = got, name
-                break
-        except Exception as ex:  # noqa: BLE001
-            notes.append(f"{name}: {ex}")
-    if not rows:
-        META["errors"].append("FX: " + "；".join(notes))
-        META["datasets"]["fx/usdtwd"] = {"status": "stale" if os.path.exists(path) else "fail", "notes": notes}
-        return
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", newline="") as f:
-        w = csv.writer(f)
-        for d in sorted(rows):
-            w.writerow([d, rows[d]])
-    last = max(rows)
-    META["datasets"]["fx/usdtwd"] = {"status": "ok", "source": src, "rows": len(rows), "first": min(rows),
-                                     "last": last, "last_rate": rows[last], "notes": notes}
+    """台銀網站會對 GitHub 伺服器回傳防機器人驗證頁，不嘗試繞過。
+    這裡改抓 Yahoo 的 TWD=X（市場中間價）當備援；排程任務仍以台銀即期賣出為主。"""
+    path = os.path.join(DATA, "fx", "usdtwd_mid.csv")
+    try:
+        raw = yahoo_daily("TWD=X")
+        rows = {d: r[5] for d, r in raw.items() if r[5]}
+        if len(rows) < 100:
+            raise RuntimeError(f"只有 {len(rows)} 列")
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "w", newline="") as f:
+            w = csv.writer(f)
+            for d in sorted(rows):
+                w.writerow([d, round(rows[d], 4)])
+        last = max(rows)
+        META["datasets"]["fx/usdtwd_mid"] = {
+            "status": "ok", "source": "Yahoo TWD=X 收盤（市場中間價，不是台銀即期賣出）",
+            "rows": len(rows), "first": min(rows), "last": last, "last_rate": round(rows[last], 4)}
+    except Exception as ex:  # noqa: BLE001
+        META["errors"].append(f"FX yahoo: {ex}")
+        META["datasets"]["fx/usdtwd_mid"] = {"status": "stale" if os.path.exists(path) else "fail"}
 
 
 # ---------------------------------------------------------------- TradingView 技術面快照

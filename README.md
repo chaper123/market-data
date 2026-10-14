@@ -21,7 +21,7 @@ GitHub 的排程常延遲 5～30 分鐘。需要立刻更新時，到 Actions �
 | `data/us/<代號>.csv` | 美股日線，已收盤的交易日 | 鉅亨網 / Yahoo |
 | `data/tw/<代號>_norm.csv` | 台股日線，已收盤的交易日 | 證交所、櫃買中心 / 鉅亨網 |
 | `data/tw/quotes.json` | 抓取當下的盤中快照（備援用） | 鉅亨網 |
-| `data/fx/usdtwd.csv` | 台銀美元即期賣出，近 6 個月 | 台灣銀行 |
+| `data/fx/usdtwd_mid.csv` | 美元兌台幣收盤（市場中間價），約 2 年。台銀網站擋 GitHub 伺服器，即期賣出由排程任務自己抓，這份是備援 | Yahoo |
 | `data/tv/snapshot.json` | TradingView 日線技術面快照 | TradingView scanner |
 | `data/radar.json`、`data/radar.md` | 技術面雷達判讀（結構、位置、訊號矛盾、關鍵價位） | 由 `radar.py` 計算 |
 | `data/meta.json` | 每個資料集的狀態、列數、最後日期、雙來源核對結果、錯誤 | — |
