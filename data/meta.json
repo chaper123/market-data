@@ -1,0 +1,195 @@
+{
+ "generated_at_utc": "2026-10-14T14:08:10Z",
+ "generated_at_taipei": "2026-10-14 22:08",
+ "datasets": {
+  "us/VOO": {
+   "status": "ok",
+   "source": "cnyes",
+   "rows": 251,
+   "first": "2025-10-14",
+   "last": "2026-10-13",
+   "last_close": 715.2,
+   "prev_close": 715.13,
+   "prev_close_field21": 715.2,
+   "tz_used": "UTC",
+   "cross_check": "2026-10-13 收盤 715.2 vs yahoo 715.2000122070312（差 -0.00%）",
+   "cross_check_ok": true
+  },
+  "us/GOOGL": {
+   "status": "ok",
+   "source": "cnyes",
+   "rows": 251,
+   "first": "2025-10-14",
+   "last": "2026-10-13",
+   "last_close": 353.78,
+   "prev_close": 352.72,
+   "prev_close_field21": 353.78,
+   "tz_used": "UTC",
+   "cross_check": "2026-10-13 收盤 353.78 vs yahoo 353.7799987792969（差 +0.00%）",
+   "cross_check_ok": true
+  },
+  "us/NVDA": {
+   "status": "ok",
+   "source": "cnyes",
+   "rows": 251,
+   "first": "2025-10-14",
+   "last": "2026-10-13",
+   "last_close": 228.52,
+   "prev_close": 226.32,
+   "prev_close_field21": 228.52,
+   "tz_used": "UTC",
+   "cross_check": "2026-10-13 收盤 228.52 vs yahoo 228.52000427246094（差 -0.00%）",
+   "cross_check_ok": true
+  },
+  "us/TSLA": {
+   "status": "ok",
+   "source": "cnyes",
+   "rows": 251,
+   "first": "2025-10-14",
+   "last": "2026-10-13",
+   "last_close": 375.23,
+   "prev_close": 378.03,
+   "prev_close_field21": 375.23,
+   "tz_used": "UTC",
+   "cross_check": "2026-10-13 收盤 375.23 vs yahoo 375.2300109863281（差 -0.00%）",
+   "cross_check_ok": true
+  },
+  "us/SPCX": {
+   "status": "ok",
+   "source": "cnyes",
+   "rows": 85,
+   "first": "2026-06-12",
+   "last": "2026-10-13",
+   "last_close": 156.54,
+   "prev_close": 163.42,
+   "prev_close_field21": 156.54,
+   "tz_used": "UTC",
+   "cross_check": "2026-10-13 收盤 156.54 vs yahoo 156.5399932861328（差 +0.00%）",
+   "cross_check_ok": true
+  },
+  "us/AAPL": {
+   "status": "ok",
+   "source": "cnyes",
+   "rows": 251,
+   "first": "2025-10-14",
+   "last": "2026-10-13",
+   "last_close": 341.27,
+   "prev_close": 340.97,
+   "prev_close_field21": 341.27,
+   "tz_used": "UTC",
+   "cross_check": "2026-10-13 收盤 341.27 vs yahoo 341.2699890136719（差 +0.00%）",
+   "cross_check_ok": true
+  },
+  "us/IAUM": {
+   "status": "ok",
+   "source": "cnyes",
+   "rows": 251,
+   "first": "2025-10-14",
+   "last": "2026-10-13",
+   "last_close": 41.49,
+   "prev_close": 41.54,
+   "prev_close_field21": 41.49,
+   "tz_used": "UTC",
+   "cross_check": "2026-10-13 收盤 41.49 vs yahoo 41.4900016784668（差 -0.00%）",
+   "cross_check_ok": true
+  },
+  "us/ARKK": {
+   "status": "ok",
+   "source": "cnyes",
+   "rows": 251,
+   "first": "2025-10-14",
+   "last": "2026-10-13",
+   "last_close": 87.17,
+   "prev_close": 88.02,
+   "prev_close_field21": 87.17,
+   "tz_used": "UTC",
+   "cross_check": "2026-10-13 收盤 87.17 vs yahoo 87.16999816894531（差 +0.00%）",
+   "cross_check_ok": true
+  },
+  "us/ARKQ": {
+   "status": "ok",
+   "source": "cnyes",
+   "rows": 251,
+   "first": "2025-10-14",
+   "last": "2026-10-13",
+   "last_close": 120.11,
+   "prev_close": 121.6,
+   "prev_close_field21": 120.11,
+   "tz_used": "UTC",
+   "cross_check": "2026-10-13 收盤 120.11 vs yahoo 120.11000061035156（差 -0.00%）",
+   "cross_check_ok": true
+  },
+  "us/ARKX": {
+   "status": "ok",
+   "source": "cnyes",
+   "rows": 251,
+   "first": "2025-10-14",
+   "last": "2026-10-13",
+   "last_close": 31.44,
+   "prev_close": 31.76,
+   "prev_close_field21": 31.44,
+   "tz_used": "UTC",
+   "cross_check": "2026-10-13 收盤 31.44 vs yahoo 31.440000534057617（差 -0.00%）",
+   "cross_check_ok": true
+  },
+  "tw/009816": {
+   "status": "ok",
+   "source": "TWSE",
+   "rows": 133,
+   "first": "2026-04-01",
+   "last": "2026-10-14",
+   "last_close": 16.65,
+   "prev_close": 16.61,
+   "cross_check": "2026-10-14 收盤 16.65 vs cnyes 16.65（差 +0.00%）",
+   "cross_check_ok": true
+  },
+  "tw/00981A": {
+   "status": "ok",
+   "source": "TWSE",
+   "rows": 133,
+   "first": "2026-04-01",
+   "last": "2026-10-14",
+   "last_close": 31.19,
+   "prev_close": 31.06,
+   "cross_check": "2026-10-14 收盤 31.19 vs cnyes 31.19（差 +0.00%）",
+   "cross_check_ok": true
+  },
+  "tw/00411A": {
+   "status": "ok",
+   "source": "cnyes",
+   "rows": 33,
+   "first": "2026-08-26",
+   "last": "2026-10-14",
+   "last_close": 10.75,
+   "prev_close": 10.72,
+   "prev_close_field21": 10.72,
+   "tz_used": "Asia/Taipei",
+   "cross_check": "TPEx 無資料，未核對"
+  },
+  "tw/quotes": {
+   "status": "ok",
+   "source": "cnyes",
+   "symbols": 4
+  },
+  "tv/snapshot": {
+   "status": "ok",
+   "symbols": 13,
+   "tw_bar_is_intraday": false
+  },
+  "fx/usdtwd": {
+   "status": "fail"
+  }
+ },
+ "errors": [
+  "TW 00411A TPEx: TPEx 00411A: 無資料",
+  "FX: 只解析到 0 列，格式可能改變"
+ ],
+ "us_cutoff_ny": "2026-10-13",
+ "tw_cutoff_taipei": "2026-10-14",
+ "summary": {
+  "ok": 15,
+  "stale": 0,
+  "fail": 1
+ },
+ "cross_check_conflicts": []
+}
