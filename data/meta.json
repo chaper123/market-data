@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-10-14T14:13:29Z",
- "generated_at_taipei": "2026-10-14 22:13",
+ "generated_at_utc": "2026-10-14T14:20:28Z",
+ "generated_at_taipei": "2026-10-14 22:20",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -164,6 +164,9 @@
    "prev_close": 10.72,
    "prev_close_field21": 10.72,
    "tz_used": "Asia/Taipei",
+   "volume_units_fixed": [
+    "2026-09-07"
+   ],
    "cross_check": "2026-10-14 收盤 10.75 vs yahoo 10.75（差 +0.00%）",
    "cross_check_ok": true
   },
@@ -184,7 +187,7 @@
    "rows": 518,
    "first": "2024-10-14",
    "last": "2026-10-14",
-   "last_rate": 32.124
+   "last_rate": 32.125
   }
  },
  "errors": [],
