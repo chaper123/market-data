@@ -273,61 +273,43 @@ def twse_daily(code, n_months):
     return rows
 
 
-def tpex_daily(code, n_months):
-    rows = {}
-    for y, mo in months_back(n_months):
-        try:
-            j = get_json(f"https://www.tpex.org.tw/www/zh-tw/afterTrading/tradingStock?code={code}&date={y}/{mo:02d}/01&response=json",
-                         headers={"Referer": "https://www.tpex.org.tw/"})
-        except Exception:  # noqa: BLE001
-            time.sleep(2)
-            continue
-        for t in j.get("tables") or []:
-            f = t.get("fields") or []
-            idx = dict(d=pick(f, "日期"), v=pick(f, "成交仟股", "成交股數", "成交張數"), o=pick(f, "開盤"),
-                       h=pick(f, "最高"), l=pick(f, "最低"), c=pick(f, "收盤"))
-            if None in (idx["d"], idx["o"], idx["h"], idx["l"], idx["c"]):
-                continue
-            for r in t.get("data") or []:
-                day = roc_date(r[idx["d"]])
-                if day:
-                    v = num(r[idx["v"]]) if idx["v"] is not None else 0
-                    rows[day] = (day, v or 0, num(r[idx["o"]]), num(r[idx["h"]]), num(r[idx["l"]]), num(r[idx["c"]]))
-        time.sleep(2)
-    if not rows:
-        raise RuntimeError(f"TPEx {code}: 無資料")
-    return rows
-
-
 def fetch_tw(cfg):
     cut = tw_cutoff()
     META["tw_cutoff_taipei"] = cut
     n = cfg.get("tw_months", 7)
     for code, e in cfg["tw"].items():
         path = os.path.join(DATA, "tw", f"{code}_norm.csv")
-        official, cny, m = None, None, {}
-        official_name = "TWSE" if e["market"] == "TWSE" else "TPEx"
-        try:
-            raw = twse_daily(code, n) if e["market"] == "TWSE" else tpex_daily(code, n)
-            official = finalize(raw, cut, e.get("min_date"))
-        except Exception as ex:  # noqa: BLE001
-            META["errors"].append(f"TW {code} {official_name}: {ex}")
+        got, extra = [], {}
+        # 依序嘗試：證交所（上市）→ 鉅亨網 → Yahoo；第一個列數足夠的當主來源，下一個用來核對
+        if e["market"] == "TWSE":
+            try:
+                got.append(("TWSE", finalize(twse_daily(code, n), cut, e.get("min_date"))))
+            except Exception as ex:  # noqa: BLE001
+                META["errors"].append(f"TW {code} TWSE: {ex}")
         try:
             raw, extra = cnyes_daily(f"TWS:{code}:STOCK", [TPE, UTC])
-            cny = finalize(raw, cut, e.get("min_date"))
+            got.append(("cnyes", finalize(raw, cut, e.get("min_date"))))
         except Exception as ex:  # noqa: BLE001
             META["errors"].append(f"TW {code} cnyes: {ex}")
-            extra = {}
-        # 主來源：官方（列數足夠時），否則鉅亨網（上市以來全部日線）
-        if official and (len(official) >= 60 or not cny or len(official) >= len(cny) - 2):
-            rows, m = official, summary(official, official_name)
-            cross_check(m, rows, cny, "cnyes")
-        elif cny:
-            rows, m = cny, summary(cny, "cnyes")
-            m.update(extra)
-            cross_check(m, rows, official, official_name)
-        else:
-            rows = None
+        try:
+            suffix = ".TW" if e["market"] == "TWSE" else ".TWO"
+            got.append(("yahoo", finalize(yahoo_daily(code + suffix), cut, e.get("min_date"))))
+        except Exception as ex:  # noqa: BLE001
+            META["errors"].append(f"TW {code} yahoo: {ex}")
+        got = [(name, rows) for name, rows in got if rows]
+        most = max((len(r) for _, r in got), default=0)
+        rows, m = None, {}
+        for i, (name, r) in enumerate(got):
+            if len(r) >= min(60, most - 2):
+                rows, m = r, summary(r, name)
+                if name == "cnyes":
+                    m.update(extra)
+                others = [x for j, x in enumerate(got) if j != i]
+                if others:
+                    cross_check(m, rows, others[0][1], others[0][0])
+                else:
+                    m["cross_check"] = "無第二來源，未核對"
+                break
         if rows:
             write_csv(path, rows)
         else:
@@ -358,45 +340,73 @@ def fetch_tw_quotes(cfg):
 
 
 # ---------------------------------------------------------------- 台銀匯率
+def decode(raw):
+    for enc in ("utf-8-sig", "cp950", "big5"):
+        try:
+            return raw.decode(enc)
+        except UnicodeDecodeError:
+            continue
+    return raw.decode("utf-8", "replace")
+
+
+def bot_csv():
+    """台銀歷史匯率 CSV：每列含「本行賣出」字樣，其後依序是 現金、即期。"""
+    status, raw = http("https://rate.bot.com.tw/xrt/flcsv/0/L6M/USD")
+    text = decode(raw)
+    rows = {}
+    for r in csv.reader(io.StringIO(text)):
+        cells = [c.strip() for c in r]
+        day = next((c for c in cells if re.fullmatch(r"\d{8}", c)), None)
+        if not day or "本行賣出" not in cells:
+            continue
+        k = cells.index("本行賣出")
+        spot = num(cells[k + 2]) if len(cells) > k + 2 else None
+        if spot:
+            rows[f"{day[:4]}-{day[4:6]}-{day[6:8]}"] = spot
+    return rows, f"HTTP {status} {text[:160]!r}"
+
+
+def bot_html():
+    """台銀歷史匯率網頁表格：日期、幣別、現金買入、現金賣出、即期買入、即期賣出。"""
+    status, raw = http("https://rate.bot.com.tw/xrt/quote/l6m/USD")
+    text = decode(raw)
+    rows = {}
+    for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", text, re.S):
+        cells = [re.sub(r"<[^>]+>|&nbsp;", " ", c).strip() for c in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)]
+        cells = [re.sub(r"\s+", " ", c) for c in cells]
+        if len(cells) < 6:
+            continue
+        m = re.search(r"(\d{4})/(\d{2})/(\d{2})", cells[0])
+        spot = num(cells[5])
+        if m and spot:
+            rows[f"{m.group(1)}-{m.group(2)}-{m.group(3)}"] = spot
+    return rows, f"HTTP {status} {len(text)} bytes"
+
+
 def fetch_fx():
     path = os.path.join(DATA, "fx", "usdtwd.csv")
-    try:
-        status, raw = http("https://rate.bot.com.tw/xrt/flcsv/0/L6M/USD")
-        if status != 200:
-            raise RuntimeError(f"HTTP {status}")
-        text = None
-        for enc in ("utf-8-sig", "cp950", "big5"):
-            try:
-                text = raw.decode(enc)
+    rows, src, notes = {}, None, []
+    for name, fn in (("台銀 CSV", bot_csv), ("台銀網頁表格", bot_html)):
+        try:
+            got, note = fn()
+            notes.append(f"{name}: {len(got)} 列（{note}）")
+            if len(got) >= 20:
+                rows, src = got, name
                 break
-            except UnicodeDecodeError:
-                continue
-        rows = {}
-        for r in csv.reader(io.StringIO(text)):
-            if not r or not re.match(r"^\d{8}$", r[0].strip()):
-                continue
-            day = f"{r[0][:4]}-{r[0][4:6]}-{r[0][6:8]}"
-            cells = [c.strip() for c in r]
-            if "本行賣出" in cells:  # 本行賣出 後面依序是 現金、即期
-                k = cells.index("本行賣出")
-                spot = num(cells[k + 2]) if len(cells) > k + 2 else None
-            else:  # 舊格式：沒有文字欄位時，第二組「即期」在第 14 欄附近，太不確定就放棄
-                spot = None
-            if spot:
-                rows[day] = spot
-        if len(rows) < 20:
-            raise RuntimeError(f"只解析到 {len(rows)} 列，格式可能改變")
-        os.makedirs(os.path.dirname(path), exist_ok=True)
-        with open(path, "w", newline="") as f:
-            w = csv.writer(f)
-            for d in sorted(rows):
-                w.writerow([d, rows[d]])
-        last = max(rows)
-        META["datasets"]["fx/usdtwd"] = {"status": "ok", "source": "台銀 flcsv L6M", "rows": len(rows),
-                                         "first": min(rows), "last": last, "last_rate": rows[last]}
-    except Exception as ex:  # noqa: BLE001
-        META["errors"].append(f"FX: {ex}")
-        META["datasets"]["fx/usdtwd"] = {"status": "stale" if os.path.exists(path) else "fail"}
+        except Exception as ex:  # noqa: BLE001
+            notes.append(f"{name}: {ex}")
+    if not rows:
+        META["errors"].append("FX: " + "；".join(notes))
+        META["datasets"]["fx/usdtwd"] = {"status": "stale" if os.path.exists(path) else "fail", "notes": notes}
+        return
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", newline="") as f:
+        w = csv.writer(f)
+        for d in sorted(rows):
+            w.writerow([d, rows[d]])
+    last = max(rows)
+    META["datasets"]["fx/usdtwd"] = {"status": "ok", "source": src, "rows": len(rows), "first": min(rows),
+                                     "last": last, "last_rate": rows[last], "notes": notes}
 
 
 # ---------------------------------------------------------------- TradingView 技術面快照
@@ -450,14 +460,18 @@ def fetch_tv(cfg):
     if out:
         tp = NOW.astimezone(TPE)
         tw_session = tp.weekday() < 5 and (9, 0) <= (tp.hour, tp.minute) <= (13, 35)
+        ny = NOW.astimezone(NY)
+        us_session = ny.weekday() < 5 and (9, 30) <= (ny.hour, ny.minute) < (16, 0)
         os.makedirs(os.path.dirname(path), exist_ok=True)
         with open(path, "w") as f:
             json.dump({"fetched_at_taipei": META["generated_at_taipei"],
                        "tw_bar_is_intraday": tw_session,
-                       "note": "TradingView 匿名存取只有日線；美股為最近一次收盤。台股若 tw_bar_is_intraday=true，當日 K 棒尚未收盤。",
+                       "us_bar_is_intraday": us_session,
+                       "note": "TradingView 匿名存取只有日線。*_bar_is_intraday=true 代表該市場當日 K 棒尚未收盤。",
                        "missing_columns": sorted(set(TV_COLS) - set(used_cols or TV_COLS)),
                        "symbols": out}, f, ensure_ascii=False, indent=1)
-        META["datasets"]["tv/snapshot"] = {"status": "ok", "symbols": len(out), "tw_bar_is_intraday": tw_session}
+        META["datasets"]["tv/snapshot"] = {"status": "ok", "symbols": len(out), "tw_bar_is_intraday": tw_session,
+                                           "us_bar_is_intraday": us_session}
     else:
         META["datasets"]["tv/snapshot"] = {"status": "stale" if os.path.exists(path) else "fail"}
 

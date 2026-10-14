@@ -71,14 +71,19 @@ def analyse(code, s):
     elif not above:
         position = f"{len(mas)} 條均線全數跌破"
     else:
-        short_above = all(n <= 30 for _, n, _, _ in above)
-        long_below = any(n >= 50 for _, n, _, _ in below)
-        lowest_broken = min(below, key=lambda m: m[1])
-        position = f"站上 {len(above)}/{len(mas)} 條；分界在 {lowest_broken[0]}（{f(lowest_broken[2])}）"
-        if short_above and long_below:
+        short_above_only = all(n <= 30 for _, n, _, _ in above) and any(n >= 50 for _, n, _, _ in below)
+        long_all_above = all(m[3] for m in mas if m[1] >= 50)
+        short_broken = any(n <= 20 for _, n, _, _ in below)
+        above_names = "、".join(m[0] for m in sorted(above, key=lambda m: m[1]))
+        position = f"站上 {len(above)}/{len(mas)} 條（{above_names}）"
+        if short_above_only:
             position += "；只站上短均線，屬反彈，不是翻多"
-        elif not short_above and any(n <= 20 for _, n, _, _ in below):
-            position += "；長均線之上但短均線失守，短線轉弱"
+        elif long_all_above and short_broken:
+            position += "；中長均線之上但短均線失守，短線轉弱"
+        elif not long_all_above and not any(n <= 20 for _, n, _, _ in above):
+            position += "；短均線全數失守、只剩部分長均線撐著，結構偏弱"
+        else:
+            position += "；長短均線交錯"
     if missing:
         position += f"（樣本不足：{'、'.join(missing)}）"
 
@@ -161,6 +166,7 @@ def main():
     snap = json.load(open(os.path.join(DATA, "tv", "snapshot.json")))
     out = {"source_fetched_at_taipei": snap.get("fetched_at_taipei"),
            "tw_bar_is_intraday": snap.get("tw_bar_is_intraday"),
+           "us_bar_is_intraday": snap.get("us_bar_is_intraday"),
            "rules": {"trend_adx": TREND_ADX, "range_adx": RANGE_ADX},
            "symbols": {code: analyse(code, s) for code, s in snap["symbols"].items()}}
     with open(os.path.join(DATA, "radar.json"), "w") as fh:
@@ -169,6 +175,8 @@ def main():
             "", "只描述技術面結構，不改變買區判定。"]
     if out["tw_bar_is_intraday"]:
         head.append("台股當日 K 棒尚未收盤，數值會隨盤中變動。")
+    if out["us_bar_is_intraday"]:
+        head.append("美股當日 K 棒尚未收盤，數值會隨盤中變動。")
     body = [md(a) for a in out["symbols"].values()]
     with open(os.path.join(DATA, "radar.md"), "w") as fh:
         fh.write("\n".join(head) + "\n\n" + "\n\n".join(body) + "\n")
