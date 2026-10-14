@@ -19,7 +19,7 @@ GitHub 的排程常延遲 5～30 分鐘。需要立刻更新時，到 Actions �
 | 路徑 | 內容 | 來源（主 / 核對） |
 |---|---|---|
 | `data/us/<代號>.csv` | 美股日線，已收盤的交易日 | 鉅亨網 / Yahoo |
-| `data/tw/<代號>_norm.csv` | 台股日線，已收盤的交易日 | 證交所、櫃買中心 / 鉅亨網 |
+| `data/tw/<代號>_norm.csv` | 台股日線，已收盤的交易日 | 上市：證交所 / 鉅亨網；00411A：鉅亨網 / Yahoo |
 | `data/tw/quotes.json` | 抓取當下的盤中快照（備援用） | 鉅亨網 |
 | `data/fx/usdtwd_mid.csv` | 美元兌台幣收盤（市場中間價），約 2 年。台銀網站擋 GitHub 伺服器，即期賣出由排程任務自己抓，這份是備援 | Yahoo |
 | `data/tv/snapshot.json` | TradingView 日線技術面快照 | TradingView scanner |

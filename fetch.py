@@ -273,6 +273,22 @@ def twse_daily(code, n_months):
     return rows
 
 
+def fix_volume_units(rows):
+    """鉅亨網台股日線偶爾某天用「股」而不是「張」。成交量是前後中位數的 300 倍以上、
+    除以 1000 後又落在正常範圍時，視為單位錯誤並除以 1000。回傳修正後的列與被修正的日期。"""
+    vols = [r[1] for r in rows]
+    out, fixed = [], []
+    for i, r in enumerate(rows):
+        near = sorted(v for v in vols[max(0, i - 10):i] + vols[i + 1:i + 11] if v)
+        med = near[len(near) // 2] if near else 0
+        if med and r[1] > 300 * med and 0.1 * med <= r[1] / 1000 <= 10 * med:
+            out.append((r[0], r[1] / 1000, *r[2:]))
+            fixed.append(r[0])
+        else:
+            out.append(r)
+    return out, fixed
+
+
 def fetch_tw(cfg):
     cut = tw_cutoff()
     META["tw_cutoff_taipei"] = cut
@@ -288,7 +304,11 @@ def fetch_tw(cfg):
                 META["errors"].append(f"TW {code} TWSE: {ex}")
         try:
             raw, extra = cnyes_daily(f"TWS:{code}:STOCK", [TPE, UTC])
-            got.append(("cnyes", finalize(raw, cut, e.get("min_date"))))
+            fixed_rows = finalize(raw, cut, e.get("min_date"))
+            fixed_rows, fixed = fix_volume_units(fixed_rows)
+            if fixed:
+                extra["volume_units_fixed"] = fixed
+            got.append(("cnyes", fixed_rows))
         except Exception as ex:  # noqa: BLE001
             META["errors"].append(f"TW {code} cnyes: {ex}")
         try:
