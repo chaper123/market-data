@@ -1,0 +1,50 @@
+name: fetch-market-data
+
+on:
+  schedule:
+    # GitHub 的 cron 用 UTC，且常延遲 5～30 分鐘，所以提早跑
+    - cron: "41 0 * * 1-5"   # 台北 08:41，美股晨報（09:20）前；台股日線也會一併抓到前一交易日
+    - cron: "47 1 * * 1-5"   # 台北 09:47，重試用：今天已成功就直接略過
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-market-data
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch data
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "${{ github.event.schedule }}" = "47 1 * * 1-5" ]; then
+            python fetch.py --skip-if-fresh
+          else
+            python fetch.py
+          fi
+
+      - name: Technical radar
+        run: |
+          if [ -f data/tv/snapshot.json ]; then python radar.py; fi
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "data $(TZ=Asia/Taipei date +'%Y-%m-%d %H:%M')"
+            git push
+          fi

@@ -1,0 +1,21 @@
+{
+  "us": {
+    "VOO":   {"role": "buy"},
+    "GOOGL": {"role": "buy"},
+    "NVDA":  {"role": "buy"},
+    "TSLA":  {"role": "buy"},
+    "SPCX":  {"role": "buy", "min_date": "2026-06-12", "note": "SpaceX 普通股 2026/06/12 上市；更早的資料屬於過去用同代號的 ETF，一律丟棄"},
+    "AAPL":  {"role": "buy"},
+    "IAUM":  {"role": "gauge"},
+    "ARKK":  {"role": "watch"},
+    "ARKQ":  {"role": "watch"},
+    "ARKX":  {"role": "watch"}
+  },
+  "tw": {
+    "009816": {"market": "TWSE"},
+    "00981A": {"market": "TWSE"},
+    "00411A": {"market": "TPEX", "min_date": "2026-08-26"}
+  },
+  "tw_index": "TSE01",
+  "tw_months": 7
+}
