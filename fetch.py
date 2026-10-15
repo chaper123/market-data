@@ -538,7 +538,16 @@ def fresh_today():
 
 def main():
     if "--skip-if-fresh" in sys.argv and fresh_today():
-        print("今天已成功抓取，略過")
+        # 日線今天已成功；淨值由投信在收盤後才公布，仍每次更新（晨報前的 08:41、09:47 都會跑到）
+        global META
+        meta_path = os.path.join(DATA, "meta.json")
+        META = json.load(open(meta_path))
+        META.setdefault("errors", [])
+        fetch_nav(json.load(open(os.path.join(ROOT, "config.json"))))
+        META["nav_refreshed_at_taipei"] = NOW.astimezone(TPE).strftime("%Y-%m-%d %H:%M")
+        with open(meta_path, "w") as fh:
+            json.dump(META, fh, ensure_ascii=False, indent=1)
+        print("日線今天已成功抓取，只更新淨值")
         return
     cfg = json.load(open(os.path.join(ROOT, "config.json")))
     for step in (fetch_us, fetch_tw, fetch_tw_quotes, fetch_nav, fetch_tv):

@@ -7,7 +7,7 @@
 
 ## 排程
 
-台北時間週一～五 05:13、06:37、07:53、08:41、09:47 各排一次。當天第一次全部成功後，其餘幾次直接略過。
+台北時間週一～五 05:13、06:37、07:53、08:41、09:47 各排一次。當天第一次全部成功後，其餘幾次只更新 ETF 淨值（投信收盤後才公布，晨報前要再抓一次）。
 
 GitHub 的排程常延遲，偶爾整個漏跑，所以排多次。需要立刻更新時，到 Actions → fetch-market-data → Run workflow。
 
@@ -18,6 +18,8 @@ GitHub 的排程常延遲，偶爾整個漏跑，所以排多次。需要立刻�
 | `data/us/<代號>.csv` | 美股日線，已收盤的交易日 | 鉅亨網 / Yahoo |
 | `data/tw/<代號>_norm.csv` | 台股日線，已收盤的交易日 | 上市：證交所 / 鉅亨網；00411A：鉅亨網 / Yahoo |
 | `data/tw/quotes.json` | 抓取當下的盤中快照（備援用） | 鉅亨網 |
+| `data/tw/nav_history.csv` | ETF 每日淨值與當日收盤折溢價：date,code,nav,close,premium_pct,source（逐日累積） | 證交所基本市況報導網站 mis.twse.com.tw |
+| `data/tw/nav_raw.json` | 最新一次抓到的淨值原始資料，含盤中預估淨值（f）與預估折溢價（g） | 同上 |
 | `data/fx/usdtwd_mid.csv` | 美元兌台幣收盤（市場中間價），約 2 年。台銀網站擋 GitHub 伺服器，即期賣出由排程任務自己抓，這份是備援 | Yahoo |
 | `data/tv/snapshot.json` | TradingView 日線技術面快照 | TradingView scanner |
 | `data/radar.json`、`data/radar.md` | 技術面雷達判讀（結構、位置、訊號矛盾、關鍵價位）。指標由 repo 日線自己算，TradingView 只提供綜合評分，且只在數據一致時採用 | `radar.py`、`indicators.py` |
