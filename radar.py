@@ -1,12 +1,19 @@
-"""技術面雷達：把 TradingView 日線快照用固定規則讀成「結構、位置、訊號矛盾、關鍵價位」。
+"""技術面雷達：用固定規則把日線讀成「結構、位置、訊號矛盾、關鍵價位」。
 
 這一層只做描述，不產生買賣訊號，也不改變排程任務 monitor.py / monitor_us.py 的買區判定。
 規則寫死在這裡，每天的結論可以互相比較。
 
-輸入：data/tv/snapshot.json；輸出：data/radar.json（結構化）、data/radar.md（給報告引用）。
+指標（均線、Hull、RSI、Stoch RSI、W%R、ADX/DI、ATR、月 Pivot）一律由 repo 自己的官方日線計算
+（indicators.py，定義與 TradingView 預設相同，已實測數值一致）。
+TradingView 只提供「綜合評分」，而且只有在它的收盤、SMA20、ATR 與 repo 日線一致時才採用：
+TradingView 偶爾有錯誤的 K 棒（例如 00411A 的高低點），會讓 ADX、ATR、Pivot 全部失真。
+
+輸入：data/us、data/tw 日線與 data/tv/snapshot.json；輸出：data/radar.json、data/radar.md。
 """
 import json
 import os
+
+import indicators
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "data")
@@ -152,8 +159,11 @@ def analyse(code, s):
 
 def md(a):
     lv = lambda xs: "、".join(f"{x['name']} {f(x['price'])}" for x in xs) or "—"
-    lines = [f"**{a['code']}** {f(a['close'])}（{f(a['change_pct'])}%）｜綜合 {a['rating']['all']}"
-             f"（均線 {a['rating']['ma']}／振盪 {a['rating']['osc']}）",
+    if a.get("rating_skipped"):
+        rating = f"綜合評分略過（{a['rating_skipped']}）"
+    else:
+        rating = f"綜合 {a['rating']['all']}（均線 {a['rating']['ma']}／振盪 {a['rating']['osc']}）"
+    lines = [f"**{a['code']}** {f(a['close'])}（{a.get('last_date', '')}，{f(a['change_pct'])}%）｜{rating}",
              f"- 一句話：{a['one_line']}",
              f"- 結構：{a['structure']}",
              f"- 位置：{a['position']}"]
@@ -162,21 +172,50 @@ def md(a):
     return "\n".join(lines)
 
 
+RATING_KEYS = ("Recommend.All", "Recommend.MA", "Recommend.Other")
+
+
+def tv_ratings(mine, tv):
+    """TradingView 評分只在它的數據與 repo 日線一致時採用；回傳 (評分 dict, 略過原因)。"""
+    if not tv:
+        return {}, "TradingView 無此標的"
+    checks = []
+    if tv.get("close") and abs(tv["close"] / mine["close"] - 1) > 0.003:
+        checks.append(f"收盤 {f(tv['close'])} ≠ {f(mine['close'])}（可能是盤中數字）")
+    if tv.get("SMA20") and mine.get("SMA20") and abs(tv["SMA20"] / mine["SMA20"] - 1) > 0.01:
+        checks.append("SMA20 不一致")
+    if tv.get("ATR") and mine.get("ATR") and not 0.8 <= tv["ATR"] / mine["ATR"] <= 1.25:
+        checks.append(f"ATR {f(tv['ATR'])} vs {f(mine['ATR'])}（TradingView 高低點資料有誤）")
+    if checks:
+        return {}, "；".join(checks)
+    return {k: tv.get(k) for k in RATING_KEYS}, None
+
+
 def main():
-    snap = json.load(open(os.path.join(DATA, "tv", "snapshot.json")))
-    out = {"source_fetched_at_taipei": snap.get("fetched_at_taipei"),
-           "tw_bar_is_intraday": snap.get("tw_bar_is_intraday"),
-           "us_bar_is_intraday": snap.get("us_bar_is_intraday"),
+    cfg = json.load(open(os.path.join(ROOT, "config.json")))
+    try:
+        snap = json.load(open(os.path.join(DATA, "tv", "snapshot.json")))
+    except Exception:  # noqa: BLE001 — TradingView 失效時雷達照算，只是沒有評分
+        snap = {"symbols": {}}
+    paths = {c: os.path.join(DATA, "us", f"{c}.csv") for c in cfg["us"]}
+    paths.update({c: os.path.join(DATA, "tw", f"{c}_norm.csv") for c in cfg["tw"]})
+    symbols = {}
+    for code, path in paths.items():
+        if not os.path.exists(path):
+            continue
+        mine = indicators.compute(path)
+        rating, skip = tv_ratings(mine, snap["symbols"].get(code))
+        a = analyse(code, {**mine, **rating})
+        a.update(last_date=mine["last_date"], rows=mine["rows"], rating_skipped=skip)
+        symbols[code] = a
+    out = {"generated_from": "repo 日線（indicators.py）；綜合評分來自 TradingView",
+           "tv_fetched_at_taipei": snap.get("fetched_at_taipei"),
            "rules": {"trend_adx": TREND_ADX, "range_adx": RANGE_ADX},
-           "symbols": {code: analyse(code, s) for code, s in snap["symbols"].items()}}
+           "symbols": symbols}
     with open(os.path.join(DATA, "radar.json"), "w") as fh:
         json.dump(out, fh, ensure_ascii=False, indent=1)
-    head = [f"# 技術面雷達（TradingView 日線，抓取於台北 {out['source_fetched_at_taipei']}）",
-            "", "只描述技術面結構，不改變買區判定。"]
-    if out["tw_bar_is_intraday"]:
-        head.append("台股當日 K 棒尚未收盤，數值會隨盤中變動。")
-    if out["us_bar_is_intraday"]:
-        head.append("美股當日 K 棒尚未收盤，數值會隨盤中變動。")
+    head = ["# 技術面雷達（repo 官方日線計算，只含已收盤的交易日）",
+            "", "只描述技術面結構，不改變買區判定。綜合評分來自 TradingView，與官方日線不一致時略過。"]
     body = [md(a) for a in out["symbols"].values()]
     with open(os.path.join(DATA, "radar.md"), "w") as fh:
         fh.write("\n".join(head) + "\n\n" + "\n\n".join(body) + "\n")

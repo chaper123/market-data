@@ -40,7 +40,7 @@ jobs:
 
       - name: Technical radar
         run: |
-          if [ -f data/tv/snapshot.json ]; then python radar.py; fi
+          python radar.py
 
       - name: Commit
         run: |
