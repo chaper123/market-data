@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-10-15T02:47:27Z",
- "generated_at_taipei": "2026-10-15 10:47",
+ "generated_at_utc": "2026-10-15T03:00:18Z",
+ "generated_at_taipei": "2026-10-15 11:00",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -135,8 +135,8 @@
   "tw/009816": {
    "status": "ok",
    "source": "TWSE",
-   "rows": 133,
-   "first": "2026-04-01",
+   "rows": 166,
+   "first": "2026-02-03",
    "last": "2026-10-14",
    "last_close": 16.65,
    "prev_close": 16.61,
@@ -146,8 +146,8 @@
   "tw/00981A": {
    "status": "ok",
    "source": "TWSE",
-   "rows": 133,
-   "first": "2026-04-01",
+   "rows": 250,
+   "first": "2025-10-01",
    "last": "2026-10-14",
    "last_close": 31.19,
    "prev_close": 31.06,
@@ -187,16 +187,21 @@
    "rows": 518,
    "first": "2024-10-15",
    "last": "2026-10-15",
-   "last_rate": 32.305
+   "last_rate": 32.302
+  },
+  "news/truth_social": {
+   "status": "fail"
   }
  },
- "errors": [],
+ "errors": [
+  "Truth Social: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?exclude_replies=true&limit=40 -> HTTP 403"
+ ],
  "us_cutoff_ny": "2026-10-14",
  "tw_cutoff_taipei": "2026-10-14",
  "summary": {
   "ok": 16,
   "stale": 0,
-  "fail": 0
+  "fail": 1
  },
  "cross_check_conflicts": []
 }
