@@ -451,46 +451,6 @@ def fetch_tv(cfg):
 
 
 
-# ---------------------------------------------------------------- 川普 Truth Social（最佳努力）
-TRUTH_ACCOUNT = "107780257626128497"  # @realDonaldTrump
-
-
-def strip_html(s):
-    s = re.sub(r"<br\s*/?>|</p>", "\n", s or "")
-    s = re.sub(r"<[^>]+>", "", s)
-    return (s.replace("&amp;", "&").replace("&quot;", '"').replace("&#39;", "'")
-            .replace("&lt;", "<").replace("&gt;", ">").replace("&nbsp;", " ")).strip()
-
-
-def fetch_truth():
-    """Truth Social 是 Mastodon 架構，有公開的帳號貼文 API。網站有防機器人保護，抓不到就標 fail。"""
-    path = os.path.join(DATA, "news", "truth_social.json")
-    try:
-        j = get_json(f"https://truthsocial.com/api/v1/accounts/{TRUTH_ACCOUNT}/statuses?exclude_replies=true&limit=40",
-                     headers={"Accept": "application/json", "Referer": "https://truthsocial.com/@realDonaldTrump"})
-        posts = []
-        for p in j:
-            text = strip_html(p.get("content"))
-            if not text and p.get("reblog"):
-                text = "（轉發）" + strip_html(p["reblog"].get("content"))
-            created = dt.datetime.fromisoformat(p["created_at"].replace("Z", "+00:00"))
-            posts.append({"created_utc": created.strftime("%Y-%m-%d %H:%M"),
-                          "created_taipei": created.astimezone(TPE).strftime("%Y-%m-%d %H:%M"),
-                          "url": p.get("url"), "text": text[:1500],
-                          "media": len(p.get("media_attachments") or [])})
-        if not posts:
-            raise RuntimeError("回傳 0 則")
-        os.makedirs(os.path.dirname(path), exist_ok=True)
-        with open(path, "w") as fh:
-            json.dump({"fetched_at_taipei": META["generated_at_taipei"], "source": "truthsocial.com API",
-                       "posts": posts}, fh, ensure_ascii=False, indent=1)
-        META["datasets"]["news/truth_social"] = {"status": "ok", "posts": len(posts),
-                                                 "newest_taipei": posts[0]["created_taipei"]}
-    except Exception as ex:  # noqa: BLE001
-        META["errors"].append(f"Truth Social: {ex}")
-        META["datasets"]["news/truth_social"] = {"status": "stale" if os.path.exists(path) else "fail"}
-
-
 # ---------------------------------------------------------------- main
 def fresh_today():
     try:
@@ -513,7 +473,7 @@ def main():
             step(cfg)
         except Exception as ex:  # noqa: BLE001 — 單一步驟失敗不影響其他
             META["errors"].append(f"{step.__name__}: {ex}")
-    for step in (fetch_fx, fetch_truth):
+    for step in (fetch_fx,):
         try:
             step()
         except Exception as ex:  # noqa: BLE001
