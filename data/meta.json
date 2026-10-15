@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-10-15T03:04:18Z",
- "generated_at_taipei": "2026-10-15 11:04",
+ "generated_at_utc": "2026-10-15T03:15:04Z",
+ "generated_at_taipei": "2026-10-15 11:15",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -175,6 +175,30 @@
    "source": "cnyes",
    "symbols": 4
   },
+  "tw/nav": {
+   "status": "ok",
+   "source": "mis.twse.com.tw all_etf",
+   "latest": {
+    "00981A": {
+     "nav_date": "2026-10-14",
+     "nav": 31.19,
+     "close": 31.19,
+     "premium_pct": 0.0
+    },
+    "00411A": {
+     "nav_date": "2026-10-14",
+     "nav": 10.29,
+     "close": 10.75,
+     "premium_pct": 4.47
+    },
+    "009816": {
+     "nav_date": "2026-10-14",
+     "nav": 16.59,
+     "close": 16.65,
+     "premium_pct": 0.36
+    }
+   }
+  },
   "tv/snapshot": {
    "status": "ok",
    "symbols": 13,
@@ -187,14 +211,14 @@
    "rows": 518,
    "first": "2024-10-15",
    "last": "2026-10-15",
-   "last_rate": 32.289
+   "last_rate": 32.299
   }
  },
  "errors": [],
  "us_cutoff_ny": "2026-10-14",
  "tw_cutoff_taipei": "2026-10-14",
  "summary": {
-  "ok": 16,
+  "ok": 17,
   "stale": 0,
   "fail": 0
  },
