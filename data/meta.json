@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-10-15T03:00:18Z",
- "generated_at_taipei": "2026-10-15 11:00",
+ "generated_at_utc": "2026-10-15T03:04:18Z",
+ "generated_at_taipei": "2026-10-15 11:04",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -187,21 +187,16 @@
    "rows": 518,
    "first": "2024-10-15",
    "last": "2026-10-15",
-   "last_rate": 32.302
-  },
-  "news/truth_social": {
-   "status": "fail"
+   "last_rate": 32.289
   }
  },
- "errors": [
-  "Truth Social: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?exclude_replies=true&limit=40 -> HTTP 403"
- ],
+ "errors": [],
  "us_cutoff_ny": "2026-10-14",
  "tw_cutoff_taipei": "2026-10-14",
  "summary": {
   "ok": 16,
   "stale": 0,
-  "fail": 1
+  "fail": 0
  },
  "cross_check_conflicts": []
 }
