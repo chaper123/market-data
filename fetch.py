@@ -359,6 +359,79 @@ def fetch_tw_quotes(cfg):
         META["datasets"]["tw/quotes"] = {"status": "fail"}
 
 
+
+# ---------------------------------------------------------------- ETF 淨值（證交所基本市況報導網站）
+def prev_trading_day(code, day):
+    """用 repo 的台股日線找 day 之前最近一個交易日。"""
+    path = os.path.join(DATA, "tw", f"{code}_norm.csv")
+    try:
+        days = [r[0] for r in csv.reader(open(path)) if r and r[0] < day]
+        return max(days) if days else None
+    except OSError:
+        return None
+
+
+def close_on(code, day):
+    path = os.path.join(DATA, "tw", f"{code}_norm.csv")
+    try:
+        for r in csv.reader(open(path)):
+            if r and r[0] == day:
+                return float(r[5])
+    except OSError:
+        pass
+    return None
+
+
+def fetch_nav(cfg):
+    """mis.twse.com.tw 的 ETF 淨值資訊（上市、上櫃 ETF 都有）。欄位 h 是「前一營業日單位淨值」。
+    每次把各檔的 (淨值日期, 淨值) 累積到 data/tw/nav_history.csv，再用同一天的官方收盤算折溢價。"""
+    raw_path = os.path.join(DATA, "tw", "nav_raw.json")
+    hist_path = os.path.join(DATA, "tw", "nav_history.csv")
+    try:
+        ts = int(NOW.timestamp() * 1000)
+        status, raw = http(f"https://mis.twse.com.tw/stock/data/all_etf.txt?{ts}",
+                           headers={"Referer": "https://mis.twse.com.tw/stock/etf_nav.jsp?ex=tse"})
+        if status != 200:
+            raise RuntimeError(f"HTTP {status}")
+        j = json.loads(raw.decode("utf-8-sig"))
+        found = {}
+        for grp in j.get("a1") or []:
+            for m in grp.get("msgArray") or []:
+                if m.get("a") in cfg["tw"]:
+                    found[m["a"]] = m
+        os.makedirs(os.path.dirname(raw_path), exist_ok=True)
+        with open(raw_path, "w") as fh:
+            json.dump({"fetched_at_taipei": META["generated_at_taipei"], "items": found}, fh, ensure_ascii=False, indent=1)
+        hist = {}
+        if os.path.exists(hist_path):
+            for r in csv.reader(open(hist_path)):
+                if len(r) >= 3:
+                    hist[(r[0], r[1])] = r
+        added = {}
+        for code, m in found.items():
+            nav = num(m.get("h"))
+            day = m.get("i") or ""
+            day = f"{day[:4]}-{day[4:6]}-{day[6:8]}" if re.fullmatch(r"\d{8}", day) else None
+            nav_day = prev_trading_day(code, day) if day else None
+            if nav and nav_day:
+                px = close_on(code, nav_day)
+                prem = round((px / nav - 1) * 100, 2) if px else ""
+                hist[(nav_day, code)] = [nav_day, code, nav, px if px else "", prem, "mis.twse 前一營業日淨值"]
+                added[code] = {"nav_date": nav_day, "nav": nav, "close": px, "premium_pct": prem}
+        rows = sorted(hist.values())
+        with open(hist_path, "w", newline="") as fh:
+            w = csv.writer(fh)
+            for r in rows:
+                w.writerow(r)
+        META["datasets"]["tw/nav"] = {"status": "ok" if added else "fail", "source": "mis.twse.com.tw all_etf",
+                                      "latest": added}
+        if not added:
+            META["errors"].append(f"NAV: 找到 {list(found)}，但沒有可用的淨值欄位")
+    except Exception as ex:  # noqa: BLE001
+        META["errors"].append(f"NAV: {ex}")
+        META["datasets"]["tw/nav"] = {"status": "stale" if os.path.exists(hist_path) else "fail"}
+
+
 # ---------------------------------------------------------------- 台銀匯率
 def fetch_fx():
     """台銀網站會對 GitHub 伺服器回傳防機器人驗證頁，不嘗試繞過。
@@ -468,7 +541,7 @@ def main():
         print("今天已成功抓取，略過")
         return
     cfg = json.load(open(os.path.join(ROOT, "config.json")))
-    for step in (fetch_us, fetch_tw, fetch_tw_quotes, fetch_tv):
+    for step in (fetch_us, fetch_tw, fetch_tw_quotes, fetch_nav, fetch_tv):
         try:
             step(cfg)
         except Exception as ex:  # noqa: BLE001 — 單一步驟失敗不影響其他
