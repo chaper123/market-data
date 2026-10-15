@@ -1,0 +1,23 @@
+name: probe-sources
+
+# Phase 1 來源探測：檢查候選資料來源從 GitHub 機房能否取得資料。
+# 只手動觸發，不排程、不寫入 data/、不 commit；結果在這次執行的 job summary。
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Probe sources
+        run: python probe.py
