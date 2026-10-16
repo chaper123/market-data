@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-10-16T03:25:27Z",
- "generated_at_taipei": "2026-10-16 11:25",
+ "generated_at_utc": "2026-10-16T03:57:03Z",
+ "generated_at_taipei": "2026-10-16 11:57",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -211,18 +211,358 @@
    "rows": 518,
    "first": "2024-10-16",
    "last": "2026-10-16",
-   "last_rate": 32.456
+   "last_rate": 32.417
+  },
+  "macro/SPX": {
+   "status": "ok",
+   "source": "yahoo ^GSPC",
+   "rows": 501,
+   "first": "2024-10-16",
+   "last": "2026-10-15",
+   "last_close": 7744.06005859375,
+   "prev_close": 7718.93994140625,
+   "name": "S&P 500",
+   "cross_check": "2026-10-15 收盤 7744.06005859375 vs cnyes 7744.06（差 +0.00%）",
+   "cross_check_ok": true
+  },
+  "macro/IXIC": {
+   "status": "ok",
+   "source": "yahoo ^IXIC",
+   "rows": 501,
+   "first": "2024-10-16",
+   "last": "2026-10-15",
+   "last_close": 26713.025390625,
+   "prev_close": 26692.869140625,
+   "name": "Nasdaq 綜合指數",
+   "cross_check": "2026-10-15 收盤 26713.025390625 vs cnyes 26713.026（差 -0.00%）",
+   "cross_check_ok": true
+  },
+  "macro/SOX": {
+   "status": "ok",
+   "source": "yahoo ^SOX",
+   "rows": 501,
+   "first": "2024-10-16",
+   "last": "2026-10-15",
+   "last_close": 11581.21484375,
+   "prev_close": 11684.3798828125,
+   "name": "費城半導體指數",
+   "cross_check": "2026-10-15 收盤 11581.21484375 vs cnyes 11581.215（差 -0.00%）",
+   "cross_check_ok": true
+  },
+  "macro/VIX": {
+   "status": "ok",
+   "source": "yahoo ^VIX",
+   "rows": 504,
+   "first": "2024-10-15",
+   "last": "2026-10-15",
+   "last_close": 16.459999084472656,
+   "prev_close": 16.8700008392334,
+   "name": "VIX 波動率指數",
+   "cross_check": "無第二來源，未核對"
+  },
+  "macro/TNX": {
+   "status": "ok",
+   "source": "yahoo ^TNX",
+   "rows": 502,
+   "first": "2024-10-15",
+   "last": "2026-10-15",
+   "last_close": 5.0889997482299805,
+   "prev_close": 5.190000057220459,
+   "name": "美國 10 年期公債殖利率（%）",
+   "cross_check": "無第二來源，未核對"
+  },
+  "macro/DXY": {
+   "status": "ok",
+   "source": "yahoo DX-Y.NYB",
+   "rows": 503,
+   "first": "2024-10-16",
+   "last": "2026-10-15",
+   "last_close": 101.88999938964844,
+   "prev_close": 102.55000305175781,
+   "name": "美元指數",
+   "cross_check": "2026-10-15 收盤 101.88999938964844 vs cnyes 102.005（差 -0.11%）",
+   "cross_check_ok": true
+  },
+  "macro/GOLD": {
+   "status": "ok",
+   "source": "yahoo GC=F",
+   "rows": 503,
+   "first": "2024-10-16",
+   "last": "2026-10-15",
+   "last_close": 4199.89990234375,
+   "prev_close": 4107.89990234375,
+   "name": "COMEX 黃金期貨（近月）",
+   "cross_check": "無第二來源，未核對"
+  },
+  "macro/WTI": {
+   "status": "ok",
+   "source": "yahoo CL=F",
+   "rows": 503,
+   "first": "2024-10-16",
+   "last": "2026-10-15",
+   "last_close": 95.76000213623047,
+   "prev_close": 95.08999633789062,
+   "name": "WTI 原油期貨（近月）",
+   "cross_check": "無第二來源，未核對"
+  },
+  "macro/TSM": {
+   "status": "ok",
+   "source": "yahoo TSM",
+   "rows": 501,
+   "first": "2024-10-16",
+   "last": "2026-10-15",
+   "last_close": 422.25,
+   "prev_close": 430.0,
+   "name": "台積電 ADR",
+   "cross_check": "2026-10-15 收盤 422.25 vs cnyes 412.27（差 +2.42%）",
+   "cross_check_ok": false
+  },
+  "sentiment/cnn_fear_greed": {
+   "status": "ok",
+   "source": "CNN dataviz graphdata",
+   "rows": 251,
+   "first": "2025-10-15",
+   "last": "2026-10-15",
+   "last_score": 31.54,
+   "score_now": 31.54,
+   "rating_now": "fear",
+   "time_utc": "2026-10-15T23:59:53+00:00",
+   "components": 7,
+   "cross_check": "無第二來源，未核對"
+  },
+  "sentiment/taifex_vix": {
+   "status": "ok",
+   "source": "期交所 vix/log2data 月檔",
+   "rows": 73,
+   "first": "2026-07-01",
+   "last": "2026-10-15",
+   "last_vix": 30.61,
+   "cross_check": "無第二來源，未核對"
+  },
+  "fx/usdtwd_bot_sell": {
+   "status": "ok",
+   "source": "FinMind TaiwanExchangeRate（台灣銀行牌告）",
+   "rows": 267,
+   "first": "2025-09-11",
+   "last": "2026-10-15",
+   "last_rate": 32.315,
+   "last_spot_buy": 32.215,
+   "last_cash_sell": 32.535,
+   "cross_check": "2026-10-15 即期賣出 32.315 vs Yahoo 中間價 32.1899（差 +0.125 元，正常 -0.3～+0.4）",
+   "cross_check_ok": true
+  },
+  "valuation/earnings": {
+   "status": "ok",
+   "source": "Yahoo quoteSummary calendarEvents",
+   "symbols": 5,
+   "missing": [],
+   "next": {
+    "GOOGL": "2026-10-28",
+    "NVDA": "2026-11-17",
+    "TSLA": "2026-10-21",
+    "SPCX": "2026-11-03",
+    "AAPL": "2026-11-02"
+   }
+  },
+  "valuation/VOO": {
+   "status": "ok",
+   "source": "stockanalysis",
+   "last": "2026-10-15",
+   "price": 709.43,
+   "fwd_pe": 19.57,
+   "peg": null,
+   "pe": 24.58,
+   "cross_check": "2026-10-15 頁面股價 709.43 vs repo 收盤 709.85（差 -0.06%）",
+   "cross_check_ok": true,
+   "week_check": "沒有一週前的紀錄，未比較"
+  },
+  "valuation/GOOGL": {
+   "status": "ok",
+   "source": "stockanalysis",
+   "last": "2026-10-15",
+   "price": 349.22,
+   "fwd_pe": 26.22,
+   "peg": 1.91,
+   "pe": 17.52,
+   "cross_check": "2026-10-15 頁面股價 349.22 vs repo 收盤 349.22（差 +0.00%）",
+   "cross_check_ok": true,
+   "week_check": "沒有一週前的紀錄，未比較"
+  },
+  "valuation/NVDA": {
+   "status": "ok",
+   "source": "stockanalysis",
+   "last": "2026-10-15",
+   "price": 217.23,
+   "fwd_pe": 17.96,
+   "peg": 0.36,
+   "pe": 27.47,
+   "cross_check": "2026-10-15 頁面股價 217.23 vs repo 收盤 217.23（差 +0.00%）",
+   "cross_check_ok": true,
+   "week_check": "沒有一週前的紀錄，未比較"
+  },
+  "valuation/TSLA": {
+   "status": "ok",
+   "source": "stockanalysis",
+   "last": "2026-10-15",
+   "price": 362.44,
+   "fwd_pe": 185.63,
+   "peg": 9.89,
+   "pe": 376.11,
+   "cross_check": "2026-10-15 頁面股價 362.44 vs repo 收盤 362.44（差 +0.00%）",
+   "cross_check_ok": true,
+   "week_check": "沒有一週前的紀錄，未比較"
+  },
+  "valuation/SPCX": {
+   "status": "ok",
+   "source": "stockanalysis",
+   "last": "2026-10-15",
+   "price": 148.62,
+   "fwd_pe": 94.37,
+   "peg": null,
+   "pe": null,
+   "cross_check": "2026-10-15 頁面股價 148.62 vs repo 收盤 148.62（差 +0.00%）",
+   "cross_check_ok": true,
+   "week_check": "沒有一週前的紀錄，未比較"
+  },
+  "valuation/AAPL": {
+   "status": "ok",
+   "source": "stockanalysis",
+   "last": "2026-10-15",
+   "price": 342.0,
+   "fwd_pe": 37.19,
+   "peg": 3.35,
+   "pe": 39.23,
+   "cross_check": "2026-10-15 頁面股價 342.0 vs repo 收盤 342.0（差 +0.00%）",
+   "cross_check_ok": true,
+   "week_check": "沒有一週前的紀錄，未比較"
+  },
+  "calendar/tw_holidays": {
+   "status": "ok",
+   "source": "證交所 OpenAPI holidaySchedule",
+   "rows": 27,
+   "years": [
+    "2026"
+   ],
+   "last": "2026-12-25",
+   "next_closed": "2026-10-26",
+   "cross_check": "2026 年與 rwd 版一致（27 筆）",
+   "cross_check_ok": true
+  },
+  "calendar/fomc": {
+   "status": "ok",
+   "source": "federalreserve.gov FOMC calendars",
+   "rows": 16,
+   "years": [
+    "2026",
+    "2027"
+   ],
+   "last": "2027-12-08",
+   "next": "2026-10-27～2026-10-28",
+   "cross_check": "官方單一來源，未核對"
+  },
+  "chips/tw_insti": {
+   "status": "ok",
+   "source": "證交所 T86（上市）、櫃買 dailyTrade（上櫃）",
+   "rows": 18,
+   "first": "2026-10-07",
+   "last": "2026-10-15",
+   "added": [
+    "2026-10-07 TWSE",
+    "2026-10-08 TWSE",
+    "2026-10-12 TWSE",
+    "2026-10-13 TWSE",
+    "2026-10-14 TWSE",
+    "2026-10-15 TWSE",
+    "2026-10-07 TPEX",
+    "2026-10-08 TPEX",
+    "2026-10-12 TPEX",
+    "2026-10-13 TPEX",
+    "2026-10-14 TPEX",
+    "2026-10-15 TPEX"
+   ],
+   "latest_total": {
+    "00411A": -14080764,
+    "009816": -301756738,
+    "00981A": -265050285
+   },
+   "cross_check": "各代號合計＝分項加總",
+   "cross_check_ok": true
+  },
+  "chips/tw_market_insti": {
+   "status": "ok",
+   "source": "證交所 BFI82U",
+   "rows": 6,
+   "first": "2026-10-07",
+   "last": "2026-10-15",
+   "added": [
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-12",
+    "2026-10-13",
+    "2026-10-14",
+    "2026-10-15"
+   ],
+   "latest_foreign": -302555484058,
+   "latest_total": -369095589329,
+   "cross_check": "合計＝分項加總",
+   "cross_check_ok": true
+  },
+  "chips/tw_margin": {
+   "status": "ok",
+   "source": "證交所 MI_MARGN",
+   "rows": 6,
+   "first": "2026-10-07",
+   "last": "2026-10-15",
+   "added": [
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-12",
+    "2026-10-13",
+    "2026-10-14",
+    "2026-10-15"
+   ],
+   "latest_margin_amount_k": 646415015,
+   "cross_check": "單一來源，未核對"
+  },
+  "holdings/00981A": {
+   "status": "ok",
+   "source": "統一投信 ezmoney",
+   "last": "2026-10-15",
+   "holdings": 50,
+   "nav": 29.11,
+   "top1": "2330 11.22%",
+   "compare_date": null,
+   "top10_in": 0,
+   "top10_out": 0,
+   "weight_moves": 0,
+   "cross_check": "2026-10-15 淨值 29.11 vs 證交所 mis 29.11（差 +0.00）；權重加總 96.46% vs 股票市值／淨資產 96.45%",
+   "cross_check_ok": true
+  },
+  "holdings/00411A": {
+   "status": "ok",
+   "source": "統一投信 ezmoney",
+   "last": "2026-10-14",
+   "holdings": 33,
+   "nav": 10.29,
+   "top1": "SPCX US 8.27%",
+   "compare_date": null,
+   "top10_in": 0,
+   "top10_out": 0,
+   "weight_moves": 0,
+   "cross_check": "2026-10-14 淨值 10.29 vs 證交所 mis 10.29（差 +0.00）；權重加總 94.19% vs 股票市值／淨資產 94.18%",
+   "cross_check_ok": true
   }
  },
  "errors": [],
  "us_cutoff_ny": "2026-10-15",
  "tw_cutoff_taipei": "2026-10-15",
  "summary": {
-  "ok": 17,
+  "ok": 43,
   "stale": 0,
   "fail": 0
  },
  "cross_check_conflicts": [
-  "us/ARKX"
+  "us/ARKX",
+  "macro/TSM"
  ]
 }
