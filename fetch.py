@@ -11,7 +11,7 @@
   data/meta.json           每個資料集的來源、列數、日期、核對結果與錯誤
 
 用法：python fetch.py [--skip-if-fresh]
-  --skip-if-fresh：meta.json 顯示今天（台北時間）已成功抓過就直接結束（給第二次排程當重試用）。
+  --skip-if-fresh：meta.json 顯示日線已完整（美股、台股最後日期都到台北今天的前一個平日且狀態 ok）就只更新淨值（給後續排程當重試用）。
 """
 import csv
 import datetime as dt
@@ -525,15 +525,29 @@ def fetch_tv(cfg):
 
 
 # ---------------------------------------------------------------- main
+def expected_last(today):
+    """台北日期 today 之前最近的平日：美股應收盤到這天（前一個美東工作日），台股也是。
+    不考慮假日；遇假日資料永遠比這天舊，只會多做幾次完整抓取，不會出錯。"""
+    d = today - dt.timedelta(days=1)
+    while d.weekday() >= 5:
+        d -= dt.timedelta(days=1)
+    return d.strftime("%Y-%m-%d")
+
+
 def fresh_today():
+    """日線已經完整才略過：us/*、tw/0* 全部 ok，且最後日期都到了 expected_last。
+    只看 meta 產生日期不夠：2026-10-16 02:19 手動執行時美股 10/15 還沒收盤，
+    之後三次排程都被略過，晨報讀到 10/14 的資料。"""
     try:
         m = json.load(open(os.path.join(DATA, "meta.json")))
     except Exception:  # noqa: BLE001
         return False
-    today = NOW.astimezone(TPE).strftime("%Y-%m-%d")
-    core = [k for k in m.get("datasets", {}) if k.startswith(("us/", "tw/0"))]
-    return (m.get("generated_at_taipei", "").startswith(today) and core
-            and all(m["datasets"][k].get("status") == "ok" for k in core))
+    ds = m.get("datasets", {})
+    core = [k for k in ds if k.startswith(("us/", "tw/0"))]
+    if not core or any(ds[k].get("status") != "ok" for k in core):
+        return False
+    want = expected_last(NOW.astimezone(TPE).date())
+    return all((ds[k].get("last") or "") >= want for k in core)
 
 
 def main():
