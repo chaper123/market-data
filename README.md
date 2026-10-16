@@ -30,6 +30,7 @@ GitHub 的排程常延遲，偶爾整個漏跑，所以排多次。需要立刻�
 | `data/sentiment/taifex_vix.csv` | 臺指選擇權波動率指數每日收盤：date,vix（逐日累積） | 期交所月檔 |
 | `data/valuation/us.json` | 可買標的最新估值：個股 Forward PE、PEG，VOO 本益比；頁面股價與交易日、隱含預估 EPS 與一週前比較（變動超過 ±20% 標記）、Yahoo 下次財報日 | stockanalysis / 頁面股價與 repo 日線核對；財報日 Yahoo |
 | `data/valuation/us_history.csv` | 估值每日紀錄：date,symbol,price,fwd_pe,peg,pe（逐日累積，空白＝n/a） | 同上 |
+| `data/calendar/calendar.json` | 行事曆：台股開休市（entries 含「開始交易日」等其實有交易的日子，closed 是平日休市日）、FOMC 會議（今年與已公布的明年，sep＝有經濟預測）、可買個股下次財報日；CPI 目前標「未取得」 | 證交所 OpenAPI / rwd 版核對；Fed 官網；財報日同 valuation |
 | `data/meta.json` | 每個資料集的狀態、列數、最後日期、雙來源核對結果、錯誤 | — |
 
 CSV 欄位：`date,volume,open,high,low,close`（無表頭），與排程任務的 `monitor.py`、`monitor_us.py` 相同。
