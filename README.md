@@ -31,10 +31,13 @@ GitHub 的排程常延遲，偶爾整個漏跑，所以排多次。需要立刻�
 | `data/valuation/us.json` | 可買標的最新估值：個股 Forward PE、PEG，VOO 本益比；頁面股價與交易日、隱含預估 EPS 與一週前比較（變動超過 ±20% 標記）、Yahoo 下次財報日 | stockanalysis / 頁面股價與 repo 日線核對；財報日 Yahoo |
 | `data/valuation/us_history.csv` | 估值每日紀錄：date,symbol,price,fwd_pe,peg,pe（逐日累積，空白＝n/a） | 同上 |
 | `data/calendar/calendar.json` | 行事曆：台股開休市（entries 含「開始交易日」等其實有交易的日子，closed 是平日休市日）、FOMC 會議（今年與已公布的明年，sep＝有經濟預測）、可買個股下次財報日；CPI 目前標「未取得」 | 證交所 OpenAPI / rwd 版核對；Fed 官網；財報日同 valuation |
+| `data/chips/tw_insti.csv` | 關注代號三大法人買賣超（股）：date,code,foreign,foreign_dealer,trust,dealer,total（foreign 不含外資自營商，dealer＝自行買賣＋避險；逐日累積） | 上市：證交所 T86；上櫃：櫃買中心 / 合計＝分項加總 |
+| `data/chips/tw_market_insti.csv` | 集中市場三大法人買賣差額（元）：date,dealer_self,dealer_hedge,trust,foreign,foreign_dealer,total（逐日累積） | 證交所 BFI82U / 合計＝分項加總 |
+| `data/chips/tw_margin.csv` | 集中市場信用交易：date,margin_lots,short_lots,margin_amount_k（融資餘額張、融券餘額張、融資金額仟元；逐日累積） | 證交所 MI_MARGN |
 | `data/meta.json` | 每個資料集的狀態、列數、最後日期、雙來源核對結果、錯誤 | — |
 
 CSV 欄位：`date,volume,open,high,low,close`（無表頭），與排程任務的 `monitor.py`、`monitor_us.py` 相同。
-`macro/`、`sentiment/` 等 Phase 1 新資料由 `macro.py` 等模組產生，只在完整抓取時更新（只更新淨值的那幾次不動）；某一項失敗時保留舊檔、meta 標 stale，不影響日線。
+`macro/`、`sentiment/`、`chips/` 等 Phase 1 新資料由 `macro.py` 等模組產生，只在完整抓取時更新（只更新淨值的那幾次不動）；某一項失敗時保留舊檔、meta 標 stale，不影響日線。
 
 `meta.json` 的 `status`：`ok` 本次成功；`stale` 本次失敗，檔案是上一次的；`fail` 從未成功。
 `cross_check_ok=false` 代表主來源與核對來源的收盤差超過 0.5%。
