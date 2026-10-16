@@ -28,5 +28,6 @@
     "GOLD": {"yahoo": "GC=F",                               "name": "COMEX 黃金期貨（近月）"},
     "WTI":  {"yahoo": "CL=F",                               "name": "WTI 原油期貨（近月）"},
     "TSM":  {"yahoo": "TSM",      "cnyes": "USS:TSM:STOCK", "name": "台積電 ADR"}
-  }
+  },
+  "valuation": {"VOO": "etf", "GOOGL": "stock", "NVDA": "stock", "TSLA": "stock", "SPCX": "stock", "AAPL": "stock"}
 }

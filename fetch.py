@@ -12,6 +12,7 @@
 Phase 1 新資料由各模組產生（只在完整抓取時執行，失敗不影響上面的檔案）：
   macro.py                 data/macro/、data/sentiment/（指數與總經收盤、CNN 恐懼貪婪、台指 VIX）
   fxbot.py                 data/fx/usdtwd_bot_sell.csv（台銀美元即期賣出，FinMind）
+  valuation.py             data/valuation/（估值 stockanalysis、下次財報日 Yahoo）
 
 用法：python fetch.py [--skip-if-fresh]
   --skip-if-fresh：meta.json 顯示日線已完整（美股、台股最後日期都到台北今天的前一個平日且狀態 ok）就只更新淨值（給後續排程當重試用）。
@@ -28,9 +29,11 @@ from common import (DATA, NOW, NY, ROOT, TPE, UTC, cnyes_daily, cross_check, fin
                     summary, tw_cutoff, us_cutoff, write_csv, yahoo_daily)
 import fxbot
 import macro
+import valuation
 
 # Phase 1 新資料：放在既有日線與匯率之後，每步各自 try，簽名都是 step(cfg, META)
-PHASE1_STEPS = (macro.fetch_macro, macro.fetch_cnn, macro.fetch_taifex_vix, fxbot.fetch_bot_fx)
+PHASE1_STEPS = (macro.fetch_macro, macro.fetch_cnn, macro.fetch_taifex_vix, fxbot.fetch_bot_fx,
+                valuation.fetch_valuation)
 
 META = {"generated_at_utc": NOW.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "generated_at_taipei": NOW.astimezone(TPE).strftime("%Y-%m-%d %H:%M"),
