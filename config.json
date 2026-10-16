@@ -17,5 +17,16 @@
     "00411A": {"market": "TPEX", "min_date": "2026-08-26"}
   },
   "tw_index": "TSE01",
-  "tw_months": 13
+  "tw_months": 13,
+  "macro": {
+    "SPX":  {"yahoo": "^GSPC",    "cnyes": "GI:INX:INDEX",  "name": "S&P 500"},
+    "IXIC": {"yahoo": "^IXIC",    "cnyes": "GI:IXIC:INDEX", "name": "Nasdaq 綜合指數"},
+    "SOX":  {"yahoo": "^SOX",     "cnyes": "GI:SOX:INDEX",  "name": "費城半導體指數"},
+    "VIX":  {"yahoo": "^VIX",                               "name": "VIX 波動率指數"},
+    "TNX":  {"yahoo": "^TNX",                               "name": "美國 10 年期公債殖利率（%）"},
+    "DXY":  {"yahoo": "DX-Y.NYB", "cnyes": "GI:DXY:INDEX",  "name": "美元指數"},
+    "GOLD": {"yahoo": "GC=F",                               "name": "COMEX 黃金期貨（近月）"},
+    "WTI":  {"yahoo": "CL=F",                               "name": "WTI 原油期貨（近月）"},
+    "TSM":  {"yahoo": "TSM",      "cnyes": "USS:TSM:STOCK", "name": "台積電 ADR"}
+  }
 }
