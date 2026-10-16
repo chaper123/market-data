@@ -15,6 +15,7 @@ Phase 1 新資料由各模組產生（只在完整抓取時執行，失敗不影
   valuation.py             data/valuation/（估值 stockanalysis、下次財報日 Yahoo）
   calendars.py             data/calendar/calendar.json（台股休市、FOMC、財報日；CPI 未取得）
   chips.py                 data/chips/（關注代號三大法人、集中市場三大法人金額、融資）
+  holdings.py              data/holdings/（主動式 ETF 每日持股與前十大變化，統一投信）
 
 用法：python fetch.py [--skip-if-fresh]
   --skip-if-fresh：meta.json 顯示日線已完整（美股、台股最後日期都到台北今天的前一個平日且狀態 ok）就只更新淨值（給後續排程當重試用）。
@@ -32,13 +33,14 @@ from common import (DATA, NOW, NY, ROOT, TPE, UTC, cnyes_daily, cross_check, fin
 import calendars
 import chips
 import fxbot
+import holdings
 import macro
 import valuation
 
 # Phase 1 新資料：放在既有日線與匯率之後，每步各自 try，簽名都是 step(cfg, META)
 PHASE1_STEPS = (macro.fetch_macro, macro.fetch_cnn, macro.fetch_taifex_vix, fxbot.fetch_bot_fx,
                 valuation.fetch_valuation, calendars.fetch_calendar,
-                chips.fetch_chips)
+                chips.fetch_chips, holdings.fetch_holdings)
 
 META = {"generated_at_utc": NOW.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "generated_at_taipei": NOW.astimezone(TPE).strftime("%Y-%m-%d %H:%M"),
