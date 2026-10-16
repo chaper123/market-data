@@ -3,7 +3,12 @@ name: probe-sources
 # Phase 1 來源探測：檢查候選資料來源從 GitHub 機房能否取得資料。
 # 只手動觸發，不排程、不寫入 data/、不 commit；結果在這次執行的 job summary。
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      groups:
+        description: "只探測這些分組（空白分隔，例如 daily；留空＝全部）"
+        required: false
+        default: ""
 
 permissions:
   contents: read
@@ -20,4 +25,6 @@ jobs:
           python-version: "3.12"
 
       - name: Probe sources
-        run: python probe.py
+        env:
+          GROUPS: ${{ inputs.groups }}
+        run: python probe.py $GROUPS

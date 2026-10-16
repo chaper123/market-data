@@ -6,13 +6,14 @@
 
 只做一般的 GET，遇到防機器人驗證頁就記為失敗，不嘗試繞過。
 
-用法：python probe.py
+用法：python probe.py [分組 ...]（分組見 STEPS，例如 daily；不給就全部）
 """
 import datetime as dt
 import html
 import json
 import os
 import re
+import sys
 import time
 import urllib.error
 import urllib.parse
@@ -446,6 +447,55 @@ def probe_news():
           f"https://news.google.com/rss/search?q={q_tw}&hl=zh-TW&gl=TW&ceid=TW:zh-Hant", rss)
 
 
+# ---------------------------------------------------------------- 9. 日線替代來源（鉅亨網最後一根 K 棒停在盤中價）
+def nasdaq_hist(raw):
+    rows = ((jload(raw).get("data") or {}).get("tradesTable") or {}).get("rows") or []
+    if not rows:
+        raise ValueError("沒有 rows")
+    r = rows[0]  # 由新到舊
+    m, d, y = r["date"].split("/")
+    return f"{y}-{m}-{d} 收 {r['close']} 量 {r['volume']}（{len(rows)} 列）"
+
+
+def moneydj_us(raw):
+    res = jload(raw)["ResultSet"]["Result"][0]
+    days, closes, vols = res["V1"].split(","), res["V5"].split(","), res["V6"].split(",")
+    return f"{days[-1].replace('/', '-')} 收 {closes[-1]} 量 {vols[-1]}（{len(days)} 列）"
+
+
+def moneydj_tw(raw):
+    parts = raw.decode("utf-8", "replace").split(" ")
+    days, closes = parts[0].split(","), parts[4].split(",")
+    if len(days) != len(closes) or not days[0]:
+        raise ValueError("欄位數不符")
+    return f"{days[-1].replace('/', '-')} 收 {closes[-1]}（{len(days)} 列）"
+
+
+def tpex_daily(raw):
+    t = (jload(raw).get("tables") or [{}])[0]
+    rows = t.get("data") or []
+    if not rows:
+        raise ValueError("沒有資料")
+    return f"{rows[-1][0]} 收 {rows[-1][6]}（本月 {len(rows)} 列）"
+
+
+def probe_daily_sources():
+    start = TODAY - dt.timedelta(days=40)
+    hdr = {"Accept": "application/json", "Referer": "https://www.nasdaq.com/"}
+    for sym, cls in (("ARKX", "etf"), ("TSM", "stocks")):
+        probe("日線替代", f"Nasdaq historical {sym}",
+              f"https://api.nasdaq.com/api/quote/{sym}/historical?assetclass={cls}&fromdate={start}"
+              f"&todate={TODAY}&limit=9999", nasdaq_hist, headers=hdr)
+    for sym in ("ARKX", "TSM"):
+        probe("日線替代", f"MoneyDJ 美股日線 {sym}",
+              f"https://www.moneydj.com/JsonData/USStock/USStockJsonData.xdjjson?x=canvas0002&a={sym}&b=D", moneydj_us)
+    probe("日線替代", "MoneyDJ 台股日線 00411A", "https://www.moneydj.com/Z/BCD/czkc1.djbcd?a=00411A&b=D&c=300&E=1&ver=5",
+          moneydj_tw)
+    probe("日線替代", "櫃買 個股日成交 00411A",
+          f"https://www.tpex.org.tw/www/zh-tw/afterTrading/tradingStock?code=00411A&date={TODAY:%Y/%m}/01&response=json",
+          tpex_daily)
+
+
 # ---------------------------------------------------------------- 報告
 def cell(s):
     return str(s).replace("|", "\\|").replace("<", "‹").replace(">", "›").replace("\n", " ")
@@ -471,9 +521,15 @@ def report():
     print("PROBE_JSON=" + json.dumps(RESULTS, ensure_ascii=False))
 
 
+STEPS = {"chart": "probe_yahoo_chart", "sentiment": "probe_sentiment", "fx": "probe_fx",
+         "valuation": "probe_valuation", "calendar": "probe_calendar", "institutional": "probe_institutional",
+         "etf": "probe_active_etf", "news": "probe_news", "daily": "probe_daily_sources"}
+
+
 def main():
-    for step in (probe_yahoo_chart, probe_sentiment, probe_fx, probe_valuation, probe_calendar,
-                 probe_institutional, probe_active_etf, probe_news):
+    # 不給參數就全部探測；給分組名稱（例如 python probe.py daily）只探測那幾組
+    names = [a for a in sys.argv[1:] if a in STEPS] or list(STEPS)
+    for step in (globals()[STEPS[n]] for n in names):
         try:
             step()
         except Exception as ex:  # noqa: BLE001 — 單一步驟出錯不影響其他探測
