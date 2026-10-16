@@ -2,7 +2,8 @@
 
 輸出：
   data/macro/<名稱>.csv               date,volume,open,high,low,close（無表頭，只含已收盤的交易日）
-                                      名稱與 Yahoo 代號見 config.json 的 macro；有鉅亨網代號的會核對收盤
+                                      名稱與 Yahoo 代號見 config.json 的 macro；指數用鉅亨網核對收盤，
+                                      個股（TSM）用 MoneyDJ 核對並對最後一根 K 棒多數決（Nasdaq 官方當裁判）
   data/sentiment/cnn_fear_greed.json  CNN 恐懼貪婪目前分數、評等、前收／一週／一月／一年前，以及 7 個分項
   data/sentiment/cnn_fear_greed.csv   date,score,rating（逐日累積，只含已收盤的美股交易日）
   data/sentiment/taifex_vix.csv       date,vix（臺指選擇權波動率指數每日收盤，逐日累積）
@@ -13,7 +14,8 @@ import re
 import time
 
 from common import (DATA, NOW, NY, TPE, UTC, cnyes_daily, cross_check, finalize, get_json, http, mark_failed,
-                    read_rows, summary, tw_cutoff, us_cutoff, write_csv, write_json, write_rows, yahoo_daily)
+                    moneydj_us_daily, read_rows, summary, tw_cutoff, us_cutoff, vote_daily, write_csv, write_json,
+                    write_rows, yahoo_daily)
 
 CNN_URL = "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
 CNN_PARTS = ("market_momentum_sp500", "stock_price_strength", "stock_price_breadth", "put_call_options",
@@ -32,7 +34,21 @@ def fetch_macro(cfg, meta):
                 raise RuntimeError(f"只有 {len(rows)} 列")
             m = summary(rows, f"yahoo {e['yahoo']}")
             m["name"] = e.get("name")
-            if e.get("cnyes"):
+            if e.get("moneydj"):
+                # 個股（TSM）：與 us/ 相同，MoneyDJ 核對、最後一根多數決、Nasdaq 官方當裁判
+                try:
+                    alt = finalize(moneydj_us_daily(e["moneydj"]), cut)
+                except Exception as ex:  # noqa: BLE001
+                    meta["errors"].append(f"macro {name} moneydj: {ex}")
+                    alt = []
+                rows, vote = vote_daily(e["moneydj"], [("yahoo", rows), ("moneydj", alt)])
+                vote.pop("base_source")
+                m = summary(rows, f"yahoo {e['yahoo']}")
+                m.update(vote, name=e.get("name"),
+                         cross_check=f"最後一根：{vote['last_bar_votes']}；兩家收盤差 >0.5% 共 "
+                                     f"{vote.get('history_mismatch', '—')} 根",
+                         cross_check_ok="last_bar_unresolved" not in vote)
+            elif e.get("cnyes"):
                 try:
                     raw, _ = cnyes_daily(e["cnyes"], [UTC, NY, TPE])
                     cross_check(m, rows, finalize(raw, cut), "cnyes")

@@ -15,8 +15,8 @@ GitHub 的排程常延遲，偶爾整個漏跑，所以排多次。需要立刻�
 
 | 路徑 | 內容 | 來源（主 / 核對） |
 |---|---|---|
-| `data/us/<代號>.csv` | 美股日線，已收盤的交易日 | 鉅亨網 / Yahoo |
-| `data/tw/<代號>_norm.csv` | 台股日線，已收盤的交易日 | 上市：證交所 / 鉅亨網；00411A：鉅亨網 / Yahoo |
+| `data/us/<代號>.csv` | 美股日線，已收盤的交易日，最近一年 | MoneyDJ / Yahoo；最後一根 K 棒兩家一致才採用，不一致或缺一家時用 Nasdaq 官方當裁判 |
+| `data/tw/<代號>_norm.csv` | 台股日線，已收盤的交易日 | 上市：證交所 / 鉅亨網；00411A（上櫃）：櫃買中心 / MoneyDJ |
 | `data/tw/quotes.json` | 抓取當下的盤中快照（備援用） | 鉅亨網 |
 | `data/tw/nav_history.csv` | ETF 每日淨值與當日收盤折溢價：date,code,nav,close,premium_pct,source（逐日累積） | 證交所基本市況報導網站 mis.twse.com.tw |
 | `data/tw/nav_raw.json` | 最新一次抓到的淨值原始資料，含盤中預估淨值（f）與預估折溢價（g） | 同上 |
@@ -24,7 +24,7 @@ GitHub 的排程常延遲，偶爾整個漏跑，所以排多次。需要立刻�
 | `data/fx/usdtwd_bot_sell.csv` | 台銀美元即期賣出：date,rate，約 13 個月，16:30 前不收當天。格式同上，可直接當排程的 fx_csv（台銀網站擋 GitHub，改由 FinMind 取得，已與台銀網頁 6 個月表逐筆比對一致） | FinMind TaiwanExchangeRate / 與 usdtwd_mid 核對價差 |
 | `data/tv/snapshot.json` | TradingView 日線技術面快照 | TradingView scanner |
 | `data/radar.json`、`data/radar.md` | 技術面雷達判讀（結構、位置、訊號矛盾、關鍵價位）。指標由 repo 日線自己算，TradingView 只提供綜合評分，且只在數據一致時採用 | `radar.py`、`indicators.py` |
-| `data/macro/<名稱>.csv` | 美股指數與總經日線，已收盤的交易日，約 2 年：SPX、IXIC、SOX、VIX、TNX（10 年期殖利率 %）、DXY、GOLD、WTI、TSM（代號對照見 `config.json` 的 `macro`） | Yahoo / 鉅亨網（SPX、IXIC、SOX、DXY、TSM 有核對） |
+| `data/macro/<名稱>.csv` | 美股指數與總經日線，已收盤的交易日，約 2 年：SPX、IXIC、SOX、VIX、TNX（10 年期殖利率 %）、DXY、GOLD、WTI、TSM（代號對照見 `config.json` 的 `macro`） | Yahoo / 鉅亨網（SPX、IXIC、SOX、DXY）、MoneyDJ（TSM，最後一根多數決同 us/） |
 | `data/sentiment/cnn_fear_greed.json` | CNN 恐懼貪婪目前分數與評等、前收／一週／一月／一年前，以及 7 個分項 | CNN dataviz |
 | `data/sentiment/cnn_fear_greed.csv` | 恐懼貪婪每日收盤分數：date,score,rating（逐日累積） | 同上 |
 | `data/sentiment/taifex_vix.csv` | 臺指選擇權波動率指數每日收盤：date,vix（逐日累積） | 期交所月檔 |
@@ -42,7 +42,9 @@ CSV 欄位：`date,volume,open,high,low,close`（無表頭），與排程任務�
 `macro/`、`sentiment/`、`fx/usdtwd_bot_sell.csv`、`valuation/`、`calendar/`、`chips/`、`holdings/` 等 Phase 1 新資料由 `macro.py` 等模組產生，只在完整抓取時更新（只更新淨值的那幾次不動）；某一項失敗時保留舊檔、meta 標 stale，不影響日線。
 
 `meta.json` 的 `status`：`ok` 本次成功；`stale` 本次失敗，檔案是上一次的；`fail` 從未成功。
-`cross_check_ok=false` 代表主來源與核對來源的收盤差超過 0.5%。
+`cross_check_ok=false` 代表主來源與核對來源的收盤差超過 0.5%。美股（us/、macro/TSM）另有 `last_bar_source`（最後一根 K 棒採用的來源）、`last_bar_referee`（是否動用 Nasdaq 官方裁判）、`last_bar_votes`（各來源的值）、`history_mismatch`（近一年兩家收盤差超過 0.5% 的根數）；裁判也無法判定時，那一根先不收，`last_bar_unresolved` 記日期、`cross_check_ok=false`。
+
+鉅亨網的美股最後一根 K 棒常停在盤中價（2026-10-16 檢查：ARKX、TSM 到台北中午仍未更新；過去一年 VOO、IAUM、ARK 系列、TSM 各有 5～9 根收盤錯 0.5% 以上，成交量也偏少），所以美股與 00411A 不再以鉅亨網為主。
 
 ## 讀取方式
 

@@ -27,7 +27,7 @@
     "DXY":  {"yahoo": "DX-Y.NYB", "cnyes": "GI:DXY:INDEX",  "name": "美元指數"},
     "GOLD": {"yahoo": "GC=F",                               "name": "COMEX 黃金期貨（近月）"},
     "WTI":  {"yahoo": "CL=F",                               "name": "WTI 原油期貨（近月）"},
-    "TSM":  {"yahoo": "TSM",      "cnyes": "USS:TSM:STOCK", "name": "台積電 ADR"}
+    "TSM":  {"yahoo": "TSM",      "moneydj": "TSM",         "name": "台積電 ADR"}
   },
   "valuation": {"VOO": "etf", "GOOGL": "stock", "NVDA": "stock", "TSLA": "stock", "SPCX": "stock", "AAPL": "stock"},
   "holdings": {"00981A": "49YTW", "00411A": "64YTW"}

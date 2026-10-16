@@ -177,6 +177,106 @@ def yahoo_daily(sym):
     return rows
 
 
+# ---------------------------------------------------------------- MoneyDJ 日線（約 300 根，未還原）
+def moneydj_us_daily(sym):
+    """美股：V1～V6 依序是日期、開、高、低、收、量（股），以逗號分隔。"""
+    j = get_json(f"https://www.moneydj.com/JsonData/USStock/USStockJsonData.xdjjson?x=canvas0002&a={sym}&b=D")
+    res = (j.get("ResultSet") or {}).get("Result") or []
+    if not res:
+        raise RuntimeError(f"moneydj {sym}: 無資料")
+    cols = [res[0][f"V{i}"].split(",") for i in range(1, 7)]
+    rows = {}
+    for d, o, h, lo, c, v in zip(*cols):
+        day = d.replace("/", "-")
+        rows[day] = (day, num(v) or 0, num(o), num(h), num(lo), num(c))
+    return rows
+
+
+def moneydj_tw_daily(code):
+    """台股：以空白分隔的多段，前 6 段依序是日期、開、高、低、收、量（張）。"""
+    status, raw = http(f"https://www.moneydj.com/Z/BCD/czkc1.djbcd?a={code}&b=D&c=300&E=1&ver=5")
+    parts = [p.split(",") for p in raw.decode("utf-8", "replace").split(" ")]
+    if status != 200 or len(parts) < 6 or not parts[0][0]:
+        raise RuntimeError(f"moneydj {code}: 無資料（HTTP {status}）")
+    rows = {}
+    for d, o, h, lo, c, v in zip(*parts[:6]):
+        day = d.replace("/", "-")
+        rows[day] = (day, num(v) or 0, num(o), num(h), num(lo), num(c))
+    return rows
+
+
+# ---------------------------------------------------------------- Nasdaq 官方歷史行情（最後一根 K 棒的裁判）
+def nasdaq_daily(sym, start, end):
+    """api.nasdaq.com 要帶 Accept: application/json。不知道代號是股票或 ETF，兩種 assetclass 都試。"""
+    for cls in ("stocks", "etf"):
+        j = get_json(f"https://api.nasdaq.com/api/quote/{sym}/historical?assetclass={cls}&fromdate={start}"
+                     f"&todate={end}&limit=9999",
+                     headers={"Accept": "application/json", "Referer": "https://www.nasdaq.com/"})
+        data = ((j.get("data") or {}).get("tradesTable") or {}).get("rows") or []
+        if data:
+            rows = {}
+            for r in data:
+                m, d, y = r["date"].split("/")
+                day = f"{y}-{m}-{d}"
+                f = lambda k: num(str(r.get(k)).replace("$", ""))  # noqa: E731
+                rows[day] = (day, f("volume") or 0, f("open"), f("high"), f("low"), f("close"))
+            return rows
+    raise RuntimeError(f"nasdaq {sym}: 無資料")
+
+
+def close_agree(a, b, limit=0.5):
+    return bool(a and b) and abs(a / b - 1) * 100 <= limit
+
+
+def vote_daily(sym, srcs, referee=nasdaq_daily, limit=0.5):
+    """srcs：[(來源名稱, finalize 後的列)]，第一個是主來源、第二個是核對來源。
+
+    歷史 K 棒用主來源（主來源不足 15 列才用核對來源），並統計兩家收盤差超過 limit% 的根數（只記錄）。
+    最後一根 K 棒多數決：兩家都有且收盤一致才採用；不一致或只有一家有，就問官方裁判（Nasdaq），
+    至少一家與裁判一致才採用（K 棒用官方值）；裁判也無法判定就先不收這一根。
+    回傳 (rows, meta)；meta 含 last_bar_source、last_bar_referee、last_bar_votes、history_mismatch 等。"""
+    srcs = [(n, r) for n, r in srcs if r]
+    if not srcs:
+        raise RuntimeError("所有來源都失敗")
+    base_name, base = next(((n, r) for n, r in srcs if len(r) >= 15), srcs[0])
+    m = {}
+    if len(srcs) >= 2:
+        (na, a), (nb, b) = srcs[0], srcs[1]
+        bmap = {r[0]: r[5] for r in b}
+        last_common = min(a[-1][0], b[-1][0])
+        bad = [r[0] for r in a if r[0] < last_common and r[0] in bmap and not close_agree(r[5], bmap[r[0]], limit)]
+        m["history_mismatch"] = len(bad)
+        if bad:
+            m["history_mismatch_dates"] = bad[-5:]
+    day = max(r[-1][0] for _, r in srcs)
+    bars = {n: next((x for x in reversed(r) if x[0] == day), None) for n, r in srcs}
+    have = {n: x for n, x in bars.items() if x}
+    votes = "、".join(f"{n} {x[5]}" for n, x in have.items())
+    rows = [x for x in base if x[0] < day]
+    names = list(have)
+    if len(have) >= 2 and close_agree(have[names[0]][5], have[names[1]][5], limit):
+        rows.append(have[names[0]])
+        m.update(last_bar_source=names[0], last_bar_referee=False, last_bar_votes=f"{day} {votes} 一致")
+    else:
+        ref = None
+        try:
+            start = (dt.date.fromisoformat(day) - dt.timedelta(days=10)).isoformat()
+            ref = referee(sym, start, day).get(day)
+        except Exception as ex:  # noqa: BLE001
+            m["referee_error"] = str(ex)[:200]
+        winners = [n for n, x in have.items() if ref and close_agree(x[5], ref[5], limit)]
+        if ref and winners and None not in ref[2:]:
+            rows.append(ref)
+            m.update(last_bar_source="nasdaq", last_bar_referee=True,
+                     last_bar_votes=f"{day} {votes}；裁判 nasdaq {ref[5]}，與 {'、'.join(winners)} 一致")
+        else:
+            m.update(last_bar_source=None, last_bar_referee=True, last_bar_unresolved=day,
+                     last_bar_votes=f"{day} {votes}；裁判 {'nasdaq ' + str(ref[5]) if ref else '無資料'}，"
+                                    f"無法判定，先不收這一根")
+    m["base_source"] = base_name
+    return rows, m
+
+
 # ---------------------------------------------------------------- Phase 1 資料模組共用
 def read_rows(path):
     """讀無表頭 CSV；檔案不存在回傳空串列。"""

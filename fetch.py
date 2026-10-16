@@ -4,7 +4,7 @@
 抓取失敗時保留上一次的檔案，並在 data/meta.json 標示 stale，排程任務據此決定是否改用舊方法。
 
 輸出：
-  data/us/<代號>.csv       date,volume,open,high,low,close（無表頭，只含已收盤的交易日）
+  data/us/<代號>.csv       date,volume,open,high,low,close（無表頭，只含已收盤的交易日；MoneyDJ 為主，最後一根多數決）
   data/tw/<代號>_norm.csv  同上（只含已收盤的交易日；盤中價由排程任務另外抓）
   data/fx/usdtwd_mid.csv   date,rate（Yahoo 美元兌台幣收盤，市場中間價；台銀即期賣出由排程任務自己抓）
   data/tv/snapshot.json    TradingView 日線技術面快照（radar.py 使用）
@@ -28,8 +28,9 @@ import re
 import sys
 import time
 
-from common import (DATA, NOW, NY, ROOT, TPE, UTC, cnyes_daily, cross_check, finalize, get_json, http, num,
-                    summary, tw_cutoff, us_cutoff, write_csv, yahoo_daily)
+from common import (DATA, NOW, NY, ROOT, TPE, UTC, cnyes_daily, cross_check, finalize, get_json, http,
+                    moneydj_tw_daily, moneydj_us_daily, num, summary, tw_cutoff, us_cutoff, vote_daily, write_csv,
+                    yahoo_daily)
 import calendars
 import chips
 import fxbot
@@ -47,31 +48,45 @@ META = {"generated_at_utc": NOW.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "datasets": {}, "errors": []}
 
 
+US_DAYS = 365  # 只留最近一年（約 250 列，和過去用鉅亨網時相同）
+
+
+def daily_meta(rows, vote):
+    """summary 加上多數決結果；cross_check_ok＝最後一根有兩家（或一家＋官方裁判）一致。"""
+    m = summary(rows, vote.pop("base_source"))
+    m.update(vote)
+    m["cross_check"] = (f"最後一根：{vote['last_bar_votes']}；近一年兩家收盤差 >0.5% 共 "
+                        f"{vote.get('history_mismatch', '—')} 根")
+    m["cross_check_ok"] = "last_bar_unresolved" not in vote
+    return m
+
+
 def fetch_us(cfg):
+    """美股日線：MoneyDJ 為主、Yahoo 核對，最後一根 K 棒多數決並以 Nasdaq 官方當裁判（common.vote_daily）。
+    2026-10-16 歷史總檢查：MoneyDJ 11 檔各 300 根與 Nasdaq 官方完全一致；鉅亨網最後一根常停在盤中價，
+    過去一年也有 5～9 根收盤錯 0.5% 以上（VOO、IAUM、ARK 系列），所以不再使用。"""
     cut = us_cutoff()
     META["us_cutoff_ny"] = cut
+    keep_from = (dt.date.fromisoformat(cut) - dt.timedelta(days=US_DAYS)).isoformat()
     for sym, e in cfg["us"].items():
-        m, rows, alt = {}, None, None
         path = os.path.join(DATA, "us", f"{sym}.csv")
+        min_date = max(e.get("min_date") or "", keep_from)
+        srcs = []
+        for name, fn in (("moneydj", moneydj_us_daily), ("yahoo", yahoo_daily)):
+            try:
+                srcs.append((name, finalize(fn(sym), cut, min_date)))
+            except Exception as ex:  # noqa: BLE001
+                META["errors"].append(f"US {sym} {name}: {ex}")
         try:
-            raw, extra = cnyes_daily(f"USS:{sym}:STOCK", [UTC, NY, TPE])
-            rows = finalize(raw, cut, e.get("min_date"))
-            m = summary(rows, "cnyes")
-            m.update(extra)
-        except Exception as ex:  # noqa: BLE001
-            META["errors"].append(f"US {sym} cnyes: {ex}")
-        try:
-            alt = finalize(yahoo_daily(sym), cut, e.get("min_date"))
-        except Exception as ex:  # noqa: BLE001
-            META["errors"].append(f"US {sym} yahoo: {ex}")
-        if (not rows or len(rows) < 15) and alt:
-            rows, m = alt, summary(alt, "yahoo")
-            alt = None
-        if rows:
-            if alt:
-                cross_check(m, rows, alt, "yahoo")
+            rows, vote = vote_daily(sym, srcs)
+            if not rows:
+                raise RuntimeError("沒有資料列")
+            m = daily_meta(rows, vote)
+            if vote.get("last_bar_unresolved"):
+                META["errors"].append(f"US {sym}: {vote['last_bar_votes']}")
             write_csv(path, rows)
-        else:
+        except Exception as ex:  # noqa: BLE001
+            META["errors"].append(f"US {sym}: {ex}")
             m = {"status": "stale" if os.path.exists(path) else "fail", "source": None}
         META["datasets"][f"us/{sym}"] = m
         time.sleep(0.8)
@@ -134,6 +149,31 @@ def twse_daily(code, n_months):
     return rows
 
 
+def tpex_daily(code, n_months, min_date=None):
+    """櫃買中心個股日成交（官方，一次一個月）。成交量單位是張，與原本的鉅亨網、MoneyDJ 相同（證交所是股）。"""
+    rows = {}
+    for y, mo in months_back(n_months):
+        if min_date and f"{y}-{mo:02d}-31" < min_date:  # 上市前的月份不用抓
+            continue
+        j = get_json(f"https://www.tpex.org.tw/www/zh-tw/afterTrading/tradingStock?code={code}"
+                     f"&date={y}/{mo:02d}/01&response=json")
+        t = (j.get("tables") or [{}])[0]
+        f = t.get("fields") or []
+        idx = dict(d=pick(f, "日"), v=pick(f, "成交張數"), o=pick(f, "開盤"), h=pick(f, "最高"),
+                   l=pick(f, "最低"), c=pick(f, "收盤"))
+        if None in idx.values():
+            raise RuntimeError(f"TPEX {code}: 欄位變了 {f}")
+        for r in t.get("data") or []:
+            day = roc_date(r[idx["d"]])  # 上市日會標成「115/08/26*」，roc_date 只取前面的日期
+            if day:
+                rows[day] = (day, num(r[idx["v"]]) or 0, num(r[idx["o"]]), num(r[idx["h"]]),
+                             num(r[idx["l"]]), num(r[idx["c"]]))
+        time.sleep(1.5)
+    if not rows:
+        raise RuntimeError(f"TPEX {code}: 無資料")
+    return rows
+
+
 def fix_volume_units(rows):
     """鉅亨網台股日線偶爾某天用「股」而不是「張」。成交量是前後中位數的 300 倍以上、
     除以 1000 後又落在正常範圍時，視為單位錯誤並除以 1000。回傳修正後的列與被修正的日期。"""
@@ -157,12 +197,21 @@ def fetch_tw(cfg):
     for code, e in cfg["tw"].items():
         path = os.path.join(DATA, "tw", f"{code}_norm.csv")
         got, extra = [], {}
-        # 依序嘗試：證交所（上市）→ 鉅亨網 → Yahoo；第一個列數足夠的當主來源，下一個用來核對
+        # 依序嘗試：官方（上市證交所／上櫃櫃買中心；上櫃再加 MoneyDJ）→ 鉅亨網 → Yahoo；
+        # 第一個列數足夠的當主來源，下一個用來核對。鉅亨網美股最後一根常停在盤中價（2026-10-16 檢查），
+        # 上櫃原本以它為主，改為櫃買官方為主、MoneyDJ 核對
         if e["market"] == "TWSE":
             try:
                 got.append(("TWSE", finalize(twse_daily(code, n), cut, e.get("min_date"))))
             except Exception as ex:  # noqa: BLE001
                 META["errors"].append(f"TW {code} TWSE: {ex}")
+        else:
+            for name, fn in (("TPEX", lambda: tpex_daily(code, n, e.get("min_date"))),
+                             ("moneydj", lambda: moneydj_tw_daily(code))):
+                try:
+                    got.append((name, finalize(fn(), cut, e.get("min_date"))))
+                except Exception as ex:  # noqa: BLE001
+                    META["errors"].append(f"TW {code} {name}: {ex}")
         try:
             raw, extra = cnyes_daily(f"TWS:{code}:STOCK", [TPE, UTC])
             fixed_rows = finalize(raw, cut, e.get("min_date"))
@@ -183,6 +232,7 @@ def fetch_tw(cfg):
         for i, (name, r) in enumerate(got):
             if len(r) >= min(60, most - 2):
                 rows, m = r, summary(r, name)
+                m["last_bar_source"], m["last_bar_referee"] = name, False
                 if name == "cnyes":
                     m.update(extra)
                 others = [x for j, x in enumerate(got) if j != i]
