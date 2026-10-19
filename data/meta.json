@@ -204,22 +204,22 @@
    "source": "mis.twse.com.tw all_etf",
    "latest": {
     "00981A": {
-     "nav_date": "2026-10-15",
-     "nav": 29.11,
-     "close": 29.4,
-     "premium_pct": 1.0
+     "nav_date": "2026-10-16",
+     "nav": 29.35,
+     "close": 29.53,
+     "premium_pct": 0.61
     },
     "00411A": {
-     "nav_date": "2026-10-15",
-     "nav": 10.08,
-     "close": 10.1,
-     "premium_pct": 0.2
+     "nav_date": "2026-10-16",
+     "nav": 9.69,
+     "close": 10.15,
+     "premium_pct": 4.75
     },
     "009816": {
-     "nav_date": "2026-10-15",
-     "nav": 16.11,
-     "close": 16.19,
-     "premium_pct": 0.5
+     "nav_date": "2026-10-16",
+     "nav": 16.15,
+     "close": 16.2,
+     "premium_pct": 0.31
     }
    }
   },
@@ -570,5 +570,5 @@
   "fail": 0
  },
  "cross_check_conflicts": [],
- "nav_refreshed_at_taipei": "2026-10-19 08:24"
+ "nav_refreshed_at_taipei": "2026-10-19 09:56"
 }
