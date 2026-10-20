@@ -1,5 +1,5 @@
 {
- "fetched_at_taipei": "2026-10-20 16:46",
+ "fetched_at_taipei": "2026-10-21 05:15",
  "quotes": {
   "TWS:009816:STOCK": {
    "price": 15.93,
@@ -42,7 +42,7 @@
    "high": 46967.91,
    "low": 46163.03,
    "prev_close": 46822.08,
-   "volume_lots": 11310496.0,
+   "volume_lots": 11317471.0,
    "time_taipei": "2026-10-20 13:33"
   }
  }
