@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-10-20T08:00:13Z",
- "generated_at_taipei": "2026-10-20 16:00",
+ "generated_at_utc": "2026-10-20T08:46:21Z",
+ "generated_at_taipei": "2026-10-20 16:46",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -242,7 +242,7 @@
    "rows": 517,
    "first": "2024-10-21",
    "last": "2026-10-20",
-   "last_rate": 32.613
+   "last_rate": 32.639
   },
   "macro/SPX": {
    "status": "ok",
@@ -365,32 +365,32 @@
    "rows": 254,
    "first": "2025-10-15",
    "last": "2026-10-19",
-   "last_score": 23.56,
-   "score_now": 23.56,
+   "last_score": 23.89,
+   "score_now": 23.89,
    "rating_now": "extreme fear",
-   "time_utc": "2026-10-20T07:46:31+00:00",
+   "time_utc": "2026-10-20T08:31:31+00:00",
    "components": 7,
    "cross_check": "無第二來源，未核對"
   },
   "sentiment/taifex_vix": {
    "status": "ok",
    "source": "期交所 vix/log2data 月檔",
-   "rows": 75,
+   "rows": 76,
    "first": "2026-07-01",
-   "last": "2026-10-19",
-   "last_vix": 29.69,
+   "last": "2026-10-20",
+   "last_vix": 30.79,
    "cross_check": "無第二來源，未核對"
   },
   "fx/usdtwd_bot_sell": {
    "status": "ok",
    "source": "FinMind TaiwanExchangeRate（台灣銀行牌告）",
-   "rows": 267,
+   "rows": 268,
    "first": "2025-09-15",
-   "last": "2026-10-19",
-   "last_rate": 32.495,
-   "last_spot_buy": 32.395,
-   "last_cash_sell": 32.715,
-   "cross_check": "2026-10-19 即期賣出 32.495 vs Yahoo 中間價 32.387（差 +0.108 元，正常 -0.3～+0.4）",
+   "last": "2026-10-20",
+   "last_rate": 32.68,
+   "last_spot_buy": 32.58,
+   "last_cash_sell": 32.9,
+   "cross_check": "2026-10-20 即期賣出 32.68 vs Yahoo 中間價 32.639（差 +0.041 元，正常 -0.3～+0.4）",
    "cross_check_ok": true
   },
   "valuation/earnings": {
@@ -542,29 +542,29 @@
   "holdings/00981A": {
    "status": "ok",
    "source": "統一投信 ezmoney",
-   "last": "2026-10-19",
-   "holdings": 50,
-   "nav": 29.29,
-   "top1": "2330 10.86%",
-   "compare_date": "2026-10-16",
+   "last": "2026-10-20",
+   "holdings": 51,
+   "nav": 28.62,
+   "top1": "2330 11.3%",
+   "compare_date": "2026-10-19",
    "top10_in": 0,
    "top10_out": 0,
    "weight_moves": 0,
-   "cross_check": "2026-10-19 淨值 29.29 vs 證交所 mis 29.29（差 +0.00）；權重加總 95.74% vs 股票市值／淨資產 95.74%",
+   "cross_check": "nav_history 沒有 2026-10-20，淨值未核對；權重加總 96.45% vs 股票市值／淨資產 96.45%",
    "cross_check_ok": true
   },
   "holdings/00411A": {
    "status": "ok",
    "source": "統一投信 ezmoney",
-   "last": "2026-10-16",
-   "holdings": 31,
-   "nav": 9.69,
-   "top1": "SPCX US 8.29%",
-   "compare_date": "2026-10-15",
-   "top10_in": 1,
-   "top10_out": 1,
-   "weight_moves": 1,
-   "cross_check": "2026-10-16 淨值 9.69 vs 證交所 mis 9.69（差 +0.00）；權重加總 91.41% vs 股票市值／淨資產 91.39%",
+   "last": "2026-10-19",
+   "holdings": 30,
+   "nav": 9.86,
+   "top1": "SPCX US 8.27%",
+   "compare_date": "2026-10-16",
+   "top10_in": 0,
+   "top10_out": 0,
+   "weight_moves": 0,
+   "cross_check": "2026-10-19 淨值 9.86 vs 證交所 mis 9.86（差 +0.00）；權重加總 91.31% vs 股票市值／淨資產 91.32%",
    "cross_check_ok": true
   }
  },
