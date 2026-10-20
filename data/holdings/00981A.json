@@ -2,65 +2,65 @@
  "code": "00981A",
  "fund_code": "49YTW",
  "source": "https://www.ezmoney.com.tw/ETF/Fund/Info?fundCode=49YTW",
- "fetched_at_taipei": "2026-10-19 07:04",
- "date": "2026-10-16",
- "nav": 29.35,
- "units": 9276209000.0,
- "net_assets": 272213672860.0,
+ "fetched_at_taipei": "2026-10-20 08:17",
+ "date": "2026-10-19",
+ "nav": 29.29,
+ "units": 9422709000.0,
+ "net_assets": 276017638662.0,
  "top10": [
   {
    "code": "2330",
    "name": "台積電",
-   "weight": 10.84
+   "weight": 10.86
   },
   {
    "code": "2383",
    "name": "台光電",
-   "weight": 8.21
-  },
-  {
-   "code": "2454",
-   "name": "聯發科",
-   "weight": 8.03
+   "weight": 8.04
   },
   {
    "code": "3037",
    "name": "欣興",
-   "weight": 7.76
+   "weight": 7.91
+  },
+  {
+   "code": "2454",
+   "name": "聯發科",
+   "weight": 7.84
   },
   {
    "code": "3017",
    "name": "奇鋐",
-   "weight": 7.68
+   "weight": 7.58
   },
   {
    "code": "3653",
    "name": "健策",
-   "weight": 6.19
-  },
-  {
-   "code": "2327",
-   "name": "國巨*",
-   "weight": 4.9
+   "weight": 5.95
   },
   {
    "code": "6223",
    "name": "旺矽",
-   "weight": 4.79
+   "weight": 4.75
+  },
+  {
+   "code": "2327",
+   "name": "國巨*",
+   "weight": 4.55
   },
   {
    "code": "2345",
    "name": "智邦",
-   "weight": 4.56
+   "weight": 4.55
   },
   {
    "code": "2308",
    "name": "台達電",
-   "weight": 4.51
+   "weight": 4.5
   }
  ],
  "changes": {
-  "compare_date": "2026-10-15",
+  "compare_date": "2026-10-16",
   "top10_in": [],
   "top10_out": [],
   "weight_moves": [],
@@ -71,168 +71,168 @@
   {
    "code": "2330",
    "name": "台積電",
-   "shares": 12188000.0,
-   "amount": 29494960000.0,
-   "weight": 10.84,
+   "shares": 12392000.0,
+   "amount": 29988640000.0,
+   "weight": 10.86,
    "currency": "NTD"
   },
   {
    "code": "2383",
    "name": "台光電",
    "shares": 4328000.0,
-   "amount": 22354120000.0,
-   "weight": 8.21,
+   "amount": 22181000000.0,
+   "weight": 8.04,
+   "currency": "NTD"
+  },
+  {
+   "code": "3037",
+   "name": "欣興",
+   "shares": 19499000.0,
+   "amount": 21838880000.0,
+   "weight": 7.91,
    "currency": "NTD"
   },
   {
    "code": "2454",
    "name": "聯發科",
    "shares": 5143000.0,
-   "amount": 21857750000.0,
-   "weight": 8.03,
-   "currency": "NTD"
-  },
-  {
-   "code": "3037",
-   "name": "欣興",
-   "shares": 19386000.0,
-   "amount": 21130740000.0,
-   "weight": 7.76,
+   "amount": 21626315000.0,
+   "weight": 7.84,
    "currency": "NTD"
   },
   {
    "code": "3017",
    "name": "奇鋐",
    "shares": 6303000.0,
-   "amount": 20894445000.0,
-   "weight": 7.68,
+   "amount": 20925960000.0,
+   "weight": 7.58,
    "currency": "NTD"
   },
   {
    "code": "3653",
    "name": "健策",
    "shares": 2502000.0,
-   "amount": 16838460000.0,
-   "weight": 6.19,
-   "currency": "NTD"
-  },
-  {
-   "code": "2327",
-   "name": "國巨*",
-   "shares": 23519000.0,
-   "amount": 13335273000.0,
-   "weight": 4.9,
+   "amount": 16413120000.0,
+   "weight": 5.95,
    "currency": "NTD"
   },
   {
    "code": "6223",
    "name": "旺矽",
    "shares": 2504000.0,
-   "amount": 13033320000.0,
-   "weight": 4.79,
+   "amount": 13108440000.0,
+   "weight": 4.75,
+   "currency": "NTD"
+  },
+  {
+   "code": "2327",
+   "name": "國巨*",
+   "shares": 23519000.0,
+   "amount": 12559146000.0,
+   "weight": 4.55,
    "currency": "NTD"
   },
   {
    "code": "2345",
    "name": "智邦",
    "shares": 6264000.0,
-   "amount": 12402720000.0,
-   "weight": 4.56,
+   "amount": 12559320000.0,
+   "weight": 4.55,
    "currency": "NTD"
   },
   {
    "code": "2308",
    "name": "台達電",
-   "shares": 7507000.0,
-   "amount": 12273945000.0,
-   "weight": 4.51,
+   "shares": 7582000.0,
+   "amount": 12434480000.0,
+   "weight": 4.5,
    "currency": "NTD"
   },
   {
    "code": "8046",
    "name": "南電",
    "shares": 8937000.0,
-   "amount": 12109635000.0,
-   "weight": 4.45,
+   "amount": 12333060000.0,
+   "weight": 4.47,
    "currency": "NTD"
   },
   {
    "code": "6274",
    "name": "台燿",
    "shares": 7224000.0,
-   "amount": 11666760000.0,
-   "weight": 4.29,
+   "amount": 11775120000.0,
+   "weight": 4.27,
    "currency": "NTD"
   },
   {
    "code": "2303",
    "name": "聯電",
    "shares": 79618000.0,
-   "amount": 10589194000.0,
-   "weight": 3.89,
+   "amount": 10469767000.0,
+   "weight": 3.79,
    "currency": "NTD"
   },
   {
    "code": "2368",
    "name": "金像電",
-   "shares": 6700000.0,
-   "amount": 8341500000.0,
-   "weight": 3.06,
+   "shares": 6899000.0,
+   "amount": 8623750000.0,
+   "weight": 3.12,
+   "currency": "NTD"
+  },
+  {
+   "code": "3443",
+   "name": "創意",
+   "shares": 852000.0,
+   "amount": 6671160000.0,
+   "weight": 2.42,
    "currency": "NTD"
   },
   {
    "code": "6669",
    "name": "緯穎",
    "shares": 3281561.0,
-   "amount": 6054480045.0,
-   "weight": 2.22,
+   "amount": 6185742485.0,
+   "weight": 2.24,
    "currency": "NTD"
   },
   {
    "code": "3665",
    "name": "貿聯-KY",
    "shares": 2887848.0,
-   "amount": 5819013720.0,
-   "weight": 2.14,
-   "currency": "NTD"
-  },
-  {
-   "code": "3443",
-   "name": "創意",
-   "shares": 751000.0,
-   "amount": 5617480000.0,
-   "weight": 2.06,
+   "amount": 5703499800.0,
+   "weight": 2.07,
    "currency": "NTD"
   },
   {
    "code": "3711",
    "name": "日月光投控",
    "shares": 8348000.0,
-   "amount": 5601508000.0,
-   "weight": 2.06,
+   "amount": 5593160000.0,
+   "weight": 2.03,
    "currency": "NTD"
   },
   {
    "code": "5274",
    "name": "信驊",
    "shares": 201900.0,
-   "amount": 3327312000.0,
-   "weight": 1.22,
+   "amount": 3226362000.0,
+   "weight": 1.17,
+   "currency": "NTD"
+  },
+  {
+   "code": "6805",
+   "name": "富世達",
+   "shares": 769000.0,
+   "amount": 1795615000.0,
+   "weight": 0.65,
    "currency": "NTD"
   },
   {
    "code": "8996",
    "name": "高力",
    "shares": 981000.0,
-   "amount": 1540170000.0,
-   "weight": 0.57,
-   "currency": "NTD"
-  },
-  {
-   "code": "6805",
-   "name": "富世達",
-   "shares": 649000.0,
-   "amount": 1460250000.0,
+   "amount": 1496025000.0,
    "weight": 0.54,
    "currency": "NTD"
   },
@@ -240,31 +240,31 @@
    "code": "6510",
    "name": "精測",
    "shares": 470000.0,
-   "amount": 1466400000.0,
+   "amount": 1492250000.0,
    "weight": 0.54,
    "currency": "NTD"
   },
   {
    "code": "2449",
    "name": "京元電子",
-   "shares": 4143450.0,
-   "amount": 1139448750.0,
-   "weight": 0.42,
+   "shares": 5151450.0,
+   "amount": 1357407075.0,
+   "weight": 0.49,
    "currency": "NTD"
   },
   {
    "code": "3264",
    "name": "欣銓",
-   "shares": 1857000.0,
-   "amount": 480034500.0,
-   "weight": 0.18,
+   "shares": 2657000.0,
+   "amount": 685506000.0,
+   "weight": 0.25,
    "currency": "NTD"
   },
   {
    "code": "6271",
    "name": "同欣電",
    "shares": 2185000.0,
-   "amount": 500365000.0,
+   "amount": 492717500.0,
    "weight": 0.18,
    "currency": "NTD"
   },
@@ -272,8 +272,8 @@
    "code": "4979",
    "name": "華星光",
    "shares": 957000.0,
-   "amount": 497640000.0,
-   "weight": 0.18,
+   "amount": 459360000.0,
+   "weight": 0.17,
    "currency": "NTD"
   },
   {
@@ -281,30 +281,38 @@
    "name": "穎崴",
    "shares": 93000.0,
    "amount": 479880000.0,
-   "weight": 0.18,
+   "weight": 0.17,
    "currency": "NTD"
   },
   {
    "code": "8210",
    "name": "勤誠",
    "shares": 478000.0,
-   "amount": 398652000.0,
-   "weight": 0.15,
+   "amount": 388614000.0,
+   "weight": 0.14,
    "currency": "NTD"
   },
   {
    "code": "6191",
    "name": "精成科",
    "shares": 3921000.0,
-   "amount": 361908300.0,
+   "amount": 356811000.0,
    "weight": 0.13,
+   "currency": "NTD"
+  },
+  {
+   "code": "8358",
+   "name": "金居",
+   "shares": 654000.0,
+   "amount": 316536000.0,
+   "weight": 0.11,
    "currency": "NTD"
   },
   {
    "code": "3376",
    "name": "新日興",
    "shares": 1740000.0,
-   "amount": 306240000.0,
+   "amount": 301020000.0,
    "weight": 0.11,
    "currency": "NTD"
   },
@@ -312,7 +320,7 @@
    "code": "6187",
    "name": "萬潤",
    "shares": 121000.0,
-   "amount": 170610000.0,
+   "amount": 170005000.0,
    "weight": 0.06,
    "currency": "NTD"
   },
@@ -328,7 +336,7 @@
    "code": "2002",
    "name": "中鋼",
    "shares": 5163000.0,
-   "amount": 100936650.0,
+   "amount": 100678500.0,
    "weight": 0.04,
    "currency": "NTD"
   },
@@ -336,15 +344,7 @@
    "code": "6278",
    "name": "台表科",
    "shares": 1000.0,
-   "amount": 298500.0,
-   "weight": 0.0,
-   "currency": "NTD"
-  },
-  {
-   "code": "8358",
-   "name": "金居",
-   "shares": 1000.0,
-   "amount": 472000.0,
+   "amount": 289500.0,
    "weight": 0.0,
    "currency": "NTD"
   },
@@ -352,7 +352,7 @@
    "code": "3661",
    "name": "世芯-KY",
    "shares": 1000.0,
-   "amount": 3685000.0,
+   "amount": 3715000.0,
    "weight": 0.0,
    "currency": "NTD"
   },
@@ -360,7 +360,7 @@
    "code": "2439",
    "name": "美律",
    "shares": 1000.0,
-   "amount": 81500.0,
+   "amount": 79300.0,
    "weight": 0.0,
    "currency": "NTD"
   },
@@ -368,7 +368,7 @@
    "code": "1590",
    "name": "亞德客-KY",
    "shares": 1000.0,
-   "amount": 1155000.0,
+   "amount": 1165000.0,
    "weight": 0.0,
    "currency": "NTD"
   },
@@ -376,7 +376,7 @@
    "code": "3008",
    "name": "大立光",
    "shares": 1000.0,
-   "amount": 6400000.0,
+   "amount": 6245000.0,
    "weight": 0.0,
    "currency": "NTD"
   },
@@ -384,7 +384,7 @@
    "code": "4958",
    "name": "臻鼎-KY",
    "shares": 1000.0,
-   "amount": 557000.0,
+   "amount": 547000.0,
    "weight": 0.0,
    "currency": "NTD"
   },
@@ -392,7 +392,7 @@
    "code": "2382",
    "name": "廣達",
    "shares": 1000.0,
-   "amount": 322000.0,
+   "amount": 314500.0,
    "weight": 0.0,
    "currency": "NTD"
   },
@@ -400,7 +400,7 @@
    "code": "2408",
    "name": "南亞科",
    "shares": 1000.0,
-   "amount": 447500.0,
+   "amount": 436000.0,
    "weight": 0.0,
    "currency": "NTD"
   },
@@ -408,7 +408,7 @@
    "code": "2637",
    "name": "慧洋-KY",
    "shares": 1000.0,
-   "amount": 101500.0,
+   "amount": 100000.0,
    "weight": 0.0,
    "currency": "NTD"
   },
@@ -416,7 +416,7 @@
    "code": "2360",
    "name": "致茂",
    "shares": 1000.0,
-   "amount": 2000000.0,
+   "amount": 2005000.0,
    "weight": 0.0,
    "currency": "NTD"
   },
@@ -424,7 +424,7 @@
    "code": "6488",
    "name": "環球晶",
    "shares": 1000.0,
-   "amount": 902000.0,
+   "amount": 882000.0,
    "weight": 0.0,
    "currency": "NTD"
   },
@@ -432,7 +432,7 @@
    "code": "4966",
    "name": "譜瑞-KY",
    "shares": 1000.0,
-   "amount": 540000.0,
+   "amount": 527000.0,
    "weight": 0.0,
    "currency": "NTD"
   },
@@ -440,7 +440,7 @@
    "code": "8150",
    "name": "南茂",
    "shares": 1000.0,
-   "amount": 105500.0,
+   "amount": 102500.0,
    "weight": 0.0,
    "currency": "NTD"
   },
@@ -448,7 +448,7 @@
    "code": "2317",
    "name": "鴻海",
    "shares": 1000.0,
-   "amount": 244000.0,
+   "amount": 239500.0,
    "weight": 0.0,
    "currency": "NTD"
   },
@@ -456,7 +456,7 @@
    "code": "5347",
    "name": "世界",
    "shares": 1000.0,
-   "amount": 167500.0,
+   "amount": 163500.0,
    "weight": 0.0,
    "currency": "NTD"
   },
@@ -464,7 +464,7 @@
    "code": "2481",
    "name": "強茂",
    "shares": 5000.0,
-   "amount": 792500.0,
+   "amount": 787500.0,
    "weight": 0.0,
    "currency": "NTD"
   }
@@ -475,17 +475,17 @@
    "name": "台指期貨",
    "position": "B",
    "contracts": 679.0,
-   "notional": 6450907400.0,
-   "weight": 2.37,
+   "notional": 6374995200.0,
+   "weight": 2.31,
    "month": "2026/11"
   }
  ],
  "other_assets": {
-  "期貨(名目本金)": 6450907400.0,
-  "股票": 261787670465.0,
-  "現金": 5674741023.0,
-  "期貨保證金": 2037497629.0,
+  "期貨(名目本金)": 6374995200.0,
+  "股票": 264251193660.0,
+  "現金": 9671222828.0,
+  "期貨保證金": 1961585429.0,
   "附買回債券": 2624088650.0,
-  "應收付證券款": -5099578483.0
+  "應收付證券款": -6928521067.0
  }
 }
