@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-10-20T00:17:13Z",
- "generated_at_taipei": "2026-10-20 08:17",
+ "generated_at_utc": "2026-10-20T01:11:24Z",
+ "generated_at_taipei": "2026-10-20 09:11",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -214,29 +214,29 @@
    "source": "mis.twse.com.tw all_etf",
    "latest": {
     "00981A": {
-     "nav_date": "2026-10-16",
-     "nav": 29.35,
-     "close": 29.53,
-     "premium_pct": 0.61
+     "nav_date": "2026-10-19",
+     "nav": 29.29,
+     "close": 29.3,
+     "premium_pct": 0.03
     },
     "00411A": {
-     "nav_date": "2026-10-16",
-     "nav": 9.69,
-     "close": 10.15,
-     "premium_pct": 4.75
+     "nav_date": "2026-10-19",
+     "nav": 9.86,
+     "close": 9.9,
+     "premium_pct": 0.41
     },
     "009816": {
-     "nav_date": "2026-10-16",
-     "nav": 16.15,
-     "close": 16.2,
-     "premium_pct": 0.31
+     "nav_date": "2026-10-19",
+     "nav": 16.08,
+     "close": 16.07,
+     "premium_pct": -0.06
     }
    }
   },
   "tv/snapshot": {
    "status": "ok",
    "symbols": 13,
-   "tw_bar_is_intraday": false,
+   "tw_bar_is_intraday": true,
    "us_bar_is_intraday": false
   },
   "fx/usdtwd_mid": {
@@ -245,7 +245,7 @@
    "rows": 517,
    "first": "2024-10-21",
    "last": "2026-10-20",
-   "last_rate": 32.476
+   "last_rate": 32.496
   },
   "macro/SPX": {
    "status": "ok",
@@ -311,10 +311,10 @@
    "rows": 502,
    "first": "2024-10-21",
    "last": "2026-10-19",
-   "last_close": 101.93000030517578,
+   "last_close": 101.9540023803711,
    "prev_close": 101.83999633789062,
    "name": "美元指數",
-   "cross_check": "2026-10-19 收盤 101.93000030517578 vs cnyes 101.968（差 -0.04%）",
+   "cross_check": "2026-10-19 收盤 101.9540023803711 vs cnyes 101.968（差 -0.01%）",
    "cross_check_ok": true
   },
   "macro/GOLD": {
@@ -323,7 +323,7 @@
    "rows": 502,
    "first": "2024-10-21",
    "last": "2026-10-19",
-   "last_close": 4158.0,
+   "last_close": 4145.0,
    "prev_close": 4181.10009765625,
    "name": "COMEX 黃金期貨（近月）",
    "cross_check": "無第二來源，未核對"
@@ -334,7 +334,7 @@
    "rows": 502,
    "first": "2024-10-21",
    "last": "2026-10-19",
-   "last_close": 98.0999984741211,
+   "last_close": 98.87999725341797,
    "prev_close": 101.41000366210938,
    "name": "WTI 原油期貨（近月）",
    "cross_check": "無第二來源，未核對"
@@ -452,7 +452,7 @@
    "source": "stockanalysis",
    "last": "2026-10-19",
    "price": 147.96,
-   "fwd_pe": 92.05,
+   "fwd_pe": 93.26,
    "peg": null,
    "pe": null,
    "cross_check": "repo 日線沒有 2026-10-19，未核對",
@@ -499,10 +499,7 @@
    "rows": 24,
    "first": "2026-10-07",
    "last": "2026-10-19",
-   "added": [
-    "2026-10-19 TWSE",
-    "2026-10-19 TPEX"
-   ],
+   "added": [],
    "latest_total": {
     "00411A": -5980821,
     "009816": -110413771,
@@ -517,9 +514,7 @@
    "rows": 8,
    "first": "2026-10-07",
    "last": "2026-10-19",
-   "added": [
-    "2026-10-19"
-   ],
+   "added": [],
    "latest_foreign": -76742735769,
    "latest_total": -88864191574,
    "cross_check": "合計＝分項加總",
@@ -531,9 +526,7 @@
    "rows": 8,
    "first": "2026-10-07",
    "last": "2026-10-19",
-   "added": [
-    "2026-10-19"
-   ],
+   "added": [],
    "latest_margin_amount_k": 640618432,
    "cross_check": "單一來源，未核對"
   },
@@ -548,7 +541,7 @@
    "top10_in": 0,
    "top10_out": 0,
    "weight_moves": 0,
-   "cross_check": "nav_history 沒有 2026-10-19，淨值未核對；權重加總 95.74% vs 股票市值／淨資產 95.74%",
+   "cross_check": "2026-10-19 淨值 29.29 vs 證交所 mis 29.29（差 +0.00）；權重加總 95.74% vs 股票市值／淨資產 95.74%",
    "cross_check_ok": true
   },
   "holdings/00411A": {

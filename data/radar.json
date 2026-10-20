@@ -1,6 +1,6 @@
 {
  "generated_from": "repo 日線（indicators.py）；綜合評分來自 TradingView",
- "tv_fetched_at_taipei": "2026-10-20 08:17",
+ "tv_fetched_at_taipei": "2026-10-20 09:11",
  "rules": {
   "trend_adx": 25,
   "range_adx": 20
@@ -730,7 +730,7 @@
    },
    "last_date": "2026-10-19",
    "rows": 36,
-   "rating_skipped": "ATR 0.44 vs 0.23（TradingView 高低點資料有誤）"
+   "rating_skipped": "收盤 9.83 ≠ 9.90（可能是盤中數字）；ATR 0.41 vs 0.23（TradingView 高低點資料有誤）"
   }
  }
 }
