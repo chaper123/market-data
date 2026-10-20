@@ -14,8 +14,8 @@ import re
 import time
 
 from common import (DATA, NOW, NY, TPE, UTC, cnyes_daily, cross_check, finalize, get_json, http, mark_failed,
-                    moneydj_us_daily, read_rows, summary, tw_cutoff, us_cutoff, vote_daily, write_csv, write_json,
-                    write_rows, yahoo_daily)
+                    moneydj_us_daily, prev_meta, read_rows, summary, tw_cutoff, us_cutoff, vote_daily, write_csv,
+                    write_json, write_rows, yahoo_daily)
 
 CNN_URL = "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
 CNN_PARTS = ("market_momentum_sp500", "stock_price_strength", "stock_price_breadth", "put_call_options",
@@ -41,13 +41,15 @@ def fetch_macro(cfg, meta):
                 except Exception as ex:  # noqa: BLE001
                     meta["errors"].append(f"macro {name} moneydj: {ex}")
                     alt = []
-                rows, vote = vote_daily(e["moneydj"], [("yahoo", rows), ("moneydj", alt)])
+                rows, vote = vote_daily(e["moneydj"], [("yahoo", rows), ("moneydj", alt)],
+                                        recheck=prev_meta(key).get("single_source_days") or ())
                 vote.pop("base_source")
                 m = summary(rows, f"yahoo {e['yahoo']}")
                 m.update(vote, name=e.get("name"),
                          cross_check=f"最後一根：{vote['last_bar_votes']}；兩家收盤差 >0.5% 共 "
                                      f"{vote.get('history_mismatch', '—')} 根",
-                         cross_check_ok="last_bar_unresolved" not in vote)
+                         cross_check_ok=(None if vote.get("last_bar_single_source")
+                                         else "last_bar_unresolved" not in vote))
             elif e.get("cnyes"):
                 try:
                     raw, _ = cnyes_daily(e["cnyes"], [UTC, NY, TPE])

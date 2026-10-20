@@ -18,7 +18,8 @@ Phase 1 新資料由各模組產生（只在完整抓取時執行，失敗不影
   holdings.py              data/holdings/（主動式 ETF 每日持股與前十大變化，統一投信）
 
 用法：python fetch.py [--skip-if-fresh]
-  --skip-if-fresh：meta.json 顯示日線已完整（美股、台股最後日期都到台北今天的前一個平日且狀態 ok）就只更新淨值（給後續排程當重試用）。
+  --skip-if-fresh：meta.json 顯示日線已完整（美股、台股最後日期都到台北今天的前一個平日且狀態 ok，沒有待核對的單一來源 K 棒）
+                   就只更新淨值（給後續排程當重試用）。
 """
 import csv
 import datetime as dt
@@ -29,8 +30,8 @@ import sys
 import time
 
 from common import (DATA, NOW, NY, ROOT, TPE, UTC, cnyes_daily, cross_check, finalize, get_json, http,
-                    moneydj_tw_daily, moneydj_us_daily, num, summary, tw_cutoff, us_cutoff, vote_daily, write_csv,
-                    yahoo_daily)
+                    moneydj_tw_daily, moneydj_us_daily, num, prev_meta, summary, tw_cutoff, us_cutoff, vote_daily,
+                    write_csv, yahoo_daily)
 import calendars
 import chips
 import fxbot
@@ -52,12 +53,16 @@ US_DAYS = 365  # 只留最近一年（約 250 列，和過去用鉅亨網時相�
 
 
 def daily_meta(rows, vote):
-    """summary 加上多數決結果；cross_check_ok＝最後一根有兩家（或一家＋官方裁判）一致。"""
+    """summary 加上多數決結果。cross_check_ok：true＝最後一根有兩家（或一家＋官方裁判）一致；
+    null＝最後一根是單一來源、尚未核對（last_bar_single_source=true，不算核對失敗）；false＝無法判定、那根沒收。"""
     m = summary(rows, vote.pop("base_source"))
     m.update(vote)
     m["cross_check"] = (f"最後一根：{vote['last_bar_votes']}；近一年兩家收盤差 >0.5% 共 "
                         f"{vote.get('history_mismatch', '—')} 根")
-    m["cross_check_ok"] = "last_bar_unresolved" not in vote
+    if vote.get("single_source_days"):
+        m["cross_check"] += f"；待核對 {'、'.join(vote['single_source_days'])}"
+    m["cross_check_ok"] = (None if vote.get("last_bar_single_source")
+                           else "last_bar_unresolved" not in vote)
     return m
 
 
@@ -78,7 +83,7 @@ def fetch_us(cfg):
             except Exception as ex:  # noqa: BLE001
                 META["errors"].append(f"US {sym} {name}: {ex}")
         try:
-            rows, vote = vote_daily(sym, srcs)
+            rows, vote = vote_daily(sym, srcs, recheck=prev_meta(f"us/{sym}").get("single_source_days") or ())
             if not rows:
                 raise RuntimeError("沒有資料列")
             m = daily_meta(rows, vote)
@@ -446,7 +451,7 @@ def expected_last(today):
 
 
 def fresh_today():
-    """日線已經完整才略過：us/*、tw/0* 全部 ok，且最後日期都到了 expected_last。
+    """日線已經完整才略過：us/*、tw/0* 全部 ok、最後日期都到了 expected_last，且沒有待核對的單一來源 K 棒。
     只看 meta 產生日期不夠：2026-10-16 02:19 手動執行時美股 10/15 還沒收盤，
     之後三次排程都被略過，晨報讀到 10/14 的資料。"""
     try:
@@ -456,6 +461,9 @@ def fresh_today():
     ds = m.get("datasets", {})
     core = [k for k in ds if k.startswith(("us/", "tw/0"))]
     if not core or any(ds[k].get("status") != "ok" for k in core):
+        return False
+    # 最後一根是單一來源（或還有待核對的日子）就不算完整，讓後面的排程再做一次完整抓取補核對
+    if any(v.get("last_bar_single_source") or v.get("single_source_days") for v in ds.values()):
         return False
     want = expected_last(NOW.astimezone(TPE).date())
     return all((ds[k].get("last") or "") >= want for k in core)

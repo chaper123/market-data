@@ -228,13 +228,49 @@ def close_agree(a, b, limit=0.5):
     return bool(a and b) and abs(a / b - 1) * 100 <= limit
 
 
-def vote_daily(sym, srcs, referee=nasdaq_daily, limit=0.5):
+SINGLE_OK = ("moneydj",)  # 2026-10-16 歷史總檢查 300 根與官方完全一致，才允許單獨先收
+RECHECK_DAYS = 10  # 單一來源的日子最多追蹤幾天（日曆天）
+
+
+def _vote_day(sym, srcs, day, referee, limit, single_ok):
+    """對某一個交易日投票，回傳 (採用的 K 棒或 None, 結果, 採用的來源, 說明, 細節)。
+    結果：agree（兩家一致）／referee（官方裁判）／single（只有可信來源一票，其他來源與裁判都還沒有這一天）／unresolved。"""
+    have = {}
+    for n, r in srcs:
+        bar = next((x for x in reversed(r) if x[0] == day), None)
+        if bar:
+            have[n] = bar
+    names = list(have)
+    votes = "、".join(f"{n} {x[5]}" for n, x in have.items()) or "沒有來源"
+    if len(have) >= 2 and close_agree(have[names[0]][5], have[names[1]][5], limit):
+        return have[names[0]], "agree", names[0], f"{day} {votes} 一致", {}
+    ref, info = None, {}
+    try:
+        start = (dt.date.fromisoformat(day) - dt.timedelta(days=10)).isoformat()
+        ref = referee(sym, start, day).get(day)
+    except Exception as ex:  # noqa: BLE001
+        info["referee_error"] = str(ex)[:200]
+    winners = [n for n, x in have.items() if ref and close_agree(x[5], ref[5], limit)]
+    if ref and winners and None not in ref[2:]:
+        return ref, "referee", "nasdaq", f"{day} {votes}；裁判 nasdaq {ref[5]}，與 {'、'.join(winners)} 一致", info
+    if ref is None and len(have) == 1 and names[0] in single_ok:
+        return (have[names[0]], "single", names[0],
+                f"{day} 只有 {votes}（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對", info)
+    return (None, "unresolved", None,
+            f"{day} {votes}；裁判 {'nasdaq ' + str(ref[5]) if ref else '無資料'}，無法判定", info)
+
+
+def vote_daily(sym, srcs, referee=nasdaq_daily, limit=0.5, recheck=(), single_ok=SINGLE_OK):
     """srcs：[(來源名稱, finalize 後的列)]，第一個是主來源、第二個是核對來源。
 
     歷史 K 棒用主來源（主來源不足 15 列才用核對來源），並統計兩家收盤差超過 limit% 的根數（只記錄）。
     最後一根 K 棒多數決：兩家都有且收盤一致才採用；不一致或只有一家有，就問官方裁判（Nasdaq），
-    至少一家與裁判一致才採用（K 棒用官方值）；裁判也無法判定就先不收這一根。
-    回傳 (rows, meta)；meta 含 last_bar_source、last_bar_referee、last_bar_votes、history_mismatch 等。"""
+    至少一家與裁判一致才採用（K 棒用官方值）。只有可信來源（single_ok）一票、其他來源與裁判都還沒有這一天時，
+    先收那一根並標 last_bar_single_source；其餘無法判定的最後一根先不收。
+    recheck：先前以單一來源收進來、尚未核對的日子（上一次 meta 的 single_source_days），這次再投一次：
+    一致或裁判確認就改正並清除；仍無法核對就保留原值、繼續列在 single_source_days。
+    回傳 (rows, meta)；meta 含 last_bar_source、last_bar_referee、last_bar_single_source、last_bar_votes、
+    single_source_days、rechecked、history_mismatch 等。"""
     srcs = [(n, r) for n, r in srcs if r]
     if not srcs:
         raise RuntimeError("所有來源都失敗")
@@ -244,37 +280,44 @@ def vote_daily(sym, srcs, referee=nasdaq_daily, limit=0.5):
         (na, a), (nb, b) = srcs[0], srcs[1]
         bmap = {r[0]: r[5] for r in b}
         last_common = min(a[-1][0], b[-1][0])
-        bad = [r[0] for r in a if r[0] < last_common and r[0] in bmap and not close_agree(r[5], bmap[r[0]], limit)]
+        bad = [r[0] for r in a if r[0] < last_common and r[0] in bmap and not close_agree(r[5], bmap[r[0]], limit)
+               and r[0] not in recheck]
         m["history_mismatch"] = len(bad)
         if bad:
             m["history_mismatch_dates"] = bad[-5:]
     day = max(r[-1][0] for _, r in srcs)
-    bars = {n: next((x for x in reversed(r) if x[0] == day), None) for n, r in srcs}
-    have = {n: x for n, x in bars.items() if x}
-    votes = "、".join(f"{n} {x[5]}" for n, x in have.items())
-    rows = [x for x in base if x[0] < day]
-    names = list(have)
-    if len(have) >= 2 and close_agree(have[names[0]][5], have[names[1]][5], limit):
-        rows.append(have[names[0]])
-        m.update(last_bar_source=names[0], last_bar_referee=False, last_bar_votes=f"{day} {votes} 一致")
-    else:
-        ref = None
-        try:
-            start = (dt.date.fromisoformat(day) - dt.timedelta(days=10)).isoformat()
-            ref = referee(sym, start, day).get(day)
-        except Exception as ex:  # noqa: BLE001
-            m["referee_error"] = str(ex)[:200]
-        winners = [n for n, x in have.items() if ref and close_agree(x[5], ref[5], limit)]
-        if ref and winners and None not in ref[2:]:
-            rows.append(ref)
-            m.update(last_bar_source="nasdaq", last_bar_referee=True,
-                     last_bar_votes=f"{day} {votes}；裁判 nasdaq {ref[5]}，與 {'、'.join(winners)} 一致")
+    rows = {x[0]: x for x in base if x[0] < day}
+    pending, rechecked = [], []
+    oldest = (dt.date.fromisoformat(day) - dt.timedelta(days=RECHECK_DAYS)).isoformat()
+    for d in sorted(x for x in recheck if x < oldest):
+        rechecked.append(f"{d} 超過 {RECHECK_DAYS} 天仍無法核對，停止追蹤，保留原值")
+    for d in sorted({day} | {x for x in recheck if max(base[0][0], oldest) <= x < day}):
+        bar, result, src, text, info = _vote_day(sym, srcs, d, referee, limit, single_ok)
+        if d == day:
+            m.update(info, last_bar_source=src, last_bar_votes=text, last_bar_single_source=result == "single",
+                     last_bar_referee=result in ("referee", "unresolved"))
+            if result == "unresolved":
+                m["last_bar_unresolved"] = day
+            if bar:
+                rows[d] = bar
+        elif result in ("agree", "referee"):
+            old = rows.get(d)
+            rows[d] = bar
+            same = old and close_agree(old[5], bar[5], 0.0001)
+            rechecked.append(f"{d} {'核對一致' if same else '已改正為 ' + str(bar[5])}（{text}）")
         else:
-            m.update(last_bar_source=None, last_bar_referee=True, last_bar_unresolved=day,
-                     last_bar_votes=f"{day} {votes}；裁判 {'nasdaq ' + str(ref[5]) if ref else '無資料'}，"
-                                    f"無法判定，先不收這一根")
+            keep = next((x for n, r in srcs if n in single_ok for x in r if x[0] == d), None)
+            if keep:
+                rows[d] = keep
+            rechecked.append(f"{d} 仍待核對（{text}）")
+        if result == "single" or (d != day and result not in ("agree", "referee")):
+            pending.append(d)
+    if pending:
+        m["single_source_days"] = pending
+    if rechecked:
+        m["rechecked"] = rechecked
     m["base_source"] = base_name
-    return rows, m
+    return sorted(rows.values()), m
 
 
 # ---------------------------------------------------------------- Phase 1 資料模組共用

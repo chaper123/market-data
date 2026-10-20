@@ -7,7 +7,7 @@
 
 ## 排程
 
-台北時間週一～五 05:13、06:37、07:53、08:41、09:47 各排一次。日線完整（美股、台股最後日期都到台北今天的前一個平日）之後，其餘幾次只更新 ETF 淨值（投信收盤後才公布，晨報前要再抓一次）。
+台北時間週一～五 05:13、06:37、07:53、08:41、09:47 各排一次。日線完整（美股、台股最後日期都到台北今天的前一個平日，且沒有待核對的單一來源 K 棒）之後，其餘幾次只更新 ETF 淨值（投信收盤後才公布，晨報前要再抓一次）。
 
 GitHub 的排程常延遲，偶爾整個漏跑，所以排多次。需要立刻更新時，到 Actions → fetch-market-data → Run workflow。
 
@@ -42,9 +42,17 @@ CSV 欄位：`date,volume,open,high,low,close`（無表頭），與排程任務�
 `macro/`、`sentiment/`、`fx/usdtwd_bot_sell.csv`、`valuation/`、`calendar/`、`chips/`、`holdings/` 等 Phase 1 新資料由 `macro.py` 等模組產生，只在完整抓取時更新（只更新淨值的那幾次不動）；某一項失敗時保留舊檔、meta 標 stale，不影響日線。
 
 `meta.json` 的 `status`：`ok` 本次成功；`stale` 本次失敗，檔案是上一次的；`fail` 從未成功。
-`cross_check_ok=false` 代表主來源與核對來源的收盤差超過 0.5%。美股（us/、macro/TSM）另有 `last_bar_source`（最後一根 K 棒採用的來源）、`last_bar_referee`（是否動用 Nasdaq 官方裁判）、`last_bar_votes`（各來源的值）、`history_mismatch`（近一年兩家收盤差超過 0.5% 的根數）；裁判也無法判定時，那一根先不收，`last_bar_unresolved` 記日期、`cross_check_ok=false`。
+`cross_check_ok=false` 代表主來源與核對來源的收盤差超過 0.5%。美股（us/、macro/TSM）另有 `last_bar_source`（最後一根 K 棒採用的來源）、`last_bar_referee`（是否動用 Nasdaq 官方裁判）、`last_bar_votes`（各來源的值）、`history_mismatch`（近一年兩家收盤差超過 0.5% 的根數）；只有 MoneyDJ 一票、Yahoo 與 Nasdaq 都還沒有那一天時，先收 MoneyDJ 的值並標 `last_bar_single_source=true`、`cross_check_ok=null`（尚未核對，不是核對失敗），日期記在 `single_source_days`；之後的抓取等 Yahoo 有了再核對（一致就清除標記，不一致照常請 Nasdaq 裁判、必要時改正，結果記在 `rechecked`；超過 10 天仍無法核對就停止追蹤）。有待核對的日子時不算「日線已完整」，後面的排程會再做一次完整抓取。裁判也無法判定時，那一根先不收，`last_bar_unresolved` 記日期、`cross_check_ok=false`。
 
 鉅亨網的美股最後一根 K 棒常停在盤中價（2026-10-16 檢查：ARKX、TSM 到台北中午仍未更新；過去一年 VOO、IAUM、ARK 系列、TSM 各有 5～9 根收盤錯 0.5% 以上，成交量也偏少），所以美股與 00411A 不再以鉅亨網為主。
+
+## 測試
+
+```bash
+python -m unittest discover -s tests
+```
+
+用假資料測多數決、單一來源補核對、略過判斷等邏輯，不連網。
 
 ## 讀取方式
 
