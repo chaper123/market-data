@@ -7,7 +7,7 @@
 
 ## 排程
 
-台北時間週一～五 05:13、06:37、07:53、08:41、09:47 各排一次。日線完整（美股、台股最後日期都到台北今天的前一個平日，且沒有待核對的單一來源 K 棒）之後，其餘幾次只更新 ETF 淨值（投信收盤後才公布，晨報前要再抓一次）。
+台北時間週一～五 05:13、06:37、07:53、08:41、09:47 各排一次。日線完整（美股、台股與 24 小時交易的總經品項最後日期都到台北今天的前一個平日，且沒有待核對的單一來源 K 棒）之後，其餘幾次只更新 ETF 淨值（投信收盤後才公布，晨報前要再抓一次）。冬令時間 05:13 是美東 16:13，期貨還沒收，會由 06:37（美東 17:37）那次補上。
 
 GitHub 的排程常延遲，偶爾整個漏跑，所以排多次。需要立刻更新時，到 Actions → fetch-market-data → Run workflow。
 
@@ -24,7 +24,7 @@ GitHub 的排程常延遲，偶爾整個漏跑，所以排多次。需要立刻�
 | `data/fx/usdtwd_bot_sell.csv` | 台銀美元即期賣出：date,rate，約 13 個月，16:30 前不收當天。格式同上，可直接當排程的 fx_csv（台銀網站擋 GitHub，改由 FinMind 取得，已與台銀網頁 6 個月表逐筆比對一致） | FinMind TaiwanExchangeRate / 與 usdtwd_mid 核對價差 |
 | `data/tv/snapshot.json` | TradingView 日線技術面快照 | TradingView scanner |
 | `data/radar.json`、`data/radar.md` | 技術面雷達判讀（結構、位置、訊號矛盾、關鍵價位）。指標由 repo 日線自己算，TradingView 只提供綜合評分，且只在數據一致時採用 | `radar.py`、`indicators.py` |
-| `data/macro/<名稱>.csv` | 美股指數與總經日線，已收盤的交易日，約 2 年：SPX、IXIC、SOX、VIX、TNX（10 年期殖利率 %）、DXY、GOLD、WTI、TSM（代號對照見 `config.json` 的 `macro`） | Yahoo / 鉅亨網（SPX、IXIC、SOX、DXY）、MoneyDJ（TSM，最後一根多數決同 us/） |
+| `data/macro/<名稱>.csv` | 美股指數與總經日線，已收盤的交易日，約 2 年：SPX、IXIC、SOX、VIX、TNX（10 年期殖利率 %）、DXY、GOLD、WTI、TSM（代號對照見 `config.json` 的 `macro`）。DXY、GOLD、WTI 是 24 小時交易：不收週末列；交易日在美東 17:00 結束、18:00 晚盤開盤後 Yahoo 的當天 K 棒會變成晚盤未完成資料，所以只在美東 17:10～18:00 收當天，其餘時間只到前一天（meta 的 `cutoff`、`cutoff_rule`；晚盤重抓時沿用先前收到的乾淨 K 棒，記在 `last_kept_from_previous`） | Yahoo / 鉅亨網（SPX、IXIC、SOX、DXY）、MoneyDJ（TSM，最後一根多數決同 us/） |
 | `data/sentiment/cnn_fear_greed.json` | CNN 恐懼貪婪目前分數與評等、前收／一週／一月／一年前，以及 7 個分項 | CNN dataviz |
 | `data/sentiment/cnn_fear_greed.csv` | 恐懼貪婪每日收盤分數：date,score,rating（逐日累積） | 同上 |
 | `data/sentiment/taifex_vix.csv` | 臺指選擇權波動率指數每日收盤：date,vix（逐日累積） | 期交所月檔 |
@@ -52,7 +52,7 @@ CSV 欄位：`date,volume,open,high,low,close`（無表頭），與排程任務�
 python -m unittest discover -s tests
 ```
 
-用假資料測多數決、單一來源補核對、略過判斷等邏輯，不連網。
+用假資料測多數決、單一來源補核對、24 小時品項的收盤截止與週末列、略過判斷等邏輯，不連網。
 
 ## 讀取方式
 

@@ -4,6 +4,7 @@
   data/macro/<名稱>.csv               date,volume,open,high,low,close（無表頭，只含已收盤的交易日）
                                       名稱與 Yahoo 代號見 config.json 的 macro；指數用鉅亨網核對收盤，
                                       個股（TSM）用 MoneyDJ 核對並對最後一根 K 棒多數決（Nasdaq 官方當裁判）
+                                      24 小時交易的 DXY、GOLD、WTI 不收週末，美東 17:10～18:00 才收當天（見 futures_cutoff）
   data/sentiment/cnn_fear_greed.json  CNN 恐懼貪婪目前分數、評等、前收／一週／一月／一年前，以及 7 個分項
   data/sentiment/cnn_fear_greed.csv   date,score,rating（逐日累積，只含已收盤的美股交易日）
   data/sentiment/taifex_vix.csv       date,vix（臺指選擇權波動率指數每日收盤，逐日累積）
@@ -13,9 +14,9 @@ import os
 import re
 import time
 
-from common import (DATA, NOW, NY, TPE, UTC, cnyes_daily, cross_check, finalize, get_json, http, mark_failed,
-                    moneydj_us_daily, prev_meta, read_rows, summary, tw_cutoff, us_cutoff, vote_daily, write_csv,
-                    write_json, write_rows, yahoo_daily)
+from common import (DATA, NOW, NY, TPE, UTC, cnyes_daily, cross_check, finalize, futures_cutoff, get_json, http,
+                    mark_failed, moneydj_us_daily, prev_meta, read_rows, summary, tw_cutoff, us_cutoff, vote_daily,
+                    weekdays_only, write_csv, write_json, write_rows, yahoo_daily)
 
 CNN_URL = "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
 CNN_PARTS = ("market_momentum_sp500", "stock_price_strength", "stock_price_breadth", "put_call_options",
@@ -23,17 +24,40 @@ CNN_PARTS = ("market_momentum_sp500", "stock_price_strength", "stock_price_bread
 VIX_URL = "https://www.taifex.com.tw/file/taifex/Dailydownload/vix/log2data/{:%Y%m}new.txt"
 
 
+CUTOFF_24H = "24h-v1：美東 17:10～18:00 收當天，其餘只收到前一天；不收週末"
+
+
+def keep_clean_last(path, rows, cut, prev):
+    """24 小時品項：上一次在美東 17:10～18:00 收進來的當天 K 棒（乾淨的收盤），晚盤時段重抓時 Yahoo 給的是
+    未完成資料、本次截止又只到前一天，就沿用 CSV 裡那一列，避免資料倒退。回傳沿用的日期或 None。"""
+    last = prev.get("last") or ""
+    if prev.get("cutoff_rule") != CUTOFF_24H or not rows or last <= max(cut, rows[-1][0]):
+        return None
+    old = next((r for r in read_rows(path) if r[0] == last), None)
+    if not old or dt.date.fromisoformat(last).weekday() >= 5:
+        return None
+    rows.append((old[0], float(old[1]), *(float(x) for x in old[2:6])))
+    return last
+
+
 def fetch_macro(cfg, meta):
-    """Yahoo 日線（2 年）為主；config 有 cnyes 代號的再用鉅亨網核對最後收盤。"""
-    cut = us_cutoff()
+    """Yahoo 日線（2 年）為主；config 有 cnyes 代號的再用鉅亨網核對最後收盤。
+    session 為 24h 的品項（期貨、美元指數）用 futures_cutoff 並去掉週末列，其餘用美股收盤截止。"""
     for name, e in cfg["macro"].items():
         key, path = f"macro/{name}", os.path.join(DATA, "macro", f"{name}.csv")
+        h24 = e.get("session") == "24h"
+        cut = futures_cutoff() if h24 else us_cutoff()
         try:
-            rows = finalize(yahoo_daily(e["yahoo"]), cut)
+            rows = weekdays_only(finalize(yahoo_daily(e["yahoo"]), cut))
             if len(rows) < 100:
                 raise RuntimeError(f"只有 {len(rows)} 列")
+            kept = keep_clean_last(path, rows, cut, prev_meta(key)) if h24 else None
             m = summary(rows, f"yahoo {e['yahoo']}")
             m["name"] = e.get("name")
+            if h24:
+                m["cutoff"], m["cutoff_rule"] = cut, CUTOFF_24H
+                if kept:
+                    m["last_kept_from_previous"] = kept
             if e.get("moneydj"):
                 # 個股（TSM）：與 us/ 相同，MoneyDJ 核對、最後一根多數決、Nasdaq 官方當裁判
                 try:
@@ -53,7 +77,7 @@ def fetch_macro(cfg, meta):
             elif e.get("cnyes"):
                 try:
                     raw, _ = cnyes_daily(e["cnyes"], [UTC, NY, TPE])
-                    cross_check(m, rows, finalize(raw, cut), "cnyes")
+                    cross_check(m, rows, weekdays_only(finalize(raw, cut)), "cnyes")
                 except Exception as ex:  # noqa: BLE001 — 核對來源失敗不影響主資料
                     m["cross_check"] = f"cnyes 失敗，未核對：{ex}"[:200]
             else:

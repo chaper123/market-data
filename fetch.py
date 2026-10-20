@@ -451,7 +451,8 @@ def expected_last(today):
 
 
 def fresh_today():
-    """日線已經完整才略過：us/*、tw/0* 全部 ok、最後日期都到了 expected_last，且沒有待核對的單一來源 K 棒。
+    """日線已經完整才略過：us/*、tw/0* 全部 ok、最後日期都到了 expected_last（24 小時交易的總經品項也要到），
+    且沒有待核對的單一來源 K 棒。
     只看 meta 產生日期不夠：2026-10-16 02:19 手動執行時美股 10/15 還沒收盤，
     之後三次排程都被略過，晨報讀到 10/14 的資料。"""
     try:
@@ -466,7 +467,10 @@ def fresh_today():
     if any(v.get("last_bar_single_source") or v.get("single_source_days") for v in ds.values()):
         return False
     want = expected_last(NOW.astimezone(TPE).date())
-    return all((ds[k].get("last") or "") >= want for k in core)
+    # 24 小時交易的總經品項（期貨、美元指數）美東 17:10 後才收當天；冬令時間 05:13 還沒收到，
+    # 要讓 06:37（美東 17:37）那次再做完整抓取
+    h24 = [k for k, v in ds.items() if k.startswith("macro/") and v.get("cutoff_rule")]
+    return all((ds[k].get("last") or "") >= want for k in core + h24)
 
 
 def main():

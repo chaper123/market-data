@@ -119,6 +119,20 @@ def tw_cutoff():
     return day.strftime("%Y-%m-%d")
 
 
+def futures_cutoff(now=None):
+    """24 小時交易的品項（期貨、美元指數）的收盤截止。交易日在美東 17:00 結束，18:00 晚盤開盤後，
+    Yahoo 會把「當天」那根換成晚盤剛開的未完成資料（10/19 晚上抓到 WTI 98.60、量 9,846），過了美東午夜才恢復。
+    所以只有美東 17:10～18:00 收當天，其餘時間只收到前一天（日期仍以美東日曆日為準）。"""
+    ny = (now or NOW).astimezone(NY)
+    day = ny if (17, 10) <= (ny.hour, ny.minute) < (18, 0) else ny - dt.timedelta(days=1)
+    return day.strftime("%Y-%m-%d")
+
+
+def weekdays_only(rows):
+    """去掉週六、日的列（期貨週日晚上開盤會產生週日日期的未完成 K 棒）。"""
+    return [r for r in rows if dt.date.fromisoformat(r[0]).weekday() < 5]
+
+
 def summary(rows, source):
     return {"status": "ok", "source": source, "rows": len(rows),
             "first": rows[0][0] if rows else None, "last": rows[-1][0] if rows else None,

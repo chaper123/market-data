@@ -24,9 +24,9 @@
     "SOX":  {"yahoo": "^SOX",     "cnyes": "GI:SOX:INDEX",  "name": "費城半導體指數"},
     "VIX":  {"yahoo": "^VIX",                               "name": "VIX 波動率指數"},
     "TNX":  {"yahoo": "^TNX",                               "name": "美國 10 年期公債殖利率（%）"},
-    "DXY":  {"yahoo": "DX-Y.NYB", "cnyes": "GI:DXY:INDEX",  "name": "美元指數"},
-    "GOLD": {"yahoo": "GC=F",                               "name": "COMEX 黃金期貨（近月）"},
-    "WTI":  {"yahoo": "CL=F",                               "name": "WTI 原油期貨（近月）"},
+    "DXY":  {"yahoo": "DX-Y.NYB", "cnyes": "GI:DXY:INDEX",  "name": "美元指數", "session": "24h"},
+    "GOLD": {"yahoo": "GC=F",                               "name": "COMEX 黃金期貨（近月）", "session": "24h"},
+    "WTI":  {"yahoo": "CL=F",                               "name": "WTI 原油期貨（近月）", "session": "24h"},
     "TSM":  {"yahoo": "TSM",      "moneydj": "TSM",         "name": "台積電 ADR"}
   },
   "valuation": {"VOO": "etf", "GOOGL": "stock", "NVDA": "stock", "TSLA": "stock", "SPCX": "stock", "AAPL": "stock"},
