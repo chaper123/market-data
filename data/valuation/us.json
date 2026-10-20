@@ -1,23 +1,23 @@
 {
- "fetched_at_taipei": "2026-10-20 09:11",
+ "fetched_at_taipei": "2026-10-20 10:13",
  "week_limit_pct": 20,
  "symbols": {
   "VOO": {
    "kind": "etf",
-   "fwd_pe": 19.69,
+   "fwd_pe": 19.68,
    "peg": null,
-   "pe": 24.95,
+   "pe": 24.91,
    "price": 704.6,
    "price_date": "2026-10-19",
    "price_time": "Oct 19, 2026, 4:00 PM",
    "market_state": "closed",
    "source": "https://stockanalysis.com/etf/voo/",
-   "implied_eps": 28.2405
+   "implied_eps": 28.2858
   },
   "GOOGL": {
    "kind": "stock",
    "fwd_pe": 25.8,
-   "peg": 1.86,
+   "peg": 1.88,
    "pe": 17.27,
    "price": 344.18,
    "price_date": "2026-10-19",
