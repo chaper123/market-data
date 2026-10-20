@@ -1,5 +1,5 @@
 {
- "fetched_at_taipei": "2026-10-21 05:15",
+ "fetched_at_taipei": "2026-10-21 07:49",
  "week_limit_pct": 20,
  "symbols": {
   "VOO": {
@@ -48,15 +48,15 @@
   },
   "TSLA": {
    "kind": "stock",
-   "fwd_pe": 188.66,
-   "peg": 10.06,
-   "pe": 388.37,
+   "fwd_pe": 191.56,
+   "peg": 10.21,
+   "pe": 388.12,
    "price": 373.71,
    "price_date": "2026-10-20",
    "price_time": "Oct 20, 2026, 4:00 PM EDT",
    "market_state": "closed",
    "source": "https://stockanalysis.com/stocks/tsla/statistics/",
-   "implied_eps": 1.9809,
+   "implied_eps": 1.9509,
    "earnings_dates": [
     "2026-10-21"
    ],
