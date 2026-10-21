@@ -1,54 +1,54 @@
 {
- "fetched_at_taipei": "2026-10-21 07:49",
- "time_utc": "2026-10-20T23:34:30+00:00",
- "score": 27.2,
+ "fetched_at_taipei": "2026-10-22 05:15",
+ "time_utc": "2026-10-21T21:01:32+00:00",
+ "score": 31.37,
  "rating": "fear",
- "previous_close": 23.11,
- "previous_1_week": 44.11,
- "previous_1_month": 30.43,
- "previous_1_year": 29.86,
+ "previous_close": 27.2,
+ "previous_1_week": 26.66,
+ "previous_1_month": 34.17,
+ "previous_1_year": 28.54,
  "components": {
   "market_momentum_sp500": {
-   "score": 33.8,
-   "rating": "fear",
-   "time_utc": "2026-10-20T20:45:45Z",
-   "value": 7712.57
+   "score": 47,
+   "rating": "neutral",
+   "time_utc": "2026-10-21T20:31:21Z",
+   "value": 7757.17
   },
   "stock_price_strength": {
-   "score": 13.2,
+   "score": 15.2,
    "rating": "extreme fear",
-   "time_utc": "2026-10-20T23:34:30Z",
-   "value": -8.10100700895749
+   "time_utc": "2026-10-21T21:01:32Z",
+   "value": -7.65069884274616
   },
   "stock_price_breadth": {
-   "score": 16,
+   "score": 18,
    "rating": "extreme fear",
-   "time_utc": "2026-10-20T23:34:30Z",
-   "value": 357.299927364415
+   "time_utc": "2026-10-21T21:01:32Z",
+   "value": 387.196536208576
   },
   "put_call_options": {
-   "score": 14.6,
+   "score": 19.6,
    "rating": "extreme fear",
-   "time_utc": "2026-10-20T20:14:59Z",
-   "value": 0.836130664356672
+   "time_utc": "2026-10-21T20:23:10Z",
+   "value": 0.809340337528012
   },
   "market_volatility_vix": {
    "score": 50,
    "rating": "neutral",
-   "time_utc": "2026-10-20T20:15:01Z",
-   "value": 17.31
+   "time_utc": "2026-10-21T20:15:01Z",
+   "value": 16.68
   },
   "junk_bond_demand": {
-   "score": 44.2,
-   "rating": "fear",
-   "time_utc": "2026-10-20T22:30:00Z",
-   "value": 1.22447737833307
+   "score": 49.8,
+   "rating": "neutral",
+   "time_utc": "2026-10-21T20:10:00Z",
+   "value": 1.21208656101219
   },
   "safe_haven_demand": {
-   "score": 18.6,
+   "score": 20,
    "rating": "extreme fear",
-   "time_utc": "2026-10-20T19:59:59Z",
-   "value": 0.118446046205525
+   "time_utc": "2026-10-21T19:59:59Z",
+   "value": 0.17890644238499298
   }
  },
  "source": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
