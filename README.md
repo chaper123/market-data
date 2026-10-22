@@ -11,6 +11,12 @@
 
 GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所以排多次。另外由 cron-job.org 在**美東 17:15（週一～五，America/New_York）**用 workflow_dispatch 準時觸發一次完整抓取（2026-10-20 設定；token 只限本 repo 的 Actions 讀寫，2027-10-20 到期），期貨能在 17:10～18:00 收到當天收盤。需要立刻更新時，到 Actions → fetch-market-data → Run workflow。
 
+另外兩個只由 cron-job.org（或手動）觸發的 workflow，不排程、不動 meta.json，也不影響上面的略過判斷：
+- `news-headlines`（`news.yml` → `news.py`）：台北 08:20（週一～五），更新 `data/news/`，給 08:40 的「新聞與社群晨報」排程讀。
+- `intraday-snapshot`（`intraday.yml` → `intraday.py`）：台北 10:05（週一～五），更新 `data/tw/intraday.json`，給 10:17 的台股晨報讀。
+
+三個 workflow 都只 commit 自己的檔案，push 前先 `git pull --rebase`，被拒時最多重試三次。
+
 ## 檔案
 
 | 路徑 | 內容 | 來源（主 / 核對） |
