@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-10-22T09:05:44Z",
- "generated_at_taipei": "2026-10-22 17:05",
+ "generated_at_utc": "2026-10-22T09:21:02Z",
+ "generated_at_taipei": "2026-10-22 17:21",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -242,7 +242,7 @@
    "rows": 518,
    "first": "2024-10-22",
    "last": "2026-10-22",
-   "last_rate": 32.55
+   "last_rate": 32.536
   },
   "macro/SPX": {
    "status": "ok",
@@ -365,10 +365,10 @@
    "rows": 256,
    "first": "2025-10-15",
    "last": "2026-10-21",
-   "last_score": 28.89,
-   "score_now": 28.89,
+   "last_score": 28.67,
+   "score_now": 28.67,
    "rating_now": "fear",
-   "time_utc": "2026-10-22T08:49:01+00:00",
+   "time_utc": "2026-10-22T08:54:01+00:00",
    "components": 7,
    "cross_check": "無第二來源，未核對"
   },
@@ -390,7 +390,7 @@
    "last_rate": 32.59,
    "last_spot_buy": 32.49,
    "last_cash_sell": 32.81,
-   "cross_check": "2026-10-22 即期賣出 32.59 vs Yahoo 中間價 32.55（差 +0.040 元，正常 -0.3～+0.4）",
+   "cross_check": "2026-10-22 即期賣出 32.59 vs Yahoo 中間價 32.536（差 +0.054 元，正常 -0.3～+0.4）",
    "cross_check_ok": true
   },
   "valuation/earnings": {
