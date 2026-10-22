@@ -1,6 +1,6 @@
 {
- "generated_at_taipei": "2026-10-22 17:20",
- "generated_at_utc": "2026-10-22T09:20:58Z",
+ "generated_at_taipei": "2026-10-22 17:43",
+ "generated_at_utc": "2026-10-22T09:43:42Z",
  "window_hours": 72,
  "status": "ok",
  "tiers": {
@@ -108,7 +108,7 @@
   {
    "name": "Google News 全部：CHIPS",
    "ok": true,
-   "count": 22
+   "count": 20
   },
   {
    "name": "Google News 白名單：TAIWAN",
@@ -138,12 +138,12 @@
   {
    "name": "Google News 全部：TWSE",
    "ok": true,
-   "count": 99
+   "count": 100
   },
   {
    "name": "Google News 白名單：009816",
    "ok": true,
-   "count": 78
+   "count": 75
   },
   {
    "name": "Google News 全部：009816",
@@ -153,12 +153,12 @@
   {
    "name": "Google News 白名單：00981A",
    "ok": true,
-   "count": 50
+   "count": 40
   },
   {
    "name": "Google News 全部：00981A",
    "ok": true,
-   "count": 27
+   "count": 28
   },
   {
    "name": "Google News 白名單：00411A",
@@ -183,41 +183,42 @@
  ],
  "errors": [],
  "stats": {
-  "total": 894,
+  "total": 908,
   "by_tier": {
-   "2": 611,
-   "4": 274,
-   "1": 2,
+   "4": 272,
+   "2": 626,
+   "1": 3,
    "3": 7
   },
   "by_symbol": {
-   "2330": 134,
-   "TSM": 134,
-   "NVDA": 99,
-   "SPCX": 124,
-   "TSLA": 108,
-   "GOOGL": 54,
-   "AAPL": 40,
    "VOO": 61,
+   "SPCX": 125,
+   "GOOGL": 54,
+   "NVDA": 100,
+   "TSLA": 110,
+   "AAPL": 40,
+   "2330": 139,
+   "TSM": 139,
    "3037": 2,
    "3653": 1,
+   "00981A": 19,
    "2454": 1,
    "2327": 1,
    "2383": 4,
-   "00981A": 18,
    "009816": 2,
    "3443": 1,
    "00411A": 1,
    "2308": 1
   },
   "by_topic": {
+   "taiwan": 53,
+   "merger": 43,
    "earnings": 64,
-   "taiwan": 54,
+   "china": 42,
    "fed": 45,
-   "tariff": 35,
-   "merger": 41,
-   "china": 40,
-   "oil": 14,
+   "tariff": 36,
+   "export_controls": 1,
+   "oil": 11,
    "cpi": 7,
    "jobs": 1,
    "war": 6,
@@ -230,40 +231,265 @@
  },
  "items": [
   {
-   "id": "d4d332ad5baaf060",
-   "published_utc": "2026-10-22T09:16:05Z",
-   "published_taipei": "2026-10-22 17:16",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
+   "id": "89a8abab2fd8c77a",
+   "published_utc": "2026-10-22T09:41:57Z",
+   "published_taipei": "2026-10-22 17:41",
+   "source": "The Motley Fool",
+   "source_url": "https://www.fool.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Beyond the S&P 500: Which International ETF Is the Better Buy in 2026?",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQbXNBdjFNTTFFdHEzYUIyTC1mNzZ5U09mTTdHTEVtT1hwTFhBcFcxZFI1UFJES0NnYzZGMDlrWjZjVFRFN0pjbURsWG9VSjhNaU1SUXctQ1MxbjlCNnFQWk45MzZ6NnJNM0dGYmVPNmQzYVhUd1hzRVp5QllpbXdrdy1pYS13UC1aTEt6THdqUkJseHlTTU1SMDN0VFd0dWNTTlJDZXV3YkJmUHdLcEpSSkZqTE9Ub3BJOU9n?oc=5",
+   "symbols": [
+    "VOO"
+   ],
+   "topics": [],
+   "queries": [
+    "MARKET"
+   ],
+   "title_queries": [
+    "MARKET"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "2df5f1178026631b",
+   "published_utc": "2026-10-22T09:39:41Z",
+   "published_taipei": "2026-10-22 17:39",
+   "source": "Benzinga",
+   "source_url": "https://www.benzinga.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Elon Musk's SpaceX Could Become World's First $10 Trillion Company, Early Investor Says",
+   "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQdm5VV1FxenR1ejZQNHBCQUFXQ0hDMzVLWl8zUlZuWFFHQkdJdzg4ZGFJbE03TWJJcURuQnB6Um5Uajh3VVJEaFh3Z1JNTkhpOTBNTU9rWWJQaUtTS1pSQ1JJV3J6a1RocVR4YjVNdEtwZWluMzdzV2JlWW9aU0IyVlpQMGZDTlpuSFkwRC1sVjNSeTNBdDl2VUcxOWZSV213QnFvYUJ6WjltTEVSRUJsNGJrMkM3N0JYdDBTbkZXTU9kVjZYTjVOTm9OWjNUYUxxMW5pOEdGLV8wWEpqbnE5eDZWYnExV2c1bzVkclVONFRVSXM?oc=5",
+   "symbols": [
+    "SPCX"
+   ],
+   "topics": [],
+   "queries": [
+    "SPCX"
+   ],
+   "title_queries": [
+    "SPCX"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "4a245cdec60af375",
+   "published_utc": "2026-10-22T09:39:17Z",
+   "published_taipei": "2026-10-22 17:39",
+   "source": "Anadolu Ajansı",
+   "source_url": "https://www.aa.com.tr",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Typhoon Champi nears Taiwan",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBCcGdRdDhOdzRMaWNvMURmWGxxc2tqT2VlMkpKWGZNWEExVDd3RFlBYXdYX1ktalF0c3BRU0kwZUZfRExaUjYxRUh3d3JyM0c1bC1Ya05aQktUbmc?oc=5",
+   "symbols": [],
+   "topics": [
+    "taiwan"
+   ],
+   "queries": [
+    "TAIWAN"
+   ],
+   "title_queries": [
+    "TAIWAN"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "2d1584246284d917",
+   "published_utc": "2026-10-22T09:39:13Z",
+   "published_taipei": "2026-10-22 17:39",
+   "source": "Data Center Dynamics",
+   "source_url": "https://www.datacenterdynamics.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Nvidia Vera Rubin infrastructure now generally available on Google Cloud",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPbk1YQUU3eWJUWVFONjVzR0lJaVhzUTRHQjMtNWdwcmdGc2kySUFMN3NuVk5xbU5yaldkLUt2WFlNQkVFREp6SVYwZzZTWE9meXdGY2hlU3NpZXIta2VwMUlna1BLTlBYUlJPd1Mzc0lfODJwX0lFcTBfaC13eDIzWkYzcExqUVNwVEEybnMwelhCZjJIQzRHcnNWWXdpN2ZhUFhzR3NvaFBqQzI3VkljQW9KdkpkaUU?oc=5",
+   "symbols": [
+    "GOOGL",
+    "NVDA"
+   ],
+   "topics": [],
+   "queries": [
+    "GOOGL",
+    "NVDA"
+   ],
+   "title_queries": [
+    "NVDA",
+    "GOOGL"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "f450d8c10724896c",
+   "published_utc": "2026-10-22T09:38:00Z",
+   "published_taipei": "2026-10-22 17:38",
+   "source": "Fortune",
+   "source_url": "https://fortune.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "A SpaceX-Tesla merger: The ins, outs, and what-have-yous",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNOFlla1BGY21yQ05sWGV5aUZ4cldPU1V5eVVTd0tjSmdIUS1CLS1aMUgzOHV0aFNCeHNoaENnRFhJTFEwVEx5QWx6NEp4bkxwLTBmRXBYUzdFYThkV3NkU3Z0dUxTZkdHOGI4cnJENDRsNWFTSGM4VUdleDRnWThPUQ?oc=5",
+   "symbols": [
+    "SPCX",
+    "TSLA"
+   ],
+   "topics": [
+    "merger"
+   ],
+   "queries": [
+    "SPCX",
+    "TSLA"
+   ],
+   "title_queries": [
+    "TSLA",
+    "SPCX"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "b62403470b1bb018",
+   "published_utc": "2026-10-22T09:34:00Z",
+   "published_taipei": "2026-10-22 17:34",
+   "source": "9to5Toys",
+   "source_url": "https://9to5toys.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Apple’s 36GB M5 Max MacBook is a massive $900 off today (Amazon all-time low)",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9jUnBHb3NCWEJVRHVCSmxGWVlZZXpPQVFjRUpNQlVXSFlOYUpka01vZ0w5Uk1TZXd1NWNHZXRtNm1jd2E4TV9vRDdTY0JZanpSVzJ0V3lVeERnUUpMVk1icGdfS0NueGpXaDdlcHZsYlFVNWs?oc=5",
+   "symbols": [
+    "AAPL"
+   ],
+   "topics": [],
+   "queries": [
+    "AAPL"
+   ],
+   "title_queries": [
+    "AAPL"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "047da90025230dca",
+   "published_utc": "2026-10-22T09:32:00Z",
+   "published_taipei": "2026-10-22 17:32",
+   "source": "TVBS新聞網",
+   "source_url": "https://news.tvbs.com.tw",
+   "tier": 4,
+   "rank": null,
    "lang": "zh",
-   "title": "凱基證券「AI投研智慧釀酒廠」獲財訊金融獎肯定 | 財富管理 | 商情",
-   "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBuMjkwR2V4aGRBMlVPOW9Teld4MXE3N3JMN1lGTklHVmhPZ2RlbnZTZ056LVI5cE5GaWVGQWkwejNOTFRNZEY4bW9MVDRSYmw4N2Zoc1dncGJ6cDl6OERiWk1PdFJzc1VSbDdZVUI2cl9reTZOTkFMUkJGbzM?oc=5",
+   "title": "台積電法說會缺驚喜仍有戲？AI需求續旺 長線布局受看好理由曝",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9EZU9uZnNVTTdidGVWRG9uV3FvYmdNenNWMEZDNFFvbW82VWt4em9LQXRlZkZpOGhNckY4WmVzNjJzYkplR2k0WDJwaERTTkU?oc=5",
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
+   "topics": [
+    "earnings"
+   ],
+   "queries": [
+    "2330"
+   ],
+   "title_queries": [
+    "2330"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "9bf125f40b408307",
+   "published_utc": "2026-10-22T09:30:29Z",
+   "published_taipei": "2026-10-22 17:30",
+   "source": "Bloomberg.com",
+   "source_url": "https://www.bloomberg.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "Amazon’s New Tablet Is a Credible iPad Rival for Much Less Money",
+   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPa1lBNmRCQi1raHAyczhoS1JlNzhhemdvSWpOUl81TWY1Wk92Zl9Pek1jaFFyQlczejVUeWVrdDVFVEZ1eWNtT1ByMjk2Sm5QMDNjX2hjTWJvMUN0UzRlV3RLMmJ6T0l1dklXQXItenk3bnhpYTk2TDdEbHlrZmVMQURnc3JIbTdvYk14Y2kwQW5pZHdoYldHMWhtMGgwV2dLdzh1MjJLU1p3TzExcHZEclNYN2JfUldENDljdG5Dbw?oc=5",
    "symbols": [],
    "topics": [],
    "queries": [
-    "009816"
+    "AAPL"
    ],
    "title_queries": [],
    "title_match": false,
    "also": []
   },
   {
-   "id": "99df69786570e3bf",
-   "published_utc": "2026-10-22T09:15:46Z",
-   "published_taipei": "2026-10-22 17:15",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
+   "id": "4f7d1bc1eef17571",
+   "published_utc": "2026-10-22T09:30:00Z",
+   "published_taipei": "2026-10-22 17:30",
+   "source": "Barron's",
+   "source_url": "https://www.barrons.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "en",
+   "title": "Nvidia Stock Falls in a Case of Bad Timing Over Another Potential AI Investment",
+   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9VeEdHR2lCQXB5TGVFS2dwc0JnRTVDR3loNTVlRlRmTHNWcmpHbUdHdzV6bVJQQWgzQkJZTmZWbXJrQjFHWGhMVEVUZEJyOXh4UWZFa1kybFZWcGVDVGF3RXcwOXhZZkVxWVVKc0pwa1lhak1lRXBB?oc=5",
+   "symbols": [
+    "NVDA"
+   ],
+   "topics": [],
+   "queries": [
+    "NVDA"
+   ],
+   "title_queries": [
+    "NVDA"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "6e5582e1b035fa66",
+   "published_utc": "2026-10-22T09:30:00Z",
+   "published_taipei": "2026-10-22 17:30",
+   "source": "WSJ",
+   "source_url": "https://www.wsj.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "SpaceX Takes Conglomerate-Building to Sci-Fi Extremes",
+   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNb1RMMm9xckt1YnNRZXdCUWFQVUh4aGlIUnBCbGJLbnFWdTBkcTV4ZWlxbkFiTHJuaGJBZWRtMFhTS19EYkdzUDg1ak9idms4S0RjemJLeE16OFBaTnlFb2lyMElKOGFkVWNtUnZLRklOSXhMdnplQl8yUWNObHRDbFJZcjVTSFNHbG1FZEZQN2c?oc=5",
+   "symbols": [
+    "SPCX"
+   ],
+   "topics": [],
+   "queries": [
+    "SPCX"
+   ],
+   "title_queries": [
+    "SPCX"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "b3e963c942efad63",
+   "published_utc": "2026-10-22T09:30:00Z",
+   "published_taipei": "2026-10-22 17:30",
+   "source": "工商時報",
+   "source_url": "https://www.ctee.com.tw",
    "tier": 2,
    "rank": "B",
    "lang": "zh",
-   "title": "台股擂台／「股市軒昂」張嘉軒：台股本周內憂外患 優先觀察美股超級財報周 | 台股擂台 | 證券",
-   "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9sS3lEdmhpODdzZEw4aGJhOEt2dGlPQ2UyaV9ZVEtlejk0RHBjcmFYTXZSSjZtWGY3UUFHWXNoOF85d3R2enBsT2ZzU2NKWG9TdGE5WEY0SnRCb25fdHA4WXQtbFVTeF9lcDk5bUQ5LTNOX2N2Y1NnbFJFSVk?oc=5",
+   "title": "台股逐洞賽｜市場觀望氣氛增溫指數高檔甩轎打底- 證券",
+   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE11anJvQU1fNVVySTdidVFtTG0tRzZWWkNrbjFXVkxPTkNVSG9JV0NVT2tldGlZMUJwT21KaDBCci1SejlNbkc5eE5DWDk1eVQtaGF0b1V0OTEtSFBNNVBj?oc=5",
    "symbols": [],
-   "topics": [
-    "earnings"
-   ],
+   "topics": [],
    "queries": [
     "TWSE"
    ],
@@ -274,16 +500,142 @@
    "also": []
   },
   {
-   "id": "d4f812325a370e53",
-   "published_utc": "2026-10-22T09:15:32Z",
-   "published_taipei": "2026-10-22 17:15",
-   "source": "樂聯網",
-   "source_url": "https://leho.com.tw",
+   "id": "ea2502fe20b8bdfc",
+   "published_utc": "2026-10-22T09:30:00Z",
+   "published_taipei": "2026-10-22 17:30",
+   "source": "electrive.com",
+   "source_url": "https://www.electrive.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Tesla Q3 results: full order books, but declining figures",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQcDdBaVRlRnRXN2x6Z3gwSU83TFBkVTZFMFN2ODF1b3lJWEdnQ1o0dUNLOFNqODZ0Ui1UUk03UWxFRnBsSkZMM3VNUnJYRC1nZDdOUHpkbEFUQ0RWTGh6QVNaX25QNkllcUg1cTZ5Z0ZDclFoYzFYa0NWWWgwNVFnVFBLdml5QUZjbFRBSkExT0xZOXVTbUlsNA?oc=5",
+   "symbols": [
+    "TSLA"
+   ],
+   "topics": [],
+   "queries": [
+    "TSLA"
+   ],
+   "title_queries": [
+    "TSLA"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "a5653002e1510fbb",
+   "published_utc": "2026-10-22T09:30:00Z",
+   "published_taipei": "2026-10-22 17:30",
+   "source": "Yahoo股市",
+   "source_url": "https://tw.stock.yahoo.com",
    "tier": 4,
    "rank": null,
    "lang": "zh",
-   "title": "張淑芬董事長與陳亮恭院長深化跨界合作台積電研發單位自組「Beyond Me」樂團以音樂傳遞關懷",
-   "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9QcVo2cE1MWTBDa1lYcTB0bjVjcWlOZ0xSdTlzQlM1bjNOTmpqQlBfZnlzT05fcTlhdGdhVURsTVFRZXMtckxRUFk0cw?oc=5",
+   "title": "台股大跌800點不用慌！「5檔金控」逆勢飆天價 前9月大賺帶動股價創新高",
+   "link": "https://news.google.com/rss/articles/CBMiqgNBVV95cUxPOTRYUW9scU1PeXZXZXJ1OS1ZVUc4SGFLQmphWlZ6dDVmQjN4dFRZOFVXRHhNMWZnNGE5MHA5UnNjZVZpTlhIYTRjdnFBSGFOWHEtNXlFbVdWWkhLclVLU0Q5T1NLU3FMOVVMQUE2S0tRMGJrRi10ZXpKQnVhZFBvdmF3bVVzcE1HbDZZWGsxdF9XcHdZMXYwR0FqOXFxTC16a2NTNlZBLVcwRkdrb1FEbm90MVduSzc4REZnT0dDdDh3WWRNeGxFR0JfMDN4VGpBbTl5NmRQT2FVaWJUTkVQdE44NlFodnBsWHRpUl8xazVwVFdRdjBfRkgwdm04cDhnMk5oMXJwZk1NTDBjejAtYzJ5cHE4TWZSX3hGdkxtWlNtSjhveC04eWJsWTFFVVVxTGhDT001WEFFMGtNcHhjTGR0Ty1rSjlNMVBxZmRtM05Ja1U5ZnozWklheEo4WTBWMDBENUZ1cE5XQ3BEcmVzdWVoZ2xTcmx3Um1GeHpsR2pYcjBwZzhQMms5Sm9GRHFVY2FHLUhBT201UVBJUTZvOHFPbzViNUZMeFE?oc=5",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "d028a2ca54c5a530",
+   "published_utc": "2026-10-22T09:28:00Z",
+   "published_taipei": "2026-10-22 17:28",
+   "source": "Business Insider",
+   "source_url": "https://www.businessinsider.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "SpaceX-Tesla Merger Could Create a Frankenstein's Monster Wall Street Can't Value",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPLVBZemZ5OXpwWGZTQk5EVnFlajBWY2szbGRxMWMtdUtobTc4d0U1WWRqNEw0SUVvMGVYT3hPLWEzWjNfZXFNRDBLY0JyTHVSOFNDTHpaZng1YjFLaVpNOGdKQ1JES1NSdGpobHYyQWxiYmNVQVJnLXdLVGViSGwzZWRDUWFCdlRVaDFQaG5tU0pZTEExYXpEUmp3LTFFbnpZYlQ1SkVhMWJ0RTVPY2FV?oc=5",
+   "symbols": [
+    "SPCX",
+    "TSLA",
+    "VOO"
+   ],
+   "topics": [
+    "merger"
+   ],
+   "queries": [
+    "MARKET",
+    "SPCX",
+    "TSLA"
+   ],
+   "title_queries": [
+    "TSLA",
+    "SPCX",
+    "MARKET"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "f52a719bd5f58707",
+   "published_utc": "2026-10-22T09:27:55Z",
+   "published_taipei": "2026-10-22 17:27",
+   "source": "The Mac Observer",
+   "source_url": "https://www.macobserver.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "iPhone Duo Walk-In Stock Will Be Very Limited at Apple Stores",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNbjV0X3RGRnpwTm5PLUtZREFfRVJKcFNqdHhZanVkaGt1bnZkSnRmZElZRWRoWGd1YzBLcUE0MElVQXBkaWFNX2ZkTmxkNTZDQVRleUdvNFZxSEhFcVlkU19GZXEwZ2xUa0NmZDRuNXlGbEg4b2NOdndPb3ZrLThmTVNvQWF0c2wtc0QyZFJ3Uk5uRmQ0Yi00ZW9Hdw?oc=5",
+   "symbols": [
+    "AAPL"
+   ],
+   "topics": [],
+   "queries": [
+    "AAPL"
+   ],
+   "title_queries": [
+    "AAPL"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "2353294303864286",
+   "published_utc": "2026-10-22T09:27:55Z",
+   "published_taipei": "2026-10-22 17:27",
+   "source": "The Mac Observer",
+   "source_url": "https://www.macobserver.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Apple Music Reveals Fresh App Design and Logo Crafted by Sound",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNLWN0X3hCMEZWdXRORElxNXo5X095cXVQQkNtc2Nmc1JtUUNpMVZGYnZMc0w4ZzJnTEI4MVM4RldlWEUyTVZHdU5RaXJvbndlTGFIMzdORVg0clVJaFdpYUxZbWlibG1ZQ1p2MEZSbjg0WG1LU3RyRFgzMTlFQ2VWRnpxcGp5dzFHOHJyakFqdWhrcGJFMU9ickZXUHQ?oc=5",
+   "symbols": [
+    "AAPL"
+   ],
+   "topics": [],
+   "queries": [
+    "AAPL"
+   ],
+   "title_queries": [
+    "AAPL"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "5a0880eb05ecaef7",
+   "published_utc": "2026-10-22T09:26:13Z",
+   "published_taipei": "2026-10-22 17:26",
+   "source": "CMoney",
+   "source_url": "https://www.cmoney.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "2330 台積電 - 全台最大！漢翔「電力島」年省40%電費不斷電上銀、矽品、寶成都來了- 股市爆料同學會",
+   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5oOXVJRnVMcTRaMC1SNTVjZWw5dy0zZVdlZF80S2FZZmNQb0tGRHBkaFVYUVg2T2tLR2c2NHI5Q2pMSWp0YURiSEpwbnhwUXE3T0hGWGs5Yno?oc=5",
    "symbols": [
     "2330",
     "TSM"
@@ -294,6 +646,321 @@
    ],
    "title_queries": [
     "2330"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "429533ce5e46ed3d",
+   "published_utc": "2026-10-22T09:25:17Z",
+   "published_taipei": "2026-10-22 17:25",
+   "source": "UDN",
+   "source_url": "https://udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "從琴聲悠揚到智慧醫療 關渡醫院攜手台積電 陳亮恭展示醫療新模式",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE8tZDAtZVlWcDZRbUJLWlhnZ2QyeGJPcFMyOWlPeU9JcG5lWW8wY0VfMzhWSXB2SnowQW9NZFNBSGtBOEpqQngwTW9pWnp0NUJH0gFWQVVfeXFMUDZ2ZWtIVTgtb2ptZ0NKTWxxUGpqbTA1T2pfbnphQ0FZNklnOTBqNzdscmw4T0d5ZFNfZ2FQZmI5WEpnTTBrX1djckwyRk9nd2l0clR3d1E?oc=5",
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
+   "topics": [],
+   "queries": [
+    "2330"
+   ],
+   "title_queries": [
+    "2330"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "7bf975fceca3b1b9",
+   "published_utc": "2026-10-22T09:25:00Z",
+   "published_taipei": "2026-10-22 17:25",
+   "source": "Modern Diplomacy",
+   "source_url": "https://moderndiplomacy.eu",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "TSMC Seeks Alternatives to China-Controlled Rare Earths to Safeguard Chip Production",
+   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVXBacUZkZmdRaHd1XzlnVFZRNW5hNWI1aWZqLWtFRjFsb3czb2FhMldkOU1zR3pHb2ZrcHVVNDlVdWVSOUtrU1F0VGV6MjhMTkw5OUFJREYxU0JxbXUyVG5qRm1VNTRKQmNfNEpVVVI5d3pPZks2eVhERl9NaHpnd2lpbDdib2Y5MzExek9yTnVZbjFjWmo1dVZBdjVQLTl5dng0YVB1a0ZPUGJiZThIZ3RYS0g1d3lSaHVabF9Fdzc?oc=5",
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
+   "topics": [
+    "china"
+   ],
+   "queries": [
+    "TSMC"
+   ],
+   "title_queries": [
+    "TSMC"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "8b2a14d3e7b88979",
+   "published_utc": "2026-10-22T09:24:18Z",
+   "published_taipei": "2026-10-22 17:24",
+   "source": "Anadolu Ajansı",
+   "source_url": "https://www.aa.com.tr",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "South Korean opposition turns to Google’s Gemini to challenge president",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQQ0hGY1VCVXp4bm9kbzRLd1ZsSEJjRlpjUTA1VWgyWGpmZk8wWm5VODUwTDFvNUhWUnMtRWZ6ZjQ2MVdvSmZ0dm1Ccl9ua2xRSEhabjViS2NIcE01N2FrekFSLW5RTlY3b1JDb210b0RMRHJNRjZQVHQwWWttWERWOU1tVWpVeG5mSnhZTEJLVW1kSnhROHI1aktMaG9GSHVYV1RrVWl1QlhJUC1BbWx1ZnNkTWxkTE0?oc=5",
+   "symbols": [
+    "GOOGL"
+   ],
+   "topics": [],
+   "queries": [
+    "GOOGL"
+   ],
+   "title_queries": [
+    "GOOGL"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "ad0358b525b6260f",
+   "published_utc": "2026-10-22T09:23:37Z",
+   "published_taipei": "2026-10-22 17:23",
+   "source": "鉅亨網",
+   "source_url": "https://news.cnyes.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "台股失守季線下探46K 外資砍816.56億元期貨同步轉空",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBqMzdqR0xXSWNkOUt5b2lKWWxnQ0x2NWJtV2wzS2puYzVfczN1VzZUZEFpSE5TZ2hIWVBDd01DT0tPaXFTOXpnSFBsdFZONms?oc=5",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "d034bef3573c8f9c",
+   "published_utc": "2026-10-22T09:23:14Z",
+   "published_taipei": "2026-10-22 17:23",
+   "source": "Techloy",
+   "source_url": "https://www.techloy.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Apple HomeView Alternatives: 5 Cheaper Picks From $99",
+   "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9ZcGd0VU0zRGdDYm5JN0NBS3ZJbXRDV095RnNad2FuWnYxZ1dCNkFIN0ZzRGFOeF9EemM5LTNhaUNpZTAxNVgzdlVpUURublVpMkdLQU5KUEZ0MmtwdjgtZVBR?oc=5",
+   "symbols": [
+    "AAPL"
+   ],
+   "topics": [],
+   "queries": [
+    "AAPL"
+   ],
+   "title_queries": [
+    "AAPL"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "e9ee377b269568c7",
+   "published_utc": "2026-10-22T09:23:05Z",
+   "published_taipei": "2026-10-22 17:23",
+   "source": "Trefis",
+   "source_url": "https://www.trefis.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "S&P 500 Movers | Winners: SMCI, CRL, ECHO | Losers: T, DXCM, NFLX",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOQTFpZkdSd0ZlQ2hGT3dtTVkwVDF2WHFoa0p5clhiTE9RY0NwUjNsZWROeUJTM29TbmpWelJoVGZsT1hmaE4waktGTGFBMnZLMnk3c2ZOVHk1TFoxYUVHMFBnSmRZbFVCY01TR0FPejNfU3lfc0k3UzhHNVBsSVo1cjM3aEtSOVhPLWdhQnZ3UmR0Vk1oVk9yczRSWjczYm5BV0J0ZFBDSWhjXy1WNGJUS3l4NjY?oc=5",
+   "symbols": [
+    "VOO"
+   ],
+   "topics": [],
+   "queries": [
+    "MARKET"
+   ],
+   "title_queries": [
+    "MARKET"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "ed0c0ff8c793b849",
+   "published_utc": "2026-10-22T09:23:00Z",
+   "published_taipei": "2026-10-22 17:23",
+   "source": "永豐金證券",
+   "source_url": "https://www.sinotrade.com.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "台股失守季線下探46K 外資砍816.56億元期貨同步轉空｜新聞快訊｜豐雲學堂",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5vWDRSZmNCZ1Ixa3RUZzJDZGlmR2FDVzJ0VUNPdTlSR0kxX2UwLWxfaTREQkhCM25pU0pYcGIxclNPM2JDaHZtdG55RERCNnl3OE15SlFUOEd4VVJkMlFoam1SSGRfR1lVSUdsZ0kzVE1CS0tfTEE?oc=5",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "73861514f9e1f4ac",
+   "published_utc": "2026-10-22T09:22:30Z",
+   "published_taipei": "2026-10-22 17:22",
+   "source": "The Mac Observer",
+   "source_url": "https://www.macobserver.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Google Maps Adds Gemini Voice Controls For Apple CarPlay Users",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOZE9vd1A2dHA0MTdIeFRUZ05DaTBqdzVlWTgtdXhmMjlscjJvQlUyRktxdFFiNV9hTDdGRU45eGVSLUtmMEppcHJnU0Q4bGg4aTNxbm93YVRsU0ZQUG53QjN1VWR3MTVRSnotbGpDUm1VQkhtc0NBbWF1UjgzZFJaQk4yQ3hwZ2pPVEVmSjFZMTJybm16cVJKWDNOYWc?oc=5",
+   "symbols": [
+    "AAPL",
+    "GOOGL"
+   ],
+   "topics": [],
+   "queries": [
+    "AAPL",
+    "GOOGL"
+   ],
+   "title_queries": [
+    "GOOGL",
+    "AAPL"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "45594af5bc8adfaf",
+   "published_utc": "2026-10-22T09:20:01Z",
+   "published_taipei": "2026-10-22 17:20",
+   "source": "Tech Xplore",
+   "source_url": "https://techxplore.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "A SpaceX–Tesla megamerger could benefit both companies and Elon Musk's personal fortune",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQcU94WEQtVWxUcC12MVdVZmV5S1RSdTlPZEdhSTl4a2otNWlrTFVDUGZwUlptejl2Q3FPZkttQVVoTFRuXzNZZVRNR0M4b18xX3Y2NHVaSXF2bWlBVTJxa1pUZ2NVcFV1VWNyYzZwZTZjWGFrVmM3eWJSYlA4S21zWkpoblBwbURhbHBmclRadw?oc=5",
+   "symbols": [
+    "SPCX",
+    "TSLA"
+   ],
+   "topics": [],
+   "queries": [
+    "SPCX"
+   ],
+   "title_queries": [
+    "TSLA",
+    "SPCX"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "15ef1178ed494f81",
+   "published_utc": "2026-10-22T09:19:24Z",
+   "published_taipei": "2026-10-22 17:19",
+   "source": "Yahoo Finance",
+   "source_url": "https://finance.yahoo.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "en",
+   "title": "Tesla, Meta and IBM: 3 earnings call shout outs that left us thinking",
+   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQZzM1RHpRcDIyZWw0NTd5ODJja2tQdjEwZFUxenI2MGh6RGxRVklxOWpjMnFaQ2dGelBUZ3J5cUEyNl9Zcjd6TjJGWk9vWlk4OFdaMXBqRHYzbU9jd1lLZUlRSUQwUDh0bHAyMDlvTk1ZaS10VDJXcldpNzRiMmpuNTAyOHRiZWxyWFFRNHR0QWpKUHFtYkhlQUFXV0hIdlQwdGlWUDlNeFRmYm8zaTdJdlZoYkx2N2U3a1p1dXM0R3ExMi05RndqSFp3?oc=5",
+   "symbols": [
+    "TSLA"
+   ],
+   "topics": [
+    "earnings"
+   ],
+   "queries": [
+    "TSLA"
+   ],
+   "title_queries": [
+    "TSLA"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "b94550afa791f666",
+   "published_utc": "2026-10-22T09:17:18Z",
+   "published_taipei": "2026-10-22 17:17",
+   "source": "Search Engine Journal",
+   "source_url": "https://www.searchenginejournal.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Google CEO Sundar Pichai Views Search Absorbed Into Agentic Layer",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNaFB5bnd4UzI3cDRxTk9RenJOck1YaXNYR3hIQXFSMEFIUU42SVpYYTMwUWJ5VmRNTF9RUzhSc1VNQmViU3NidVp4ZnZ6VXpRNnVlZE5lWWN5M0wtNDdwc0VtbmEwMF9SY0I3M3BWNFlxQVhqbjFNdGY0ZWROSE80TjVUVUdqYi1oTXRQTG04UDR5N3p6WHlpeWJaMXhtajVURnp4d3FxVTg4VTA2c0E?oc=5",
+   "symbols": [
+    "GOOGL"
+   ],
+   "topics": [],
+   "queries": [
+    "GOOGL"
+   ],
+   "title_queries": [
+    "GOOGL"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "6d9aff221584ddcc",
+   "published_utc": "2026-10-22T09:16:05Z",
+   "published_taipei": "2026-10-22 17:16",
+   "source": "經濟日報",
+   "source_url": "https://money.udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "凱基證券「AI投研智慧釀酒廠」獲財訊金融獎肯定 | 財富管理 | 商情",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA0Q3BTb2U3cDRWSWRwZm9RM3NqVmZiaG94T2theGNsZkhWMno0YkdYSVR3TkNGUE5mWWl5cHFkd1JGMzg0ZnhzREdxS0ptaFAya3pnZHltUmVJUQ?oc=5",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "009816"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": []
+  },
+  {
+   "id": "099f8522e8e58cd5",
+   "published_utc": "2026-10-22T09:15:46Z",
+   "published_taipei": "2026-10-22 17:15",
+   "source": "經濟日報",
+   "source_url": "https://money.udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "台股擂台／「股市軒昂」張嘉軒：台股本周內憂外患 優先觀察美股超級財報周 | 台股擂台 | 證券",
+   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1haWhnQ2xjQkVzUWt6RjYyb1BHR21yTDhkdFNXNW1jTklDeWhOUGxpbkI4UE9Ld0llWUJsaEowM0FtZWFYanRZbk9fRDRIMVRWMHJ2RUVlSEhYRFZE?oc=5",
+   "symbols": [],
+   "topics": [
+    "earnings"
+   ],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
    ],
    "title_match": true,
    "also": []
@@ -395,6 +1062,55 @@
     "The Motley Fool",
     "The Globe and Mail"
    ]
+  },
+  {
+   "id": "a71cb14f6af4461d",
+   "published_utc": "2026-10-22T09:13:00Z",
+   "published_taipei": "2026-10-22 17:13",
+   "source": "墨新聞-MORE News",
+   "source_url": "https://more-news.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "張淑芬董事長與陳亮恭院長深化跨界合作台積電研發單位自組「Beyond Me」樂團以音樂傳遞關懷",
+   "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE96cVRkODFBTE9iVFE1VUNkQkpaUS1CSVQ5NnJEc0RnRjR2Z2hjaW5Vb05aeGFLYWdqZE9keTJqcGNwQQ?oc=5",
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
+   "topics": [],
+   "queries": [
+    "2330"
+   ],
+   "title_queries": [
+    "2330"
+   ],
+   "title_match": true,
+   "also": [
+    "樂聯網"
+   ]
+  },
+  {
+   "id": "7682fbfd0eac2d56",
+   "published_utc": "2026-10-22T09:11:59Z",
+   "published_taipei": "2026-10-22 17:11",
+   "source": "Yahoo股市",
+   "source_url": "https://tw.stock.yahoo.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "9月台股基金定期定額扣款回落 統一奔騰、統一黑馬逆勢成長受青睞",
+   "link": "https://news.google.com/rss/articles/CBMimgNBVV95cUxQNm1iemMwYklSWjk0RnRMbnNWalk2X29kM3c2VFRvNnFuS25QVnY0ckY3UUh2cV85ZXpnOElPZm90T2lnMDQyYnc4WFh2VEROWFh3dVRheXlYNEFNeEc4c01kTHlZYVhQZGFsNUtfWG1uNTU3dmR0RkkyYWRfNWhDcGZsNW05bE1iY3h5WkxibVEzM2tfRUhLbU03ZjdoaTlqX0VDbzQ2WlJDWjFKeGRxMXlIVEZRN3U3U25JQnZreTJ2c044V1RUQ1ZMZVJ0bDdfaWNzLWZKeHZTdnVyMFNkT3ZLdEE0cDVuM0c0Z2ZDTDkxYVNhd2p4V04wWVdPNHNtejgzZGZIZXp1eDZQMmRUTjhjYUZacEc1Q0haYXRLRmtBWUZmblE2bTV3Q2p1NkxUb2syZzN3MUFUX25MTF9Md20ySG9Gc21ZZlR5VXk5OWZwYVFaNjdnZ0RUbXVYU2RkR1VHa3lmVGQ2RExqYkZjLTZxbFhZYUlXdTBIRlpKbkFkZ0paX0dmRUVhLV9adEM0eUtFWDNJUUxLZw?oc=5",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
+   ],
+   "title_match": true,
+   "also": []
   },
   {
    "id": "8414703e6ada2490",
@@ -570,25 +1286,48 @@
    "also": []
   },
   {
-   "id": "e1cdc492e67b610a",
-   "published_utc": "2026-10-22T09:05:02Z",
-   "published_taipei": "2026-10-22 17:05",
-   "source": "Greenwich Time",
-   "source_url": "https://www.greenwichtime.com",
+   "id": "c4256a2b757ea6bd",
+   "published_utc": "2026-10-22T09:07:27Z",
+   "published_taipei": "2026-10-22 17:07",
+   "source": "CMoney",
+   "source_url": "https://www.cmoney.tw",
    "tier": 4,
    "rank": null,
-   "lang": "en",
-   "title": "Could Lindsay Clancy be Google’s most searched person in 2026? Kalshi traders are betting on it",
-   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdjhIWThvZ0NEOXA4V0lfbkZhcG81VE5lU3BqRFc4NGlzX2R5MW9SbnRaZ283MXR5aTBGZHljOWRrQ01KZzRzWW1oV2UxXzhxVXQ3QlNtVF9TZXFHaER6d0E3RnhySXNMYVlLZHAxUlMybEdENXduYXhac1FtdEJIVzRaNFFWbW90VUM1N0k0TC1qWHA2RXhVXzBQSGdWa3d6TW1lWWNMWTU?oc=5",
+   "lang": "zh",
+   "title": "TWA00 加權指數- 左側交易的修行：必須習慣，一開始建倉帳面可能是負的- 股市爆料同學會",
+   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE8yekRwVmtRamo4T29aSGZuaVdXRUg5ZUw0SE5ZNGlpa0JlTVJNM2FZbHJxSlpKT3k2eG9mWFZqa2RTX1ZoMlVfd1dyUHR1S0FjcklaNGZidng?oc=5",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "116d57ef8e66a331",
+   "published_utc": "2026-10-22T09:04:34Z",
+   "published_taipei": "2026-10-22 17:04",
+   "source": "CMoney",
+   "source_url": "https://www.cmoney.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "2330 台積電 - 三大法人22日賣超前十大 友達、南亞大翻車 電子倒一排 台... - 股市爆料同學會",
+   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE8zRHlmbExzWHFRTUZ4ZEZzekF6YU5td05hckFNRWhLLVpUQWtXN2c1QzJYM1dXYzBZejRPWE9SWGZEd1B1UW1ySXdfWnMtcmliMExDbmo3NTg?oc=5",
    "symbols": [
-    "GOOGL"
+    "2330",
+    "TSM"
    ],
    "topics": [],
    "queries": [
-    "GOOGL"
+    "2330"
    ],
    "title_queries": [
-    "GOOGL"
+    "2330"
    ],
    "title_match": true,
    "also": []
@@ -616,6 +1355,58 @@
    "also": []
   },
   {
+   "id": "e1cdc492e67b610a",
+   "published_utc": "2026-10-22T09:03:44Z",
+   "published_taipei": "2026-10-22 17:03",
+   "source": "Greenwich Time",
+   "source_url": "https://www.greenwichtime.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Could Lindsay Clancy be Google’s most searched person in 2026? Kalshi traders are betting on it",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdjhIWThvZ0NEOXA4V0lfbkZhcG81VE5lU3BqRFc4NGlzX2R5MW9SbnRaZ283MXR5aTBGZHljOWRrQ01KZzRzWW1oV2UxXzhxVXQ3QlNtVF9TZXFHaER6d0E3RnhySXNMYVlLZHAxUlMybEdENXduYXhac1FtdEJIVzRaNFFWbW90VUM1N0k0TC1qWHA2RXhVXzBQSGdWa3d6TW1lWWNMWTU?oc=5",
+   "symbols": [
+    "GOOGL"
+   ],
+   "topics": [],
+   "queries": [
+    "GOOGL"
+   ],
+   "title_queries": [
+    "GOOGL"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "f57e4ddf243282bc",
+   "published_utc": "2026-10-22T09:03:18Z",
+   "published_taipei": "2026-10-22 17:03",
+   "source": "民視財經網",
+   "source_url": "https://finance.ftvnews.com.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "防範中國稀土出口管制 台積電尋求無稀土廠房設備替代方案",
+   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1QS2duNTNlUVduU2FpQXpfSGEwVjdCcGpRc0d0dFkyakdZSkZzSDhDYW5ZZXpDVUVaNjJsUHNVWEZlMGhaSDBLVHR2c2ZfalNUQUstVEhMd2FXNVB2b2trdGsxcEwzZw?oc=5",
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
+   "topics": [
+    "export_controls",
+    "china"
+   ],
+   "queries": [
+    "2330"
+   ],
+   "title_queries": [
+    "2330"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
    "id": "f5ce6421c20c5a03",
    "published_utc": "2026-10-22T09:02:39Z",
    "published_taipei": "2026-10-22 17:02",
@@ -637,6 +1428,51 @@
    ],
    "title_queries": [
     "TSLA"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "dc652fa42f3c1026",
+   "published_utc": "2026-10-22T09:02:15Z",
+   "published_taipei": "2026-10-22 17:02",
+   "source": "Axios",
+   "source_url": "https://www.axios.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "en",
+   "title": "Scoop: Unvetted AI agents are accessing U.S. bank accounts",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPSDhwTU0wLUJrU2kza3Z2bFJoNmQ2NENWa1JRRHppbTc0OGJ2MHVOU1BfTzBMNzNVRGplNEdqSTZ4NlZfUDRCOVdoNk9PelNoalE0WDNRcVh1bGIzZlVLU0dWLVFGWjJpd1dEcFItX2RFT1k2Tmk1RHBBckd6aV9GVGdSaw?oc=5",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "GOOGL"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": []
+  },
+  {
+   "id": "9268bb5949b75429",
+   "published_utc": "2026-10-22T09:01:31Z",
+   "published_taipei": "2026-10-22 17:01",
+   "source": "CMoney",
+   "source_url": "https://www.cmoney.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "2330 台積電 - 台積電2025年封關至2026年10月6日歷史新高2590元 - 股市爆料同學會",
+   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1NYlVXZmlYN0ktTktOSTdmTl82bkljVThrZ3IwQkRPSXo3MnMtNXp0bENhOUs5d2tfT0VVVlVqTDZPSGlMLS1mTG1pdU14Y3FIcm9IWV9XNXY?oc=5",
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
+   "topics": [],
+   "queries": [
+    "2330"
+   ],
+   "title_queries": [
+    "2330"
    ],
    "title_match": true,
    "also": []
@@ -733,6 +1569,30 @@
    ],
    "title_queries": [
     "GOOGL"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "7a1cde386404eb88",
+   "published_utc": "2026-10-22T09:00:00Z",
+   "published_taipei": "2026-10-22 17:00",
+   "source": "Mashable SEA",
+   "source_url": "https://sea.mashable.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Apple iOS 27.2 arrives soon: 7 new features on the way",
+   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNTkV5a1JVcEVGQUVWR1ZxYjJKWVJ1LU9DeHg0NWNvRld1RWZDVnAycWZzYnU5VU84YUtSLTlvWTNnV09oWEpHUzhXZFgzckdwdjBIV3dQSmM5cE5jQjVaY1R5aFF4RzRPNm5CMjg3aDFzRi1lb21BMWxKNExGMjRfdDhnZnZqRFk2ZzdGam1ia1Yydw?oc=5",
+   "symbols": [
+    "AAPL"
+   ],
+   "topics": [],
+   "queries": [
+    "AAPL"
+   ],
+   "title_queries": [
+    "AAPL"
    ],
    "title_match": true,
    "also": []
@@ -880,7 +1740,9 @@
     "GOOGL"
    ],
    "title_match": true,
-   "also": []
+   "also": [
+    "Yahoo"
+   ]
   },
   {
    "id": "188c08f5df1c6c32",
@@ -903,6 +1765,31 @@
    ],
    "title_queries": [],
    "title_match": false,
+   "also": []
+  },
+  {
+   "id": "152e997512af263e",
+   "published_utc": "2026-10-22T08:58:51Z",
+   "published_taipei": "2026-10-22 16:58",
+   "source": "CMoney",
+   "source_url": "https://www.cmoney.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "2330 台積電 - 日韓暴跌＋美股盤後翻車＋強颱避險潮，崩回四萬六是誰在逃命？ - 股市爆料同學會",
+   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE16UGx3TWM4TEUtVllrQ3Z3RG9OdzFuS21rdjdPRXlzOEs3M09XQ0JrenhiV2lzS0NSMXJBVE9fTTRoS2JaemdyZHM4ZWJwRUcwMzlFdFhzaW4?oc=5",
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
+   "topics": [],
+   "queries": [
+    "2330"
+   ],
+   "title_queries": [
+    "2330"
+   ],
+   "title_match": true,
    "also": []
   },
   {
@@ -957,7 +1844,7 @@
   },
   {
    "id": "cf556713ed59b746",
-   "published_utc": "2026-10-22T08:54:59Z",
+   "published_utc": "2026-10-22T08:54:15Z",
    "published_taipei": "2026-10-22 16:54",
    "source": "SDxCentral",
    "source_url": "https://www.sdxcentral.com",
@@ -1046,6 +1933,28 @@
    ],
    "title_queries": [
     "TAIWAN"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "baff9f58e0515826",
+   "published_utc": "2026-10-22T08:53:11Z",
+   "published_taipei": "2026-10-22 16:53",
+   "source": "CMoney",
+   "source_url": "https://www.cmoney.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "TWA00 加權指數 - 不是有說颱風放假，股市正常營業嗎？ - 股市爆料同學會",
+   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4zMTF2RUx4UmZ1MjFKWHBoYjNMZ2dUMVRNVW14N29Vak1IOW9ubWprSlZyQ3p4Q0NmQUw0b0ZvTEN3VkF5X1ZUeFdSX3JobVBsczZpeGlRaEQ?oc=5",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
    ],
    "title_match": true,
    "also": []
@@ -1343,6 +2252,30 @@
    "also": []
   },
   {
+   "id": "b26f0a4e4e713d9c",
+   "published_utc": "2026-10-22T08:47:23Z",
+   "published_taipei": "2026-10-22 16:47",
+   "source": "CMoney",
+   "source_url": "https://www.cmoney.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "10/22 00981A 日月光10連減後買回",
+   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE8tTVVDczBoV1ZyOWY1WUNRb2lkRnRKRkpvWF9iQTJSdzZtb2hCQXZIZE1vdl9HYkxsb3BHSkdBS0lCZWlaTF9oU182T25QWElFbG1KaEFDSWY?oc=5",
+   "symbols": [
+    "00981A"
+   ],
+   "topics": [],
+   "queries": [
+    "00981A"
+   ],
+   "title_queries": [
+    "00981A"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
    "id": "beb5ee77af0df2d5",
    "published_utc": "2026-10-22T08:47:04Z",
    "published_taipei": "2026-10-22 16:47",
@@ -1494,30 +2427,6 @@
    "also": []
   },
   {
-   "id": "28c6407e7a304eb9",
-   "published_utc": "2026-10-22T08:44:12Z",
-   "published_taipei": "2026-10-22 16:44",
-   "source": "Arab News",
-   "source_url": "https://www.arabnews.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Taiwan issues warnings as Typhoon Champi nears",
-   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQNE11aWJFOFpRbnpER2U1UWY3V1RIOEFDeDFXZ3hhWDhJS0RnbkY1MnAxa0NmU2xndWZUR0R4N2otM1VUckk2TTk5bmFpQ3JvbkxRa0w2Y25KNU9kN0NCNXZqNjNvbW9GOFZfeUIycTFFTTY2UzBrU0V5T1BsRmhPWktMaFdmNmtSeE10RUt3?oc=5",
-   "symbols": [],
-   "topics": [
-    "taiwan"
-   ],
-   "queries": [
-    "TAIWAN"
-   ],
-   "title_queries": [
-    "TAIWAN"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
    "id": "c206e943ac3bb38e",
    "published_utc": "2026-10-22T08:43:47Z",
    "published_taipei": "2026-10-22 16:43",
@@ -1613,6 +2522,32 @@
    "also": []
   },
   {
+   "id": "513d506026a88d09",
+   "published_utc": "2026-10-22T08:38:06Z",
+   "published_taipei": "2026-10-22 16:38",
+   "source": "Phys.org",
+   "source_url": "https://phys.org",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Taiwan issues warnings as Typhoon Champi nears",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1JMGliNl9ObjE4UThZRGYxVjFIREgzLVRnbF81NUJUTnRpVHUyeTZOTjUwcmpoR2p3SzR6aTBMQlUwWWszTlRtMFlnd1hCVEZYNVZNY0habHdMeHFPVXh3a0trWktna1draWhTeTRfNTh6RmVveXh6OA?oc=5",
+   "symbols": [],
+   "topics": [
+    "taiwan"
+   ],
+   "queries": [
+    "TAIWAN"
+   ],
+   "title_queries": [
+    "TAIWAN"
+   ],
+   "title_match": true,
+   "also": [
+    "Arab News"
+   ]
+  },
+  {
    "id": "981a70f97948fb88",
    "published_utc": "2026-10-22T08:37:30Z",
    "published_taipei": "2026-10-22 16:37",
@@ -1642,7 +2577,7 @@
    "also": []
   },
   {
-   "id": "823c748978218c09",
+   "id": "5f663e8c541272d4",
    "published_utc": "2026-10-22T08:37:00Z",
    "published_taipei": "2026-10-22 16:37",
    "source": "ETtoday財經雲",
@@ -1651,7 +2586,7 @@
    "rank": null,
    "lang": "zh",
    "title": "台股47K曇花一現！外資狂砍816億 續砍台積電1.26萬張",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1SM2hjMkkxM1Z5Z2hCWmFaNVNKclMyQzFkZzhwT2pCVThYRUMyc1NncjktaWJtR0dNOEllc01aakxQRnZHSXdNYVF0Sk5sMC1zSnfSAVBBVV95cUxQUDlCc2ttem05Vm5YWFhPRFhkNU14Nng0cTVsRHhRN2Y3cTVrWXMxN0lYV3lxWWtVOVIwdHFBUmJoWG5HV0RxMzMzV2d1azlCWQ?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBQOUJza216bTlWblhYWE9EWGQ1TXg2eDRxNWxEeFE3ZjdxNWtZczE3SVhXeXFZa1U5UjB0cUFSYmhYbkdXRHEzMzNXZ3VrOUJZ0gFQQVVfeXFMUFA5QnNrbXptOVZuWFhYT0RYZDVNeDZ4NHE1bER4UTdmN3E1a1lzMTdJWFd5cVlrVTlSMHRxQVJiaFhuR1dEcTMzM1dndWs5Qlk?oc=5",
    "symbols": [
     "2330",
     "TSM"
@@ -1986,6 +2921,28 @@
    "title_queries": [
     "NVDA",
     "TSMC"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "7030c423da329a43",
+   "published_utc": "2026-10-22T08:30:58Z",
+   "published_taipei": "2026-10-22 16:30",
+   "source": "CMoney",
+   "source_url": "https://www.cmoney.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "TWA00 加權指數- 明天放颱風假機率100%,開始連休四天,對亞果而言也是好事！ - 股市爆料同學會",
+   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1rSlUtay16Z0pweFBtVXJuSmVZR1EydVEwbnU4Z1ZUQmx0Q2liUUNRa1pMQ2V6aEVhalpYcXFfeHNsTWxIc3VLZkM2NTFIYUQ5Z2NlOTFkVzE?oc=5",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
    ],
    "title_match": true,
    "also": []
@@ -2599,6 +3556,28 @@
    "also": []
   },
   {
+   "id": "5af4f38214fb11e1",
+   "published_utc": "2026-10-22T08:16:00Z",
+   "published_taipei": "2026-10-22 16:16",
+   "source": "WSJ",
+   "source_url": "https://www.wsj.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "Gold Falls as Energy Prices Raise Inflation Concerns",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQUN2OVctVWtHbFg4a1ZTUUFScko5TzR4Zlg0MzVSd2FpZlhfN19idWpqZS1iUjQ3aFctbXhwb3Q4N1l4bUZKQmFrU2pQTnhzOGwyY2p2d0FkeUVZZHJ4ZXpyVU5ZQ0xRdHZGdjk2ZVRaQWNRaHFxUTVyVmZJRDVJdmY0RGNKWWQ4S2pNdUw1ci1VRXJOZjZGWURPNVZpVVcxci1lSnZmUkg4TmU3V1VCM1VucXc?oc=5",
+   "symbols": [],
+   "topics": [
+    "cpi"
+   ],
+   "queries": [
+    "FED"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": []
+  },
+  {
    "id": "65264c6174915494",
    "published_utc": "2026-10-22T08:15:52Z",
    "published_taipei": "2026-10-22 16:15",
@@ -2749,6 +3728,29 @@
    "also": []
   },
   {
+   "id": "7b8576a6af680de8",
+   "published_utc": "2026-10-22T08:12:06Z",
+   "published_taipei": "2026-10-22 16:12",
+   "source": "Reuters",
+   "source_url": "https://www.reuters.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "Audi gets new China leadership to face bruising competition",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOZFU0VXdHY2hhVWJVVWZ1NDdIUG56Z0ZqYzlpMFE2cjE2Rld4M3N4MUtHdHJELXMzeC1sMDhZMlpMSVVQQk9ZM0cxaUxpbFRXSi1EVkRKeEhLVDlUczJiSW1PdExSaXVwcEZUVDg4S2JkaDk3RkJVOWNSc3g1RXoxMXRUVVJQM3pIX2JQYVFrcFVJcURKWTQxaXRnT3ZmSmdPN2ZqQnFkOA?oc=5",
+   "symbols": [],
+   "topics": [
+    "china"
+   ],
+   "queries": [
+    "TAIWAN",
+    "TSMC"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": []
+  },
+  {
    "id": "754391f718af7d6c",
    "published_utc": "2026-10-22T08:11:16Z",
    "published_taipei": "2026-10-22 16:11",
@@ -2819,25 +3821,23 @@
    "also": []
   },
   {
-   "id": "06a013d7edf82075",
+   "id": "b6aa2e69b1202ebc",
    "published_utc": "2026-10-22T08:10:00Z",
    "published_taipei": "2026-10-22 16:10",
-   "source": "MoneyDJ理財網",
-   "source_url": "https://m.moneydj.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "《台股盤後》開高走低、收跌846點，失守季線 - 台股 - 新聞",
-   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQZnE3WEFDSTFKR0ZRSnIwZ3VzbjNzTzdiTS1vVExGREEwelRUTTgza0pMR2dTSUNrZ181aXVWMUNNRGpxS1ZDQjdYVEozZ1FWQURDRDJYc1A5b3FuU04xQzRJeHdHNnFjc1lZZEdtZ29yZGI2QzFDUnRsSlhrdEptZlpn?oc=5",
+   "source": "WSJ",
+   "source_url": "https://www.wsj.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "Nokia Reports Continued Strength From Data-Center Rollout",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQVGFmQ3Q5dnVOY1BncE9EdmIzVGhCU3VhOGFBRm8yZ2xBYUo2d0hscS15QlU4WG1VUVF6Z0lfbVhfTGI0MUVlaHZSX2hKOFJxd2d3dlRCQmRiZWtxN2FEN0xidVA5SnVDTU9NVG5zcXJOejdtUkdEYUhTN2xpT3VZUWJkV3YyWHRBV1hGN09EZHJqdVAzT3h2OVlyTFhQdHdEaXhFWVh3V1dBeU0?oc=5",
    "symbols": [],
    "topics": [],
    "queries": [
-    "TWSE"
+    "TSLA"
    ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
+   "title_queries": [],
+   "title_match": false,
    "also": []
   },
   {
@@ -3189,28 +4189,6 @@
    "also": []
   },
   {
-   "id": "299d7a73b4b7fc7a",
-   "published_utc": "2026-10-22T08:03:00Z",
-   "published_taipei": "2026-10-22 16:03",
-   "source": "Yahoo新聞",
-   "source_url": "https://tw.news.yahoo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "台股暴跌846點！50萬散戶抱錢放假 周代運曝「這時間」好戲登場",
-   "link": "https://news.google.com/rss/articles/CBMi8wJBVV95cUxOMjVTc2xkczRXOWVRUnBiTVY0TkFNMVo5SkpOVVQyLThBTXJGcTRsQzN3RGtycEZ5WVRMazVucmpHalBzWXlSb1ZJaUdwc1Q1UDZ0NUEzVXpBcXB5MWpCbE1wSGl4WE5rN0o0T2c4X1BtNG9QN1BPQlFnYkxELVQyd19rdFBqa2tjUUlZYndoU1Viang2MVBueU1vb25vWkRUcVZTSUZkQ0Vmb215M1FaeXA3YjBFdXg5UlVrcVRTb25fTUhjSzJsR1E0dDhRMFVvNXUteDdIbTk1aGdYeHVkd09MTWJ2Z3BCSEdBWEJRdTNiSDUtSzVyUXBwRWlRZFpBdjU0OWZseTJ6Y21ScW9wdEpGaWp3SUF1b3Q3T0V6c1kzZTJqS0dFUlB4N19XUG1VZGZJNzNzTVk2eDdCOExuZEpvdkRjbnliMWxWTHZWNk14YkdNYmNJTGNQaFZPaWotN19QXzk3ZDk2NFdpeXpQRmpsTQ?oc=5",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
    "id": "ec005c05f9770a85",
    "published_utc": "2026-10-22T08:02:50Z",
    "published_taipei": "2026-10-22 16:02",
@@ -3251,7 +4229,7 @@
    "also": []
   },
   {
-   "id": "48113b419b5383d1",
+   "id": "3895ec7230e60074",
    "published_utc": "2026-10-22T08:02:47Z",
    "published_taipei": "2026-10-22 16:02",
    "source": "經濟日報",
@@ -3260,7 +4238,7 @@
    "rank": "B",
    "lang": "zh",
    "title": "開發跨境創新基金 投資日本失物科技新創find | 財富管理 | 商情",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBTVzNmZzVjbUs3clZ0Y2JnNENRT0QtWFQ3dENMMEpkbjA5cUhPYmZpaTYyRTRsWlJfTFd5SjlaazVPZlFTRHBBX0kyMW9XVURuT1E2a3ZDUnAxUQ?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9kMGZiQ0VjWUZKMkZuZFAzeFNrTTE3SmxXdGRpcDRTQW9nVHRiOEtGQlJpTTMxNUpyb0dkSnY4MzRLck0tUFZtLTRRcE50R2l2emFDS01TVndOUkNsN2FSbHAxWkI5eGdpR0pBcjJSTFJsZ3NhdGFiVl9lRzQ?oc=5",
    "symbols": [],
    "topics": [],
    "queries": [
@@ -3291,7 +4269,7 @@
    "also": []
   },
   {
-   "id": "3569cbaa0f8f572a",
+   "id": "5f3ec21cf43a4ed8",
    "published_utc": "2026-10-22T08:02:45Z",
    "published_taipei": "2026-10-22 16:02",
    "source": "經濟日報",
@@ -3300,7 +4278,7 @@
    "rank": "B",
    "lang": "zh",
    "title": "凱基證券輔導湧盛電機10月22日掛牌上櫃 | 財富管理 | 商情",
-   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOT01jNkZ1XzdWM0h3SnQzZWhQZ2t5bklyTkpDeDVSRjJCNERydXQxblozdnR6NnpiYVdvakRmRWZqNFFnb1h3VzBGbDFEeWxidDV5UERudmg0WXN1ZGpwMWtUQmhTQVhjTC1oV3ZpOTlJQUFVb2tnZU5hWEJFVU8xdA?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE95RGpzclo4cGlfMDh3aFNTN2JTcHNwZExyTXFPVTV5NGU4dVpCVGtDOURUYVh2cjZiT1hPcXBzRER2VFJxdlVDV0hGVnczbl9SS1BWRWROMFRqZw?oc=5",
    "symbols": [],
    "topics": [],
    "queries": [
@@ -3348,50 +4326,6 @@
    ],
    "title_queries": [],
    "title_match": false,
-   "also": []
-  },
-  {
-   "id": "8136b98558945449",
-   "published_utc": "2026-10-22T08:02:28Z",
-   "published_taipei": "2026-10-22 16:02",
-   "source": "CMoney",
-   "source_url": "https://www.cmoney.tw",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "TWA00 加權指數- 昨天用幾個億騙韭菜籽們上鉤，今天再收割你們8百億- 股市爆料同學會",
-   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9XNEFPc2pOV0Rac0lBYmdEbG5PRmthZXBlSUVkOXpVUHlYay1qTVdCWlI0TlRVM3lIUTVscExpcGJxNHFiRTVVRHJMQlpCaUtITzhkNFBXMDI?oc=5",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
-   "id": "513f6356bd59ee19",
-   "published_utc": "2026-10-22T08:02:22Z",
-   "published_taipei": "2026-10-22 16:02",
-   "source": "中時新聞網",
-   "source_url": "https://www.chinatimes.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "台股三大法人動向！外資賣超816億元開溜 自營商也拋售",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA2QjJaaGNFak9qZGUxSFpUc1FrX04zR3loQ1JQUmlNWklHQU10WEljLUh0X0pnQTV4WXhobDljUHVDU01kdTlTMVREV2ZzdmlydW1SdUY5SEVpWVNZaU90aFVsMkN1MmdUMnd3SGpB?oc=5",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
    "also": []
   },
   {
@@ -3565,25 +4499,25 @@
    "also": []
   },
   {
-   "id": "3396cc6c07789689",
-   "published_utc": "2026-10-22T07:55:00Z",
-   "published_taipei": "2026-10-22 15:55",
-   "source": "BigGo Finance",
-   "source_url": "https://finance.biggo.com",
+   "id": "7e422f2efdcdb9c9",
+   "published_utc": "2026-10-22T07:52:17Z",
+   "published_taipei": "2026-10-22 15:52",
+   "source": "InsideEVs",
+   "source_url": "https://insideevs.com",
    "tier": 4,
    "rank": null,
    "lang": "en",
-   "title": "Taiwan Stock Exchange to Scrap Risk Disclosure Form for Taiwan Innovation Board in 2027, Opening Trading to All 14.7 Million Investors",
-   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBZNFJqLWp4Z2NsdXBwWHphRXd6UEFWVkpRbGRoVmZsLW1HTmgyRXdSR0F5ejdKb0JscklVOGR4aGZBX3JQWHFnRnJyTHpEazhBcE1UclJILWUyc1VRUHJJWEtkQ2lVREg3cFprd3pZMmdDUEQ1QVE?oc=5",
-   "symbols": [],
-   "topics": [
-    "taiwan"
+   "title": "Here Are All Of The Crazy Tricks The Tesla Roadster Just Did",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1qTXdRanUyb3pvRGRhd0NCalRYMXZqZ0xKRkdBd0Y5ZnVtTnJ2cFFtRzlqSjd0c1Y4dmRpS2xveXZpc0F3czJyOEw3UEVLSF9VZjR5OFJmTVVjUDNPYkxERUdmd05SLUVQS2tvR01MenRNLWJPXzl3bw?oc=5",
+   "symbols": [
+    "TSLA"
    ],
+   "topics": [],
    "queries": [
-    "TAIWAN"
+    "TSLA"
    ],
    "title_queries": [
-    "TAIWAN"
+    "TSLA"
    ],
    "title_match": true,
    "also": []
@@ -3638,28 +4572,6 @@
    "also": []
   },
   {
-   "id": "7fcc460a60618655",
-   "published_utc": "2026-10-22T07:48:09Z",
-   "published_taipei": "2026-10-22 15:48",
-   "source": "理財周刊",
-   "source_url": "https://www.moneyweekly.com.tw",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "台股上下狂震1,290點、重挫846點收全天最低！外資再砍816億",
-   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5hWmF0Z1lYOFdSV2VZZHVSOUlhdDJNemttOXNnNGJvZDIyc2JVOHhmMVpSTUNIWU9vREREZzJIV0ZlNVJ2YlBISDVhQmtZZWl0YUpHT09QODBTbVZ2UWRRTGlyemVzMzdCYUlHOUJzTQ?oc=5",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
    "id": "24d20ec983315128",
    "published_utc": "2026-10-22T07:47:00Z",
    "published_taipei": "2026-10-22 15:47",
@@ -3686,23 +4598,25 @@
    "also": []
   },
   {
-   "id": "b13fc47e5b7fba70",
-   "published_utc": "2026-10-22T07:45:09Z",
-   "published_taipei": "2026-10-22 15:45",
-   "source": "自由財經",
-   "source_url": "https://ec.ltn.com.tw",
+   "id": "e4fb1239c1e56f63",
+   "published_utc": "2026-10-22T07:46:27Z",
+   "published_taipei": "2026-10-22 15:46",
+   "source": "Times Of AI",
+   "source_url": "https://www.timesofai.com",
    "tier": 4,
    "rank": null,
-   "lang": "zh",
-   "title": "台股暴跌846點！投信本週天天買「這檔」 狂敲1.43萬張力挺68萬股東",
-   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1hUXNHNS1iT2dEOThOT2ZOWmV1cFYyTTZkOWRWTDhLeXlrbWlEd1BSeXZIZHVVdFJGR092MjQxMkQ0UUlFcW1iZGdvT09jYllrWEIxZk01SGpxREswdTU00gFkQVVfeXFMUERFczh1VWw4TGo4bEZPV190Q0l1UndCd3VBeC1ISlktOUp0eFY1Yl84VGdISkpqSHhvTWJTSGNNYWVRbnc5TGJYUnVUbzRmY2tGczNYR3dvQmw5VDdHcUtfczIzUQ?oc=5",
-   "symbols": [],
+   "lang": "en",
+   "title": "NVIDIA CEO Says Every European Firm Will Be an AI Company",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1nYzBEX2RDTlVVc1UtSzJ0bzlQaVo2MUEwWVRJSmloeUpFQmV3WWVVWlBSRjJkakU0ZUFZbzVsRUdBT095eTR5TUVOVE1RTXpRQzRORXVwbjd3WmtCX3MyR3dTLVlvdmwtcklHVw?oc=5",
+   "symbols": [
+    "NVDA"
+   ],
    "topics": [],
    "queries": [
-    "TWSE"
+    "NVDA"
    ],
    "title_queries": [
-    "TWSE"
+    "NVDA"
    ],
    "title_match": true,
    "also": []
@@ -4001,54 +4915,6 @@
    "also": []
   },
   {
-   "id": "9e94bd087ebc5f82",
-   "published_utc": "2026-10-22T07:34:36Z",
-   "published_taipei": "2026-10-22 15:34",
-   "source": "MarketBeat",
-   "source_url": "https://www.marketbeat.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "NVIDIA Corporation $NVDA Stock Position Raised by Endeavor Private Wealth Inc.",
-   "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNZEc2NFAxYmxSZmxtM3otN0VzVVpKd19tZHpheTZkamxCTnNpZWRldlhWOHExeXR3OFRtdW9SdTNpVkpwWnk0eXJEQWZUbElCTUFWMkFUWFpEcF83bXh3M3R2QlFfMzZuaEtFelp3TG1WVFR5TGhHSUNvMFkxVGh5VlFRbkdQdnZLc0tkTkZTc2RjT0Nzd1psLTBSaXAwNkt4U0FrZ1YtWnZQZU5HV0xON1BJTnRpdlVXMkUwaWpsUlVVWkx2MDJURUtON043ajU0LWZF?oc=5",
-   "symbols": [
-    "NVDA"
-   ],
-   "topics": [],
-   "queries": [
-    "NVDA"
-   ],
-   "title_queries": [
-    "NVDA"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
-   "id": "2e8c8957ecb46b39",
-   "published_utc": "2026-10-22T07:34:36Z",
-   "published_taipei": "2026-10-22 15:34",
-   "source": "MarketBeat",
-   "source_url": "https://www.marketbeat.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "NVIDIA Corporation $NVDA Stock Bought by Henrickson Nauta Wealth Advisors Inc.",
-   "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPSWFZTzdZR3R2MTlGOWV6Mnh6QjdLazZScjVldDJwZVZ0Z0diWXhqelh0Z1A4Mkxvekw2Um5XOUVZOGdxWmlqSnpqa0o3aEpiRDBZSVlLLTB4RDRFUFVuWW9tYm5rS2szQlBJY0luN3lFaGgyU1BLeVdCZmlfVG80R1Fnd1BkVy1RaFNMd19rWEMyVHJ1QUFjc0lCcUtQc2hBN1pmbjZiSlhXeGNyWm80VFZmbmQ0cGRmWEk2cVNua1VlYnQ1bWZNV2xMbkk1WUhIdWlV?oc=5",
-   "symbols": [
-    "NVDA"
-   ],
-   "topics": [],
-   "queries": [
-    "NVDA"
-   ],
-   "title_queries": [
-    "NVDA"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
    "id": "4b155bc4adda6123",
    "published_utc": "2026-10-22T07:34:35Z",
    "published_taipei": "2026-10-22 15:34",
@@ -4122,7 +4988,8 @@
    ],
    "title_match": true,
    "also": [
-    "The Motley Fool"
+    "The Motley Fool",
+    "AOL.com"
    ]
   },
   {
@@ -4449,58 +5316,6 @@
    "also": []
   },
   {
-   "id": "c9cd653b86a2eb77",
-   "published_utc": "2026-10-22T07:23:35Z",
-   "published_taipei": "2026-10-22 15:23",
-   "source": "太報 TaiSounds",
-   "source_url": "https://www.taisounds.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "外資翻空賣超816億元！美股、台積電ADR都漲也沒用 台股震盪逾千點| 財經焦點",
-   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1xaldFUW1YYm51QVVfN1VYQTdydkVCTG9MaXdib01QNHJQcm1KSEZWZkVab1pyN1B0M2gzRWVWdmRQZktVWG5qbWw3ZV9uVWU1WEZfX2kzUTBORlRi?oc=5",
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
-   "id": "0b62ce55f24584f8",
-   "published_utc": "2026-10-22T07:23:30Z",
-   "published_taipei": "2026-10-22 15:23",
-   "source": "Facebook",
-   "source_url": "https://www.facebook.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "【台積電工安4死！】同事目睹「整座鋼構垮了」 嚇傻：綁安全繩也沒用 影片來源：記者 吳世龍 拍攝 【相關報導】 台積電工安4死！同事目睹「整座鋼構垮了」嚇傻：綁安全繩也沒用 https://www.ettoday.net/news/20261021/3258365.htm?from=fb_et_news1",
-   "link": "https://news.google.com/rss/articles/CBMiiAdBVV95cUxQRjdhMWtmQmF0OXNpd3Q0RDJYaWJvV2hxcGhxWjdkLVpFT2dFM1RCTmJGVGVBS1JEYUpRUWlXcHJncVVwU1Rxd2lfTDJiVG4zUXp1SHZUbjU4aVYwTUlCNmlfNkJLS05WNWdFdUhCYTNfRXNmWndkc28yNHh2cF9EYVlMS2ZMRTIyLVczc21OSlFfSnhJN2VrZWQ1aUR0Q0ZXNXlEUGRkNjJoWmJZU2FHTXNfU1J1MWhvWGFiNUtzaE1COHc1cno4S3hzV1ZSWEZfZmd4d19iVlB4SjRibC1rME4tNzBRNm1wa2pkMHJuTFZaUERQZVo5NGJWV0pKZHlFYVNUYm1peHlqLUwxNnNmVkJZMDNzX2VvcWJwbGt0cG1BdHN5TTlqcS1oZzJDOVk3NHpIczkyWVY3MWZlQ1B4UUFKZmdqc0ptVTFPR0QtUVcwYkJNZDhWVFFFdW1scWRBaG8zN0tDaE53OXdIVkZRQzFZWmFIbm5EbnQ2dFo2LWI1eV8zV1Q1N0o3LTFINTIyVW5nT3U0OEpkcFF3aU1pSmFob0MwQk9GN1I3czI5QTg1SzE1N1NPOWJTZFJwRXdfVFVMZTBSN0lTOGhMMnJ3ZEQ1Ml9DdDBIbElEbE9MeGhtM1RlcVp4YjkyLVRPV3BxMUtPM1dUUUppRnljblFUSlJxeldOb1ZfS1RHTHdOQXB4SWs0Z3p4QTZuYlNJRW1OM2hsb083eFlRMTM3V0pvRXcyYXdsY3FVbnZiNnNOTlhkWUpWNWRqX1BCSUZTcUc5Y3U4blFDWEV1SDl6aGxCa016RTU1SVo3TEkxX0QxMUJ0dlU2QVR1cHpYV3BIWG9RRGxzN3Y1cDNWV3doQlFHYXNPQ19mS0R1aU5taHdtV2lfQ3JOaUFGcWJnUHJ4UmVFYl9TNURNcUF1NXMyZ3R4Si1iako4b1BFb2pyOEptNi1CM3phaEZWMFdYWVlxeF94VjE4ZHpMa191QmVYdnJFSmhCd1FHYzQ1bjB2cXN4NEJVQmlqbHUzNEIzYUF6RE9iem1tdTNNRzF5NFdVWTU5RkNqMUJqR3JwTDNSbkpxVllGVGhUSlE0RVFRUjI2YWdFdC14Z2pqZVVBbnphc193OGNUSU9falNqRHNEMkRqWWRpSWxNamI4SVVvSU8zSUpFYmV0SXZ3bWpzVmdaZi1UdGxBb3AxTUdw?oc=5",
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
    "id": "d35aa113b16c83f7",
    "published_utc": "2026-10-22T07:22:13Z",
    "published_taipei": "2026-10-22 15:22",
@@ -4583,33 +5398,6 @@
    "also": []
   },
   {
-   "id": "def7425eca4f978c",
-   "published_utc": "2026-10-22T07:20:00Z",
-   "published_taipei": "2026-10-22 15:20",
-   "source": "Breakingthenews.net",
-   "source_url": "https://breakingthenews.net",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Nvidia, Tesla likely to invest $2.8B in Samsung mechanics plant",
-   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNaUdYVWMxM3V3Tm4zZmRWTm5wZGMwel9lTjd1d2RzRjV0V09BVkR1Nnh2WUYxUlVRZThRbEt5OS1OSGlqcUVNLXFJWFNTd2kydzFBNzQ0Sm1SQUFIM21QRGVXQXpYWmpLWWI2dmRBTVhDeWl2eHVESXhKS3IxZkxHWVJFQW90YXQ4RHVmNmIySU9CV1BiVGdRY2YzblpRdzVZWmw5QklJcFZqa2pWdTUyRUlB?oc=5",
-   "symbols": [
-    "NVDA",
-    "TSLA"
-   ],
-   "topics": [],
-   "queries": [
-    "NVDA",
-    "TSLA"
-   ],
-   "title_queries": [
-    "NVDA",
-    "TSLA"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
    "id": "9c15580f16016af5",
    "published_utc": "2026-10-22T07:19:21Z",
    "published_taipei": "2026-10-22 15:19",
@@ -4629,6 +5417,30 @@
    ],
    "title_queries": [
     "FED"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "486f84f4deee0008",
+   "published_utc": "2026-10-22T07:17:33Z",
+   "published_taipei": "2026-10-22 15:17",
+   "source": "GamesBeat",
+   "source_url": "https://gamesbeat.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Fortnite will return to Apple app store in Australia tomorrow",
+   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOVDdNR3AtOVZMVVBnOVpLanVBaFh3N2k2VzN6cEtwVGhLRFZWSk5JVEFCcF9VcUZlaXVGZE5WeWE3bVhtRU42R1hIZ1FmZ25QVzgwVUxDbDRuczloMDV6WTcwQmlCdWtqb3RXNi1ReU5vZlBiU1pBcmFPYk8tc2R2ZmdZVnVmZ3lpbDdoSg?oc=5",
+   "symbols": [
+    "AAPL"
+   ],
+   "topics": [],
+   "queries": [
+    "AAPL"
+   ],
+   "title_queries": [
+    "AAPL"
    ],
    "title_match": true,
    "also": []
@@ -4711,54 +5523,6 @@
    "also": []
   },
   {
-   "id": "7d1bbd9cec0e1586",
-   "published_utc": "2026-10-22T07:16:20Z",
-   "published_taipei": "2026-10-22 15:16",
-   "source": "MarketBeat",
-   "source_url": "https://www.marketbeat.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Apple Inc. $AAPL Stock: Avior Wealth Management LLC Cuts Stake",
-   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPLWFsdzlyV0NuYll3NmxMcHBPcUR3cG9rekZad1Zhd1h5VWZQbWk5SUN3b0g0Q0hrTW50bDFrd2JiamI5UWZqb25ybFprRy1femxMNGVQdEN2Nlo1VlpKOUprUWV0ZXN5OUYwYl9XWk54VWM0eDJfS0lGNUJFSEFndWhRZ1dRdnYwMEpibEVVQ3FEb0pnQnJSLXd0MHZ3dG1ncGRJeWFsX2k5Z0otaTZpRFpxTnFQTlNhZjlFMQ?oc=5",
-   "symbols": [
-    "AAPL"
-   ],
-   "topics": [],
-   "queries": [
-    "AAPL"
-   ],
-   "title_queries": [
-    "AAPL"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
-   "id": "727446e878b93070",
-   "published_utc": "2026-10-22T07:15:50Z",
-   "published_taipei": "2026-10-22 15:15",
-   "source": "CarsDirect",
-   "source_url": "https://www.carsdirect.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "2028 Tesla Roadster Preview: Specs, Price, Release Date",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBhVW1EaUNVSHVwS3JibHFCQUJjTUE2QWRlenNFcDk0bm9CQXRMRUxCamhwN25pNnJmXzVhSmNKanMwSzdZWFp3MmtZeHdGbS1DT1BjYWhxQkd2QQ?oc=5",
-   "symbols": [
-    "TSLA"
-   ],
-   "topics": [],
-   "queries": [
-    "TSLA"
-   ],
-   "title_queries": [
-    "TSLA"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
    "id": "0e59b2cfba29c09c",
    "published_utc": "2026-10-22T07:14:32Z",
    "published_taipei": "2026-10-22 15:14",
@@ -4808,30 +5572,6 @@
    ]
   },
   {
-   "id": "49fc7203f4a0b065",
-   "published_utc": "2026-10-22T07:13:00Z",
-   "published_taipei": "2026-10-22 15:13",
-   "source": "Technology Org",
-   "source_url": "https://www.technology.org",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Tesla Q3 2026: Profit Falls 43%, FSD Slips to 2027",
-   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQa1ZNdndJZ05nWVJMbXhjY051VDZhTjNFS04zWUhUWEFoelhuX2dQd21KRW5YOVljaFRYR2FYb09YbnhLNmVnNEtWckRkV0I5Q21RWnc5ckk5cEh3VVB4M0ZoSkVPYmtsd21JbWRmYTJTbTEyUFJ4RlFfZnM1bWh6ZjItQVBfcEtscGZxZW0tMkZPaFV2ZEdvWkVZVk8?oc=5",
-   "symbols": [
-    "TSLA"
-   ],
-   "topics": [],
-   "queries": [
-    "TSLA"
-   ],
-   "title_queries": [
-    "TSLA"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
    "id": "2adfdb958ea9018a",
    "published_utc": "2026-10-22T07:12:24Z",
    "published_taipei": "2026-10-22 15:12",
@@ -4875,58 +5615,6 @@
    ],
    "title_queries": [
     "FED"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
-   "id": "6d3fc67aabf054cf",
-   "published_utc": "2026-10-22T07:09:35Z",
-   "published_taipei": "2026-10-22 15:09",
-   "source": "Yahoo股市",
-   "source_url": "https://tw.stock.yahoo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "【Follow法人】外資再提款台積電309億元 反手掃貨台泥、台玻各逾2萬張",
-   "link": "https://news.google.com/rss/articles/CBMirgNBVV95cUxPQVhOZHNxTHhKdmczVEpuNlJLRXBtZjhfTWxoT0RteVEwWjJpLTdfQ1N2bDVTTU1nNjQ2Y0FiMWVnWE8xQzhRVGpjZUxPNTdRMXVQVEN2cXl1NTl3N0hKazNINXB6bXRjQ29JcnVHb3RnY1A4NkFlT3o5WmN6WW5MMUxIU3ZMOGRhS3lwc25SZ01uYjltQ2NWNnV0bXBtX1pkN3h1UENQRUJzNnRlZEdXV09QZDlqYTBxc0FMYkpSeENIcjB2NkE3MTZtWjdCcjE2WFRtMjZ3SF9rRk5vMVVTWV9qMW5BQm9oRkNzRGV5eVozcHpxSWM3dVdmRGE3VzRWRnlZTlJfN3FrTExQb1BVWmZTcGNjUlMtNUFXWVNfRThheWJ0R3kzX2FUQ1o3SGVUMWxhX19XZjQzeVlZUko2RVlXOXhXNlNHeXN4RUoycllESDE2WmNocmQ5Y1lVbGdlMmE0THVDbkppLVNTU3lJN3RlU2UxLWVGNXF2VHEtSmQtd0dybU5oQ3lFOVI5RFNDWE9pWkJNMlJmV3hXRnJJSm5VQjE1cHMzUXhieWpB?oc=5",
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
-   "id": "dbf94e1c6e70159d",
-   "published_utc": "2026-10-22T07:07:14Z",
-   "published_taipei": "2026-10-22 15:07",
-   "source": "Yahoo新聞",
-   "source_url": "https://tw.news.yahoo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "台積跌35元台股挫近850點 債券ETF金控股逆勢收漲",
-   "link": "https://news.google.com/rss/articles/CBMitwJBVV95cUxQMWVIcnNDbW5vcnlzNndJN240ekoyUG55bjZJQWQ0bi1rejVvbzZxYldNMkNvemtMcld1cmI0MnhGb1FvOHNqYllPWjh3QzJ4am54OWNxaEg4by12ak91dUZaN1RnQTZ1Zmp0bWNMdnFGRm96NUhNb2NnbGFiNTREakUtUERqM1hsNVc5amRxODF0Rk8yQl92XzRESGhtMHVHc2tyd0NJeGV4OWI4UGhvOFh2WENxOVFSdHVEck8tdjJ6THRCRUdOVExsdXRPeXhTUDJqd3NxNHo4eDNyOEtkQUphTFpYTnlSTzRyZGpyc29Ed0JQblBnWm1ZSi0wbk1zaFl5TVVLMXdJNXFKZHVvMmoydzQ0Y2Y5aEFIV3hhNk5qVk03NmotMnJzeEx0UHEzRm51aXh0UQ?oc=5",
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_queries": [
-    "2330",
-    "TWSE"
    ],
    "title_match": true,
    "also": []
@@ -4980,36 +5668,6 @@
    ]
   },
   {
-   "id": "2c9a2c0fa93c59cd",
-   "published_utc": "2026-10-22T07:05:52Z",
-   "published_taipei": "2026-10-22 15:05",
-   "source": "CMoney",
-   "source_url": "https://www.cmoney.tw",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "2330 台積電 - 總經歐洲暴動通膨與油價失控台灣會開始跟著升息嗎該怎麼躲災- 股市爆料同學會",
-   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5DN0FMSzM5d29ybGQyV3lRR1k3aV9faUtwdTV3QVhuSUU1VnFmeDI2NWVLR1RwVTVNOTVVSmkxTlExQ2gzbV8zSWNabjJXQ1VXRGFZSjBEUmE?oc=5",
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [
-    "fed",
-    "taiwan",
-    "oil",
-    "cpi"
-   ],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
    "id": "b4ccec95bb65659c",
    "published_utc": "2026-10-22T07:05:21Z",
    "published_taipei": "2026-10-22 15:05",
@@ -5058,8 +5716,8 @@
   },
   {
    "id": "5ce85819e1a3e485",
-   "published_utc": "2026-10-22T07:05:17Z",
-   "published_taipei": "2026-10-22 15:05",
+   "published_utc": "2026-10-22T07:04:51Z",
+   "published_taipei": "2026-10-22 15:04",
    "source": "EU Perspectives",
    "source_url": "https://euperspectives.eu",
    "tier": 4,
@@ -5150,33 +5808,6 @@
    ],
    "title_queries": [
     "SPCX"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
-   "id": "91d16987cbcde733",
-   "published_utc": "2026-10-22T06:59:27Z",
-   "published_taipei": "2026-10-22 14:59",
-   "source": "財訊",
-   "source_url": "https://www.wealth.com.tw",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "魏哲家法說會上多次霸氣、堅定用詞前所未見！台積電目標價被喊3000元，面對股價波動「最佳模式」曝光",
-   "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5GNE1yVXEyWUtnZUR0T2s1eGhsaTNVdW9aczhORnlHaEdCM0wzNHNOdUh4RWd2THkwRFpjUENNbzlrZDhpaC1KN1hnQXpuSXNQblE3U3hMY2Z5Sjd1Z2RPc2VDSm1JMk4wemJveGpiTXNQRDRwR3N6c1h1QQ?oc=5",
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [
-    "earnings"
-   ],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330"
    ],
    "title_match": true,
    "also": []
@@ -5398,6 +6029,27 @@
    "also": []
   },
   {
+   "id": "2354d087fff2d01f",
+   "published_utc": "2026-10-22T06:37:00Z",
+   "published_taipei": "2026-10-22 14:37",
+   "source": "Reuters",
+   "source_url": "https://www.reuters.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "Japanese investors sell foreign bonds for fifth straight week, eye home market",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQaWFpYXNMY0l3alFBQnlRTUNpdUl4aUlld1F2VmxJb0ZETkVqM0FNWHFqQlZxSHhNM3VhdnlpQW1CV3I1ZDRWNGhQVXJ3QVFyX294cHFScXYtNVEzYjlyUHotQm5vWHRlQXQ4SW03cDZSaWRxSXJtQ0Jaams2eWxVYXhEdEUxcFdnRnRPdS0yRy05ODkyMGMtZk1DSHZsRjVtM0I5bXRkLVlqVkRHUV9HQmZTWEdrRTBUMTNFbnF1RTFNTHg2amQ4?oc=5",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TAIWAN",
+    "TSMC"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": []
+  },
+  {
    "id": "71a9150de613241f",
    "published_utc": "2026-10-22T06:34:08Z",
    "published_taipei": "2026-10-22 14:34",
@@ -5516,6 +6168,26 @@
    "also": []
   },
   {
+   "id": "a9b9625f475a6629",
+   "published_utc": "2026-10-22T06:29:38Z",
+   "published_taipei": "2026-10-22 14:29",
+   "source": "Axios",
+   "source_url": "https://www.axios.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "en",
+   "title": "AI uncovers massive flaw in web's foundational code",
+   "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE8yWTJaTHNWSEthd09VenZuMVhjNjBjb1ZjS2haLUZXb2xvNDhBWXQwUzY2YkJTbkplTHk4ektpVno5NFpJME04alZvaVJ3SjhCNXRURlJmQ0dreGd2RVdUbzBPUVVuY2F6cDdJd0xQVG51Y0s0eDN2V1lmMA?oc=5",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "GOOGL"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": []
+  },
+  {
    "id": "380db04190c72e51",
    "published_utc": "2026-10-22T06:28:30Z",
    "published_taipei": "2026-10-22 14:28",
@@ -5533,30 +6205,6 @@
    ],
    "title_queries": [],
    "title_match": false,
-   "also": []
-  },
-  {
-   "id": "3edb4cbc01415147",
-   "published_utc": "2026-10-22T06:25:54Z",
-   "published_taipei": "2026-10-22 14:25",
-   "source": "Digital Trends",
-   "source_url": "https://www.digitaltrends.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Australia is forcing Apple to loosen its grip on iPhone app distribution",
-   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQNHhMZVR4N1lnbVAwLTRkaUxRalJ6d19wRTFxU3ZJWXJMcHNCcWRUbXo4SFVJZEZHaVlJYV9MRlhGQVRNd25tLUt3MXZXMmdxemxFU0hPSU1qWjIwQnpJbWo3clVsQlRIXzJjTGcwdDBuVjRUcnVMd3NRRFBtalBydUN1eEEzVkM3SjUxUDVHY282UVc2SjVrZHk3MzNIY2xXWTlmcWRrbnVrbHZHRVdR?oc=5",
-   "symbols": [
-    "AAPL"
-   ],
-   "topics": [],
-   "queries": [
-    "AAPL"
-   ],
-   "title_queries": [
-    "AAPL"
-   ],
-   "title_match": true,
    "also": []
   },
   {
@@ -5648,30 +6296,6 @@
    "title_queries": [
     "TSLA",
     "SPCX"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
-   "id": "b2269e979b5425e1",
-   "published_utc": "2026-10-22T06:23:00Z",
-   "published_taipei": "2026-10-22 14:23",
-   "source": "MacRumors",
-   "source_url": "https://www.macrumors.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Apple Reportedly Boosts iPhone Duo Orders by 44%",
-   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5rYnByZHp1WWtMWXRXbVJibGxlY3J0LUxxZ01oLTNZajNyU253UzJrWExfNWZWVDV2ajRFbHRVREE3MGctS2IwVHhkQWs4Q3JtbG55MXBHSnF2aTEwSkFQaXpCQUM5ZHVFdGNpODhwS3lOY2UzT3B3?oc=5",
-   "symbols": [
-    "AAPL"
-   ],
-   "topics": [],
-   "queries": [
-    "AAPL"
-   ],
-   "title_queries": [
-    "AAPL"
    ],
    "title_match": true,
    "also": []
@@ -5802,32 +6426,6 @@
    "also": []
   },
   {
-   "id": "64bc6cfa345c2026",
-   "published_utc": "2026-10-22T06:15:00Z",
-   "published_taipei": "2026-10-22 14:15",
-   "source": "Creative Boom",
-   "source_url": "https://www.creativeboom.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Apple Music's new logo was shaped by Fred Again and a bath of mineral oil",
-   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcnJTalROSF9iaDZaNU01ek9rN3UzWGJBSVFSSnFjUHFnZ2lxajhReVl4WHV1anJuTzQxY2dIM0xOVmR1aVhWa0kxcmZxa1M3OUowOHZWUWRNYmxwN0JfRWpjZmhXU01ITnFrOWRtUjFpd2tfTW1qTlNGRGVsVWZUQi1vZUpMclVxX2VMM1BWOHVqU2ptaS1Ueno4LXVJelo0QXNiN280Q3hfUlk?oc=5",
-   "symbols": [
-    "AAPL"
-   ],
-   "topics": [
-    "oil"
-   ],
-   "queries": [
-    "AAPL"
-   ],
-   "title_queries": [
-    "AAPL"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
    "id": "29d544b851728587",
    "published_utc": "2026-10-22T06:13:00Z",
    "published_taipei": "2026-10-22 14:13",
@@ -5915,30 +6513,6 @@
    ],
    "title_queries": [],
    "title_match": false,
-   "also": []
-  },
-  {
-   "id": "e6436dbc8e7377cf",
-   "published_utc": "2026-10-22T06:09:23Z",
-   "published_taipei": "2026-10-22 14:09",
-   "source": "Martin Cid Magazine",
-   "source_url": "https://www.martincid.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Australian iPhones will get rival app stores, and Apple can’t take a cut",
-   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQN3lFYTBZalkycjMyaEZrYlllYVFGSW16WWctcC04RFpxb3gzbmpTVGtIZV9xdC1tYVlXa3pSTFlBalBGbzlGdF9YcFVWSGhyZm54V25JS1k4VmhZVTRGa1lqYlVJN3dVMFpMNFlUSnRGT2U4WVFwelpHOWhVQjB1eDlqaGtOZm5adUxqOF9Mc2tsUjI0MkwwcVFZNk1QUlBz?oc=5",
-   "symbols": [
-    "AAPL"
-   ],
-   "topics": [],
-   "queries": [
-    "AAPL"
-   ],
-   "title_queries": [
-    "AAPL"
-   ],
-   "title_match": true,
    "also": []
   },
   {
@@ -6103,30 +6677,6 @@
    ],
    "title_queries": [
     "TARIFF"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
-   "id": "06a440c4bbc0815e",
-   "published_utc": "2026-10-22T06:01:35Z",
-   "published_taipei": "2026-10-22 14:01",
-   "source": "Technology Org",
-   "source_url": "https://www.technology.org",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Apple Warns of Limited iPhone Duo Stock for Walk-In Buyers on Launch Day",
-   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOWnZKckJZVHBfRjJUUzMtOUpDcWJhZy1fT3A5c1N5UUd5UHVSWFliYjc0VjhUTC1HVjRWX2VTbDBKQjA1WENzOTJZaVU4ZG5OaEVHbUFBSG1GVkdkX0tHNWVTR2dHX25Ic2xxZHpreGxNdjQwM040cXZzR0FNbUlLa2Zsa3g0VmxoZlE2QURn?oc=5",
-   "symbols": [
-    "AAPL"
-   ],
-   "topics": [],
-   "queries": [
-    "AAPL"
-   ],
-   "title_queries": [
-    "AAPL"
    ],
    "title_match": true,
    "also": []
@@ -6446,50 +6996,6 @@
    "topics": [],
    "queries": [
     "TAIWAN",
-    "TSMC"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": []
-  },
-  {
-   "id": "477f22182afb843f",
-   "published_utc": "2026-10-22T05:41:00Z",
-   "published_taipei": "2026-10-22 13:41",
-   "source": "MacRumors",
-   "source_url": "https://www.macrumors.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Apple Ordered to Open iPhone to Rival App Stores in Australia",
-   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOMkxRbWFMclU3d2s0RGxnanYtaVRCZWVSX3A5aHBFRTMxdGdUSE5YOW05eHc0ZnZPalF5UWdic3JOTGt1eEVHYzA0VzloZXBLdnBoeTZEdG40dWhXN21qZ0Rxck03aU8xTGl2YlNRRHJQTGFyYWV0WFZXeFMyOFdhbA?oc=5",
-   "symbols": [
-    "AAPL"
-   ],
-   "topics": [],
-   "queries": [
-    "AAPL"
-   ],
-   "title_queries": [
-    "AAPL"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
-   "id": "cea1aaf2a592c371",
-   "published_utc": "2026-10-22T05:39:00Z",
-   "published_taipei": "2026-10-22 13:39",
-   "source": "Reuters",
-   "source_url": "https://www.reuters.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "German regulator revokes license of Bank Saderat Iran in Hamburg",
-   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNLUpGcUpQSDMwN3g2aktoXzFtWXpvNWlaWjhRaks5YzNMRGgwYU5tZ2xiNm1fN1pVZVFzOWVsRlVqdUljN0xQenJlSnJkLVRYQmd3ZG1SeW9kVFVMT2FnT0Q3b3hGVHNadlRGZTlYSV9lazVIQWI2ZV90aWhyWWlJSXdZWlNDNG52S3BVcFQwUERITHNPanJGTVRYVHJDdDkydEFnVWY3QlREdFBzaUlOLQ?oc=5",
-   "symbols": [],
-   "topics": [],
-   "queries": [
     "TSMC"
    ],
    "title_queries": [],
@@ -6921,30 +7427,6 @@
    "also": []
   },
   {
-   "id": "33076cf8a04ca580",
-   "published_utc": "2026-10-22T05:03:45Z",
-   "published_taipei": "2026-10-22 13:03",
-   "source": "BASENOR",
-   "source_url": "https://www.basenor.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "SpaceX Gets FCC Approval for Starlink Mobile Spectrum Expansion",
-   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQTDFDck5EQjd3ZDQ1ZW5rZUNMc3V5M1BoZVdNZl9DSThhVHQzSVd1a09pcEJfUDlzc2hqMGpKQ0lFYzE1Qm1IdE9PbEpsWnZ0QWdRZTRaTlR5bEI4QV9udFlJNEYyU3BLWndkZXNHcGpfSTQzUk9vOUFtRldFWDRvc0RVUUY4UUNNajBacDFCellrNjdaTUVDLVBBWjdGM0U?oc=5",
-   "symbols": [
-    "SPCX"
-   ],
-   "topics": [],
-   "queries": [
-    "SPCX"
-   ],
-   "title_queries": [
-    "SPCX"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
    "id": "67cb9de34d9ab3d8",
    "published_utc": "2026-10-22T05:00:56Z",
    "published_taipei": "2026-10-22 13:00",
@@ -7009,30 +7491,6 @@
    "also": []
   },
   {
-   "id": "e5bfd6e31f615562",
-   "published_utc": "2026-10-22T04:57:36Z",
-   "published_taipei": "2026-10-22 12:57",
-   "source": "Seeking Alpha",
-   "source_url": "https://seekingalpha.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Google, OpenAI and Amazon respond as critical PHP flaws spark global alarm (GOOG:NASDAQ)",
-   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQmNXM2VwUEpaRVlxUGhfNXFUb1ZxTkF0NWFqRTJnQWhwNm42bzB4amtqM2VPbndXZ1VJMmU1V2dlN1I5bFBVYVJIWjY2MURYVzlVaTNYYldyWkZQckctbzZxb19jbWhDZHUyOGlMeTRMTndzUDNBNXhBa1N0YVBWRUdWalNvNWIzOThBZk5OZks2MFlvNDNJZHdlOHdJVVJpYnE0OGt3NGpCLS00ekllSg?oc=5",
-   "symbols": [
-    "GOOGL"
-   ],
-   "topics": [],
-   "queries": [
-    "GOOGL"
-   ],
-   "title_queries": [
-    "GOOGL"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
    "id": "4743b243b5194dac",
    "published_utc": "2026-10-22T04:57:00Z",
    "published_taipei": "2026-10-22 12:57",
@@ -7072,83 +7530,6 @@
    ],
    "title_queries": [
     "TARIFF"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
-   "id": "c1344fc3f261f0f6",
-   "published_utc": "2026-10-22T04:52:06Z",
-   "published_taipei": "2026-10-22 12:52",
-   "source": "San Luis Obispo Tribune",
-   "source_url": "https://www.sanluisobispo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Exclusive-Musk's public endorsement of SpaceX-Tesla deal may throw a wrench in talks",
-   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1QaXZ5UmdWc2xtdGZ6Q01KSExjNWhrTDdaOUVacENHRlJiRGFBZXlUcHJwYVFaa1F2LWRWWTJuMjNpWVRkTURkVGhITzZqRDFaMWxBM1pBa2hUTmozUVNwb3VrVFRGRzdyRVlWMnBaMnlXRzg?oc=5",
-   "symbols": [
-    "SPCX",
-    "TSLA"
-   ],
-   "topics": [],
-   "queries": [
-    "SPCX",
-    "TSLA"
-   ],
-   "title_queries": [
-    "TSLA",
-    "SPCX"
-   ],
-   "title_match": true,
-   "also": [
-    "Modesto Bee"
-   ]
-  },
-  {
-   "id": "a965f4ba61003a69",
-   "published_utc": "2026-10-22T04:51:33Z",
-   "published_taipei": "2026-10-22 12:51",
-   "source": "Android Police",
-   "source_url": "https://www.androidpolice.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Google sends Android phones into 2027 with an update date mix-up",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNMktRSnVCRTN6b2N5UThsQ0lJdXMxZW9EazBkVFpSUmRvNjBVWFV5WlpDU2JyWW9jeGg0ZzhDem5hbmtyanNRQU96Z1NZbnVyX3lvblNVM20xQ082M3AxRjNHVEVmT3RxempjTzJQVmZyeWMya0taNjVlUVpUdXZFVS1Lc1B0dG13bUwyQnp3cjg?oc=5",
-   "symbols": [
-    "GOOGL"
-   ],
-   "topics": [],
-   "queries": [
-    "GOOGL"
-   ],
-   "title_queries": [
-    "GOOGL"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
-   "id": "35cf2b486545f274",
-   "published_utc": "2026-10-22T04:50:47Z",
-   "published_taipei": "2026-10-22 12:50",
-   "source": "autoevolution",
-   "source_url": "https://www.autoevolution.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "CarPlay Is Getting the Google Maps Feature Many Android Auto Users Hate",
-   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPaWlTa21jbkFQUXVrelNjMS1OTWQzaG9oOC11S2pwbVZEcVh5b0NoYTRodzdUQk43bVN6cEdkYm1SazZObjY1YkZ1M2Y3aHZyNXNCQ3NFb3FJUzZZTjRsNUNrOFRtUUV6b3Fha3AyZTJ1MVMxMHZCRlNWcFRraGQ2U3VobDN1MUpEZ2p0NC1LcHhxel9ZQUhvOWVmb3hrLVJNM3Ezdy1TZ2hDTms1Q3Y0VnFHMXNZOXp1ZkE?oc=5",
-   "symbols": [
-    "GOOGL"
-   ],
-   "topics": [],
-   "queries": [
-    "GOOGL"
-   ],
-   "title_queries": [
-    "GOOGL"
    ],
    "title_match": true,
    "also": []
@@ -7278,6 +7659,46 @@
    "queries": [
     "TAIWAN",
     "TSMC"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": []
+  },
+  {
+   "id": "77330f82ae542c06",
+   "published_utc": "2026-10-22T04:31:35Z",
+   "published_taipei": "2026-10-22 12:31",
+   "source": "Axios",
+   "source_url": "https://www.axios.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "en",
+   "title": "Survey: A majority of Americans have low-quality jobs",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE03SDNMc3BHdDZJY3RadVVFTkhhWl84ZHVUVFNpc1h0TUFIelVnMEJ2ZmI5RzF0VEVNZ204MDJZeXVKWVo0bGlrMHRuMndiajNzOWkzdk1xdm1EdFljUnRoMW1EekxSdTA?oc=5",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "GOOGL"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": []
+  },
+  {
+   "id": "53ebdb1b7d51e95c",
+   "published_utc": "2026-10-22T04:31:23Z",
+   "published_taipei": "2026-10-22 12:31",
+   "source": "WSJ",
+   "source_url": "https://www.wsj.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "The Superrich Are Buying $100 Million Mansions Just to Tear Them Down",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOdUJRYzhmUWxLZl9tcTZBT3pDT2xZX1ZCSVk1VFdrZ3p4QWxpckhWZmxqdnljVkRJRV9ZNFNlUXVNSG9MSEhBSmR0YTQ0eDhNZ2xNWUZ6QmtUcHhJQTQ5VWtwMWNmS01uU1JjYmdqUEh0SE84YU4xUUhLeWozN1hGYw?oc=5",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "MARKET"
    ],
    "title_queries": [],
    "title_match": false,
@@ -7419,30 +7840,6 @@
    "also": []
   },
   {
-   "id": "6bb98981d36d5ffb",
-   "published_utc": "2026-10-22T04:13:44Z",
-   "published_taipei": "2026-10-22 12:13",
-   "source": "Tech Wire Asia",
-   "source_url": "https://techwireasia.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "OpenAI brings AI models to Google Cloud for enterprise customers",
-   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1fVV81cjNRU2R1dWk0Z05NRGkzZjdWai02RnYzaDVGT0xVOWRrN3ZWV3kzOXhVQW1lSVBTZkFWaVN0TFdhYWNUWjNzVm11QXFnRzgxbDhKNkpoTVVGaE1sOXBJbFNwVGVWcWUyV0ZTVnM?oc=5",
-   "symbols": [
-    "GOOGL"
-   ],
-   "topics": [],
-   "queries": [
-    "GOOGL"
-   ],
-   "title_queries": [
-    "GOOGL"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
    "id": "e37de31ee5224207",
    "published_utc": "2026-10-22T04:13:00Z",
    "published_taipei": "2026-10-22 12:13",
@@ -7577,30 +7974,6 @@
    ],
    "title_queries": [
     "TSLA"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
-   "id": "6bf6b216c59ebe0e",
-   "published_utc": "2026-10-22T04:05:15Z",
-   "published_taipei": "2026-10-22 12:05",
-   "source": "ICTworks",
-   "source_url": "https://www.ictworks.org",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Can Elon Musk Give a SpaceX Share to Every Child on Earth?",
-   "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQWmQwLVZfeFRtYUhITEIyWFd0cmRfVkNpTzlaNFRUNG9sYldJN0I2d3NuQTd4YVZNVEtXY3Y1M2xyOXRYZ09WRGNTOExHbFJ6UVZhU0xnUHEtTUUwYWJYUlZPajFyelVhVmRrTjQwV2liREVzNThnRXRwUmNFRGllUXAwRlh1aFF1eWd3?oc=5",
-   "symbols": [
-    "SPCX"
-   ],
-   "topics": [],
-   "queries": [
-    "SPCX"
-   ],
-   "title_queries": [
-    "SPCX"
    ],
    "title_match": true,
    "also": []
@@ -7978,30 +8351,6 @@
    ]
   },
   {
-   "id": "f604642a30982fac",
-   "published_utc": "2026-10-22T03:46:33Z",
-   "published_taipei": "2026-10-22 11:46",
-   "source": "WXYZ Channel 7",
-   "source_url": "https://www.wxyz.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Michigan Senate debate recap: Rogers and El-Sayed clash on tariffs, Iran and Trump ties",
-   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOY2poR1RTM09hT2FSWW13RHV0ckJqc3lJQzY4UE1neHZUbzFvQlItY1VBeWhnbTl1Q3pEVHRNY3VLcVpzMTJsUDJmSlJuNUR3bEh0TTNlM0NDbXkwUW82aDhRY2M4Z0VfdjNaeHAyUHFGTnFYR3lDelhKZU9ZSUl1LTIwNDJhcG10U0lOcERZVVVCbkN2d1JwRUlYYXdoaEx3aGV2SUVHSE9MNWQ0dWVKdQ?oc=5",
-   "symbols": [],
-   "topics": [
-    "tariff"
-   ],
-   "queries": [
-    "TARIFF"
-   ],
-   "title_queries": [
-    "TARIFF"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
    "id": "d92da27395b42267",
    "published_utc": "2026-10-22T03:46:00Z",
    "published_taipei": "2026-10-22 11:46",
@@ -8041,30 +8390,6 @@
    ],
    "title_queries": [],
    "title_match": false,
-   "also": []
-  },
-  {
-   "id": "9b611ab668ef9856",
-   "published_utc": "2026-10-22T03:42:16Z",
-   "published_taipei": "2026-10-22 11:42",
-   "source": "Teslarati",
-   "source_url": "https://www.teslarati.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "SpaceX confirms Starship 15 launch window with massive ambitions",
-   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQa3RsT0J4OEQ5bGNheGNPWjdmV3lJNEg0SHRwRmRYUldhdS1DTnlxZjBpWE80UktoOTFYWlhZN1lfUzVfWDJRUDNsOUN6THJrY1Vxb2cxbzU0Q2lzb2JBcGpaaG1WRnh5NVdPdU9TWUs1cVV5N3dOUmpZUy1CNDhzaF9PM0VSRmpOaThfSWhlYw?oc=5",
-   "symbols": [
-    "SPCX"
-   ],
-   "topics": [],
-   "queries": [
-    "SPCX"
-   ],
-   "title_queries": [
-    "SPCX"
-   ],
-   "title_match": true,
    "also": []
   },
   {
@@ -8273,16 +8598,16 @@
    "also": []
   },
   {
-   "id": "8d71c0bb06d98487",
+   "id": "88105b0209744086",
    "published_utc": "2026-10-22T03:11:00Z",
    "published_taipei": "2026-10-22 11:11",
-   "source": "Stocktwits",
-   "source_url": "https://stocktwits.com",
+   "source": "TradingView",
+   "source_url": "https://es.tradingview.com",
    "tier": 4,
    "rank": null,
    "lang": "en",
    "title": "How Are Dow, S&P 500, Nasdaq Futures Trading After META, TSLA Earnings?",
-   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPOVZMTjBjR29lVmM4cUdwTVRLckZCY2hBVVpDdW42VWNKb2ZGYTVhdWVtbnNjOEx0X253TXVjZEV4Z3VZSjZkVUNnenVOczdIcGZha003Vm81SHZWQkRVTGVzVnpTa0w0QThPN1JYX0w4dXQ0RGNCZ2tkaDBBRHdpOVNUNUJZMklCWGZaWVVlZUlhdkhuYVFIanRWRGRxMFVZRFl6SkI1a2VIYldXTzAxdG52aGo4TkViY0l6WW83dXM4bXJNNGUyQXhVQWdFaG9D?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPQWtPWWR1UHlCalk1Ml9mdzZtenk5eDk1X1dpMkpnTmp6YU4yWWJaUkFJT0REME90ZnlFUWR5MlQxTmd0NWtZWW9FaVpNdHJaUmtqQWpQRGRUOThfdm5nelFKUG5RX3JHRVozZ21QaU9aeV9kNkp4SUQ2aHpreFJOcFBoWmVlUkdlN3l4UmFfVWswdDFYUnMzME9KQm1BNXdzRVFJZHRIbjlGZFdzc1d1Q19EaWo4TUNMbW1rVVFLc0dadjR6MHc?oc=5",
    "symbols": [
     "VOO"
    ],
@@ -8296,7 +8621,9 @@
     "MARKET"
    ],
    "title_match": true,
-   "also": []
+   "also": [
+    "Stocktwits"
+   ]
   },
   {
    "id": "6642149b6e565b57",
@@ -8730,26 +9057,6 @@
    "also": []
   },
   {
-   "id": "44431549eee25d8e",
-   "published_utc": "2026-10-22T02:36:45Z",
-   "published_taipei": "2026-10-22 10:36",
-   "source": "WSJ",
-   "source_url": "https://www.wsj.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "Californians Are Warding Off Wildfires by Trading Lush Lawns for Stone and Steel",
-   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQamRwXzcwNHNKY1ZyYzctd0JBTlFpWTBtaVVHVU5ZT0lsU1R3STcwMWtzRnlMaGdEMFFheDBRaWRIejhqLXZqajlOanJSbTZEcE16VzZ2VUZQUHpJX0YyZmFXckEwbUtWaDl4Zi1DQmNVOUVmNW5PcnB3UmZIMHgtV3htOFpORXU5dUNmUWNvcw?oc=5",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "MARKET"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": []
-  },
-  {
    "id": "f1f23e11395309c8",
    "published_utc": "2026-10-22T02:32:00Z",
    "published_taipei": "2026-10-22 10:32",
@@ -8773,6 +9080,28 @@
     "TAIWAN"
    ],
    "title_match": true,
+   "also": [
+    "Charlotte Observer"
+   ]
+  },
+  {
+   "id": "44431549eee25d8e",
+   "published_utc": "2026-10-22T02:31:08Z",
+   "published_taipei": "2026-10-22 10:31",
+   "source": "WSJ",
+   "source_url": "https://www.wsj.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "Californians Are Warding Off Wildfires by Trading Lush Lawns for Stone and Steel",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQamRwXzcwNHNKY1ZyYzctd0JBTlFpWTBtaVVHVU5ZT0lsU1R3STcwMWtzRnlMaGdEMFFheDBRaWRIejhqLXZqajlOanJSbTZEcE16VzZ2VUZQUHpJX0YyZmFXckEwbUtWaDl4Zi1DQmNVOUVmNW5PcnB3UmZIMHgtV3htOFpORXU5dUNmUWNvcw?oc=5",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "MARKET"
+   ],
+   "title_queries": [],
+   "title_match": false,
    "also": []
   },
   {
@@ -9225,6 +9554,27 @@
     "TSMC"
    ],
    "title_match": true,
+   "also": []
+  },
+  {
+   "id": "57836fadc3c5f54d",
+   "published_utc": "2026-10-22T01:31:10Z",
+   "published_taipei": "2026-10-22 09:31",
+   "source": "WSJ",
+   "source_url": "https://www.wsj.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "Why AI’s Deepest Mind Believes the World Is About to Change Radically",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQbGl4TVIxUEZZUmFMMVhheHBMV1lCSnlGbGNCX25US2dMRDFCakdUVmJBQ1pOXzdZYmh1eFV0QzNOOXNQc244b1UtUkZIWEF6T2ZoOW5zOVM5Z1VVUUtUTWNoT3E5emdiTDcwcldYMjcxSjBoZWt5VmtaYjBmTGd5Wmw1MGotZ19t?oc=5",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "GOOGL",
+    "MARKET"
+   ],
+   "title_queries": [],
+   "title_match": false,
    "also": []
   },
   {
@@ -9713,27 +10063,6 @@
    ]
   },
   {
-   "id": "90aaafb96a2c4e6e",
-   "published_utc": "2026-10-22T00:54:00Z",
-   "published_taipei": "2026-10-22 08:54",
-   "source": "Reuters",
-   "source_url": "https://www.reuters.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "Bank of Korea holds rates as expected after back-to-back hikes",
-   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQMzRuNnZCZUpPMFJ1WldoWm9JSVNjVmxUNUpsdDk5dlBhbTZIS1FPUmRPNlNlTjdkdFJVVjVUS0JrZzJPZHJmTjVMZG9CWGFoY3pyM0JVdUVOQVBGeHJ2U2RXWUNLTUZsVWs0TGMxbWFtcHZ4OWxiLUM1QjRaZzUwemU3aFRZNFY3LWlrY25oaVYycWw3M19jdnBERlFHQ2Y5ckoyMnl0UklxOFFlVVctNg?oc=5",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TAIWAN",
-    "TSMC"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": []
-  },
-  {
    "id": "bd296abbc6e22ea7",
    "published_utc": "2026-10-22T00:50:00Z",
    "published_taipei": "2026-10-22 08:50",
@@ -9829,7 +10158,8 @@
     "Ottumwa Courier",
     "Cherokee Tribune",
     "The Grand Junction Daily Sentinel",
-    "CT Insider"
+    "CT Insider",
+    "Norwalk Hour"
    ]
   },
   {
@@ -9855,6 +10185,30 @@
    "also": [
     "經濟日報"
    ]
+  },
+  {
+   "id": "f604642a30982fac",
+   "published_utc": "2026-10-22T00:40:00Z",
+   "published_taipei": "2026-10-22 08:40",
+   "source": "WXYZ Channel 7",
+   "source_url": "https://www.wxyz.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Michigan Senate debate recap: Rogers and El-Sayed clash on tariffs, Iran and Trump ties",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOY2poR1RTM09hT2FSWW13RHV0ckJqc3lJQzY4UE1neHZUbzFvQlItY1VBeWhnbTl1Q3pEVHRNY3VLcVpzMTJsUDJmSlJuNUR3bEh0TTNlM0NDbXkwUW82aDhRY2M4Z0VfdjNaeHAyUHFGTnFYR3lDelhKZU9ZSUl1LTIwNDJhcG10U0lOcERZVVVCbkN2d1JwRUlYYXdoaEx3aGV2SUVHSE9MNWQ0dWVKdQ?oc=5",
+   "symbols": [],
+   "topics": [
+    "tariff"
+   ],
+   "queries": [
+    "TARIFF"
+   ],
+   "title_queries": [
+    "TARIFF"
+   ],
+   "title_match": true,
+   "also": []
   },
   {
    "id": "6d400114ed3b2a01",
@@ -9901,23 +10255,28 @@
    "also": []
   },
   {
-   "id": "8ea85e491da1ab96",
-   "published_utc": "2026-10-22T00:32:00Z",
+   "id": "ace3da3e2f617e5c",
+   "published_utc": "2026-10-22T00:32:11Z",
    "published_taipei": "2026-10-22 08:32",
-   "source": "WSJ",
-   "source_url": "https://www.wsj.com",
+   "source": "udn房地產",
+   "source_url": "https://house.udn.com",
    "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "Meta Will Split Stock, Create New Class to Fund AI Spending",
-   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOY20xcVZmaDh6bkhCTVVoQVJIOFhWZU1McXpENHNVTEdvMVY0YUQyUVdqOFBldFhJU1VXZ3lIY3FOSDN0ZFdBbXJDOXluVlA2WU9mcUJfM3FrVkQ1YXJBcDNSbXM0RlVib19UMFlsTFBBeFIyVGlEdUxVZS0wRDhWWl81ZjVXU0ZlQjJPeFRTaw?oc=5",
-   "symbols": [],
+   "rank": "B",
+   "lang": "zh",
+   "title": "單靠台積電話題不靈了？高雄地價重新洗牌 東高雄3字頭捷運加持迎轉骨",
+   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBpXzhia1BPMDNOQmNkY3BiZlBobWt2Q0Q5a0M3REJLWkNQd01RYXh4dGtaNGJLdWRyZzlMRmZtc2tPVEVmd0VidGtUeFJFMkFZblRuOW4yeFA3OG5F0gFiQVVfeXFMUDZUUUtXeTQzLUx0SG1vTHQwMVZuU1M5ancwRmJPSzk0SDVMR1BvQk93dWdGd2VYQTNNd2VvWXduM2JfNk1TOTJZQUh4NjlEZGNWZGVseG1lSGI2dVBsd0hJMWc?oc=5",
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
    "topics": [],
    "queries": [
-    "MARKET"
+    "2330"
    ],
-   "title_queries": [],
-   "title_match": false,
+   "title_queries": [
+    "2330"
+   ],
+   "title_match": true,
    "also": []
   },
   {
@@ -10081,6 +10440,7 @@
    ],
    "topics": [],
    "queries": [
+    "NVDA",
     "SPCX",
     "TSLA"
    ],
@@ -10148,23 +10508,27 @@
    "also": []
   },
   {
-   "id": "c7643f162c1e47e4",
-   "published_utc": "2026-10-22T00:07:00Z",
-   "published_taipei": "2026-10-22 08:07",
-   "source": "CNBC",
-   "source_url": "https://www.cnbc.com",
-   "tier": 2,
-   "rank": "A",
+   "id": "c44c354ddc2fe0a1",
+   "published_utc": "2026-10-22T00:06:43Z",
+   "published_taipei": "2026-10-22 08:06",
+   "source": "NFHS Network",
+   "source_url": "https://www.nfhsnetwork.com",
+   "tier": 4,
+   "rank": null,
    "lang": "en",
-   "title": "Inside India newsletter: Asia’s hottest data center market aims to quell concerns over water and power use",
-   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9XZkFYV2RLRlVRMTBPTTVpY3dtbVFUWHV1czVMZnRnN2JzZl96QnBXU3d4UDBSaUl3S1BQM2hSWUpLLXc5WEhma2R3SE1LRFNYSk1nRWhuTXFuUDVxUWZhQU9OOGZXWGRhSmhNUHpWWEtWdmlZLXRJ0gF8QVVfeXFMT1VEMXhCRGF5RWxiN3lMZ1liMmdJVG9ZWkN6UnRGTDV0WXJvVTQ0REgtVFVTQVZ2eXFXN1l3ZlVtd25lYXBJdzduZVRVcm1YN0h1NVlJZ1FsVUEtUVA2a2ROeDNwY2FueUFrZWNkVWpqMnZhbm9QY29ZUXprOQ?oc=5",
+   "title": "Powell County vs Breathitt Co. - Girls Junior Varsity Basketball 02/09/2027 | Live & On Demand",
+   "link": "https://news.google.com/rss/articles/CBMimwJBVV95cUxOZGdhYXBVZkY2QTBxMl8xd0wxQm9PaURkOTFzUHR5SGdHQjJNZVpic291cTBaYTh4VlJFLUI2cXdrX18wWXJLT3BLMHZGRUpobFo4NGpHY3RfWXFkdHkwblN4QTBDRFdKY2huaUl0MFgwQzBnZjlCR3hsV0pvVHJfUkZuVG9kajdFb284WndIYzJxalpMV2lrUk1yd2FQU0ZLcEJGTGlWSVlPUm1aWU5wVGNlWTdfY3gyZ2plUy13M2Y1UVhCZXhxQmdMTmF2aDNBZE9jVVpxQXdtQnhxMzBNS2ZjZnphbFZGMUI4dUlSdDJ1UU52WEF6eldrZUl3YUg2dEdRUTE4M1JLalJWQVJISDFXVTlpb1VxN0JV?oc=5",
    "symbols": [],
-   "topics": [],
-   "queries": [
-    "GOOGL"
+   "topics": [
+    "fed"
    ],
-   "title_queries": [],
-   "title_match": false,
+   "queries": [
+    "FED"
+   ],
+   "title_queries": [
+    "FED"
+   ],
+   "title_match": true,
    "also": []
   },
   {
@@ -10194,23 +10558,27 @@
    "also": []
   },
   {
-   "id": "53d3a9ee65c4eed0",
-   "published_utc": "2026-10-22T00:01:31Z",
-   "published_taipei": "2026-10-22 08:01",
-   "source": "Axios",
-   "source_url": "https://www.axios.com",
+   "id": "a5e3f28a1ed42481",
+   "published_utc": "2026-10-22T00:00:00Z",
+   "published_taipei": "2026-10-22 08:00",
+   "source": "Bloomberg.com",
+   "source_url": "https://www.bloomberg.com",
    "tier": 2,
-   "rank": "B",
+   "rank": "A",
    "lang": "en",
-   "title": "GM unveils sweeping tech and self-driving overhaul",
-   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBpdFpKZXYwUy1RWXFCNGl5MHprZGFGWnlCUXFOZ1l4YmR5TG9WR0pwM2doakFzZXRoaVF0dkU3b2NtYXNaTmxSRGRaWHI0Z3lqUVFxQ01ndjZET1F3T0kxV2tNVDRhZHoxRURPTElkd0t0ZW1qa1gwM3RB?oc=5",
-   "symbols": [],
+   "title": "Watch Nvidia's Huang Says Neoclouds Are 'Good Investment'",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOOFJTWXNXLUNDVW1uVWl4M1pydGNpbm9CWG11bnozVFlHRTZmYVo2X01UMml2NzNJRG9MeHdmZ0NmWDRXcVhyU1c4UDBrTXRnRnNleTl0VDdzMzFMZHIzdlhndm5oSG5iLURvTENiNnBXMGR0dThXTkw4bnlfeXZpNkU1TTZXYVN2M2Nodk5wZzB0NkNaWXo1a0VSQVB3UGFRXzU5TG52SQ?oc=5",
+   "symbols": [
+    "NVDA"
+   ],
    "topics": [],
    "queries": [
-    "GOOGL"
+    "NVDA"
    ],
-   "title_queries": [],
-   "title_match": false,
+   "title_queries": [
+    "NVDA"
+   ],
+   "title_match": true,
    "also": []
   },
   {
@@ -10416,48 +10784,6 @@
    "also": []
   },
   {
-   "id": "1739e2062923b327",
-   "published_utc": "2026-10-21T23:39:40Z",
-   "published_taipei": "2026-10-22 07:39",
-   "source": "Axios",
-   "source_url": "https://www.axios.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "en",
-   "title": "Emma Tucker defends White House dinner with News Corp. execs",
-   "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBIX3NaZWdqbjIwcUdGbk5ERHhnZUVtMTRNdmtDOXczTnQ3NnFxTUNBRGFYZmZvZ2lPQ1FZSE5mYzdLZEN4aG1GNGd6bGRxdlNQYUc1RHBHN0h3aElwS1JhMl8wVm1yWUhHeWlJd3pFMlNjVkRELUVIcUNsQQ?oc=5",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "GOOGL"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": []
-  },
-  {
-   "id": "b5d6ba2d6bcdec01",
-   "published_utc": "2026-10-21T23:39:10Z",
-   "published_taipei": "2026-10-22 07:39",
-   "source": "WSJ",
-   "source_url": "https://www.wsj.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "U.S. Crude Oil Stockpiles Post Large Weekly Drop",
-   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPMEY4UmZnX3BONHF6Z0J6SW96Ny1DWTFIeDkxSGR2X0xoZlpPSTQwaWwyaVBxMHg1MDc3N3h5Z3R0TDd1YWlDVUZCUURQUFdSd2NiQ05mN2ZUNVFQbTFLWWo4VThWNkVNMk84WFp1MTFJa0oxUVo4SWZRZnZkM0EwMlN6VnJRZjRxeHdXREZVMlo4bWZ1am54QW0zc2k?oc=5",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "queries": [
-    "MARKET"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": []
-  },
-  {
    "id": "1e315ed89de77cae",
    "published_utc": "2026-10-21T23:37:00Z",
    "published_taipei": "2026-10-22 07:37",
@@ -10485,26 +10811,6 @@
     "SPCX"
    ],
    "title_match": true,
-   "also": []
-  },
-  {
-   "id": "14d889488de24b9e",
-   "published_utc": "2026-10-21T23:36:48Z",
-   "published_taipei": "2026-10-22 07:36",
-   "source": "Axios",
-   "source_url": "https://www.axios.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "en",
-   "title": "Scoop: Dems quietly guide super PACs to boost spoiler House candidates",
-   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcG0taTFibHltT1hjWEIxa3NoNFh6SFlrTHNITkl2bGNGV3hOX25YTy1wbk43aG9oTDZmaFNPVWhxSk5YWHdzX1YwNXZBakE1Y0JwbkFRaEEyUWVJV0YwMzlDTno2SDhCOXJuZ0p3d2UxYmhKcVk0alhySHcxaERGNkFaN0NTcGY4?oc=5",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "GOOGL"
-   ],
-   "title_queries": [],
-   "title_match": false,
    "also": []
   },
   {
@@ -10770,30 +11076,6 @@
    "also": []
   },
   {
-   "id": "3ac7fe2d9c822256",
-   "published_utc": "2026-10-21T23:02:00Z",
-   "published_taipei": "2026-10-22 07:02",
-   "source": "Chosunbiz",
-   "source_url": "https://biz.chosun.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Bitcoin nears $85,000 as altcoins climb amid FOMC watch and ETF flows - CHOSUNBIZ",
-   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOa3gzY2ZndWJLZlVSOEZDLXVBY0FVR1JSS200enV1Z3NibGdWQnc5M2ZJd1RnUjR1R0dOaE5ZRk1FTGZySmRINXhqa2tjZGI5WHFhbW11VHhJZVVSZEpXQ2tvMk9YOXdmSmVheG1obzd2Q1p0c0N1VHByNXhmTDBJStIBlAFBVV95cUxPX2xYaEtBYkFRWmRJMWcydS1VN01LUVpSSWZaY1FFUzZtaXU4UUFtVlFMMFNmT2g0NW50QXZwUmFXZ0ZRdHBTTmh5OWtacTlLbEZRdHl6NGdFV3JyZVBVaGpZY1djTzgyYUVSc2dWb0NQUjlDakszMng5TFFfWmVndjV6dXYwU1BveUY1UHQ1UjF6X1RK?oc=5",
-   "symbols": [],
-   "topics": [
-    "fed"
-   ],
-   "queries": [
-    "FED"
-   ],
-   "title_queries": [
-    "FED"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
    "id": "1d592ef7c6f3c748",
    "published_utc": "2026-10-21T23:00:01Z",
    "published_taipei": "2026-10-22 07:00",
@@ -10858,26 +11140,6 @@
     "TAIWAN"
    ],
    "title_match": true,
-   "also": []
-  },
-  {
-   "id": "56159cb8238521ae",
-   "published_utc": "2026-10-21T22:31:00Z",
-   "published_taipei": "2026-10-22 06:31",
-   "source": "WSJ",
-   "source_url": "https://www.wsj.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "WSJ Dollar Index Falls 0.04% to 96.92",
-   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQckRYWWpQUTd1LVJMMlMtTHBKcW15VmtVNTI4Zng5R0pJemI4YWV6d0hBSlV0N0pZTzQ1RF9RM3psa3g5b0VuOGVxZDlaQ3NQc3YzMG9Kb29BcDJRVUVqeUFROTYydFl2NWhsLUMyMlBtd2o2ZGp0VG5fbkJwc1Y0NkR4dWRuVGg3dEd1aFpVQ0tkcWRZRnRHMDU5VWdTdEE4YXN1NVJSRmw1Z0hTQ2FPcXFWYTlRTGxaN0Vz?oc=5",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "FED"
-   ],
-   "title_queries": [],
-   "title_match": false,
    "also": []
   },
   {
@@ -11027,6 +11289,26 @@
    ],
    "queries": [
     "NVDA"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": []
+  },
+  {
+   "id": "565f6113623737c5",
+   "published_utc": "2026-10-21T22:10:41Z",
+   "published_taipei": "2026-10-22 06:10",
+   "source": "Bloomberg.com",
+   "source_url": "https://www.bloomberg.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "Musk’s Move to Flood Texas Senate Race With Cash Plays Into Talarico’s Hand",
+   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcFpmajlKbTAzZlNieVFGTWpyTkFFR0syZEJJSUFmVzIyeE8wSUVZbXYtTlllZzgwcm11cll5TVRQMWZLVFN2ODlfSVhDWmx3ejdEODFOZElkSlpaQXRoeWgxcXhIcEpZZ1BBbEpGU1RxQ29TV245a1M1OHl0Tko5RVBQWk9MNENiV0VsVlFHWlh6N0FaaWRiQUlCRVNVQmFiV3RmMi1ndWZOXzhqM2Y2NkkxM2Vzc3lsYkFOVFFXcw?oc=5",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TSLA"
    ],
    "title_queries": [],
    "title_match": false,
@@ -11225,6 +11507,30 @@
    "also": []
   },
   {
+   "id": "32dd4d8879bfc8a4",
+   "published_utc": "2026-10-21T21:39:00Z",
+   "published_taipei": "2026-10-22 05:39",
+   "source": "Yahoo Finance",
+   "source_url": "https://finance.yahoo.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "en",
+   "title": "Update: US Equity Indexes Rise as Blockbuster SpaceX Results, Super Micro Computer's Fiscal Q1 Update Boosts AI Trade",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVEQwenBtSFIwX1Q5MGdqYVZMMmFiMU9rRUxXVnh4MXFjUUNVOXdYcWFjS3d6Zk1GWFRiZFBPTVYtQVpWV2dJX3h4SjFtcm55U1JZcl9JNjZRZWRhbTI1WW4yZW5hc1duNHhtQ09MSl81TUZiMk1obEkzRUMwdDRDVmFWUWtKcE1BeXRoaEdjeW1teG1adEFKdGdGbmxVMzRy?oc=5",
+   "symbols": [
+    "SPCX"
+   ],
+   "topics": [],
+   "queries": [
+    "SPCX"
+   ],
+   "title_queries": [
+    "SPCX"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
    "id": "10f9f2a250aa1466",
    "published_utc": "2026-10-21T21:38:34Z",
    "published_taipei": "2026-10-22 05:38",
@@ -11400,7 +11706,8 @@
    ],
    "queries": [
     "NVDA",
-    "TSLA"
+    "TSLA",
+    "TSMC"
    ],
    "title_queries": [],
    "title_match": false,
@@ -11534,28 +11841,6 @@
     "Toledo Blade",
     "Butler Eagle"
    ]
-  },
-  {
-   "id": "3489bb3440fcb262",
-   "published_utc": "2026-10-21T20:50:00Z",
-   "published_taipei": "2026-10-22 04:50",
-   "source": "WSJ",
-   "source_url": "https://www.wsj.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "Southwest Cuts Earnings Outlook Amid Rising Fuel Costs",
-   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOcDl5MXNpaUFmM2s4V3hMNXRIN2FXNlVSUXp0V1Z1blBHZnJjc3FTTkI1b19rSmQycXhDSEpiVS13X2VMdFo0cHpDZFRQajV6MDRrZ1hqRkp3VWVURFJnTTA3dGpnRmd4UlA1QnFqeHdYcDNfSTN2VlMwS1dQbGxzcFNSRC13ZU1nMWJFUG1DRldBOV9lV08xYzdYYjhFMXpDay13?oc=5",
-   "symbols": [],
-   "topics": [
-    "earnings"
-   ],
-   "queries": [
-    "AAPL"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": []
   },
   {
    "id": "59dc19c915b4b993",
@@ -12384,30 +12669,6 @@
    "also": []
   },
   {
-   "id": "56a5e9de98d609de",
-   "published_utc": "2026-10-21T19:06:09Z",
-   "published_taipei": "2026-10-22 03:06",
-   "source": "ChartMill",
-   "source_url": "https://www.chartmill.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "S&P 500 Top Movers: Oct. 21, 2026 US Session",
-   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQOVBYY0h3ajlmT1BkaUxMMjVtbDB3VGlwRlZTODhIRzlmWlRKNlNIOFJaWHRud2xnWTlZdnFHZWRVWFctTlBNeUNtTFJPV090b1dJMkdxUllLMTh0N1FqTUQ5b2VzUUtPS2t0QjdBQUlVQm90TWFtcTRtaGFLUlZDWTRwYUpaU2p2Y1VzcFAtQW02SXZ6U2Yw?oc=5",
-   "symbols": [
-    "VOO"
-   ],
-   "topics": [],
-   "queries": [
-    "MARKET"
-   ],
-   "title_queries": [
-    "MARKET"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
    "id": "aca3c23178d61c83",
    "published_utc": "2026-10-21T19:05:08Z",
    "published_taipei": "2026-10-22 03:05",
@@ -12426,30 +12687,6 @@
    ],
    "title_queries": [],
    "title_match": false,
-   "also": []
-  },
-  {
-   "id": "26c2593f1356141e",
-   "published_utc": "2026-10-21T19:05:00Z",
-   "published_taipei": "2026-10-22 03:05",
-   "source": "Nieman Lab",
-   "source_url": "https://www.niemanlab.org",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "The Wall Street Journal’s new AI tool, “Doppler,” forecasts the issues that will shape the midterm elections",
-   "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNRG0tcWVHSTkyX3Q5LXI4c0llZ3BIcXlCR2VkMDFBb3VfRnRnVEtJNnZwbVFObDY5RmdvMG5TenpKRllfNVRkd0NsLTl6ZjljME1KV2xodDNCWGR0SGFYUDVUTWRVckZZa1g1NEZqaFlac1hWQW9MZzhNWFg1bHJtUGFoV3Zxek9Ib2xWV05GUDRKeEFxWGNfaG9YblhHWU9qNllaRkNEd0NnNW55Xy0tcExRMHRabmVwX2FwNGM1RDlaV3BTemZWR3p2NER0ZUdRbDJ5Wg?oc=5",
-   "symbols": [
-    "VOO"
-   ],
-   "topics": [],
-   "queries": [
-    "MARKET"
-   ],
-   "title_queries": [
-    "MARKET"
-   ],
-   "title_match": true,
    "also": []
   },
   {
@@ -12620,30 +12857,6 @@
    ],
    "title_queries": [
     "NVDA"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
-   "id": "d6f3d33e0cc5d86a",
-   "published_utc": "2026-10-21T18:55:33Z",
-   "published_taipei": "2026-10-22 02:55",
-   "source": "ETF Database",
-   "source_url": "https://etfdb.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Newcomer Growth ETF RKSG Beats S&P 500 in Last 6 Months",
-   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNS0J6NE5ZMW5xZk1HZnV2NFVBRTdENWtReFdnRDg4OUJKTThGVXZaV3F2U3luaG11Q0FoTlJjNDBreUxnMzM4UE52ZW5ScWRkT0J4eWJlcGNBOTdCNnQ5Zkg5WmhJZUtJTy1tWlZLSGtJRXlfVTh6ZkQ2MWp0eDV0VzR5dEh5OS05dkJsQ0pIZFl3MHBQZDhVa29ZZW1pQXNaT0Rr?oc=5",
-   "symbols": [
-    "VOO"
-   ],
-   "topics": [],
-   "queries": [
-    "MARKET"
-   ],
-   "title_queries": [
-    "MARKET"
    ],
    "title_match": true,
    "also": []
@@ -13239,36 +13452,6 @@
    "title_queries": [
     "TSLA",
     "SPCX"
-   ],
-   "title_match": true,
-   "also": []
-  },
-  {
-   "id": "f6e986b7d7f281fe",
-   "published_utc": "2026-10-21T17:25:00Z",
-   "published_taipei": "2026-10-22 01:25",
-   "source": "BigGo Finance",
-   "source_url": "https://finance.biggo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "SpaceX Surges Over 12% Intraday, Market Cap Briefly Tops TSMC; Chinese ADRs Slide Broadly",
-   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9aa0JWc3NyaHcwbnNNR28zekhMajllVzBJMmNPeWV2ZmVUd1N0WDNRQ1Fxc2Yzc0c1bGpZRjQ3eHlxMHdtNGJIUGtIV2xHTG1NaFM0TGp5TV82QUZqaUVFbUFWa1F0c2JYbEZSS1lDak5VWDNaQ2c?oc=5",
-   "symbols": [
-    "2330",
-    "SPCX",
-    "TSM"
-   ],
-   "topics": [
-    "china"
-   ],
-   "queries": [
-    "SPCX",
-    "TSMC"
-   ],
-   "title_queries": [
-    "SPCX",
-    "TSMC"
    ],
    "title_match": true,
    "also": []
@@ -14161,6 +14344,26 @@
    "also": []
   },
   {
+   "id": "a555880f6cba3d6e",
+   "published_utc": "2026-10-21T15:09:25Z",
+   "published_taipei": "2026-10-21 23:09",
+   "source": "經濟日報",
+   "source_url": "https://money.udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "台指期 外資樂觀操作",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE0zeTdWWXhVSDFWc1cydFF1eXdabzVnaDlvc20xOXp1cFdfdEwzWllua3RwZ1lRSjE4ai1Ra0ZTYmh5QXVORUpNS21GbHJCOUlucDJKQzV6TUxHNzTSAWBBVV95cUxOdzZxREJpSlR0RmdBUVlzZWVmZVdScDI1bHdGbDJ1NjNTd1cxUjhyV1lGeWpCemg5YWtvYmg3SWgyUkU3ZkxrRFlCVVpQUlhnTU5YaWxsdXlOMG5NaGtzZXc?oc=5",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": []
+  },
+  {
    "id": "76b01a63c1fa7f29",
    "published_utc": "2026-10-21T15:05:36Z",
    "published_taipei": "2026-10-21 23:05",
@@ -14831,7 +15034,9 @@
     "TAIWAN"
    ],
    "title_match": true,
-   "also": []
+   "also": [
+    "The Globe and Mail"
+   ]
   },
   {
    "id": "8a35a5be853f1467",
@@ -16029,6 +16234,31 @@
    "also": []
   },
   {
+   "id": "eb316a0cb8369cea",
+   "published_utc": "2026-10-21T09:10:54Z",
+   "published_taipei": "2026-10-21 17:10",
+   "source": "UDN",
+   "source_url": "https://udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "台積電高雄F22廠工安意外釀4死 2包商負責人100萬交保| 法律前線| 社會",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5wZ2x3emZzZmRFdG1ramRqWDUyczJuMllnRHI1TkdlNnZ5eE1JYzh4UzBSNEllVWMyNnIzX09CUVBzRXhNNUoyS19RZ3RkdVJIcjVsSmNEd0FldWREMTQ5VjQ4ODZpTUNnR1lWWEVFYVNLRU9X?oc=5",
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
+   "topics": [],
+   "queries": [
+    "2330"
+   ],
+   "title_queries": [
+    "2330"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
    "id": "62f6b9c87cae1e01",
    "published_utc": "2026-10-21T09:00:18Z",
    "published_taipei": "2026-10-21 17:00",
@@ -16129,6 +16359,31 @@
    "also": [
     "經濟日報"
    ]
+  },
+  {
+   "id": "eda37fe3f6aa5fdf",
+   "published_utc": "2026-10-21T08:37:13Z",
+   "published_taipei": "2026-10-21 16:37",
+   "source": "UDN",
+   "source_url": "https://udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "影／台積電高雄廠鋼構工程意外釀4死陳其邁發聲：深感遺憾| 社會萬象| 社會",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE8wWXFhQXZrWVZKT3dpekhzZ0s3ZWJveDlvV0pMZ2xlQTc2Y01hamZfQWVlZjNVWmFDTmRrdHZVRkQ5NmdpRUJ1UDV0UUNGZWp3U0NkRG5sMjdyZlBzRXphZlhSWWYyc0l1aGlIOEQ3cnVtQQ?oc=5",
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
+   "topics": [],
+   "queries": [
+    "2330"
+   ],
+   "title_queries": [
+    "2330"
+   ],
+   "title_match": true,
+   "also": []
   },
   {
    "id": "d9446119c26f2cec",
@@ -16588,7 +16843,7 @@
    "also": []
   },
   {
-   "id": "2ae18e42047242eb",
+   "id": "61a8ce959c767ac5",
    "published_utc": "2026-10-21T07:18:09Z",
    "published_taipei": "2026-10-21 15:18",
    "source": "UDN",
@@ -16596,8 +16851,8 @@
    "tier": 2,
    "rank": "B",
    "lang": "zh",
-   "title": "外資終止連10賣！三大法人僅買超5.68億元 台積電領軍台股收復5日線",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBNazZSMFFiRzY4SERuUkZreDJHRTBfVkZjTmNEcVIwVzVxUEhDeTB4TnZpQXJSS25fN1FwaC0yN1pIZTVDMnFmRk43R0ZqMWxP0gFWQVVfeXFMT1hqdUZ2WEMwY3BvdTdBMFBkM29rOXN1WjdNczZCOTNxTVRiVy1iRkZhOEJreVJTa1ZTc3lGS2E5N1lYLVA4VnVDdkM1R1BORHlFQ05sa2c?oc=5",
+   "title": "外資終止連10賣！三大法人僅買超5.68億元台積電領軍台股收復5日線| 股市要聞| 股市",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBCNkRXUXZQc2wta05Cd3lNTE82TWdzbnhaamx6eDU3SV85TS1Ga0V6WE5HSmRhNzRTdEFyVG82c1ZzQW5LdTlqVzVxVFpxSUc1dEx5ZWotSk5oS183c2o0NmlYOFVoLWlGLUk2NnhDY3NVUQ?oc=5",
    "symbols": [
     "2330",
     "TSM"
@@ -16812,7 +17067,7 @@
    "also": []
   },
   {
-   "id": "9599ca089ebd885a",
+   "id": "745c815f11c54037",
    "published_utc": "2026-10-21T06:37:44Z",
    "published_taipei": "2026-10-21 14:37",
    "source": "經濟日報",
@@ -16821,7 +17076,7 @@
    "rank": "B",
    "lang": "zh",
    "title": "台股盤中重返47,000點 主動 ETF 漲勢更猛！千億級00406A 配息受矚目",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE84U3d2dFlxVzJrazQ3V2tiMlR2M2YxUlU1ajUyRV94d1ZvVDJRZ1VlZXFOTDVmWFVUN2FLNmlZU25RWjUxc0dMRFgtQnF0OV8yY2dTVmpqRG9SZ9IBX0FVX3lxTE9VUHJxMDc4dHRqMjN2dWV1RDZ1ZnU5VFdTblFMUXJ3c1VCNFlTQ1ZwWWlwMHI3TlRELWNyN1J5ZF9CUHNVSXBuRXcwWmJ3c2trMTlTTGxrcy14bzNWMGFn?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9VUHJxMDc4dHRqMjN2dWV1RDZ1ZnU5VFdTblFMUXJ3c1VCNFlTQ1ZwWWlwMHI3TlRELWNyN1J5ZF9CUHNVSXBuRXcwWmJ3c2trMTlTTGxrcy14bzNWMGFn0gFfQVVfeXFMT1VQcnEwNzh0dGoyM3Z1ZXVENnVmdTlUV1NuUUxRcndzVUI0WVNDVnBZaXAwcjdOVEQtY3I3UnlkX0JQc1VJcG5FdzBaYndza2sxOVNMbGtzLXhvM1YwYWc?oc=5",
    "symbols": [],
    "topics": [],
    "queries": [
@@ -16954,7 +17209,7 @@
    "also": []
   },
   {
-   "id": "253b0ef8488117c7",
+   "id": "b48f029f02102e0b",
    "published_utc": "2026-10-21T05:59:36Z",
    "published_taipei": "2026-10-21 13:59",
    "source": "經濟日報",
@@ -16963,14 +17218,15 @@
    "rank": "B",
    "lang": "zh",
    "title": "台股收漲594點站上5日線 台積電收高15元 | 市場焦點 | 證券",
-   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBRZDZuRjU2NDdJMGg5OVJqR1hBMVhacmxOMG5CRVpzWjB0WXFTYnVDUGNwdlRMclFIZ0tkeEU4UTVvZ0NDMm5weHhDM2VSUkJKUlAwaGNlVmNZdE54LUpSUGx1VWg2ZGUxRTVUbDlRbVh3emZkRHVhdw?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9IR1hhbmRLSm96NjdjLXZkR25naEw3LU1aaGRsVlBJZWs0VjNmY0sxeVZQcnRDV1g3ZFZsVllUcC00dldoRzI5QVhTem5IcWVfUnpTUEV3RlJJdzdmMUZmMFVIMHlWNDU2ejBWX29RWnJ1SVdBRmdjeGFNNFk?oc=5",
    "symbols": [
     "2330",
     "TSM"
    ],
    "topics": [],
    "queries": [
-    "009816"
+    "009816",
+    "2330"
    ],
    "title_queries": [
     "2330",
@@ -17654,7 +17910,9 @@
     "2330"
    ],
    "title_match": true,
-   "also": []
+   "also": [
+    "經濟日報"
+   ]
   },
   {
    "id": "f18bf54021ca4f3a",
@@ -18170,7 +18428,7 @@
    ]
   },
   {
-   "id": "6a724af77b6a4eea",
+   "id": "c8e76ef498b6b2ed",
    "published_utc": "2026-10-21T02:15:32Z",
    "published_taipei": "2026-10-21 10:15",
    "source": "UDN",
@@ -18179,7 +18437,7 @@
    "rank": "B",
    "lang": "zh",
    "title": "台積電高雄建廠四死工安事故 洪申翰：從源頭加強風險管理",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9VMy1yUkYxclh0dU5kMkRLUW9kTkI0VjlXMXktYnpkaGNSd1ZuNUtNLVN5MHoyQ0hlRWVnUHFmTWgyWjc4LTA2VGNXXzhZdkxR0gFWQVVfeXFMUEFLdEMySjFiN2t0dGhteXBENlRDelVOZWN3TFkwX3dmLVhnVHZyeVAyMXBzX183UTJ4bHZ4dEREd2Izd1c2S05hUklZSXFqaTRtR0ZmQ3c?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBBS3RDMkoxYjdrdHRobXlwRDZUQ3pVTmVjd0xZMF93Zi1YZ1R2cnlQMjFwc19fN1EyeGx2eHRERHdiM3dXNktOYVJJWUlxamk0bUdGZkN30gFWQVVfeXFMUEFLdEMySjFiN2t0dGhteXBENlRDelVOZWN3TFkwX3dmLVhnVHZyeVAyMXBzX183UTJ4bHZ4dEREd2Izd1c2S05hUklZSXFqaTRtR0ZmQ3c?oc=5",
    "symbols": [
     "2330",
     "TSM"
@@ -18274,7 +18532,8 @@
    ],
    "title_match": true,
    "also": [
-    "UDN"
+    "UDN",
+    "經濟日報"
    ]
   },
   {
@@ -18455,6 +18714,31 @@
     "NVDA",
     "GOOGL",
     "CHIPS"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "4cd2bbd0fd0da904",
+   "published_utc": "2026-10-21T00:56:11Z",
+   "published_taipei": "2026-10-21 08:56",
+   "source": "UDN",
+   "source_url": "https://udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "台積電楠梓廠重大工安釀第4死 最後一名傷者搶救今晨不治",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9QWGVUYXhMaXZXMzJneUVQRGdVYVAwbl9ONTBoVUdBWTRNcS1ON080cTJuajZsdFNrQURUR21fakRROUltX2U0d0FGNW4tUm0tVU9ERndR0gFWQVVfeXFMT1BYZVRheExpdlczMmd5RVBEZ1VhUDBuX041MGhVR0FZNE1xLU43TzRxMm5qNmx0U2tBRFRHbV9qRFE5SW1fZTR3QUY1bi1SbS1VT0RGd1E?oc=5",
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
+   "topics": [],
+   "queries": [
+    "2330"
+   ],
+   "title_queries": [
+    "2330"
    ],
    "title_match": true,
    "also": []
@@ -19041,6 +19325,30 @@
    "title_queries": [
     "TSMC",
     "TAIWAN"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
+   "id": "946002cd6afa2566",
+   "published_utc": "2026-10-20T21:00:00Z",
+   "published_taipei": "2026-10-21 05:00",
+   "source": "AP News",
+   "source_url": "https://apnews.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "Minnesota officials, feds launch new collaboration to tackle youth violence",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPV0lkRDhhMms0Q2h3UXhQak1Ua0lRWTA0Vlk1YURQbkMwS2NqLTJJMlU3N1Y0eW9SenNGemZEclhyLUdYSzZwY3ZnaWxxSzJJNkhTSXFEaUNNUlVpemNGc2N1UGxvLTJtR1BQbi1hWGY0ZVhROFBDaGEtVXQ4V2NJRGZBM01GMWtzNmREMGFQTG1GXzQ2V3hyYVBNSmhlRUJUYkNFQQ?oc=5",
+   "symbols": [],
+   "topics": [
+    "fed"
+   ],
+   "queries": [
+    "TARIFF"
+   ],
+   "title_queries": [
+    "FED"
    ],
    "title_match": true,
    "also": []
@@ -19664,6 +19972,30 @@
    "also": []
   },
   {
+   "id": "7e87fa65627190ff",
+   "published_utc": "2026-10-20T17:37:00Z",
+   "published_taipei": "2026-10-21 01:37",
+   "source": "WSJ",
+   "source_url": "https://www.wsj.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "Adidas Lifts Profit View After U.S. Tariff Refunds, Record Quarterly Performance",
+   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOVG4za2l4OV83SVdWQXVzclhadmYyVDJjYS1CbllNQTdDM01zQkVsVG9wRHVKMkZuSHRPajduX0JieGpka2psWjR4V3lNb3hzSXI1elMyYWpaLTlGdk9ZUk95Z19wWVAxZXcxcl90YTJzWDdkcnB2ZEdmVy1IU1BCUXhURjU3bmZGcHIwY0oyNXNBQnBLcWJjQVlXdmNMWGpsQzVpXzlNSmtCUkVWZFFNYmVTalVDZjU0UW44UVU1Q08?oc=5",
+   "symbols": [],
+   "topics": [
+    "tariff"
+   ],
+   "queries": [
+    "MARKET"
+   ],
+   "title_queries": [
+    "TARIFF"
+   ],
+   "title_match": true,
+   "also": []
+  },
+  {
    "id": "feb4bfbe23d61bc4",
    "published_utc": "2026-10-20T17:30:50Z",
    "published_taipei": "2026-10-21 01:30",
@@ -20103,7 +20435,7 @@
    "also": []
   },
   {
-   "id": "5abe9af03f0fe90c",
+   "id": "1879d967fc12d1d4",
    "published_utc": "2026-10-20T13:54:36Z",
    "published_taipei": "2026-10-20 21:54",
    "source": "UDN",
@@ -20111,8 +20443,8 @@
    "tier": 2,
    "rank": "B",
    "lang": "zh",
-   "title": "台積電高雄F22廠3死1重傷 疑因鋼構斷裂釀高空墜落",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBHeXRmSEkySF9Yb1FCVzA2bGwyb2pqNmctRVhhMXFjS1J0bnFtSHN6ZTRRV19MV0NlNHB4aWxRQTJsdkQ5QWFvUTd4YjJBWlk20gFWQVVfeXFMTlZZYmowU09QTTJhTnE0eGFpbmMyZmVDcFBKYnp4V3pxTTBMUVFUUDEwdEJTcWJtenczLWt6QjNveDN4ZUhpNEk5RWxpUmMyeW5XT2Y2RGc?oc=5",
+   "title": "台積電高雄F22廠2死2重傷 疑因鋼構斷裂釀高空墜落",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5WWWJqMFNPUE0yYU5xNHhhaW5jMmZlQ3BQSmJ6eFd6cU0wTFFRVFAxMHRCU3FibXp3My1rekIzb3gzeGVIaTRJOUVsaVJjMnluV09mNkRn0gFWQVVfeXFMTlZZYmowU09QTTJhTnE0eGFpbmMyZmVDcFBKYnp4V3pxTTBMUVFUUDEwdEJTcWJtenczLWt6QjNveDN4ZUhpNEk5RWxpUmMyeW5XT2Y2RGc?oc=5",
    "symbols": [
     "2330",
     "TSM"
@@ -20820,7 +21152,7 @@
    "also": []
   },
   {
-   "id": "0bfe3f588cd3dfc2",
+   "id": "ddf8ded963bdbb52",
    "published_utc": "2026-10-20T11:25:42Z",
    "published_taipei": "2026-10-20 19:25",
    "source": "UDN",
@@ -20828,8 +21160,8 @@
    "tier": 2,
    "rank": "B",
    "lang": "zh",
-   "title": "高雄廠爆工安意外4人送醫 台積電回應：相關工程自主停工、配合調查",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE02S1RFZ1dOenRGaTZEcE50S0NJV0xFRkJqbmVidjBENTNRRmhKMDRWRXVuMHZ6Z0RidHRKaVhJUkljSnB6QnVTaVpOZHNndE5t0gFWQVVfeXFMTmwtZndJb19mNEJDNEVPVHFJSWp3VjhSdXRGa2YxR1o0WGlTbmxTMVJrOWkwRGdwOUEtTXNpUy1oQkhhbDZlWmZpZ2NZQkp5SjExNURvekE?oc=5",
+   "title": "高雄廠爆工安意外4人送醫台積電回應：相關工程自主停工、配合調查| 科技產業| 產經",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAzai1zcjFpeXo3M0NBd3lURDZOZTZpVHF6Um5la3BnQlZkdl9xbVBEQ05FSkVkTk1FOUxBSGZzNnBTSzlGWHRnYTQ1cGF6d01XQlhVZ2N3?oc=5",
    "symbols": [
     "2330",
     "TSM"
@@ -20893,6 +21225,26 @@
     "2330"
    ],
    "title_match": true,
+   "also": []
+  },
+  {
+   "id": "727a4cfc93c072e3",
+   "published_utc": "2026-10-20T11:04:00Z",
+   "published_taipei": "2026-10-20 19:04",
+   "source": "SpaceX",
+   "source_url": "https://www.spacex.com",
+   "tier": 1,
+   "rank": null,
+   "lang": "en",
+   "title": "Bandwagon-5 Mission",
+   "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1hcTN1ZDc2Qi15Z1dibnBFdjFDU2tKUDVNbmw0WkNWMlZQRi02UktWZlhTdk1lc2RRMkdDQ1NkeXQ1a2prMW9laHQwbDlwQWdYRFJyaQ?oc=5",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "SPCX"
+   ],
+   "title_queries": [],
+   "title_match": false,
    "also": []
   },
   {
