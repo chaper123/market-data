@@ -61,8 +61,27 @@
       "zh": ["cna.com.tw", "money.udn.com", "ctee.com.tw", "udn.com"]
     },
     "tiers": {
-      "A": ["reuters.com", "apnews.com", "bloomberg.com", "wsj.com", "ft.com", "cnbc.com", "cna.com.tw"],
-      "B": ["barrons.com", "marketwatch.com", "axios.com", "finance.yahoo.com", "money.udn.com", "ctee.com.tw", "udn.com"]
+      "1": ["federalreserve.gov", "sec.gov", "whitehouse.gov", "ustr.gov", "commerce.gov", "bis.gov", "treasury.gov", "bls.gov",
+            "prnewswire.com", "businesswire.com", "globenewswire.com", "nvidianews.nvidia.com", "investor.nvidia.com",
+            "ir.tesla.com", "abc.xyz", "apple.com", "spacex.com", "tsmc.com", "pr.tsmc.com", "twse.com.tw", "tpex.org.tw",
+            "president.gov.tw", "moea.gov.tw", "cbc.gov.tw", "fsc.gov.tw", "ezmoney.com.tw", "kgifund.com.tw"],
+      "2A": ["reuters.com", "apnews.com", "bloomberg.com", "wsj.com", "ft.com", "cnbc.com", "cna.com.tw"],
+      "2B": ["barrons.com", "marketwatch.com", "axios.com", "finance.yahoo.com", "money.udn.com", "ctee.com.tw", "udn.com"],
+      "3": ["blogs.nvidia.com", "developer.nvidia.com", "blog.google", "x.com", "truthsocial.com"]
+    },
+    "topic_rules": {
+      "fed": ["federal reserve", "fed", "powell", "fomc", "rate cut", "rate hike", "interest rate", "聯準會", "美聯儲", "鮑爾", "降息", "升息"],
+      "tariff": ["tariff", "trade war", "關稅", "貿易戰"],
+      "export_controls": ["export control", "export ban", "entity list", "chip curb", "chip restriction", "出口管制", "實體清單", "晶片禁令"],
+      "china": ["china", "chinese", "beijing", "中國", "大陸", "北京", "習近平"],
+      "taiwan": ["taiwan", "taipei", "台灣", "臺灣", "兩岸", "台海"],
+      "oil": ["oil", "crude", "opec", "brent", "油價", "原油", "石油"],
+      "war": ["war", "missile", "invasion", "military", "ceasefire", "airstrike", "戰爭", "飛彈", "軍事", "停火", "空襲"],
+      "cpi": ["cpi", "inflation", "consumer price", "通膨", "消費者物價"],
+      "jobs": ["payroll", "jobs report", "unemployment", "jobless", "非農", "就業報告", "失業率"],
+      "earnings": ["earnings", "quarterly results", "guidance", "revenue", "財報", "法說", "營收", "財測"],
+      "antitrust": ["antitrust", "monopoly", "反壟斷", "反托拉斯"],
+      "merger": ["merger", "acquisition", "acquire", "takeover", "併購", "合併", "收購"]
     },
     "fed_feeds": {"press": "https://www.federalreserve.gov/feeds/press_all.xml",
                   "speech": "https://www.federalreserve.gov/feeds/speeches.xml"},
