@@ -30,15 +30,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/tw/intraday.json
-          if git diff --cached --quiet; then
-            echo "no changes"
-            exit 0
-          fi
-          git commit -m "intraday $(TZ=Asia/Taipei date +'%Y-%m-%d %H:%M')"
-          # fetch.yml 等也會 push（各自只改自己的檔案），先 rebase 再推，衝突時重試
-          for i in 1 2 3; do
-            git pull --rebase -q origin main && git push && exit 0
-            sleep $((i * 5))
-          done
-          exit 1
+          # fetch、news、intraday 三個 workflow 都會推送：publish.py 每次從最新的 main 重新套用
+          # 自己的檔案與自己負責的 meta 資料集，被拒就重來，不會衝突或蓋掉別人的更新
+          python publish.py --message "intraday $(TZ=Asia/Taipei date +'%Y-%m-%d %H:%M')" --paths data/tw/intraday.json

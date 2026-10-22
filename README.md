@@ -11,11 +11,11 @@
 
 GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所以排多次。另外由 cron-job.org 在**美東 17:15（週一～五，America/New_York）**用 workflow_dispatch 準時觸發一次完整抓取（2026-10-20 設定；token 只限本 repo 的 Actions 讀寫，2027-10-20 到期），期貨能在 17:10～18:00 收到當天收盤。需要立刻更新時，到 Actions → fetch-market-data → Run workflow。
 
-另外兩個只由 cron-job.org（或手動）觸發的 workflow，不排程、不動 meta.json，也不影響上面的略過判斷：
+另外兩個只由 cron-job.org（或手動）觸發的 workflow，不排程，也不影響上面的略過判斷（news 只更新 meta.json 的 news/*，intraday 不動 meta.json）：
 - `news-headlines`（`news.yml` → `news.py`）：台北 08:20（週一～五），更新 `data/news/`，給 08:40 的「新聞與社群晨報」排程讀。
 - `intraday-snapshot`（`intraday.yml` → `intraday.py`）：台北 10:05（週一～五），更新 `data/tw/intraday.json`，給 10:17 的台股晨報讀。
 
-三個 workflow 都只 commit 自己的檔案，push 前先 `git pull --rebase`，被拒時最多重試三次。
+三個 workflow 都用 `publish.py` 推送：每次從最新的 main 重新套用自己的檔案與自己負責的 meta 資料集（fetch 負責 news/* 以外的全部，news 只負責 news/*），被拒就重來（最多 5 次），不會衝突，也不會蓋掉別人的更新。
 
 ## 檔案
 
@@ -43,8 +43,9 @@ GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所�
 | `data/chips/tw_margin.csv` | 集中市場信用交易：date,margin_lots,short_lots,margin_amount_k（融資餘額張、融券餘額張、融資金額仟元；逐日累積） | 證交所 MI_MARGN |
 | `data/holdings/<代號>.json` | 主動式 ETF（00981A、00411A）最新持股：資料日、每單位淨值、全部持股與權重、期貨與現金、前十大，以及與前一資料日比較（前十大新進／退出、權重變動 ≥1 個百分點、新增／出清）。00411A 持有美股，資料日通常晚一天 | 統一投信 ezmoney / 淨值與 nav_history 核對、權重加總與股票市值核對 |
 | `data/holdings/<代號>_history.csv` | 每日持股：date,code,name,shares,weight（逐日累積） | 同上 |
-| `data/news/headlines.json` | 新聞標題（最近 72 小時）：每則有標題、來源、等級（A 通訊社與一線財經媒體、B 主要財經媒體、C 白名單以外）、台北時間、主題、相關標的、`title_topics`（標題真的提到的主題）、Google News 連結、合併掉的其他來源（`also`）；另有 Fed 新聞稿與演講（最近 7 天）、各查詢狀態。SEC 8-K 尚未啟用。檔案約 0.6 MB，讀取時請用程式篩選 | Google News RSS（每個主題查兩次：限定白名單網站與不限定）、federalreserve.gov RSS；`news.py`，查詢詞與來源等級在 `config.json` 的 `news` |
-| `data/news/headlines.md` | 上面的精簡版給人看：每個主題列標題提到該主題的 A／B 等級新聞（最多 15 則）與 C 等級 3 則 | 同上 |
+| `data/news/headlines.json` | 新聞標題（最近 72 小時），格式見下方「新聞標題格式」。約 0.7 MB，讀取時請用程式篩選 | Google News RSS（每個查詢跑兩次：限定白名單網站與不限定）、federalreserve.gov RSS；`news.py`，查詢詞、來源等級與主題詞在 `config.json` 的 `news` |
+| `data/news/fed.json` | Fed 新聞稿與演講（最近 7 天）：`items[]` 的 `date`（台北日期）、`title`、`link`、`type`（press／speech）、`published_taipei`、`published_utc` | federalreserve.gov RSS |
+| `data/news/headlines.md` | 精簡版給人看：每個查詢列標題提到它的 T1～T2 新聞（最多 15 則）與 T3～T4 3 則 | 同上 |
 | `data/meta.json` | 每個資料集的狀態、列數、最後日期、雙來源核對結果、錯誤 | — |
 
 CSV 欄位：`date,volume,open,high,low,close`（無表頭），與排程任務的 `monitor.py`、`monitor_us.py` 相同。
@@ -55,13 +56,31 @@ CSV 欄位：`date,volume,open,high,low,close`（無表頭），與排程任務�
 
 鉅亨網的美股最後一根 K 棒常停在盤中價（2026-10-16 檢查：ARKX、TSM 到台北中午仍未更新；過去一年 VOO、IAUM、ARK 系列、TSM 各有 5～9 根收盤錯 0.5% 以上，成交量也偏少），所以美股與 00411A 不再以鉅亨網為主。
 
+### 新聞標題格式（data/news/headlines.json）
+
+依 stock-dashboard `docs/NEWS_ROUTINE.md` 第 3.1 節的約定：
+
+- 頂層：`generated_at_taipei`、`window_hours`（72）、`feeds[]`（`name`、`ok`、`count`，失敗時多一個 `error`）、`errors[]`、`items[]`。
+- `items[]`：`id`（Google News 連結 SHA-1 的前 16 碼）、`published_utc`、`published_taipei`、`source`、`tier`、`lang`、`title`、`link`（Google News 轉址連結）、`symbols`、`topics`。
+- `tier`：1 官方（Fed、政府與監管機關、交易所、公司 IR 與新聞稿、PR Newswire 等新聞稿通路）、2 主要媒體、3 第一手發言（公司部落格等）、4 其他。依 RSS 的來源網址對照 `config.json` 的 `news.tiers` 判斷。
+- `symbols`：只看標題——提到查詢的關鍵字（Nvidia → NVDA、台積電 → 2330 與 TSM 等），或兩檔主動 ETF 前十大的台股名稱（台光電 → 2383）。沒有 symbols 的也保留。
+- `topics`：依 `news.topic_rules` 的標題關鍵字（中英文），目前有 fed、tariff、export_controls、china、taiwan、oil、war、cpi、jobs、earnings、antitrust、merger。
+- 同標題或字詞重疊 ≥ 80% 的合併成一則，保留等級最高、最早的那則，其他來源列在 `also`。
+
+和約定不同或多出來的地方：
+
+- `window_hours` 是 72（約定範例寫 36）：第二層自己依時間窗篩選。Fed 的 tier 1 項目一律保留 7 天，不受 72 小時限制。
+- 多出的欄位：頂層 `generated_at_utc`、`status`（ok／partial）、`tiers`（等級說明）、`stats`（依等級、標的、主題的則數）、`sec_8k`（目前「未啟用」）；`items[]` 的 `source_url`、`rank`（tier 2 再分 A 通訊社與一線財經媒體、B 其他主要財經媒體）、`queries`（找到它的查詢）、`title_queries`（標題提到的查詢）、`title_match`（標題有沒有提到查詢關鍵字或成分股；false 是 Google 依內文找到的，每個查詢最多留 10 則）、`also`。
+- tier 3（第一手發言）只能從來源網址判斷（目前是 NVIDIA Blog、NVIDIA Developer 這類），川普 Truth Social、X 不在 RSS 裡，仍要第二層自己查。
+- `meta.json` 的 `news/headlines`：`status`、`last`（＝`generated_at_taipei`）、`items`、`by_tier`、`feeds_ok`、`errors`；`news/fed`：`status`、`last`（最新一則的日期）、`checked_at_taipei`、`items`。meta 只由 news.yml 更新這兩項；fetch.yml 推送時保留它們（`publish.py`）。
+
 ## 測試
 
 ```bash
 python -m unittest discover -s tests
 ```
 
-用假資料測多數決、單一來源補核對、24 小時品項的收盤截止與週末列、略過判斷等邏輯，不連網。
+用假資料測多數決、單一來源補核對、24 小時品項的收盤截止與週末列、略過判斷、新聞整理、盤中快照，不連網；`test_publish.py` 用暫存的 git repo 模擬三個 workflow 同時推送。
 
 ## 讀取方式
 
