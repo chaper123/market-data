@@ -1,5 +1,5 @@
 {
- "fetched_at_taipei": "2026-10-22 07:58",
+ "fetched_at_taipei": "2026-10-22 08:50",
  "week_limit_pct": 20,
  "symbols": {
   "VOO": {
@@ -9,22 +9,22 @@
    "pe": 25.08,
    "price": 710.72,
    "price_date": "2026-10-21",
-   "price_time": "Oct 21, 2026, 4:00 PM EDT",
+   "price_time": "Oct 21, 2026, 4:00 PM",
    "market_state": "closed",
    "source": "https://stockanalysis.com/etf/voo/",
    "implied_eps": 28.3381
   },
   "GOOGL": {
    "kind": "stock",
-   "fwd_pe": 25.1,
-   "peg": 1.86,
-   "pe": 16.71,
+   "fwd_pe": 25.04,
+   "peg": 1.82,
+   "pe": 16.8,
    "price": 334.76,
    "price_date": "2026-10-21",
    "price_time": "Oct 21, 2026, 4:00 PM EDT",
    "market_state": "closed",
    "source": "https://stockanalysis.com/stocks/googl/statistics/",
-   "implied_eps": 13.3371,
+   "implied_eps": 13.369,
    "earnings_dates": [
     "2026-10-28"
    ],
@@ -50,7 +50,7 @@
    "kind": "stock",
    "fwd_pe": 184.54,
    "peg": 9.84,
-   "pe": 424.58,
+   "pe": 424.59,
    "price": 386.47,
    "price_date": "2026-10-21",
    "price_time": "Oct 21, 2026, 4:00 PM EDT",
