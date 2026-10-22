@@ -1,6 +1,6 @@
 {
  "generated_from": "repo 日線（indicators.py）；綜合評分來自 TradingView",
- "tv_fetched_at_taipei": "2026-10-22 08:50",
+ "tv_fetched_at_taipei": "2026-10-22 10:01",
  "rules": {
   "trend_adx": 25,
   "range_adx": 20
@@ -570,16 +570,16 @@
    "close": 16.08,
    "change_pct": 0.9416195856873699,
    "rating": {
-    "all": "買進",
-    "ma": "賣出",
-    "osc": "買進",
-    "all_value": 0.1048951048951049
+    "all": "無資料",
+    "ma": "無資料",
+    "osc": "無資料",
+    "all_value": null
    },
    "one_line": "趨勢不明，等方向確認",
    "structure": "趨勢不明（ADX 20.7，介於 20～25）",
    "position": "站上 4/10 條（EMA50、SMA50、EMA100、SMA100）；中長均線之上但短均線失守，短線轉弱（樣本不足：EMA200、SMA200）",
    "contradictions": [
-    "均線評分賣出、振盪評分買進 → 趨勢與動能方向相反"
+    "訊號一致"
    ],
    "support": [
     {
@@ -620,7 +620,7 @@
    },
    "last_date": "2026-10-21",
    "rows": 171,
-   "rating_skipped": null
+   "rating_skipped": "收盤 16.16 ≠ 16.08（可能是盤中數字）"
   },
   "00981A": {
    "code": "00981A",
@@ -628,16 +628,16 @@
    "close": 28.88,
    "change_pct": 0.5221023320570728,
    "rating": {
-    "all": "中立",
-    "ma": "賣出",
-    "osc": "買進",
-    "all_value": -0.018181818181818188
+    "all": "無資料",
+    "ma": "無資料",
+    "osc": "無資料",
+    "all_value": null
    },
    "one_line": "盤整格局，看區間上下緣，不看均線排列",
    "structure": "盤整（ADX 18.8 < 20）：均線排列參考性低，改看 Pivot 區間上下緣",
    "position": "站上 3/12 條（EMA100、EMA200、SMA200）；短均線全數失守、只剩部分長均線撐著，結構偏弱",
    "contradictions": [
-    "均線評分賣出、振盪評分買進 → 趨勢與動能方向相反"
+    "訊號一致"
    ],
    "support": [
     {
@@ -678,7 +678,7 @@
    },
    "last_date": "2026-10-21",
    "rows": 255,
-   "rating_skipped": null
+   "rating_skipped": "收盤 29.24 ≠ 28.88（可能是盤中數字）"
   },
   "00411A": {
    "code": "00411A",
@@ -736,7 +736,7 @@
    },
    "last_date": "2026-10-21",
    "rows": 38,
-   "rating_skipped": "ATR 0.41 vs 0.23（TradingView 高低點資料有誤）"
+   "rating_skipped": "ATR 0.39 vs 0.23（TradingView 高低點資料有誤）"
   }
  }
 }
