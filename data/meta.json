@@ -566,13 +566,34 @@
    "weight_moves": 1,
    "cross_check": "2026-10-21 淨值 10.16 vs 證交所 mis 10.16（差 +0.00）；權重加總 95.10% vs 股票市值／淨資產 95.12%",
    "cross_check_ok": true
+  },
+  "news/headlines": {
+   "status": "ok",
+   "source": "Google News RSS（news.py）",
+   "last": "2026-10-22 17:20",
+   "items": 894,
+   "by_tier": {
+    "2": 611,
+    "4": 274,
+    "1": 2,
+    "3": 7
+   },
+   "feeds_ok": "34/34",
+   "errors": 0
+  },
+  "news/fed": {
+   "status": "ok",
+   "source": "federalreserve.gov RSS",
+   "last": "2026-10-16",
+   "checked_at_taipei": "2026-10-22 17:20",
+   "items": 1
   }
  },
  "errors": [],
  "us_cutoff_ny": "2026-10-21",
  "tw_cutoff_taipei": "2026-10-22",
  "summary": {
-  "ok": 43,
+  "ok": 45,
   "stale": 0,
   "fail": 0
  },
