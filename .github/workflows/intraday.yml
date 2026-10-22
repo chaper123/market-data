@@ -1,0 +1,44 @@
+name: intraday-snapshot
+
+# 證交所 MIS 盤中快照（intraday.py → data/tw/intraday.json），給台股晨報取代鉅亨網盤中價。
+# 只由 cron-job.org（約台北 10:05）或手動觸發，不排程。不動 meta.json，也不影響 fetch.yml 的略過判斷。
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: intraday-snapshot
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Snapshot
+        run: python intraday.py
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/tw/intraday.json
+          if git diff --cached --quiet; then
+            echo "no changes"
+            exit 0
+          fi
+          git commit -m "intraday $(TZ=Asia/Taipei date +'%Y-%m-%d %H:%M')"
+          # fetch.yml 等也會 push（各自只改自己的檔案），先 rebase 再推，衝突時重試
+          for i in 1 2 3; do
+            git pull --rebase -q origin main && git push && exit 0
+            sleep $((i * 5))
+          done
+          exit 1

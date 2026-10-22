@@ -49,7 +49,12 @@ jobs:
           git add data
           if git diff --cached --quiet; then
             echo "no changes"
-          else
-            git commit -m "data $(TZ=Asia/Taipei date +'%Y-%m-%d %H:%M')"
-            git push
+            exit 0
           fi
+          git commit -m "data $(TZ=Asia/Taipei date +'%Y-%m-%d %H:%M')"
+          # news.yml、intraday.yml 也會 push（各自只改自己的檔案），先 rebase 再推，衝突時重試
+          for i in 1 2 3; do
+            git pull --rebase -q origin main && git push && exit 0
+            sleep $((i * 5))
+          done
+          exit 1

@@ -1,0 +1,44 @@
+name: news-headlines
+
+# 新聞三層架構的第一層：整理 Google News RSS 與 Fed 新聞稿標題（news.py → data/news/）。
+# 只由 cron-job.org（約台北 08:20）或手動觸發，不排程。不動 meta.json，也不影響 fetch.yml 的略過判斷。
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news-headlines
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Headlines
+        run: python news.py
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/news
+          if git diff --cached --quiet; then
+            echo "no changes"
+            exit 0
+          fi
+          git commit -m "news $(TZ=Asia/Taipei date +'%Y-%m-%d %H:%M')"
+          # fetch.yml 等也會 push（各自只改自己的檔案），先 rebase 再推，衝突時重試
+          for i in 1 2 3; do
+            git pull --rebase -q origin main && git push && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
