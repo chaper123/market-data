@@ -30,5 +30,42 @@
     "TSM":  {"yahoo": "TSM",      "moneydj": "TSM",         "name": "台積電 ADR"}
   },
   "valuation": {"VOO": "etf", "GOOGL": "stock", "NVDA": "stock", "TSLA": "stock", "SPCX": "stock", "AAPL": "stock"},
-  "holdings": {"00981A": "49YTW", "00411A": "64YTW"}
+  "holdings": {"00981A": "49YTW", "00411A": "64YTW"},
+  "news": {
+    "window_hours": 72,
+    "query_when": "2d",
+    "low_tier_per_topic": 20,
+    "off_title_per_topic": 10,
+    "en": [
+      {"id": "NVDA",   "q": "Nvidia",                                          "symbols": ["NVDA"],          "match": ["nvidia"]},
+      {"id": "TSLA",   "q": "Tesla",                                           "symbols": ["TSLA"],          "match": ["tesla"]},
+      {"id": "GOOGL",  "q": "Alphabet OR Google",                              "symbols": ["GOOGL"],         "match": ["alphabet", "google"]},
+      {"id": "AAPL",   "q": "Apple",                                           "symbols": ["AAPL"],          "match": ["apple"]},
+      {"id": "SPCX",   "q": "SpaceX",                                          "symbols": ["SPCX"],          "match": ["spacex"]},
+      {"id": "MARKET", "q": "\"S&P 500\" OR \"Wall Street\"",                  "symbols": ["VOO"],           "match": ["s&p 500", "wall street"]},
+      {"id": "TSMC",   "q": "TSMC OR \"Taiwan Semiconductor\"",                 "symbols": ["TSM", "2330"],   "match": ["tsmc", "taiwan semiconductor"]},
+      {"id": "FED",    "q": "\"Federal Reserve\" OR Powell OR FOMC",             "symbols": [],                "match": ["federal reserve", "powell", "fomc", "fed"]},
+      {"id": "TARIFF", "q": "tariffs OR \"Trump trade\"",                       "symbols": [],                "match": ["tariff", "trade war"]},
+      {"id": "CHIPS",  "q": "\"export controls\" chips OR semiconductors",       "symbols": [],                "match": ["export control", "chip export"]},
+      {"id": "TAIWAN", "q": "Taiwan",                                          "symbols": [],                "match": ["taiwan"]}
+    ],
+    "zh": [
+      {"id": "2330",   "q": "台積電",                                          "symbols": ["2330", "TSM"],   "match": ["台積電", "台積"]},
+      {"id": "TWSE",   "q": "台股 OR 加權指數",                                "symbols": [],                "match": ["台股", "加權指數", "大盤"]},
+      {"id": "009816", "q": "009816 OR 凱基台灣TOP50",                         "symbols": ["009816"],        "match": ["009816", "凱基台灣top50"]},
+      {"id": "00981A", "q": "00981A OR 主動統一台股增長",                      "symbols": ["00981A"],        "match": ["00981a", "主動統一台股增長"]},
+      {"id": "00411A", "q": "00411A OR 主動統一前沿科技",                      "symbols": ["00411A"],        "match": ["00411a", "主動統一前沿科技"]}
+    ],
+    "site_filter": {
+      "en": ["reuters.com", "apnews.com", "bloomberg.com", "cnbc.com", "wsj.com", "ft.com", "barrons.com", "marketwatch.com", "axios.com", "finance.yahoo.com"],
+      "zh": ["cna.com.tw", "money.udn.com", "ctee.com.tw", "udn.com"]
+    },
+    "tiers": {
+      "A": ["reuters.com", "apnews.com", "bloomberg.com", "wsj.com", "ft.com", "cnbc.com", "cna.com.tw"],
+      "B": ["barrons.com", "marketwatch.com", "axios.com", "finance.yahoo.com", "money.udn.com", "ctee.com.tw", "udn.com"]
+    },
+    "fed_feeds": {"press": "https://www.federalreserve.gov/feeds/press_all.xml",
+                  "speech": "https://www.federalreserve.gov/feeds/speeches.xml"},
+    "fed_days": 7
+  }
 }

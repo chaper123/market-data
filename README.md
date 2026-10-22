@@ -36,6 +36,8 @@ GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所�
 | `data/chips/tw_margin.csv` | 集中市場信用交易：date,margin_lots,short_lots,margin_amount_k（融資餘額張、融券餘額張、融資金額仟元；逐日累積） | 證交所 MI_MARGN |
 | `data/holdings/<代號>.json` | 主動式 ETF（00981A、00411A）最新持股：資料日、每單位淨值、全部持股與權重、期貨與現金、前十大，以及與前一資料日比較（前十大新進／退出、權重變動 ≥1 個百分點、新增／出清）。00411A 持有美股，資料日通常晚一天 | 統一投信 ezmoney / 淨值與 nav_history 核對、權重加總與股票市值核對 |
 | `data/holdings/<代號>_history.csv` | 每日持股：date,code,name,shares,weight（逐日累積） | 同上 |
+| `data/news/headlines.json` | 新聞標題（最近 72 小時）：每則有標題、來源、等級（A 通訊社與一線財經媒體、B 主要財經媒體、C 白名單以外）、台北時間、主題、相關標的、`title_topics`（標題真的提到的主題）、Google News 連結、合併掉的其他來源（`also`）；另有 Fed 新聞稿與演講（最近 7 天）、各查詢狀態。SEC 8-K 尚未啟用。檔案約 0.6 MB，讀取時請用程式篩選 | Google News RSS（每個主題查兩次：限定白名單網站與不限定）、federalreserve.gov RSS；`news.py`，查詢詞與來源等級在 `config.json` 的 `news` |
+| `data/news/headlines.md` | 上面的精簡版給人看：每個主題列標題提到該主題的 A／B 等級新聞（最多 15 則）與 C 等級 3 則 | 同上 |
 | `data/meta.json` | 每個資料集的狀態、列數、最後日期、雙來源核對結果、錯誤 | — |
 
 CSV 欄位：`date,volume,open,high,low,close`（無表頭），與排程任務的 `monitor.py`、`monitor_us.py` 相同。
