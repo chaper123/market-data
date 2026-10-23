@@ -1,10 +1,10 @@
 {
- "fetched_at_taipei": "2026-10-22 17:47:05",
- "mis_time": "20261022 17:04:11",
- "session": "收盤後",
- "is_trading": false,
+ "fetched_at_taipei": "2026-10-23 10:05:13",
+ "mis_time": "20261023 10:05:14",
+ "session": "盤中",
+ "is_trading": true,
  "trading_day": true,
- "note": "非交易時段（收盤後）：價格是今天 2026-10-22 的收盤資料（2026-10-22 13:30:00～2026-10-22 13:33:00）",
+ "note": "盤中：價格是最後成交價，time 是成交時間",
  "status": "ok",
  "source": "mis.twse.com.tw getStockInfo",
  "quotes": {
@@ -25,7 +25,7 @@
    "volume_lots": 115040.0,
    "limit_up": 17.68,
    "limit_down": 14.48,
-   "is_today": true
+   "is_today": false
   },
   "00981A": {
    "name": "主動統一台股增長",
@@ -44,7 +44,7 @@
    "volume_lots": 234650.0,
    "limit_up": 31.76,
    "limit_down": 26.0,
-   "is_today": true
+   "is_today": false
   },
   "00411A": {
    "name": "主動統一前沿科技",
@@ -63,7 +63,7 @@
    "volume_lots": 10545.0,
    "limit_up": 9999.95,
    "limit_down": null,
-   "is_today": true
+   "is_today": false
   },
   "TAIEX": {
    "name": "發行量加權股價指數",
@@ -82,7 +82,7 @@
    "volume_lots": null,
    "limit_up": null,
    "limit_down": null,
-   "is_today": true
+   "is_today": false
   }
  },
  "errors": []
