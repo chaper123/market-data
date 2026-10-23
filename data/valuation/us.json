@@ -1,5 +1,5 @@
 {
- "fetched_at_taipei": "2026-10-23 05:15",
+ "fetched_at_taipei": "2026-10-23 07:57",
  "week_limit_pct": 20,
  "symbols": {
   "VOO": {
@@ -84,7 +84,7 @@
   },
   "SPCX": {
    "kind": "stock",
-   "fwd_pe": 51.63,
+   "fwd_pe": 46.91,
    "peg": null,
    "pe": null,
    "price": 144.75,
@@ -92,11 +92,11 @@
    "price_time": "Oct 22, 2026, 4:00 PM EDT",
    "market_state": "closed",
    "source": "https://stockanalysis.com/stocks/spcx/statistics/",
-   "implied_eps": 2.8036,
+   "implied_eps": 3.0857,
    "week": {
     "ref_date": "2026-10-15",
     "ref_ratio": 94.37,
-    "eps_change_pct": 78.02
+    "eps_change_pct": 95.93
    },
    "earnings_dates": [
     "2026-10-20"
