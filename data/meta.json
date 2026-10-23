@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-10-23T00:51:54Z",
- "generated_at_taipei": "2026-10-23 08:51",
+ "generated_at_utc": "2026-10-23T02:05:35Z",
+ "generated_at_taipei": "2026-10-23 10:05",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -12,14 +12,11 @@
    "prev_close": 710.719970703125,
    "history_mismatch": 0,
    "last_bar_source": "moneydj",
-   "last_bar_votes": "2026-10-22 只有 moneydj 702.3（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對",
-   "last_bar_single_source": true,
+   "last_bar_votes": "2026-10-22 moneydj 702.3、yahoo 702.2999877929688 一致",
+   "last_bar_single_source": false,
    "last_bar_referee": false,
-   "single_source_days": [
-    "2026-10-22"
-   ],
-   "cross_check": "最後一根：2026-10-22 只有 moneydj 702.3（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對；近一年兩家收盤差 >0.5% 共 0 根；待核對 2026-10-22",
-   "cross_check_ok": null
+   "cross_check": "最後一根：2026-10-22 moneydj 702.3、yahoo 702.2999877929688 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check_ok": true
   },
   "us/GOOGL": {
    "status": "ok",
@@ -31,14 +28,11 @@
    "prev_close": 334.760009765625,
    "history_mismatch": 0,
    "last_bar_source": "moneydj",
-   "last_bar_votes": "2026-10-22 只有 moneydj 324.22（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對",
-   "last_bar_single_source": true,
+   "last_bar_votes": "2026-10-22 moneydj 324.22、yahoo 324.2200012207031 一致",
+   "last_bar_single_source": false,
    "last_bar_referee": false,
-   "single_source_days": [
-    "2026-10-22"
-   ],
-   "cross_check": "最後一根：2026-10-22 只有 moneydj 324.22（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對；近一年兩家收盤差 >0.5% 共 0 根；待核對 2026-10-22",
-   "cross_check_ok": null
+   "cross_check": "最後一根：2026-10-22 moneydj 324.22、yahoo 324.2200012207031 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check_ok": true
   },
   "us/NVDA": {
    "status": "ok",
@@ -50,14 +44,11 @@
    "prev_close": 221.97000122070312,
    "history_mismatch": 0,
    "last_bar_source": "moneydj",
-   "last_bar_votes": "2026-10-22 只有 moneydj 212.21（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對",
-   "last_bar_single_source": true,
+   "last_bar_votes": "2026-10-22 moneydj 212.21、yahoo 212.2100067138672 一致",
+   "last_bar_single_source": false,
    "last_bar_referee": false,
-   "single_source_days": [
-    "2026-10-22"
-   ],
-   "cross_check": "最後一根：2026-10-22 只有 moneydj 212.21（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對；近一年兩家收盤差 >0.5% 共 0 根；待核對 2026-10-22",
-   "cross_check_ok": null
+   "cross_check": "最後一根：2026-10-22 moneydj 212.21、yahoo 212.2100067138672 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check_ok": true
   },
   "us/TSLA": {
    "status": "ok",
@@ -69,14 +60,11 @@
    "prev_close": 386.4700012207031,
    "history_mismatch": 0,
    "last_bar_source": "moneydj",
-   "last_bar_votes": "2026-10-22 只有 moneydj 374.58（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對",
-   "last_bar_single_source": true,
+   "last_bar_votes": "2026-10-22 moneydj 374.58、yahoo 374.5799865722656 一致",
+   "last_bar_single_source": false,
    "last_bar_referee": false,
-   "single_source_days": [
-    "2026-10-22"
-   ],
-   "cross_check": "最後一根：2026-10-22 只有 moneydj 374.58（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對；近一年兩家收盤差 >0.5% 共 0 根；待核對 2026-10-22",
-   "cross_check_ok": null
+   "cross_check": "最後一根：2026-10-22 moneydj 374.58、yahoo 374.5799865722656 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check_ok": true
   },
   "us/SPCX": {
    "status": "ok",
@@ -88,14 +76,11 @@
    "prev_close": 159.30999755859375,
    "history_mismatch": 0,
    "last_bar_source": "moneydj",
-   "last_bar_votes": "2026-10-22 只有 moneydj 144.75（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對",
-   "last_bar_single_source": true,
+   "last_bar_votes": "2026-10-22 moneydj 144.75、yahoo 144.75 一致",
+   "last_bar_single_source": false,
    "last_bar_referee": false,
-   "single_source_days": [
-    "2026-10-22"
-   ],
-   "cross_check": "最後一根：2026-10-22 只有 moneydj 144.75（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對；近一年兩家收盤差 >0.5% 共 0 根；待核對 2026-10-22",
-   "cross_check_ok": null
+   "cross_check": "最後一根：2026-10-22 moneydj 144.75、yahoo 144.75 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check_ok": true
   },
   "us/AAPL": {
    "status": "ok",
@@ -107,14 +92,11 @@
    "prev_close": 343.989990234375,
    "history_mismatch": 0,
    "last_bar_source": "moneydj",
-   "last_bar_votes": "2026-10-22 只有 moneydj 348.22（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對",
-   "last_bar_single_source": true,
+   "last_bar_votes": "2026-10-22 moneydj 348.22、yahoo 348.2200012207031 一致",
+   "last_bar_single_source": false,
    "last_bar_referee": false,
-   "single_source_days": [
-    "2026-10-22"
-   ],
-   "cross_check": "最後一根：2026-10-22 只有 moneydj 348.22（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對；近一年兩家收盤差 >0.5% 共 0 根；待核對 2026-10-22",
-   "cross_check_ok": null
+   "cross_check": "最後一根：2026-10-22 moneydj 348.22、yahoo 348.2200012207031 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check_ok": true
   },
   "us/IAUM": {
    "status": "ok",
@@ -126,14 +108,11 @@
    "prev_close": 41.20000076293945,
    "history_mismatch": 0,
    "last_bar_source": "moneydj",
-   "last_bar_votes": "2026-10-22 只有 moneydj 40.14（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對",
-   "last_bar_single_source": true,
+   "last_bar_votes": "2026-10-22 moneydj 40.14、yahoo 40.13999938964844 一致",
+   "last_bar_single_source": false,
    "last_bar_referee": false,
-   "single_source_days": [
-    "2026-10-22"
-   ],
-   "cross_check": "最後一根：2026-10-22 只有 moneydj 40.14（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對；近一年兩家收盤差 >0.5% 共 0 根；待核對 2026-10-22",
-   "cross_check_ok": null
+   "cross_check": "最後一根：2026-10-22 moneydj 40.14、yahoo 40.13999938964844 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check_ok": true
   },
   "us/ARKK": {
    "status": "ok",
@@ -145,14 +124,11 @@
    "prev_close": 85.41999816894531,
    "history_mismatch": 0,
    "last_bar_source": "moneydj",
-   "last_bar_votes": "2026-10-22 只有 moneydj 81.86（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對",
-   "last_bar_single_source": true,
+   "last_bar_votes": "2026-10-22 moneydj 81.86、yahoo 81.86000061035156 一致",
+   "last_bar_single_source": false,
    "last_bar_referee": false,
-   "single_source_days": [
-    "2026-10-22"
-   ],
-   "cross_check": "最後一根：2026-10-22 只有 moneydj 81.86（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對；近一年兩家收盤差 >0.5% 共 0 根；待核對 2026-10-22",
-   "cross_check_ok": null
+   "cross_check": "最後一根：2026-10-22 moneydj 81.86、yahoo 81.86000061035156 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check_ok": true
   },
   "us/ARKQ": {
    "status": "ok",
@@ -164,14 +140,11 @@
    "prev_close": 115.8499984741211,
    "history_mismatch": 0,
    "last_bar_source": "moneydj",
-   "last_bar_votes": "2026-10-22 只有 moneydj 111.69（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對",
-   "last_bar_single_source": true,
+   "last_bar_votes": "2026-10-22 moneydj 111.69、yahoo 111.69000244140625 一致",
+   "last_bar_single_source": false,
    "last_bar_referee": false,
-   "single_source_days": [
-    "2026-10-22"
-   ],
-   "cross_check": "最後一根：2026-10-22 只有 moneydj 111.69（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對；近一年兩家收盤差 >0.5% 共 0 根；待核對 2026-10-22",
-   "cross_check_ok": null
+   "cross_check": "最後一根：2026-10-22 moneydj 111.69、yahoo 111.69000244140625 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check_ok": true
   },
   "us/ARKX": {
    "status": "ok",
@@ -183,14 +156,11 @@
    "prev_close": 30.549999237060547,
    "history_mismatch": 0,
    "last_bar_source": "moneydj",
-   "last_bar_votes": "2026-10-22 只有 moneydj 29.63（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對",
-   "last_bar_single_source": true,
+   "last_bar_votes": "2026-10-22 moneydj 29.63、yahoo 29.6299991607666 一致",
+   "last_bar_single_source": false,
    "last_bar_referee": false,
-   "single_source_days": [
-    "2026-10-22"
-   ],
-   "cross_check": "最後一根：2026-10-22 只有 moneydj 29.63（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對；近一年兩家收盤差 >0.5% 共 0 根；待核對 2026-10-22",
-   "cross_check_ok": null
+   "cross_check": "最後一根：2026-10-22 moneydj 29.63、yahoo 29.6299991607666 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check_ok": true
   },
   "tw/009816": {
    "status": "ok",
@@ -263,7 +233,7 @@
   "tv/snapshot": {
    "status": "ok",
    "symbols": 13,
-   "tw_bar_is_intraday": false,
+   "tw_bar_is_intraday": true,
    "us_bar_is_intraday": false
   },
   "fx/usdtwd_mid": {
@@ -272,7 +242,7 @@
    "rows": 518,
    "first": "2024-10-23",
    "last": "2026-10-23",
-   "last_rate": 32.585
+   "last_rate": 32.567
   },
   "macro/SPX": {
    "status": "ok",
@@ -381,19 +351,16 @@
    "rows": 501,
    "first": "2024-10-23",
    "last": "2026-10-22",
-   "last_close": 412.35,
+   "last_close": 412.3500061035156,
    "prev_close": 431.8900146484375,
    "history_mismatch": 0,
-   "last_bar_source": "moneydj",
-   "last_bar_votes": "2026-10-22 只有 moneydj 412.35（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對",
-   "last_bar_single_source": true,
+   "last_bar_source": "yahoo",
+   "last_bar_votes": "2026-10-22 yahoo 412.3500061035156、moneydj 412.35 一致",
+   "last_bar_single_source": false,
    "last_bar_referee": false,
-   "single_source_days": [
-    "2026-10-22"
-   ],
    "name": "台積電 ADR",
-   "cross_check": "最後一根：2026-10-22 只有 moneydj 412.35（其他來源與 nasdaq 裁判都還沒有這一天），單一來源先收，之後補核對；兩家收盤差 >0.5% 共 0 根",
-   "cross_check_ok": null
+   "cross_check": "最後一根：2026-10-22 yahoo 412.3500061035156、moneydj 412.35 一致；兩家收盤差 >0.5% 共 0 根",
+   "cross_check_ok": true
   },
   "sentiment/cnn_fear_greed": {
    "status": "ok",
@@ -447,7 +414,7 @@
    "source": "stockanalysis",
    "last": "2026-10-22",
    "price": 702.3,
-   "fwd_pe": 19.46,
+   "fwd_pe": 19.45,
    "peg": null,
    "pe": 24.62,
    "cross_check": "2026-10-22 頁面股價 702.3 vs repo 收盤 702.3（差 +0.00%）",
@@ -461,7 +428,7 @@
    "last": "2026-10-22",
    "price": 324.22,
    "fwd_pe": 24.24,
-   "peg": 1.82,
+   "peg": 1.76,
    "pe": 16.27,
    "cross_check": "2026-10-22 頁面股價 324.22 vs repo 收盤 324.22（差 +0.00%）",
    "cross_check_ok": true,
@@ -474,7 +441,7 @@
    "last": "2026-10-22",
    "price": 212.21,
    "fwd_pe": 17.55,
-   "peg": 0.37,
+   "peg": 0.35,
    "pe": 26.83,
    "cross_check": "2026-10-22 頁面股價 212.21 vs repo 收盤 212.21（差 +0.00%）",
    "cross_check_ok": true,
@@ -487,7 +454,7 @@
    "last": "2026-10-22",
    "price": 374.58,
    "fwd_pe": 176.41,
-   "peg": 5.48,
+   "peg": 5.31,
    "pe": 411.52,
    "cross_check": "2026-10-22 頁面股價 374.58 vs repo 收盤 374.58（差 +0.00%）",
    "cross_check_ok": true,
