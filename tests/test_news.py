@@ -1,13 +1,15 @@
-"""news.py 的測試：假的 Google News RSS 與 Fed RSS，不連網。輸出格式依 NEWS_ROUTINE.md 第 3.1 節。
+"""news.py 的測試：假的 Google News RSS、Fed RSS、文章頁與 batchexecute，不連網。輸出格式依 NEWS_ROUTINE.md 第 3.1 節。
 
 執行：python -m unittest discover -s tests（在 repo 根目錄）
 """
 import datetime as dt
 import json
 import os
+import re
 import sys
 import tempfile
 import unittest
+import urllib.parse
 from unittest import mock
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -29,12 +31,20 @@ CFG = {
     "topic_rules": {"fed": ["fed", "fomc", "聯準會"], "tariff": ["tariff", "關稅"], "china": ["china", "中國"],
                     "earnings": ["earnings", "法說"]},
     "fed_feeds": {"press": "https://www.federalreserve.gov/feeds/press_all.xml"}, "fed_days": 7,
+    "url_hours": 36, "url_max_per_run": 600, "url_budget_seconds": 60, "url_workers": 2,
 }
+GN_BASE = "https://news.google.com/rss/articles/"
+NOSIG = {"Banksrallyasyieldsfall"}  # 文章頁拿不到簽章的
+PAGES = []  # 讀過的文章頁（檢查沿用時不會再讀）
 
 
-def rss(items):
+def gid(title):
+    return re.sub(r"\W", "", title)[:40]
+
+
+def rss(items, base=GN_BASE):
     body = "".join(
-        f"<item><title>{t + ' - ' + s if s else t}</title><link>https://news.google.com/rss/articles/{abs(hash(t))}</link>"
+        f"<item><title>{t + ' - ' + s if s else t}</title><link>{base}{gid(t)}</link>"
         f"<pubDate>{p}</pubDate>{f'<source url=\"{u}\">{s}</source>' if s else ''}</item>"
         for t, s, u, p in items)
     return f"<?xml version=\"1.0\"?><rss><channel><title>x</title>{body}</channel></rss>".encode()
@@ -62,10 +72,32 @@ ZH_RSS = rss([("台積電法說會釋出樂觀展望", "中央社 CNA", "https:/
               ("台積電 法說會 釋出 樂觀展望", "經濟日報", "https://money.udn.com", "Wed, 21 Oct 2026 08:30:00 GMT"),
               ("台光電擴產 外資喊買", "經濟日報", "https://money.udn.com", "Wed, 21 Oct 2026 09:00:00 GMT")])
 FED_RSS = rss([("Federal Reserve issues FOMC statement", "", "", "Wed, 21 Oct 2026 18:00:00 GMT"),
-               ("Old Fed release", "", "", "Mon, 05 Oct 2026 18:00:00 GMT")])
+               ("Old Fed release", "", "", "Mon, 05 Oct 2026 18:00:00 GMT")],
+              base="https://www.federalreserve.gov/newsevents/pressreleases/")
+
+
+def fake_page(url, timeout=20):
+    g = url.rsplit("/", 1)[-1]
+    PAGES.append(g)
+    if g in NOSIG:
+        return b"<html>no signature</html>"
+    return f'<html>... data-n-a-ts="1792700000" data-n-a-sg="SIG{g}" ...</html>'.encode()
+
+
+def fake_batch(data):
+    """模擬 batchexecute：每個請求回 garturlres 與原文網址，依請求的編號對應。"""
+    reqs = json.loads(urllib.parse.unquote(data.decode()[len("f.req="):]))[0]
+    rows = []
+    for rpc, args, _, idx in reqs:
+        g = json.loads(args)[2]
+        rows.append(["wrb.fr", rpc, json.dumps(["garturlres", f"https://publisher.example/{g}", 1]),
+                     None, None, None, idx])
+    return 200, (")]}'\n\n123\n" + json.dumps(rows) + "\n").encode()
 
 
 def fake_http(url, **kw):
+    if "batchexecute" in url:
+        return fake_batch(kw["data"])
     if "federalreserve.gov" in url:
         return 200, FED_RSS
     if "hl=zh-TW" in url:
@@ -78,7 +110,8 @@ def fake_http(url, **kw):
 
 
 class NewsTest(unittest.TestCase):
-    def run_main(self, previous=None):
+    def run_main(self, previous=None, page=fake_page):
+        PAGES.clear()
         with tempfile.TemporaryDirectory() as tmp:
             paths = {n: os.path.join(tmp, "news", f) for n, f in
                      (("OUT_JSON", "headlines.json"), ("OUT_FED", "fed.json"), ("OUT_MD", "headlines.md"))}
@@ -97,6 +130,7 @@ class NewsTest(unittest.TestCase):
                     mock.patch.object(news, "OUT_FED", paths["OUT_FED"]), \
                     mock.patch.object(news, "OUT_MD", paths["OUT_MD"]), mock.patch.object(news, "META", meta_path), \
                     mock.patch.object(news, "ROOT", tmp), mock.patch.object(news, "DATA", tmp), \
+                    mock.patch.object(news, "fetch_page", page), \
                     mock.patch.object(news.time, "sleep", lambda s: None):
                 news.main()
             return (json.load(open(paths["OUT_JSON"], encoding="utf-8")),
@@ -112,7 +146,7 @@ class NewsTest(unittest.TestCase):
             self.assertIn(key, doc)
         self.assertEqual(doc["generated_at_taipei"], "2026-10-22 08:00")
         it = self.item(doc, "Nvidia shares rise")
-        for key in ("id", "published_utc", "published_taipei", "source", "tier", "lang", "title", "link",
+        for key in ("id", "published_utc", "published_taipei", "source", "tier", "lang", "title", "link", "url",
                     "symbols", "topics"):
             self.assertIn(key, it)
         self.assertEqual(len(it["id"]), 16)
@@ -165,6 +199,50 @@ class NewsTest(unittest.TestCase):
         self.assertIn("T2A｜Reuters｜Nvidia shares rise on new AI deal", md)
         self.assertNotIn("Barclays", md.split("## NVDA")[1].split("##")[0])
 
+    def test_original_urls(self):
+        doc, fed, md, meta = self.run_main()
+        deal = self.item(doc, "Nvidia shares rise")
+        self.assertEqual(deal["url"], "https://publisher.example/" + gid("Nvidia shares rise on new AI deal"))
+        self.assertTrue(deal["link"].startswith(GN_BASE))  # 原本的 link 保留
+        self.assertEqual(self.item(doc, "Trump threatens")["url"],
+                         "https://publisher.example/" + gid("Trump threatens new tariffs on chips"))
+        self.assertEqual(self.item(doc, "台積電法說會")["url"], "https://publisher.example/" + gid("台積電法說會釋出樂觀展望"))
+        self.assertIsNone(self.item(doc, "Nvidia stock")["url"])  # tier 4 不解
+        self.assertIsNone(self.item(doc, "Banks rally")["url"])  # 拿不到簽章 → null，不放 Google 網址
+        fed_item = self.item(doc, "Federal Reserve issues")
+        self.assertEqual(fed_item["url"], fed_item["link"])  # Fed 的 link 本來就是原文
+        u = doc["stats"]["url"]
+        self.assertEqual((u["failed"], u["stopped"]), (1, None))
+        self.assertEqual(u["ok"], u["target"] - 1)
+        h = meta["datasets"]["news/headlines"]
+        self.assertEqual((h["url_ok"], h["url_total"]), (u["ok"], u["target"]))
+
+    def test_url_reused_and_old_items_skipped(self):
+        prev = {"items": [
+            {"title": "Nvidia cached headline", "source": "Reuters", "source_url": "https://www.reuters.com", "tier": 2,
+             "lang": "en", "queries": ["NVDA"], "also": [], "link": GN_BASE + "CachedReuters",
+             "url": "https://www.reuters.com/cached", "published_utc": "2026-10-21T20:00:00Z"},
+            {"title": "Nvidia earlier headline kept", "source": "Reuters", "source_url": "https://www.reuters.com",
+             "tier": 2, "lang": "en", "queries": ["NVDA"], "also": [], "link": GN_BASE + "OlderThan36h",
+             "published_utc": "2026-10-20T03:00:00Z"}]}
+        doc, *_ = self.run_main(previous=prev)
+        self.assertEqual(self.item(doc, "Nvidia cached headline")["url"], "https://www.reuters.com/cached")
+        self.assertNotIn("CachedReuters", PAGES)  # 解過的不再讀文章頁
+        self.assertIsNone(self.item(doc, "Nvidia earlier headline kept")["url"])  # 超過 36 小時不解
+        self.assertNotIn("OlderThan36h", PAGES)
+        self.assertGreaterEqual(doc["stats"]["url"]["cached"], 1)
+
+    def test_url_stops_when_whole_batch_fails(self):
+        def down(url, timeout=20):
+            raise RuntimeError("HTTP 429")
+        doc, *_ = self.run_main(page=down)
+        u = doc["stats"]["url"]
+        self.assertEqual(u["new"], 0)
+        self.assertIn("限速", u["stopped"])
+        self.assertTrue(u["notes"])
+        self.assertFalse(any("限速" in e for e in doc["errors"]))  # 網址解不開不算進 errors
+        self.assertTrue(all(it["url"] is None for it in doc["items"] if it["source"] != "Federal Reserve"))
+
     def test_previous_items_kept_within_window_including_old_format(self):
         prev = {"items": [
             {"title": "Nvidia earlier headline kept", "source": "Reuters", "source_url": "https://www.reuters.com",
@@ -199,6 +277,9 @@ class NewsTest(unittest.TestCase):
         self.assertTrue(news.term_hit("fed", "fed's powell signals pause"))
         self.assertFalse(news.term_hit("apple", "pineapple prices jump"))
         self.assertTrue(news.term_hit("export control", "us tightens export controls"))
+        self.assertEqual(news.gn_article_id(GN_BASE + "CBMiabc?oc=5"), "CBMiabc")
+        self.assertIsNone(news.gn_article_id("https://www.reuters.com/x"))
+        self.assertFalse(news.good_url("https://news.google.com/rss/articles/x"))
 
 
 if __name__ == "__main__":

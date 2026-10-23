@@ -36,6 +36,10 @@
     "query_when": "2d",
     "low_tier_per_topic": 20,
     "off_title_per_topic": 10,
+    "url_hours": 36,
+    "url_max_per_run": 600,
+    "url_budget_seconds": 240,
+    "url_workers": 5,
     "en": [
       {"id": "NVDA",   "q": "Nvidia",                                          "symbols": ["NVDA"],          "match": ["nvidia"]},
       {"id": "TSLA",   "q": "Tesla",                                           "symbols": ["TSLA"],          "match": ["tesla"]},

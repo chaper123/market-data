@@ -16,6 +16,8 @@ symbols 只依標題判斷（查詢關鍵字，以及兩檔主動 ETF 前十大�
 （fed、tariff、export_controls、china、taiwan、oil、war、cpi、jobs 等）；queries 是找到它的查詢；
 標題沒提到查詢關鍵字的（Google 依內文找到）每個查詢最多留 off_title_per_topic 則；時間換成台北時間；
 保留最近 window_hours 小時（會合併上一次的輸出）。
+url：Tier 1～2、最近 url_hours 小時的項目解開 Google News 轉址得到原文網址（讀文章頁拿簽章、再呼叫 batchexecute，
+一次 10 則；解過的沿用；每次有數量與時間上限），解不開或範圍外是 null；Fed 的 link 本來就是原文。
 
 輸出：
   data/news/headlines.json  generated_at_taipei、window_hours、status、feeds[]、errors[]、items[]（見 README）
@@ -24,6 +26,7 @@ symbols 只依標題判斷（查詢關鍵字，以及兩檔主動 ETF 前十大�
   data/meta.json            只更新 datasets 的 news/headlines、news/fed（推回 repo 時由 publish.py 合併）
 """
 import datetime as dt
+import gzip
 import hashlib
 import json
 import os
@@ -31,10 +34,12 @@ import re
 import sys
 import time
 import urllib.parse
+import urllib.request
 import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor
 from email.utils import parsedate_to_datetime
 
-from common import DATA, NOW, ROOT, TPE, UTC, http, write_json
+from common import DATA, NOW, ROOT, TPE, UA, UTC, http, write_json
 
 OUT_JSON = os.path.join(DATA, "news", "headlines.json")
 OUT_FED = os.path.join(DATA, "news", "fed.json")
@@ -43,6 +48,11 @@ META = os.path.join(DATA, "meta.json")
 GN = "https://news.google.com/rss/search?q={q}&{loc}"
 LOC = {"en": "hl=en-US&gl=US&ceid=US:en", "zh": "hl=zh-TW&gl=TW&ceid=TW:zh-Hant"}
 TIER_NAMES = {1: "官方", 2: "主要媒體", 3: "第一手發言", 4: "其他"}
+GN_ARTICLE = "https://news.google.com/rss/articles/{}"
+GN_BATCH = "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+GN_REQ = ('["garturlreq",[["X","X",["X","X"],null,null,1,1,"US:en",null,1,null,null,null,null,null,0,1],'
+          '"X","X",1,[1,1,1],1,1,null,0,0,null,0],{gid},{ts},{sg}]')
+BATCH_SIZE = 10
 SIMILAR = 0.8
 
 
@@ -225,6 +235,116 @@ def fed(cfg, errors):
     return sorted(out, key=lambda x: x["published"], reverse=True), feeds
 
 
+# ---------------------------------------------------------------- 原文網址（解開 Google News 轉址）
+def gn_article_id(link):
+    p = urllib.parse.urlparse(link or "")
+    if p.netloc != "news.google.com" or "/articles/" not in p.path:
+        return None
+    return p.path.rsplit("/", 1)[-1]
+
+
+def good_url(url):
+    return isinstance(url, str) and url.startswith(("http://", "https://")) and domain(url) != "news.google.com"
+
+
+def fetch_page(url, timeout=20):
+    """要 gzip（約 600 KB 的頁面壓成 120 KB）。"""
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Encoding": "gzip"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        raw = r.read()
+        return gzip.decompress(raw) if r.headers.get("Content-Encoding") == "gzip" else raw
+
+
+def signature(gid):
+    """新版連結（CBMi…）要先讀文章頁取得簽章 data-n-a-ts、data-n-a-sg（在頁面最後面）。"""
+    html = fetch_page(GN_ARTICLE.format(gid)).decode("utf-8", "replace")
+    ts, sg = re.search(r'data-n-a-ts="(\d+)"', html), re.search(r'data-n-a-sg="([^"]+)"', html)
+    if not ts or not sg:
+        raise RuntimeError("文章頁沒有簽章")
+    return ts.group(1), sg.group(1)
+
+
+def batch_decode(entries):
+    """entries：[(gid, ts, sg)]。一次呼叫 batchexecute 解多則，回傳 {gid: 原文網址}（解不開的不列）。"""
+    req = [[["Fbv4je", GN_REQ.format(gid=json.dumps(g), ts=ts, sg=json.dumps(sg)), None, str(k + 1)]
+            for k, (g, ts, sg) in enumerate(entries)]]
+    body = ("f.req=" + urllib.parse.quote(json.dumps(req, separators=(",", ":")))).encode()
+    code, raw = http(GN_BATCH, data=body, tries=2,
+                     headers={"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"})
+    if code != 200:
+        raise RuntimeError(f"batchexecute HTTP {code}")
+    out = {}
+    for line in raw.decode("utf-8", "replace").splitlines():
+        if not line.strip().startswith("["):
+            continue
+        try:
+            rows = json.loads(line)
+        except ValueError:
+            continue
+        for e in rows:
+            if not (isinstance(e, list) and len(e) > 6 and e[:2] == ["wrb.fr", "Fbv4je"] and e[2]):
+                continue
+            try:
+                payload, k = json.loads(e[2]), int(e[6]) - 1
+            except (ValueError, TypeError):
+                continue
+            if 0 <= k < len(entries) and len(payload) > 1 and good_url(payload[1]):
+                out[entries[k][0]] = payload[1]
+    return out
+
+
+def resolve_urls(items, cfg, now, cache, notes):
+    """替 Tier 1～2、最近 url_hours 小時的 Google News 連結解出原文網址（url）。解過的依 id 沿用（cache）；
+    每次最多 url_max_per_run 則、url_budget_seconds 秒，優先順序：等級、rank A、標題相關、時間新。
+    整批 10 則都失敗（多半是被限速）就停，剩下的留到下次。狀況記在 notes（不算進 errors）。回傳統計。"""
+    for it in items:
+        if not it.get("url"):
+            it["url"] = cache.get(item_id(it)) or (it["link"] if good_url(it.get("link")) else None)
+    since = now - dt.timedelta(hours=cfg.get("url_hours", 36))
+    target = [it for it in items if it["tier"] <= 2 and it["published"] >= since]
+    cached = sum(1 for it in target if it["url"])
+    todo = sorted((it for it in target if not it["url"] and gn_article_id(it.get("link"))),
+                  key=lambda x: (x["tier"], x.get("rank") or "Z", not x["title_match"], -x["published"].timestamp()))
+    limit = cfg.get("url_max_per_run", 600)
+    left, todo = max(0, len(todo) - limit), todo[:limit]
+    deadline = time.monotonic() + cfg.get("url_budget_seconds", 240)
+    new = failed = 0
+    stopped = None
+    with ThreadPoolExecutor(max_workers=cfg.get("url_workers", 5)) as pool:
+        for i in range(0, len(todo), BATCH_SIZE):
+            if time.monotonic() > deadline:
+                stopped = "超過時間上限"
+                break
+            chunk = todo[i:i + BATCH_SIZE]
+            ids = [gn_article_id(it["link"]) for it in chunk]
+            sigs = []
+            for g, f in zip(ids, [pool.submit(signature, g) for g in ids]):
+                try:
+                    sigs.append((g, *f.result()))
+                except Exception:  # noqa: BLE001 — 單則失敗就留 null
+                    pass
+            urls = {}
+            if sigs:
+                try:
+                    urls = batch_decode(sigs)
+                except Exception as ex:  # noqa: BLE001
+                    notes.append(f"batchexecute：{ex}")
+            for it, g in zip(chunk, ids):
+                if urls.get(g):
+                    it["url"], new = urls[g], new + 1
+                else:
+                    failed += 1
+            if not urls:
+                stopped = "整批 10 則都解不開（可能被 Google 限速）"
+                break
+    left += len(todo) - new - failed
+    if stopped:
+        notes.append(f"{stopped}，剩 {left} 則留到下次")
+    ok = sum(1 for it in target if it["url"])
+    return {"hours": cfg.get("url_hours", 36), "target": len(target), "ok": ok, "cached": cached, "new": new,
+            "failed": failed, "left": left, "stopped": stopped}
+
+
 # ---------------------------------------------------------------- 輸出
 def tpe(t):
     return t.astimezone(TPE).strftime("%Y-%m-%d %H:%M")
@@ -241,7 +361,7 @@ def item_id(it):
 def serialize(it):
     return {"id": item_id(it), "published_utc": utc_text(it["published"]), "published_taipei": tpe(it["published"]),
             "source": it["source"], "source_url": it.get("source_url"), "tier": it["tier"], "rank": it.get("rank"),
-            "lang": it["lang"], "title": it["title"], "link": it["link"], "symbols": it["symbols"],
+            "lang": it["lang"], "title": it["title"], "link": it["link"], "url": it.get("url"), "symbols": it["symbols"],
             "topics": it["topics"], "queries": it["queries"], "title_queries": it["title_queries"],
             "title_match": it["title_match"], "also": it["also"]}
 
@@ -265,7 +385,8 @@ def load_previous(path, tiers):
         queries = it.get("queries") or (it.get("topics") if isinstance(it.get("tier"), str) else None) or []
         out.append({"title": it["title"], "link": it.get("link"), "source": it.get("source", ""),
                     "source_url": it.get("source_url"), "published": t, "tier": tier, "rank": rank,
-                    "lang": it.get("lang", "en"), "queries": list(queries), "also": list(it.get("also", []))})
+                    "lang": it.get("lang", "en"), "queries": list(queries), "also": list(it.get("also", [])),
+                    "url": it.get("url")})
     return out
 
 
@@ -317,7 +438,8 @@ def update_meta(doc, fed_doc):
                             "last": doc["generated_at_taipei"], "items": doc["stats"]["total"],
                             "by_tier": doc["stats"]["by_tier"],
                             "feeds_ok": f"{sum(f['ok'] for f in doc['feeds'])}/{len(doc['feeds'])}",
-                            "errors": len(doc["errors"])}
+                            "errors": len(doc["errors"]), "url_ok": doc["stats"]["url"]["ok"],
+                            "url_total": doc["stats"]["url"]["target"]}
     fed_ok = all(f["ok"] for f in fed_doc["feeds"])
     ds["news/fed"] = {"status": "ok" if fed_ok else "fail", "source": "federalreserve.gov RSS",
                       "last": fed_doc["items"][0]["date"] if fed_doc["items"] else None,
@@ -335,7 +457,11 @@ def main():
         for e in errors:
             print(" -", e, file=sys.stderr)
         sys.exit(1)
-    items = build(cfg, fresh, load_previous(OUT_JSON, cfg["tiers"]), fed_items, NOW)
+    previous = load_previous(OUT_JSON, cfg["tiers"])
+    items = build(cfg, fresh, previous, fed_items, NOW)
+    url_notes = []
+    url_stats = resolve_urls(items, cfg, NOW, {item_id(p): p["url"] for p in previous if p.get("url")}, url_notes)
+    url_stats["notes"] = url_notes
     by_tier, by_symbol, by_topic = {}, {}, {}
     for it in items:
         by_tier[str(it["tier"])] = by_tier.get(str(it["tier"]), 0) + 1
@@ -347,7 +473,8 @@ def main():
     doc = {"generated_at_taipei": tpe(NOW), "generated_at_utc": utc_text(NOW), "window_hours": cfg["window_hours"],
            "status": "ok" if not errors else "partial", "tiers": {str(k): v for k, v in TIER_NAMES.items()},
            "feeds": all_feeds, "errors": errors,
-           "stats": {"total": len(items), "by_tier": by_tier, "by_symbol": by_symbol, "by_topic": by_topic},
+           "stats": {"total": len(items), "by_tier": by_tier, "by_symbol": by_symbol, "by_topic": by_topic,
+                     "url": url_stats},
            "sec_8k": {"status": "未啟用", "note": "等存聯絡信箱的 Actions secret 建好後加入"},
            "items": [serialize(it) for it in items]}
     fed_doc = {"generated_at_taipei": tpe(NOW), "days": cfg.get("fed_days", 7), "feeds": fed_feeds,
@@ -360,7 +487,8 @@ def main():
         f.write(markdown(doc, fed_doc, cfg["en"] + cfg["zh"]) + "\n")
     update_meta(doc, fed_doc)
     print(json.dumps(doc["stats"]["by_tier"], ensure_ascii=False), "total", len(items), "fed", len(fed_items),
-          "feeds ok", f"{sum(f['ok'] for f in all_feeds)}/{len(all_feeds)}")
+          "feeds ok", f"{sum(f['ok'] for f in all_feeds)}/{len(all_feeds)}",
+          "url", json.dumps(url_stats, ensure_ascii=False))
     for e in errors:
         print(" -", e)
 

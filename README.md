@@ -62,6 +62,7 @@ CSV 欄位：`date,volume,open,high,low,close`（無表頭），與排程任務�
 
 - 頂層：`generated_at_taipei`、`window_hours`（72）、`feeds[]`（`name`、`ok`、`count`，失敗時多一個 `error`）、`errors[]`、`items[]`。
 - `items[]`：`id`（Google News 連結 SHA-1 的前 16 碼）、`published_utc`、`published_taipei`、`source`、`tier`、`lang`、`title`、`link`（Google News 轉址連結）、`symbols`、`topics`。
+- `url`：原文網址（出版商網址）。Tier 1～2、最近 36 小時（`config.json` 的 `news.url_hours`）的項目，把 Google News 轉址解開取得：先讀文章頁拿簽章，再呼叫 Google 的 batchexecute（一次 10 則）；解過的依 `id` 沿用到下一次；每次最多 600 則、240 秒，整批都解不開（多半是被限速）就停、剩下的留到下次。解不開或不在範圍內是 `null`（不會放 Google 網址）；Fed 的 `link` 本來就是原文，`url` 同 `link`。`link` 照舊保留。解碼狀況在 `stats.url`（`target` 範圍內則數、`ok` 有網址、`cached` 沿用、`new` 本次解開、`failed`、`left` 留到下次、`stopped`、`notes`），meta 的 `news/headlines` 有 `url_ok`／`url_total`。解不開不算進 `errors`，不影響 `status`。
 - `tier`：1 官方（Fed、政府與監管機關、交易所、公司 IR 與新聞稿、PR Newswire 等新聞稿通路）、2 主要媒體、3 第一手發言（公司部落格等）、4 其他。依 RSS 的來源網址對照 `config.json` 的 `news.tiers` 判斷。
 - `symbols`：只看標題——提到查詢的關鍵字（Nvidia → NVDA、台積電 → 2330 與 TSM 等），或兩檔主動 ETF 前十大的台股名稱（台光電 → 2383）。沒有 symbols 的也保留。
 - `topics`：依 `news.topic_rules` 的標題關鍵字（中英文），目前有 fed、tariff、export_controls、china、taiwan、oil、war、cpi、jobs、earnings、antitrust、merger。
@@ -72,7 +73,7 @@ CSV 欄位：`date,volume,open,high,low,close`（無表頭），與排程任務�
 - `window_hours` 是 72（約定範例寫 36）：第二層自己依時間窗篩選。Fed 的 tier 1 項目一律保留 7 天，不受 72 小時限制。
 - 多出的欄位：頂層 `generated_at_utc`、`status`（ok／partial）、`tiers`（等級說明）、`stats`（依等級、標的、主題的則數）、`sec_8k`（目前「未啟用」）；`items[]` 的 `source_url`、`rank`（tier 2 再分 A 通訊社與一線財經媒體、B 其他主要財經媒體）、`queries`（找到它的查詢）、`title_queries`（標題提到的查詢）、`title_match`（標題有沒有提到查詢關鍵字或成分股；false 是 Google 依內文找到的，每個查詢最多留 10 則）、`also`。
 - tier 3（第一手發言）只能從來源網址判斷（目前是 NVIDIA Blog、NVIDIA Developer 這類），川普 Truth Social、X 不在 RSS 裡，仍要第二層自己查。
-- `meta.json` 的 `news/headlines`：`status`、`last`（＝`generated_at_taipei`）、`items`、`by_tier`、`feeds_ok`、`errors`；`news/fed`：`status`、`last`（最新一則的日期）、`checked_at_taipei`、`items`。meta 只由 news.yml 更新這兩項；fetch.yml 推送時保留它們（`publish.py`）。
+- `meta.json` 的 `news/headlines`：`status`、`last`（＝`generated_at_taipei`）、`items`、`by_tier`、`feeds_ok`、`errors`、`url_ok`、`url_total`；`news/fed`：`status`、`last`（最新一則的日期）、`checked_at_taipei`、`items`。meta 只由 news.yml 更新這兩項；fetch.yml 推送時保留它們（`publish.py`）。
 
 ## 測試
 
