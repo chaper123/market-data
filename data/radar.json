@@ -1,6 +1,6 @@
 {
  "generated_from": "repo 日線（indicators.py）；綜合評分來自 TradingView",
- "tv_fetched_at_taipei": "2026-10-23 07:57",
+ "tv_fetched_at_taipei": "2026-10-23 08:51",
  "rules": {
   "trend_adx": 25,
   "range_adx": 20
