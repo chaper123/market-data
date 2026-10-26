@@ -1,10 +1,10 @@
 {
- "fetched_at_taipei": "2026-10-23 10:05:13",
- "mis_time": "20261023 10:05:14",
- "session": "盤中",
- "is_trading": true,
- "trading_day": true,
- "note": "盤中：價格是最後成交價，time 是成交時間",
+ "fetched_at_taipei": "2026-10-26 10:05:11",
+ "mis_time": "20261026 10:05:13",
+ "session": "休市日",
+ "is_trading": false,
+ "trading_day": false,
+ "note": "非交易時段（休市日）：價格是最近一個交易日的資料（2026-10-22 13:30:00～2026-10-22 13:33:00）",
  "status": "ok",
  "source": "mis.twse.com.tw getStockInfo",
  "quotes": {
