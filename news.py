@@ -367,7 +367,8 @@ DATE_PATTERNS = (  # 原文頁的發布時間，依序找
 
 
 def batch_keys(fresh, minimum):
-    """同一次抓取中，同一來源有 minimum 則以上（不同標題）的發布時間完全相同 → {(來源, 時間): 則數}。官方不算。
+    """同一次抓取（加上上一次留下、還沒檢查過的）中，同一來源有 minimum 則以上（不同標題）的發布時間完全相同
+    → {(來源, 時間): 則數}。官方不算。
     Google News 重新索引時會把一批舊文標成同一個時間（10/26 經濟日報 52 則都是 10/24 17:00，實際是 10/13～10/22）。"""
     groups = {}
     for it in fresh:
@@ -438,7 +439,7 @@ def check_times(items, fresh, cfg, now, cache, notes):
              "detected": 0, "fixed": 0, "changed": 0, "fixed_out_of_window": 0, "removed": 0, "cached": 0}
 
     def suspect(it):
-        return it["tier"] != 1 and (it["source"], it["published"]) in keys
+        return it["tier"] != 1 and not it.get("time_fixed_from") and (it["source"], it["published"]) in keys
 
     suspects = [it for it in items if suspect(it)]
     stats["detected"] = len(suspects)
@@ -642,7 +643,10 @@ def main():
     previous = load_previous(OUT_JSON, cfg["tiers"])
     items = build(cfg, fresh, previous, fed_items, NOW)
     check_cache, time_notes = load_check_cache(OUT_JSON, NOW), []
-    items, suspects, time_stats = check_times(items, fresh, cfg, NOW, check_cache, time_notes)
+    # 上一次留下、還沒檢查過的也一起算：同一批舊文下一次可能被標成另一個時間（10/26 08:20 是 10/24 17:00，
+    # 17:06 變成 10/25 17:00），合併時會保留較早的那個時間
+    unchecked = [p for p in previous if not p.get("time_fixed_from")]
+    items, suspects, time_stats = check_times(items, fresh + unchecked, cfg, NOW, check_cache, time_notes)
     time_stats["notes"] = time_notes
     url_notes = []
     url_stats = resolve_urls(items, cfg, NOW, {item_id(p): p["url"] for p in previous if p.get("url")}, url_notes)

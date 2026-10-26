@@ -387,6 +387,18 @@ class TimeSuspectTest(unittest.TestCase):
         self.assertEqual(again["published_taipei"], "2026-10-24 16:58")
         self.assertEqual(again["time_fixed_from"]["published_taipei"], "2026-10-24 17:00")
 
+    def test_old_batch_from_previous_run_is_checked(self):
+        # 上一次（舊程式）留下同一批、標成另一個時間（10/24 08:00）的 5 則，這次 Google 改標 10/24 17:00
+        prev = {"items": [dict(title=t, source="經濟日報", source_url="https://money.udn.com", tier=2, rank="B", lang="zh",
+                               queries=["2330"], also=[], link=GN_BASE + gid(t), url=None,
+                               published_utc="2026-10-24T00:00:00Z") for t in UDN_BATCH]}
+        doc, _ = self.run_main(previous=prev)
+        titles = {it["title"]: it for it in doc["items"]}
+        self.assertEqual(titles["法人週末看台積電後市"]["published_taipei"], "2026-10-24 16:58")
+        self.assertEqual(titles["法人週末看台積電後市"]["time_fixed_from"]["published_taipei"], "2026-10-24 08:00")
+        self.assertFalse(any(it["source"] == "經濟日報" and it["time_fixed_from"] is None for it in doc["items"]))
+        self.assertEqual([s["title"] for s in doc["suspect_items"]], ["台積電專欄沒有日期"])
+
     def item(self, doc, prefix):
         return next(it for it in doc["items"] if it["title"].startswith(prefix))
 
