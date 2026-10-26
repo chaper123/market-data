@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-10-26T05:15:04Z",
- "generated_at_taipei": "2026-10-26 13:15",
+ "generated_at_utc": "2026-10-26T06:59:13Z",
+ "generated_at_taipei": "2026-10-26 14:59",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -233,7 +233,7 @@
   "tv/snapshot": {
    "status": "ok",
    "symbols": 13,
-   "tw_bar_is_intraday": true,
+   "tw_bar_is_intraday": false,
    "us_bar_is_intraday": false
   },
   "fx/usdtwd_mid": {
@@ -242,7 +242,7 @@
    "rows": 516,
    "first": "2024-10-28",
    "last": "2026-10-26",
-   "last_rate": 32.56
+   "last_rate": 32.576
   },
   "macro/SPX": {
    "status": "ok",
@@ -283,8 +283,8 @@
   "macro/VIX": {
    "status": "ok",
    "source": "yahoo ^VIX",
-   "rows": 504,
-   "first": "2024-10-23",
+   "rows": 501,
+   "first": "2024-10-28",
    "last": "2026-10-23",
    "last_close": 19.450000762939453,
    "prev_close": 19.030000686645508,
@@ -599,7 +599,7 @@
  },
  "errors": [],
  "us_cutoff_ny": "2026-10-25",
- "tw_cutoff_taipei": "2026-10-25",
+ "tw_cutoff_taipei": "2026-10-26",
  "summary": {
   "ok": 45,
   "stale": 0,
