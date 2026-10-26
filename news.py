@@ -18,6 +18,9 @@ symbols 只依標題判斷（查詢關鍵字，以及兩檔主動 ETF 前十大�
 保留最近 window_hours 小時（會合併上一次的輸出）。
 url：Tier 1～2、最近 url_hours 小時的項目解開 Google News 轉址得到原文網址（讀文章頁拿簽章、再呼叫 batchexecute，
 一次 10 則；解過的沿用；每次有數量與時間上限），解不開或範圍外是 null；Fed 的 link 本來就是原文。
+發布時間可疑：同一次抓取中同一來源有 time_suspect_min 則以上發布時間完全相同（Google 重新索引時會把一批舊文標成同一個
+時間），就讀原文頁（JSON-LD datePublished、article:published_time 等，最後看網址裡的日期）找回日期：找得回來就改正並記
+time_fixed_from，改正後超出時間窗的拿掉；找不回來的移到頂層 suspect_items（附 suspect_reason）。結果存在 time_check_cache。
 
 輸出：
   data/news/headlines.json  generated_at_taipei、window_hours、status、feeds[]、errors[]、items[]（見 README）
@@ -293,6 +296,23 @@ def batch_decode(entries):
     return out
 
 
+def decode_chunk(pool, ids, notes):
+    """一批（最多 10 則）Google News 文章 id：並行讀文章頁拿簽章，再一次 batchexecute。回傳 {id: 原文網址}。"""
+    sigs = []
+    for g, f in zip(ids, [pool.submit(signature, g) for g in ids]):
+        try:
+            sigs.append((g, *f.result()))
+        except Exception:  # noqa: BLE001 — 單則失敗就留 null
+            pass
+    if not sigs:
+        return {}
+    try:
+        return batch_decode(sigs)
+    except Exception as ex:  # noqa: BLE001
+        notes.append(f"batchexecute：{ex}")
+        return {}
+
+
 def resolve_urls(items, cfg, now, cache, notes):
     """替 Tier 1～2、最近 url_hours 小時的 Google News 連結解出原文網址（url）。解過的依 id 沿用（cache）；
     每次最多 url_max_per_run 則、url_budget_seconds 秒，優先順序：等級、rank A、標題相關、時間新。
@@ -317,18 +337,7 @@ def resolve_urls(items, cfg, now, cache, notes):
                 break
             chunk = todo[i:i + BATCH_SIZE]
             ids = [gn_article_id(it["link"]) for it in chunk]
-            sigs = []
-            for g, f in zip(ids, [pool.submit(signature, g) for g in ids]):
-                try:
-                    sigs.append((g, *f.result()))
-                except Exception:  # noqa: BLE001 — 單則失敗就留 null
-                    pass
-            urls = {}
-            if sigs:
-                try:
-                    urls = batch_decode(sigs)
-                except Exception as ex:  # noqa: BLE001
-                    notes.append(f"batchexecute：{ex}")
+            urls = decode_chunk(pool, ids, notes)
             for it, g in zip(chunk, ids):
                 if urls.get(g):
                     it["url"], new = urls[g], new + 1
@@ -343,6 +352,176 @@ def resolve_urls(items, cfg, now, cache, notes):
     ok = sum(1 for it in target if it["url"])
     return {"hours": cfg.get("url_hours", 36), "target": len(target), "ok": ok, "cached": cached, "new": new,
             "failed": failed, "left": left, "stopped": stopped}
+
+
+# ---------------------------------------------------------------- 發布時間可疑（Google 重新索引）
+DATE_PATTERNS = (  # 原文頁的發布時間，依序找
+    ("datePublished", r'"datePublished"\s*:\s*"([^"]+)"'),
+    ("article:published_time", r'<meta[^>]+(?:property|name)="(?:article:published_time|og:published_time)"[^>]*'
+                               r'content="([^"]+)"'),
+    ("article:published_time", r'<meta[^>]+content="([^"]+)"[^>]+(?:property|name)="(?:article:published_time|'
+                               r'og:published_time)"'),
+    ("itemprop datePublished", r'<meta[^>]+itemprop="datePublished"[^>]+content="([^"]+)"'),
+    ("meta pubdate", r'<meta[^>]+name="(?:pubdate|publishdate|date)"[^>]+content="([^"]+)"'),
+)
+
+
+def batch_keys(fresh, minimum):
+    """同一次抓取中，同一來源有 minimum 則以上（不同標題）的發布時間完全相同 → {(來源, 時間): 則數}。官方不算。
+    Google News 重新索引時會把一批舊文標成同一個時間（10/26 經濟日報 52 則都是 10/24 17:00，實際是 10/13～10/22）。"""
+    groups = {}
+    for it in fresh:
+        if it.get("tier") != 1:
+            groups.setdefault((it["source"], it["published"]), set()).add(it["title"].lower())
+    return {k: len(v) for k, v in groups.items() if len(v) >= minimum}
+
+
+def parse_when(text, default_tz):
+    """ISO 8601（+08:00、+0800、Z）或「YYYY-MM-DD HH:MM[:SS]」；沒有時區就用 default_tz。"""
+    s = re.sub(r"([+-]\d{2})(\d{2})$", r"\1:\2", text.strip().replace("Z", "+00:00"))
+    for fmt in (None, "%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M", "%Y/%m/%d %H:%M:%S", "%Y/%m/%d %H:%M", "%Y-%m-%d"):
+        try:
+            t = dt.datetime.fromisoformat(s) if fmt is None else dt.datetime.strptime(s, fmt)
+        except ValueError:
+            continue
+        return (t if t.tzinfo else t.replace(tzinfo=default_tz)).astimezone(UTC)
+    return None
+
+
+def page_date(html, default_tz):
+    for method, pat in DATE_PATTERNS:
+        m = re.search(pat, html, re.I)
+        t = parse_when(m.group(1), default_tz) if m else None
+        if t:
+            return t, method
+    return None, None
+
+
+def url_date(url, default_tz):
+    """網址裡的日期（/2026/10/26/、/news/20261025700017），只有日期，時間記當地 00:00。"""
+    path = urllib.parse.urlparse(url or "").path
+    m = (re.search(r"/(20\d{2})/(\d{1,2})/(\d{1,2})(?:/|$)", path)
+         or re.search(r"(?<!\d)(20\d{2})(\d{2})(\d{2})", path))
+    if not m:
+        return None
+    try:
+        return dt.datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)), tzinfo=default_tz).astimezone(UTC)
+    except ValueError:
+        return None
+
+
+def recover_date(url, default_tz, now):
+    """讀原文頁找發布時間；找不到再看網址裡的日期。回傳 (UTC 時間, 方法)，都找不到就丟例外。"""
+    t, method = None, None
+    try:
+        t, method = page_date(fetch_page(url).decode("utf-8", "replace"), default_tz)
+    except Exception as ex:  # noqa: BLE001 — 讀不到原文頁就看網址
+        method = f"原文頁讀取失敗（{str(ex)[:80]}）"
+    if not t:
+        t = url_date(url, default_tz)
+        method = "網址日期" if t else method
+    if not t:
+        raise RuntimeError(method or "原文頁與網址都沒有日期")
+    if not now - dt.timedelta(days=400) <= t <= now + dt.timedelta(hours=2):
+        raise RuntimeError(f"找到的日期不合理（{utc_text(t)}）")
+    return t, method
+
+
+def check_times(items, fresh, cfg, now, cache, notes):
+    """偵測批次相同時間的標題（time_suspect），從原文找回日期：找得回來就改正 published 並記 time_fixed_from，
+    改正後超出時間窗的直接拿掉；找不回來的移出 items（回傳 moved，放在頂層 suspect_items）。
+    沒有原文網址的先解開；結果存在 cache（依 id），下次沿用。每次最多 time_check_max 則、time_check_seconds 秒。"""
+    minimum = cfg.get("time_suspect_min", 5)
+    keys = batch_keys(fresh, minimum)
+    stats = {"threshold": minimum,
+             "groups": [{"source": s, "published_taipei": tpe(p), "count": n} for (s, p), n in sorted(keys.items())],
+             "detected": 0, "fixed": 0, "changed": 0, "fixed_out_of_window": 0, "removed": 0, "cached": 0}
+
+    def suspect(it):
+        return it["tier"] != 1 and (it["source"], it["published"]) in keys
+
+    suspects = [it for it in items if suspect(it)]
+    stats["detected"] = len(suspects)
+    if not suspects:
+        return items, [], stats
+    results, todo = {}, []  # results：id → (時間或 None, 方法或原因)
+    for it in suspects:
+        c = cache.get(item_id(it)) or {}
+        if c.get("published_utc"):
+            t = dt.datetime.strptime(c["published_utc"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=UTC)
+            results[item_id(it)] = (t, c["by"])
+            stats["cached"] += 1
+        elif c.get("attempts", 0) >= 3:
+            results[item_id(it)] = (None, c.get("reason", "找不回日期"))
+            stats["cached"] += 1
+        else:
+            todo.append(it)
+    limit = cfg.get("time_check_max", 200)
+    for it in todo[limit:]:
+        results[item_id(it)] = (None, "超過每次檢查的數量上限，下次再試")
+    todo = todo[:limit]
+    tried = {item_id(it) for it in todo}
+    deadline = time.monotonic() + cfg.get("time_check_seconds", 120)
+    with ThreadPoolExecutor(max_workers=cfg.get("url_workers", 5)) as pool:
+        need = [it for it in todo if not it.get("url") and gn_article_id(it.get("link"))]
+        for i in range(0, len(need), BATCH_SIZE):
+            if time.monotonic() > deadline:
+                notes.append("解原文網址超過時間上限")
+                break
+            chunk = need[i:i + BATCH_SIZE]
+            urls = decode_chunk(pool, [gn_article_id(it["link"]) for it in chunk], notes)
+            for it in chunk:
+                it["url"] = urls.get(gn_article_id(it["link"]))
+        futures = {}
+        for it in todo:
+            if it.get("url"):
+                tz = TPE if it["lang"] == "zh" or domain(it["url"]).endswith(".tw") else UTC
+                futures[item_id(it)] = pool.submit(recover_date, it["url"], tz, now)
+        for it in todo:
+            f = futures.get(item_id(it))
+            if f is None:
+                results[item_id(it)] = (None, "沒有原文網址")
+                continue
+            try:
+                results[item_id(it)] = f.result(timeout=max(1.0, deadline - time.monotonic()))
+            except Exception as ex:  # noqa: BLE001
+                results[item_id(it)] = (None, str(ex)[:120] or type(ex).__name__)
+    since = now - dt.timedelta(hours=cfg["window_hours"])
+    kept, moved = [], []
+    for it in items:
+        if not suspect(it):
+            kept.append(it)
+            continue
+        t, how = results[item_id(it)]
+        old = cache.get(item_id(it)) or {}
+        if t is None:
+            cache[item_id(it)] = {"reason": how, "attempts": old.get("attempts", 0) + (item_id(it) in tried),
+                                  "checked_at": utc_text(now)}
+            moved.append(dict(it, time_suspect=True, suspect_reason=how))
+            continue
+        cache[item_id(it)] = {"published_utc": utc_text(t), "by": how, "checked_at": utc_text(now)}
+        stats["fixed"] += 1
+        if abs((t - it["published"]).total_seconds()) >= 60:
+            stats["changed"] += 1
+        it["time_fixed_from"] = {"published_utc": utc_text(it["published"]), "published_taipei": tpe(it["published"]),
+                                 "by": how}
+        it["published"] = t
+        if t >= since:
+            kept.append(it)
+        else:
+            stats["fixed_out_of_window"] += 1
+    stats["removed"] = len(moved)
+    return sorted(kept, key=lambda x: x["published"], reverse=True), moved, stats
+
+
+def load_check_cache(path, now, days=14):
+    """上一次輸出的 time_check_cache，只留最近 days 天檢查過的。"""
+    try:
+        cache = json.load(open(path, encoding="utf-8")).get("time_check_cache", {})
+    except Exception:  # noqa: BLE001
+        return {}
+    since = utc_text(now - dt.timedelta(days=days))
+    return {k: v for k, v in cache.items() if v.get("checked_at", "") >= since}
 
 
 # ---------------------------------------------------------------- 輸出
@@ -363,7 +542,7 @@ def serialize(it):
             "source": it["source"], "source_url": it.get("source_url"), "tier": it["tier"], "rank": it.get("rank"),
             "lang": it["lang"], "title": it["title"], "link": it["link"], "url": it.get("url"), "symbols": it["symbols"],
             "topics": it["topics"], "queries": it["queries"], "title_queries": it["title_queries"],
-            "title_match": it["title_match"], "also": it["also"]}
+            "title_match": it["title_match"], "also": it["also"], "time_fixed_from": it.get("time_fixed_from")}
 
 
 def load_previous(path, tiers):
@@ -386,7 +565,7 @@ def load_previous(path, tiers):
         out.append({"title": it["title"], "link": it.get("link"), "source": it.get("source", ""),
                     "source_url": it.get("source_url"), "published": t, "tier": tier, "rank": rank,
                     "lang": it.get("lang", "en"), "queries": list(queries), "also": list(it.get("also", [])),
-                    "url": it.get("url")})
+                    "url": it.get("url"), "time_fixed_from": it.get("time_fixed_from")})
     return out
 
 
@@ -439,7 +618,10 @@ def update_meta(doc, fed_doc):
                             "by_tier": doc["stats"]["by_tier"],
                             "feeds_ok": f"{sum(f['ok'] for f in doc['feeds'])}/{len(doc['feeds'])}",
                             "errors": len(doc["errors"]), "url_ok": doc["stats"]["url"]["ok"],
-                            "url_total": doc["stats"]["url"]["target"]}
+                            "url_total": doc["stats"]["url"]["target"],
+                            "time_suspect_detected": doc["stats"]["time_check"]["detected"],
+                            "time_fixed": doc["stats"]["time_check"]["fixed"],
+                            "time_removed": doc["stats"]["time_check"]["removed"]}
     fed_ok = all(f["ok"] for f in fed_doc["feeds"])
     ds["news/fed"] = {"status": "ok" if fed_ok else "fail", "source": "federalreserve.gov RSS",
                       "last": fed_doc["items"][0]["date"] if fed_doc["items"] else None,
@@ -459,6 +641,9 @@ def main():
         sys.exit(1)
     previous = load_previous(OUT_JSON, cfg["tiers"])
     items = build(cfg, fresh, previous, fed_items, NOW)
+    check_cache, time_notes = load_check_cache(OUT_JSON, NOW), []
+    items, suspects, time_stats = check_times(items, fresh, cfg, NOW, check_cache, time_notes)
+    time_stats["notes"] = time_notes
     url_notes = []
     url_stats = resolve_urls(items, cfg, NOW, {item_id(p): p["url"] for p in previous if p.get("url")}, url_notes)
     url_stats["notes"] = url_notes
@@ -474,9 +659,12 @@ def main():
            "status": "ok" if not errors else "partial", "tiers": {str(k): v for k, v in TIER_NAMES.items()},
            "feeds": all_feeds, "errors": errors,
            "stats": {"total": len(items), "by_tier": by_tier, "by_symbol": by_symbol, "by_topic": by_topic,
-                     "url": url_stats},
+                     "url": url_stats, "time_check": time_stats},
            "sec_8k": {"status": "未啟用", "note": "等存聯絡信箱的 Actions secret 建好後加入"},
-           "items": [serialize(it) for it in items]}
+           "items": [serialize(it) for it in items],
+           "suspect_items": [dict(serialize(it), time_suspect=True, suspect_reason=it["suspect_reason"])
+                             for it in suspects],
+           "time_check_cache": check_cache}
     fed_doc = {"generated_at_taipei": tpe(NOW), "days": cfg.get("fed_days", 7), "feeds": fed_feeds,
                "items": [{"date": tpe(f["published"])[:10], "title": f["title"], "link": f["link"], "type": f["type"],
                           "published_taipei": tpe(f["published"]), "published_utc": utc_text(f["published"])}
@@ -488,7 +676,8 @@ def main():
     update_meta(doc, fed_doc)
     print(json.dumps(doc["stats"]["by_tier"], ensure_ascii=False), "total", len(items), "fed", len(fed_items),
           "feeds ok", f"{sum(f['ok'] for f in all_feeds)}/{len(all_feeds)}",
-          "url", json.dumps(url_stats, ensure_ascii=False))
+          "url", json.dumps(url_stats, ensure_ascii=False),
+          "time_check", json.dumps({k: v for k, v in time_stats.items() if k != "groups"}, ensure_ascii=False))
     for e in errors:
         print(" -", e)
 

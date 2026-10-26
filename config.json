@@ -40,6 +40,9 @@
     "url_max_per_run": 600,
     "url_budget_seconds": 240,
     "url_workers": 5,
+    "time_suspect_min": 5,
+    "time_check_max": 200,
+    "time_check_seconds": 120,
     "en": [
       {"id": "NVDA",   "q": "Nvidia",                                          "symbols": ["NVDA"],          "match": ["nvidia"]},
       {"id": "TSLA",   "q": "Tesla",                                           "symbols": ["TSLA"],          "match": ["tesla"]},

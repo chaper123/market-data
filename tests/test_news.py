@@ -282,5 +282,114 @@ class NewsTest(unittest.TestCase):
         self.assertFalse(news.good_url("https://news.google.com/rss/articles/x"))
 
 
+NOW2 = dt.datetime(2026, 10, 26, 0, 20, tzinfo=UTC)  # 台北 10/26 08:20
+BATCH_TIME = "Sat, 24 Oct 2026 09:00:00 GMT"  # 台北 10/24 17:00
+# 經濟日報同一時間的 5 則：原文頁的真正發布時間（None＝原文頁與網址都沒有日期）
+UDN_BATCH = {"台積電領跌 台股收盤下跌529點": "2026-10-20T13:35:00+08:00",
+             "台積電收低35元 大跌846點跌破季線": "2026-10-22T13:58:35+08:00",
+             "台積電反彈帶動收漲594點": "2026-10-16T13:40:00+08:00",
+             "法人週末看台積電後市": "2026-10-24T16:58:00+08:00",
+             "台積電專欄沒有日期": None}
+ZH_BATCH_RSS = rss([(t, "經濟日報", "https://money.udn.com", BATCH_TIME) for t in UDN_BATCH]
+                   + [(t, "中央社 CNA", "https://www.cna.com.tw", "Sun, 25 Oct 2026 02:00:00 GMT")
+                      for t in ("台積電擴產美國新廠", "台積電股東會通過配息", "台積電員工分紅創新高",
+                                "台積電先進封裝產能倍增")])  # 同時 4 則（門檻以下）
+EN_BATCH_RSS = rss([(f"Nvidia supplier {w} announces results", "PR Newswire", "https://www.prnewswire.com",
+                     "Sun, 25 Oct 2026 12:00:00 GMT")
+                    for w in ("Acme", "Boreal", "Cobalt", "Delta", "Ember", "Fjord")]  # tier 1 同時 6 則
+                   + [("Nvidia shares rise on new AI deal", "Reuters", "https://www.reuters.com",
+                       "Sun, 25 Oct 2026 22:00:00 GMT")])
+
+
+def batch_page(url, timeout=20):
+    if url.startswith("https://publisher.example/"):
+        g = url.rsplit("/", 1)[-1]
+        PAGES.append("pub:" + g)
+        when = next((v for t, v in UDN_BATCH.items() if gid(t) == g), "2026-10-25T10:00:00Z")
+        if when is None:
+            return b"<html><head><title>no date</title></head></html>"
+        return f'<script type="application/ld+json">{{"datePublished":"{when}"}}</script>'.encode()
+    return fake_page(url, timeout)
+
+
+def batch_http(url, **kw):
+    if "batchexecute" in url:
+        return fake_batch(kw["data"])
+    if "federalreserve.gov" in url:
+        return 200, rss([])
+    if "hl=zh-TW" in url:
+        return 200, ZH_BATCH_RSS
+    return 200, EN_BATCH_RSS
+
+
+class TimeSuspectTest(unittest.TestCase):
+    def run_main(self, previous=None):
+        PAGES.clear()
+        with tempfile.TemporaryDirectory() as tmp:
+            out = os.path.join(tmp, "news", "headlines.json")
+            meta_path = os.path.join(tmp, "meta.json")
+            json.dump({"datasets": {}}, open(meta_path, "w"))
+            if previous:
+                os.makedirs(os.path.dirname(out))
+                json.dump(previous, open(out, "w", encoding="utf-8"))
+            json.dump({"news": CFG}, open(os.path.join(tmp, "config.json"), "w", encoding="utf-8"))
+            with mock.patch.object(news, "http", batch_http), mock.patch.object(news, "NOW", NOW2), \
+                    mock.patch.object(news, "OUT_JSON", out), \
+                    mock.patch.object(news, "OUT_FED", os.path.join(tmp, "news", "fed.json")), \
+                    mock.patch.object(news, "OUT_MD", os.path.join(tmp, "news", "headlines.md")), \
+                    mock.patch.object(news, "META", meta_path), mock.patch.object(news, "ROOT", tmp), \
+                    mock.patch.object(news, "DATA", tmp), mock.patch.object(news, "fetch_page", batch_page), \
+                    mock.patch.object(news.time, "sleep", lambda s: None):
+                news.main()
+            return json.load(open(out, encoding="utf-8")), json.load(open(meta_path, encoding="utf-8"))
+
+    def test_batch_detected_fixed_and_removed(self):
+        doc, meta = self.run_main()
+        tc = doc["stats"]["time_check"]
+        self.assertEqual(tc["groups"], [{"source": "經濟日報", "published_taipei": "2026-10-24 17:00", "count": 5}])
+        self.assertEqual((tc["detected"], tc["fixed"], tc["fixed_out_of_window"], tc["removed"]), (5, 4, 3, 1))
+        titles = {it["title"]: it for it in doc["items"]}
+        # 舊文改正後超出 72 小時窗，拿掉；窗內的改正並記原本的時間
+        for old in ("台積電領跌 台股收盤下跌529點", "台積電收低35元 大跌846點跌破季線", "台積電反彈帶動收漲594點"):
+            self.assertNotIn(old, titles)
+        fixed = titles["法人週末看台積電後市"]
+        self.assertEqual(fixed["published_taipei"], "2026-10-24 16:58")
+        self.assertEqual(fixed["time_fixed_from"],
+                         {"published_utc": "2026-10-24T09:00:00Z", "published_taipei": "2026-10-24 17:00",
+                          "by": "datePublished"})
+        # 找不回來的移到 suspect_items，items 裡沒有
+        self.assertNotIn("台積電專欄沒有日期", titles)
+        self.assertEqual([(s["title"], s["time_suspect"]) for s in doc["suspect_items"]], [("台積電專欄沒有日期", True)])
+        self.assertTrue(doc["suspect_items"][0]["suspect_reason"])
+        h = meta["datasets"]["news/headlines"]
+        self.assertEqual((h["time_suspect_detected"], h["time_fixed"], h["time_removed"]), (5, 4, 1))
+
+    def test_normal_simultaneous_and_official_not_flagged(self):
+        doc, _ = self.run_main()
+        cna = [it for it in doc["items"] if it["source"] == "中央社 CNA"]
+        self.assertEqual(len(cna), 4)  # 4 則同時（門檻 5 以下）
+        self.assertTrue(all(it["time_fixed_from"] is None for it in cna))
+        pr = [it for it in doc["items"] if it["source"] == "PR Newswire"]
+        self.assertEqual(len(pr), 6)  # tier 1 不檢查
+        self.assertTrue(all(it["time_fixed_from"] is None for it in pr))
+        self.assertIsNone(self.item(doc, "Nvidia shares rise")["time_fixed_from"])
+
+    def test_cache_reused_next_run(self):
+        doc, _ = self.run_main()
+        pages = [p for p in PAGES if p.startswith("pub:")]
+        self.assertEqual(len(pages), 5)
+        doc2, _ = self.run_main(previous=doc)
+        self.assertEqual([p for p in PAGES if p.startswith("pub:")], ["pub:" + gid("台積電專欄沒有日期")])  # 只重試失敗的
+        tc = doc2["stats"]["time_check"]
+        # 已改正、還在窗內的那則：和上一次的版本合併時保留較早（已改正）的時間，不會再被當成可疑
+        self.assertEqual((tc["detected"], tc["fixed"], tc["removed"], tc["cached"]), (4, 3, 1, 3))
+        again = self.item(doc2, "法人週末看台積電後市")
+        self.assertEqual(again["published_taipei"], "2026-10-24 16:58")
+        self.assertEqual(again["time_fixed_from"]["published_taipei"], "2026-10-24 17:00")
+
+    def item(self, doc, prefix):
+        return next(it for it in doc["items"] if it["title"].startswith(prefix))
+
+
 if __name__ == "__main__":
     unittest.main()
