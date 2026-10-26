@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-10-26T00:36:46Z",
- "generated_at_taipei": "2026-10-26 08:36",
+ "generated_at_utc": "2026-10-26T01:53:09Z",
+ "generated_at_taipei": "2026-10-26 09:53",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -233,7 +233,7 @@
   "tv/snapshot": {
    "status": "ok",
    "symbols": 13,
-   "tw_bar_is_intraday": false,
+   "tw_bar_is_intraday": true,
    "us_bar_is_intraday": false
   },
   "fx/usdtwd_mid": {
@@ -242,7 +242,7 @@
    "rows": 516,
    "first": "2024-10-28",
    "last": "2026-10-26",
-   "last_rate": 32.571
+   "last_rate": 32.559
   },
   "macro/SPX": {
    "status": "ok",

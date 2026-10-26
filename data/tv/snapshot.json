@@ -1,6 +1,6 @@
 {
- "fetched_at_taipei": "2026-10-26 08:36",
- "tw_bar_is_intraday": false,
+ "fetched_at_taipei": "2026-10-26 09:53",
+ "tw_bar_is_intraday": true,
  "us_bar_is_intraday": false,
  "note": "TradingView 匿名存取只有日線。*_bar_is_intraday=true 代表該市場當日 K 棒尚未收盤。",
  "missing_columns": [],
