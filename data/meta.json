@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-10-26T01:53:09Z",
- "generated_at_taipei": "2026-10-26 09:53",
+ "generated_at_utc": "2026-10-26T05:15:04Z",
+ "generated_at_taipei": "2026-10-26 13:15",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -242,7 +242,7 @@
    "rows": 516,
    "first": "2024-10-28",
    "last": "2026-10-26",
-   "last_rate": 32.559
+   "last_rate": 32.56
   },
   "macro/SPX": {
    "status": "ok",
@@ -305,13 +305,13 @@
   "macro/DXY": {
    "status": "ok",
    "source": "yahoo DX-Y.NYB",
-   "rows": 502,
-   "first": "2024-10-25",
+   "rows": 501,
+   "first": "2024-10-28",
    "last": "2026-10-23",
    "last_close": 101.80999755859375,
    "prev_close": 101.61000061035156,
    "name": "美元指數",
-   "cutoff": "2026-10-24",
+   "cutoff": "2026-10-25",
    "cutoff_rule": "24h-v1：美東 17:10～18:00 收當天，其餘只收到前一天；不收週末",
    "cross_check": "2026-10-23 收盤 101.80999755859375 vs cnyes 101.81（差 -0.00%）",
    "cross_check_ok": true
@@ -319,26 +319,26 @@
   "macro/GOLD": {
    "status": "ok",
    "source": "yahoo GC=F",
-   "rows": 502,
-   "first": "2024-10-25",
+   "rows": 501,
+   "first": "2024-10-28",
    "last": "2026-10-23",
    "last_close": 4007.89990234375,
    "prev_close": 4060.39990234375,
    "name": "COMEX 黃金期貨（近月）",
-   "cutoff": "2026-10-24",
+   "cutoff": "2026-10-25",
    "cutoff_rule": "24h-v1：美東 17:10～18:00 收當天，其餘只收到前一天；不收週末",
    "cross_check": "無第二來源，未核對"
   },
   "macro/WTI": {
    "status": "ok",
    "source": "yahoo CL=F",
-   "rows": 502,
-   "first": "2024-10-25",
+   "rows": 501,
+   "first": "2024-10-28",
    "last": "2026-10-23",
    "last_close": 103.2699966430664,
    "prev_close": 99.47000122070312,
    "name": "WTI 原油期貨（近月）",
-   "cutoff": "2026-10-24",
+   "cutoff": "2026-10-25",
    "cutoff_rule": "24h-v1：美東 17:10～18:00 收當天，其餘只收到前一天；不收週末",
    "cross_check": "無第二來源，未核對"
   },
