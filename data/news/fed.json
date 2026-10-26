@@ -1,11 +1,11 @@
 {
- "generated_at_taipei": "2026-10-23 12:06",
+ "generated_at_taipei": "2026-10-26 08:20",
  "days": 7,
  "feeds": [
   {
    "name": "Fed 新聞稿",
    "ok": true,
-   "count": 1
+   "count": 0
   },
   {
    "name": "Fed 演講",
@@ -13,14 +13,5 @@
    "count": 0
   }
  ],
- "items": [
-  {
-   "date": "2026-10-16",
-   "title": "Federal Reserve Board announces termination of enforcement actions with Gardner Bancshares, Inc. and Small Business Bank",
-   "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261016a.htm",
-   "type": "press",
-   "published_taipei": "2026-10-16 23:00",
-   "published_utc": "2026-10-16T15:00:00Z"
-  }
- ]
+ "items": []
 }
