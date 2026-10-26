@@ -1,6 +1,6 @@
 {
- "generated_at_taipei": "2026-10-26 17:06",
- "generated_at_utc": "2026-10-26T09:06:23Z",
+ "generated_at_taipei": "2026-10-26 17:09",
+ "generated_at_utc": "2026-10-26T09:09:16Z",
  "window_hours": 72,
  "status": "ok",
  "tiers": {
@@ -78,7 +78,7 @@
   {
    "name": "Google News 全部：TSMC",
    "ok": true,
-   "count": 47
+   "count": 46
   },
   {
    "name": "Google News 白名單：FED",
@@ -108,7 +108,7 @@
   {
    "name": "Google News 全部：CHIPS",
    "ok": true,
-   "count": 26
+   "count": 27
   },
   {
    "name": "Google News 白名單：TAIWAN",
@@ -138,12 +138,12 @@
   {
    "name": "Google News 全部：TWSE",
    "ok": true,
-   "count": 99
+   "count": 100
   },
   {
    "name": "Google News 白名單：009816",
    "ok": true,
-   "count": 93
+   "count": 94
   },
   {
    "name": "Google News 全部：009816",
@@ -153,7 +153,7 @@
   {
    "name": "Google News 白名單：00981A",
    "ok": true,
-   "count": 53
+   "count": 44
   },
   {
    "name": "Google News 全部：00981A",
@@ -183,31 +183,30 @@
  ],
  "errors": [],
  "stats": {
-  "total": 675,
+  "total": 637,
   "by_tier": {
    "4": 265,
-   "2": 405,
+   "2": 367,
    "1": 3,
    "3": 2
   },
   "by_symbol": {
+   "AAPL": 39,
+   "GOOGL": 32,
    "NVDA": 57,
-   "GOOGL": 33,
-   "AAPL": 38,
    "VOO": 55,
-   "2330": 75,
-   "TSM": 75,
+   "2330": 58,
+   "TSM": 58,
    "SPCX": 59,
    "TSLA": 37,
    "2308": 4,
    "3037": 4,
-   "00981A": 3,
+   "00981A": 2,
    "009816": 1,
    "8046": 1,
    "2454": 6,
-   "2383": 3,
+   "2383": 1,
    "6223": 1,
-   "00411A": 1,
    "2327": 1
   },
   "by_topic": {
@@ -215,20 +214,20 @@
    "taiwan": 47,
    "tariff": 37,
    "war": 10,
-   "earnings": 42,
-   "oil": 12,
+   "earnings": 43,
+   "oil": 13,
    "china": 24,
    "merger": 5,
-   "cpi": 11,
+   "cpi": 10,
    "antitrust": 1,
    "export_controls": 3
   },
   "url": {
    "hours": 36,
-   "target": 247,
-   "ok": 247,
-   "cached": 115,
-   "new": 132,
+   "target": 257,
+   "ok": 257,
+   "cached": 239,
+   "new": 18,
    "failed": 0,
    "left": 0,
    "stopped": null,
@@ -240,7 +239,7 @@
     {
      "source": "Taipei Times",
      "published_taipei": "2026-10-26 00:00",
-     "count": 8
+     "count": 9
     },
     {
      "source": "Taipei Times",
@@ -269,16 +268,21 @@
     },
     {
      "source": "經濟日報",
+     "published_taipei": "2026-10-24 17:00",
+     "count": 50
+    },
+    {
+     "source": "經濟日報",
      "published_taipei": "2026-10-25 17:00",
      "count": 27
     }
    ],
-   "detected": 14,
-   "fixed": 14,
-   "changed": 1,
-   "fixed_out_of_window": 1,
+   "detected": 63,
+   "fixed": 63,
+   "changed": 51,
+   "fixed_out_of_window": 47,
    "removed": 0,
-   "cached": 0,
+   "cached": 12,
    "notes": []
   }
  },
@@ -287,6 +291,60 @@
   "note": "等存聯絡信箱的 Actions secret 建好後加入"
  },
  "items": [
+  {
+   "id": "6ce08fb218feda7d",
+   "published_utc": "2026-10-26T09:07:25Z",
+   "published_taipei": "2026-10-26 17:07",
+   "source": "WGMD – The Talk of Delmarva",
+   "source_url": "https://www.wgmd.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "TRAFFIC ALERT: Route 17/Roxana Road to Close for Roundabout Construction at Powell Farm Road",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNSE05WmdLeDhCZnlOUVdHY2RFbjd0NEhtQ0hPSXRSOHZzN1Q4NGJiLTdVWmkyYXEzOHRiV1FsbHFpbXFUM1JWSWJMZGdLdGRDamwxRllfRkt0QWllcVlpUG4yU1VMSEpzOENNWWlqTTlhUk1xTVRRczhmWUJpODRDT3ZMMWg1aEpxQTlNTGl2M3cydmRjUnNha0FfM3M3OHYtQm14aGU4Y3hZZWNpbkNoeVZpUQ?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [
+    "fed"
+   ],
+   "queries": [
+    "FED"
+   ],
+   "title_queries": [
+    "FED"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "471cfd1a6a0d7389",
+   "published_utc": "2026-10-26T09:07:04Z",
+   "published_taipei": "2026-10-26 17:07",
+   "source": "Android Authority",
+   "source_url": "https://www.androidauthority.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "7 features I want next from Google Wallet after the Apple-inspired refresh",
+   "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE15cVJ6VmhPc0RKQ3dpQnFaWThrTjRSUi1kbHd1cld5NWc3OWF0R29jcWhkWkVWakVheVpocWlRQUtsWTUydGJKZWQ1Z0ZBTEFmaEJidURZZ1k5SDczZXlJTnkxTnhGT0JlZHJKaVFnNi1oYW5zcVJ6RGdNYw?oc=5",
+   "url": null,
+   "symbols": [
+    "AAPL",
+    "GOOGL"
+   ],
+   "topics": [],
+   "queries": [
+    "GOOGL"
+   ],
+   "title_queries": [
+    "GOOGL",
+    "AAPL"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
   {
    "id": "ff40a88d941ca629",
    "published_utc": "2026-10-26T09:04:30Z",
@@ -298,6 +356,30 @@
    "lang": "zh",
    "title": "台股震盪考驗選股功力00418A雙經理人掌握建倉良機10/27最後買進日",
    "link": "https://news.google.com/rss/articles/CBMilANBVV95cUxOR0F2TlBaaHdXTS0yUHpuUEhQTGVhbkYzLWRBdGQybk8yTEJHM3BWX2pUWEVlV2JTS3FENlVwWHZ6b0wwRVJTSmdYdFpBSy03S2p3aWV5cUVocnBZczRGMW5ZMm5SLVhZRnRDVDZGbC1zS2RzVWVxWmpJaFR1LVRWQWxMVkZaRnZsSXRIZmlnTFc3RXNwM3F3X1haaVR6RUFiUmtqNzNaZEpma1hMYnl0bk9uTVNQYjZ3ZE80T01NZDA1QUJRUVhmaGExN19pV1Z4N2hMN2FIZk84TTdyU3BMRjBlakNrZ0phdzFzdkRiXzYzZ1pkVG9xdEtyYUlQSWh3Qm0tR2VDR2tIVTB3aFlkWmRKVVNGSkN3Qll3Zm90S2dpb0JOLVZSd1k0THdQVjVwcFc3RWxxbXdYSzc3VXhvek5rTGQ4Ymd4TWdyR3FNVXVwLTZnVlJHTDdyQVJZUzF1ZlppODRfYlVSTUIzSVZ5TGxRY2czUnNXMHlRN2g1eUdaLTl4LUNFNU9jalE5bUoyaXVVWg?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "7e49805adf9a0b0a",
+   "published_utc": "2026-10-26T09:04:18Z",
+   "published_taipei": "2026-10-26 17:04",
+   "source": "商傳媒 - SUN MEDIA",
+   "source_url": "https://sunmedia.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "以為買0050就安全？大跌時才發現全押台股 00998A抗跌補上另一塊配置",
+   "link": "https://news.google.com/rss/articles/CBMiogNBVV95cUxNY2pjdXZSXzRfZkJjbWRsSzZoamN6a0dWMVhmeFRpVHdZTVZncTJkSDIyLTQ3Z1JSTy1SQ1NZcHpQM29MX2NxREVtV0cxc2tJVmZIY0R0Vzg0eWhUbUUzMmdLRFFzbGVjQ0JJTjNuVnhlUHdBaWNFUDZVdnQ3c2VRV0NZa0VadXMyZGk1ZEI5T2JhbFR1OWFnalYtWXZ1MmVmT2NxM29QbGxMRkRNemNpUkJiRFB0N2NVc0hvbUduN1hNU0xucUltbTFFV1dhV3RBNXE0RElqUG1Jb0hKaGxXbFRXdWtJOFZWQ3hWeEtYNUVIaTBzQlVqb19HQnpXakwtTXhmWnA1aG5aUl94akEwbnZtdnExRk00WnJBSlJkRUVNQksydTJTd21uQUxFNHBEQTVSVVFobHd6amVxWjhuWDZkcUR2MDJCaFh4cExhc2dpVFBxelI2alhlWXFSTjdZTDFSOEVKNDlpZEs0Z2tuSGN0OVZmdnNMamJZcDZhX3NPem5HekM1TE5zaEVWRklWSUVPRUpqZERVc3RvM211aHl3?oc=5",
    "url": null,
    "symbols": [],
    "topics": [],
@@ -700,7 +782,9 @@
     "TARIFF"
    ],
    "title_match": true,
-   "also": [],
+   "also": [
+    "BNN Bloomberg"
+   ],
    "time_fixed_from": null
   },
   {
@@ -939,6 +1023,32 @@
    "time_fixed_from": null
   },
   {
+   "id": "d7c92f03f56bfedf",
+   "published_utc": "2026-10-26T08:39:40Z",
+   "published_taipei": "2026-10-26 16:39",
+   "source": "MarketBeat",
+   "source_url": "https://www.marketbeat.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Remitly Global, Inc. (NASDAQ:RELY) Stock Now Rated \"Buy\" by Wall Street Analysts",
+   "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNM2pibTh5S3BFOXJ4TDQ5T2Rtblp0TUNzblNMUXVpc0JSOHVzWTJEeHpTWTR2VV8wQVJBMjQzRnlveFBCN3h5YnRZQTFrNGNwaUJVZEY4WjhQSEhtbWlxbm9uLUFuVjlGZEltM09KNjNsdldOWjVxNk9OZXpmTTlpbWRrc1JZWjh6STFPQ3ZReW1hLXQ0QXlzTnh4TDFjVmJBcEt2VkxmalBjX0t4ZFVnc3V1WlZGdXZwb2Jla3VTdUVBMHN5Sk1ELWtEWmRJR2wxZkVyNw?oc=5",
+   "url": null,
+   "symbols": [
+    "VOO"
+   ],
+   "topics": [],
+   "queries": [
+    "MARKET"
+   ],
+   "title_queries": [
+    "MARKET"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "834c1f8e58d4963a",
    "published_utc": "2026-10-26T08:38:52Z",
    "published_taipei": "2026-10-26 16:38",
@@ -1070,6 +1180,31 @@
    "time_fixed_from": null
   },
   {
+   "id": "a4d48847993a65f8",
+   "published_utc": "2026-10-26T08:31:24Z",
+   "published_taipei": "2026-10-26 16:31",
+   "source": "WSJ",
+   "source_url": "https://www.wsj.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "Two AI Chipmakers Make Up 34% of America’s Earnings Boom",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQaHhLUi1IeDVOLXZPSmlYYVpxRnZDUVBiMDRTTUdtMnQxRE5DcEUyenlyaWhZWXdfVno3ZU5FUzZUYkg4ODVlY0VDV0hneFdYUG1nX090Wml0dmk4b2NBM2k2QzA2VV9FNUVtM2lVczJGbjc2c3EyVmN2LVVGeUh0ZXllRnMxaUFfcVIyQmVuYXVPVGROeEk4akxUbmxKcElHUXU4eE42TFBwdkVj?oc=5",
+   "url": "https://www.wsj.com/finance/stocks/the-earnings-boom-is-heavily-reliant-on-just-a-handful-of-stocks-21decb53",
+   "symbols": [],
+   "topics": [
+    "earnings"
+   ],
+   "queries": [
+    "MARKET",
+    "NVDA"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "a87318ede972eb67",
    "published_utc": "2026-10-26T08:29:48Z",
    "published_taipei": "2026-10-26 16:29",
@@ -1116,6 +1251,32 @@
    ],
    "title_queries": [
     "FED"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "2ac88b912c57dcd3",
+   "published_utc": "2026-10-26T08:26:58Z",
+   "published_taipei": "2026-10-26 16:26",
+   "source": "Taipei Times",
+   "source_url": "https://www.taipeitimes.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Kevin Tsai says he has never supported Taiwan independence",
+   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE0zTUYwNENFLUZCYXNVN3owN1IwZlpSUUpGZjh5cFpIWm1PcDlSaUxKNzU5UFpGNmw3aTUzYTY5YzRjQzhEQUdFdk03NmoyUVpDazI5OVFuTXJWNFluS0s1UzhNTW1TUHBNOGR3WklsVU43ZWZnMm5wTW5B?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [
+    "taiwan"
+   ],
+   "queries": [
+    "TAIWAN"
+   ],
+   "title_queries": [
+    "TAIWAN"
    ],
    "title_match": true,
    "also": [],
@@ -1414,32 +1575,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "4cae8c8855290acf",
-   "published_utc": "2026-10-26T08:14:57Z",
-   "published_taipei": "2026-10-26 16:14",
-   "source": "Investing.com India",
-   "source_url": "https://in.investing.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Barclays upgrades Tesla stock rating on business momentum, SPCX deal By Investing.com",
-   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQaWZBbThhMnhKdGtYWlNLalBPTDRrS0JmNzhlbVpnbDJWOFVQTzM2bFI1c1lpb1VEQzY1eHhrZnFSY0ZxVWlZNHc0U1NuckNORE50MHFDZ3hzdVM3ZVZJeXlSRmJodFhCd2xtSWdHNmdodklmaTMzWmFuLXdIUjZGOFJjN01tbTFLSTJMdm16QjBJUlZhMzR3UnFJZTFHanotUzRDUkdYcFpOUnVmRG5tdDkzUjdCRUh2WXBFRHBZLVlTbXpKWEp3?oc=5",
-   "url": null,
-   "symbols": [
-    "TSLA"
-   ],
-   "topics": [],
-   "queries": [
-    "TSLA"
-   ],
-   "title_queries": [
-    "TSLA"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "e626e036d9d1149e",
    "published_utc": "2026-10-26T08:14:54Z",
    "published_taipei": "2026-10-26 16:14",
@@ -1565,6 +1700,34 @@
    ],
    "title_match": true,
    "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "96bd1c3a350ccdff",
+   "published_utc": "2026-10-26T08:10:00Z",
+   "published_taipei": "2026-10-26 16:10",
+   "source": "Investing.com UK",
+   "source_url": "https://uk.investing.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Barclays upgrades Tesla stock rating on business momentum, SPCX deal By Investing.com",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPckF6SWhMY2ptNnUyS0NtbXBnYXlkY2ptMHpJRGxpYWZSVWlId3dPSXc5Z1JjUkpwRWE1ZUtXODd0NnVIQWM4ZzdqVC1TMmUyemJ0TjgwTUQ1Sm1KT1JBeG13b0RQZ0hTQThkUmR4ZnJEZkhCZGw1WThHMkhwNTA2WFFibHY5eWtia2hwcWFRcnA3UXpGR3FoUVRNaWJacVN0cjVUS05uSXpKLXlJM3NvY1hnRWlYU0J1WWlQZ3BLNGhvQUJEc3BR?oc=5",
+   "url": null,
+   "symbols": [
+    "TSLA"
+   ],
+   "topics": [],
+   "queries": [
+    "TSLA"
+   ],
+   "title_queries": [
+    "TSLA"
+   ],
+   "title_match": true,
+   "also": [
+    "Investing.com India"
+   ],
    "time_fixed_from": null
   },
   {
@@ -2011,6 +2174,28 @@
    "time_fixed_from": null
   },
   {
+   "id": "438fd18193c74616",
+   "published_utc": "2026-10-26T07:56:35Z",
+   "published_taipei": "2026-10-26 15:56",
+   "source": "WSJ",
+   "source_url": "https://www.wsj.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "The Best Boards in America Are Helping Drive AI Strategy",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQZEw2ZjlzZVNXaFFLUW5mWGp3VzNhRXoyT0I1UmlwemZoRTRZRWpuRUNCS2s3WGwtU2NqUEV0Sl85alZ2c0d6c1lySHg2MGdPUklSQl9YdGxwVkw2eWxIRmFoZERMWmtfUnJSTXc0UzlpdHA3d0FVUTFONkZ1bzIwNE1lY2pxaTdiR0g2c3JTS1dGdG1JY2hiRXNFbV9lQQ?oc=5",
+   "url": "https://www.wsj.com/cio-journal/the-best-boards-in-america-are-helping-drive-ai-strategy-5f020646",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "MARKET"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "035006bfb4b5820b",
    "published_utc": "2026-10-26T07:55:40Z",
    "published_taipei": "2026-10-26 15:55",
@@ -2249,7 +2434,7 @@
    "time_fixed_from": null
   },
   {
-   "id": "5b1d0cb5fd2d6884",
+   "id": "774a6d1ba49d2cfd",
    "published_utc": "2026-10-26T07:49:42Z",
    "published_taipei": "2026-10-26 15:49",
    "source": "Yahoo股市",
@@ -2258,7 +2443,7 @@
    "rank": null,
    "lang": "zh",
    "title": "台股迎綠光？亞股週一反彈無力尾盤再度下殺",
-   "link": "https://news.google.com/rss/articles/CBMitgJBVV95cUxOM2JuQVFvVFVFUGlGeU04Tkl1eFVQVkE4Smdwc3o2Z25WWGpILWFwMjAzMEVRb0pfRHhJbFpUa1EzQXJoQjNMamNFSTA0NU1idHVHcURzQVBxMGZwNGh1SDZ6ZjhxLWZUYUFla2FOLWZlWDhpSmFUTk4zNWZfN3l3VkU0TnVlNkZsVkVQT1hlMnFEMUpObWZSc3kycmRVQW5OOEo3dFYxdVZpNzN6N2ZEUWU2VFpLQURnX09OaGg3ZzlNWFlDaXplNTE2OFBOXzhfRDhYTUlhbXdZTFlWWU9VUnhGVThoZmVDUmkwWkxnSnFXYlh5Ump0ZnhURmFWRmNqcnhENzdRa0N2dFF5MWJKcGRVWThZM3RzdEZHXzZ1bVl2WE83Q2llSFg3cEwxU1dIaloyT19B?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMirwJBVV95cUxPVUxWWlVGSHlnLVdSLUJMdTNRNnRoRGpsc3U2MWNBZGVMaDh1emFqYmRPYlU3ZnFzR3RsU3lQZVE2Tnp4UUM5Y05ma244a3M1TTVoR3ZLRWpxMFAybDNWcjhpaFVFaUtKb3QzbFBkYzQwclk2VjdYUDJ1OGZIUWx5RWVZMDA5c3RVaEN5LXV1SXo2Nl9PNnJ5RDNpRUdyVzdYdFRWVWpPZUZ5Q3lFOHBxdDZzaEFyZVQyWlExdWVRZzZyckE2UllyS3lxOXdhbHdYTm1RMnFoM1JsVF93RWdtamsySVN2X01jOHhHcWxCOEFkTWpjVHp0TXNRSDh3WUUzVWtYVEl0cl9vVUhxUjFzcVJ0eW5tSWktd3ZfQXpHOTBPQ0JxcmFLTWd6cTREUXc?oc=5",
    "url": null,
    "symbols": [],
    "topics": [],
@@ -2324,7 +2509,7 @@
    "time_fixed_from": null
   },
   {
-   "id": "a4c96ac63baeac99",
+   "id": "c12c27418fbd609c",
    "published_utc": "2026-10-26T07:47:11Z",
    "published_taipei": "2026-10-26 15:47",
    "source": "HT Auto",
@@ -2333,7 +2518,7 @@
    "rank": null,
    "lang": "en",
    "title": "Ferrari CEO praises Tesla Roadster, singles out upside-down stunt",
-   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQcDVpbU56SXVyVG5WaXhWSXp1d3ItOExHTkREQlZCUTNIZXRueTlpU2VNTUJ3YzQwd0pqN0V1ZHdvSzR1bFN2OXNiZ1JaTVJHYzdMVWZrU1Q5Rm1mQ1ViOWhFRU1JNkpUU3owaFBsVmtoOTU0anU0bVVuR1V4S21QRnZsZUhIZVNwQ2N2S2dia0tOSWJCMXU5aWQtam1xUDd0QXlPbGtpNVM2VF9UcTh4RVRsTDF0d180R2dtZWJXaDY2czlPcE1TYnQweUN6WDF1SEQyZG1R0gHbAUFVX3lxTE9IWWo4OVp6QXFFNWNmS1JoX2UzaUhzdzNzYXVickJ1TGMzdGdKWEhIMW9lVU14MW9vbndQbW15YThEUVZibG1BcUxrWUZjNTYtcjB6REVRRDZ4Mm8tZ1JaZ285ZDFZQWVmQzlKTVhHQktEaXQ3REtNMVlWeHhqXy0yM0dudGlLN3hFc1UtejVYd3o0S0EzZ0RVRDNEVEdYOG9rcHdqNk8tTmk1RndQTDJEclJNc0ZSM0JUcWN6VDZrb245OE50NGFfZU1YdjZxUkRRUzh6TW1qdW1hMA?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPSFlqODlaekFxRTVjZktSaF9lM2lIc3czc2F1YnJCdUxjM3RnSlhISDFvZVVNeDFvb253UG1teWE4RFFWYmxtQXFMa1lGYzU2LXIwekRFUUQ2eDJvLWdSWmdvOWQxWUFlZkM5Sk1YR0JLRGl0N0RLTTFZVnh4al8tMjNHbnRpSzd4RXNVLXo1WHd6NEtBM2dEVUQzRFRHWDhva3B3ajZPLU5pNUZ3UEwyRHJSTXNGUjNCVHFjelQ2a29uOThOdDRhX2VNWHY2cVJEUVM4ek1tanVtYTDSAdsBQVVfeXFMT0hZajg5WnpBcUU1Y2ZLUmhfZTNpSHN3M3NhdWJyQnVMYzN0Z0pYSEgxb2VVTXgxb29ud1BtbXlhOERRVmJsbUFxTGtZRmM1Ni1yMHpERVFENngyby1nUlpnbzlkMVlBZWZDOUpNWEdCS0RpdDdES00xWVZ4eGpfLTIzR250aUs3eEVzVS16NVh3ejRLQTNnRFVEM0RUR1g4b2twd2o2Ty1OaTVGd1BMMkRyUk1zRlIzQlRxY3pUNmtvbjk4TnQ0YV9lTVh2NnFSRFFTOHpNbWp1bWEw?oc=5",
    "url": null,
    "symbols": [
     "TSLA"
@@ -2452,36 +2637,6 @@
    "title_queries": [
     "NVDA",
     "AAPL"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "093ec483a957eff2",
-   "published_utc": "2026-10-26T07:41:35Z",
-   "published_taipei": "2026-10-26 15:41",
-   "source": "Yahoo Finance Australia",
-   "source_url": "https://au.finance.yahoo.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "en",
-   "title": "Taiwan Semiconductor Manufacturing Company Limited (TSM) latest stock news and headlines",
-   "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9TZmRNV0kxX2xXd1p4NWpTSzU2RjhHbkFQb0h4M0lIMkFscmdFb3RqLVVSSjB2OUJ2STZoaUVuc0MySHo0NE1rMmI5VnNUS3Q1eTNUS3k1Zw?oc=5",
-   "url": "https://au.finance.yahoo.com/quote/TSM/news/",
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [
-    "taiwan"
-   ],
-   "queries": [
-    "TSMC"
-   ],
-   "title_queries": [
-    "TSMC",
-    "TAIWAN"
    ],
    "title_match": true,
    "also": [],
@@ -2627,6 +2782,38 @@
    "time_fixed_from": null
   },
   {
+   "id": "1e1f762ea16220b8",
+   "published_utc": "2026-10-26T07:38:53Z",
+   "published_taipei": "2026-10-26 15:38",
+   "source": "Yahoo Finance UK",
+   "source_url": "https://uk.finance.yahoo.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "en",
+   "title": "Taiwan Semiconductor Manufacturing Company Limited (TSM) latest stock news and headlines",
+   "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBhTjBxdDhodXZKTURQQ3N3MVo3dXVrSWgtTlpjM1RMSnkxMHZiX2hoRlJnTmVlWV8yT2F6ZnlvdEg2WnRMdXNyRXJVWV9DN2RRQ0VtTzhKbw?oc=5",
+   "url": "https://uk.finance.yahoo.com/quote/TSM/news/",
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
+   "topics": [
+    "taiwan"
+   ],
+   "queries": [
+    "TSMC"
+   ],
+   "title_queries": [
+    "TSMC",
+    "TAIWAN"
+   ],
+   "title_match": true,
+   "also": [
+    "Yahoo Finance Australia"
+   ],
+   "time_fixed_from": null
+  },
+  {
    "id": "257b5222cd97f0e8",
    "published_utc": "2026-10-26T07:37:25Z",
    "published_taipei": "2026-10-26 15:37",
@@ -2750,6 +2937,33 @@
    ],
    "title_queries": [
     "SPCX"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "4761eb732fdf46e5",
+   "published_utc": "2026-10-26T07:34:00Z",
+   "published_taipei": "2026-10-26 15:34",
+   "source": "Chosunbiz",
+   "source_url": "https://biz.chosun.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Korea stocks drop as investors await Samsung, SK hynix earnings and FOMC - CHOSUNBIZ",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOYzJZeC1XcldYdFFmb2huNUJncTdFSy1GLWVmV3JpWExqQUJlb19PR2YyZWFEY2VFSkliSFI1VUhURWwzaUlXQk56VTVhVXlSU01HU25uR3kteEdJSHJFUnZZbVMyQTk1ZVhGTWNFUnEtQ2NsZnNNSXp5MWVqRVFnU9IBlAFBVV95cUxNOGVGSW5uY29SNEY4eGlCYzNnR1prUHJtWnpvVG9xaTlRNkFJWklMSUk0bkg3b2djaF9SWDRkRkFSSmRqRnlPamQ0R2NhMWRiTXg2SjZGLTNiTzc5VXZfSzJRT2RHWkQzRFF2ZDd4SHJTYUVzZ2pGWVFsNjhySXk5QTFnSEUyZ2NCU3V4cnNiby1VVnJu?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [
+    "fed",
+    "earnings"
+   ],
+   "queries": [
+    "FED"
+   ],
+   "title_queries": [
+    "FED"
    ],
    "title_match": true,
    "also": [],
@@ -3099,6 +3313,30 @@
     "2330"
    ],
    "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "c77ccc4d9896e0eb",
+   "published_utc": "2026-10-26T07:19:19Z",
+   "published_taipei": "2026-10-26 15:19",
+   "source": "CXO Digitalpulse",
+   "source_url": "https://www.cxodigitalpulse.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "US and China Build Competing AI Blocs Around Chips, Models and Standards",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPZkhTcTNMYVFaRV9oRTRTNkRuQ09ZLVZpMF9fam50c3FPMExiUHc5S1d0RFJ2Rms5ZXVmTnVHNmNQUk9IeG90TUJfX2JRWEo2Y1NHYVlycXo5UDE0Wm9TWG5Nc2QzcXY5cmd3dDZONVFRNjh0WGFNbDRxMUdLOGZSQjJPd2FUZUhfcDY2VjRpMDZZQThwNUdmeC0tbHA0SnRvVnhWNzA3TQ?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [
+    "china"
+   ],
+   "queries": [
+    "CHIPS"
+   ],
+   "title_queries": [],
+   "title_match": false,
    "also": [],
    "time_fixed_from": null
   },
@@ -3675,6 +3913,30 @@
    "time_fixed_from": null
   },
   {
+   "id": "5a68b50714997962",
+   "published_utc": "2026-10-26T06:59:38Z",
+   "published_taipei": "2026-10-26 14:59",
+   "source": "Financial Times",
+   "source_url": "https://www.ft.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "Singapore to store Saudi oil in underground caverns",
+   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPeTVqaWtHQWRVeEtfZ0JNbVd6dmJLMmk4Y1haa2RWMkNHSE9wNm1aTXkzc1Zra19YWDh3bEFzNnZDRUUwc2ZIT0lVUWpkck40STd0Y2FmUGF0N3JLUk5PRTFNdUp1OWVfMFZRQW5DUWZiTnRILURFX05EX1ZIOXV6d0F4Y0I?oc=5",
+   "url": "https://www.ft.com/content/1baa5eb0-d6e3-4989-beb0-1b29879ff606?syn-25a6b1a6=1",
+   "symbols": [],
+   "topics": [
+    "oil"
+   ],
+   "queries": [
+    "TSLA"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "6858aafc7c1452aa",
    "published_utc": "2026-10-26T06:59:35Z",
    "published_taipei": "2026-10-26 14:59",
@@ -3784,6 +4046,32 @@
    "time_fixed_from": null
   },
   {
+   "id": "c3cfb4a82157d8ef",
+   "published_utc": "2026-10-26T06:51:09Z",
+   "published_taipei": "2026-10-26 14:51",
+   "source": "The News International",
+   "source_url": "https://www.thenews.com.pk",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Touchscreen MacBook Pro launch: What to expect from Apple",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPYTkyc3dUTXIzX2tubjNDbTZsMGNtTzBZQTV6RVpfcS1UdUt3YjBLMGhBY1VsdlRxbWFDWHMzeXNtRlAwVkRpSWdyOUhSMnF0MkdZcG16Vk9LczAxTm5ONmZoQjc1UUJMTTlFWi1KVHJvRmlrX3hJNXd5amhkb2pDdHNFVGlwbTdoaUJNejZkcXpmdHdtRWZJOEl6VmNtazkwTTRjX9IBoAFBVV95cUxNTTVYUmx0a0NzSzFGNHF0X1VLRWRFX0pNVU1RMmgyR0JJVU9XaV95WW5qZUdvVWd1YXZUbWR5QmNudkt6cHlPRy05R2FuRkdYTjRrTm5rOEZjZ1N1S29aZVVLUEVCMnZZQWQyTkhSNWlZaHJ5SVZrSVQ2NFk2dGVlbG8wZnBxaVM3WS1jTzl5MndNRXJYMDFRdmtPQXJDLWFz?oc=5",
+   "url": null,
+   "symbols": [
+    "AAPL"
+   ],
+   "topics": [],
+   "queries": [
+    "AAPL"
+   ],
+   "title_queries": [
+    "AAPL"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "900a13170a32472d",
    "published_utc": "2026-10-26T06:51:04Z",
    "published_taipei": "2026-10-26 14:51",
@@ -3873,6 +4161,32 @@
    "lang": "en",
    "title": "Border Delays and High Logistics Costs Hamper Ukrainian Apple Exports",
    "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPVWZYbUhhX2tVTExTdWtWbk5hVXRZWVdpSVVRY1pFMmk4UG52ek5fQnVreEt1SXUzYlI4eWJORko5c2tiakltVG9RbXBXMGZCSWhiRm5JUWlYZWNZVWZzbmxtTGRZaFJrRHVMYmpYWTVOdXI2cW53ZGozNU82SE9TTk1DUmtLUGpybGQxUkI1M2I2OXAwRFdpS3UwVC1ERlp3U2VZ?oc=5",
+   "url": null,
+   "symbols": [
+    "AAPL"
+   ],
+   "topics": [],
+   "queries": [
+    "AAPL"
+   ],
+   "title_queries": [
+    "AAPL"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "6aaf692aa3063f10",
+   "published_utc": "2026-10-26T06:42:00Z",
+   "published_taipei": "2026-10-26 14:42",
+   "source": "news.sbs.co.kr",
+   "source_url": "https://news.sbs.co.kr",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "More Expensive Than a MacBook, But \"What's Wrong with the Screen?\"... Apple's First Foldable Phone Exceeding 3 Million Won Faces \"Screen Damage\" Controversy",
+   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5Ka3BLS0gxLTN3NGRISk9SX2RabWpKRWJNSWpGRnFMSE5yWHFIcE9QeHJKUkxzOGNGS0gzTU9RVDItRVhieFhvc1RIUFdiQjJhQWVOQVlKdV9lTEtCMFVXcEU0UGJHUQ?oc=5",
    "url": null,
    "symbols": [
     "AAPL"
@@ -4307,6 +4621,32 @@
    "time_fixed_from": null
   },
   {
+   "id": "7aa9334e3be07e48",
+   "published_utc": "2026-10-26T06:23:00Z",
+   "published_taipei": "2026-10-26 14:23",
+   "source": "TradingView",
+   "source_url": "https://www.tradingview.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Wall Street Journal – 26. Oktober",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9kRXRqdXlhVGtCaXRqNEItTnBtNEJsakg4OGRaQWVFZkdrNXF6ZjJpZ1lzUFVpNEhrLVZ0NFVybHlSNWhWQ1ljM0lNdDBJdVF2WVVsUUppeDloVkVIRVZpTm1wOWY4T3VybWt5bmp0eU1Bd19HRlYtSQ?oc=5",
+   "url": null,
+   "symbols": [
+    "VOO"
+   ],
+   "topics": [],
+   "queries": [
+    "MARKET"
+   ],
+   "title_queries": [
+    "MARKET"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "88d2c07edd8eec35",
    "published_utc": "2026-10-26T06:18:12Z",
    "published_taipei": "2026-10-26 14:18",
@@ -4327,32 +4667,6 @@
    ],
    "title_queries": [
     "NVDA"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "0e2c6d946ecfc59a",
-   "published_utc": "2026-10-26T06:12:00Z",
-   "published_taipei": "2026-10-26 14:12",
-   "source": "The Times of India",
-   "source_url": "https://timesofindia.indiatimes.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "In 2017, Peter Thiel famously declared Apple era is over, nine years later, he says: In my telling, after",
-   "link": "https://news.google.com/rss/articles/CBMioAJBVV95cUxOTDBZTXdJWl9hQ281aXlFQXlNcnExczRGYVB6UUEtVXNPZ1pNLURaVXFNUTlEbnJkS1RldDFFSDlDZjJPZnZRSlIxS3hsMVJMbzNrQjNqUF9QVGhXQ2NYVjNkVWR0UzZ6RHpmdkxmY09UcVplSENUa3BUN1JsVF96X2tqeUFlQlNKQWswb3ZQNlkzUlp6Sks3MHYwb1E1TGZvMG1GY1hDbnMzVXQyWmNyLXNRWS1nVW8wYlIwU0tGdTl2X3d2dEFCVHZ4MHJKNm1jX1R5a0ZuWnA3SUg1U0V3VFR1NWlrcXl5SWlrVUhWdDFCa3k1V2luSkZuNDBkbGR5TlE1SzlUeEJDdGpUYjNHSXBCM0tMVENhYUJBZHg2bHjSAaYCQVVfeXFMUDRhSFJsemVzRml1Z2N0NlAtemhRQzJSM2xuVlJ4a09TTWZnUzU0YWVWamhIQmI0U2NxU1RNamFjOTFBSFlhSzFoYTItMmlXNEZzM2phdS1Hb1FEeGFPR09MTjA2TWFEU21MYTE0aXVuZENSUHpWa19YTk5fc3RCQTJZbjZJT1hlb3NhazQ4Q29XM2QzSTNEdEJwclFOX2ZlMHJBbXY5ZmdyYWRKNVhyNVZoTWdCMzd6LU1WcDM5dVVrYXBvcVNqa3JvWWNGcFFBY0JzODVRWE1ZM1NWa1QzQ3VCWnFPVDBja0ZWVGpxbVAtamNXa2pCdVUzUVlEX3JSRzNvcnA0b1QtNUtwc2F2RTNXWXN5eHRjNWY5T2FCWlFHeW0xeXBn?oc=5",
-   "url": null,
-   "symbols": [
-    "AAPL"
-   ],
-   "topics": [],
-   "queries": [
-    "AAPL"
-   ],
-   "title_queries": [
-    "AAPL"
    ],
    "title_match": true,
    "also": [],
@@ -4401,6 +4715,32 @@
    ],
    "title_queries": [
     "GOOGL"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "e00e91d9dedb3d66",
+   "published_utc": "2026-10-26T06:07:55Z",
+   "published_taipei": "2026-10-26 14:07",
+   "source": "Hoodline",
+   "source_url": "https://hoodline.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Trump Lifts Tariffs on Canadian Farm Goods as Collins Fights for Maine Senate Seat",
+   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQODZSaWlsX09oRFZGNWNHRW5PRUZ1cDdhTmlibFVXU1dscVo0b25xWjZtTlVHWUxnWXlVSG5fM2pDVmNJNXJ2MWtOOEZhT0NSVm9CcW45VXB6alN3OEVENUM2aU1iUjlkQUlDWDNkekQyT3h4RkVWNVV1UW5OYkRMQUw5RWlfOWhCc2Nka3BSUjRwOGQ1RXdQNjlIVXZlVTBpeHo1U2pCcFBEQmp1VV9jem13?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [
+    "tariff"
+   ],
+   "queries": [
+    "TARIFF"
+   ],
+   "title_queries": [
+    "TARIFF"
    ],
    "title_match": true,
    "also": [],
@@ -4711,32 +5051,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "3c1cd5677592ee00",
-   "published_utc": "2026-10-26T05:58:13Z",
-   "published_taipei": "2026-10-26 13:58",
-   "source": "Firstpost",
-   "source_url": "https://www.firstpost.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Cracked screens, white lines: What's happening to Apple's foldable iPhone?",
-   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbGhBS3d2OVQtMU4yZmo5cTluYkM3LTY3Sy1mSDl5UGhmTHJLVVdRQndEZzBtM3Rmcm85NGRZZXFGUUVvZU50N2lIaHdqby13WWNLTkN3S1hEblFuR1Iwa05McDUyOGFQNVVybjh2ZVp2T0F4Nmo0NlA1Qmk1cHRSdzFTNjVJWDE1Ni1sbTlxbzRacnVEcHI2QnlPX1BNZnZqNTJqTWFkSnhSN2JWQXRWZkVBNW90LVM5TFladms4WkgwQ3fSAcgBQVVfeXFMTnZvMnFCZEFyLTIwZlY5Z2tyNy1ReWxyQVFBSTRkSTNobzNUMGw4d2tEWFRpOFpFbDg0OG5kUXFYXzJwNHJNeDd6LTRRZGRuZWhMVFQ2R01rRE40bkhIa2d6TWtUQzVBZjJCRTg1eExVaFNIbjRZX09pWVZXbzJjU08wWGJ5ckcwNzJneUxVanhFdEp4aTVZal80ZU51Ny1CUHlScWlEMTk5bF9LR2FEeVhvSzFvNjlBSDlySHVWTlJxbWp6dklpNEw?oc=5",
-   "url": null,
-   "symbols": [
-    "AAPL"
-   ],
-   "topics": [],
-   "queries": [
-    "AAPL"
-   ],
-   "title_queries": [
-    "AAPL"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "b8e8caa6c0e48e5d",
    "published_utc": "2026-10-26T05:57:54Z",
    "published_taipei": "2026-10-26 13:57",
@@ -4785,6 +5099,28 @@
     "TAIWAN"
    ],
    "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "4469829fc55e4348",
+   "published_utc": "2026-10-26T05:56:04Z",
+   "published_taipei": "2026-10-26 13:56",
+   "source": "BASENOR - Tesla Accessories",
+   "source_url": "https://www.basenor.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Starship Flight 15 Prep: 4 Details That Matter",
+   "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQTVBfZkMzVlJCTXd2UkFxN2N5bGtrdGItTDRVZGxvaFNrXzNQYUdHVFBWS0RDRDJlS003QUpoU1BSVDVWU0RtbHNib2VxZVdVWkFEUFFsa0RId1RFUVB0bWI3elp6MGxmRDN6R09HVHIwQzFVRnk5eVJnT0F5ekI4WnJaQ01ZaTg?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "SPCX"
+   ],
+   "title_queries": [],
+   "title_match": false,
    "also": [],
    "time_fixed_from": null
   },
@@ -5148,52 +5484,6 @@
    ],
    "title_queries": [
     "FED"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "ccccdb16df876b8c",
-   "published_utc": "2026-10-26T05:33:56Z",
-   "published_taipei": "2026-10-26 13:33",
-   "source": "Stars and Stripes",
-   "source_url": "https://www.stripes.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Air Force declares Florida cargo rocket test a success",
-   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPQUVUMnc5a1pYVVo4OWN4VHpyMjVJcTlkalJraFBOYXJsYjMxdGpsYl9EbnFwbHdwX05XMmNlakNUcGhGbm82T3hlV0pWQmFFTTE1a0J4NHF2RGJLaHpaZGM5WXdhS1pTYmpheTRmU05UWTJyYjRUclJJQVlmbXFEY2JiT2s1cjVzOUFXSVd6aHBsUmFBWEhnVl9jLVJmeFdZRzV2THZ3?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "SPCX"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "ed2fd3c85dd090b3",
-   "published_utc": "2026-10-26T05:33:40Z",
-   "published_taipei": "2026-10-26 13:33",
-   "source": "CMoney",
-   "source_url": "https://www.cmoney.tw",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "TWA00 加權指數- 日韓股應該尾盤收斂↑↑↑ - 股市爆料同學會",
-   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1HdFhGR20wR2VuaXJGdExNOVJ6WlVNVUhzZy1DZUpvUW4zNTB1WHdHYURGUFlyaFBlN1V0WklfNDJtN2xpV1JJNzBIcTJKTmpHVFNGdzllZ2Q?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
    ],
    "title_match": true,
    "also": [],
@@ -5701,6 +5991,28 @@
    "time_fixed_from": null
   },
   {
+   "id": "c91b48eedbbf691d",
+   "published_utc": "2026-10-26T05:03:41Z",
+   "published_taipei": "2026-10-26 13:03",
+   "source": "Financial Times",
+   "source_url": "https://www.ft.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "Deloitte boss gets 45% pay rise as firm cuts jobs",
+   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTUNWWS15WlRBS1pzMm41NWJEcDU2UTIxTUk0ZWZESzU3al8taGEzcEVIUGZuU0VsS0lhRjVvbUZpcnZrWlJSLXN3U1ZtQmZRM3NITmFTU1JYWm9vX0xRNk9Gdi00Q0NvZUJ2THZteHRDVG9LdjlYRERON3Z6ZFAwZzNTTEI?oc=5",
+   "url": "https://www.ft.com/content/38eb5a47-0d36-4395-b972-4723998b0b9c?syn-25a6b1a6=1",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TSLA"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "eb06f437a006dc4f",
    "published_utc": "2026-10-26T05:03:27Z",
    "published_taipei": "2026-10-26 13:03",
@@ -5751,6 +6063,33 @@
    "time_fixed_from": null
   },
   {
+   "id": "70a8ca4dce2b10da",
+   "published_utc": "2026-10-26T05:01:39Z",
+   "published_taipei": "2026-10-26 13:01",
+   "source": "CMoney",
+   "source_url": "https://www.cmoney.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "2330 台積電 - 00406A 逆風分析- 股市爆料同學會",
+   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5FVDE3Ymx0cTl2QTBtd0dkcU9oUld3TFBmbHFQUXZqUzF6U1JJV1E4TmpuZFpCaG5JNzRjSURsMlJiM2syb1lHNDB4Qmk4T2ZMOFJ1MlpDSzY?oc=5",
+   "url": null,
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
+   "topics": [],
+   "queries": [
+    "2330"
+   ],
+   "title_queries": [
+    "2330"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "16fcc4d29614cf44",
    "published_utc": "2026-10-26T05:01:31Z",
    "published_taipei": "2026-10-26 13:01",
@@ -5773,6 +6112,30 @@
     "MARKET"
    ],
    "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "da1c359eb41b9e25",
+   "published_utc": "2026-10-26T05:01:11Z",
+   "published_taipei": "2026-10-26 13:01",
+   "source": "WSJ",
+   "source_url": "https://www.wsj.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "Power Outages Leave Kyiv Dreading Its Worst Winter of the War",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPazkyOWh6YWJnMGtOY19fQUdsa0xHVDdicnBmOHpiSW40QnU5U2pCQU43UnFRNG0tT2pWQjB0bUJFYUIxNXBjMUZTU2M1SlJqeUI1MkhfNlRsYUJhdHhTRWNBY1Z3WWRsUmJyeGt6RExxS2FsXzRZNUNGOXZRNzBlQXN6R2pnem9JNUFrYjBVSUEzeFd1UV9wVXpRVkU?oc=5",
+   "url": "https://www.wsj.com/world/power-outages-leave-kyiv-dreading-its-worst-winter-of-the-war-0c713797",
+   "symbols": [],
+   "topics": [
+    "war"
+   ],
+   "queries": [
+    "MARKET"
+   ],
+   "title_queries": [],
+   "title_match": false,
    "also": [],
    "time_fixed_from": null
   },
@@ -6246,6 +6609,32 @@
    "time_fixed_from": null
   },
   {
+   "id": "3f1ed5416f390288",
+   "published_utc": "2026-10-26T04:44:00Z",
+   "published_taipei": "2026-10-26 12:44",
+   "source": "Taiwan News",
+   "source_url": "https://www.taiwannews.com.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Taiwan startup develops rapid gene sequencing test for infections",
+   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBINzFDUGNPTUJyLUp5S09tQ2wwNmNlcUtqVU1ldThUeUp3d3RMQ2ZyMjA4VVJCV2tTWUExV1NERXJaZ1RLRVRMeVR1RFY0SXVIMTFJel8xU0U?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [
+    "taiwan"
+   ],
+   "queries": [
+    "TAIWAN"
+   ],
+   "title_queries": [
+    "TAIWAN"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "c146137e83457f44",
    "published_utc": "2026-10-26T04:42:33Z",
    "published_taipei": "2026-10-26 12:42",
@@ -6334,6 +6723,7 @@
    "symbols": [],
    "topics": [],
    "queries": [
+    "AAPL",
     "NVDA",
     "TSLA"
    ],
@@ -6445,32 +6835,6 @@
    ],
    "title_queries": [
     "MARKET"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "5001fe5284c94f89",
-   "published_utc": "2026-10-26T04:35:00Z",
-   "published_taipei": "2026-10-26 12:35",
-   "source": "BigGo Finance",
-   "source_url": "https://finance.biggo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Google Bets on Demand-Side Resources With 1GW Virtual Power Plant in PJM",
-   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9wak1Pc1JkTVBTWENMZzYzMEJUVVhOSVF4dWp1ekdITTRvNkRjbHlwMWxJWFBvX0dDYVdvczZDQnI2MXRYMl84WFhoUUo1ZjBkUG5Cam5JTWp3MGZsb3I5amIwTDB2VW00MXFMMURfaDE1ZVN0TlE?oc=5",
-   "url": null,
-   "symbols": [
-    "GOOGL"
-   ],
-   "topics": [],
-   "queries": [
-    "GOOGL"
-   ],
-   "title_queries": [
-    "GOOGL"
    ],
    "title_match": true,
    "also": [],
@@ -6709,6 +7073,36 @@
    "time_fixed_from": null
   },
   {
+   "id": "774168922a44cb5f",
+   "published_utc": "2026-10-26T04:16:52Z",
+   "published_taipei": "2026-10-26 12:16",
+   "source": "今周刊",
+   "source_url": "https://www.businesstoday.com.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "台積電聯電、南亞科聯發科…台股開盤再殺撿誰？16檔外資狂砍、本益比跌回7月股災、KD賣超區「先蹲後跳」",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQcHAyc0RZVDNOaTZrZDBlc3ZzcDBZSHR6RVVzaVU3bWM1SGtJUk5CN1FYdjFWQ3U5NWlLVmhiaEhjLWNvcUtBbFJtTGVKeUF1X2lmanpockMtVTZqd3JXbGlHRmladFBsSUhiSE1NbU9tTTh0MUhZWmI5MzMtNmlXWQ?oc=5",
+   "url": null,
+   "symbols": [
+    "2330",
+    "2454",
+    "TSM"
+   ],
+   "topics": [],
+   "queries": [
+    "2330",
+    "TWSE"
+   ],
+   "title_queries": [
+    "2330",
+    "TWSE"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "0b0d4d53fb0d6698",
    "published_utc": "2026-10-26T04:14:00Z",
    "published_taipei": "2026-10-26 12:14",
@@ -6939,50 +7333,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "dbae01d67b463266",
-   "published_utc": "2026-10-26T04:00:09Z",
-   "published_taipei": "2026-10-26 12:00",
-   "source": "Financial Times",
-   "source_url": "https://www.ft.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "AI has changed banking — but not the lessons I learnt",
-   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE45Y3FsaU12N2hHQ2hQalhYQnJVWUw5SEVkOGdfbHdJN1pfdkJTVkNDVEQ4bl9yamgxcGtyRHlpUmpVYlRlOE9qTHJQaWEtRy12c3U2Z3JmM3pFTHRBcXdVM0djWHZIVEMxaThpTlZ6SXI?oc=5",
-   "url": "https://www.ft.com/content/16a51be0-ddfd-4e45-ae8b-236d6ff99d63",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TSLA"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "1971200a01be2238",
-   "published_utc": "2026-10-26T04:00:00Z",
-   "published_taipei": "2026-10-26 12:00",
-   "source": "Financial Times",
-   "source_url": "https://www.ft.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "Serbia’s strongman leader voted out",
-   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZFBrcHFHajI5MWw5dlZ2V3FpS2hqZnd5MXR4TmtBaVdaY2FycXl6eHRRdGZEdmNaOTAzQWhIZk90ZGZKRE5VbEtwVF9Lc1BWOEpwY090MVpXUGprcnMwNjczanoxTE5nSGpzRUUwdE9MTzZtMDM3RmM3Y1RZR2ZMNTRRNlQ?oc=5",
-   "url": "https://www.ft.com/content/2d9a682d-fd71-4d76-878b-fe7980f6988a?syn-25a6b1a6=1",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TSLA"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "6a9dddfd7872d39c",
    "published_utc": "2026-10-26T04:00:00Z",
    "published_taipei": "2026-10-26 12:00",
@@ -7182,35 +7532,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "6bb7e331312293a8",
-   "published_utc": "2026-10-26T03:37:35Z",
-   "published_taipei": "2026-10-26 11:37",
-   "source": "自由時報",
-   "source_url": "https://stock.ltn.com.tw",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "竊半導體機密提供中國 台積電前副理起訴 求處7年刑",
-   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5xNk03NzM5X0lEQ0ZrSm9tQ1p5X3R1ZVloT1owYWl5cTBFVWNqbVhJZDM3clEtTUFuTm1zdnM0UmR1dFlRWTFyWlBwcllxd2swVXVPTWdBYU0?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [
-    "china"
-   ],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "152660eb53e7e9fb",
    "published_utc": "2026-10-26T03:33:59Z",
    "published_taipei": "2026-10-26 11:33",
@@ -7341,6 +7662,32 @@
    "time_fixed_from": null
   },
   {
+   "id": "bcdb97dd0d1de065",
+   "published_utc": "2026-10-26T03:16:54Z",
+   "published_taipei": "2026-10-26 11:16",
+   "source": "Norada Real Estate Investments",
+   "source_url": "https://www.noradarealestate.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Federal Reserve Interest Rate Predictions Next Week: October 27–28, 2026",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPaUpDZXNBYUVfN1paZGJuNHd4RkMtVW0zdHpXQ2ZTaU0tc3dVbTRHSnlHMmk5UXM1cHZmbzUtamNjdDQ3aW1rZFlsQjhaMXdDNm1VZDk3VHlnMXRuOGJkazNXREx3anVtZnk4RUpVSEhteXJ0d09HYmloUndES3luWnF5UDJBaWhZVzI3MWxnNGFVanBULU41dXhYVTZRRXl3T296YjJuZTgyTHh2Wmc?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [
+    "fed"
+   ],
+   "queries": [
+    "FED"
+   ],
+   "title_queries": [
+    "FED"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "f4b8cdede66f743c",
    "published_utc": "2026-10-26T03:13:46Z",
    "published_taipei": "2026-10-26 11:13",
@@ -7391,85 +7738,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "49fb9f04fd8a6704",
-   "published_utc": "2026-10-26T03:11:59Z",
-   "published_taipei": "2026-10-26 11:11",
-   "source": "CGTN",
-   "source_url": "https://news.cgtn.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Honor Taiwan restoration history, forge a shared cross-Strait future",
-   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOQjJQS2c4TWo3MHZ4ZFN1ZktZeGtJei03cVNDWHZSY2wtMTRqM2dFTmNXTGZxMHR4dElYQjhYRnpOMTQ5WEV1N3ZBYTJTVDFRYVdFLWc5LTl5cUZta3NHWlVCcXBTZGhBLVl0eGVNNEVmZzVZNWtyWWM3ZzVraFY4VWFYekRlOUd4XzllWFlreTBWemQtd1d3dTV4NkVHWlpsdDRFN3VaX2pRRXJ1ZTZRa05ZWHcyaVozN3V1dUFfeWtsMk8tc1ZXcGs1SWo?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [
-    "taiwan"
-   ],
-   "queries": [
-    "TAIWAN"
-   ],
-   "title_queries": [
-    "TAIWAN"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "5c78f4b2c5880041",
-   "published_utc": "2026-10-26T03:09:34Z",
-   "published_taipei": "2026-10-26 11:09",
-   "source": "TradingView",
-   "source_url": "https://www.tradingview.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Taiwan Benefit Co. Estimates – TPEX:3379",
-   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZzZxX1lNLU1xWFEtMTRGT1hKMXl2Vm8ta21LY2ctX25KWFc2a2ZZNHN4R0dfNmFCZWFBMkdWU0h0RkdNWlR0Q2paMk5PRUlRS1pFSkhRdDFySVFKczMzbkItU1RoV2ZPTFNXd0VrTHowSkc4Y0NFbS1Yck1Ldm9rektMYWMyTlZiXzRWRlQ1OA?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [
-    "taiwan"
-   ],
-   "queries": [
-    "TAIWAN"
-   ],
-   "title_queries": [
-    "TAIWAN"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "22743bcd7430a65b",
-   "published_utc": "2026-10-26T03:06:56Z",
-   "published_taipei": "2026-10-26 11:06",
-   "source": "Yahoo股市",
-   "source_url": "https://tw.stock.yahoo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "當台股創新高時 印尼股市熔斷、印尼盾已悄悄的跌到1998年金融風暴的水位",
-   "link": "https://news.google.com/rss/articles/CBMiywNBVV95cUxNbWVqM0c0STVwQ0I4Snh6U2ViX0d4aEJOM1JCUENnWnlYQTNOZ2JLYklDVG1BUk9yQjhfeE1pLWhzazRpXzc3MGR0T2tVM3c3bFFfaEJJaGZqZkQ4QXRrM0RmM1Zlb0pTYkR3OUYxVEZCeGlFSVYtZnRKUlBVQ1NsTjNFWnczZHZtVFg5SU9hdkJoTklFc1VTdFh4N2ticjBfS0lLalhVZEgxUDVVaW1XQms3RXRNUHoyUjNObVFrbHlyRUZNWXphWDJjaUtERTRkM21yaGxKMG1NcW90emhnM2d3NUhwc3IxdTd4UkxZYVpZc01Fa0JfUi1DdEFLSXJzcEtCb19KcC1iWjlVSzFGcHVMeWQ0RWYtMW90bVh3bFJaU0t2cVFYdThNWHJiMTFsZjlvYUNpSnJNbDJ0dmhlMGxJVDlMa2dDSnNNM2dIajRjeEZWN25STVZkRTVrUmhfWXpMcXpXaDVjS3NrMjZlNU9mRkRGb19IRXVJWk9hdWxyRkNUV0hsVjhPR0h5bnpKRnV6RnNGLVRuUnJGR1RxenZhVFZUZ3hXa084SzYzSkNZbVJKY2NBdlBHaVpFWUp4X0FWbmwyMDlicEE?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [
-    "Yahoo新聞"
-   ],
-   "time_fixed_from": null
-  },
-  {
    "id": "db50cf9b1f613064",
    "published_utc": "2026-10-26T03:04:00Z",
    "published_taipei": "2026-10-26 11:04",
@@ -7498,28 +7766,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "b6f934aee4d084fb",
-   "published_utc": "2026-10-26T03:00:00Z",
-   "published_taipei": "2026-10-26 11:00",
-   "source": "WSJ",
-   "source_url": "https://www.wsj.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "France’s Nuclear Forces Bring In Neighbors to Keep Russia in Check",
-   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRlcyVjhVaDliZERCZF9SeERLNEdHblNvbk0wUS1RNExOLS1jMVJ1UU15R3JBZ0FwNm9oQjN3N3RrWmZFa0FmakVNem5QNS11dnFUOFRtZ3Q3REU1MDc2MTVLOXJpQ2Fva0lEYWFIbWtPbXBKWGxzN1hudlV4SFFWTUIzYUlzVVdxaDNTVy10T21halNuV1BRZDRXYzR3bXJ1bWdybVFLUkRtVGM?oc=5",
-   "url": "https://www.wsj.com/world/europe/frances-nuclear-forces-bring-in-neighbors-to-keep-russia-in-check-58b0967d",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "MARKET"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "b18b608fc6c296c8",
    "published_utc": "2026-10-26T02:50:00Z",
    "published_taipei": "2026-10-26 10:50",
@@ -7542,6 +7788,28 @@
     "SPCX"
    ],
    "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "4f3b798500d69960",
+   "published_utc": "2026-10-26T02:48:00Z",
+   "published_taipei": "2026-10-26 10:48",
+   "source": "AP News",
+   "source_url": "https://apnews.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "Mexico orders that former state attorney general face trial on unusual treason charge",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOZlE2REE0NjRIbEpTcGlPQzBNTEdrWFVvT1ZoZXFfWTE3MjhfSWVtOEIwdkp6RDNZN2lrLUpJc3pjcU5HVzd2SnVCM1pBc3VIbmNuSG1QQkJqM29oUXVQbjlRQXk2dFBjR3NnbVY1SGpISDE1QTF1bnhxdDJ0RDJUZmJ3SUtZODRLR1ZrTVVHc3Q4T1IzMHJIUzBsSkZETnUyVnJpQlhn?oc=5",
+   "url": "https://apnews.com/article/mexico-treason-cesar-jauregui-cia-operation-2a7fd90968c9dee1405496d39dc35e4f",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TARIFF"
+   ],
+   "title_queries": [],
+   "title_match": false,
    "also": [],
    "time_fixed_from": null
   },
@@ -7614,7 +7882,10 @@
     "Huron Daily Tribune",
     "KSAT",
     "Ottumwa Courier",
-    "Jacksonville Daily Progress"
+    "Jacksonville Daily Progress",
+    "ABC4 Utah",
+    "Marietta Daily Journal",
+    "Athens Daily Review"
    ],
    "time_fixed_from": null
   },
@@ -7637,7 +7908,9 @@
    ],
    "title_queries": [],
    "title_match": false,
-   "also": [],
+   "also": [
+    "ET Manufacturing"
+   ],
    "time_fixed_from": null
   },
   {
@@ -7920,56 +8193,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "b518be9222f31e21",
-   "published_utc": "2026-10-26T02:06:23Z",
-   "published_taipei": "2026-10-26 10:06",
-   "source": "Moomoo",
-   "source_url": "https://www.moomoo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "The highlight of earnings season has arrived: Over one-third of S&P 500 companies are set to report results this week!",
-   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPTVhyOFkycHNWbDh3QTF5c0FWTHNCMnVJWG0tLXllZVdONDJSbklkdUhDcjFsSzhOX0hJYTRFSjRwUkI3VldGQzJ4ZnVfMHpiUGxSX3c3T1E2dEVBU1JKdWVmNE1aajRKWk5LOWNJU3BzZEN4U2ZjS3ZyUE8xRUdYNVNvak9PbDhhUVNiaVA4YU1VbkpnV1JHN1BZTVVoMTJjVjN4Vk9n?oc=5",
-   "url": null,
-   "symbols": [
-    "VOO"
-   ],
-   "topics": [
-    "earnings"
-   ],
-   "queries": [
-    "MARKET"
-   ],
-   "title_queries": [
-    "MARKET"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "15d2c13bd43397f9",
-   "published_utc": "2026-10-26T02:00:00Z",
-   "published_taipei": "2026-10-26 10:00",
-   "source": "WSJ",
-   "source_url": "https://www.wsj.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "How the Proposed California Billionaire Tax Became a ‘Hot Mess’ for Democrats",
-   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNeVhob0xrZHJ0NWFKbFJKbDNaZVRnYWtVcE1HTXJ0LWxkY0lxb294Sm5MX25wNUhMSnNZVHJ2OGxnbEQzalp2MnhXWEVQRFhIdzc5d0c4cjJwRjg2QUZBM2g3WjExcl9jcWdPR1RydnFydjNscTlrVUctYU0zOTF1Rk5PZk96S2hE?oc=5",
-   "url": "https://www.wsj.com/politics/california-billionaire-tax-democratic-party-f4729c1d",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "MARKET"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "0e48d49f37c2409d",
    "published_utc": "2026-10-26T01:54:00Z",
    "published_taipei": "2026-10-26 09:54",
@@ -8225,58 +8448,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "fe0f3c80fe9f463a",
-   "published_utc": "2026-10-26T01:25:00Z",
-   "published_taipei": "2026-10-26 09:25",
-   "source": "BigGo Finance",
-   "source_url": "https://finance.biggo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Gold Falls Below $4,000 Threshold as Wall Street Bearish Sentiment Rises to 41%",
-   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFAxbGxJS3lUR3ZzMTVjZFVCVThJUnpSem1GaE5QRTR5TXI2bExsZGhtaEcybXFxc18tZlVMZEhrQ1o0b2piUkkxTmxNd2pQcWVUYnVUdzJWMjFsd3ltdy11YjBJNUtrdlp6QnZkZW1DSDRsNUpyb1E?oc=5",
-   "url": null,
-   "symbols": [
-    "VOO"
-   ],
-   "topics": [],
-   "queries": [
-    "MARKET"
-   ],
-   "title_queries": [
-    "MARKET"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "78f714a20f155711",
-   "published_utc": "2026-10-26T01:24:13Z",
-   "published_taipei": "2026-10-26 09:24",
-   "source": "BusinessToday Malaysia",
-   "source_url": "https://www.businesstoday.com.my",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Ringgit Edges Higher Ahead Of US Federal Reserve Meeting",
-   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOaE9aYTktVV9JMWJ3aEgtT1dFRGxnTmZBMDZIWXlMSFVRN3BRajN0S00yU0hZR3d0VXlMSGtrb0YtNURpbWlYb0lLU2RNbTdDZFNJZEZVTTNaZWNPZF9MejRZSHZOaEF1MVozdm5NTTZTdlB5MnZvM1k1U1ZNR0xxbWpVcHdrS1ZtZ3BYQWF1VWdubm84R240b1QzX0xaWWxFbS1F?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [
-    "fed"
-   ],
-   "queries": [
-    "FED"
-   ],
-   "title_queries": [
-    "FED"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "d13c899347559642",
    "published_utc": "2026-10-26T01:20:00Z",
    "published_taipei": "2026-10-26 09:20",
@@ -8350,33 +8521,6 @@
    ],
    "title_queries": [
     "NVDA"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "31df581045804f56",
-   "published_utc": "2026-10-26T01:04:56Z",
-   "published_taipei": "2026-10-26 09:04",
-   "source": "Moomoo",
-   "source_url": "https://www.moomoo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "FOMC and Inflation Data Test Risk Appetite",
-   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPbHdYS0lsUHV2emlJN0lvOEdfMzNhSFBTTFRzOXp4SkVnZmxKc2dUVmVQLUV3RU5BRHE4RFZSVmVFcEE5TEF1SUxNa1JvV2x3QlVTTVdoeUZWaUQtQXJTOXR3dnE2QWRGVVlxVjV2UjQwWUt4NlhsQklBTGprRmpqZU54UmNzVFk5a0tYd0FDT184czk3b0RhNk5ySzY?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [
-    "fed",
-    "cpi"
-   ],
-   "queries": [
-    "FED"
-   ],
-   "title_queries": [
-    "FED"
    ],
    "title_match": true,
    "also": [],
@@ -8463,32 +8607,6 @@
     "The Globe and Mail",
     "The Motley Fool"
    ],
-   "time_fixed_from": null
-  },
-  {
-   "id": "a2d166204cff5c7f",
-   "published_utc": "2026-10-26T00:45:03Z",
-   "published_taipei": "2026-10-26 08:45",
-   "source": "eFXdata",
-   "source_url": "https://www.efxdata.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "AUD/USD - Slips Slightly As Investors Look Ahead To FOMC",
-   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1EVl9GSEMzSzRhQXRYV2hQWjJrS28weUd2UzFMUEJWSXNPNWF0LVRpS2t6UkFsWm1ueVByb3pmcVAtMmh4U3JjQXMxUHdacjYwUk5IQ05tNGZXM0lvVjEzWTczNktsYWtyYUhoWkw2ZDZTUVo3djhwT3Rn0gF_QVVfeXFMUEl0U3U0cUk3UkxFb2V0ZkJ5cHFiM2hlcl9wcUc4SC1fOE9vYlNINk1GcE00OVBxc3dHbFpzM0ZMNng3TlV1RnNYbENPd1EzdkgwdXdHUWxMSXpXci0xb1lUMllWQ3RQVUEwTXFvZ1IyM2RKVkpNUnhDY1lNajByTQ?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [
-    "fed"
-   ],
-   "queries": [
-    "FED"
-   ],
-   "title_queries": [
-    "FED"
-   ],
-   "title_match": true,
-   "also": [],
    "time_fixed_from": null
   },
   {
@@ -8709,28 +8827,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "e618fda8adebd85c",
-   "published_utc": "2026-10-26T00:01:00Z",
-   "published_taipei": "2026-10-26 08:01",
-   "source": "AP News",
-   "source_url": "https://apnews.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "Attackers kill nurse, severely injure health worker responding to Ebola case in eastern Congo",
-   "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE03SlN6UGxrSmJNMjdIZ0R6Z0VKQk9oTXBtc0hkNHJxMm9vV0VKZHA4MzNDYnJ4cXd3RmFTSGtRVHdyRlR1WFRESWp1TWl5ODlfZlRnU1dnampZem54YlF2cW5MZXl0dF9RSko0c2hZMkJCUkxCaGNGSmV0aw?oc=5",
-   "url": "https://apnews.com/article/congo-ebola-b739277681b530aef772cf66be7e41f0",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TARIFF"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "e72db06b3694ec6c",
    "published_utc": "2026-10-26T00:00:00Z",
    "published_taipei": "2026-10-26 08:00",
@@ -8790,32 +8886,6 @@
    "lang": "en",
    "title": "Shuffling of U.S. tariffs will offer little relief to Canada, experts say",
    "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPMmJYY1hpd2oxOGcwUWdEM3dwalRtUENvd3dkcjd1Qkd5NFpBUUJmWVdza0NtX0FieWd2RGcya0tRdUx4RGRaM09Cd1ZKQ1ZJNnRlZGNwSDFrY1c3TmgxTUFESElWMUpKQzdScXZROEx6bXN4alRzdjFpVzducDZtRm9wMlFTd21RU3c?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [
-    "tariff"
-   ],
-   "queries": [
-    "TARIFF"
-   ],
-   "title_queries": [
-    "TARIFF"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "e35624efddc1e6dd",
-   "published_utc": "2026-10-25T23:55:49Z",
-   "published_taipei": "2026-10-26 07:55",
-   "source": "Ukraine Business News",
-   "source_url": "https://ubn.news",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Trump Floats 200% Tariffs on Ukraine and Russia as Further Sanctions Relief Is Discussed.",
-   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUkdDaVpjeC1PVmNQeGJFN2x0amxmeGpSZG1oQXNZM0VZRXo5ZXJKZkd6eW1lMkN3T1JEMmpQWmQxRjNRMVM2VVFHQjFmU2ZhNEt5VmprTk9oVTJweEJSMEhVWW5lWElMUEZRS0hmbk1NVi03cTFqQmY2SXJObzgzU1B5bTU3M2pReFB6RjlyTHNnUU1tZVllaE1UTm1pbUxGSmhRRWJUOFrSAbABQVVfeXFMT1FOdS1HRXZlc0xQLXRoUFlUSHJ1TGhpLVJNZDdTdUlYVnExcmJ4aEFhejQtNnpSUElQVHZqT1hWSFpLYXllTUtnOGFyODZJanNVYk14LVR4bkJZLVltc1NfMEFjRzZuX2Zka1E3MXRxNmU4SVNTbktrLTFqMFBUTWR2bzhlS2ZwMy0xc2t6M0N0aDJpWVpwMDRKTjR2TmpuZmEybXNmVFdDM1dBNnZ5aXM?oc=5",
    "url": null,
    "symbols": [],
    "topics": [
@@ -9242,6 +9312,32 @@
    "time_fixed_from": null
   },
   {
+   "id": "ec8cb645f8b5bddc",
+   "published_utc": "2026-10-25T21:22:39Z",
+   "published_taipei": "2026-10-26 05:22",
+   "source": "Yahoo Finance",
+   "source_url": "https://finance.yahoo.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "en",
+   "title": "Musk Says SpaceX Closed $40 Billion Debt Deal, Blasts Neoclouds",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQenRVR2hwWF9OLW9ES2tWckI5QUpGbGQxcVNMMjgtMUMxU3hWR2k1RDlLaXlRT01pRW16LXlwN19udEdnS0xUdXR1RTEzWjAwenEtMTJTaTJDbjAzUlcxeDZ6TnllMGZvWWlrT2FiT1JnZXMtY25mSl8tWWFWSlRmNTNwYkZ0RkVnbUV3bkwtYjlHS1J5?oc=5",
+   "url": "https://finance.yahoo.com/technology/ai/articles/musk-says-spacex-closed-40-212239596.html",
+   "symbols": [
+    "SPCX"
+   ],
+   "topics": [],
+   "queries": [
+    "SPCX"
+   ],
+   "title_queries": [
+    "SPCX"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "f6a1bfbc2fd919f5",
    "published_utc": "2026-10-25T21:18:22Z",
    "published_taipei": "2026-10-26 05:18",
@@ -9288,7 +9384,9 @@
     "TSLA"
    ],
    "title_match": true,
-   "also": [],
+   "also": [
+    "Moneycontrol.com"
+   ],
    "time_fixed_from": null
   },
   {
@@ -9309,6 +9407,28 @@
    ],
    "queries": [
     "CHIPS"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "6405383974d54d4d",
+   "published_utc": "2026-10-25T20:30:35Z",
+   "published_taipei": "2026-10-26 04:30",
+   "source": "Axios",
+   "source_url": "https://www.axios.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "en",
+   "title": "Trump's DOJ barrels into midterms with lawsuits, raids and arrests",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9lNFgtVHBLYVNIT1FBSnJrYkRJTVRXcVY1N0R5WHJEb0FoZDRFaUxnSElqWG04dE9lODU2Ull6UlJLQnlfNnd4b0oxNXI0TnFNbm1nRVpPRkI0cDRyd3dKRlNScE9TUmZOdjVXLVFZdEdBUQ?oc=5",
+   "url": "https://www.axios.com/2026/10/25/trump-doj-midterms-interference",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "GOOGL"
    ],
    "title_queries": [],
    "title_match": false,
@@ -9367,6 +9487,28 @@
     "The Globe and Mail",
     "The Motley Fool"
    ],
+   "time_fixed_from": null
+  },
+  {
+   "id": "84ea91fca9181829",
+   "published_utc": "2026-10-25T20:16:38Z",
+   "published_taipei": "2026-10-26 04:16",
+   "source": "Axios",
+   "source_url": "https://www.axios.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "en",
+   "title": "Chain-reaction chaos threatens to unleash new risks on the world",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBmRDRQcmt5V2R0eUIwUkkxRkVKV3NaZlZNOTl6LVNKbUxpcnRGTmtzWE96ODBnZzVZV2JDS1ozbC1HdUV0Sm5Uak85em5TQk1xblZiU3BHbkpPOVdGMWREcTFES0FpLWY1ZnIwNEdQUjZZWXlSRG1UaQ?oc=5",
+   "url": "https://www.axios.com/2026/10/25/ai-cybersecurity-politics-risks-2028",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "GOOGL"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": [],
    "time_fixed_from": null
   },
   {
@@ -9979,6 +10121,39 @@
    "time_fixed_from": null
   },
   {
+   "id": "e044615242fa4778",
+   "published_utc": "2026-10-25T17:46:28Z",
+   "published_taipei": "2026-10-26 01:46",
+   "source": "經濟日報",
+   "source_url": "https://money.udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "折疊 iPhone 搶手 傳蘋果要求追加三成訂單 鴻海、台積等進補",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE8yWm1ubWVUSFJsOFYyWm15RUJnV3hYdVZoWHZicXdDWHloU2FHaVo0bjhablRrVmctYnliZENkNmVraE9GSkpOc0lsVmN0aG02SWhCTDZlYkFPT1VSNXpVZkFnc0tnWjdYeE9mOElibTdBT183SnczZdIBX0FVX3lxTFA0U3ZRVWdrSWhDWGxQcFNjVW9taml2YTRUWHVob2xlZl9iSlkxMU9NTUQ2aThWcFlZendldDZpZjg0TXpENkhkZjRyRHBqQWZqUWdrT2E4cDFWcTJZRWhv?oc=5",
+   "url": "https://money.udn.com/money/story/5612/9836711?from=edn_search_result",
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
+   "topics": [],
+   "queries": [
+    "2330"
+   ],
+   "title_queries": [
+    "2330"
+   ],
+   "title_match": true,
+   "also": [
+    "UDN"
+   ],
+   "time_fixed_from": {
+    "published_utc": "2026-10-24T09:00:00Z",
+    "published_taipei": "2026-10-24 17:00",
+    "by": "datePublished"
+   }
+  },
+  {
    "id": "9142ff5f69df7a61",
    "published_utc": "2026-10-25T17:39:49Z",
    "published_taipei": "2026-10-26 01:39",
@@ -10011,6 +10186,42 @@
    "title_match": true,
    "also": [],
    "time_fixed_from": null
+  },
+  {
+   "id": "417fe687ddda765c",
+   "published_utc": "2026-10-25T17:34:46Z",
+   "published_taipei": "2026-10-26 01:34",
+   "source": "經濟日報",
+   "source_url": "https://money.udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "台股重量級法說會登場！聯發科、台達電、聯電上陣 AI 需求能變獲利？",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPa0M1V0tlcEQ2TGJfanRtUHRRV0VlT19MVGh4WjU0alV6ZGVnNHhUdncxSkdCdGU1YlptSW84ZGg3ZzRfZkltXzJ6Q19mcTczbU40U25fcTJ4WmJxT3RKQXBiWXo2V1lEZjNUeG1wdUVnV3RWYVBaY0cxMVJIX3VmZdIBX0FVX3lxTE1jczljZnBXdjNXb2NXbGhLUVA1TDltZERkcWh2SFhYcV9xam5OVG5SZ1NzSXhGYWRrelNveUliOGRCUXpPWE1yZ3RtLVhxOFJiNWZGazBRSEtzci1iaHFn?oc=5",
+   "url": "https://money.udn.com/money/story/5607/9836939?from=edn_related_storybottom",
+   "symbols": [
+    "2308",
+    "2454"
+   ],
+   "topics": [
+    "earnings"
+   ],
+   "queries": [
+    "00981A",
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
+   ],
+   "title_match": true,
+   "also": [
+    "UDN"
+   ],
+   "time_fixed_from": {
+    "published_utc": "2026-10-24T09:00:00Z",
+    "published_taipei": "2026-10-24 17:00",
+    "by": "datePublished"
+   }
   },
   {
    "id": "5525287a4e393afa",
@@ -10083,6 +10294,34 @@
    "time_fixed_from": null
   },
   {
+   "id": "fcd0edf7da79a7f7",
+   "published_utc": "2026-10-25T17:21:48Z",
+   "published_taipei": "2026-10-26 01:21",
+   "source": "UDN",
+   "source_url": "https://udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "台積電跌破半年線，對台股的影響有多深遠？",
+   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNU0NvNC14MjJvaXRnemJneEgwa2hKQS1POHl5QWR2YWJQVmUwTGNRMjhNQmxPVW85QU1RMHViOXJDQTlHbW1rUlRtYkJUX2lDems3WHBPY3J3R2FYa2N6aGVCSkQ0OC1YaGIwN19sNUllVGo1UzFJRTE3V0R5NU80LVo5T25kRGIyRFNJdW5LUW04U3RQSng4LWpn?oc=5",
+   "url": "https://udn.com/news/ai/answer/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%B7%8C%E7%A0%B4%E5%8D%8A-58953475",
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "2330",
+    "TWSE"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "51eac0721f2a9d47",
    "published_utc": "2026-10-25T17:20:08Z",
    "published_taipei": "2026-10-26 01:20",
@@ -10124,6 +10363,33 @@
    ],
    "title_queries": [
     "TWSE"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "9e2e252abc2dc519",
+   "published_utc": "2026-10-25T17:01:30Z",
+   "published_taipei": "2026-10-26 01:01",
+   "source": "UDN",
+   "source_url": "https://udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "權王台積電能否守住2385元關卡？",
+   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQN0p1NFJhTnZPTUlFa2RycmNiQ1Y5dWZhUEh0ZGdQcWM1TDJHMVJHMVpMSm5nQWNrRTBCcGJFenZ1LWdaVkVxLWlHUmVsSTBrYTJQRjk3ZDdQU0gtdm5WWDZXSzh3N3BsMllsaGo5b3ZGb0RBZ1NuVDNacllZYnV2dlhzVGMxdmIwTlBuWnZrOFZrQl81MUZYdS1n?oc=5",
+   "url": "https://udn.com/news/ai/answer/%E6%AC%8A%E7%8E%8B%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%83%BD-58952761",
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
+   "topics": [],
+   "queries": [
+    "2330"
+   ],
+   "title_queries": [
+    "2330"
    ],
    "title_match": true,
    "also": [],
@@ -10560,6 +10826,30 @@
    "time_fixed_from": null
   },
   {
+   "id": "81e9986d0dfc8a1f",
+   "published_utc": "2026-10-25T15:55:43Z",
+   "published_taipei": "2026-10-25 23:55",
+   "source": "UDN",
+   "source_url": "https://udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "群益投信的建議，對長期投資台股ETF的投資者有何參考價值？",
+   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNT0Y2LUpyZEo3ZlRLbFk1cnZLU243blJHa1lvZ3lkVFBYX281RHl6aW40aC10SEQxajlCN0lGcjBSQjUtMUxkWm9hTXhYQm9oSFpzWkdWUlEtY296bDZiam5nRVB1Nk5WOXBSdHZKNXM2QWZ0T0U2U3FELUZhdTZpcmtyc0JQdHlTRFBFMDd5WGc4NDFvNHd3djdR?oc=5",
+   "url": "https://udn.com/news/ai/answer/%E7%BE%A4%E7%9B%8A%E6%8A%95%E4%BF%A1%E7%9A%84%E5%BB%BA-58927387",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "1715ed854e7b8dab",
    "published_utc": "2026-10-25T15:55:00Z",
    "published_taipei": "2026-10-25 23:55",
@@ -10764,6 +11054,30 @@
    "time_fixed_from": null
   },
   {
+   "id": "692d8feaea4dc638",
+   "published_utc": "2026-10-25T15:36:55Z",
+   "published_taipei": "2026-10-25 23:36",
+   "source": "UDN",
+   "source_url": "https://udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "台股跌幅與融資減幅不成正比，暗示著什麼問題？",
+   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOblFVWk4wN01LNE5rT3VtX05jYkl1ZzdoM1drQy1HV2RLbXZhS2tKel9TdFlDd3dkRnVOdkc1S1FVdDZuWjJJT2xzN2ZIeDM2TnFkWThZVTZlU1NOal93eXZITmNRZjdiRmJwdFRfSmlHNC1NdC1Ec29PS2dPX3BQemU2X1lZUnZKWmpBMHRtd0xLcE4xcC0zcFJn?oc=5",
+   "url": "https://udn.com/news/ai/answer/%E5%8F%B0%E8%82%A1%E8%B7%8C%E5%B9%85%E8%88%87%E8%9E%8D-58949300",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "992de280f2fc6f27",
    "published_utc": "2026-10-25T15:29:00Z",
    "published_taipei": "2026-10-25 23:29",
@@ -10901,6 +11215,30 @@
    "time_fixed_from": null
   },
   {
+   "id": "4e3c882d979748ec",
+   "published_utc": "2026-10-25T15:15:05Z",
+   "published_taipei": "2026-10-25 23:15",
+   "source": "UDN",
+   "source_url": "https://udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "融資浮額未清，為何成為台股跌勢的核心壓力？",
+   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOY2xaNFY3ZE9WOXphZzFrZU1oQmNIZVduVnV5elhfMVdGcUZmbngwd3M1eFQxMFA4NThHNDR3VmlCNHlaLVJQSjRfcWo2S2ZaazFzQTVlMVJvUGVCRWt1RW9xZXlfWk94QUNmY21aUDVHOWdRS2pXaWIyMDhJNGE3TFRKTkhXVlJwRnhBamxpQVpzM2FheHoxdHNR?oc=5",
+   "url": "https://udn.com/news/ai/answer/%E8%9E%8D%E8%B3%87%E6%B5%AE%E9%A1%8D%E6%9C%AA%E6%B8%85-58949299",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "f13239fa5ced0d2a",
    "published_utc": "2026-10-25T15:13:30Z",
    "published_taipei": "2026-10-25 23:13",
@@ -10979,6 +11317,28 @@
    "time_fixed_from": null
   },
   {
+   "id": "387fa2044641a3d9",
+   "published_utc": "2026-10-25T15:00:00Z",
+   "published_taipei": "2026-10-25 23:00",
+   "source": "經濟日報",
+   "source_url": "https://money.udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "AI 異質整合推升規格升級 法人點名看好13檔 PCB 供應鏈",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5ZYmV2Y3llV2xfaTJVTVJZZ2N1VnBuRFp2SThOZVhuM3hLSjFyR29XMlR5c1A2clN5NG9QTldBNHMwLVVCUGtDckVrVVRJeU1HalJjRHJCbkFKUdIBX0FVX3lxTE1rcUZ1djUtMmhENnB5SkloQW1EY29fVDRyaW55dUhzeHpUV3J5eTZrN2EzREpxQnU5dEFJQ3Y0S1YyRWxBVjRzM3lVQXMzRU1sU21UMmRVOXAyNHFHeFJR?oc=5",
+   "url": "https://money.udn.com/money/story/5607/9833413",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "00981A"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "af2835af4030d123",
    "published_utc": "2026-10-25T14:55:00Z",
    "published_taipei": "2026-10-25 22:55",
@@ -11024,6 +11384,28 @@
     "TWSE"
    ],
    "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "2b958a8e17fba683",
+   "published_utc": "2026-10-25T14:51:00Z",
+   "published_taipei": "2026-10-25 22:51",
+   "source": "The Globe and Mail",
+   "source_url": "https://www.theglobeandmail.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Micron Just Revealed a New Business Strategy. That Change Makes It a Screaming Buy.",
+   "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNWjhCWTlvcUN4NGdjRGp4WW1weHI5SVFFWFVyWkJTN1ZXaDZOY2cyYzlySkl6dkQ4YW9CZ2ZjMTVQOVgwaGJZSVFJc3dnMWlNblIxT0NiYkhfUkx4b0g3dzJodWlhYWltbjVJVjJGZHRvX01EQTAteDBKcC1KY0dZT21nd0dRNEdDYlp3c1dqejY5eUt0QVpwUFhUMDhfUG5kc25NQVFOald6bk9LN3dYOGxkM0RWTjFxcDUxX0M4VUJHODI1RlUtR0xCMHhnUHN2eHVvNG1QbTdycGE0YjEzRGVJTGRlUFFJdnczNWxraXpJXzR0bElzT1VtUQ?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TSMC"
+   ],
+   "title_queries": [],
+   "title_match": false,
    "also": [],
    "time_fixed_from": null
   },
@@ -11109,28 +11491,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "2a078cd463c9e52b",
-   "published_utc": "2026-10-25T14:14:23Z",
-   "published_taipei": "2026-10-25 22:14",
-   "source": "CNBC",
-   "source_url": "https://www.cnbc.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "In pictures: Protests over inequality, rising living costs turn violent across France",
-   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQS1JVbTVIUDc2bno4ZDI1cTdTaGFwTGpMSlJ2Ynp4bEtxSjl6Y0RuZUxOUmNHQWRPTnlfOEd1cURTYUYxNHRqR1RqOXdSMzFlR1FWZkRsQ1A0VW1TbXBTRi03SDd5MFZqZWI2Z3R5Q19FR1hqa3dpU2tXOUJ5TkktcjFzTjFYZGZnVUlaatIBkgFBVV95cUxNcFpNTmNabWg2OVdLWHZabzc0c3hYVjdBNGdtdEVIM1RfNGQ2WnVtUTNyQzIxSmVqTjJKQzBxWkxIZ1NBWEVqcUxFRjBaSEVGOUJLb2gtOVpJVV9nZzNoZktfUFpjOGRrZTJSdE9haTFaenBtOUItVnFTYldmOGxmdmxNaHRXemhubkhUa3RiTENJdw?oc=5",
-   "url": "https://www.cnbc.com/2026/10/25/france-protests-paris-cost-of-living-inequality.html",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "GOOGL"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "aba3c73954ed3259",
    "published_utc": "2026-10-25T14:06:39Z",
    "published_taipei": "2026-10-25 22:06",
@@ -11179,24 +11539,26 @@
    "time_fixed_from": null
   },
   {
-   "id": "0e9b9da7eeb47786",
-   "published_utc": "2026-10-25T14:04:03Z",
+   "id": "6f3547ae09d0e87d",
+   "published_utc": "2026-10-25T14:04:05Z",
    "published_taipei": "2026-10-25 22:04",
-   "source": "Axios",
-   "source_url": "https://www.axios.com",
+   "source": "UDN",
+   "source_url": "https://udn.com",
    "tier": 2,
    "rank": "B",
-   "lang": "en",
-   "title": "Scoop: Netanyahu presses Trump for more support ahead of tight Tuesday election",
-   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5SLVhnYUU1eHM5YmlMLTRBc1EwYTBUZGRZd3NvaGtFMVVuODhVSjZ6OV92UkxqRWFhUEQ1ZUpkX3VQaGRBZW91bHFvNVhNNDNQTFFSZWNQenhZMUhUcTNTZ2E3aEhHbHhzODdXUENCLXRsRGxZ?oc=5",
-   "url": "https://www.axios.com/2026/10/25/netanyahu-trump-israeli-elections",
+   "lang": "zh",
+   "title": "PTT股板對颱風假與台股休市脫鉤的討論，主要觀點是什麼？",
+   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBKWmJjdHZPaC1ISVZkcUlHTHhpdGFjQUtPbEJPZ0N1RFBoWE1ETGtHZmhvR2pseVRvVnl3dEsxRE1XbnBxMW5GNDFKc2tocDJhWXFDWjBmMGw3MDczUTJyTmg5X2xUbzdVZmVlbGlNMFo3a05tV1pXVzVR?oc=5",
+   "url": "https://udn.com/news/ai/answer/ptt%E8%82%A1%E6%9D%BF%E5%B0%8D-59004461",
    "symbols": [],
    "topics": [],
    "queries": [
-    "GOOGL"
+    "TWSE"
    ],
-   "title_queries": [],
-   "title_match": false,
+   "title_queries": [
+    "TWSE"
+   ],
+   "title_match": true,
    "also": [],
    "time_fixed_from": null
   },
@@ -11212,6 +11574,30 @@
    "title": "台股正二ETF的每日重新平衡機制，對投資者有何潛在風險？",
    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQU2FPWUFRZ1MwQWx0N0lvQnU0Um5jRkozOWJEdmVMVUo1VU95Y1VMRkIxYTIteHREMkJBbDFmZG1GblYxXy1aS0JPUUt6YzNuY3M4eTd4azJ1QjlTSWM5OHItUGlHX0R3bDVOZndyWGR6NUwxcG43c3ZsTzVrZ3ROMWUybE0?oc=5",
    "url": "https://udn.com/news/ai/answer/%E5%8F%B0%E8%82%A1%E6%AD%A3%E4%BA%8Cet-58900208",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "6c269337d40c88eb",
+   "published_utc": "2026-10-25T14:02:47Z",
+   "published_taipei": "2026-10-25 22:02",
+   "source": "UDN",
+   "source_url": "https://udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "外資持續賣超台股，今年已突破兩兆元，這對台股後市有何影響？",
+   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWU93RkliYTE0MFNBMUs2Z2dwU2xqUlk5VDBRMnBHME5qd05WWmNQZjhJV3VfRk4tRWxqM3A1MEtHRjVhTEMxTk5ZOUN5aThZVEg4bTNpUW1VbTYzd1JEdnNRZ3RIckhkWHRUWVdkX1FJRUhZUWxVZ3lCSmJEN1M4d1BabDMyaWtWcG5pUEpWZ1prNzJIcThwYTd3?oc=5",
+   "url": "https://udn.com/news/ai/answer/%E5%A4%96%E8%B3%87%E6%8C%81%E7%BA%8C%E8%B3%A3%E8%B6%85-58842230",
    "symbols": [],
    "topics": [],
    "queries": [
@@ -11845,51 +12231,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "9e1834e649c7265e",
-   "published_utc": "2026-10-25T10:42:52Z",
-   "published_taipei": "2026-10-25 18:42",
-   "source": "tech-insider.org",
-   "source_url": "https://tech-insider.org",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "2 AI Blocs: Pax Silica Edges WAICO [2026]",
-   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE42X0hOQjlodlFLODNGYUhzUFc0czY0N3VZNkw5TTdBRDk1dVkwZTRkM2NoTzY2NEtzaGJzckc4T3V3S01iWUoyeGk3ejl0Zk9GY0JSbVRzSG00R0VGaS1zY1pscURuamEyT1hJMzZVMFQ1dFlKNXJZ?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "CHIPS"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "463f0feca7a11a06",
-   "published_utc": "2026-10-25T10:42:23Z",
-   "published_taipei": "2026-10-25 18:42",
-   "source": "udn",
-   "source_url": "https://udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "敦吉挑戰連六年 賺進超過半個股本",
-   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB1V1BSa0FnOVBfQ21nTGNLbTkxaWlIaUxsdFRjN3Q0RzJGTFZrdG1YYUNfUzBTVEpGMXJMbHNDWmk1X2FfWS1xTEJpeGoyYTk1LUtMUWFvVTdfakhxdGhHNTJNRW3SAVZBVV95cUxPMGJLMWFiMWhJSTV2OEhBUUhXVTZBSGtnU09MekI5dU1xaFd2Y1F5bjNoRjgxWEFWSFoyOHFZbXNUZ0VGQUNCTkxaRUpySjBoOFo2Tnpvdw?oc=5",
-   "url": "https://udn.com/news/story/7240/9836483?list_ch2_index",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "009816",
-    "00981A"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "62ba5e06d3e4e0c7",
    "published_utc": "2026-10-25T10:33:28Z",
    "published_taipei": "2026-10-25 18:33",
@@ -12050,30 +12391,6 @@
    "topics": [],
    "queries": [
     "FED"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "7eae723493ff6aef",
-   "published_utc": "2026-10-25T09:30:00Z",
-   "published_taipei": "2026-10-25 17:30",
-   "source": "Bloomberg.com",
-   "source_url": "https://www.bloomberg.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "Israel’s War-Focused Election Masks Underlying Economic Schism",
-   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQdmpGVDZYUGdROXJnVlRrcFpYbzF5MXNibzZVTkduR2hpVkRvNXl0SUJyM0xSTGtkbWlQWDk4SHptdUNKbjlGZXlmZVR0OW1FMnBqZXZTOWRwM0NveFYyNE16dWRGRXk1UWtHUXZsYmlsclFnZFFiT290OFA4Y2wxSVd3WmtRa2hBUkJKWTB1aU56MFlsMV9ENzVyME1fQ1JaQlVBdDFMLVFvTTU1LTlDT1RvZEZZT0lUYmxZalJmOERJNWc?oc=5",
-   "url": "https://www.bloomberg.com/news/articles/2026-10-25/israel-election-2026-war-focused-campaign-masks-underlying-economic-schism",
-   "symbols": [],
-   "topics": [
-    "war"
-   ],
-   "queries": [
-    "NVDA"
    ],
    "title_queries": [],
    "title_match": false,
@@ -12479,28 +12796,6 @@
    "queries": [
     "TAIWAN",
     "TSLA"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "91507c6997787bd6",
-   "published_utc": "2026-10-25T07:43:00Z",
-   "published_taipei": "2026-10-25 15:43",
-   "source": "Wccftech",
-   "source_url": "https://wccftech.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Exynos 2700 Internal Tests Show Qualcomm’s 2nm And New Snapdragon 8 Elite Extreme Gen 6 Packaging Bet Failed; Samsung’s Flagship SoC 20% Faster In CPU, GPU Workloads",
-   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOYlB6TjhiYmdxYlFlQ1VOVThDeTNXVl9KdXVmWUl6c3d0NDBQWExvcWVIZnVCWFFzcWV1OTJGNkNKNHdoQTNRY3RWUUlaTTd2VjhVWXJnU28yRThOQ1RPU0Rpc0RMM01IZk11RmdwQnRFZ21URVlST3pxWjBJakpmZml6QmpLMnRwRlBWbU04bmVaZkJlVm9WRk9n0gGaAUFVX3lxTE5iUHpOOGJiZ3FiUWVDVU5VOEN5M1dWX0p1dWZZSXpzd3Q0MFBYTG9xZUhmdUJYUXNxZXU5MkY2Q0o0d2hBM1FjdFZRSVpNN3ZWOFVZcmdTbzJFOE5DVE9TRGlzREwzTUhmTXVGZ3BCdEVnbVRFWVJPenFaMElqSmZmaXpCaksydHBGUFZtTThuZVpmQmVWb1ZGT2c?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TSMC"
    ],
    "title_queries": [],
    "title_match": false,
@@ -14660,6 +14955,35 @@
    "time_fixed_from": null
   },
   {
+   "id": "d99ab8c7f01dd057",
+   "published_utc": "2026-10-24T10:42:26Z",
+   "published_taipei": "2026-10-24 18:42",
+   "source": "經濟日報",
+   "source_url": "https://money.udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "朱成志：外資史詩級提款、內資卻愈買愈勇 台股節後能否「光復5萬點」？",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9QdGlFa291YlBydTJNbzhpNzAzeGt5NUZraVU2WnlqWGdHS05zcWlSRG5wa1ljY0FBSzJwem1WT1pVTWJKbUxfSUpjSXdBT1NVR28tMFlWYnVwZ9IBX0FVX3lxTE5PMlprN1VQXzJobW5TNVNTbHcxUmR0a1FKZFlpcHo2dDJ5ZldLVkpNcVlLSzFzLWhMRFlTR1dUcUJQTHg5bm9PRjhfVS1DVFlIYzI2bzBET1pDc19OT1NJ?oc=5",
+   "url": "https://money.udn.com/money/story/5607/9833556",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "2330",
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": {
+    "published_utc": "2026-10-24T09:00:00Z",
+    "published_taipei": "2026-10-24 17:00",
+    "by": "datePublished"
+   }
+  },
+  {
    "id": "ee6bd02e04effc66",
    "published_utc": "2026-10-24T10:31:34Z",
    "published_taipei": "2026-10-24 18:31",
@@ -14818,1333 +15142,6 @@
     "NVDA"
    ],
    "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "aae33956698ebd3f",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台股收盤／大跌846.34點收46,041.43點 台積電收2,385元跌1.44% | AI 人機協作 | 證券",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9yNkQweDdjck5USWkwcmtJOE1sbzZXUVFzX1BtVjlwVXJ3UVN2aWtHQnFIYm9IUjhQbTVLWWdnd3VJVjhyWUd3OWh2VmZwbUx4blY0emh0cF9IMFU?oc=5",
-   "url": "https://money.udn.com/money/story/12509/9831350",
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "d7151182e7fa2ad5",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台股開高走低收最低、下挫846點跌破季線 台積電收低35元",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBMRTl5NWxTTnc2TW5YNFJoWThLUU9NWGhCdk8yeEYzc1VxakJLQTZDODlyT2NlZ09QbmEwSTl2X3VDWEtrX05Uc1hOeHBpX0ZidDR5ZERncU1rd9IBX0FVX3lxTE1fUFNGSzRRRHp6RkpJTFZxcVFvVU1GZFdETjFMMDYtdDRCWDIzMDhpRU9QZ2wxZDQ3Z0x1UURyVXYxYzZFSVUwWWlGLTI5QjlwSEhoWkpkdGE1TzlLekRN?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "41e2125157474c6a",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台積電資本支出強勁 法人點名這些廠務工程股可望受惠",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8wWkhpUWh4TDczS2VQTWhFeXE4Y0h0Vlg0YXNJX21BbjBlVlNDRmNveWo0ZkR2TlIxQzVTcFB6SFJlbzRuME1lQldCQ2hnR3ZlbTBFS3BuQ0t5d9IBX0FVX3lxTFBORWZkR0JRUWhyZ0dTaEdYaGh6eDhsbTBxbG1YT0JsUkF0NFo1SHQ4TVpaYXQxMkVNYXJKYXJ4bl9xWHMzQl8zMjBscG5qRFM5eGF2ZC1IWFdTbnhsd3I0?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "c346882e414175f6",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台股開高一度漲近450點！台光電亮燈漲停、台積電站回5日線",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1XbjlNNXVuRThveTliamlfNGdHQkdObDZndWtSNlZ2REhnRHVsZ2FRX1RoVUhGNGdhdWZZNEh6R18xdVpWdTlOZnBCV2FEVXBRWXdsOTdhcW5Ld9IBX0FVX3lxTE1uMm4zdzI4SkRQZmJyaVJ6X1A4YThWVl9UZm92ekQteExZTVhrTmpMTVo1Y1VYNmxsYzhsczJlYVFKSnpOTmtxdWdOS09kZG13RjZhX3VoZW5FU2hhQmJZ?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "2383",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "4f788c47e9b2b0d1",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "外資終止連10賣！三大法人僅買超5.68億元 台積電領軍台股收復5日線",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9Ub1BoWWx0N2NwWWRVZ2xsQUFZVmQtQWZjaXZkZkhPY2x6al95bWVGNzdPYUpQRkd4eDcxX3YydXpOWC1UdEwta3NDNTRtTHBXZWFVS1JScWw3Z9IBX0FVX3lxTE1hTlFmVUJLRnBra0N4MmZsTVlWc1h5ODM5RUpWUzZqaGRSaTRiY3NNa29CQ2NFZThpQWNyUkpibGpHend4cW5qWllwQjRpSU1hX0dCUEppU01qUWdXY2VZ?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "20a325ddc8f0cd59",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台股收漲594點站上5日線 台積電收高15元",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB2THkzLVlWMzRIRkJlbWlJdUhyX0ZKTURJQ3FXOWFVbGJmTC0zNkh1c0RSd2lFWWw0U0RpNmY4cE1Cd2lMYzJfdFlRQzlkSF9taHBOZjRCSThtd9IBX0FVX3lxTFBNMXJobDFya0pnWW01eFBXZk5IcEFVNHkxczQwdFZRWVNrX0xVRmFvTDhHc0h5YjZZUHZjMW1iVDE2UVpvelUyUGNta19zdTB1THJUZVBfRUoydFZNRnRR?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "009816",
-    "2330",
-    "TWSE"
-   ],
-   "title_queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "29e161d99a1ae2d7",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台股收盤／大漲594.84點收46,887.77點 台積電收2,420元漲0.62% | AI 人機協作 | 證券",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBnOXM4Y2ltdjJHN01uVGlBaW5sLU54NllyVDAtRjBvVXo4LUxNajVZY002Q05hcS1fdXJMR3F5dHhNdEhob2FKeHowSE9WdVRsbGF2VTJ1YUF5b0k?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "89d41c446bba4bf5",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台股開高強彈近800點！台積電領軍五大權值股走揚 低軌衛星族群升空",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1SaFhRaTZUQmtJMzR0SGZmeWZKUmI1bUx1cFhmQTJUWDRCV3dlZ01BbEFxT0ZBWFcyZ25RVko4V3Bia3JkcC0wQmx5UDh4MEU5LTVkNjRLcmxid9IBX0FVX3lxTE1HVURmaHJhVUFxNmxhcWd5UFdPaG1CeERaSk5OWG5lR0ZDcDJQUng2bGExeldxV3BOZzlWVElXd1I2WTVrQ29sNElzeFFDSzFKOXVnRWJHSmFLbDhkQmQ4?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "2e9685b1f0d24802",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "AI 需求帶動先進製程擴產 台積電營運成長添動能 00891布局關鍵供應鏈",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1RWjVhSTlyN2tDOXN3WFlrc0N5MDJ4Q1RPeklveWJqQjg5R3NTRnp0LVVEVXpyZmtrYW4zUE9KTm4xZl9zQThnbzBROXVES1Q0SUNsZmpwTWlVZ9IBX0FVX3lxTFBERndTY195OEkwUDA4VG1xTE1WUFdEdFBqZmJMYUlUbVlZQWpoc1JtRl84VlQyTFpvcVBiMEw3OXhiRF9aUzRnd292cV9IRUFlV0RUYm53NzIxd0lpTFYw?oc=5",
-   "url": "https://money.udn.com/money/story/5618/9826542",
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "78a876663d8dc9e0",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台股收盤下跌529點再度下探季線 台積電收低15元",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8yeTZ1UlVob3M4eHpneUVBY1N3ZktqVXFMbmxXQ2FIRklwdWh5ODB0dEdLTnZ0Q3EzemhnTmp6MXpyUEZGNHJiSnVGOXoxTWllcHZXQjZYVnA1QdIBX0FVX3lxTE9OVTZSNEplSnVzckJyRURIT2xaeG90WUJuUmc0bU8tNkI4blg5bXgzZmJadVRNa2VmWmdfZk9yNkxjQTN5M1E2ckVubWVPUmllLXN2TlJBZl9VMlgyd0hF?oc=5",
-   "url": "https://money.udn.com/money/story/5607/9826188",
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "1cf10b6f7d94fec9",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台積電從天價到季線失守跌夠了嗎？ 分析師：要上漲先看這時間",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE82RjVWN1I3R09VTFRhVURFZXFWOXdGb0N6R2VMc2lhclVHR05DbmlGbEh4WDVIeGJ5VDJEWmJHZVNIRW1xeXNXR3djZ20yYVZVTXpNaXRxY1dDd9IBX0FVX3lxTE1yX3pOVURMQXIxU2daWDA1cXdjdWVCRGlVdktVMkhUYWhiLXRqQ0tTVnNibDRHOVltNGQzX1JyMzQzaVJxS1h4WFhnT2s2YjRtSVdJaGJFOHlfYllqSzBN?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "40cabfa97fa94d02",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台積電測試2,400元支撐！台股開低一度跌逾420點 聯發科撐盤",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9KVnBNZ1A3VDhPOE9wa3BVR2JlRUVRSTJkcWNzb3NPSE8wN2RZYzBJTE4yMWtoVmRKQ3RQRFh0WUpUWktsTHFfbzRyVE1FTVBTblktZzB3S1lod9IBX0FVX3lxTFAtLVIyZzF5YVhMZTI2NUNabWFyaWYyc202U3RtbE03RVo3RUlDQ3k5Zmpjc3BMcmZiVlFMS05kQjRKV1NZZ19faFN3THNKeGRNLXNabk4xUms1TWZLb0VJ?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "2454",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "87ab23df7cf8894d",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台積期 動能升溫",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBKajNOZE5tTTk3amFMX21aSDdwQ2lSUkQ3cHJqX203STAwOG5Fa0d3bEhYRUVLZG54SXpvVVJmTGkxU0tWUGFqVFZMY0M4aUJvM0wwXzZfbHBGXzTSAWBBVV95cUxNMzBBR0VNdm9wU2d4bjN6a18wSWZGN2pZNzRQdHJkZU5TOGtKdDMyYWd0c1Nnb19HUXlRQVlYYldWeVBERzlXS0tNRW1ZLUxSVHNTa1NCQzFhekJjRXgtVFA?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "009816",
-    "00981A",
-    "2330"
-   ],
-   "title_queries": [
-    "2330"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "dafb55a8e853cd1b",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "外資賣超不手軟！三大法人續砍899億元 台積電急拉收平、台股跌289點",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE54bDVLaHZBeDVVZ0ZENEYwN3d1ZnB4SnJoSXRsNGhfWF9hdUNzZV9ReUhZLXNWTkhFaHBTVDItNnJJbVZMXzlObUZuUUx1WFFJOUE1UGplUDFPd9IBX0FVX3lxTE5femkzeUNXYlVvMXVkQ2hSNEpCQVllY3RneXppN3UzM0ZOS05EWnppTDBDdEJwQks0MGFUeXVXeXhwOVdZWFQ0ejhRdzBKdzNPRXZiVzU1NmQyOVNQNjVN?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "f61678ce3c57f14a",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台股收盤／跌289.18點收46,822.08點 台積電收2,420元平盤 | AI 人機協作 | 證券",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE16Wmo4TVE4ZUxaS3JxYTZ3cG9ZZ2ZKekNibTZxT3haVEt0LWc3aXRWdEtEdHUxQ3FfbXhSUEFYcmFGSUl6VWtZUTBsZ0c5VENzS1ZkYUhlYmt6elU?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "6f89c27423e87175",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台股大跌上演季線保衛戰 台積電率先跌破、這些權值股也破季線",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1ja2wtTHppMFVYdEQ2WWVxMDNNX0pmbzdQcVlocGk0b2VxS3pmbHdpYUZsbkdiZ0NDbTFjN2N5UVpRby1RdVZMNjlhVXZfbXNQMlF5NHBwLVFHZ9IBX0FVX3lxTE1qYXRBb25jcXBOa2s5cldqcUg2R1pvbTlxV3NfQUt2ZU8xWmhzYmpLcl9RQmZwcDRZM1V4SlRiaXBfZWxjbG5oVkxHSjhRZkIwWjgzMzFDVW9tSVFjUjVz?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "372f2e2dd6c8ea1e",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台股開低一度重挫867點！台積電領權值股走弱 南亞、台塑化逆勢抗空",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE04djFyMHg4UEpheV90NXdBTzc1dk1nRlhjX3E5ZUJuQU83SmpudmhWcHVjTUo5UjN1Wk5ZUERhV2Z0VVZWN1NZUFYxQmJUdUJCcE0yb1lXR1lZUdIBX0FVX3lxTE9HdkZEdXJleHNLRllsLTRsRVdUMHRDRmdFYU1sUFFWY1dPN3l1cUZCU3kybTRXTzJmOVR0bkdPeGk2S3FvamZhbDI2ZTlfZ0tEc2d4dU11NkZJVE1zdmpj?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "ea00793d54cec8fb",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "外資又揮大刀！三大法人賣超1,001億元 台股重挫846點失守季線",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5BSUFGN0tVQ2UzQzMyNHFIbFNjcFJENWdOUkFJRnV3MVRha0tIdG96QlZpd1g3Um5hQmg1UEhHWUtKLTdtbG1SMVJIbl9BVkRXYXZjZVpvYkdlQdIBX0FVX3lxTE16STJsR3dCS0Q2ZTBEV3pZMzdyT2o3TWdUQzYzTXd2QXYtakl3cldWMG8tcFdoLVZWUm91bEZVWklXMFdmc2xfUWxrcFJBLVpMV2ZHQzdsOFJuMHg0RFlF?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "3a888fd264881c6f",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台股高低震盪逾千點的兇手是誰？分析師曝原因 但強調下跌是買點",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAwMWdsMGNobDExb2ZIWVhPYVlpbVowcGRLZUtsa0l2QndpRmFkakE3YVY4dDdNR3J2VE4tbm4xV2puLUFBSVFScUxJSks5Ti16dnNVN1ZsNHRvUdIBX0FVX3lxTE4xb0Z2QloxRzlXSzl3OVNaQ3ZIT0pPVHJkaGF2dnJhOEdaVW9DZVgyOWNSZVlpMnRyX0hULVg5UkFFMmxEcWtXYTUzNVZxQzR3eTRRcjZIb1ZPZ1ppVWtB?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "8b47f80cdef88c42",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "三大法人賣超968億元！台股量縮季線攻防 3千金跌破5千元、川湖收復萬元",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE15aW9CUTBQemQtd2tkeXNjZ1VzbE9RZTZ4Y2pocTNxekctYXNreUZDcXBuM0cwT1BEUU13NzlxdWFjQTViNTRZblRLemxZcS1QbkhYMm95UGJlUdIBX0FVX3lxTE9ZZGRhR3RMTDI3LWt0QUczNVR5dkF1S3NPeXlIUzh1V3JkQzMwUnd1bC0xdGFRbjdnSnYxU1owWmg3cDMxSUlfYXB1d0pNbXlldFVacGs4WGlQMzlEWG5R?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "d8d8fb18a8a3f7ee",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "SpaceX 與特斯拉自建晶片廠拚2028年量產 00941、00954布局上游契機",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5mdDJIc0JycGpNLWp4RFBrUkEybk4yWkVadVVvLXFHQWY1dlI1enhKOVRRVjJ5ODhoVnl3SldZYVphbG1IeGZlMzVucGZvLXZVM25SODBFRnNjd9IBX0FVX3lxTFA0MkZiSC1CTUVYZnFhS2dFaHlBYmdHNVdJYTFtQV9FV0pJeFVNaUpKTnZHdFhCS1lLT2pTQkdlY1lwMG5MdTFaazJVcGhZSGNMT1psVmNRTWNkZk9rQXNn?oc=5",
-   "url": null,
-   "symbols": [
-    "SPCX"
-   ],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "SPCX"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "346af1fd0d877f72",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台股重挫逾860點 富喬逆勢亮燈",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5MTE04c2JxUVpuVlJGRFJCa2IxZWpTRG9SVXFORnNvajNab0c1Szg4N3ZTa1NtcDVzQTI5TFNEMlR5OFFOM2lNNHlGSlVHNWdnMkpfS2VoazI0d9IBX0FVX3lxTE04djBaRFV2Z3ZrZHVtX3JRM1ZmV1cwRzE3dy0tSUxueUphZm1YMjZob0NkRnBvQTVXVlhDM0pyN1NvcWxLMjdwWmtNaXNDUDlXM3BUM3ltVmVScG5tejk4?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "d99ab8c7f01dd057",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "朱成志：外資史詩級提款、內資卻愈買愈勇 台股節後能否「光復5萬點」？",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9QdGlFa291YlBydTJNbzhpNzAzeGt5NUZraVU2WnlqWGdHS05zcWlSRG5wa1ljY0FBSzJwem1WT1pVTWJKbUxfSUpjSXdBT1NVR28tMFlWYnVwZ9IBX0FVX3lxTE5PMlprN1VQXzJobW5TNVNTbHcxUmR0a1FKZFlpcHo2dDJ5ZldLVkpNcVlLSzFzLWhMRFlTR1dUcUJQTHg5bm9PRjhfVS1DVFlIYzI2bzBET1pDc19OT1NJ?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "23e8ef5e69feb417",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "國家隊救援 台股拚反彈 法人研判探底危機已過",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5RMVFuZGJkRm5wNkczMEF4Tkt5aVcxVlQ2ZTBCQlZZSDFCV3h4NExHQUdtSHpoUEJFSzQxTWFELUZYS0JETkdFZ2hXU2lXbE94bjNQeWhVc0VEd9IBX0FVX3lxTE5lZjJtNnRhRDh0QTUzRTg4Y2E5UlVuUGdHUkV5WmliVi1pdkFTRGlHSDBWRk41S2xMSm16N3dNTUI5N2lpSmZicm5tZk85LTJpcjZDYU85NG0wM3FqeVN3?oc=5",
-   "url": "https://money.udn.com/money/story/5607/9824932",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "e044615242fa4778",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "折疊 iPhone 搶手 傳蘋果要求追加三成訂單 鴻海、台積等進補",
-   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE8yWm1ubWVUSFJsOFYyWm15RUJnV3hYdVZoWHZicXdDWHloU2FHaVo0bjhablRrVmctYnliZENkNmVraE9GSkpOc0lsVmN0aG02SWhCTDZlYkFPT1VSNXpVZkFnc0tnWjdYeE9mOElibTdBT183SnczZdIBX0FVX3lxTFA0U3ZRVWdrSWhDWGxQcFNjVW9taml2YTRUWHVob2xlZl9iSlkxMU9NTUQ2aThWcFlZendldDZpZjg0TXpENkhkZjRyRHBqQWZqUWdrT2E4cDFWcTJZRWhv?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330"
-   ],
-   "title_match": true,
-   "also": [
-    "UDN"
-   ],
-   "time_fixed_from": null
-  },
-  {
-   "id": "ffc033475b2e1ba0",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "伯恩斯坦點將台灣 AI 股 台達電列首選、欣興目標價升28%",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE80dXhvem9WQWhLS2xvZVJHTXBETFpiS2tYaWEtTXpzR1A5b0xnb1hqUVZMcm5JcWNOQXoxb0c4aldqM1daUDUyTXAxaVZiOFlOTENYQndHOW5TQdIBX0FVX3lxTE81MjlQOVo2RDJtdXZ1cjJhRC1teTRNUXVVRF8zUXNrY3VwUERHcXg2RU1UQmw5ZFdJUWxURDNlZnBiSE9IdXU3M0dKRmJoWERZNUhUalpac3RoYklUSWJV?oc=5",
-   "url": null,
-   "symbols": [
-    "2308",
-    "3037"
-   ],
-   "topics": [
-    "taiwan"
-   ],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "8f02c771d1026621",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "一座晶圓廠要250億美元！台積電擴產紅利 法人點名8檔供應鏈",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5vN0FWcDBoeEQxd00yRWFOTmhWRlpaaVFqUWpfamI0V2NCMEpGMzdVWUdYT1hFc0xqSkdlZHZxYzNFR1JPOVJqZEFLV1c1VU81bTV5cnduV1FGd9IBX0FVX3lxTE5WWVVzMU9sNTFtVU1ZbXBPVVVrYk1Kci1JbDB1TG9CZEh2dzh3WUNid0hvWkV3UUNOa3FRY0NHWVpENGFxTnpFeUdfYzB5VGo2R3pYREJHMUt4VHBPR204?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "d7381a423197483a",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "「你不懂力旺就買台積電」董事陳莉菁超直白談股價 網友：率真到想買股票",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9kelBqVHZYVkp4b2RJcTc0QTNRSGpfNUJqUWlEOEloSWRxdHppd3B0a1I3Zy14VHo1WTJrRXBLS2VnS2hvbHY4b21WVXJ3dzF2eG9xSG9XeUoyQdIBX0FVX3lxTE11Y1JjbS1VV05xNF9nS0x2MkMtNGtmTFJseXR1MHRLV01UaXZGR1ZsXzI3ZU9xc1ByNUZsVzhvVFNjRGR3Zi1jTFZFOFZJbjJBdi1OOGl0VENYTkxmOXAw?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "417fe687ddda765c",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台股重量級法說會登場！聯發科、台達電、聯電上陣 AI 需求能變獲利？",
-   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPa0M1V0tlcEQ2TGJfanRtUHRRV0VlT19MVGh4WjU0alV6ZGVnNHhUdncxSkdCdGU1YlptSW84ZGg3ZzRfZkltXzJ6Q19mcTczbU40U25fcTJ4WmJxT3RKQXBiWXo2V1lEZjNUeG1wdUVnV3RWYVBaY0cxMVJIX3VmZdIBX0FVX3lxTE1jczljZnBXdjNXb2NXbGhLUVA1TDltZERkcWh2SFhYcV9xam5OVG5SZ1NzSXhGYWRrelNveUliOGRCUXpPWE1yZ3RtLVhxOFJiNWZGazBRSEtzci1iaHFn?oc=5",
-   "url": null,
-   "symbols": [
-    "2308",
-    "2454"
-   ],
-   "topics": [
-    "earnings"
-   ],
-   "queries": [
-    "00981A",
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [
-    "UDN"
-   ],
-   "time_fixed_from": null
-  },
-  {
-   "id": "0f6eaac50beebdbb",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "00881等七檔台股商品換股名單一次看 10月20日起生效",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1HRVpFQVAweVUwLU5RYW1RdnprZnVQUU4tRjkyRzVTazZCOV9SeHhtNWdjZUNycVJqWkhFdEJQSWZUcmhFWDA5S3FBRkpLc240VmprclVoSnFXd9IBX0FVX3lxTFA4bmFpZ2hvV1I4VHdaZnAtbDI2VHJ4TVZzOVd5bmlRS3Z3RXJjdks2Qk1RU3ZZR0JzdkI3b3E3UUJRWlNma3hoU3E4b2RpR29hMlR6dHFxZG8wS3pKV3g4?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "009816",
-    "00981A",
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "9670d0462d241268",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "高利率、高評價、高波動如何布局？法人全方位解析台股策略",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE82NENMQnJxaE9jejNyU1lCa0tYYXJKcFlreXdCNWs1RmF5ZU15ZG1aYVBBQTlHQWZlNXpzQWN4emRLMDBEV09DUXUtRU9HMmR1VFQtYnVwd25SQdIBX0FVX3lxTFBOWXlwTjJ0d3BtZWxRaFZ2WW9PN01zeEUybW8zWmd1M3JXR3prX1ZHZlVYODh0MjBRR3VSbUFWUkxoLXBveGVjcEUwM2ZKOHJ2OGFwaVN6b1kwY1Z2VDNj?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "009816",
-    "00981A",
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "88f4a20131a943b7",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台股震千點、台光電逆勢走揚 含「光」量十強出列",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9ZdkpzaktFTVFGamlQaUdFaW9lZk5jUGFFdHhocExTUFBqcTVmWTVJOFF4QVNiSUdlRFQ2WGwwOVl3aVo3LUc3cDFGVVdtQmdSSmhyZlR5WHJCUdIBX0FVX3lxTE9LMFVVM2ZVcXRmRGg3VUpHTWNsY0JSaGdiTXZ4VHN5NmsxYXRkbHkwM1pDOFFaWEFiYkR4bnduYXIwUm9RaTBCbG9XNzFNaHJvZk1JMVRUbWxtbkV5TjhN?oc=5",
-   "url": null,
-   "symbols": [
-    "2383"
-   ],
-   "topics": [],
-   "queries": [
-    "00981A",
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "24713c910e46e6ff",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "今年來台股漲幅冠全球 台股 ETF 績效長紅 00685L 上漲125.46%奪冠",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE0wS2ZUSk1vTXZQMjRSX1NRUE9TX0dIc3k5NllFekNvNkxsOFIzUFc4LUhKUVJ5dzJlMlcwVEszbWEwVjRoZzZOa3ZQdUFoVzNiTHRXMEV2TUktUdIBX0FVX3lxTE1oanJ1NmRHRU9hOXRwUW05S1ZULU5XSmk2cV9RT2VwQnktcGZoRWw4MWJRZ0VScS1VVUtVUXQ1LTUtcUp3czU4YU52cVYySDRtT2hhOEZZS2ZUWlFNQVIw?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "009816",
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "fe1b48139b94300b",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "不只 ABF 載板、BT 載板也受惠於漲價效應 高盛調高四檔台股目標價",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE16MEVxMW05bElVWlFtd2oxWllMTGJYY2s5ZGNkOXFSbmVqLUQ1cVIzWEtPUWw3Z3ZaSW9lVlZSYlpqdkIwbmlWUGVMMFpQN0ZPRzM1RVdtR0hod9IBX0FVX3lxTFBRRlhZTk4zTm1uRkhwX28wazBvTjJ1X0JNeV9IZFg4WVp0dVdHUzgtWVBrQWkyeTB2NUI4dnN4TlUzaHJFam1CNW9UaHNSZW1XcU9wRWpiTm9JelBJV2hr?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "9d82dd16d4901ea8",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "外資買超台股9.6億元終止連10賣 加碼友達4.4萬張居首",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1jMXo3SUJEUEl6eGp4ckMxMG91S0dtLVRCM3pWa25wSUdrYmZuUlNzTTdqS3F1Q2VCcVF2VEJGem9GMHJWUWpvVHdsZ3NXdUNSdHU1Y3lHT280QdIBX0FVX3lxTE41enJPU1dPNzg0eHZSZEV3ZnRDazE4NzVmRHdZNWxabHpJRTlfc3pNSHVtUW5OS3UzWHYwbGpMMUF3WHByczdGejVfYmtXeXBCbGlsZE1sdTc3RmJsa3Qw?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "00981A",
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "6db2132023353052",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台股震盪反彈 金融股具三大支撐攻守兼備",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1Qd25abUxPa29qa0RNT2NnTUtfU0xTdkFvUjg0ei05SE12OGFQMnZ0LVp1cUxuSXJHaW12alphTU1ZSHJVVjFzalVKa2NSaDNpS3N0VnBnSmZpZ9IBX0FVX3lxTE5HdXN3OWRtMjVaa1dBbnhPTzdlM0hGalJ4ZlhXei10X0dZd2U0SUFuanVWTVc3SGNkb3JodGtzWi1GQ2NIN1MwLWNBeUlQd2dqZnh5ZklDSDlmcERVMnlv?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "009816",
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "792b9476ad2f2fa7",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台股反彈 金融股仍大漲 市場還在避險嗎？",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9ETlZoT09pTjY0bzdrYlc1WDdGcUhvN3hYaVVCcHljSWM4cTZveHZFNmN0T0s0YjdvRERYd1dRLUhLOHZLdzQyakRnOXFHMExhNWdYSVBvYzVvQdIBX0FVX3lxTE9zNVZJWFRUbEJ3eG91dUZZNE5uNnhTX3pQeG1GMzBZMlZSUHJjZ2hlNjBmQXBZcDZGbjVXaWIxWmZDOUdQSXQwaDJqVEo1S3hzMExkNTJhVXg5a0FpOXlF?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "cdbb6da2e033d1dc",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "空軍壓境！台股警鈴大響 後市三情境推演 預期大盤46,500點附近有支撐",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBLU0FESTRmNDUzNEhrZ2J6eTlXTDRqV291WDVCU1FoYmM0SjBLa055V0tHVWJsZTlMNDU4OTZCMjRnTldaaHNic3c5QkQtOEFZcFJvVVJlVHk1QdIBX0FVX3lxTE53Y0VHQ1AyWjFseDBnTnB0bjJPOXFkYkhGY2RmWkpuakY1bjFDbEJkdEs5XzJvSWtJYlpYc1drRzZxU1U1ajY3MFp2ZTh3d3RnbVRsLWM2S0hxTWdGSWtV?oc=5",
-   "url": "https://money.udn.com/money/story/5607/9822781",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "10c323294dddee5b",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台股開低震盪 個股成交第一這檔規模突破千億元 零股成交前五都 ETF",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1ob0FiTnhHa1k0MlNSZVVCNURLSDF1WFVDQndRMkZNcE5TLTRaeXJGbGlleDd5dzFPVWxNODB3N3ZjRTl2ODBIZnByZnFWeGROTTlJUGdJTkZnZ9IBX0FVX3lxTE1yTnRWVzh3TEY1Y1JLckFsNTRrQjRVYkhpMnE0NXlza1VsdWEtbUNBWldFalM4bGJkUERxeDhKOXp5Z2tleEFmdU1sZkgxanFxQUd1T0kxa2Q5UXIyUGZj?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "009816"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "024e33259b5aadb8",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台股 ETF 受益人數周增70萬突破1900萬大關創新高 市值高息人氣旺",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBscHBLVGlqcXliNDAxMDBSRXJHQi12cHdJNFZSeVpGdlN4U2pRWGhQcWxvWGozOWsxLVk2b1lQb3piOWswRXZkbWJoQ01VQzBad2tRVURmN2ViQdIBX0FVX3lxTFBVeTNlaVlDSWtiRHNNN0xuNHhpVndfbUdEdjVyX0hKSGI2NWtCYU1wemEzUGc0Z3ZVVUdtS21yWXZlMVBGU3p1dm80V2FoMEF5Y05JY3VKa2RrZkViWHpN?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "009816",
-    "00981A",
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "a287b53fcce8b50b",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "台股 ETF 受益人數突破1,900萬人創新高 0050、00919等22檔同創高",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5LRjhQNGZHSm5pc0d4QU9OblhqdDBXdEV6WWVpeWhVRHQwdWowbE1jWG5TZGNZb0k3NEdkbktPbFlfZkc4RTQwMTlVMmhuUmg0T3lYeHU0ZmRmQdIBX0FVX3lxTE14em1LcGN5UXpONFptcm5hdXlEbVJ3YlpDYjFOX3ZVOUk3R2JtV28yeUM1MTBHUTZvNlhtcGxGd1R3TEFONU9YMUR6WFlHMUgwWTRaZ0ZHZ3pRTVNZNUs4?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "009816",
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "8e8c33d31232c0ca",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "今日最夯 ETF／台股再探波段低 月月配的00952逆勢收紅",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBqTjBSWDVfdmlZUkRWYmpDWnRlM3pTemlSMHp5S1VXdTFUTHcyYkRPbGs3X0dPLW03SFpyR01VLUlCSWpRU3N6MjAtZXBsY1RIbjdvclduQWp6d9IBX0FVX3lxTE9vdWFhamtFTFNONkVLT08xa09ubXItbGNHUkRicF9md2J0anA1Mkpoa3I0TGU3b3BCX0dnZUJwTEs2MVhuRGpRbTFrRHF1N2p2amY5UG0yUXlBMVI4eUdV?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "009816",
-    "00981A"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "b33e69a05c82be8c",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "外資賣超台股795億元減碼ETF 連10日調節台積電",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9MVWpYRDVXcUdkMnlTcERzNkh2VlQwZ0I5VHNHcGtqMWU0MjY4R0kyMGs2QW9PTThPdV9XVWJVSkQ4ZU9KeXFhNWN0WGFRaF9mdFZJTExIUE9RUdIBX0FVX3lxTFAzTGxiRF9xNlcwTnpVME81TVc2eHpXTnR4SGVWeUY3S2VPOHRvLUxERm5tenUtTm54X2tTb0w0V0FuME84NlRrdkVyTzdJT3VxSzBIYUtINDc1NFcwN1pN?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "009816"
-   ],
-   "title_queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "9140e3e310903350",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "整理包／買越多賺越多？台股正 2 ETF 怎麼買？00685L 一張不用 2 萬、會比 00631L 好？",
-   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE00a2VyQW5memtBbzZqVUJvMjZUZjJvNUV2dWZBa1hma3Zid2RUTVhjV2VneHhUWTF3Y0dubDNaQUh3dWNTOHFyazZUZUZnT3ZPVy1kbjBCWFJwRjNX?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "009816",
-    "00981A"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "53de7c956084bf4f",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "整理包／瑤池金母發錢了！00918、00919 創新高 00981A、00929 等 ETF 9 月配息、最後買進日一次看",
-   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1qNmhXc251NnZ2TzdEblhkN2F2R2tiaGo0dC1uSkVNRVotRkdCV3ctZGxIeWFtalBTeXVVMjA2NlNxajdKMDFKOWVnR2p5a21Vc1VIaGtSUXhuYkxa?oc=5",
-   "url": null,
-   "symbols": [
-    "00981A"
-   ],
-   "topics": [],
-   "queries": [
-    "00981A"
-   ],
-   "title_queries": [
-    "00981A"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "f183d80ddf2098a9",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "領錢了！台股本周21檔 ETF 發放股利共421億、00919配發207.8億最多",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8xOThxSWptVnBuU2FWYkp0djR0bW5nV2hTc3YwdDBITnBvc1ZMSjhSQ0l4VU4xSFRJUmFjNEF0dkJVaTJ2VmlaczhvdGVnaE5zUnhWVjNjRTVIQdIBX0FVX3lxTE1Xc0k5MVNTWVloYi1rTmIzUGI0Vmh6NzRvWF9fZ3lWMnU3VTdQOEppcXVOV2VzTmp2VjlxV1RXS1pXcWtWVHJrTjVTQ3dXdjhYLVc3NVduejNUSXVfcVA0?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "00981A"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "9f69f4cea1589c1c",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "今年台股 ETF 配息王出爐 群益00927配發1.88元創新高 年化配息率18%",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1LQ1RjTlZXSUljM1c1aXJNOXBRSFFaOVU5WWo2WE8xaWZQaHowUGdTRVBtRV95bEVyMlQ0TVhzbV9JZVp0LWY3V2J2VmlWUnhReld3VHk2Znd3UdIBX0FVX3lxTE9EMnJYcGRKaVF6NnNSNVlFeVNIeGtfQ25zU0x1YmpzcU1naGdZODZHd085VzdRUVdWdGU2UzF1dk5USVpFLW1LNUhVRmRpQ3NnZVNaaTlzSVNwelkwYzRj?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "00981A"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "eb50c87d22e2c0ea",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "整理包／Google 新藍圖所揭示的ASI 是什麼？AI 的四條進化路徑、發展限制一次看懂| 整理包| 專題",
-   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9PYkJDZTd6YUl2SW5NcnZ5bHdHY1ZoX19MdzAzZzk2bVAzNm9xSUlvU3ZYN2thSUQ1T2JwSUJLcDNnM25ycnE4aHJaNlI3SWVab1lOOUtnbGEydjdV?oc=5",
-   "url": null,
-   "symbols": [
-    "GOOGL"
-   ],
-   "topics": [],
-   "queries": [
-    "00981A"
-   ],
-   "title_queries": [
-    "GOOGL"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "c92c5f99e83ee1e7",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "統一投信主動式傘型 ETF 雙箭齊發 00411A、00987D 將於8月開募",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9xMnJYeXRrTWRlekN3blhMZFY0MW9lbFFSMzdKUEk2VWEzUS04WDltLVhGR0NUeDZZYXF2aVY1dUZTQXl5OUk4VUFnSEd2eWZBNDNpczRidENXZ9IBX0FVX3lxTE1vNUZxaEd2b002ZW1uSGlJUlFxVTlJaGJGMDlEekp4YVA4a05uMjVSZmZhVW44aGFXNzR1ZkdnRkxFQVhQMkNtemFMUW1MRmZ6bS0zTG4xZ09vWmdCTzRR?oc=5",
-   "url": null,
-   "symbols": [
-    "00411A"
-   ],
-   "topics": [],
-   "queries": [
-    "00411A"
-   ],
-   "title_queries": [
-    "00411A"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "13ffc75426edb9af",
-   "published_utc": "2026-10-24T09:00:00Z",
-   "published_taipei": "2026-10-24 17:00",
-   "source": "經濟日報",
-   "source_url": "https://money.udn.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "資產配置兼顧成長 統一投信推出全新主動式股債傘型 ETF",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBNT0RBcFZyQS1mOTNZOWgxWXl2NTZzYUhxU2lkcnRDVlJZalpjbzBzS2laOE0yRGZGVEwzaGRYN19lMjEyYU12dXpoS1NYcXZQbXI2NlMyMmpjZ9IBX0FVX3lxTE5lNHZLMG1rWGZ0d2dJbUhsWDVyLVp1TFBSdVpfVG1SaEtrZXZHNVozdXRWcjJqRU9wUnBLWDFlX0VlZDM3dzg5NjMxTGRZUjZKVTBPS2U3clFtMFZlVE00?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "00411A"
-   ],
-   "title_queries": [],
-   "title_match": false,
    "also": [],
    "time_fixed_from": null
   },
@@ -17705,6 +16702,37 @@
    "time_fixed_from": null
   },
   {
+   "id": "ffc033475b2e1ba0",
+   "published_utc": "2026-10-23T11:09:28Z",
+   "published_taipei": "2026-10-23 19:09",
+   "source": "經濟日報",
+   "source_url": "https://money.udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "伯恩斯坦點將台灣 AI 股 台達電列首選、欣興目標價升28%",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE80dXhvem9WQWhLS2xvZVJHTXBETFpiS2tYaWEtTXpzR1A5b0xnb1hqUVZMcm5JcWNOQXoxb0c4aldqM1daUDUyTXAxaVZiOFlOTENYQndHOW5TQdIBX0FVX3lxTE81MjlQOVo2RDJtdXZ1cjJhRC1teTRNUXVVRF8zUXNrY3VwUERHcXg2RU1UQmw5ZFdJUWxURDNlZnBiSE9IdXU3M0dKRmJoWERZNUhUalpac3RoYklUSWJV?oc=5",
+   "url": "https://money.udn.com/money/story/5607/9833834",
+   "symbols": [
+    "2308",
+    "3037"
+   ],
+   "topics": [
+    "taiwan"
+   ],
+   "queries": [
+    "2330"
+   ],
+   "title_queries": [],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": {
+    "published_utc": "2026-10-24T09:00:00Z",
+    "published_taipei": "2026-10-24 17:00",
+    "by": "datePublished"
+   }
+  },
+  {
    "id": "1e9f25404a782dbd",
    "published_utc": "2026-10-23T11:02:56Z",
    "published_taipei": "2026-10-23 19:02",
@@ -17953,37 +16981,37 @@
   "4a4cf9e20b0c371c": {
    "published_utc": "2026-10-25T19:00:00Z",
    "by": "datePublished",
-   "checked_at": "2026-10-26T09:06:23Z"
+   "checked_at": "2026-10-26T09:09:16Z"
   },
   "3b5b63f68826b09f": {
    "published_utc": "2026-10-25T19:00:00Z",
    "by": "datePublished",
-   "checked_at": "2026-10-26T09:06:23Z"
+   "checked_at": "2026-10-26T09:09:16Z"
   },
   "8e13dbd4cb85ee36": {
    "published_utc": "2026-10-25T19:00:00Z",
    "by": "datePublished",
-   "checked_at": "2026-10-26T09:06:23Z"
+   "checked_at": "2026-10-26T09:09:16Z"
   },
   "090a3c7abe4558fa": {
    "published_utc": "2026-10-25T19:00:00Z",
    "by": "datePublished",
-   "checked_at": "2026-10-26T09:06:23Z"
+   "checked_at": "2026-10-26T09:09:16Z"
   },
   "d2b95b47e67db59d": {
    "published_utc": "2026-10-25T19:00:00Z",
    "by": "datePublished",
-   "checked_at": "2026-10-26T09:06:23Z"
+   "checked_at": "2026-10-26T09:09:16Z"
   },
   "7ad47dcd5886e054": {
    "published_utc": "2026-10-25T16:00:00Z",
    "by": "datePublished",
-   "checked_at": "2026-10-26T09:06:23Z"
+   "checked_at": "2026-10-26T09:09:16Z"
   },
   "04a0fb8b4431c110": {
    "published_utc": "2026-10-25T16:00:00Z",
    "by": "datePublished",
-   "checked_at": "2026-10-26T09:06:23Z"
+   "checked_at": "2026-10-26T09:09:16Z"
   },
   "c1cd11c6da0b367e": {
    "published_utc": "2026-06-26T09:14:59Z",
@@ -17993,27 +17021,282 @@
   "eccf6cfe9b95d10a": {
    "published_utc": "2026-10-24T19:00:00Z",
    "by": "datePublished",
-   "checked_at": "2026-10-26T09:06:23Z"
+   "checked_at": "2026-10-26T09:09:16Z"
   },
   "2c8002f9c01c256a": {
    "published_utc": "2026-10-24T19:00:00Z",
    "by": "datePublished",
-   "checked_at": "2026-10-26T09:06:23Z"
+   "checked_at": "2026-10-26T09:09:16Z"
   },
   "2e8f4c14ac44a77f": {
    "published_utc": "2026-10-24T19:00:00Z",
    "by": "datePublished",
-   "checked_at": "2026-10-26T09:06:23Z"
+   "checked_at": "2026-10-26T09:09:16Z"
   },
   "08c85fdf9094af44": {
    "published_utc": "2026-10-24T19:00:00Z",
    "by": "datePublished",
-   "checked_at": "2026-10-26T09:06:23Z"
+   "checked_at": "2026-10-26T09:09:16Z"
   },
   "be14dc5729e6ba08": {
    "published_utc": "2026-10-24T19:00:00Z",
    "by": "datePublished",
-   "checked_at": "2026-10-26T09:06:23Z"
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "00b9b27b10c69fd3": {
+   "published_utc": "2026-10-20T02:57:04Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "aae33956698ebd3f": {
+   "published_utc": "2026-10-22T07:26:17Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "d7151182e7fa2ad5": {
+   "published_utc": "2026-10-22T05:58:35Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "41e2125157474c6a": {
+   "published_utc": "2026-10-22T05:22:51Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "c346882e414175f6": {
+   "published_utc": "2026-10-22T01:16:29Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "4f788c47e9b2b0d1": {
+   "published_utc": "2026-10-21T07:18:10Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "20a325ddc8f0cd59": {
+   "published_utc": "2026-10-21T05:59:36Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "29e161d99a1ae2d7": {
+   "published_utc": "2026-10-21T05:51:13Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "89d41c446bba4bf5": {
+   "published_utc": "2026-10-21T01:15:07Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "2e9685b1f0d24802": {
+   "published_utc": "2026-10-20T08:15:23Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "78a876663d8dc9e0": {
+   "published_utc": "2026-10-20T05:57:49Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "1cf10b6f7d94fec9": {
+   "published_utc": "2026-10-20T03:55:48Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "40cabfa97fa94d02": {
+   "published_utc": "2026-10-20T01:20:49Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "87ab23df7cf8894d": {
+   "published_utc": "2026-10-19T15:17:59Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "dafb55a8e853cd1b": {
+   "published_utc": "2026-10-19T07:16:15Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "f61678ce3c57f14a": {
+   "published_utc": "2026-10-19T07:03:32Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "6f89c27423e87175": {
+   "published_utc": "2026-10-19T03:11:50Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "372f2e2dd6c8ea1e": {
+   "published_utc": "2026-10-19T01:19:22Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "ea00793d54cec8fb": {
+   "published_utc": "2026-10-22T07:14:28Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "3a888fd264881c6f": {
+   "published_utc": "2026-10-22T04:33:06Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "8b47f80cdef88c42": {
+   "published_utc": "2026-10-20T07:20:05Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "d8d8fb18a8a3f7ee": {
+   "published_utc": "2026-10-21T06:50:36Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "346af1fd0d877f72": {
+   "published_utc": "2026-10-19T01:59:07Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "d99ab8c7f01dd057": {
+   "published_utc": "2026-10-24T10:42:26Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "23e8ef5e69feb417": {
+   "published_utc": "2026-10-19T18:22:15Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "e044615242fa4778": {
+   "published_utc": "2026-10-25T17:46:28Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "ffc033475b2e1ba0": {
+   "published_utc": "2026-10-23T11:09:28Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "8f02c771d1026621": {
+   "published_utc": "2026-09-27T02:48:05Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "d7381a423197483a": {
+   "published_utc": "2026-09-03T08:28:31Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "417fe687ddda765c": {
+   "published_utc": "2026-10-25T17:34:46Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "0f6eaac50beebdbb": {
+   "published_utc": "2026-10-19T09:23:52Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "9670d0462d241268": {
+   "published_utc": "2026-10-23T05:10:05Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "88f4a20131a943b7": {
+   "published_utc": "2026-10-22T05:16:01Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "24713c910e46e6ff": {
+   "published_utc": "2026-10-22T01:41:56Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "fe1b48139b94300b": {
+   "published_utc": "2026-10-21T12:19:32Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "9d82dd16d4901ea8": {
+   "published_utc": "2026-10-21T08:54:35Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "6db2132023353052": {
+   "published_utc": "2026-10-21T05:19:47Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "792b9476ad2f2fa7": {
+   "published_utc": "2026-10-21T04:48:53Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "cdbb6da2e033d1dc": {
+   "published_utc": "2026-10-18T17:31:13Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "10c323294dddee5b": {
+   "published_utc": "2026-10-20T04:58:44Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "024e33259b5aadb8": {
+   "published_utc": "2026-10-21T02:17:32Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "a287b53fcce8b50b": {
+   "published_utc": "2026-10-21T02:23:12Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "8e8c33d31232c0ca": {
+   "published_utc": "2026-10-20T13:11:33Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "b33e69a05c82be8c": {
+   "published_utc": "2026-10-20T09:22:02Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "9140e3e310903350": {
+   "published_utc": "2026-07-14T03:37:36Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "53de7c956084bf4f": {
+   "published_utc": "2026-09-01T08:00:00Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "f183d80ddf2098a9": {
+   "published_utc": "2026-10-11T08:23:37Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "9f69f4cea1589c1c": {
+   "published_utc": "2026-06-30T08:47:28Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "eb50c87d22e2c0ea": {
+   "published_utc": "2026-07-02T09:36:47Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "c92c5f99e83ee1e7": {
+   "published_utc": "2026-07-17T02:15:59Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
+  },
+  "13ffc75426edb9af": {
+   "published_utc": "2026-07-17T01:59:27Z",
+   "by": "datePublished",
+   "checked_at": "2026-10-26T09:09:16Z"
   }
  }
 }

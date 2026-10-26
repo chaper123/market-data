@@ -1,6 +1,6 @@
-# 新聞標題（2026-10-26 17:06 台北）
+# 新聞標題（2026-10-26 17:09 台北）
 
-最近 72 小時，共 675 則（官方 3、主要媒體 405、第一手 2、其他 265）。T1 官方、T2A 通訊社與一線財經媒體、T2B 其他主要財經媒體、T3 第一手發言、T4 其他。時間為台北時間。
+最近 72 小時，共 637 則（官方 3、主要媒體 367、第一手 2、其他 265）。T1 官方、T2A 通訊社與一線財經媒體、T2B 其他主要財經媒體、T3 第一手發言、T4 其他。時間為台北時間。
 
 ## Fed（官方）
 
@@ -47,7 +47,7 @@
 - 2026-10-23 19:00 T2A｜CNBC｜With earnings in rearview mirror, SpaceX-Tesla merger chatter takes center stage
 - 2026-10-26 16:47 T4｜Mashable｜Tesla cancels Cybertruck launch in Australia and New Zealand
 - 2026-10-26 16:15 T4｜shattered.io｜Powerwall Free Nights vs Tesla $800 Credit in Texas
-- 2026-10-26 16:14 T4｜Investing.com India｜Barclays upgrades Tesla stock rating on business momentum, SPCX deal By Investing.com
+- 2026-10-26 16:10 T4｜Investing.com UK｜Barclays upgrades Tesla stock rating on business momentum, SPCX deal By Investing.com
 - …另有 40 則（見 headlines.json）
 
 ## GOOGL（Alphabet OR Google）
@@ -63,9 +63,9 @@
 - 2026-10-25 11:30 T2B｜Yahoo Finance｜Google’s Ex-CEO Says China Trails US by 6 Months in AI Race, but Could Still Win Due to This Strategy: ‘We’re Already Losing’
 - 2026-10-24 09:10 T2B｜Yahoo Finance｜The Bet Alphabet Holders Made
 - 2026-10-24 08:31 T2B｜Yahoo Finance｜Alphabet (GOOGL): Investing Behind AI Demand and TPU Growth
+- 2026-10-26 17:07 T4｜Android Authority｜7 features I want next from Google Wallet after the Apple-inspired refresh
 - 2026-10-26 17:02 T4｜Business Insider｜Want to land a legal job at Google or Nvidia? These law firms could be your ticket.
 - 2026-10-26 16:58 T4｜Chinook Observer｜Google Gemini Enhances the Connected Driving Experience in the All-New Mazda CX-5 PR Newswire
-- 2026-10-26 16:44 T4｜Research Information｜Springer Nature and Google DeepMind partner on AI peer review assistant
 - …另有 36 則（見 headlines.json）
 
 ## AAPL（Apple）
@@ -85,7 +85,7 @@
 - 2026-10-26 17:02 T4｜Variety｜Animated Movie ‘Apple Cadabra – I Shrunk Myself’ Boarded by Epsilon Film (EXCLUSIVE)
 - 2026-10-26 17:00 T4｜Gizmodo｜Apple Will Reportedly Stop Making You Feel Like a Thief When You Return an Unopened iPhone
 - 2026-10-26 17:00 T4｜Vermont Public｜In small town Vermont, making apple cider is a community endeavor
-- …另有 43 則（見 headlines.json）
+- …另有 44 則（見 headlines.json）
 
 ## SPCX（SpaceX）
 
@@ -95,6 +95,7 @@
 - 2026-10-26 08:37 T2A｜CNBC｜SpaceX closes $40 billion debt deal for AI chips, Elon Musk says
 - 2026-10-26 06:38 T2A｜Bloomberg.com｜Musk Claims SpaceX Closed $40 Billion Debt Deal for AI Chips
 - 2026-10-26 06:38 T2A｜WSJ｜U.S. Allies Race to Escape SpaceX’s Orbit
+- 2026-10-26 05:22 T2B｜Yahoo Finance｜Musk Says SpaceX Closed $40 Billion Debt Deal, Blasts Neoclouds
 - 2026-10-26 04:20 T2B｜Yahoo Finance｜Elon Musk Became the First Person Ever Confirmed With a Net Worth Above $1 Trillion in June 2026. Here's Why That Milestone Still Matters for Tesla and SpaceX Shareholders.
 - 2026-10-26 04:05 T2A｜Reuters｜Musk says SpaceX raised $40 billion in debt deal, predicts neocloud shakeout
 - 2026-10-26 03:07 T2B｜Yahoo Finance｜3 AI Infrastructure Stocks Riding The Tesla And SpaceX Compute Buildout
@@ -103,11 +104,10 @@
 - 2026-10-26 01:39 T2B｜Yahoo Finance｜'The world's super company': Wall Street weighs SpaceX earnings, company's likely Tesla tie-up
 - 2026-10-26 00:05 T2B｜Yahoo Finance｜SpaceX Could Weather a Recession. But Its Stock Might Not. Here's Why.
 - 2026-10-25 23:51 T2B｜Yahoo Finance｜Is SpaceX Stock a Buy Right Now?
-- 2026-10-25 23:07 T2B｜Yahoo Finance｜Prediction: This Will Be SpaceX's Stock Price by the End of 2030
 - 2026-10-26 16:50 T4｜RCR Wireless News｜SpaceX eyes 80,000 cell sites (Telco Diary)
 - 2026-10-26 16:22 T4｜Open Magazine｜Elon Musk’s $40 billion SpaceX debt deal: Why he predicts a shakeout among 200 AI cloud firms
 - 2026-10-26 16:20 T4｜Notebookcheck｜T-Mobile and Verizon press FCC to slow Starlink Mobile as SpaceX plans cell towers
-- …另有 49 則（見 headlines.json）
+- …另有 50 則（見 headlines.json）
 
 ## MARKET（"S&P 500" OR "Wall Street"）
 
@@ -127,13 +127,13 @@
 - 2026-10-25 22:00 T2A｜Bloomberg.com｜Zero-Day Option Traders Are Betting Against Big S&P 500 Swings
 - 2026-10-25 21:54 T2B｜Yahoo Finance｜Roundhill S&P 500 Target 10,000 XX Stock Forecast & Price Target
 - 2026-10-26 16:58 T4｜Seeking Alpha｜S&P 500 profit forecasts sprint ahead of stock prices, leaving shares on sale (SPX:)
+- 2026-10-26 16:39 T4｜MarketBeat｜Remitly Global, Inc. (NASDAQ:RELY) Stock Now Rated "Buy" by Wall Street Analysts
 - 2026-10-26 16:38 T4｜TradingView｜Stock index futures rise as Wall Street looks to rebound after difficult week
-- 2026-10-26 15:53 T4｜marketscreener.com｜South Korean Shares Close Lower on Wall Street Losses, Investors Eye Q3 Earnings, US Fed's Rate Decision
-- …另有 55 則（見 headlines.json）
+- …另有 56 則（見 headlines.json）
 
 ## TSMC（TSMC OR "Taiwan Semiconductor"）
 
-- 2026-10-26 15:41 T2B｜Yahoo Finance Australia｜Taiwan Semiconductor Manufacturing Company Limited (TSM) latest stock news and headlines
+- 2026-10-26 15:38 T2B｜Yahoo Finance UK｜Taiwan Semiconductor Manufacturing Company Limited (TSM) latest stock news and headlines
 - 2026-10-25 22:15 T2B｜Yahoo Finance｜Taiwan Semiconductor Is Set to Cash in on AI. Here's What a $5,000 Investment Could Be Worth by 2030.
 - 2026-10-25 14:24 T2B｜Yahoo Finance Australia｜Taiwan Semiconductor Manufacturing Company Limited (TSM) stock price, news, quote and history
 - 2026-10-25 08:20 T2B｜Yahoo! Finance Canada｜Taiwan Semiconductor Manufacturing Company Limited (2330.TW) Stock Price, News, Quote & History
@@ -160,9 +160,9 @@
 - 2026-10-25 04:00 T2A｜Bloomberg.com｜Fed Set to Lead G7 Trio in Hawkish Rate Pause: Eco Week Ahead
 - 2026-10-24 16:54 T2A｜AP News｜Inflation, earnings reports and the mood of consumers and the Federal Reserve fill out a busy week
 - 2026-10-24 06:22 T2A｜Reuters｜Take Five: AI trade meets the Fed
+- 2026-10-26 17:07 T4｜WGMD – The Talk of Delmarva｜TRAFFIC ALERT: Route 17/Roxana Road to Close for Roundabout Construction at Powell Farm Road
 - 2026-10-26 17:02 T4｜TradingKey｜Bitcoin Price Forecast: Drops Below $80,000 in Fifth Straight Loss, May Test $75,000 as FOMC Meeting Approaches
 - 2026-10-26 16:27 T4｜FXStreet｜US Dollar Index Price Forecast: DXY holds bullish bias above 101.50 ahead of FOMC
-- 2026-10-26 15:40 T4｜FXStreet｜Gold struggles to extend recovery as hawkish Fed bets and Iran risks support USD
 - …另有 33 則（見 headlines.json）
 
 ## TARIFF（tariffs OR "Trump trade"）
@@ -205,8 +205,8 @@
 - 2026-10-23 17:32 T2A｜Reuters｜Taiwan shuts down ahead of Typhoon Champi, nearly 1,000 flights cancelled
 - 2026-10-23 17:11 T2A｜AP News｜Taiwan shuts schools and grounds flights as Typhoon Champi brushes by
 - 2026-10-26 17:00 T4｜Taiwan Insight｜When it comes to Taiwan’s sovereign AI, asking “Sovereign for whom?” rarely includes Taiwanese Indigenous Nations
+- 2026-10-26 16:26 T4｜Taipei Times｜Kevin Tsai says he has never supported Taiwan independence
 - 2026-10-26 16:16 T4｜CGTN｜Music Bridges the Strait: Over 1,100 gather for the 4th Shanghai-Taiwan Golden Autumn Concert
-- 2026-10-26 16:15 T4｜Philippine Canadian Inquirer｜DFA rules out undersea cable cooperation with Taiwan, reaffirms One China Policy
 - …另有 33 則（見 headlines.json）
 
 ## 2330（台積電）
@@ -215,6 +215,8 @@
 - 2026-10-26 08:56 T2B｜倡議家｜台積電效應：熊本廠5週年人口增、地價漲、塞車多、中小企業留不住人| ESG新知
 - 2026-10-26 08:42 T2B｜經濟日報｜韓國有BLACKPINK、日本有寶可夢 台灣只有台積電？
 - 2026-10-26 03:00 T2B｜工商時報｜東京工具機展94家台廠參展搶單東台跟著台積電走鎖定半導體商機- 日報
+- 2026-10-26 01:46 T2B｜經濟日報｜折疊 iPhone 搶手 傳蘋果要求追加三成訂單 鴻海、台積等進補
+- 2026-10-26 01:01 T2B｜UDN｜權王台積電能否守住2385元關卡？
 - 2026-10-26 00:06 T2B｜經濟日報｜韓媒：三星應輝達要求 下一代HBM基礎晶粒採台積電3奈米
 - 2026-10-25 23:21 T2B｜UDN｜台積電決定取消運動會，主要考量因素是什麼？
 - 2026-10-25 23:21 T2B｜UDN｜台積電加碼發放3萬元小禮物，背後考量是什麼？
@@ -224,12 +226,10 @@
 - 2026-10-25 08:30 T2B｜工商時報｜三星、台積電罕見聯手！輝達新款記憶體背後 藏著什麼盤算？
 - 2026-10-25 07:30 T2B｜工商時報｜台積電「2,500元以下隨便買」？股市獅公喊價3,875元！示警台股融資過熱、拆解熱門AI股去留- 證券
 - 2026-10-24 18:31 T2B｜經濟日報｜謝金河：台積電營收超越前瞻上限 股價2230元有強支撐 5萬點前先鞏固
-- 2026-10-24 17:56 T2B｜工商時報｜英特爾非技術落後台積電坦言硬傷在規模與設備- 產業
-- 2026-10-24 17:47 T2B｜經濟日報｜台積電法說四大焦點穩定軍心 多線並進 護城河愈挖愈深、愈築愈寬
 - 2026-10-26 16:55 T4｜FTNN 新聞網｜台股暴跌是撿便宜機會？投資達人點名台積電、統一超 進場盯緊2訊號
 - 2026-10-26 16:40 T4｜Yahoo新聞｜她每月剩3000元！該買「0050還是台積電？」全場一面倒：會感謝自己
 - 2026-10-26 16:38 T4｜自由財經｜看好台積電再大賺一筆！外媒估2030年驚人市值 股價將漲這麼多
-- …另有 72 則（見 headlines.json）
+- …另有 48 則（見 headlines.json）
 
 ## TWSE（台股 OR 加權指數）
 
@@ -240,33 +240,31 @@
 - 2026-10-26 03:00 T2B｜工商時報｜台股跌破季線怎麼走？專家分析、11月重量級事件一次看 年底挑戰50K還有望！
 - 2026-10-26 03:00 T2B｜工商時報｜台股止跌回神？銀行喊「多頭行情沒死」 記憶體暴跌是假摔？30年歷史數據揭密- 日報
 - 2026-10-26 03:00 T2B｜工商時報｜四大考驗 台股再戰50K
+- 2026-10-26 01:34 T2B｜經濟日報｜台股重量級法說會登場！聯發科、台達電、聯電上陣 AI 需求能變獲利？
+- 2026-10-26 01:21 T2B｜UDN｜台積電跌破半年線，對台股的影響有多深遠？
 - 2026-10-26 00:31 T2B｜經濟日報｜台股反向、高息 ETF 熱 元大台灣 50 反 1 單周獲買超 5.4 萬張稱冠 | 基金天地 | 理財
+- 2026-10-25 23:55 T2B｜UDN｜群益投信的建議，對長期投資台股ETF的投資者有何參考價值？
 - 2026-10-25 23:45 T2B｜UDN｜台股ETF規模逆勢創高，背後反映了投資人什麼樣的策略？
 - 2026-10-25 23:45 T2B｜UDN｜分散配置台股和美股，最佳比例為何？
+- 2026-10-25 23:36 T2B｜UDN｜台股跌幅與融資減幅不成正比，暗示著什麼問題？
 - 2026-10-25 23:21 T2B｜UDN｜AI產業成長是否能持續支撐台股行情？
-- 2026-10-25 23:15 T2B｜UDN｜台積電獲利表現是否能持續支撐台股指數？
-- 2026-10-25 23:13 T2B｜UDN｜長期投資500萬元，分散配置台股和美股的最佳比例為何？
-- 2026-10-25 22:52 T2B｜UDN｜此次股市休市，是否會改變投資人對台股的看法？
-- 2026-10-25 22:47 T2B｜UDN｜沈伯洋提議台股與颱風假脫鉤，背後考量是什麼？
 - 2026-10-26 17:04 T4｜商傳媒 - SUN MEDIA｜台股震盪考驗選股功力00418A雙經理人掌握建倉良機10/27最後買進日
+- 2026-10-26 17:04 T4｜商傳媒 - SUN MEDIA｜以為買0050就安全？大跌時才發現全押台股 00998A抗跌補上另一塊配置
 - 2026-10-26 17:03 T4｜NOWnews今日新聞｜台股休市4天明「開獎」! 台股、國際股市關鍵數據一次看
-- 2026-10-26 17:00 T4｜鉅亨網｜外資狂賣3025億元台股不妙？野村估明年EPS成長29% 科技ETF展韌性
-- …另有 99 則（見 headlines.json）
+- …另有 84 則（見 headlines.json）
 
 ## 009816（009816 OR 凱基台灣TOP50）
 
 - 2026-10-26 12:38 T2B｜經濟日報｜整理包／0050 市值型 ETF 王位遭挑戰！006208 一拆八搶市 009804、009816 也來了...四檔買誰好？
-- …另有 44 則（見 headlines.json）
+- …另有 31 則（見 headlines.json）
 
 ## 00981A（00981A OR 主動統一台股增長）
 
-- 2026-10-24 17:00 T2B｜經濟日報｜整理包／瑤池金母發錢了！00918、00919 創新高 00981A、00929 等 ETF 9 月配息、最後買進日一次看
 - 2026-10-26 15:40 T4｜FTNN 新聞網｜目標價上看1420元！瑤池金母搶買、杜金龍點名「這檔載板大廠」基本面強勢登00981A第二大持股
 - 2026-10-26 10:39 T4｜旺得富理財網｜台股修正怎布局？「從0050、0056到主動式00981A」達人教戰終極配置：這樣買最快滾出3萬現金流- 上市櫃
-- …另有 40 則（見 headlines.json）
+- …另有 29 則（見 headlines.json）
 
 ## 00411A（00411A OR 主動統一前沿科技）
 
-- 2026-10-24 17:00 T2B｜經濟日報｜統一投信主動式傘型 ETF 雙箭齊發 00411A、00987D 將於8月開募
-- …另有 4 則（見 headlines.json）
+- …另有 3 則（見 headlines.json）
 
