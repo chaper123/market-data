@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-10-25T23:11:42Z",
- "generated_at_taipei": "2026-10-26 07:11",
+ "generated_at_utc": "2026-10-26T00:36:46Z",
+ "generated_at_taipei": "2026-10-26 08:36",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -239,10 +239,10 @@
   "fx/usdtwd_mid": {
    "status": "ok",
    "source": "Yahoo TWD=X 收盤（市場中間價，不是台銀即期賣出）",
-   "rows": 519,
-   "first": "2024-10-23",
-   "last": "2026-10-25",
-   "last_rate": 32.567
+   "rows": 516,
+   "first": "2024-10-28",
+   "last": "2026-10-26",
+   "last_rate": 32.571
   },
   "macro/SPX": {
    "status": "ok",
