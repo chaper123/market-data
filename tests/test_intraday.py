@@ -44,8 +44,17 @@ def all_items(d, t, z00981="28.50"):
             item("00411A", "otc", d, t, "9.95", "9.93"), item("t00", "tse", d, t, "46100.00", "46041.43", v=None)]
 
 
-class IntradayTest(unittest.TestCase):
+class IntradayBase(unittest.TestCase):
     def run_at(self, now, payload, closed=()):
+        """payload 可以是一份回應，或依序回傳的多份回應（重抓時用；用完就一直回最後一份）。"""
+        seq = list(payload) if isinstance(payload, list) else [payload]
+        calls = []
+
+        def fake_http(url, **kw):
+            calls.append(url)
+            return 200, seq[min(len(calls), len(seq)) - 1]
+
+        self.calls = calls
         with tempfile.TemporaryDirectory() as tmp:
             os.makedirs(os.path.join(tmp, "calendar"))
             json.dump({"tw_market": {"closed": list(closed)}},
@@ -54,11 +63,13 @@ class IntradayTest(unittest.TestCase):
             out = os.path.join(tmp, "tw", "intraday.json")
             with mock.patch.object(intraday, "DATA", tmp), mock.patch.object(intraday, "ROOT", tmp), \
                     mock.patch.object(intraday, "OUT", out), mock.patch.object(intraday, "NOW", now), \
-                    mock.patch.object(intraday, "http", lambda url, **kw: (200, payload)), \
+                    mock.patch.object(intraday, "http", fake_http), \
                     mock.patch.object(intraday.time, "sleep", lambda s: None):
                 intraday.main()
             return json.load(open(out, encoding="utf-8"))
 
+
+class IntradayTest(IntradayBase):
     def test_during_session(self):
         doc = self.run_at(tpe(2026, 10, 23, 10, 5), mis(all_items("20261023", "10:04:55", z00981="-")))
         self.assertEqual(doc["session"], "盤中")
@@ -100,6 +111,91 @@ class IntradayTest(unittest.TestCase):
     def test_bad_rtcode_keeps_old_file(self):
         with self.assertRaises(SystemExit):
             self.run_at(tpe(2026, 10, 23, 10, 5), mis([], rtcode="9999"))
+
+
+def quoted(code, ex, z, y, b="", a="", u=None, w=None, t="10:05:09"):
+    """盤中的一筆，帶五檔買賣價（b、a）與漲跌停（u、w）。"""
+    m = item(code, ex, "20261027", t, z, y)
+    m.update(b=b, a=a)
+    m["u"], m["w"] = u, w
+    if u is None:
+        m.pop("u")
+    if w is None:
+        m.pop("w")
+    return m
+
+
+def session_items(q00981, q00411, q009816=None):
+    return [q009816 or quoted("009816", "tse", "15.95", "15.93", "15.9400_15.9300_", "15.9500_15.9600_", "17.52", "14.34"),
+            q00981, q00411, item("t00", "tse", "20261027", "10:04:55", "46219.29", "46041.43", v=None)]
+
+
+class PriceFallbackTest(IntradayBase):
+    NOW = tpe(2026, 10, 27, 10, 5)
+
+    def test_z_normal(self):
+        doc = self.run_at(self.NOW, mis(session_items(
+            quoted("00981A", "tse", "28.10", "28.19", "28.0900_", "28.1000_", "31.00", "25.38"),
+            quoted("00411A", "otc", "9.98", "9.93", "9.9700_", "9.9800_", "9999.95"))))
+        q = doc["quotes"]["00981A"]
+        self.assertEqual((q["price"], q["price_field"], q["price_retries"]), (28.1, "z", 0))
+        self.assertEqual((q["bid1"], q["ask1"]), (28.09, 28.1))
+        self.assertEqual(len(self.calls), 1)  # 都有成交價就不重抓
+        self.assertNotIn("備援", doc["note"])
+
+    def test_retry_gets_trade(self):
+        first = mis(session_items(quoted("00981A", "tse", "-", "28.19", "28.0900_", "28.1000_", "31.00", "25.38"),
+                                  quoted("00411A", "otc", "9.98", "9.93", "9.9700_", "9.9800_")))
+        second = mis(session_items(quoted("00981A", "tse", "28.12", "28.19", "28.1100_", "28.1200_", "31.00", "25.38",
+                                          t="10:05:17"),
+                                   quoted("00411A", "otc", "9.98", "9.93", "9.9700_", "9.9800_")))
+        doc = self.run_at(self.NOW, [first, second])
+        q = doc["quotes"]["00981A"]
+        self.assertEqual((q["price"], q["price_field"], q["price_retries"], q["time"]),
+                         (28.12, "z_retry", 1, "2026-10-27 10:05:17"))
+        self.assertAlmostEqual(q["change_pct"], -0.25)
+        self.assertEqual(doc["quotes"]["00411A"]["price_field"], "z")
+        self.assertEqual(len(self.calls), 2)
+
+    def test_no_trade_uses_bid_ask_mid(self):
+        payload = mis(session_items(quoted("00981A", "tse", "-", "28.19", "27.4800_27.4700_", "27.4900_27.5000_",
+                                           "31.00", "25.38"),
+                                    quoted("00411A", "otc", "-", "9.93", "9.9100_", "9.9200_", "9999.95")))
+        doc = self.run_at(self.NOW, payload)
+        q = doc["quotes"]["00981A"]
+        self.assertEqual((q["price"], q["price_field"], q["bid1"], q["ask1"]), (27.485, "bid_ask_mid", 27.48, 27.49))
+        self.assertAlmostEqual(q["change"], -0.705)
+        self.assertAlmostEqual(q["change_pct"], -2.5)
+        self.assertIn("中間價", q["price_note"])
+        self.assertEqual(len(self.calls), 1 + intraday.RETRIES)  # 重抓 3 次
+        self.assertIn("00981A、00411A 那一刻沒有成交價", doc["note"])
+        # 上櫃無漲跌幅限制：MIS 給 9999.95 → null 並說明
+        q = doc["quotes"]["00411A"]
+        self.assertEqual((q["price"], q["limit_up"], q["limit_down"]), (9.915, None, None))
+        self.assertIn("9999.95", q["limit_note"])
+        self.assertEqual((doc["quotes"]["00981A"]["limit_up"], doc["quotes"]["00981A"]["limit_down"]), (31.0, 25.38))
+
+    def test_one_side_and_no_quote(self):
+        payload = mis(session_items(quoted("00981A", "tse", "-", "28.19", "28.0000_", ""),
+                                    quoted("00411A", "otc", "-", "9.93", "-", "0.0000_"),
+                                    quoted("009816", "tse", "-", "15.93", "", "15.9600_")))
+        doc = self.run_at(self.NOW, payload)
+        self.assertEqual((doc["quotes"]["00981A"]["price"], doc["quotes"]["00981A"]["price_field"]), (28.0, "bid1"))
+        self.assertEqual((doc["quotes"]["009816"]["price"], doc["quotes"]["009816"]["price_field"]), (15.96, "ask1"))
+        q = doc["quotes"]["00411A"]
+        self.assertEqual((q["price"], q["price_field"], q["change"], q["change_pct"]), (None, None, None, None))
+        self.assertIn("沒有買賣報價", q["price_note"])
+        self.assertEqual(doc["status"], "ok")
+
+    def test_after_close_labels_unchanged(self):
+        payload = mis([quoted("009816", "tse", "15.93", "16.08", "15.9200_", "15.9300_", "17.68", "14.48", t="13:30:00"),
+                       quoted("00981A", "tse", "28.19", "28.88", "28.1900_", "28.2000_", "31.76", "26.00", t="13:30:00"),
+                       quoted("00411A", "otc", "9.93", "10.04", "9.9300_", "9.9600_", "9999.95", t="13:30:00"),
+                       item("t00", "tse", "20261027", "13:33:00", "46041.43", "46887.77", v=None)])
+        doc = self.run_at(tpe(2026, 10, 27, 17, 3), payload)
+        self.assertEqual((doc["session"], doc["is_trading"]), ("收盤後", False))
+        self.assertIn("非交易時段（收盤後）", doc["note"])
+        self.assertTrue(all(q["price_field"] == "z" for q in doc["quotes"].values()))
 
 
 if __name__ == "__main__":
