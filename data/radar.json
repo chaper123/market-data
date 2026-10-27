@@ -1,6 +1,6 @@
 {
  "generated_from": "repo 日線（indicators.py）；綜合評分來自 TradingView",
- "tv_fetched_at_taipei": "2026-10-27 08:22",
+ "tv_fetched_at_taipei": "2026-10-27 09:35",
  "rules": {
   "trend_adx": 25,
   "range_adx": 20
@@ -580,16 +580,16 @@
    "close": 15.93,
    "change_pct": -0.9328358208955168,
    "rating": {
-    "all": "賣出",
+    "all": "中立",
     "ma": "賣出",
-    "osc": "中立",
-    "all_value": -0.27622377622377625
+    "osc": "買進",
+    "all_value": -0.09440559440559443
    },
    "one_line": "趨勢不明，等方向確認",
    "structure": "趨勢不明（ADX 20.5，介於 20～25）",
    "position": "站上 2/10 條（EMA100、SMA100）；短均線全數失守、只剩部分長均線撐著，結構偏弱（樣本不足：EMA200、SMA200）",
    "contradictions": [
-    "綜合評分賣出，但 StochRSI 5.6、W%R -98.3 超賣 → 短線殺過頭，追空風險高"
+    "均線評分賣出、振盪評分買進 → 趨勢與動能方向相反"
    ],
    "support": [
     {
@@ -638,17 +638,15 @@
    "close": 28.19,
    "change_pct": -2.3891966759002736,
    "rating": {
-    "all": "賣出",
-    "ma": "強力賣出",
-    "osc": "賣出",
-    "all_value": -0.35757575757575755
+    "all": "無資料",
+    "ma": "無資料",
+    "osc": "無資料",
+    "all_value": null
    },
    "one_line": "盤整格局，看區間上下緣，不看均線排列",
    "structure": "盤整（ADX 19.7 < 20）：均線排列參考性低，改看 Pivot 區間上下緣",
    "position": "站上 2/12 條（EMA200、SMA200）；短均線全數失守、只剩部分長均線撐著，結構偏弱",
    "contradictions": [
-    "綜合評分賣出，但 ADX 19.7 < 20 → 下跌也缺乏趨勢，容易在區間內反彈",
-    "綜合評分賣出，但 StochRSI 1.5、W%R -98.5 超賣 → 短線殺過頭，追空風險高",
     "現價已跌破月 S1 28.80 -2.1% → 本月跌幅偏大，留意是否止穩"
    ],
    "support": [
@@ -690,7 +688,7 @@
    },
    "last_date": "2026-10-22",
    "rows": 256,
-   "rating_skipped": null
+   "rating_skipped": "收盤 27.97 ≠ 28.19（可能是盤中數字）"
   },
   "00411A": {
    "code": "00411A",
@@ -748,7 +746,7 @@
    },
    "last_date": "2026-10-22",
    "rows": 39,
-   "rating_skipped": "ATR 0.40 vs 0.23（TradingView 高低點資料有誤）"
+   "rating_skipped": "收盤 9.99 ≠ 9.93（可能是盤中數字）；ATR 0.38 vs 0.23（TradingView 高低點資料有誤）"
   }
  }
 }

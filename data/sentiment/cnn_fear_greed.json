@@ -1,6 +1,6 @@
 {
- "fetched_at_taipei": "2026-10-27 08:22",
- "time_utc": "2026-10-26T23:59:45+00:00",
+ "fetched_at_taipei": "2026-10-27 09:35",
+ "time_utc": "2026-10-26T23:59:53+00:00",
  "score": 27.08,
  "rating": "fear",
  "previous_close": 20.98,
@@ -17,13 +17,13 @@
   "stock_price_strength": {
    "score": 23.4,
    "rating": "extreme fear",
-   "time_utc": "2026-10-26T23:59:45Z",
+   "time_utc": "2026-10-26T23:59:53Z",
    "value": -6.04337289120102
   },
   "stock_price_breadth": {
    "score": 25.8,
    "rating": "fear",
-   "time_utc": "2026-10-26T23:59:45Z",
+   "time_utc": "2026-10-26T23:59:53Z",
    "value": 451.892066747741
   },
   "put_call_options": {

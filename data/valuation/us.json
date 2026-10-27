@@ -1,5 +1,5 @@
 {
- "fetched_at_taipei": "2026-10-27 08:22",
+ "fetched_at_taipei": "2026-10-27 09:35",
  "week_limit_pct": 20,
  "symbols": {
   "VOO": {
@@ -9,7 +9,7 @@
    "pe": 24.56,
    "price": 703.41,
    "price_date": "2026-10-26",
-   "price_time": "Oct 26, 2026, 4:00 PM EDT",
+   "price_time": "Oct 26, 2026, 4:00 PM",
    "market_state": "closed",
    "source": "https://stockanalysis.com/etf/voo/",
    "implied_eps": 28.6405,
@@ -43,7 +43,7 @@
   "NVDA": {
    "kind": "stock",
    "fwd_pe": 17.86,
-   "peg": 0.35,
+   "peg": 0.36,
    "pe": 27.31,
    "price": 216.0,
    "price_date": "2026-10-26",
