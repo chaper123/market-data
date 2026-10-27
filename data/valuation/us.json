@@ -1,22 +1,22 @@
 {
- "fetched_at_taipei": "2026-10-27 09:35",
+ "fetched_at_taipei": "2026-10-27 10:31",
  "week_limit_pct": 20,
  "symbols": {
   "VOO": {
    "kind": "etf",
-   "fwd_pe": 19.49,
+   "fwd_pe": 19.46,
    "peg": null,
-   "pe": 24.56,
+   "pe": 24.55,
    "price": 703.41,
    "price_date": "2026-10-26",
    "price_time": "Oct 26, 2026, 4:00 PM",
    "market_state": "closed",
    "source": "https://stockanalysis.com/etf/voo/",
-   "implied_eps": 28.6405,
+   "implied_eps": 28.6521,
    "week": {
     "ref_date": "2026-10-19",
     "ref_ratio": 24.91,
-    "eps_change_pct": 1.25
+    "eps_change_pct": 1.29
    }
   },
   "GOOGL": {
@@ -106,7 +106,7 @@
   "AAPL": {
    "kind": "stock",
    "fwd_pe": 37.52,
-   "peg": 3.42,
+   "peg": 3.38,
    "pe": 39.45,
    "price": 343.91,
    "price_date": "2026-10-26",
