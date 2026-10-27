@@ -521,9 +521,27 @@ def report():
     print("PROBE_JSON=" + json.dumps(RESULTS, ensure_ascii=False))
 
 
+# ---------------------------------------------------------------- 10. 中央社官方 RSS（Google News 收得很少）
+def cna_rss(raw):
+    items = ET.fromstring(raw).findall("./channel/item")
+    if not items:
+        raise ValueError("沒有 item")
+    pubs = [parsedate_to_datetime(i.findtext("pubDate")) for i in items if i.findtext("pubDate")]
+    links = [i.findtext("link") or "" for i in items]
+    direct = sum(1 for u in links if u.startswith("https://www.cna.com.tw/news/"))
+    return (f"{len(items)} 則；最新 {max(pubs).astimezone(TPE):%Y-%m-%d %H:%M}、最舊 {min(pubs).astimezone(TPE):%m-%d %H:%M}"
+            f"（台北，原始時區 {pubs[0].strftime('%z')}）；cna.com.tw 原文連結 {direct}/{len(items)}")
+
+
+def probe_cna():
+    for name in ("finance", "technology", "intworld", "mainland"):
+        probe("中央社 RSS", f"中央社 {name}", f"https://feeds.feedburner.com/rsscna/{name}", cna_rss)
+
+
 STEPS = {"chart": "probe_yahoo_chart", "sentiment": "probe_sentiment", "fx": "probe_fx",
          "valuation": "probe_valuation", "calendar": "probe_calendar", "institutional": "probe_institutional",
-         "etf": "probe_active_etf", "news": "probe_news", "daily": "probe_daily_sources"}
+         "etf": "probe_active_etf", "news": "probe_news", "daily": "probe_daily_sources",
+         "cna": "probe_cna"}
 
 
 def main():
