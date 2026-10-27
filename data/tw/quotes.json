@@ -1,5 +1,5 @@
 {
- "fetched_at_taipei": "2026-10-27 13:33",
+ "fetched_at_taipei": "2026-10-27 14:50",
  "quotes": {
   "TWS:009816:STOCK": {
    "price": 15.9,
@@ -9,7 +9,7 @@
    "high": 16.08,
    "low": 15.82,
    "prev_close": 15.93,
-   "volume_lots": 120237.0,
+   "volume_lots": 123602.203,
    "time_taipei": "2026-10-27 13:30"
   },
   "TWS:00981A:STOCK": {
@@ -20,7 +20,7 @@
    "high": 28.63,
    "low": 27.2,
    "prev_close": 28.19,
-   "volume_lots": 270819.0,
+   "volume_lots": 277331.721,
    "time_taipei": "2026-10-27 13:30"
   },
   "TWS:00411A:STOCK": {
@@ -42,7 +42,7 @@
    "high": 46585.45,
    "low": 45676.67,
    "prev_close": 46041.43,
-   "volume_lots": 11574135.0,
+   "volume_lots": 11703192.0,
    "time_taipei": "2026-10-27 13:33"
   }
  }

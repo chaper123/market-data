@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-10-27T05:33:46Z",
- "generated_at_taipei": "2026-10-27 13:33",
+ "generated_at_utc": "2026-10-27T06:50:40Z",
+ "generated_at_taipei": "2026-10-27 14:50",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -165,27 +165,27 @@
   "tw/009816": {
    "status": "ok",
    "source": "TWSE",
-   "rows": 172,
+   "rows": 173,
    "first": "2026-02-03",
-   "last": "2026-10-22",
-   "last_close": 15.93,
-   "prev_close": 16.08,
+   "last": "2026-10-27",
+   "last_close": 15.9,
+   "prev_close": 15.93,
    "last_bar_source": "TWSE",
    "last_bar_referee": false,
-   "cross_check": "2026-10-22 收盤 15.93 vs cnyes 15.93（差 +0.00%）",
+   "cross_check": "2026-10-27 收盤 15.9 vs cnyes 15.9（差 +0.00%）",
    "cross_check_ok": true
   },
   "tw/00981A": {
    "status": "ok",
    "source": "TWSE",
-   "rows": 256,
+   "rows": 257,
    "first": "2025-10-01",
-   "last": "2026-10-22",
-   "last_close": 28.19,
-   "prev_close": 28.88,
+   "last": "2026-10-27",
+   "last_close": 27.4,
+   "prev_close": 28.19,
    "last_bar_source": "TWSE",
    "last_bar_referee": false,
-   "cross_check": "2026-10-22 收盤 28.19 vs cnyes 28.19（差 +0.00%）",
+   "cross_check": "2026-10-27 收盤 27.4 vs cnyes 27.4（差 +0.00%）",
    "cross_check_ok": true
   },
   "tw/00411A": {
@@ -233,7 +233,7 @@
   "tv/snapshot": {
    "status": "ok",
    "symbols": 13,
-   "tw_bar_is_intraday": true,
+   "tw_bar_is_intraday": false,
    "us_bar_is_intraday": false
   },
   "fx/usdtwd_mid": {
@@ -242,7 +242,7 @@
    "rows": 517,
    "first": "2024-10-28",
    "last": "2026-10-27",
-   "last_rate": 32.51
+   "last_rate": 32.515
   },
   "macro/SPX": {
    "status": "ok",
@@ -610,7 +610,7 @@
  },
  "errors": [],
  "us_cutoff_ny": "2026-10-26",
- "tw_cutoff_taipei": "2026-10-26",
+ "tw_cutoff_taipei": "2026-10-27",
  "summary": {
   "ok": 46,
   "stale": 0,
