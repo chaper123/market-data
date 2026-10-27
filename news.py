@@ -9,6 +9,9 @@ docs/NEWS_ROUTINE.md 第 3.1 節約定，差異寫在 README。
                    1 官方（政府、央行、交易所、公司 IR 與新聞稿通路）、2 主要媒體（rank A 通訊社與一線財經媒體、
                    B 其他主要財經媒體）、3 第一手發言（公司部落格等）、4 其他（照樣保留，每個查詢最多 low_tier_per_topic 則）
   Fed：federalreserve.gov 官方 RSS（新聞稿、演講），tier 1，另外輸出 fed.json
+  中央社：官方 RSS（news.cna_feeds，預設財經、科技），連結就是 cna.com.tw 原文（url 直接用），source 標「中央社」、
+          tier 2 rank A。Google News 收到的同一篇以官方 RSS 為準。依中央社 RSS 使用規範（個人、非營利之非商業用途），
+          只用標題與連結、不轉載全文，並標示出處「中央通訊社」（頂層 attribution）
   SEC 8-K：還沒做（要等存聯絡信箱的 Actions secret），先標「未啟用」
 
 整理：同標題或高度相似（字詞重疊 ≥ 80%）的合併成一則，保留等級最高、最早的那則並把其他來源列在 also；
@@ -157,8 +160,9 @@ def tag(item, cfg, names):
 
 
 def merge(items):
-    """同標題或高度相似的合併：保留等級最高、其次最早的那則，其他來源列在 also。"""
-    items = sorted(items, key=lambda x: (x["tier"], x["published"]))
+    """同標題或高度相似的合併：保留等級最高、其次是原文連結（官方 RSS，例如中央社）、再其次最早的那則，
+    其他來源列在 also。"""
+    items = sorted(items, key=lambda x: (x["tier"], gn_article_id(x.get("link")) is not None, x["published"]))
     kept = []
     for it in items:
         tk = tokens(it["title"])
@@ -178,10 +182,11 @@ def merge(items):
 
 def cap(items, low_tier_per_topic, off_title_per_topic):
     """標題沒提到查詢關鍵字的，每個查詢只留最新 off_title_per_topic 則；tier 4 每個查詢只留最新 low_tier_per_topic 則
-    （一則屬於多個查詢時，任一查詢還有名額就留）。官方（Fed）一律保留。"""
+    （一則屬於多個查詢時，任一查詢還有名額就留）。官方（Fed）與原文連結的官方 RSS（中央社）一律保留。"""
     used, out = {}, []
     for it in sorted(items, key=lambda x: (x["tier"], -x["published"].timestamp())):
-        kind = None if it["tier"] == 1 else "off" if not it["title_match"] else "low" if it["tier"] == 4 else None
+        direct = it["tier"] == 1 or not gn_article_id(it.get("link"))  # 官方、中央社 RSS 這類原文連結不限
+        kind = None if direct else "off" if not it["title_match"] else "low" if it["tier"] == 4 else None
         if kind is None:
             out.append(it)
             continue
@@ -217,6 +222,27 @@ def google_news(cfg, errors):
                     feeds.append({"name": name, "ok": False, "count": 0, "error": str(ex)[:200]})
                     errors.append(f"{name}: {ex}")
                 time.sleep(1)
+    return items, feeds
+
+
+def cna(cfg, errors):
+    """中央社官方 RSS（news.cna_feeds）。回傳 (items, feeds)；失敗只記在 feeds／errors，上一次的中央社標題照常保留。"""
+    items, feeds = [], []
+    for name, url in cfg.get("cna_feeds", {}).items():
+        label = f"中央社 RSS：{name}"
+        try:
+            code, raw = http(url)
+            if code != 200:
+                raise RuntimeError(f"HTTP {code}")
+            got = [g for g in parse_rss(raw) if good_url(g["link"])]
+            feeds.append({"name": label, "ok": True, "count": len(got)})
+            for g in got:
+                tier, rank = tier_of(g["link"], cfg["tiers"])
+                items.append(dict(g, source="中央社", source_url="https://www.cna.com.tw", tier=tier, rank=rank,
+                                  lang="zh", queries=[f"cna_{name}"], url=g["link"]))
+        except Exception as ex:  # noqa: BLE001 — 中央社失敗不影響其他 feed
+            feeds.append({"name": label, "ok": False, "count": 0, "error": str(ex)[:200]})
+            errors.append(f"{label}: {ex}")
     return items, feeds
 
 
@@ -590,6 +616,13 @@ def markdown(doc, fed_doc, queries):
              "T3 第一手發言、T4 其他。時間為台北時間。", "", "## Fed（官方）", ""]
     lines += [f"- {f['published_taipei']} [{f['type']}] {f['title']}" for f in fed_doc["items"]] or ["- 期間內沒有新發布"]
     lines.append("")
+    official_cna = [it for it in doc["items"] if it["source"] == "中央社" and any(q.startswith("cna_") for q in it["queries"])]
+    if official_cna:
+        lines += ["## 中央社（官方 RSS，資料出處：中央通訊社）", ""]
+        lines += [f"- {it['published_taipei']} {it['title']}" for it in official_cna[:20]]
+        if len(official_cna) > 20:
+            lines.append(f"- …另有 {len(official_cna) - 20} 則（見 headlines.json）")
+        lines.append("")
     for q in queries:
         mine = [it for it in doc["items"] if q["id"] in it["queries"]]
         if not mine:
@@ -623,6 +656,14 @@ def update_meta(doc, fed_doc):
                             "time_suspect_detected": doc["stats"]["time_check"]["detected"],
                             "time_fixed": doc["stats"]["time_check"]["fixed"],
                             "time_removed": doc["stats"]["time_check"]["removed"]}
+    cna_feeds = [f for f in doc["feeds"] if f["name"].startswith("中央社 RSS")]
+    if cna_feeds:
+        mine = [it for it in doc["items"] if it["source"] == "中央社" and any(q.startswith("cna_") for q in it["queries"])]
+        ok = all(f["ok"] for f in cna_feeds)
+        ds["news/cna"] = {"status": "ok" if ok else ("stale" if mine else "fail"), "source": "中央社官方 RSS",
+                          "last": max((it["published_taipei"] for it in mine), default=None), "items": len(mine),
+                          "feeds_ok": f"{sum(f['ok'] for f in cna_feeds)}/{len(cna_feeds)}",
+                          "checked_at_taipei": doc["generated_at_taipei"]}
     fed_ok = all(f["ok"] for f in fed_doc["feeds"])
     ds["news/fed"] = {"status": "ok" if fed_ok else "fail", "source": "federalreserve.gov RSS",
                       "last": fed_doc["items"][0]["date"] if fed_doc["items"] else None,
@@ -634,6 +675,7 @@ def main():
     cfg = json.load(open(os.path.join(ROOT, "config.json"), encoding="utf-8"))["news"]
     errors = []
     fresh, feeds = google_news(cfg, errors)
+    cna_items, cna_feeds = cna(cfg, errors)
     fed_items, fed_feeds = fed(cfg, errors)
     if not any(f["ok"] for f in feeds):
         print("Google News 查詢全部失敗，保留上一次的檔案", file=sys.stderr)
@@ -641,6 +683,7 @@ def main():
             print(" -", e, file=sys.stderr)
         sys.exit(1)
     previous = load_previous(OUT_JSON, cfg["tiers"])
+    fresh += cna_items
     items = build(cfg, fresh, previous, fed_items, NOW)
     check_cache, time_notes = load_check_cache(OUT_JSON, NOW), []
     # 上一次留下、還沒檢查過的也一起算：同一批舊文下一次可能被標成另一個時間（10/26 08:20 是 10/24 17:00，
@@ -658,13 +701,15 @@ def main():
             by_symbol[s] = by_symbol.get(s, 0) + 1
         for t in it["topics"]:
             by_topic[t] = by_topic.get(t, 0) + 1
-    all_feeds = feeds + fed_feeds
+    all_feeds = feeds + cna_feeds + fed_feeds
     doc = {"generated_at_taipei": tpe(NOW), "generated_at_utc": utc_text(NOW), "window_hours": cfg["window_hours"],
            "status": "ok" if not errors else "partial", "tiers": {str(k): v for k, v in TIER_NAMES.items()},
            "feeds": all_feeds, "errors": errors,
            "stats": {"total": len(items), "by_tier": by_tier, "by_symbol": by_symbol, "by_topic": by_topic,
                      "url": url_stats, "time_check": time_stats},
            "sec_8k": {"status": "未啟用", "note": "等存聯絡信箱的 Actions secret 建好後加入"},
+           "attribution": {"中央社": "資料出處：中央通訊社。依中央社 RSS 使用規範（個人、非營利之非商業用途），"
+                                     "只用標題與連結，不轉載全文"},
            "items": [serialize(it) for it in items],
            "suspect_items": [dict(serialize(it), time_suspect=True, suspect_reason=it["suspect_reason"])
                              for it in suspects],

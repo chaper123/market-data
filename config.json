@@ -92,6 +92,10 @@
     },
     "fed_feeds": {"press": "https://www.federalreserve.gov/feeds/press_all.xml",
                   "speech": "https://www.federalreserve.gov/feeds/speeches.xml"},
-    "fed_days": 7
+    "fed_days": 7,
+    "cna_feeds": {"finance": "https://feeds.feedburner.com/rsscna/finance",
+                  "technology": "https://feeds.feedburner.com/rsscna/technology"},
+    "cna_feeds_available": {"intworld": "https://feeds.feedburner.com/rsscna/intworld",
+                            "mainland": "https://feeds.feedburner.com/rsscna/mainland"}
   }
 }

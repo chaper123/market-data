@@ -403,5 +403,103 @@ class TimeSuspectTest(unittest.TestCase):
         return next(it for it in doc["items"] if it["title"].startswith(prefix))
 
 
+CNA_FEED = "https://feeds.feedburner.com/rsscna/finance"
+CNA_RSS = (
+    '<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>中央社即時新聞 財經新聞</title>'
+    + "".join(f"<item><title>{t}</title><link>https://www.cna.com.tw/news/afe/{n}.aspx</link><guid>{n}</guid>"
+              f"<pubDate>{p}</pubDate><description>前言</description></item>"
+              for t, n, p in (("台積電法說會釋出樂觀展望", "202610210001", "Wed, 21 Oct 2026 16:05:00 +0800"),
+                              ("台光電擴產　外資喊買", "202610210002", "Wed, 21 Oct 2026 17:10:00 +0800"),
+                              ("00981A規模突破3千億元", "202610210003", "Wed, 21 Oct 2026 18:00:00 +0800"),
+                              ("耐久財信心創新低", "202610210004", "Wed, 21 Oct 2026 19:00:00 +0800"),
+                              ("美元走弱　新台幣升值", "202610210005", "Wed, 21 Oct 2026 19:30:00 +0800")))
+    + "</channel></rss>").encode()
+CNA_CFG = dict(CFG, cna_feeds={"finance": CNA_FEED})
+
+
+def cna_http(url, **kw):
+    if url == CNA_FEED:
+        return 200, CNA_RSS
+    return fake_http(url, **kw)
+
+
+def cna_down(url, **kw):
+    if url == CNA_FEED:
+        raise RuntimeError("HTTP 503")
+    return fake_http(url, **kw)
+
+
+class CnaTest(unittest.TestCase):
+    def run_main(self, http_fn=cna_http, previous=None):
+        with tempfile.TemporaryDirectory() as tmp:
+            out = os.path.join(tmp, "news", "headlines.json")
+            meta_path = os.path.join(tmp, "meta.json")
+            json.dump({"datasets": {}}, open(meta_path, "w"))
+            if previous:
+                os.makedirs(os.path.dirname(out))
+                json.dump(previous, open(out, "w", encoding="utf-8"))
+            os.makedirs(os.path.join(tmp, "holdings"))
+            json.dump({"top10": [{"code": "2383", "name": "台光電"}]},
+                      open(os.path.join(tmp, "holdings", "00981A.json"), "w", encoding="utf-8"))
+            cfg = dict(CNA_CFG, zh=CNA_CFG["zh"] + [{"id": "00981A", "q": "00981A", "symbols": ["00981A"],
+                                                       "match": ["00981a"]}])
+            json.dump({"news": cfg}, open(os.path.join(tmp, "config.json"), "w", encoding="utf-8"))
+            with mock.patch.object(news, "http", http_fn), mock.patch.object(news, "NOW", NOW), \
+                    mock.patch.object(news, "OUT_JSON", out), \
+                    mock.patch.object(news, "OUT_FED", os.path.join(tmp, "news", "fed.json")), \
+                    mock.patch.object(news, "OUT_MD", os.path.join(tmp, "news", "headlines.md")), \
+                    mock.patch.object(news, "META", meta_path), mock.patch.object(news, "ROOT", tmp), \
+                    mock.patch.object(news, "DATA", tmp), mock.patch.object(news, "fetch_page", fake_page), \
+                    mock.patch.object(news.time, "sleep", lambda s: None):
+                news.main()
+            md = open(os.path.join(tmp, "news", "headlines.md"), encoding="utf-8").read()
+            return json.load(open(out, encoding="utf-8")), json.load(open(meta_path, encoding="utf-8")), md
+
+    def cna_items(self, doc):
+        return [it for it in doc["items"] if it["source"] == "中央社"]
+
+    def test_parse_timezone_url_and_tier(self):
+        doc, meta, md = self.run_main()
+        mine = {it["title"]: it for it in self.cna_items(doc)}
+        self.assertEqual(len(mine), 5)
+        it = mine["台光電擴產 外資喊買"]  # 全形空白正規化
+        self.assertEqual((it["published_taipei"], it["published_utc"]), ("2026-10-21 17:10", "2026-10-21T09:10:00Z"))
+        self.assertEqual(it["url"], it["link"])
+        self.assertTrue(it["url"].startswith("https://www.cna.com.tw/news/afe/"))
+        self.assertEqual((it["tier"], it["rank"], it["lang"]), (2, "A", "zh"))
+        self.assertIn("cna_finance", it["queries"])
+        self.assertIn("經濟日報", it["also"])  # 測試資料裡經濟日報也有同標題，合併時以中央社官方 RSS 為準
+        self.assertTrue(doc["attribution"]["中央社"].startswith("資料出處：中央通訊社。"))
+        self.assertIn({"name": "中央社 RSS：finance", "ok": True, "count": 5}, doc["feeds"])
+        self.assertEqual(meta["datasets"]["news/cna"]["status"], "ok")
+        self.assertEqual(meta["datasets"]["news/cna"]["items"], 5)
+        self.assertIn("## 中央社（官方 RSS，資料出處：中央通訊社）", md)
+
+    def test_symbols_and_not_capped(self):
+        doc, *_ = self.run_main()
+        mine = {it["title"]: it for it in self.cna_items(doc)}
+        self.assertEqual(mine["台積電法說會釋出樂觀展望"]["symbols"], ["2330", "TSM"])
+        self.assertEqual(mine["台光電擴產 外資喊買"]["symbols"], ["2383"])
+        self.assertEqual(mine["00981A規模突破3千億元"]["symbols"], ["00981A"])
+        # 標題沒提到任何查詢的分類新聞，不受「每個查詢最多 1 則」限制
+        self.assertEqual(sum(1 for it in mine.values() if not it["title_match"]), 2)
+
+    def test_dedup_prefers_official_rss(self):
+        doc, *_ = self.run_main()
+        same = [it for it in doc["items"] if it["title"].startswith("台積電法說會")]
+        self.assertEqual(len(same), 1)  # Google News 的中央社那篇與官方 RSS 合併
+        self.assertEqual((same[0]["source"], same[0]["url"]), ("中央社", "https://www.cna.com.tw/news/afe/202610210001.aspx"))
+        self.assertIn("中央社 CNA", same[0]["also"])
+
+    def test_feed_failure_keeps_previous_and_marks_stale(self):
+        first, *_ = self.run_main()
+        doc, meta, _ = self.run_main(http_fn=cna_down, previous=first)
+        self.assertEqual(len(self.cna_items(doc)), 5)  # 上一次的中央社標題照常保留
+        self.assertIn({"name": "中央社 RSS：finance", "ok": False, "count": 0, "error": "HTTP 503"}, doc["feeds"])
+        self.assertEqual(meta["datasets"]["news/cna"]["status"], "stale")
+        self.assertEqual(doc["status"], "partial")
+        self.assertTrue(any(it["source"] == "Reuters" for it in doc["items"]))  # 其他 feed 不受影響
+
+
 if __name__ == "__main__":
     unittest.main()
