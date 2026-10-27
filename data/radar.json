@@ -1,6 +1,6 @@
 {
  "generated_from": "repo 日線（indicators.py）；綜合評分來自 TradingView",
- "tv_fetched_at_taipei": "2026-10-27 10:31",
+ "tv_fetched_at_taipei": "2026-10-27 13:33",
  "rules": {
   "trend_adx": 25,
   "range_adx": 20
@@ -582,14 +582,15 @@
    "rating": {
     "all": "賣出",
     "ma": "賣出",
-    "osc": "中立",
-    "all_value": -0.1853146853146853
+    "osc": "買進",
+    "all_value": -0.13986013986013987
    },
    "one_line": "趨勢不明，等方向確認",
    "structure": "趨勢不明（ADX 20.5，介於 20～25）",
    "position": "站上 2/10 條（EMA100、SMA100）；短均線全數失守、只剩部分長均線撐著，結構偏弱（樣本不足：EMA200、SMA200）",
    "contradictions": [
-    "綜合評分賣出，但 StochRSI 5.6、W%R -98.3 超賣 → 短線殺過頭，追空風險高"
+    "綜合評分賣出，但 StochRSI 5.6、W%R -98.3 超賣 → 短線殺過頭，追空風險高",
+    "均線評分賣出、振盪評分買進 → 趨勢與動能方向相反"
    ],
    "support": [
     {
@@ -688,7 +689,7 @@
    },
    "last_date": "2026-10-22",
    "rows": 256,
-   "rating_skipped": "收盤 27.68 ≠ 28.19（可能是盤中數字）"
+   "rating_skipped": "收盤 27.46 ≠ 28.19（可能是盤中數字）"
   },
   "00411A": {
    "code": "00411A",
@@ -746,7 +747,7 @@
    },
    "last_date": "2026-10-22",
    "rows": 39,
-   "rating_skipped": "收盤 9.99 ≠ 9.93（可能是盤中數字）；ATR 0.38 vs 0.23（TradingView 高低點資料有誤）"
+   "rating_skipped": "ATR 0.38 vs 0.23（TradingView 高低點資料有誤）"
   }
  }
 }

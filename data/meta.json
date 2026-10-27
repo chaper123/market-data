@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-10-27T02:31:33Z",
- "generated_at_taipei": "2026-10-27 10:31",
+ "generated_at_utc": "2026-10-27T05:33:46Z",
+ "generated_at_taipei": "2026-10-27 13:33",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -242,7 +242,7 @@
    "rows": 517,
    "first": "2024-10-28",
    "last": "2026-10-27",
-   "last_rate": 32.501
+   "last_rate": 32.51
   },
   "macro/SPX": {
    "status": "ok",
@@ -308,13 +308,12 @@
    "rows": 502,
    "first": "2024-10-28",
    "last": "2026-10-26",
-   "last_close": 102.00800323486328,
+   "last_close": 101.95999908447266,
    "prev_close": 101.80999755859375,
    "name": "美元指數",
-   "cutoff": "2026-10-25",
+   "cutoff": "2026-10-26",
    "cutoff_rule": "24h-v1：美東 17:10～18:00 收當天，其餘只收到前一天；不收週末",
-   "last_kept_from_previous": "2026-10-26",
-   "cross_check": "cnyes 無 2026-10-26 資料（cnyes 最後 2026-10-23）",
+   "cross_check": "2026-10-26 收盤 101.95999908447266 vs cnyes 101.959（差 +0.00%）",
    "cross_check_ok": true
   },
   "macro/GOLD": {
@@ -323,12 +322,11 @@
    "rows": 502,
    "first": "2024-10-28",
    "last": "2026-10-26",
-   "last_close": 4031.0,
+   "last_close": 4038.39990234375,
    "prev_close": 4007.89990234375,
    "name": "COMEX 黃金期貨（近月）",
-   "cutoff": "2026-10-25",
+   "cutoff": "2026-10-26",
    "cutoff_rule": "24h-v1：美東 17:10～18:00 收當天，其餘只收到前一天；不收週末",
-   "last_kept_from_previous": "2026-10-26",
    "cross_check": "無第二來源，未核對"
   },
   "macro/WTI": {
@@ -337,12 +335,11 @@
    "rows": 502,
    "first": "2024-10-28",
    "last": "2026-10-26",
-   "last_close": 101.25,
+   "last_close": 101.76000213623047,
    "prev_close": 103.2699966430664,
    "name": "WTI 原油期貨（近月）",
-   "cutoff": "2026-10-25",
+   "cutoff": "2026-10-26",
    "cutoff_rule": "24h-v1：美東 17:10～18:00 收當天，其餘只收到前一天；不收週末",
-   "last_kept_from_previous": "2026-10-26",
    "cross_check": "無第二來源，未核對"
   },
   "macro/TSM": {
@@ -371,7 +368,7 @@
    "last_score": 27.08,
    "score_now": 27.08,
    "rating_now": "fear",
-   "time_utc": "2026-10-26T23:59:53+00:00",
+   "time_utc": "2026-10-27T00:00:00+00:00",
    "components": 7,
    "cross_check": "無第二來源，未核對"
   },
