@@ -2,75 +2,75 @@
  "code": "00411A",
  "fund_code": "64YTW",
  "source": "https://www.ezmoney.com.tw/ETF/Fund/Info?fundCode=64YTW",
- "fetched_at_taipei": "2026-10-28 09:35",
- "date": "2026-10-22",
- "nav": 9.73,
- "units": 461076000.0,
- "net_assets": 4487884682.0,
+ "fetched_at_taipei": "2026-10-29 05:15",
+ "date": "2026-10-27",
+ "nav": 10.1,
+ "units": 460576000.0,
+ "net_assets": 4650563629.0,
  "top10": [
   {
    "code": "SPCX US",
    "name": "SPACE EXPLORATION TECHN-CL A",
-   "weight": 9.14
+   "weight": 9.02
   },
   {
    "code": "NVDA US",
    "name": "NVIDIA CORP(輝達公司)",
-   "weight": 7.75
+   "weight": 7.65
   },
   {
    "code": "PLTR US",
    "name": "PALANTIR TECHNOLOGIES INC-A",
-   "weight": 7.31
+   "weight": 7.12
   },
   {
    "code": "BE US",
    "name": "BLOOM ENERGY CORP- A",
-   "weight": 6.37
-  },
-  {
-   "code": "8996",
-   "name": "高力",
-   "weight": 6.05
-  },
-  {
-   "code": "3443",
-   "name": "創意",
-   "weight": 5.92
+   "weight": 6.15
   },
   {
    "code": "AMD US",
    "name": "ADVANCED MICRO DEVICES.amd us(超微半導體公司)",
-   "weight": 5.79
+   "weight": 6.14
+  },
+  {
+   "code": "3443",
+   "name": "創意",
+   "weight": 5.59
+  },
+  {
+   "code": "8996",
+   "name": "高力",
+   "weight": 5.48
   },
   {
    "code": "CRWD US",
    "name": "CROWDSTRIKE HOLDINGS INC - A",
-   "weight": 5.0
+   "weight": 5.41
   },
   {
    "code": "MSFT US",
    "name": "MICROSOFT CORP(微軟公司)",
-   "weight": 4.18
+   "weight": 4.09
   },
   {
-   "code": "GOOGL US",
-   "name": "ALPHABET INC-CL A(Alphabet公司)",
-   "weight": 3.87
+   "code": "LITE US",
+   "name": "LUMENTUM HOLDINGS INC",
+   "weight": 4.04
   }
  ],
  "changes": {
-  "compare_date": "2026-10-21",
+  "compare_date": "2026-10-22",
   "top10_in": [
    {
-    "code": "GOOGL US",
-    "name": "ALPHABET INC-CL A(Alphabet公司)"
+    "code": "LITE US",
+    "name": "LUMENTUM HOLDINGS INC"
    }
   ],
   "top10_out": [
    {
-    "code": "LITE US",
-    "name": "LUMENTUM HOLDINGS INC"
+    "code": "GOOGL US",
+    "name": "ALPHABET INC-CL A(Alphabet公司)"
    }
   ],
   "weight_moves": [],
@@ -82,127 +82,127 @@
    "code": "SPCX US",
    "name": "SPACE EXPLORATION TECHN-CL A",
    "shares": 86942.0,
-   "amount": 12584854.5,
-   "weight": 9.14,
+   "amount": 12917842.36,
+   "weight": 9.02,
    "currency": "USD"
   },
   {
    "code": "NVDA US",
    "name": "NVIDIA CORP(輝達公司)",
    "shares": 50262.0,
-   "amount": 10666099.02,
-   "weight": 7.75,
+   "amount": 10954100.28,
+   "weight": 7.65,
    "currency": "USD"
   },
   {
    "code": "PLTR US",
    "name": "PALANTIR TECHNOLOGIES INC-A",
    "shares": 51297.0,
-   "amount": 10063958.43,
-   "weight": 7.31,
+   "amount": 10194252.81,
+   "weight": 7.12,
    "currency": "USD"
   },
   {
    "code": "BE US",
    "name": "BLOOM ENERGY CORP- A",
    "shares": 40283.0,
-   "amount": 8772428.91,
-   "weight": 6.37,
+   "amount": 8801835.5,
+   "weight": 6.15,
    "currency": "USD"
-  },
-  {
-   "code": "8996",
-   "name": "高力",
-   "shares": 174000.0,
-   "amount": 271440000.0,
-   "weight": 6.05,
-   "currency": "NTD"
-  },
-  {
-   "code": "3443",
-   "name": "創意",
-   "shares": 35000.0,
-   "amount": 265475000.0,
-   "weight": 5.92,
-   "currency": "NTD"
   },
   {
    "code": "AMD US",
    "name": "ADVANCED MICRO DEVICES.amd us(超微半導體公司)",
    "shares": 15680.0,
-   "amount": 7964342.4,
-   "weight": 5.79,
+   "amount": 8784876.8,
+   "weight": 6.14,
    "currency": "USD"
+  },
+  {
+   "code": "3443",
+   "name": "創意",
+   "shares": 35000.0,
+   "amount": 260050000.0,
+   "weight": 5.59,
+   "currency": "NTD"
+  },
+  {
+   "code": "8996",
+   "name": "高力",
+   "shares": 174000.0,
+   "amount": 254910000.0,
+   "weight": 5.48,
+   "currency": "NTD"
   },
   {
    "code": "CRWD US",
    "name": "CROWDSTRIKE HOLDINGS INC - A",
    "shares": 28899.0,
-   "amount": 6876228.06,
-   "weight": 5.0,
+   "amount": 7745509.98,
+   "weight": 5.41,
    "currency": "USD"
   },
   {
    "code": "MSFT US",
    "name": "MICROSOFT CORP(微軟公司)",
    "shares": 11031.0,
-   "amount": 5748033.48,
-   "weight": 4.18,
-   "currency": "USD"
-  },
-  {
-   "code": "GOOGL US",
-   "name": "ALPHABET INC-CL A(Alphabet公司)",
-   "shares": 16430.0,
-   "amount": 5326934.6,
-   "weight": 3.87,
-   "currency": "USD"
-  },
-  {
-   "code": "NET US",
-   "name": "CLOUDFLARE INC - CLASS A",
-   "shares": 16708.0,
-   "amount": 5072715.88,
-   "weight": 3.69,
+   "amount": 5861101.23,
+   "weight": 4.09,
    "currency": "USD"
   },
   {
    "code": "LITE US",
    "name": "LUMENTUM HOLDINGS INC",
    "shares": 6677.0,
-   "amount": 5024709.58,
-   "weight": 3.65,
+   "amount": 5783483.86,
+   "weight": 4.04,
    "currency": "USD"
   },
   {
    "code": "NTSK US",
    "name": "NETSKOPE INC-CL A",
    "shares": 210458.0,
-   "amount": 4672167.6,
-   "weight": 3.39,
+   "amount": 5503476.7,
+   "weight": 3.84,
+   "currency": "USD"
+  },
+  {
+   "code": "NET US",
+   "name": "CLOUDFLARE INC - CLASS A",
+   "shares": 16708.0,
+   "amount": 5476882.4,
+   "weight": 3.82,
+   "currency": "USD"
+  },
+  {
+   "code": "GOOGL US",
+   "name": "ALPHABET INC-CL A(Alphabet公司)",
+   "shares": 16430.0,
+   "amount": 5267129.4,
+   "weight": 3.68,
    "currency": "USD"
   },
   {
    "code": "ANET US",
    "name": "ARISTA NETWORKS INC.anet us",
    "shares": 25228.0,
-   "amount": 4315753.96,
-   "weight": 3.14,
+   "amount": 4717636.0,
+   "weight": 3.29,
    "currency": "USD"
   },
   {
    "code": "SNOW US",
    "name": "SNOWFLAKE INC-CLASS A(Snowflake公司)",
    "shares": 11744.0,
-   "amount": 3687146.24,
-   "weight": 2.68,
+   "amount": 3962660.48,
+   "weight": 2.77,
    "currency": "USD"
   },
   {
    "code": "581A JP",
    "name": "GO INC",
    "shares": 179700.0,
-   "amount": 558867000.0,
+   "amount": 582228000.0,
    "weight": 2.58,
    "currency": "JPY"
   },
@@ -210,127 +210,126 @@
    "code": "ZS US",
    "name": "ZSCALER INC",
    "shares": 12320.0,
-   "amount": 2929203.2,
-   "weight": 2.13,
-   "currency": "USD"
-  },
-  {
-   "code": "NOW US",
-   "name": "SERVICENOW INC",
-   "shares": 17759.0,
-   "amount": 2788163.0,
-   "weight": 2.03,
+   "amount": 3205048.0,
+   "weight": 2.24,
    "currency": "USD"
   },
   {
    "code": "4062 JP",
    "name": "IBIDEN CO LTD",
    "shares": 49400.0,
-   "amount": 424741200.0,
+   "amount": 442228800.0,
    "weight": 1.96,
    "currency": "JPY"
+  },
+  {
+   "code": "NOW US",
+   "name": "SERVICENOW INC",
+   "shares": 17759.0,
+   "amount": 2748738.02,
+   "weight": 1.92,
+   "currency": "USD"
   },
   {
    "code": "3017",
    "name": "奇鋐",
    "shares": 19000.0,
-   "amount": 59755000.0,
-   "weight": 1.33,
+   "amount": 59470000.0,
+   "weight": 1.28,
    "currency": "NTD"
   },
   {
    "code": "AMZN US",
    "name": "AMAZON.COM INC(亞馬遜公司)",
    "shares": 7121.0,
-   "amount": 1782955.98,
-   "weight": 1.3,
+   "amount": 1802325.1,
+   "weight": 1.26,
+   "currency": "USD"
+  },
+  {
+   "code": "TSLA US",
+   "name": "TESLA INC(特斯拉公司)",
+   "shares": 3983.0,
+   "amount": 1622913.18,
+   "weight": 1.13,
    "currency": "USD"
   },
   {
    "code": "6669",
    "name": "緯穎",
    "shares": 26518.0,
-   "amount": 48793120.0,
-   "weight": 1.09,
+   "amount": 51710100.0,
+   "weight": 1.11,
    "currency": "NTD"
-  },
-  {
-   "code": "TSLA US",
-   "name": "TESLA INC(特斯拉公司)",
-   "shares": 3983.0,
-   "amount": 1491952.14,
-   "weight": 1.08,
-   "currency": "USD"
   },
   {
    "code": "MU US",
    "name": "MICRON TECHNOLOGY INC",
    "shares": 1505.0,
-   "amount": 1289017.45,
-   "weight": 0.94,
+   "amount": 1397783.8,
+   "weight": 0.98,
    "currency": "USD"
   },
   {
    "code": "NBIS US",
    "name": "NEBIUS GROUP NV",
    "shares": 6657.0,
-   "amount": 1059594.69,
-   "weight": 0.77,
+   "amount": 1134818.79,
+   "weight": 0.79,
    "currency": "USD"
   },
   {
    "code": "TWST US",
    "name": "TWIST BIOSCIENCE CORP",
    "shares": 4659.0,
-   "amount": 631154.73,
-   "weight": 0.46,
+   "amount": 744741.15,
+   "weight": 0.52,
    "currency": "USD"
   },
   {
    "code": "DELL US",
    "name": "DELL INC",
    "shares": 1116.0,
-   "amount": 505492.2,
-   "weight": 0.37,
+   "amount": 560187.36,
+   "weight": 0.39,
    "currency": "USD"
   },
   {
    "code": "3037",
    "name": "欣興",
    "shares": 14000.0,
-   "amount": 15190000.0,
-   "weight": 0.34,
+   "amount": 14840000.0,
+   "weight": 0.32,
    "currency": "NTD"
   },
   {
    "code": "IONQ US",
    "name": "IONQ INC",
    "shares": 12501.0,
-   "amount": 389531.16,
-   "weight": 0.28,
+   "amount": 411907.95,
+   "weight": 0.29,
    "currency": "USD"
   },
   {
    "code": "SMTC US",
    "name": "SEMTECH CORP",
    "shares": 2148.0,
-   "amount": 268757.76,
-   "weight": 0.2,
+   "amount": 310063.8,
+   "weight": 0.22,
    "currency": "USD"
   },
   {
    "code": "RKLB US",
    "name": "ROCKET LAB USA INC",
    "shares": 3559.0,
-   "amount": 182291.98,
-   "weight": 0.13,
+   "amount": 207525.29,
+   "weight": 0.14,
    "currency": "USD"
   }
  ],
  "futures": [],
  "other_assets": {
-  "股票": 4259313995.0,
-  "現金": 251971781.0,
-  "應收付證券款": -20645625.0
+  "股票": 4428186592.0,
+  "現金": 231120953.0
  }
 }
