@@ -609,13 +609,53 @@
    "items": 56,
    "feeds_ok": "2/2",
    "checked_at_taipei": "2026-10-28 08:20"
+  },
+  "longterm/tw_business_cycle": {
+   "status": "ok",
+   "source": "data.gov.tw 資料集 6099（國發會景氣指標及燈號 zip）＋國發會景氣指標查詢系統 JSON 核對",
+   "rows": 512,
+   "first": "1984-01",
+   "last": "2026-08",
+   "last_score": 41,
+   "last_light": "紅",
+   "last_release": "2026-09-29",
+   "next_release_est": "2026-10-30",
+   "zip_last": "2026-08",
+   "api_last": null,
+   "api_latest_date": null,
+   "cross_check": "只有一個來源，未核對",
+   "cross_check_ok": null,
+   "revised": "歷史值是最新修正值，不是初值；score_first 從 2026-08 起記錄",
+   "frequency": "月；次月 27～30 日下午發布（release_est 用次月 30 日估計）",
+   "warnings": [
+    "國發會查詢系統 JSON: https://index.ndc.gov.tw/n/zh_tw/data/eco -> HTTP 403"
+   ],
+   "checked_at_taipei": "2026-10-28 19:06"
+  },
+  "longterm/buffett_indicator": {
+   "status": "ok",
+   "source": "FRED NCBEILQ027S（Fed Z.1 非金融企業股權市值）÷ GDP（BEA 名目 GDP）",
+   "rows": 299,
+   "first": "1951Q4",
+   "last": "2026Q2",
+   "last_ratio_pct": 255.05,
+   "last_trend_pct": 147.5,
+   "last_dev_sigma": 1.67,
+   "last_dev_sigma_expanding": 1.67,
+   "last_release": "2026-09-11",
+   "gdp_last": "2026Q2",
+   "equity_last": "2026Q2",
+   "trend": "1951Q4～2026Q2 ln(比率) 對數線性：每年 +1.77%，殘差標準差 0.328",
+   "frequency": "季；Fed Z.1 約季末後 10 週發布（1996Q2 起 64～107 天，中位數 71）",
+   "revised": "股權市值與 GDP 都是最新修正值，不是當時公布的初值",
+   "checked_at_taipei": "2026-10-28 19:06"
   }
  },
  "errors": [],
  "us_cutoff_ny": "2026-10-27",
  "tw_cutoff_taipei": "2026-10-27",
  "summary": {
-  "ok": 46,
+  "ok": 48,
   "stale": 0,
   "fail": 0
  },
