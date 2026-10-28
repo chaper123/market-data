@@ -588,36 +588,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-10-27 12:59",
-   "items": 900,
+   "last": "2026-10-28 08:20",
+   "items": 1097,
    "by_tier": {
-    "4": 263,
-    "2": 625,
-    "1": 7,
-    "3": 5
+    "4": 271,
+    "2": 805,
+    "3": 9,
+    "1": 12
    },
    "feeds_ok": "36/36",
    "errors": 0,
-   "url_ok": 476,
-   "url_total": 476,
-   "time_suspect_detected": 38,
-   "time_fixed": 38,
+   "url_ok": 600,
+   "url_total": 600,
+   "time_suspect_detected": 26,
+   "time_fixed": 26,
    "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": null,
-   "checked_at_taipei": "2026-10-27 12:59",
+   "checked_at_taipei": "2026-10-28 08:20",
    "items": 0
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-10-27 11:57",
-   "items": 35,
+   "last": "2026-10-28 05:20",
+   "items": 56,
    "feeds_ok": "2/2",
-   "checked_at_taipei": "2026-10-27 12:59"
+   "checked_at_taipei": "2026-10-28 08:20"
   }
  },
  "errors": [
