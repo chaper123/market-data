@@ -95,7 +95,7 @@ CSV 欄位：`date,volume,open,high,low,close`（無表頭），與排程任務�
 | release_actual | 實際發布日（只有這支程式記錄到的月份；2026-08 起）：取查詢系統 JSON 的 `latest_date`（JSON 失敗時用 zip 內檔案日期） |
 | score_first | 初值（同上，只有記錄到的月份）：某個月第一次以「最新一期」出現時的分數；之後被回溯修正也保留初值。要每月跑一次才不會漏記 |
 
-- 來源：主要用 data.gov.tw「景氣指標及燈號」（資料集 6099，`https://data.gov.tw/api/v2/rest/dataset/6099` 查下載網址，目前是 ws.ndc.gov.tw 的 zip，約 70 KB，UTF-8 CSV；zip 內檔名是亂碼，用表頭「景氣對策信號綜合分數」找檔）。另外讀國發會景氣指標查詢系統 `https://index.ndc.gov.tw/n/json/data/eco/indicators`（先 GET `/n/zh_tw/data/eco` 拿 cookie 與 csrf-token，再帶 `X-CSRF-TOKEN` POST；SR0005＝分數、SR0030＝燈號代碼 1 藍～5 紅），逐月核對分數，並補 zip 還沒更新的月份（`added_from_api`）。2026-10-28 探測：兩者都到 2026-08（9/29 發布），重疊 512 個月分數完全一致。
+- 來源：主要用 data.gov.tw「景氣指標及燈號」（資料集 6099，`https://data.gov.tw/api/v2/rest/dataset/6099` 查下載網址，目前是 ws.ndc.gov.tw 的 zip，約 70 KB，UTF-8 CSV；zip 內檔名是亂碼，用表頭「景氣對策信號綜合分數」找檔）。另外讀國發會景氣指標查詢系統 `https://index.ndc.gov.tw/n/json/data/eco/indicators`（先 GET `/n/zh_tw/data/eco` 拿 cookie 與 csrf-token，再帶 `X-CSRF-TOKEN` POST；SR0005＝分數、SR0030＝燈號代碼 1 藍～5 紅），逐月核對分數，並補 zip 還沒更新的月份（`added_from_api`）。2026-10-28 探測：兩者都到 2026-08（9/29 發布），重疊 512 個月分數完全一致。但查詢系統對 GitHub 機房回 HTTP 403（本機可連，不嘗試繞過），所以在 Actions 上只用 zip（meta 的 `cross_check` 是「只有一個來源」、`warnings` 記 403），`release_actual` 用 zip 內檔案日期（2026-08 那期是 2026-09-29，與實際發布日相同）。
 - 更新：月資料，國發會約次月 27～30 日下午發布；每次發布都**回溯修正**歷史資料。新聞報導的初值與現值對照：2025-09 初值 35 → 現值 34、2026-02 初值 40 → 現值 41、2026-04 初值 39 → 現值 40，常見 ±1 分，有時跨過燈號門檻。
 - 使用限制：政府資料開放授權條款第 1 版（可免費利用、可商用，需標示出處「國家發展委員會」）。
 
