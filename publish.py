@@ -1,18 +1,19 @@
 """把 workflow 這次產生的檔案推回 main，不和其他 workflow 的 bot commit 衝突（只用標準庫與 git）。
 
-fetch.yml、news.yml、intraday.yml 都用這支 commit 與 push。做法：
+fetch.yml、news.yml、intraday.yml、longterm.yml 都用這支 commit 與 push。做法：
 1. 先把這次的輸出檔（--paths，扣掉 --exclude 與 data/meta.json）和 data/meta.json 讀進記憶體；
 2. 每次嘗試都從 origin/main 最新狀態開始（git fetch＋git reset --hard），把輸出檔寫回去；
 3. meta.json 依模式合併：
-   --meta-own 前綴…：只把這次的這些資料集蓋到 origin 的 meta 上（news.yml 用 news/）
-   --meta-all --keep 前綴…：用這次的整份 meta，但 --keep 前綴的資料集保留 origin 上的（fetch.yml 用，保留 news/*）
+   --meta-own 前綴…：只把這次的這些資料集蓋到 origin 的 meta 上（news.yml 用 news/，longterm.yml 用 longterm/）
+   --meta-all --keep 前綴…：用這次的整份 meta，但 --keep 前綴的資料集保留 origin 上的（fetch.yml 用，保留 news/*、longterm/*）
    合併後重算 summary 與 cross_check_conflicts；
 4. commit、push；被拒（別人剛推）就從第 2 步重來，最多 5 次。
 
 用法：
-  python publish.py --message "data ..." --paths data --exclude data/news data/tw/intraday.json --meta-all --keep news/
+  python publish.py --message "data ..." --paths data --exclude data/news data/tw/intraday.json data/longterm --meta-all --keep news/ longterm/
   python publish.py --message "news ..." --paths data/news --meta-own news/
   python publish.py --message "intraday ..." --paths data/tw/intraday.json
+  python publish.py --message "longterm ..." --paths data/longterm --meta-own longterm/
 """
 import argparse
 import json

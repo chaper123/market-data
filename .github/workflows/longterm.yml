@@ -1,0 +1,35 @@
+name: longterm-macro
+
+# 長週期總經資料（回測用）：國發會景氣對策信號、巴菲特指標（longterm.py → data/longterm/）。
+# 只手動觸發，不排程（要不要定期抓由使用者決定）。meta.json 只更新 longterm/*，不影響 fetch.yml 的略過判斷。
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: longterm-macro
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Fetch
+        run: python longterm.py
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # fetch、news、intraday、longterm 四個 workflow 都會推送：publish.py 每次從最新的 main 重新套用
+          # 自己的檔案與自己負責的 meta 資料集，被拒就重來，不會衝突或蓋掉別人的更新
+          python publish.py --message "longterm $(TZ=Asia/Taipei date +'%Y-%m-%d %H:%M')" --paths data/longterm --meta-own longterm/
