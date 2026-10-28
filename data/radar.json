@@ -1,6 +1,6 @@
 {
  "generated_from": "repo 日線（indicators.py）；綜合評分來自 TradingView",
- "tv_fetched_at_taipei": "2026-10-28 08:28",
+ "tv_fetched_at_taipei": "2026-10-28 09:35",
  "rules": {
   "trend_adx": 25,
   "range_adx": 20
@@ -589,17 +589,16 @@
    "close": 15.9,
    "change_pct": -0.18832391713746732,
    "rating": {
-    "all": "賣出",
-    "ma": "賣出",
-    "osc": "買進",
-    "all_value": -0.13986013986013987
+    "all": "無資料",
+    "ma": "無資料",
+    "osc": "無資料",
+    "all_value": null
    },
    "one_line": "趨勢不明，等方向確認",
    "structure": "趨勢不明（ADX 20.7，介於 20～25）",
    "position": "站上 2/10 條（EMA100、SMA100）；短均線全數失守、只剩部分長均線撐著，結構偏弱（樣本不足：EMA200、SMA200）",
    "contradictions": [
-    "綜合評分賣出，但 StochRSI 6.1、W%R -93.7 超賣 → 短線殺過頭，追空風險高",
-    "均線評分賣出、振盪評分買進 → 趨勢與動能方向相反"
+    "訊號一致"
    ],
    "support": [
     {
@@ -640,7 +639,7 @@
    },
    "last_date": "2026-10-27",
    "rows": 173,
-   "rating_skipped": null
+   "rating_skipped": "收盤 16.18 ≠ 15.90（可能是盤中數字）"
   },
   "00981A": {
    "code": "00981A",
@@ -648,16 +647,15 @@
    "close": 27.4,
    "change_pct": -2.802412202908844,
    "rating": {
-    "all": "賣出",
-    "ma": "強力賣出",
-    "osc": "賣出",
-    "all_value": -0.46969696969696967
+    "all": "無資料",
+    "ma": "無資料",
+    "osc": "無資料",
+    "all_value": null
    },
    "one_line": "趨勢不明，等方向確認",
    "structure": "趨勢不明（ADX 21.3，介於 20～25）",
    "position": "站上 2/12 條（EMA200、SMA200）；短均線全數失守、只剩部分長均線撐著，結構偏弱",
    "contradictions": [
-    "綜合評分賣出，但 StochRSI 1.5、W%R -96.5 超賣 → 短線殺過頭，追空風險高",
     "現價已跌破月 S1 28.80 -4.9% → 本月跌幅偏大，留意是否止穩"
    ],
    "support": [
@@ -699,7 +697,7 @@
    },
    "last_date": "2026-10-27",
    "rows": 257,
-   "rating_skipped": null
+   "rating_skipped": "收盤 28.37 ≠ 27.40（可能是盤中數字）"
   },
   "00411A": {
    "code": "00411A",
@@ -757,7 +755,7 @@
    },
    "last_date": "2026-10-27",
    "rows": 40,
-   "rating_skipped": "ATR 0.38 vs 0.23（TradingView 高低點資料有誤）"
+   "rating_skipped": "收盤 10.17 ≠ 9.91（可能是盤中數字）；ATR 0.37 vs 0.23（TradingView 高低點資料有誤）"
   }
  }
 }
