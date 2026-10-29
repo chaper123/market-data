@@ -214,7 +214,7 @@ def fetch_cycle(meta):
         m = {"status": "ok",
              "source": "data.gov.tw 資料集 6099（國發會景氣指標及燈號 zip）＋國發會景氣指標查詢系統 JSON 核對",
              "rows": len(rows), "first": rows[0][0], "last": last[0], "last_score": last[1], "last_light": last[2],
-             "last_initial_score": last[5], "last_first_seen_taipei": last[7] or None,
+             "last_initial_score": int(last[5]) if last[5] != "" else None, "last_first_seen_taipei": last[7] or None,
              "last_release": last[4] or None, "next_release_est": release_est(nxt),
              "zip_last": zip_last or None, "api_last": api_last or None, "api_latest_date": api_date,
              "cross_check": check, "cross_check_ok": check_ok,
@@ -370,7 +370,8 @@ def fetch_buffett(meta):
         m = {"status": "ok", "source": "FRED NCBEILQ027S（Fed Z.1 非金融企業股權市值）÷ GDP（BEA 名目 GDP）",
              "rows": len(rows), "first": rows[0][0], "last": last[0], "last_ratio_pct": last[3],
              "last_trend_pct": last[4], "last_dev_sigma": last[5], "last_dev_sigma_expanding": last[6],
-             "last_release": last[7], "last_initial_ratio_pct": last[11], "last_first_seen_taipei": last[13] or None,
+             "last_release": last[7], "last_initial_ratio_pct": float(last[11]) if last[11] != "" else None,
+             "last_first_seen_taipei": last[13] or None,
              "new_quarters": notes["new"], "gdp_last": max(gdp), "equity_last": max(equity),
              "trend": (f"{tr['first']}～{tr['last']} ln(比率) 對數線性：每年 {math.expm1(tr['b']) * 100:+.2f}%，"
                        f"殘差標準差 {tr['sd']:.3f}"),
