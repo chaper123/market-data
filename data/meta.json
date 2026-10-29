@@ -658,13 +658,23 @@
    "frequency": "季；Fed Z.1 約季末後 10 週發布（1996Q2 起 64～107 天，中位數 71）",
    "revised": "主欄位是最新修正值；initial_* 是該季第一次出現時的值（2026Q3 起）",
    "checked_at_taipei": "2026-10-29 16:38"
+  },
+  "intraday/tw": {
+   "status": "ok",
+   "source": "mis.twse.com.tw getStockInfo",
+   "last": "2026-10-30 02:02:20",
+   "slot": "盤外",
+   "session": "盤前",
+   "quotes": 4,
+   "no_price": [],
+   "errors": 0
   }
  },
  "errors": [],
  "us_cutoff_ny": "2026-10-28",
  "tw_cutoff_taipei": "2026-10-28",
  "summary": {
-  "ok": 48,
+  "ok": 49,
   "stale": 0,
   "fail": 0
  },
