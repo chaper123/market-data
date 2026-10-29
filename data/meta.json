@@ -613,28 +613,30 @@
   "longterm/tw_business_cycle": {
    "status": "ok",
    "source": "data.gov.tw 資料集 6099（國發會景氣指標及燈號 zip）＋國發會景氣指標查詢系統 JSON 核對",
-   "rows": 512,
+   "rows": 513,
    "first": "1984-01",
-   "last": "2026-08",
+   "last": "2026-09",
    "last_score": 41,
    "last_light": "紅",
-   "last_initial_score": "41",
-   "last_first_seen_taipei": "2026-10-28 19:06",
-   "last_release": "2026-09-29",
-   "next_release_est": "2026-10-30",
-   "zip_last": "2026-08",
+   "last_initial_score": 41,
+   "last_first_seen_taipei": "2026-10-29 16:38",
+   "last_release": "2026-10-29",
+   "next_release_est": "2026-11-30",
+   "zip_last": "2026-09",
    "api_last": null,
    "api_latest_date": null,
    "cross_check": "只有一個來源，未核對",
    "cross_check_ok": null,
-   "revisions_this_run": [],
-   "revisions_total": 0,
+   "revisions_this_run": [
+    "2026-08 41→40"
+   ],
+   "revisions_total": 1,
    "revised": "score／light 是最新修正值；initial_* 從 2026-08 起記錄，修正紀錄在 tw_business_cycle_revisions.csv",
    "frequency": "月；次月 27～30 日下午發布（release_est 用次月 30 日估計）",
    "warnings": [
     "國發會查詢系統 JSON: https://index.ndc.gov.tw/n/zh_tw/data/eco -> HTTP 403"
    ],
-   "checked_at_taipei": "2026-10-29 16:25"
+   "checked_at_taipei": "2026-10-29 16:38"
   },
   "longterm/buffett_indicator": {
    "status": "ok",
@@ -647,7 +649,7 @@
    "last_dev_sigma": 1.67,
    "last_dev_sigma_expanding": 1.67,
    "last_release": "2026-09-11",
-   "last_initial_ratio_pct": "",
+   "last_initial_ratio_pct": null,
    "last_first_seen_taipei": null,
    "new_quarters": [],
    "gdp_last": "2026Q2",
@@ -655,7 +657,7 @@
    "trend": "1951Q4～2026Q2 ln(比率) 對數線性：每年 +1.77%，殘差標準差 0.328",
    "frequency": "季；Fed Z.1 約季末後 10 週發布（1996Q2 起 64～107 天，中位數 71）",
    "revised": "主欄位是最新修正值；initial_* 是該季第一次出現時的值（2026Q3 起）",
-   "checked_at_taipei": "2026-10-29 16:25"
+   "checked_at_taipei": "2026-10-29 16:38"
   }
  },
  "errors": [],
