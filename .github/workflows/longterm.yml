@@ -1,8 +1,13 @@
 name: longterm-macro
 
 # 長週期總經資料（回測用）：國發會景氣對策信號、巴菲特指標（longterm.py → data/longterm/）。
-# 只手動觸發，不排程（要不要定期抓由使用者決定）。meta.json 只更新 longterm/*，不影響 fetch.yml 的略過判斷。
+# 排程只抓資料，不接進晨報。meta.json 只更新 longterm/*，不影響 fetch.yml 的略過判斷。
 on:
+  schedule:
+    # 景氣燈號：每月 27 日～次月 3 日台北 17:40（國發會次月 27～30 日下午發布；data.gov.tw 的 zip 通常當天更新）
+    - cron: "40 9 27-31,1-3 * *"
+    # 巴菲特指標：每週六台北 09:40（Fed Z.1 多在週四或週五美東中午發布）
+    - cron: "40 1 * * 6"
   workflow_dispatch: {}
 
 permissions:
@@ -24,7 +29,18 @@ jobs:
           python-version: "3.12"
 
       - name: Fetch
-        run: python longterm.py
+        id: fetch
+        # 失敗也先推送 meta（標 stale／fail），最後一步再讓 workflow 失敗、寄通知
+        continue-on-error: true
+        env:
+          SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          # 排程只跑自己那一份，已經有該有的月份／季度就略過（不寫入、不 commit）；手動觸發兩份都重抓
+          case "$SCHEDULE" in
+            "40 9 27-31,1-3 * *") python longterm.py --only cycle --skip-if-current ;;
+            "40 1 * * 6") python longterm.py --only buffett --skip-if-current ;;
+            *) python longterm.py ;;
+          esac
 
       - name: Commit
         run: |
@@ -33,3 +49,9 @@ jobs:
           # fetch、news、intraday、longterm 四個 workflow 都會推送：publish.py 每次從最新的 main 重新套用
           # 自己的檔案與自己負責的 meta 資料集，被拒就重來，不會衝突或蓋掉別人的更新
           python publish.py --message "longterm $(TZ=Asia/Taipei date +'%Y-%m-%d %H:%M')" --paths data/longterm --meta-own longterm/
+
+      - name: Fail if fetch failed
+        if: steps.fetch.outcome == 'failure'
+        run: |
+          echo "longterm.py 有資料集失敗（meta 已標 stale／fail），見 Fetch 步驟的輸出" >&2
+          exit 1

@@ -14,7 +14,7 @@ GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所�
 另外兩個只由 cron-job.org（或手動）觸發的 workflow，不排程，也不影響上面的略過判斷（news 只更新 meta.json 的 news/*，intraday 不動 meta.json）：
 - `news-headlines`（`news.yml` → `news.py`）：台北 08:20（週一～五），更新 `data/news/`，給 08:40 的「新聞與社群晨報」排程讀。
 - `intraday-snapshot`（`intraday.yml` → `intraday.py`）：台北 10:05（週一～五），更新 `data/tw/intraday.json`，給 10:17 的台股晨報讀。
-- `longterm-macro`（`longterm.yml` → `longterm.py`）：**只手動觸發**（cron-job.org 也沒設），更新 `data/longterm/`（回測用的長週期資料），meta 只更新 longterm/*。要不要定期抓由使用者決定。
+- `longterm-macro`（`longterm.yml` → `longterm.py`）：GitHub 排程（2026-10-29 使用者同意加入，cron-job.org 沒設）：景氣燈號每月 27 日～次月 3 日台北 17:40、巴菲特指標每週六台北 09:40；已經有該有的月份／季度就略過、不 commit。也可手動觸發（兩份都重抓）。更新 `data/longterm/`（回測用的長週期資料），meta 只更新 longterm/*。只抓資料，不接進晨報。
 
 四個 workflow 都用 `publish.py` 推送：每次從最新的 main 重新套用自己的檔案與自己負責的 meta 資料集（fetch 負責 news/*、longterm/* 以外的全部，news 只負責 news/*，longterm 只負責 longterm/*），被拒就重來（最多 5 次），不會衝突，也不會蓋掉別人的更新。
 
@@ -47,8 +47,9 @@ GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所�
 | `data/news/headlines.json` | 新聞標題（最近 72 小時），格式見下方「新聞標題格式」。約 0.7 MB，讀取時請用程式篩選 | Google News RSS（每個查詢跑兩次：限定白名單網站與不限定）、中央社官方 RSS（財經、科技）、federalreserve.gov RSS；`news.py`，查詢詞、來源等級與主題詞在 `config.json` 的 `news` |
 | `data/news/fed.json` | Fed 新聞稿與演講（最近 7 天）：`items[]` 的 `date`（台北日期）、`title`、`link`、`type`（press／speech）、`published_taipei`、`published_utc` | federalreserve.gov RSS |
 | `data/news/headlines.md` | 精簡版給人看：每個查詢列標題提到它的 T1～T2 新聞（最多 15 則）與 T3～T4 3 則 | 同上 |
-| `data/longterm/tw_business_cycle.csv` | 國發會景氣對策信號（月，1984-01 起）：month,score,light,release_est,release_actual,score_first，說明見下方「長週期資料」 | data.gov.tw 資料集 6099（國發會 zip）/ 國發會景氣指標查詢系統 JSON |
-| `data/longterm/buffett_indicator.csv` | 巴菲特指標（季，1951Q4 起）：quarter,equities_bn,gdp_bn,ratio_pct,trend_pct,dev_sigma,dev_sigma_expanding,release,release_basis，說明見下方「長週期資料」 | FRED NCBEILQ027S ÷ GDP；發布日取 Fed Z.1 Release Dates |
+| `data/longterm/tw_business_cycle.csv` | 國發會景氣對策信號（月，1984-01 起）：month,score,light,release_est,release_actual,initial_score,initial_light,first_seen_taipei，說明見下方「長週期資料」 | data.gov.tw 資料集 6099（國發會 zip）/ 國發會景氣指標查詢系統 JSON |
+| `data/longterm/tw_business_cycle_revisions.csv` | 景氣燈號修正紀錄（逐次累加）：seen_taipei,month,old_score,new_score,old_light,new_light,release | 同上 |
+| `data/longterm/buffett_indicator.csv` | 巴菲特指標（季，1951Q4 起）：quarter,equities_bn,gdp_bn,ratio_pct,trend_pct,dev_sigma,dev_sigma_expanding,release,release_basis,initial_equities_bn,initial_gdp_bn,initial_ratio_pct,initial_dev_sigma_expanding,first_seen_taipei，說明見下方「長週期資料」 | FRED NCBEILQ027S ÷ GDP；發布日取 Fed Z.1 Release Dates |
 | `data/meta.json` | 每個資料集的狀態、列數、最後日期、雙來源核對結果、錯誤 | — |
 
 CSV 欄位：`date,volume,open,high,low,close`（無表頭），與排程任務的 `monitor.py`、`monitor_us.py` 相同。
@@ -82,7 +83,7 @@ CSV 欄位：`date,volume,open,high,low,close`（無表頭），與排程任務�
 
 ### 長週期資料（data/longterm/，回測用）
 
-`longterm.py` 產生，只由 `longterm.yml` 手動觸發。兩份都是無表頭 CSV。**數值都是最新修正值，不是當時公布的初值**，回測會有些微前視偏誤；交易訊號請從「發布日的下一個交易日」起才使用。meta：`longterm/tw_business_cycle`、`longterm/buffett_indicator`（`status`、`rows`、`first`、`last`、最新一期數值、`last_release`、`checked_at_taipei` 等）。
+`longterm.py` 產生，由 `longterm.yml` 排程或手動觸發（排程用 `--only cycle|buffett --skip-if-current`：CSV 已經有今天該有的月份／季度就不抓、不寫；景氣燈號 27 日起應有上個月、之前應有上上個月，巴菲特指標應有季末後滿 64 天的最近一季）。都是無表頭 CSV。**主欄位是最新修正值，不是當時公布的初值**；新月份（新季度）第一次出現時另存初值欄，之後修正不覆蓋。回測用主欄位會有些微前視偏誤；交易訊號請從「發布日的下一個交易日」起才使用。meta：`longterm/tw_business_cycle`、`longterm/buffett_indicator`（`status`、`rows`、`first`、`last`、最新一期數值、`last_release`、`checked_at_taipei` 等）。
 
 **國發會景氣對策信號** `tw_business_cycle.csv`
 
@@ -92,11 +93,14 @@ CSV 欄位：`date,volume,open,high,low,close`（無表頭），與排程任務�
 | score | 綜合判斷分數 9～45（最新修正值） |
 | light | 燈號：紅 45～38、黃紅 37～32、綠 31～23、黃藍 22～17、藍 16～9（由分數換算；與來源的燈號文字、代碼逐月核對，不一致記在 meta 的 `light_mismatch`） |
 | release_est | 估計發布日：次月 30 日（2 月用月底），遇週末順延，國定假日沒考慮。2025-10～2026-09 實際發布都在次月 27～30 日（例：2026-02 資料 3/30、2026-04 資料 5/28、2026-07 資料 8/27、2026-08 資料 9/29），所以這是偏保守、幾乎不會早於實際的估計。歷史實際發布日在資料裡查不到 |
-| release_actual | 實際發布日（只有這支程式記錄到的月份；2026-08 起）：取查詢系統 JSON 的 `latest_date`（JSON 失敗時用 zip 內檔案日期） |
-| score_first | 初值（同上，只有記錄到的月份）：某個月第一次以「最新一期」出現時的分數；之後被回溯修正也保留初值。要每月跑一次才不會漏記 |
+| release_actual | 實際發布日（只有記錄到初值的月份；2026-08 起）：取查詢系統 JSON 的 `latest_date`（JSON 失敗時用 zip 內檔案日期，可能比實際晚一兩天） |
+| initial_score、initial_light | 初值：某個月第一次以「最新一期」出現時的分數與燈號，之後被回溯修正也不動（2026-08 起）。若中間漏了一期、第一次看到時已被修正過，初值留空（meta 的 `missed_initial`） |
+| first_seen_taipei | 第一次看到這個月份的台北時間（第一次建檔的歷史月份留空） |
+
+修正紀錄 `tw_business_cycle_revisions.csv`：已有的月份分數改變時加一列 seen_taipei,month,old_score,new_score,old_light,new_light,release（release＝帶來修正的那次發布日），主檔的 score／light 改成新值。meta 有 `revisions_this_run`（例 `2026-08 41→40`）、`revisions_total`、`last_initial_score`、`last_first_seen_taipei`。
 
 - 來源：主要用 data.gov.tw「景氣指標及燈號」（資料集 6099，`https://data.gov.tw/api/v2/rest/dataset/6099` 查下載網址，目前是 ws.ndc.gov.tw 的 zip，約 70 KB，UTF-8 CSV；zip 內檔名是亂碼，用表頭「景氣對策信號綜合分數」找檔）。另外讀國發會景氣指標查詢系統 `https://index.ndc.gov.tw/n/json/data/eco/indicators`（先 GET `/n/zh_tw/data/eco` 拿 cookie 與 csrf-token，再帶 `X-CSRF-TOKEN` POST；SR0005＝分數、SR0030＝燈號代碼 1 藍～5 紅），逐月核對分數，並補 zip 還沒更新的月份（`added_from_api`）。2026-10-28 探測：兩者都到 2026-08（9/29 發布），重疊 512 個月分數完全一致。但查詢系統對 GitHub 機房回 HTTP 403（本機可連，不嘗試繞過），所以在 Actions 上只用 zip（meta 的 `cross_check` 是「只有一個來源」、`warnings` 記 403），`release_actual` 用 zip 內檔案日期（2026-08 那期是 2026-09-29，與實際發布日相同）。
-- 更新：月資料，國發會約次月 27～30 日下午發布；每次發布都**回溯修正**歷史資料。新聞報導的初值與現值對照：2025-09 初值 35 → 現值 34、2026-02 初值 40 → 現值 41、2026-04 初值 39 → 現值 40，常見 ±1 分，有時跨過燈號門檻。
+- 更新：月資料，國發會約次月 27～30 日下午發布；每次發布都**回溯修正**歷史資料（2026-09 那期 10/29 發布，同時把 2026-08 從 41 改成 40）。新聞報導的初值與現值對照：2025-09 初值 35 → 現值 34、2026-02 初值 40 → 現值 41、2026-04 初值 39 → 現值 40，常見 ±1 分，有時跨過燈號門檻。
 - 使用限制：政府資料開放授權條款第 1 版（可免費利用、可商用，需標示出處「國家發展委員會」）。
 
 **巴菲特指標** `buffett_indicator.csv`
@@ -112,10 +116,12 @@ CSV 欄位：`date,volume,open,high,low,close`（無表頭），與排程任務�
 | dev_sigma_expanding | 只用到該季為止的資料估趨勢與標準差（回測用；前 40 季留空） |
 | release | 這一季資料的發布日：1996Q2 起是 Fed Z.1 實際首次發布日，更早的用季末＋90 天估計 |
 | release_basis | `z1`（實際）或 `est`（估計） |
+| initial_equities_bn、initial_gdp_bn、initial_ratio_pct、initial_dev_sigma_expanding | 這一季第一次出現時的值（2026Q3 起；之前的季度留空，2026Q2 第一次抓到時 GDP 已修正過，不算初值）。GDP 在 Z.1 發布後還會有第三次估計，所以這是「第一次看到」的值，不一定是 BEA 的初估 |
+| first_seen_taipei | 第一次看到這一季的台北時間 |
 
 - 來源：FRED `https://fred.stlouisfed.org/graph/fredgraph.csv?id=NCBEILQ027S` 與 `?id=GDP`（免金鑰的 CSV 下載；FRED 會擋瀏覽器 User-Agent，程式用 `market-data/1.0` 的 UA）。發布日：`https://www.federalreserve.gov/releases/z1/release-dates.htm`（每一列有「2026:Q2」與該次發布資料夾日期，目前這期的連結是 current，用頁尾 Last Update）。Wilshire 5000 已從 FRED 下架，不用。
 - 更新與落後：季資料，受 Z.1 限制，約季末後 10 週發布（1996Q2 起 121 季：64～107 天，中位數 71 天；2025Q3 延到 2026-01-09 才發布）。GDP 初估約季末後 30 天就有，所以有時 GDP 會比股權市值多一季（meta 的 `gdp_last`、`equity_last`），比率只算兩者都有的季。2026-10-28 探測：最新 2026Q2（2026-09-11 Z.1），下一次約 2026 年 12 月。
-- 修正：Z.1 與 GDP 每次發布都會修正過去數季，這裡是最新值；要當時的值得用 ALFRED（需要 API 金鑰，未做）。
+- 修正：Z.1 與 GDP 每次發布都會修正過去數季，主欄位是最新值；2026Q3 起有 initial_* 欄。更早季度當時的值要用 ALFRED（需要 API 金鑰，未做）。
 - 使用限制：兩個序列在 FRED 標示為 public domain（citation requested）：需註明「Board of Governors of the Federal Reserve System (US)／U.S. Bureau of Economic Analysis, retrieved from FRED, Federal Reserve Bank of St. Louis」，不得暗示 FRED 或 Fed 背書。
 
 ## 測試
@@ -124,7 +130,7 @@ CSV 欄位：`date,volume,open,high,low,close`（無表頭），與排程任務�
 python -m unittest discover -s tests
 ```
 
-用假資料測多數決、單一來源補核對、24 小時品項的收盤截止與週末列、略過判斷、新聞整理、盤中快照、長週期資料的解析與計算，不連網；`test_publish.py` 用暫存的 git repo 模擬三個 workflow 同時推送。
+用假資料測多數決、單一來源補核對、24 小時品項的收盤截止與週末列、略過判斷、新聞整理、盤中快照、長週期資料的解析與計算（初值寫入、修正不覆蓋初值、重跑不重複寫入、排程略過），不連網；`test_publish.py` 用暫存的 git repo 模擬三個 workflow 同時推送。
 
 ## 讀取方式
 
