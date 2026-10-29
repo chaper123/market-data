@@ -1,11 +1,11 @@
 {
- "generated_at_taipei": "2026-10-28 08:20",
+ "generated_at_taipei": "2026-10-29 08:20",
  "days": 7,
  "feeds": [
   {
    "name": "Fed 新聞稿",
    "ok": true,
-   "count": 0
+   "count": 1
   },
   {
    "name": "Fed 演講",
@@ -13,5 +13,14 @@
    "count": 0
   }
  ],
- "items": []
+ "items": [
+  {
+   "date": "2026-10-29",
+   "title": "Federal Reserve issues FOMC statement",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+   "type": "press",
+   "published_taipei": "2026-10-29 02:00",
+   "published_utc": "2026-10-28T18:00:00Z"
+  }
+ ]
 }

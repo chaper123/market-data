@@ -1,169 +1,173 @@
-# 新聞標題（2026-10-28 08:20 台北）
+# 新聞標題（2026-10-29 08:20 台北）
 
-最近 72 小時，共 1097 則（官方 12、主要媒體 805、第一手 9、其他 271）。T1 官方、T2A 通訊社與一線財經媒體、T2B 其他主要財經媒體、T3 第一手發言、T4 其他。時間為台北時間。
+最近 72 小時，共 1298 則（官方 15、主要媒體 998、第一手 9、其他 276）。T1 官方、T2A 通訊社與一線財經媒體、T2B 其他主要財經媒體、T3 第一手發言、T4 其他。時間為台北時間。
 
 ## Fed（官方）
 
-- 期間內沒有新發布
+- 2026-10-29 02:00 [press] Federal Reserve issues FOMC statement
 
 ## 中央社（官方 RSS，資料出處：中央通訊社）
 
-- 2026-10-28 05:20 投資人對AI類股重燃熱情 美股收紅
-- 2026-10-28 04:55 重啟外交化解中東衝突 國際油價下滑
-- 2026-10-28 01:14 市場權衡歐洲企業財報 歐股收盤走勢不一
-- 2026-10-27 23:02 賓士下修全年獲利預估至零成長 又一家德車廠受中國市場拖累
-- 2026-10-27 22:32 M6晶片加持 蘋果新MacBook Pro與iMac搶換機潮
-- 2026-10-27 22:06 今彩539第115260期 頭獎2注中獎
-- 2026-10-27 22:04 大樂透第115100期 頭獎槓龜
-- 2026-10-27 21:57 中國熱賣加持 iPhone 18 Pro銷量高於17 Pro
-- 2026-10-27 21:48 保險業前9月賺3977億元 壽險外匯避險比率40.95%
-- 2026-10-27 21:10 立院關注夜間供電 台電：今年7至10月備轉全數綠燈
-- 2026-10-27 21:04 鴻海科技日30日登場 鎖定AI智造機器人電動車
-- 2026-10-27 20:56 保時捷排除赴美設廠 不跟進奧迪布局
-- 2026-10-27 20:51 大樂透第115100期開獎
-- 2026-10-27 20:43 今彩539第115260期開獎
-- 2026-10-27 20:35 經部赴立院報告能源轉型 籲各界支持中油台電預算撥補
-- 2026-10-27 20:25 晶豪科第3季獲利創新高 每股純益36.79元
-- 2026-10-27 20:23 魏應交重返台北101 成美創投接手伊藤忠17.274%股權
-- 2026-10-27 20:02 房貸餘額破12兆歷史新高 建築貸款卻寫10年最大減幅
-- 2026-10-27 19:55 美銀等4投行提供2兆多元融資 助Anthropic買博通晶片
-- 2026-10-27 19:53 精測第3季獲利再創高 連3季賺逾1個資本額
-- …另有 36 則（見 headlines.json）
+- 2026-10-29 06:19 中東外交斡旋拉鋸 國際油價走揚
+- 2026-10-29 05:19 聯準會維持利率不變 美股收高
+- 2026-10-29 04:57 美期中選舉前Fed利率按兵不動 華許否認政治因素
+- 2026-10-29 02:07 美期中選舉前 聯準會利率按兵不動
+- 2026-10-29 01:16 市場靜待聯準會利率決策 歐股多收高
+- 2026-10-29 01:04 中東戰事加劇市場疑慮 歐洲天然氣價格升破100歐元
+- 2026-10-28 23:01 楊金龍：台灣有實力推主權基金 審慎規劃就無時機問題
+- 2026-10-28 21:53 投資人關注Fed決策和企業財報 美股開盤多上漲
+- 2026-10-28 21:50 台郡爆3308萬元鉅額違約交割 今年上市公司第14起
+- 2026-10-28 21:39 鴻勁：高階溫控和CPO設備明年貢獻營收 毛利率看升
+- 2026-10-28 21:26 法媒：法國財政陷困境又遇社會抗爭 經濟成長添變數
+- 2026-10-28 21:24 中選會候選人個資疑洩漏 資安署：已協助安全性檢測
+- 2026-10-28 21:17 谷歌蘋果涉App市場不公平行為 遭韓國開罰逾15億元
+- 2026-10-28 21:10 中光電第3季轉盈 估第4季兩大產品出貨減
+- 2026-10-28 20:55 新加坡科技創新週登場 台灣新創拓展投資合作機會
+- 2026-10-28 20:45 今彩539第115261期開獎
+- 2026-10-28 20:36 台新新光金及子公司評等改善 新壽展望調升為「穩定」
+- 2026-10-28 19:52 義美企業金鞍砸逾10億建新廠 布局儲冰空調與無人載具
+- 2026-10-28 19:29 振樺電第3季每股賺3.47元 零組件成本墊高壓抑獲利
+- 2026-10-28 19:12 聚恆科技完成10.5億聯貸案 盼深化綠能市場
+- …另有 54 則（見 headlines.json）
 
 ## NVDA（Nvidia）
 
-- 2026-10-28 08:00 T2A｜CNBC｜Indian investors rush to Nvidia, SpaceX, Apple as local trading apps roll out access to U.S. stocks
-- 2026-10-28 05:40 T2B｜Yahoo Finance｜Nvidia’s New $3 Billion AI Bet Is on One of Its Own Customers
-- 2026-10-28 05:39 T2B｜Yahoo Finance｜Jensen Huang's Late-Night Calls With President Trump Come as Nvidia's China AI Chip Shipments Fall 44% in the First Half of 2026. Here's Why His Access Matters.
-- 2026-10-28 04:38 T2B｜Barron's｜Broadcom, Nvidia, Boeing, GM, UPS, JetBlue, and More Stocks That Explain Today’s Market
-- 2026-10-28 04:01 T2B｜Yahoo Finance｜Nvidia Stock Is Down 12% From Its High. Here's What History Says Happens Next.
-- 2026-10-28 03:05 T2B｜Yahoo Finance｜Nvidia Plays Kingmaker Again. Why the Meta Deal Is a Winning Move.
-- 2026-10-28 02:59 T2B｜Yahoo Finance｜Nvidia Makes Whopping $3 Billion Bet on Meta
-- 2026-10-28 02:08 T2B｜Yahoo Finance｜Nvidia Just Announced Plans to Pour Billions Into Meta's Muse
-- 2026-10-28 01:43 T2B｜Yahoo Finance｜Oracle Adds Nvidia Vera CPU, Intel Diamond Rapids, Cerebras AI Inference to Cloud Infrastructure
-- 2026-10-28 01:40 T2B｜Yahoo Finance｜The AI economy, Apple's iPhone Duo issues, and Meta partners with Nvidia
-- 2026-10-28 01:06 T2B｜Yahoo Finance｜Meta's deal with AMD, Nvidia, Broadcom: Is circular financing a risk?
-- 2026-10-28 00:50 T2A｜Reuters｜Oracle expands chip supply deal with Nvidia, adds Google and Cerebras offerings
-- 2026-10-28 00:26 T2B｜Yahoo Finance｜How Are Schneider Electric, Nscale and Start Campus Using NVIDIA Digital Twin Technology to Develop AI Data Centers?
-- 2026-10-28 00:04 T1｜NVIDIA Newsroom｜NVIDIA and Oracle Expand NVIDIA Vera Rubin to Multi-Gigawatt Scale and Bring NVIDIA Vera CPU to Oracle Cloud Infrastructure
-- 2026-10-28 00:00 T2B｜Yahoo Finance｜Oracle, in effort to reduce reliance on Nvidia, adds AI chips from Google, Cerebras, and SambaNova
-- 2026-10-28 08:06 T4｜MIXED News｜Huang puts Nvidia software licensing at about $2,000 per GPU a year, report says
-- 2026-10-28 07:59 T4｜The Information｜OpenAI, a Longtime Nvidia Customer, Plans to Buy Google’s AI Chips
-- 2026-10-28 07:47 T4｜MarketForces Africa｜NVDAB Rises As Investors React To Nvidia's Meta AI Investment
-- …另有 119 則（見 headlines.json）
+- 2026-10-29 07:00 T2A｜Bloomberg｜FuriosaAI Quadruples Valuation to $2.9 Billion in Nvidia Chase
+- 2026-10-29 05:06 T1｜NVIDIA Newsroom｜NVIDIA Sets Conference Call for Third-Quarter Financial Results
+- 2026-10-29 04:41 T2A｜Reuters｜EXCLUSIVE: US DOJ is inquiring about Nvidia's purchase of Hugging Face, sources say
+- 2026-10-29 04:31 T2B｜Yahoo Finance｜IREN Just Borrowed $363M Against Its Nvidia GPUs. Here’s Why
+- 2026-10-29 04:20 T2B｜Yahoo Finance｜Meta’s Raising $97.5 Billion. Nvidia and AMD Are Buying In.
+- 2026-10-29 04:13 T2A｜CNBC｜Nvidia's $12.9 billion Hugging Face deal draws DOJ scrutiny
+- 2026-10-29 04:05 T2B｜Yahoo Finance｜NVIDIA (NVDA) Deepens AI Infrastructure Push With New Digital Twin And Agent Deals
+- 2026-10-29 03:31 T2A｜Bloomberg｜DOJ Inquires About Nvidia’s Hugging Face Deal, Reuters Says
+- 2026-10-29 03:16 T2B｜Yahoo Finance｜OpenAI Plans to Buy Google's AI Chips as It Looks Beyond Nvidia: Report
+- 2026-10-29 02:03 T2B｜Yahoo Finance｜Prediction: This Will Be Nvidia's Stock Price by the End of 2027
+- 2026-10-29 01:46 T2B｜Barron's｜Nvidia Stock Faces a Test From Its Biggest AI Chip Rival
+- 2026-10-28 23:43 T2B｜Yahoo Finance｜Nvidia Faces Fresh Challenge as OpenAI Expands AI Bets
+- 2026-10-28 23:17 T2B｜Yahoo Finance｜What to Expect From NVIDIA's Next Quarterly Earnings Report
+- 2026-10-28 23:09 T2B｜Yahoo Finance｜NVIDIA (NVDA) Could Be 22% Undervalued On Oracle Meta And Schneider Deals
+- 2026-10-28 22:45 T2B｜Yahoo Finance｜Nvidia Has The Best Chance to Breach $6 Trillion First So I Buy
+- 2026-10-29 07:03 T4｜TheStreet｜Nvidia’s $3 billion Meta bet reveals a 30-fold shift
+- 2026-10-29 06:29 T4｜Eurasia Business News｜AI and Robotics News : Anthropic IPO, Humanoid Robots and Nvidia’s European Push
+- 2026-10-29 06:11 T4｜R&D World｜SpaceX commits to $40B NVIDIA GPU lease for terrestrial AI buildout
+- …另有 135 則（見 headlines.json）
 
 ## TSLA（Tesla）
 
-- 2026-10-28 05:48 T2B｜Axios｜Tesla's Robotaxi footprint grows in Houston
-- 2026-10-28 05:30 T2B｜Yahoo Finance｜Scott Galloway Warns Tesla Is the ‘Patient’ and SpaceX Its ‘Organ Donor’ in Elon Musk’s $3.5 Trillion Merger Plan: 'Real Merger With a Fake Premise'
-- 2026-10-28 04:21 T2B｜Barron's｜Want to Test Tesla’s Full Self-Driving? You Can Now Rent It on Turo.
-- 2026-10-28 03:51 T2B｜Yahoo Finance｜Tesla Future-Proofs Cybercab With LFP Battery Design as Shares Jump 4%
-- 2026-10-28 03:24 T2B｜Yahoo Finance｜Why Anthropic's IPO contrasts the 'cult of Elon Musk' at SpaceX and Tesla
-- 2026-10-28 03:23 T2B｜Yahoo Finance｜Tesla Stock Has Room to Run, If History Is Any Indicator
-- 2026-10-28 01:00 T2A｜Bloomberg.com｜SpaceX and Tesla Turn to Boards Cozy With Musk to Mull a Merger
-- 2026-10-28 00:33 T2B｜Yahoo Finance｜Tesla’s Profit Fell 43% and the Stock Held Up. Here’s Why
-- 2026-10-27 20:00 T2A｜CNBC｜SpaceX, Tesla and Anthropic may reshape the S&P 500—but not right away
-- 2026-10-27 18:50 T2B｜Yahoo Finance｜In a SpaceX-Tesla Merger, Tesla Shareholders Might Be the Junior Partner
-- 2026-10-27 18:26 T2B｜Yahoo Finance｜Why Did Tesla Stock Jump?
-- 2026-10-27 17:20 T2B｜Yahoo Finance｜Elon Musk Reveals the Real Reason He Hasn't Confirmed a SpaceX-Tesla Merger Will Happen
-- 2026-10-27 17:08 T2B｜Yahoo Finance｜Tesla And 2 Other Top Founder Led Stocks
-- 2026-10-27 17:01 T2B｜MarketWatch｜The 2027 Tesla Model Y L: The new 3-row version of the popular EV is tops in tech
-- 2026-10-27 11:18 T2B｜Yahoo Finance｜Tesla (TSLA) Is Nearing A Sellout Of Megapack Systems Through 2027
-- 2026-10-28 07:35 T4｜The Arkansas Democrat-Gazette｜Judge recuses from Tesla lawsuit, new judge named
-- 2026-10-28 07:12 T4｜InsideEVs｜The Tesla Model Y's Structural Battery Was Nearly Impossible To Repair. The Cybercab Fixes That
-- 2026-10-28 07:00 T4｜The Killeen Daily Herald｜Training Center of Central Texas to unveil energy training facility during Tesla Tech Day
-- …另有 83 則（見 headlines.json）
+- 2026-10-29 03:08 T2B｜Yahoo Finance｜Top Stock Reports for Tesla, Netflix & American Express
+- 2026-10-29 02:44 T2B｜Yahoo Finance｜Who is Spending $50,000 Just to Reserve a Tesla Roadster? We Have An Answer
+- 2026-10-29 01:02 T2A｜CNBC｜Final Trades: RTX, Tesla and Nutrien
+- 2026-10-28 23:18 T2B｜Yahoo Finance｜Electric Trailer Reportedly Beats Tesla Semi’s Financial Returns in 61% of Simulations
+- 2026-10-28 22:30 T2B｜Yahoo Finance｜Tesla Cancels Cybertruck in Two Countries: An Omen for the Vehicle's Future?
+- 2026-10-28 22:10 T2B｜Yahoo Finance｜Musk Likes a Tesla-SpaceX Merger. Then He Admitted It Needs a Majority of ALL Tesla Shares, Not Just Votes Cast
+- 2026-10-28 19:50 T2B｜Barron's｜Tesla Stock Rises Again. SpaceX and 1 Other Thing Driving It Higher.
+- 2026-10-28 19:30 T2B｜Yahoo Finance｜Tesla Could Go Beyond Robotaxis Into Underground Travel And Electric Aviation — TSLA Could ‘Own’ Transportation, ARK Says
+- 2026-10-28 19:30 T2B｜Yahoo Finance｜Man repairs 2 wrecked Teslas, they pass inspection, but the carmaker cuts fast charging anyway — now he owes $15K
+- 2026-10-28 19:20 T2B｜Barron's｜Hidden Gems in the SpaceX Filing: Soaring Compute Rates and Deep Tesla Ties
+- 2026-10-28 19:15 T2B｜Yahoo Finance｜Tesla Bears Are Falling Off But Not Because Tesla’s Improving
+- 2026-10-28 19:10 T2B｜Yahoo Finance｜Tesla's Free Cash Flow Just Turned Positive. Here's Why That's Only Half the Story.
+- 2026-10-28 19:04 T2B｜Yahoo Finance｜Tesla Closed Up 4% at $407. Here’s What a SpaceX Merger Could Mean for Your Shares.
+- 2026-10-28 18:20 T2B｜Yahoo Finance｜Tesla (TSLA) Could Be 223% Overvalued After Flat Revenue And Lower Profit
+- 2026-10-28 18:00 T2B｜Yahoo Finance｜GM is pitching itself more as a tech company like Tesla
+- 2026-10-29 08:00 T4｜shattered.io｜Tesla FSD Interventions: 4 Causes & Fixes [2026]
+- 2026-10-29 07:48 T4｜CleanTechnica｜Tesla’s Full Self Driving Has Now Dramatically Reduced the Number of Reasons to Intervene or Complain
+- 2026-10-29 07:46 T4｜Forbes｜Tesla’s Cybercab Robotaxi Is Probably Not ‘Unsupervised.’ Here’s Why
+- …另有 94 則（見 headlines.json）
 
 ## GOOGL（Alphabet OR Google）
 
-- 2026-10-28 04:52 T2B｜Yahoo Finance｜Google earnings checklist: Why YouTube, Search, & Cloud are key
-- 2026-10-28 04:32 T2A｜CNBC｜Alphabet reports Q3 earnings on Wednesday: Here's what to watch for
-- 2026-10-28 03:57 T2A｜CNBC｜AI debt fears ease ahead of Oracle, Alphabet and Amazon updates. Here's what to watch.
-- 2026-10-28 03:38 T2A｜CNBC｜Wall Street expects Google Cloud growth to top 90% as Search slows
-- 2026-10-28 03:16 T2B｜Yahoo Finance｜Google to report Q3 results as investors focus on AI growth, weigh Meta Muse AI risk
-- 2026-10-28 03:09 T2B｜Yahoo Finance｜Top Research Reports for Alphabet, ExxonMobil & Toyota Motor
-- 2026-10-28 03:01 T2B｜Yahoo Finance｜Oracle Expands Cloud Infrastructure Arsenal With Google, OpenAI, And Cerebras Partnerships
-- 2026-10-28 01:15 T2B｜Yahoo Finance｜Alphabet Is Set to Become an Even Bigger Anthropic Shareholder After the IPO
-- 2026-10-28 00:58 T2A｜CNBC｜Options Action: Alphabet and Microsoft Ahead of Earnings
-- 2026-10-28 00:50 T2A｜Reuters｜Oracle expands chip supply deal with Nvidia, adds Google and Cerebras offerings
-- 2026-10-28 00:45 T2B｜Yahoo Finance｜Why YouTube’s Native Multimodal Library and AI Search Overviews Make Alphabet a Must-Own Compounder
-- 2026-10-28 00:39 T2B｜Yahoo Finance｜Dear Google Stock Fans, Mark Your Calendars for October 28
-- 2026-10-28 00:38 T2B｜Yahoo Finance｜Amazon and Alphabet Are Each Spending At Least $200 Billion on Data Centers This Year. Here's Which Stock Outperforms Through 2028.
-- 2026-10-28 00:10 T2B｜Yahoo Finance｜Ahead of Alphabet Earnings, Here's What Barchart Data Says Comes Next for GOOGL Stock
-- 2026-10-28 00:00 T2B｜Yahoo Finance｜Oracle, in effort to reduce reliance on Nvidia, adds AI chips from Google, Cerebras, and SambaNova
-- 2026-10-28 08:17 T4｜https://tech-insider.org/｜Discord Messages on Google: Opt Out, 1,000+ Members [2026]
-- 2026-10-28 08:13 T4｜Tech Advisor｜2 Months With the Pixel 11 Pro: I Owe You an Apology, Google
-- 2026-10-28 08:01 T4｜TradingView｜OpenAI Plans To Buy Google’S AI Chips - The Information
-- …另有 91 則（見 headlines.json）
+- 2026-10-29 07:44 T2A｜CNBC｜Google Cloud surges as Search slows
+- 2026-10-29 07:44 T2B｜MarketWatch｜Why Alphabet’s stock could see its worst drop in years after the latest results
+- 2026-10-29 07:33 T2A｜CNBC｜Google Cloud revenue surges 103%
+- 2026-10-29 07:27 T2A｜CNBC｜Investors weigh Alphabet's cloud growth against its AI capex spend
+- 2026-10-29 07:23 T2B｜Yahoo Finance｜Google Cloud Revenue Just Grew 103%, so Why Is the Stock Falling?
+- 2026-10-29 06:40 T2B｜Barron's｜Berkshire Likely Has a Loss on Its Big Alphabet Stake After Earnings Miss
+- 2026-10-29 06:22 T2B｜Yahoo Finance｜GOOGL Stock Slumps 11% After-Hours: Alphabet’s Surge in AI Spending Pressures Third-Quarter Profits And Cash Flows
+- 2026-10-29 06:20 T2B｜Yahoo Finance｜Alphabet Inc. Q3 2026 Earnings: Live Updates of $GOOGL Earnings Call, Stock Forecast
+- 2026-10-29 05:58 T2B｜Barron's｜How SpaceX Hurt Alphabet’s Third-Quarter Earnings
+- 2026-10-29 05:48 T2A｜Reuters｜Breakingviews - COMMENTARY: Google and Microsoft weave tangled AI webs
+- 2026-10-29 05:47 T2A｜Reuters｜Alphabet shares fall after revenue miss, cash burn worsens
+- 2026-10-29 05:43 T2A｜WSJ｜Google Shares Fall 10% as Growth in Search Revenue Slows
+- 2026-10-29 05:42 T2A｜Bloomberg｜Alphabet Disappoints as Microsoft’s Cloud Brightens
+- 2026-10-29 05:37 T2B｜Yahoo Finance｜Shares in Google owner Alphabet plummet on profit miss, ad slowdown
+- 2026-10-29 05:30 T2A｜CNBC｜AI search queries hurt Alphabet's core business, says Deepwater's Gene Munster
+- 2026-10-29 08:11 T4｜Investor's Business Daily｜Tech Futures Fall On Google, These Huge Losers
+- 2026-10-29 08:06 T4｜The Motley Fool｜Microsoft and Alphabet Just Reported Earnings, Putting the AI Boom to the Test
+- 2026-10-29 07:52 T4｜Google Business Profile｜AI training plan for upskilling marketers - Think with Google
+- …另有 129 則（見 headlines.json）
 
 ## AAPL（Apple）
 
-- 2026-10-28 08:00 T2A｜CNBC｜Indian investors rush to Nvidia, SpaceX, Apple as local trading apps roll out access to U.S. stocks
-- 2026-10-28 06:01 T2A｜Bloomberg.com｜Apple Bets MacBook Pro Buyers Will Pay More for Touch Screens
-- 2026-10-28 05:21 T2A｜WSJ｜Apple Knows Some iPhone Duos Have a Major Issue | What’s News for Oct. 27
-- 2026-10-28 03:12 T2B｜Yahoo Finance｜Apple Eliminates 400+ Positions as CEO John Ternus Pivots to AI
-- 2026-10-28 03:05 T2B｜Yahoo Finance｜Apple (AAPL) Could Be 36% Overvalued As AI Launches Meet iPhone Duo Scrutiny
-- 2026-10-28 01:55 T2A｜Financial Times｜Apple hit by ‘Crackgate’ outcry over iPhone Duo screen problems
-- 2026-10-28 01:48 T2B｜Yahoo Finance｜Apple Just Became the Most Valuable Company in the World. It Faces a Key iPhone Test.
-- 2026-10-28 01:26 T2A｜Bloomberg.com｜Watch Apple’s Folding iPhone Hit by Early Complaints of Screen Cracking
-- 2026-10-28 01:05 T2A｜CNBC｜Final Trades: Delta Air Lines, American Tower, UnitedHealth and Apple
-- 2026-10-27 23:49 T1｜Apple｜Apple unveils new iMac with M6, delivering a major boost in performance and AI capabilities
-- 2026-10-27 22:59 T2B｜Yahoo Finance｜Apple (AAPL) vs. MSFT and GOOGL: Is the Post-Earnings Selloff Creating a Long-Term Buying Opportunity?
-- 2026-10-27 22:43 T1｜Apple｜Apple introduces the new 14-inch MacBook Pro with M6
-- 2026-10-27 22:03 T2B｜Yahoo Finance｜Apple launches new MacBook Pro, iMac as it continues to refresh product lines
-- 2026-10-27 21:44 T2A｜Reuters｜Apple launches M6 MacBook Pro and iMac, pitches faster on-device AI
-- 2026-10-27 21:14 T2A｜Bloomberg.com｜Apple Launches M6 iMac, Entry MacBook Pro Ahead of Touch Laptop
-- 2026-10-28 08:15 T4｜9to5Mac｜Apple releases two new real-life Apple Watch stories, including a life-saving alert
-- 2026-10-28 07:48 T4｜ABC10｜Apple Responds to Cracking Reports on Its New Foldable iPhones
-- 2026-10-28 07:46 T4｜Henry Ford College｜Ford ASSET instructor Kris Young wins National Steel Apple Award from Carhartt
-- …另有 67 則（見 headlines.json）
+- 2026-10-29 07:46 T1｜Apple｜Apple unveils groundbreaking MacBook Pro with PROLED XDR Display and Touch for the first time on Mac
+- 2026-10-29 07:42 T2A｜CNBC｜Hands-on with Apple’s first touchscreen laptop
+- 2026-10-29 06:51 T2A｜WSJ｜I Just Tried Apple’s First Touch-Screen MacBook. The Question Is: Who Is It For?
+- 2026-10-29 06:18 T2A｜CNBC｜Hands-on with Apple's first touchscreen laptop: Touch is totally optional
+- 2026-10-29 06:09 T2B｜Yahoo Finance｜Apple Stock And Other Quality Growth Names For Higher Rates
+- 2026-10-29 05:59 T2A｜CNBC｜Apple's new touchscreen Macbook Pro — first impressions
+- 2026-10-29 03:51 T2A｜Reuters｜Apple shows pricey touchscreen laptops, a first for the iPhone maker
+- 2026-10-29 03:45 T2A｜Bloomberg｜Watch Apple Unveils Touch-Screen MacBook Pro
+- 2026-10-29 02:17 T2A｜Bloomberg｜Apple Unveils Touch-Screen MacBook Pro, Reversing Long-Held Jobs Stance
+- 2026-10-29 01:47 T2B｜Yahoo Finance｜Apple announces $2,899 MacBook Pro — its first touchscreen laptop
+- 2026-10-29 01:33 T2A｜Reuters｜Apple expected to show first touchscreen laptops amid product blitz
+- 2026-10-29 01:08 T2A｜CNBC｜Apple brings touch to the Mac, reversing years-old stance on touchscreen laptop
+- 2026-10-28 22:34 T2A｜AP News｜South Korea fines Google and Apple over unfair app market practices
+- 2026-10-28 21:04 T2A｜Reuters｜South Korea media commission fines Google and Apple over app payment systems
+- 2026-10-28 19:44 T2A｜Bloomberg｜Russia Adds Apple and Microsoft to State Surveillance Registry
+- 2026-10-29 08:07 T4｜Oil City News｜KWHS teacher Kora Huffman receives prestigious 2026 Steel Apple Award
+- 2026-10-29 07:37 T4｜PCMag｜Apple Finally Caved: The First Touch-Screen MacBook Pro Is Here
+- 2026-10-29 07:28 T4｜cbs8.com｜Apple launches Mac with touchscreen
+- …另有 83 則（見 headlines.json）
 
 ## SPCX（SpaceX）
 
-- 2026-10-28 08:00 T2A｜CNBC｜Indian investors rush to Nvidia, SpaceX, Apple as local trading apps roll out access to U.S. stocks
-- 2026-10-28 05:30 T2B｜Yahoo Finance｜Scott Galloway Warns Tesla Is the ‘Patient’ and SpaceX Its ‘Organ Donor’ in Elon Musk’s $3.5 Trillion Merger Plan: 'Real Merger With a Fake Premise'
-- 2026-10-28 04:10 T2B｜Barron's｜SpaceX Stock: Elon Musk Just Gave Verizon, AT&T, Other Telecoms Some Great News
-- 2026-10-28 04:03 T2B｜Yahoo Finance｜What a $10,000 Investment in SpaceX Could Be Worth by the End of 2027 After Elon Musk's Shocking Revenue Guidance
-- 2026-10-28 03:25 T2B｜Yahoo Finance｜Is SpaceX Stock a Buy After Its Latest Earnings Report?
-- 2026-10-28 03:24 T2B｜Yahoo Finance｜Why Anthropic's IPO contrasts the 'cult of Elon Musk' at SpaceX and Tesla
-- 2026-10-28 02:39 T2A｜AP News｜Louisiana residents sue to unwind SpaceX tax deal
-- 2026-10-28 01:00 T2A｜Bloomberg.com｜SpaceX and Tesla Turn to Boards Cozy With Musk to Mull a Merger
-- 2026-10-27 22:15 T2B｜Yahoo Finance｜‘Very strange that Elon Musk doesn’t know’: Ukraine disputes SpaceX CEO on the basic facts after Starshield is restored
-- 2026-10-27 22:11 T2B｜Yahoo Finance｜Anthropic and SpaceX are intertwined: If one falls, will both get burned?
-- 2026-10-27 21:35 T2B｜Yahoo Finance｜Here Is What a $5,000 Investment in SpaceX Could Be Worth by 2028
-- 2026-10-27 20:55 T2B｜Yahoo Finance｜Does SpaceX (SPCX) Have the Potential to Rally 69.98% as Wall Street Analysts Expect?
-- 2026-10-27 20:26 T2A｜CNBC｜Here are Tuesday's biggest analyst calls: SpaceX, Apple, Broadcom, CoreWeave, Palantir, Intel & more
-- 2026-10-27 20:00 T2A｜CNBC｜SpaceX, Tesla and Anthropic may reshape the S&P 500—but not right away
-- 2026-10-27 19:59 T2B｜Yahoo Finance｜SpaceX secures $40bn finance lease commitment for GPUs
-- 2026-10-28 08:17 T4｜The Motley Fool｜RBC Says SpaceX Stock Has 50% Upside. S&P Global Just Warned About Its Hidden AI Debt. Here's Who I Think Is Right.
-- 2026-10-28 06:07 T4｜KLFY.com｜Lawyer for Vermilion Parish group trying to void SpaceX deal: ‘It’s not suing SpaceX’
-- 2026-10-28 06:04 T4｜Investor's Business Daily｜SpaceX Boosted By Starlink Mobile Buildout, Verizon Dismisses Competition
-- …另有 97 則（見 headlines.json）
+- 2026-10-29 07:11 T2B｜Yahoo Finance｜Prediction: This Will Be SpaceX's Stock Price in 3 Years
+- 2026-10-29 06:23 T2B｜Yahoo Finance｜Not Space. Not Starlink. Here's My Top Reason to Buy SpaceX Stock.
+- 2026-10-29 05:58 T2B｜Barron's｜How SpaceX Hurt Alphabet’s Third-Quarter Earnings
+- 2026-10-29 04:23 T2B｜Yahoo Finance｜SpaceX's $100 Billion Project Faces Legal Test
+- 2026-10-29 04:08 T2B｜Yahoo Finance｜SpaceX’s Starlink Just Added 1.6 Million Customers. But That’s Not the Best News
+- 2026-10-29 01:09 T2B｜Yahoo Finance Singapore｜SpaceX stock slides back toward $140 as smaller space names leave it behind
+- 2026-10-29 01:07 T2B｜Yahoo Finance｜Tough Obstacles, Long ROI Time Make SpaceX’s Mobile Network Plan Unappealing
+- 2026-10-28 23:55 T2B｜Yahoo Finance｜Russia and India Reveal Starlink Alternatives. How Will SpaceX Stock React?
+- 2026-10-28 22:10 T2B｜Yahoo Finance｜Musk Likes a Tesla-SpaceX Merger. Then He Admitted It Needs a Majority of ALL Tesla Shares, Not Just Votes Cast
+- 2026-10-28 22:04 T2B｜Yahoo Finance｜SpaceX’s $40 billion GPU lease won’t affect its credit rating - Fitch
+- 2026-10-28 22:00 T2A｜Bloomberg｜SpaceX’s Starship Refueling Mystery
+- 2026-10-28 19:50 T2B｜Barron's｜Tesla Stock Rises Again. SpaceX and 1 Other Thing Driving It Higher.
+- 2026-10-28 19:30 T2B｜Yahoo Finance｜Why Elon Musk's Latest Trillion-Dollar Forecast for SpaceX Is One That Investors Should Take With a Grain of Salt
+- 2026-10-28 19:22 T2B｜Yahoo Finance｜Elon Musk Says SpaceX’s Louisiana Starbase Could Handle 10,000 Starship Launches A Year
+- 2026-10-28 19:20 T2B｜Barron's｜Hidden Gems in the SpaceX Filing: Soaring Compute Rates and Deep Tesla Ties
+- 2026-10-29 07:50 T4｜digitimes｜Analysis: SpaceX–Tesla merger could reshape AI industry integration, capital allocation, US-China tech rivalry
+- 2026-10-29 07:05 T4｜The Motley Fool｜History Shows IPO Stocks Plunge Up to 48% Within 1 Year of Going Public. Here's Why SpaceX Could Defy the Odds in 2027.
+- 2026-10-29 06:52 T4｜The Globe and Mail｜Analysts Offer Insights on NA Companies: SpaceX (SPCX) and Sandfire Resources Limited (OtherSFRRF)
+- …另有 103 則（見 headlines.json）
 
 ## MARKET（"S&P 500" OR "Wall Street"）
 
-- 2026-10-28 08:12 T2A｜WSJ｜How Weil Gotshal, One of Wall Street’s Most Storied Law Firms, Ended Up in Chaos
-- 2026-10-28 07:45 T2B｜Yahoo Finance｜S&P 500, Nasdaq Jump On Chipmaker Strength As Investors Eye October Fed Decision — ORCL, HOOD, JBLU, RIVN, SMCI In Focus
-- 2026-10-28 07:13 T2A｜WSJ｜Print Edition | Wall Street Journal
-- 2026-10-28 07:01 T2A｜Reuters｜Wall Street ends higher on revived AI momentum
-- 2026-10-28 07:00 T2B｜Yahoo Finance｜RenaissanceRe (RNR) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates
-- 2026-10-28 05:29 T2B｜Axios｜GM shifts into Wall Street's tech lane
-- 2026-10-28 05:00 T2B｜Yahoo Finance｜Caesars Entertainment (CZR) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates
-- 2026-10-28 05:00 T2A｜Bloomberg.com｜Bankman-Fried Favorite Solana Faces Crossroad While Courting Wall Street
-- 2026-10-28 04:53 T2B｜Yahoo Finance｜Update: Nasdaq, S&P 500 Notch Back-to-Back Gains Following Fresh Earnings Reports
-- 2026-10-28 04:46 T2A｜AP News｜Broadcom and other AI stocks lift Wall Street closer to its record
-- 2026-10-28 03:38 T2A｜CNBC｜Wall Street expects Google Cloud growth to top 90% as Search slows
-- 2026-10-28 03:33 T2B｜Yahoo Finance｜S&P 500 Sell-Off: Is Now the Right Time to Buy the Dip?
-- 2026-10-28 03:13 T2B｜Yahoo Finance｜Hubbell Sinks 6% Despite Q3 Beat as Raised Outlook Only Matches Wall Street
-- 2026-10-28 01:46 T2A｜CNBC｜Stop thinking about today's rates as somewhat high, says Wall Street Journal's Greg Ip
-- 2026-10-28 01:26 T2B｜Yahoo Finance｜1 of Wall Street’s favorite stocks worth your attention and 2 we turn down
-- 2026-10-28 06:06 T4｜ChartMill｜S&P 500 Postmarket Decliners After Tuesday's Close
-- 2026-10-28 05:43 T4｜CommBank｜AI stocks lift Wall Street closer to record
-- 2026-10-28 05:21 T4｜Kitco｜Gold climbs above $4,050 as Wall Street rallies ahead of Fed decision - Kitco PM Report
-- …另有 125 則（見 headlines.json）
+- 2026-10-29 06:23 T2A｜CNBC｜Weil, Gotshal & Manges, longtime Wall Street law firm, plans wind down
+- 2026-10-29 06:01 T2B｜Yahoo Finance｜Semiconductor stocks lose momentum as S&P 500 takes lead
+- 2026-10-29 06:00 T2B｜Yahoo Finance｜Flowserve (FLS) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates
+- 2026-10-29 05:30 T2B｜Yahoo Finance｜NWPX Infrastructure (NWPX) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates
+- 2026-10-29 05:30 T2B｜Yahoo Finance｜Q2 Holdings (QTWO) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates
+- 2026-10-29 05:21 T2A｜CNBC｜Alphabet misses Wall Street expectation on earnings, stock continues to slide in extended trading
+- 2026-10-29 05:10 T2A｜CNBC｜Ford beats on earnings, misses Wall Street expectations on revenue
+- 2026-10-29 05:08 T2B｜Yahoo Finance｜Update: S&P 500, Nasdaq Rise For Third Day Following Fed Pause
+- 2026-10-29 05:00 T2B｜Yahoo Finance｜Ford Motor (F) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates
+- 2026-10-29 05:00 T2B｜Yahoo Finance UK｜Everest Group (EG) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates
+- 2026-10-29 04:47 T2B｜Yahoo Finance｜Microsoft Stock Climbs 5% as AI Spending Undershoots: Is Wall Street Rewarding Restraint?
+- 2026-10-29 04:30 T2B｜Yahoo Finance｜Alphabet (GOOGL) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates
+- 2026-10-29 04:24 T2B｜Yahoo Finance UK｜YouTube Ad Revenue Rises 9% But Parent Alphabet Misses Wall Street’s Q3 Targets; Stock Drops
+- 2026-10-29 04:23 T2A｜Reuters｜Wall Street ends higher as Fed holds key rate steady, focus turns to earnings
+- 2026-10-29 04:21 T2B｜Yahoo Finance｜Alphabet Q3 earnings: Google misses Wall Street estimates
+- 2026-10-29 08:10 T4｜TradingView｜S&P 500, Nasdaq Futures Dip As Weaker-Than-Expected Alphabet Earnings Reignite AI Spending Worries — GOOGL, MSFT, ORCL, NVDA, MRVL In Focus
+- 2026-10-29 07:04 T4｜The Arkansas Democrat-Gazette｜Murphy USA reports third-quarter profit of $176 million, beating Wall Street expectations
+- 2026-10-29 06:29 T4｜KIRO 7 News Seattle｜Google misses Wall Street expectations, Alphabet stock sinks in early after-hours trading
+- …另有 163 則（見 headlines.json）
 
 ## TSMC（TSMC OR "Taiwan Semiconductor"）
 
+- 2026-10-29 00:35 T2B｜Yahoo Finance｜TSMC Gains 3% on Reported 20% Price Hike for AI Chip Packaging
+- 2026-10-28 19:00 T2B｜Yahoo Finance｜Taiwan Semiconductor (TSM) Sees $135.0 Million in Net ETF Buying on Oct. 26
+- 2026-10-28 16:30 T2B｜Yahoo Finance｜Nvidia vs TSMC: Here’s Which One May Be the Biggest AI Winner.
+- 2026-10-28 05:30 T2B｜Yahoo Finance Australia｜Taiwan Semiconductor Manufacturing Company Limited (TSM) stock price, news, quote and history
 - 2026-10-28 04:18 T2B｜MarketWatch｜TSM Stock Price | Taiwan Semiconductor Manufacturing Co. Ltd. ADR Stock Quote (U.S.: NYSE)
 - 2026-10-27 20:13 T2B｜Yahoo Finance｜Taiwan Semiconductor Manufacturing and Sonoco have been highlighted as Zacks Bull and Bear of the Day
 - 2026-10-27 19:21 T2B｜Yahoo Finance｜TSMC Reportedly Plans Up to 20% Increase in Advanced Chip Packaging Prices Amid AI Demand
@@ -174,38 +178,40 @@
 - 2026-10-26 21:07 T2B｜Yahoo Finance｜Taiwan Semiconductor Manufacturing (TSM) Stock Looks Pricey Against Cash Flow
 - 2026-10-26 20:30 T2B｜Yahoo Finance｜Is TSMC (TSM) a Buy as Wall Street Analysts Look Optimistic?
 - 2026-10-26 15:38 T2B｜Yahoo Finance UK｜Taiwan Semiconductor Manufacturing Company Limited (TSM) latest stock news and headlines
-- 2026-10-25 22:15 T2B｜Yahoo Finance｜Taiwan Semiconductor Is Set to Cash in on AI. Here's What a $5,000 Investment Could Be Worth by 2030.
-- 2026-10-25 14:24 T2B｜Yahoo Finance Australia｜Taiwan Semiconductor Manufacturing Company Limited (TSM) stock price, news, quote and history
-- 2026-10-25 08:20 T2B｜Yahoo! Finance Canada｜Taiwan Semiconductor Manufacturing Company Limited (2330.TW) Stock Price, News, Quote & History
-- 2026-10-28 07:55 T4｜XenoSpectrum｜TSMC CoWoS Prices Reportedly Set to Rise Up to 20% as AI Chip Demand Strains Packaging Capacity
-- 2026-10-28 07:25 T4｜BigGo Finance｜Wood Trims AMD, TSMC Ahead of Earnings, Cashes Out $73 Million to Bet on Air Taxis
-- 2026-10-28 05:23 T4｜MarketBeat｜Taiwan Semiconductor Manufacturing (NYSE:TSM) Stock Jumps 3% - Should You Buy?
-- …另有 29 則（見 headlines.json）
+- 2026-10-29 02:00 T4｜TradingView｜Beyond NVIDIA: Why TSMC Stock Looks Attractive After Q3 Earnings
+- 2026-10-29 00:22 T4｜Forbes｜Anthropic's IPO Filing Says TSMC Couldn't Always Supply Enough Chips
+- 2026-10-28 23:53 T4｜www.tokenpost.com｜Wedbush Flags TSMC CoWoS as a Potential Supply-Chain Pinch Point
+- …另有 31 則（見 headlines.json）
 
 ## FED（"Federal Reserve" OR Powell OR FOMC）
 
-- 2026-10-28 04:45 T2A｜WSJ｜U.S. Stocks Add to Gains Ahead of Earnings, Fed Statement
-- 2026-10-28 04:30 T2A｜Bloomberg.com｜Bullish Treasury Bets Face Reversal Risk From Hawkish Fed
-- 2026-10-28 04:00 T2A｜CNBC｜How investors can position ahead of the Fed's next policy decision
-- 2026-10-27 21:55 T2B｜Yahoo Finance｜What the Fed's interest rate decision means for your bank accounts, loans, credit cards, and investments
-- 2026-10-27 19:10 T2A｜CNBC｜Fed rate hikes are coming, but not this week: CNBC survey
-- 2026-10-27 19:06 T2A｜CNBC｜Fed expected to hold rates steady, but Warsh may point way to more hikes
-- 2026-10-27 18:35 T2B｜Yahoo Finance｜Gold Falls Below $4,000 as Investors Await Federal Reserve Rate Decision
-- 2026-10-27 18:25 T2A｜WSJ｜Fed Policymakers Are in an Awkward Spot
-- 2026-10-27 18:00 T2A｜WSJ｜Kevin Warsh Wanted the Fed to Be Quiet. Instead, It’s as Noisy as Ever.
-- 2026-10-27 17:44 T2A｜CNBC｜U.S. Treasury yields tick higher as Federal Reserve's monetary policy meeting gets underway
-- 2026-10-27 11:57 T2A｜AP News｜5 things to watch from the Federal Reserve’s next meeting
-- 2026-10-27 10:28 T2A｜Reuters｜Indian equity benchmarks muted as elevated oil, Fed in focus
-- 2026-10-27 10:06 T2B｜Yahoo Finance｜DXP, Graham Corporation, MSC Industrial, CACI, and Powell shares are soaring, what you need to know
-- 2026-10-27 09:53 T2A｜WSJ｜Gold Edges Lower as Investors Mull Potential Fed Rate Hike This Year
-- 2026-10-27 09:46 T2A｜Reuters｜Stocks rise as oil slips with tech earnings, Fed ahead
-- 2026-10-28 08:04 T4｜Early County News｜Willowdean Powell
-- 2026-10-28 07:47 T4｜Legacy | Obituary｜Aaron Earl "Buddy" Powell
-- 2026-10-28 06:35 T4｜Legacy | Obituary｜James Wesley Sanders Obituary (2026) - McCrory, AR - Powell Funeral Home & Cremation Services - Woodruff County
-- …另有 60 則（見 headlines.json）
+- 2026-10-29 07:33 T2A｜Reuters｜Fed's policy committee to weigh balance sheet issues early next year, Warsh says
+- 2026-10-29 07:32 T2A｜Reuters｜Fed's Warsh announces changes in how future FOMC meetings will go
+- 2026-10-29 07:13 T2A｜Bloomberg｜US Stock Futures Decline, Fed Keeps Rates Steady: Markets Wrap
+- 2026-10-29 06:52 T2A｜Reuters｜Warsh says politics played no role in Fed's rate decision by group he is 'honored' to lead
+- 2026-10-29 06:44 T2A｜Reuters｜Fed leaves rates unchanged as it awaits 'accumulation of more information'
+- 2026-10-29 06:02 T2A｜CNBC｜'Fast Money' traders talk FOMC's decision to keep rates unchanged
+- 2026-10-29 05:54 T2A｜AP News｜Federal Reserve keeps rates unchanged despite elevated inflation
+- 2026-10-29 05:44 T2A｜WSJ｜Opinion | The Federal Reserve’s Hawkish Hold
+- 2026-10-29 05:39 T2A｜Bloomberg｜US Short-End Yields Fall After Warsh Signals Fewer Fed Meetings
+- 2026-10-29 05:32 T2A｜Financial Times｜Federal Reserve holds fire on interest rates despite intensifying inflation
+- 2026-10-29 05:31 T2A｜CNBC｜Here are five key takeaways from the Fed rate decision and Warsh news conference
+- 2026-10-29 05:12 T2A｜WSJ｜The Fed Held Steady on Rates, Leaving Investors to Sit Tight, Too
+- 2026-10-29 05:02 T1｜Federal Reserve (.gov)｜The Fed - October 27-28, 2026 FOMC Meeting
+- 2026-10-29 04:50 T2A｜Bloomberg｜Warsh Says FOMC Meeting Schedule Will Change as of Next Fall
+- 2026-10-29 04:50 T2A｜AP News｜The bond market swings, but US stocks remain steady after the Fed says it won't raise interest rates
+- 2026-10-29 08:19 T4｜Legacy | Obituary｜Anthony Powell Obituary (2026) - Proctorville, OH - The Herald-Dispatch
+- 2026-10-29 08:05 T4｜The San Joaquin Valley Sun｜Federal Reserve holds interest rates steady as inflation surges
+- 2026-10-29 07:57 T4｜NBC Palm Springs｜Federal Reserve Holds Interest Rates Steady as Inflation Remains a Concern
+- …另有 99 則（見 headlines.json）
 
 ## TARIFF（tariffs OR "Trump trade"）
 
+- 2026-10-29 06:11 T2A｜Reuters｜Trump says imported robotics pose national security risks but does not impose tariffs
+- 2026-10-29 04:37 T2A｜Bloomberg｜Trump Delays Robotics, Machinery Tariffs in Favor of More Talks
+- 2026-10-29 00:00 T2A｜CNBC｜Trump is using tariffs as a 'tool for grift,' Raskin says in demand for donor records
+- 2026-10-28 20:52 T2B｜Yahoo Finance｜Trump Says Tariffs Create Wealth — but Families Are Paying More and Buying Less
+- 2026-10-28 20:00 T2A｜Bloomberg｜US Hits Chinese Trailers With Tariffs to Aid Domestic Producers
 - 2026-10-28 03:51 T2A｜Reuters｜Higher tariffs on Canadian imports would be 'catastrophic,' Honda exec says
 - 2026-10-28 00:57 T2B｜Yahoo Finance｜50% Tariffs Could Be ‘Catastrophic’ for the Auto Industry. 2 Dates for Investors to Circle on the Calendar.
 - 2026-10-28 00:50 T2A｜Reuters｜COMMENTARY: Doing business under US Canada tariffs and bans
@@ -216,96 +222,95 @@
 - 2026-10-27 03:30 T2A｜Reuters｜EXCLUSIVE: US, Canada working on deal to ease steel, auto tariffs, sources say
 - 2026-10-27 02:58 T2B｜Barron's｜Canada’s Carney Navigates Trump Tariffs as Economy Slows
 - 2026-10-27 00:23 T2B｜Axios｜Trump tariffs test Republicans ahead of midterms
-- 2026-10-27 00:01 T2B｜MarketWatch｜Some Republicans are opposing Trump on tariffs. Maine’s Susan Collins just got him to back down on Canadian levies.
-- 2026-10-26 20:00 T2A｜Bloomberg.com｜Trump’s Trade General Fights Back as Tariffs Become Toxic
-- 2026-10-26 12:14 T2A｜Bloomberg.com｜China National Team ETFs Draw Most Inflows Since Trade War Rout
-- 2026-10-26 09:18 T2B｜Yahoo Finance UK｜Maine logging, cross-border ties whipsawed by US-Canada tariff war
-- 2026-10-26 07:51 T2A｜Reuters｜Trump says Canada tariff deal coming 'soon' at Michigan border rally
-- 2026-10-28 07:57 T4｜CommercialSearch｜ULI Fall Special Report: Justin Trudeau on AI, Tariffs and Housing
-- 2026-10-28 07:30 T4｜Container News｜US revises tariffs on Canadian goods ahead of October 30 changes
-- 2026-10-28 07:30 T4｜The Daily News | Texas' Oldest Newspaper｜Port of Galveston trustees waive tariffs on party boats at Pier 19
-- …另有 44 則（見 headlines.json）
+- 2026-10-29 07:31 T4｜NewsCord｜U.S. Midterm Elections Focus Voters on Trump’s Iran War and Tariffs: how 6 outlets framed it
+- 2026-10-29 06:52 T4｜KATU｜Small business owners crave stability as inflation, trade war fallout stifle main street
+- 2026-10-29 05:00 T4｜Roofing Contractor｜Trump Revises 50% Tariffs on Canadian Building Materials
+- …另有 46 則（見 headlines.json）
 
 ## CHIPS（"export controls" chips OR semiconductors）
 
+- 2026-10-28 18:16 T2A｜AP News｜Malaysia seizes servers with advanced AI chips suspected of violating export controls
+- 2026-10-28 15:25 T4｜NewsBytes｜CXMT to start limited HBM3E production amid US export controls
 - 2026-10-28 02:05 T4｜Lawfare｜The U.S.-Taiwan ART’s Export Control Puzzle
 - 2026-10-27 05:17 T4｜조선일보｜U.S. Denies South Korea Export Control Exemption
-- 2026-10-26 18:01 T4｜Army Recognition｜China tightens drone export controls, raising supply chain risks for the US, Europe, and Ukraine
-- …另有 25 則（見 headlines.json）
+- …另有 19 則（見 headlines.json）
 
 ## TAIWAN（Taiwan）
 
+- 2026-10-29 05:10 T2A｜Bloomberg｜Palantir’s Defense Chief Sees Chinese Threat to Taiwan Over AI
+- 2026-10-28 22:05 T2A｜Bloomberg｜Pakistan Allows Taiwan Airlines to Use Airspace in Abrupt U-Turn
+- 2026-10-28 19:00 T2B｜Yahoo Finance｜Taiwan Semiconductor (TSM) Sees $135.0 Million in Net ETF Buying on Oct. 26
+- 2026-10-28 13:08 T2A｜Financial Times｜A fashion homecoming in Taiwan
 - 2026-10-27 20:13 T2B｜Yahoo Finance｜Taiwan Semiconductor Manufacturing and Sonoco have been highlighted as Zacks Bull and Bear of the Day
 - 2026-10-27 15:00 T2B｜Yahoo Finance｜Bull of the Day: Taiwan Semiconductor Manufacturing Company (TSM)
 - 2026-10-27 11:42 T2A｜Reuters｜Taiwan rebuffs China's commemorations for post-World War Two 'restoration' of island
 - 2026-10-26 21:07 T2B｜Yahoo Finance｜Taiwan Semiconductor Manufacturing (TSM) Stock Looks Pricey Against Cash Flow
 - 2026-10-26 15:57 T1｜PR Newswire｜HAOSHi Demo Day 9 Spotlights 16 Food and AgriTech Startups from Taiwan, Singapore and Hong Kong
-- 2026-10-25 22:15 T2B｜Yahoo Finance｜Taiwan Semiconductor Is Set to Cash in on AI. Here's What a $5,000 Investment Could Be Worth by 2030.
-- 2026-10-28 07:57 T4｜semivision｜Manufacturing at Scale in the Photonics Era: Taiwan’s AI Supply Chain Through the Lens of ficonTEC Expert Seminar ASIA
-- 2026-10-28 07:32 T4｜조선일보｜Choo Sung-hoon Faces Urgent Stomach Pain During Taiwan Trip
-- 2026-10-28 07:18 T4｜UA.NEWS｜Taiwan’s Interior Ministry to strengthen election protection against Chinese interference — Taipei Times
-- …另有 39 則（見 headlines.json）
+- 2026-10-29 08:16 T4｜UA.NEWS｜Taiwan’s environment ministry and university sign urban forest memorandum — Taipei Times
+- 2026-10-29 08:01 T4｜StreetInsider｜Ming Sing Floral Water to Make U.S. Debut at 2026 USA Taiwan Global Expo
+- 2026-10-29 07:49 T4｜digitimes｜Taiwan plans carbon fee-ETS dual approach to tackle emissions
+- …另有 47 則（見 headlines.json）
 
 ## 2330（台積電）
 
-- 2026-10-28 07:24 T2B｜經濟日報｜台積電ADR大漲3% 日月光狂飆5% 台指期夜盤上漲774點 | 美股動態 | 國際
-- 2026-10-28 07:24 T2B｜UDN｜台積電ADR大漲3% 日月光狂飆5% 台指期夜盤上漲774點
-- 2026-10-28 06:29 T2B｜工商時報｜美股｜AI買氣力挺 晶片股嗨漲 費半揚3.6％ 台積電ADR收紅近3％
-- 2026-10-28 03:00 T2B｜工商時報｜Anthropic示警依賴台積電風險- 日報
-- 2026-10-27 22:15 T2B｜經濟日報｜台股急殺不用怕？年底結帳賣壓提前出籠 台積電、PCB等5族群受關注 | 個人理財 | 理財
-- 2026-10-27 21:46 T2B｜UDN｜美股早盤／晶片股連二漲！四大指數齊揚、台積電ADR漲1%
-- 2026-10-27 15:19 T2B｜udn房地產｜台北老宅跌跌不休！帥過頭曝70歲連2樓都不買：投資寧買台積電
-- 2026-10-27 14:38 T2B｜經濟日報｜談半導體供應鏈點名台積電？ 陳立武：生產集中於特定企業有風險 | 日經中文網 | 國際
-- 2026-10-27 13:55 T2B｜UDN｜張忠謀送水晶牌上頭只刻「5字」前技術長揭密台積電超車全球的關鍵一役
-- 2026-10-27 13:41 T2B｜UDN｜多空交戰季線 台股收漲54點 台積電收高15元
-- 2026-10-27 13:25 T2B｜UDN｜桃園張善政接受電台專訪 曝台積電進駐龍科三期交涉細節
-- 2026-10-27 12:55 T2B｜工商時報｜投信：AI基礎建設需求及台積電展望均優科技產業景氣維持擴張態勢- 理財
-- 2026-10-27 12:50 T2B｜經濟日報｜Anthropic 揭8千億算力支出 誰大贏家？Google TPU 占一半 台積電狂受惠 | 國際焦點 | 國際
-- 2026-10-27 12:50 T2B｜UDN｜Anthropic揭8千億算力支出誰大贏家？Google TPU占一半台積電狂受惠| 全球財經| 全球
-- 2026-10-27 11:14 T2B｜工商時報｜培育鑽石轉攻AI散熱！台積電傳布局、陳立武押注- 國際
-- 2026-10-28 08:09 T4｜CMoney投資網誌｜避險資金調節台股劇震近800點！大型機構減持半導體，台積電成指標-財經焦點情報站
-- 2026-10-28 07:30 T4｜Yahoo新聞｜當沖筆記》外資10月賣超台股達8290億、27日賣超台積電力道明顯縮小 轉向大賣台光電
-- 2026-10-28 07:30 T4｜T客邦｜iPhone領先地位靠它？台積電1.4奈米量產計畫提前，蘋果傳率先採用A14製程
-- …另有 110 則（見 headlines.json）
+- 2026-10-29 07:52 T2B｜UDN｜AI商機不只台積電！00410A布局南亞、玉晶光…兩檔個股表現受矚
+- 2026-10-29 07:44 T2B｜UDN｜台積電追上聯發科靠這招？股民見股價崩潰：不是叫你把發哥往下拉
+- 2026-10-29 07:27 T2B｜工商時報｜10／29盤前｜台積電先進封裝版圖再擴大傳砸200億元笑納友達中科兩座廠- 證券
+- 2026-10-29 06:50 T2B｜UDN｜台積電ADR連四漲 台指期跌128點
+- 2026-10-29 03:00 T2B｜工商時報｜中科布局成焦點》台積電擴充先進封裝有眉目- 日報
+- 2026-10-28 18:08 T2A｜中央社 CNA｜Anduril攜手高通推美國製筆電台積電亞利桑那廠生產晶片| 產經
+- 2026-10-28 17:51 T2B｜UDN｜Anthropic IPO太夯！台積電、SK海力士成亞洲「代理投資」新寵
+- 2026-10-28 17:22 T2B｜經濟日報｜台積電員工最盼這台灣味！春水堂二代領軍赴美 揭不上市內幕 | 產業熱點 | 產業
+- 2026-10-28 17:07 T2A｜中央社 CNA｜台積電、美光加碼布局台中市府：兩大巨頭投資破兆| 地方
+- 2026-10-28 16:44 T2B｜UDN｜台積電進駐效益龐大九州金融集團：3縣近14兆日圓| 全球財經| 全球
+- 2026-10-28 16:37 T2B｜經濟日報｜台積電進駐效益龐大 九州金融集團：3縣近14兆日圓
+- 2026-10-28 16:27 T2A｜中央社 CNA｜台積電進駐帶動投資生產九州金融集團估熊本等3縣獲益近14兆日圓| 國際
+- 2026-10-28 16:16 T2B｜UDN｜漲939點是逃命波？陳嘉偉警告台積電「季線下彎」：明早出清、恐測五年線
+- 2026-10-28 14:26 T2A｜中央社 CNA｜台積電聯發科領軍49千金強勢 台股漲939點收復47000點
+- 2026-10-28 13:59 T2B｜經濟日報｜台股收盤／大漲939.35點收47,035.58點 台積電收2,425元漲1.04% | AI 人機協作 | 證券
+- 2026-10-29 07:58 T4｜TechNews 科技新報｜日本砸 150 億美元重返 2 奈米戰場，Rapidus 能挑戰台積電嗎？
+- 2026-10-29 07:53 T4｜TVBS新聞網｜Fed按兵不動美股連3紅！微軟AI狂衝 台積電ADR盤後卻翻黑
+- 2026-10-29 07:31 T4｜富聯網｜《亞洲科技股美國掛牌行情4-1》28日台積電收盤漲0.60％
+- …另有 113 則（見 headlines.json）
 
 ## TWSE（台股 OR 加權指數）
 
-- 2026-10-28 03:31 T2B｜UDN｜台股虎頭蛇尾 拚反彈看四個訊號
-- 2026-10-28 03:00 T2B｜工商時報｜童子賢：國際資金對台股投信任票- 日報
-- 2026-10-28 03:00 T2B｜工商時報｜台股9月三大金融指標全創高- 日報
-- 2026-10-28 03:00 T2B｜工商時報｜台股科技基金3檔近月贏大盤- 日報
-- 2026-10-28 03:00 T2B｜工商時報｜台股ETF 檔數、受益人寫新猷- 日報
-- 2026-10-28 03:00 T2B｜工商時報｜股匯同步回神 台股拚返季線、台幣看Fed決策
-- 2026-10-28 03:00 T2B｜工商時報｜大盤11月行情迎戰雙變數- 日報
-- 2026-10-28 03:00 T2B｜工商時報｜台股ETF 逢低可布局- 日報
-- 2026-10-28 03:00 T2B｜工商時報｜外資調節新興亞股買超泰、印度賣超台股- 日報
-- 2026-10-28 02:52 T2B｜UDN｜台股資金轉向中低價股 買盤擁抱金融、電信等防禦性族群
-- 2026-10-28 00:45 T2B｜UDN｜外資賣超亞股…台股失血 上周遭提款近76億美元
-- 2026-10-28 00:39 T2B｜UDN｜台股科技基金 逢低買
-- 2026-10-27 22:15 T2B｜經濟日報｜台股急殺不用怕？年底結帳賣壓提前出籠 台積電、PCB等5族群受關注 | 個人理財 | 理財
-- 2026-10-27 20:25 T2B｜經濟日報｜PCB/CCL 受惠於供需吃緊 大摩及高盛一致看好這三檔台股 | 市場焦點 | 證券
-- 2026-10-27 19:47 T2B｜工商時報｜台股9月金融指標寫「三高」 外匯存款首度突破10兆元- 要聞
-- 2026-10-28 08:15 T4｜民視新聞網｜台股震盪900點！杜金龍曝「這幾檔」逢低布局
-- 2026-10-28 08:15 T4｜民視財經網｜外資瘋狂提款一兆元「台股震盪900點」！杜金龍點名「這幾檔」逢低布局
-- 2026-10-28 08:00 T4｜蕃新聞｜【台股10/28日盤前分析】
-- …另有 145 則（見 headlines.json）
+- 2026-10-29 07:42 T2A｜中央社 CNA｜早安世界》楊金龍：外資偏愛台灣更甚韓國投資台股獲利可觀| 生活
+- 2026-10-29 03:33 T2B｜UDN｜期貨交易保證金衝破兆元！台股長多效應投資人鎖定股票商品操作| 股市要聞| 股市
+- 2026-10-29 03:00 T2B｜工商時報｜季線將迎翻揚向上台股反攻量能待考驗- 日報
+- 2026-10-29 03:00 T2B｜工商時報｜台股反彈訊號要來了！日KD黃金交叉成關鍵專家籲短線操作避開這類股- 日報
+- 2026-10-29 03:00 T2B｜工商時報｜亂流難撼台股根基 布局5亮點
+- 2026-10-29 03:00 T2B｜工商時報｜SK海力士Q3超賺台股強彈- 日報
+- 2026-10-29 03:00 T2B｜工商時報｜主動台股ETF 逢回分批布局- 日報
+- 2026-10-29 03:00 T2B｜工商時報｜台股高息ETF 今年來績效靚- 日報
+- 2026-10-29 03:00 T2B｜工商時報｜台股反攻中小型基金績優- 日報
+- 2026-10-29 03:00 T2B｜工商時報｜基本面優於韓楊金龍：外資偏愛台股- 日報
+- 2026-10-29 01:50 T2B｜經濟日報｜台股年底作帳行情啟動 強勢反彈 重新站上 47K
+- 2026-10-29 00:32 T2B｜經濟日報｜台股中小型基金 搶鏡 前十強近三個月報酬率都超過5%
+- 2026-10-28 19:10 T2B｜工商時報｜10／28台股雷達│穩懋、東台股價強攻漲停「這檔」遭外資大賣- 證券
+- 2026-10-28 17:38 T2A｜中央社 CNA｜台股強漲收復47000點 新台幣量縮小升收32.418元
+- 2026-10-28 17:35 T2B｜工商時報｜台股逐洞賽｜主流強者恆強、次族群兩極分化- 證券
+- 2026-10-29 07:56 T4｜CMoney｜TWA00 加權指數- 經濟日報晨訊- 股市爆料同學會
+- 2026-10-29 07:50 T4｜CMoney｜TWA00 加權指數- 打破賈伯斯禁忌！蘋果首推觸控MacBook Pro - 股市爆料同學會
+- 2026-10-29 07:39 T4｜CMoney投資網誌｜台股第三季財報出爐，先進封裝與AI供應鏈表現分歧，這4檔指標股兩樣情-財經焦點情報站
+- …另有 155 則（見 headlines.json）
 
 ## 009816（009816 OR 凱基台灣TOP50）
 
 - 2026-10-26 12:38 T2B｜經濟日報｜整理包／0050 市值型 ETF 王位遭挑戰！006208 一拆八搶市 009804、009816 也來了...四檔買誰好？
-- 2026-10-28 06:06 T4｜旺得富理財網｜手上只有一筆資金要選0050或009816？達人6點直球對決看完秒選不糾結- 基金
-- 2026-10-27 22:35 T4｜今周刊｜0050、0056、009816…台股震盪也擋不住高人氣，年底還有行情嗎？別忘了4個變數…加碼子彈該保留多少
-- 2026-10-27 14:42 T4｜永豐金證券｜【零股排行榜】 盤中零股成交量TOP 20｜0050 元大台灣50、00406A 主動中信台灣收益、00981A 主動統一台股增長、009816 凱基台灣TOP50、0056 元大高股息(1027)｜豐雲學堂2026 年 10 月
-- …另有 35 則（見 headlines.json）
+- 2026-10-29 05:47 T4｜旺得富理財網｜2檔市值型1表比》006208擬分割1拆8！009816一張1.6萬還能玩嗎？ 達人曝權重、配息差異：看懂再下手
+- 2026-10-28 15:54 T4｜富聯網｜《上市盤後交易10大成交量》主動中信台灣收益、凱基台灣TOP50
+- 2026-10-28 13:21 T4｜Newtalk新聞｜凱基009816換股倒數！估3進3出景碩、台塑、台化入列候選| 財經
+- …另有 38 則（見 headlines.json）
 
 ## 00981A（00981A OR 主動統一台股增長）
 
-- 2026-10-27 19:01 T4｜CMoney投資網誌｜【00981A】10/27 操作日報｜趁回檔大買半導體封測雙雄
-- 2026-10-27 18:24 T4｜CMoney｜2330 台積電 - 00981A狂買日月光、京元電子！半導體封測資金大回流- 股市爆料同學會
-- 2026-10-27 18:05 T4｜CMoney｜2330 台積電 - 2026/10/27 00981A今日操作明細- 股市爆料同學會
-- …另有 46 則（見 headlines.json）
+- 2026-10-29 02:01 T4｜三立新聞網SETN.com｜這檔ETＦ不僅狂還抗跌！近3月績效贏00981A、00403A 陳重銘揭關鍵
+- 2026-10-28 19:31 T4｜CMoney投資網誌｜【00981A】10/28 操作日報｜經理人大舉加碼日月光投控-CMoney官方
+- 2026-10-28 18:10 T4｜CMoney｜2026/10/28 00981A今日操作明細
+- …另有 58 則（見 headlines.json）
 
 ## 00411A（00411A OR 主動統一前沿科技）
 
-- …另有 5 則（見 headlines.json）
+- …另有 4 則（見 headlines.json）
 
