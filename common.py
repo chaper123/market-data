@@ -335,6 +335,33 @@ def vote_daily(sym, srcs, referee=nasdaq_daily, limit=0.5, recheck=(), single_ok
 
 
 # ---------------------------------------------------------------- Phase 1 資料模組共用
+FINMIND = "https://api.finmindtrade.com/api/v4/data?dataset={}&data_id={}&start_date={}"
+TWSE_OPENAPI = "https://openapi.twse.com.tw/v1/{}"
+
+
+def finmind(dataset, data_id, start):
+    """FinMind 免費 API（不用 token，每小時約 300 次；教育、非商業用途）。回傳 data 串列。"""
+    j = get_json(FINMIND.format(dataset, data_id, start), timeout=40)
+    if j.get("status") != 200:
+        raise RuntimeError(f"FinMind {dataset} {data_id} status {j.get('status')}: {j.get('msg')}")
+    return j.get("data") or []
+
+
+def twse_openapi(path):
+    """證交所 OpenAPI（政府資料開放授權條款第 1 版）。證交所網站報表頁的使用條款禁止未經同意以程式下載，
+    所以 2026-10-30 起新加的證交所資料都走這裡。大多只給當月或最新一天。"""
+    status, raw = http(TWSE_OPENAPI.format(path), timeout=40)
+    if status != 200:
+        raise RuntimeError(f"證交所 OpenAPI {path} HTTP {status}")
+    return json.loads(raw.decode("utf-8-sig"))
+
+
+def roc_ymd(s):
+    """OpenAPI 的民國日期 '1151001' → '2026-10-01'。"""
+    s = str(s).strip()
+    return f"{int(s[:-4]) + 1911}-{s[-4:-2]}-{s[-2:]}"
+
+
 def read_rows(path):
     """讀無表頭 CSV；檔案不存在回傳空串列。"""
     try:

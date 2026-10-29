@@ -47,6 +47,8 @@ GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所�
 | `data/news/headlines.json` | 新聞標題（最近 72 小時），格式見下方「新聞標題格式」。約 0.7 MB，讀取時請用程式篩選 | Google News RSS（每個查詢跑兩次：限定白名單網站與不限定）、中央社官方 RSS（財經、科技）、federalreserve.gov RSS；`news.py`，查詢詞、來源等級與主題詞在 `config.json` 的 `news` |
 | `data/news/fed.json` | Fed 新聞稿與演講（最近 7 天）：`items[]` 的 `date`（台北日期）、`title`、`link`、`type`（press／speech）、`published_taipei`、`published_utc` | federalreserve.gov RSS |
 | `data/news/headlines.md` | 精簡版給人看：每個查詢列標題提到它的 T1～T2 新聞（最多 15 則）與 T3～T4 3 則 | 同上 |
+| `data/index/TAIEX.csv` | 加權指數日線：date,open,high,low,close,volume_shares,value_twd（成交股數、成交金額元；無表頭），2003-01-02 起，台北 14:30 前不收當天 | 證交所 OpenAPI MI_5MINS_HIST＋FMTQIK（當月，同一天以它為準）/ FinMind TaiwanStockPrice（TAIEX，歷史）；重疊日逐日核對收盤 |
+| `data/index/TAIEX_TR.csv` | 加權報酬指數日線：date,close，2003-01-02 起 | 證交所 OpenAPI MFI94U（當月）/ FinMind TaiwanStockTotalReturnIndex（歷史） |
 | `data/longterm/tw_business_cycle.csv` | 國發會景氣對策信號（月，1984-01 起）：month,score,light,release_est,release_actual,initial_score,initial_light,first_seen_taipei，說明見下方「長週期資料」 | data.gov.tw 資料集 6099（國發會 zip）/ 國發會景氣指標查詢系統 JSON |
 | `data/longterm/tw_business_cycle_revisions.csv` | 景氣燈號修正紀錄（逐次累加）：seen_taipei,month,old_score,new_score,old_light,new_light,release | 同上 |
 | `data/longterm/buffett_indicator.csv` | 巴菲特指標（季，1951Q4 起）：quarter,equities_bn,gdp_bn,ratio_pct,trend_pct,dev_sigma,dev_sigma_expanding,release,release_basis,initial_equities_bn,initial_gdp_bn,initial_ratio_pct,initial_dev_sigma_expanding,first_seen_taipei，說明見下方「長週期資料」 | FRED NCBEILQ027S ÷ GDP；發布日取 Fed Z.1 Release Dates |
@@ -139,6 +141,8 @@ curl -sSf https://raw.githubusercontent.com/<帳號>/market-data/main/data/meta.
 ```
 
 ## 注意
+
+**證交所資料的使用條款（2026-10-30 查）**：證交所網站使用條款第 6 條禁止「非依臺灣證券交易所同意之方式」以自動程式、爬蟲下載資料，第 8 條未經書面同意不得重製，但證交所已授權政府資料開放平臺的資料除外；證交所 OpenAPI（openapi.twse.com.tw）標示的授權是政府資料開放授權條款（需標示出處）。所以 2026-10-30 起新加的證交所資料（加權指數、報酬指數、除權息預告、上市個股日成交）都走 OpenAPI，歷史部分用 FinMind（教育、非商業用途，未註冊每小時約 300 次）。既有的日線（STOCK_DAY）、法人（T86、BFI82U）、融資（MI_MARGN）與 MIS 盤中快照、淨值仍是讀證交所網站，要不要改由使用者決定。
 
 TradingView scanner 不是官方公開 API，改版時可能失效；失效時雷達只少了綜合評分。TradingView 偶爾有錯誤的 K 棒（00411A 的高低點曾出錯，ADX、ATR、Pivot 全部失真），所以雷達的指標一律用 repo 的官方日線計算。
 技術面雷達只描述結構，不是投資建議，也不改變排程任務的買區判定。
