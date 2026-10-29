@@ -66,6 +66,8 @@ class IntradayBase(unittest.TestCase):
                     mock.patch.object(intraday, "http", fake_http), \
                     mock.patch.object(intraday.time, "sleep", lambda s: None):
                 intraday.main()
+            meta = os.path.join(tmp, "meta.json")
+            self.meta = json.load(open(meta, encoding="utf-8")) if os.path.exists(meta) else None
             return json.load(open(out, encoding="utf-8"))
 
 
@@ -82,6 +84,36 @@ class IntradayTest(IntradayBase):
         self.assertEqual(doc["quotes"]["00411A"]["market"], "otc")
         self.assertIsNone(doc["quotes"]["TAIEX"]["volume_lots"])
         self.assertEqual(doc["status"], "ok")
+
+    def test_slot_and_meta(self):
+        doc = self.run_at(tpe(2026, 10, 23, 10, 5), mis(all_items("20261023", "10:04:55")))
+        self.assertEqual(doc["slot"], "早盤")
+        m = self.meta["datasets"]["intraday/tw"]
+        self.assertEqual((m["status"], m["slot"], m["last"], m["quotes"]), ("ok", "早盤", "2026-10-23 10:05:00", 4))
+        doc = self.run_at(tpe(2026, 10, 23, 12, 0), mis(all_items("20261023", "11:59:58")))
+        self.assertEqual(doc["slot"], "午間")
+        self.assertEqual(self.meta["datasets"]["intraday/tw"]["slot"], "午間")
+        doc = self.run_at(tpe(2026, 10, 23, 17, 3), mis(all_items("20261023", "13:30:00")))
+        self.assertEqual(doc["slot"], "盤外")
+
+    def test_failure_marks_meta_and_keeps_others(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            os.makedirs(os.path.join(tmp, "tw"))
+            with open(os.path.join(tmp, "config.json"), "w", encoding="utf-8") as fh:
+                json.dump(CFG, fh)
+            with open(os.path.join(tmp, "tw", "intraday.json"), "w", encoding="utf-8") as fh:
+                fh.write("{}")
+            with open(os.path.join(tmp, "meta.json"), "w", encoding="utf-8") as fh:
+                json.dump({"datasets": {"us/VOO": {"status": "ok"},
+                                        "intraday/tw": {"status": "ok", "last": "2026-10-23 10:05:00", "slot": "早盤"}}}, fh)
+            with mock.patch.object(intraday, "DATA", tmp), mock.patch.object(intraday, "ROOT", tmp),                     mock.patch.object(intraday, "OUT", os.path.join(tmp, "tw", "intraday.json")),                     mock.patch.object(intraday, "NOW", tpe(2026, 10, 23, 12, 0)),                     mock.patch.object(intraday, "http", lambda url, **kw: (200, mis([]))),                     mock.patch.object(intraday.time, "sleep", lambda s: None):
+                with self.assertRaises(SystemExit):
+                    intraday.main()
+            with open(os.path.join(tmp, "meta.json"), encoding="utf-8") as fh:
+                ds = json.load(fh)["datasets"]
+        self.assertEqual(ds["us/VOO"], {"status": "ok"})
+        m = ds["intraday/tw"]
+        self.assertEqual((m["status"], m["last"], m["slot"]), ("stale", "2026-10-23 10:05:00", "早盤"))
 
     def test_after_close_is_labelled(self):
         doc = self.run_at(tpe(2026, 10, 22, 17, 3), mis(all_items("20261022", "13:30:00")))

@@ -48,4 +48,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # fetch、news、intraday、longterm 四個 workflow 都會推送：publish.py 每次從最新的 main 重新套用
           # 自己的檔案與自己負責的 meta 資料集，被拒就重來，不會衝突或蓋掉別人的更新
-          python publish.py --message "data $(TZ=Asia/Taipei date +'%Y-%m-%d %H:%M')" --paths data --exclude data/news data/tw/intraday.json data/longterm --meta-all --keep news/ longterm/
+          python publish.py --message "data $(TZ=Asia/Taipei date +'%Y-%m-%d %H:%M')" --paths data --exclude data/news data/tw/intraday.json data/longterm --meta-all --keep news/ longterm/ intraday/

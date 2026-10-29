@@ -1,7 +1,7 @@
 name: intraday-snapshot
 
-# 證交所 MIS 盤中快照（intraday.py → data/tw/intraday.json），給台股晨報取代鉅亨網盤中價。
-# 只由 cron-job.org（約台北 10:05）或手動觸發，不排程。不動 meta.json，也不影響 fetch.yml 的略過判斷。
+# 證交所 MIS 盤中快照（intraday.py → data/tw/intraday.json），給台股晨報與午間儀表板。
+# 只由 cron-job.org（約台北 10:05、12:00）或手動觸發，不排程。meta.json 只更新 intraday/tw，不影響 fetch.yml 的略過判斷。
 on:
   workflow_dispatch: {}
 
@@ -24,6 +24,9 @@ jobs:
           python-version: "3.12"
 
       - name: Snapshot
+        id: snapshot
+        # 失敗也先推送 meta（標 stale），最後一步再讓 workflow 失敗、寄通知
+        continue-on-error: true
         run: python intraday.py
 
       - name: Commit
@@ -32,4 +35,10 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # fetch、news、intraday、longterm 四個 workflow 都會推送：publish.py 每次從最新的 main 重新套用
           # 自己的檔案與自己負責的 meta 資料集，被拒就重來，不會衝突或蓋掉別人的更新
-          python publish.py --message "intraday $(TZ=Asia/Taipei date +'%Y-%m-%d %H:%M')" --paths data/tw/intraday.json
+          python publish.py --message "intraday $(TZ=Asia/Taipei date +'%Y-%m-%d %H:%M')" --paths data/tw/intraday.json --meta-own intraday/
+
+      - name: Fail if snapshot failed
+        if: steps.snapshot.outcome == 'failure'
+        run: |
+          echo "盤中快照失敗（meta 已標 stale），見 Snapshot 步驟的輸出" >&2
+          exit 1

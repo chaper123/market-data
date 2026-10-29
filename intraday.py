@@ -1,11 +1,13 @@
 """證交所 MIS 盤中快照，給台股晨報取代鉅亨網的盤中價（只用 Python 標準庫）。
 
-由 .github/workflows/intraday.yml 執行（cron-job.org 約台北 10:05 觸發）；不寫 meta.json，狀態記在輸出檔裡。
+由 .github/workflows/intraday.yml 執行（cron-job.org 約台北 10:05 與 12:00 觸發，兩次都寫同一個檔，用 slot 分辨）；
+meta.json 只寫 intraday/tw（推回 repo 用 publish.py --meta-own intraday/），不影響 fetch.yml 的略過判斷。
 來源：mis.twse.com.tw 的 getStockInfo（抓 ETF 淨值用的同一個站）。上市用 tse_、上櫃用 otc_，加權指數是 tse_t00。
 
 輸出 data/tw/intraday.json：
   session      盤前／盤中／收盤後／休市日（依台北時間與 data/calendar/calendar.json 的休市日）
   is_trading   只有盤中是 true；其他時段 note 會寫清楚價格是哪一天、幾點的資料
+  slot         早盤（盤中 11:00 前，10:05 那次）／午間（盤中 11:00 起，12:00 那次）／盤外（不是盤中）
   quotes       代號 → name、market、data_date、time（一般交易最後成交時間，台北）、updated（MIS 最後更新，收盤後的
                ETF 會是 14:30 盤後定價交易）、price、price_field、price_note、price_retries、bid1、ask1、change、
                change_pct、open、high、low、prev_close、volume_lots（累積成交張數，指數為 null）、limit_up、limit_down、
@@ -19,7 +21,7 @@ price 的備援順序（price_field）：
   null         都沒有，原因寫在 price_note
 change、change_pct 用採用的 price 對 prev_close 計算。limit_up／limit_down 不合理（例如上櫃無漲跌幅限制的 ETF，
 MIS 給 9999.95）就改成 null，原因寫在 limit_note。
-全部失敗時保留上一次的檔案並以非 0 結束。
+全部失敗時保留上一次的檔案、meta 標 stale，並以非 0 結束。
 """
 import datetime as dt
 import json
@@ -54,6 +56,14 @@ def session(now, closed):
     if hm <= CLOSE:
         return "盤中"
     return "收盤後"
+
+
+def slot_of(now, sess):
+    """這次快照是哪一個時段：盤中 11:00 前是早盤（10:05 那次），11:00 起是午間（12:00 那次），其他是盤外。"""
+    if sess != "盤中":
+        return "盤外"
+    tp = now.astimezone(TPE)
+    return "早盤" if (tp.hour, tp.minute) < (11, 0) else "午間"
 
 
 def first_level(text):
@@ -170,9 +180,29 @@ def snapshot(cfg, now):
     sys_time = (j.get("queryTime") or {})
     return {"fetched_at_taipei": now.astimezone(TPE).strftime("%Y-%m-%d %H:%M:%S"),
             "mis_time": f"{sys_time.get('sysDate', '')} {sys_time.get('sysTime', '')}".strip(),
-            "session": sess, "is_trading": sess == "盤中", "trading_day": sess != "休市日",
+            "session": sess, "slot": slot_of(now, sess), "is_trading": sess == "盤中", "trading_day": sess != "休市日",
             "note": note_for(sess, quotes, today), "status": "partial" if errors else "ok",
             "source": "mis.twse.com.tw getStockInfo", "quotes": quotes, "errors": errors}
+
+
+def update_meta(doc=None, error=None):
+    """只寫 meta.json 的 intraday/tw；其他資料集不動（推回 repo 時 publish.py 會再合併一次）。"""
+    path = os.path.join(DATA, "meta.json")
+    try:
+        with open(path, encoding="utf-8") as fh:
+            meta = json.load(fh)
+    except Exception:  # noqa: BLE001
+        meta = {"datasets": {}, "errors": []}
+    old = meta.setdefault("datasets", {}).get("intraday/tw") or {}
+    if doc is None:
+        m = {"status": "stale" if os.path.exists(OUT) else "fail", "error": str(error)[:300],
+             "last": old.get("last"), "slot": old.get("slot")}
+    else:
+        m = {"status": "ok", "source": doc["source"], "last": doc["fetched_at_taipei"], "slot": doc["slot"],
+             "session": doc["session"], "quotes": len(doc["quotes"]),
+             "no_price": [k for k, q in doc["quotes"].items() if q["price"] is None], "errors": len(doc["errors"])}
+    meta["datasets"]["intraday/tw"] = m
+    write_json(path, meta)
 
 
 def main():
@@ -187,9 +217,11 @@ def main():
             time.sleep(5)
     else:
         print(f"盤中快照失敗，保留上一次的檔案：{last}", file=sys.stderr)
+        update_meta(error=last)
         sys.exit(1)
     write_json(OUT, doc)
-    print(doc["session"], doc["status"],
+    update_meta(doc)
+    print(doc["session"], doc["slot"], doc["status"],
           {k: (q["price"], q["price_field"], q["time"]) for k, q in doc["quotes"].items()})
     for e in doc["errors"]:
         print(" -", e)
