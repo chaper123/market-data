@@ -1,11 +1,11 @@
 {
- "generated_at_taipei": "2026-10-29 08:20",
+ "generated_at_taipei": "2026-10-30 08:20",
  "days": 7,
  "feeds": [
   {
    "name": "Fed 新聞稿",
    "ok": true,
-   "count": 1
+   "count": 2
   },
   {
    "name": "Fed 演講",
@@ -14,6 +14,14 @@
   }
  ],
  "items": [
+  {
+   "date": "2026-10-30",
+   "title": "Federal Reserve Board announces approval of application by The Bank of Nova Scotia",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261029a.htm",
+   "type": "press",
+   "published_taipei": "2026-10-30 04:30",
+   "published_utc": "2026-10-29T20:30:00Z"
+  },
   {
    "date": "2026-10-29",
    "title": "Federal Reserve issues FOMC statement",
