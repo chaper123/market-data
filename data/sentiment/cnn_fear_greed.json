@@ -1,6 +1,6 @@
 {
- "fetched_at_taipei": "2026-10-30 05:15",
- "time_utc": "2026-10-29T21:02:30+00:00",
+ "fetched_at_taipei": "2026-10-30 08:52",
+ "time_utc": "2026-10-29T23:59:48+00:00",
  "score": 34.6,
  "rating": "fear",
  "previous_close": 35.86,
@@ -17,13 +17,13 @@
   "stock_price_strength": {
    "score": 32,
    "rating": "fear",
-   "time_utc": "2026-10-29T21:02:30Z",
+   "time_utc": "2026-10-29T23:59:48Z",
    "value": -4.57802586909359
   },
   "stock_price_breadth": {
    "score": 35.4,
    "rating": "fear",
-   "time_utc": "2026-10-29T21:02:23Z",
+   "time_utc": "2026-10-29T23:59:44Z",
    "value": 510.75665739717
   },
   "put_call_options": {
@@ -41,7 +41,7 @@
   "junk_bond_demand": {
    "score": 50,
    "rating": "neutral",
-   "time_utc": "2026-10-29T20:10:00Z",
+   "time_utc": "2026-10-29T22:30:00Z",
    "value": 1.21228591935407
   },
   "safe_haven_demand": {

@@ -1,49 +1,49 @@
 {
- "fetched_at_taipei": "2026-10-30 05:15",
+ "fetched_at_taipei": "2026-10-30 08:52",
  "quotes": {
   "TWS:009816:STOCK": {
    "price": 16.01,
    "change": -0.16,
    "change_pct": -0.99,
-   "open": 16.15,
-   "high": 16.18,
-   "low": 15.92,
-   "prev_close": 16.17,
-   "volume_lots": 124360.394,
-   "time_taipei": "2026-10-29 13:30"
+   "open": null,
+   "high": null,
+   "low": null,
+   "prev_close": 16.01,
+   "volume_lots": null,
+   "time_taipei": null
   },
   "TWS:00981A:STOCK": {
    "price": 27.81,
    "change": -0.84,
    "change_pct": -2.93,
-   "open": 28.59,
-   "high": 28.66,
-   "low": 27.58,
-   "prev_close": 28.65,
-   "volume_lots": 171631.55,
-   "time_taipei": "2026-10-29 13:30"
+   "open": null,
+   "high": null,
+   "low": null,
+   "prev_close": 27.81,
+   "volume_lots": null,
+   "time_taipei": null
   },
   "TWS:00411A:STOCK": {
    "price": 10.04,
    "change": -0.17,
    "change_pct": -1.67,
-   "open": 10.11,
-   "high": 10.11,
-   "low": 9.94,
-   "prev_close": 10.21,
-   "volume_lots": 8050.0,
-   "time_taipei": "2026-10-29 13:30"
+   "open": null,
+   "high": null,
+   "low": null,
+   "prev_close": 10.04,
+   "volume_lots": null,
+   "time_taipei": null
   },
   "TWS:TSE01:INDEX": {
    "price": 46368.33,
    "change": -667.25,
    "change_pct": -1.42,
-   "open": 47014.87,
-   "high": 47015.45,
-   "low": 46055.07,
-   "prev_close": 47035.58,
-   "volume_lots": 10121315.0,
-   "time_taipei": "2026-10-29 13:33"
+   "open": null,
+   "high": null,
+   "low": null,
+   "prev_close": 46368.33,
+   "volume_lots": null,
+   "time_taipei": null
   }
  }
 }
