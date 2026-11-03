@@ -16,6 +16,7 @@ Phase 1 新資料由各模組產生（只在完整抓取時執行，失敗不影
   calendars.py             data/calendar/calendar.json（台股休市、FOMC、財報日；CPI 未取得）
   twindex.py               data/index/TAIEX.csv、TAIEX_TR.csv（加權指數與報酬指數，證交所 OpenAPI＋FinMind）
   dividends.py             data/dividends/tw_etf.json（ETF 配息，FinMind＋證交所 OpenAPI 除權除息預告表）
+  twwatch.py               data/tw/<tw_watch 代號>_norm.csv（0056、00878、00919 日線，FinMind＋證交所 OpenAPI）
   chips.py                 data/chips/（關注代號三大法人、集中市場三大法人金額、融資）
   holdings.py              data/holdings/（主動式 ETF 每日持股與前十大變化，統一投信）
 
@@ -41,13 +42,14 @@ import fxbot
 import holdings
 import macro
 import twindex
+import twwatch
 import valuation
 
 # Phase 1 新資料：放在既有日線與匯率之後，每步各自 try，簽名都是 step(cfg, META)
 PHASE1_STEPS = (macro.fetch_macro, macro.fetch_cnn, macro.fetch_taifex_vix, fxbot.fetch_bot_fx,
                 valuation.fetch_valuation, calendars.fetch_calendar,
                 chips.fetch_chips, holdings.fetch_holdings, twindex.fetch_index,
-                dividends.fetch_dividends)
+                dividends.fetch_dividends, twwatch.fetch_watch)
 
 META = {"generated_at_utc": NOW.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "generated_at_taipei": NOW.astimezone(TPE).strftime("%Y-%m-%d %H:%M"),

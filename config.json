@@ -16,6 +16,7 @@
     "00981A": {"market": "TWSE"},
     "00411A": {"market": "TPEX", "min_date": "2026-08-26"}
   },
+  "tw_watch": {"0056": {"market": "TWSE"}, "00878": {"market": "TWSE"}, "00919": {"market": "TWSE"}},
   "tw_index": "TSE01",
   "tw_months": 13,
   "macro": {
