@@ -604,37 +604,38 @@
    "cross_check_ok": true
   },
   "news/headlines": {
-   "status": "partial",
+   "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-03 08:20",
-   "items": 865,
+   "last": "2026-11-03 11:21",
+   "items": 1211,
    "by_tier": {
-    "4": 268,
-    "2": 590,
-    "3": 7
+    "4": 373,
+    "2": 829,
+    "3": 7,
+    "1": 2
    },
-   "feeds_ok": "35/36",
-   "errors": 1,
-   "url_ok": 455,
-   "url_total": 455,
-   "time_suspect_detected": 53,
-   "time_fixed": 53,
+   "feeds_ok": "48/48",
+   "errors": 0,
+   "url_ok": 670,
+   "url_total": 670,
+   "time_suspect_detected": 59,
+   "time_fixed": 59,
    "time_removed": 0
   },
   "news/fed": {
-   "status": "fail",
+   "status": "ok",
    "source": "federalreserve.gov RSS",
-   "last": null,
-   "checked_at_taipei": "2026-11-03 08:20",
-   "items": 0
+   "last": "2026-10-30",
+   "checked_at_taipei": "2026-11-03 11:21",
+   "items": 2
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-03 06:21",
-   "items": 43,
-   "feeds_ok": "2/2",
-   "checked_at_taipei": "2026-11-03 08:20"
+   "last": "2026-11-03 10:43",
+   "items": 87,
+   "feeds_ok": "4/4",
+   "checked_at_taipei": "2026-11-03 11:21"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -694,15 +695,29 @@
    "quotes": 4,
    "no_price": [],
    "errors": 0
+  },
+  "news/topics": {
+   "status": "ok",
+   "source": "headlines.json 的 topics 與標題詞（topics.py）",
+   "last": "2026-11-03 11:21",
+   "days_available": 3,
+   "rising_topic": "fed",
+   "rising_terms": [
+    "revenue",
+    "boost",
+    "mobile",
+    "anthropic",
+    "talks"
+   ]
   }
  },
  "errors": [],
  "us_cutoff_ny": "2026-11-02",
  "tw_cutoff_taipei": "2026-11-02",
  "summary": {
-  "ok": 49,
+  "ok": 52,
   "stale": 0,
-  "fail": 1
+  "fail": 0
  },
  "cross_check_conflicts": [],
  "nav_refreshed_at_taipei": "2026-11-03 10:52"
