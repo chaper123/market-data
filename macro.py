@@ -141,7 +141,8 @@ def fetch_cnn(cfg, meta):
 
 
 def fetch_taifex_vix(cfg, meta):
-    """期交所「前 3 個月每日收盤之臺指選擇權波動率指數」月檔（Big5 文字檔）。
+    """2026-11-03 起停用、不再呼叫（見 fetch.DISABLED）。
+    期交所「前 3 個月每日收盤之臺指選擇權波動率指數」月檔（Big5 文字檔）。
     平常抓本月與上月；CSV 還不存在時多抓兩個月補歷史。期交所從 GitHub 偶爾第一次逾時，所以放寬逾時。"""
     key, path = "sentiment/taifex_vix", os.path.join(DATA, "sentiment", "taifex_vix.csv")
     try:

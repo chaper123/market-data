@@ -46,7 +46,7 @@ import twwatch
 import valuation
 
 # Phase 1 新資料：放在既有日線與匯率之後，每步各自 try，簽名都是 step(cfg, META)
-PHASE1_STEPS = (macro.fetch_macro, macro.fetch_cnn, macro.fetch_taifex_vix, fxbot.fetch_bot_fx,
+PHASE1_STEPS = (macro.fetch_macro, macro.fetch_cnn, fxbot.fetch_bot_fx,
                 valuation.fetch_valuation, calendars.fetch_calendar,
                 chips.fetch_chips, holdings.fetch_holdings, twindex.fetch_index,
                 dividends.fetch_dividends, twwatch.fetch_watch)
@@ -58,6 +58,8 @@ DISABLED = {
                "data/tw/nav_history.csv、nav_raw.json 保留到停用前"),
     "intraday/tw": ("2026-11-03 停用：同樣是 MIS；盤中價改由網站在使用者自己的瀏覽器查（富果，不轉發）；"
                     "data/tw/intraday.json 保留到停用前"),
+    "sentiment/taifex_vix": ("2026-11-03 停用：期交所網站下載區（Dailydownload）不是開放資料介面，期交所 OpenAPI 沒有 VIX；"
+                             "網站與新聞拿掉這一項；data/sentiment/taifex_vix.csv 保留到停用前"),
 }
 
 

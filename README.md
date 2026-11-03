@@ -36,7 +36,7 @@ GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所�
 | `data/macro/<名稱>.csv` | 美股指數與總經日線，已收盤的交易日，約 2 年：SPX、IXIC、SOX、VIX、TNX（10 年期殖利率 %）、DXY、GOLD、WTI、TSM（代號對照見 `config.json` 的 `macro`）。DXY、GOLD、WTI 是 24 小時交易：不收週末列；交易日在美東 17:00 結束、18:00 晚盤開盤後 Yahoo 的當天 K 棒會變成晚盤未完成資料，所以只在美東 17:10～18:00 收當天，其餘時間只到前一天（meta 的 `cutoff`、`cutoff_rule`；晚盤重抓時沿用先前收到的乾淨 K 棒，記在 `last_kept_from_previous`） | Yahoo / 鉅亨網（SPX、IXIC、SOX、DXY）、MoneyDJ（TSM，最後一根多數決同 us/） |
 | `data/sentiment/cnn_fear_greed.json` | CNN 恐懼貪婪目前分數與評等、前收／一週／一月／一年前，以及 7 個分項 | CNN dataviz |
 | `data/sentiment/cnn_fear_greed.csv` | 恐懼貪婪每日收盤分數：date,score,rating（逐日累積） | 同上 |
-| `data/sentiment/taifex_vix.csv` | 臺指選擇權波動率指數每日收盤：date,vix（逐日累積） | 期交所月檔 |
+| `data/sentiment/taifex_vix.csv` | **2026-11-03 停用**（期交所網站下載區，期交所 OpenAPI 沒有 VIX；檔案保留停用前內容，meta 標 `disabled`）：臺指選擇權波動率指數每日收盤：date,vix（逐日累積） | 期交所月檔 |
 | `data/valuation/us.json` | 可買標的最新估值：個股 Forward PE、PEG，VOO 本益比；頁面股價與交易日、隱含預估 EPS 與一週前比較（變動超過 ±20% 標記）、Yahoo 下次財報日 | stockanalysis / 頁面股價與 repo 日線核對；財報日 Yahoo |
 | `data/valuation/us_history.csv` | 估值每日紀錄：date,symbol,price,fwd_pe,peg,pe（逐日累積，空白＝n/a） | 同上 |
 | `data/calendar/calendar.json` | 行事曆：台股開休市（entries 含「開始交易日」等其實有交易的日子，closed 是平日休市日）、FOMC 會議（今年與已公布的明年，sep＝有經濟預測）、可買個股下次財報日；CPI 目前標「未取得」 | 證交所 OpenAPI（2026-11 起不再讀網站 rwd 版；明年的休市日 OpenAPI 公布後收錄，之前沿用上一次）；Fed 官網；財報日同 valuation |
