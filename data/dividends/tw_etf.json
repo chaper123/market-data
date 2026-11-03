@@ -1,0 +1,466 @@
+{
+ "generated_at_taipei": "2026-11-03 11:21",
+ "source": "FinMind TaiwanStockDividend（歷史、發放日）＋證交所 OpenAPI TWT48U_ALL（除權除息預告）",
+ "since": "2022-11-03",
+ "etfs": {
+  "009816": {
+   "events": [],
+   "ttm_cash": 0,
+   "ttm_count": 0,
+   "last": null,
+   "next": null
+  },
+  "00981A": {
+   "events": [
+    {
+     "ex_date": "2026-03-17",
+     "pay_date": "2026-04-10",
+     "cash": 0.41,
+     "year": "115",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2026-06-16",
+     "pay_date": "2026-07-09",
+     "cash": 0.63,
+     "year": "115",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2026-09-16",
+     "pay_date": "2026-10-13",
+     "cash": 0.63,
+     "year": "115",
+     "source": "FinMind",
+     "official_checked": false
+    }
+   ],
+   "ttm_cash": 1.67,
+   "ttm_count": 3,
+   "last": {
+    "ex_date": "2026-09-16",
+    "pay_date": "2026-10-13",
+    "cash": 0.63,
+    "year": "115",
+    "source": "FinMind",
+    "official_checked": false
+   },
+   "next": null
+  },
+  "0056": {
+   "events": [
+    {
+     "ex_date": "2023-07-18",
+     "pay_date": "2023-08-11",
+     "cash": 1.0,
+     "year": "112",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2023-10-19",
+     "pay_date": "2023-11-14",
+     "cash": 1.2,
+     "year": "112",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2024-01-17",
+     "pay_date": "2024-02-21",
+     "cash": 0.7,
+     "year": "113",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2024-04-18",
+     "pay_date": "2024-05-15",
+     "cash": 0.79,
+     "year": "113",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2024-07-16",
+     "pay_date": "2024-08-09",
+     "cash": 1.07,
+     "year": "113",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2024-10-17",
+     "pay_date": "2024-11-12",
+     "cash": 1.07,
+     "year": "113",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2025-01-17",
+     "pay_date": "2025-02-20",
+     "cash": 1.07,
+     "year": "114",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2025-04-23",
+     "pay_date": "2025-05-14",
+     "cash": 1.07,
+     "year": "114",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2025-07-21",
+     "pay_date": "2025-08-08",
+     "cash": 0.866,
+     "year": "114",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2025-10-23",
+     "pay_date": "2025-11-14",
+     "cash": 0.866,
+     "year": "114",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2026-01-22",
+     "pay_date": "2026-02-11",
+     "cash": 0.866,
+     "year": "115",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2026-04-23",
+     "pay_date": "2026-05-14",
+     "cash": 1.0,
+     "year": "115",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2026-07-21",
+     "pay_date": "2026-08-10",
+     "cash": 1.35,
+     "year": "115",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2026-10-22",
+     "pay_date": "2026-11-11",
+     "cash": 1.72,
+     "year": "115",
+     "source": "FinMind",
+     "official_checked": false
+    }
+   ],
+   "ttm_cash": 4.936,
+   "ttm_count": 4,
+   "last": {
+    "ex_date": "2026-10-22",
+    "pay_date": "2026-11-11",
+    "cash": 1.72,
+    "year": "115",
+    "source": "FinMind",
+    "official_checked": false
+   },
+   "next": null
+  },
+  "00878": {
+   "events": [
+    {
+     "ex_date": "2022-11-16",
+     "pay_date": "2022-12-19",
+     "cash": 0.28,
+     "year": "111",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2023-02-16",
+     "pay_date": "2023-03-22",
+     "cash": 0.27,
+     "year": "112",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2023-05-17",
+     "pay_date": "2023-06-12",
+     "cash": 0.27,
+     "year": "112",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2023-08-16",
+     "pay_date": "2023-09-11",
+     "cash": 0.35,
+     "year": "112",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2023-11-16",
+     "pay_date": "2023-12-12",
+     "cash": 0.35,
+     "year": "112",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2024-02-27",
+     "pay_date": "2024-03-25",
+     "cash": 0.4,
+     "year": "113",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2024-05-17",
+     "pay_date": "2024-06-13",
+     "cash": 0.51,
+     "year": "113",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2024-08-16",
+     "pay_date": "2024-09-11",
+     "cash": 0.55,
+     "year": "113",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2024-11-18",
+     "pay_date": "2024-12-12",
+     "cash": 0.55,
+     "year": "113",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2025-02-20",
+     "pay_date": "2025-03-18",
+     "cash": 0.5,
+     "year": "114",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2025-05-19",
+     "pay_date": "2025-06-13",
+     "cash": 0.47,
+     "year": "114",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2025-08-18",
+     "pay_date": "2025-09-11",
+     "cash": 0.4,
+     "year": "114",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2025-11-18",
+     "pay_date": "2025-12-12",
+     "cash": 0.4,
+     "year": "114",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2026-02-26",
+     "pay_date": "2026-03-23",
+     "cash": 0.42,
+     "year": "115",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2026-05-19",
+     "pay_date": "2026-06-12",
+     "cash": 0.66,
+     "year": "115",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2026-08-18",
+     "pay_date": "2026-09-11",
+     "cash": 1.01,
+     "year": "115",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2026-11-17",
+     "pay_date": null,
+     "cash": null,
+     "year": null,
+     "source": "證交所除權除息預告表",
+     "official_checked": true
+    }
+   ],
+   "ttm_cash": 2.49,
+   "ttm_count": 4,
+   "last": {
+    "ex_date": "2026-08-18",
+    "pay_date": "2026-09-11",
+    "cash": 1.01,
+    "year": "115",
+    "source": "FinMind",
+    "official_checked": false
+   },
+   "next": {
+    "ex_date": "2026-11-17",
+    "pay_date": null,
+    "cash": null,
+    "year": null,
+    "source": "證交所除權除息預告表",
+    "official_checked": true
+   }
+  },
+  "00919": {
+   "events": [
+    {
+     "ex_date": "2023-06-16",
+     "pay_date": "2023-07-14",
+     "cash": 0.54,
+     "year": "112",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2023-09-18",
+     "pay_date": "2023-10-17",
+     "cash": 0.54,
+     "year": "112",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2023-12-18",
+     "pay_date": "2024-01-12",
+     "cash": 0.55,
+     "year": "112",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2024-03-18",
+     "pay_date": "2024-04-15",
+     "cash": 0.66,
+     "year": "113",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2024-06-24",
+     "pay_date": "2024-07-15",
+     "cash": 0.7,
+     "year": "113",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2024-09-23",
+     "pay_date": "2024-10-15",
+     "cash": 0.72,
+     "year": "113",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2024-12-20",
+     "pay_date": "2025-01-13",
+     "cash": 0.72,
+     "year": "113",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2025-03-18",
+     "pay_date": "2025-04-15",
+     "cash": 0.72,
+     "year": "114",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2025-06-17",
+     "pay_date": "2025-07-11",
+     "cash": 0.72,
+     "year": "114",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2025-09-16",
+     "pay_date": "2025-10-15",
+     "cash": 0.54,
+     "year": "114",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2025-12-16",
+     "pay_date": "2026-01-13",
+     "cash": 0.54,
+     "year": "114",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2026-03-17",
+     "pay_date": "2026-04-14",
+     "cash": 0.78,
+     "year": "115",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2026-06-16",
+     "pay_date": "2026-07-13",
+     "cash": 1.0,
+     "year": "115",
+     "source": "FinMind",
+     "official_checked": false
+    },
+    {
+     "ex_date": "2026-09-16",
+     "pay_date": "2026-10-15",
+     "cash": 1.1,
+     "year": "115",
+     "source": "FinMind",
+     "official_checked": false
+    }
+   ],
+   "ttm_cash": 3.42,
+   "ttm_count": 4,
+   "last": {
+    "ex_date": "2026-09-16",
+    "pay_date": "2026-10-15",
+    "cash": 1.1,
+    "year": "115",
+    "source": "FinMind",
+    "official_checked": false
+   },
+   "next": null
+  }
+ },
+ "note": "cash 是每單位現金（元）；ttm_cash 是除息日在最近 365 天的合計。沒有配息紀錄的代號 events 是空的"
+}

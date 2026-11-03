@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-11-02T22:15:17Z",
- "generated_at_taipei": "2026-11-03 06:15",
+ "generated_at_utc": "2026-11-03T03:21:08Z",
+ "generated_at_taipei": "2026-11-03 11:21",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -233,16 +233,16 @@
   "tv/snapshot": {
    "status": "ok",
    "symbols": 13,
-   "tw_bar_is_intraday": false,
+   "tw_bar_is_intraday": true,
    "us_bar_is_intraday": false
   },
   "fx/usdtwd_mid": {
    "status": "ok",
    "source": "Yahoo TWD=X 收盤（市場中間價，不是台銀即期賣出）",
-   "rows": 516,
+   "rows": 517,
    "first": "2024-11-04",
-   "last": "2026-11-02",
-   "last_rate": 32.588
+   "last": "2026-11-03",
+   "last_rate": 32.696
   },
   "macro/SPX": {
    "status": "ok",
@@ -262,10 +262,10 @@
    "rows": 500,
    "first": "2024-11-04",
    "last": "2026-11-02",
-   "last_close": 25164.31640625,
+   "last_close": 25164.36328125,
    "prev_close": 25437.0,
    "name": "Nasdaq 綜合指數",
-   "cross_check": "2026-11-02 收盤 25164.31640625 vs cnyes 25164.315（差 +0.00%）",
+   "cross_check": "2026-11-02 收盤 25164.36328125 vs cnyes 25164.315（差 +0.00%）",
    "cross_check_ok": true
   },
   "macro/SOX": {
@@ -311,9 +311,10 @@
    "last_close": 101.77999877929688,
    "prev_close": 101.87999725341797,
    "name": "美元指數",
-   "cutoff": "2026-11-02",
+   "cutoff": "2026-11-01",
    "cutoff_rule": "24h-v1：美東 17:10～18:00 收當天，其餘只收到前一天；不收週末",
-   "cross_check": "2026-11-02 收盤 101.77999877929688 vs cnyes 101.78（差 -0.00%）",
+   "last_kept_from_previous": "2026-11-02",
+   "cross_check": "cnyes 無 2026-11-02 資料（cnyes 最後 2026-10-30）",
    "cross_check_ok": true
   },
   "macro/GOLD": {
@@ -325,8 +326,9 @@
    "last_close": 3956.60009765625,
    "prev_close": 3898.89990234375,
    "name": "COMEX 黃金期貨（近月）",
-   "cutoff": "2026-11-02",
+   "cutoff": "2026-11-01",
    "cutoff_rule": "24h-v1：美東 17:10～18:00 收當天，其餘只收到前一天；不收週末",
+   "last_kept_from_previous": "2026-11-02",
    "cross_check": "無第二來源，未核對"
   },
   "macro/WTI": {
@@ -338,8 +340,9 @@
    "last_close": 96.26000213623047,
    "prev_close": 104.12000274658203,
    "name": "WTI 原油期貨（近月）",
-   "cutoff": "2026-11-02",
+   "cutoff": "2026-11-01",
    "cutoff_rule": "24h-v1：美東 17:10～18:00 收當天，其餘只收到前一天；不收週末",
+   "last_kept_from_previous": "2026-11-02",
    "cross_check": "無第二來源，未核對"
   },
   "macro/TSM": {
@@ -368,7 +371,7 @@
    "last_score": 22.73,
    "score_now": 22.73,
    "rating_now": "extreme fear",
-   "time_utc": "2026-11-02T21:58:56+00:00",
+   "time_utc": "2026-11-02T23:59:46+00:00",
    "components": 7,
    "cross_check": "無第二來源，未核對"
   },
@@ -390,7 +393,7 @@
    "last_rate": 32.645,
    "last_spot_buy": 32.545,
    "last_cash_sell": 32.865,
-   "cross_check": "2026-11-02 即期賣出 32.645 vs Yahoo 中間價 32.588（差 +0.057 元，正常 -0.3～+0.4）",
+   "cross_check": "2026-11-02 即期賣出 32.645 vs Yahoo 中間價 32.6064（差 +0.039 元，正常 -0.3～+0.4）",
    "cross_check_ok": true
   },
   "valuation/earnings": {
@@ -411,12 +414,12 @@
    "source": "stockanalysis",
    "last": "2026-11-02",
    "price": 691.32,
-   "fwd_pe": 18.92,
+   "fwd_pe": 18.7,
    "peg": null,
-   "pe": 23.76,
+   "pe": 23.53,
    "cross_check": "2026-11-02 頁面股價 691.32 vs repo 收盤 691.32（差 +0.00%）",
    "cross_check_ok": true,
-   "week_check": "隱含 EPS 較 2026-10-26 +1.5%（超過 ±20% 要人工確認）",
+   "week_check": "隱含 EPS 較 2026-10-26 +2.5%（超過 ±20% 要人工確認）",
    "week_check_ok": true
   },
   "valuation/GOOGL": {
@@ -424,25 +427,25 @@
    "source": "stockanalysis",
    "last": "2026-11-02",
    "price": 278.99,
-   "fwd_pe": 20.3,
+   "fwd_pe": 20.24,
    "peg": 1.56,
    "pe": 14.56,
    "cross_check": "2026-11-02 頁面股價 278.99 vs repo 收盤 278.99（差 +0.00%）",
    "cross_check_ok": true,
-   "week_check": "隱含 EPS 較 2026-10-26 +2.7%（超過 ±20% 要人工確認）",
+   "week_check": "隱含 EPS 較 2026-10-26 +3.0%（超過 ±20% 要人工確認）",
    "week_check_ok": true
   },
   "valuation/NVDA": {
    "status": "ok",
    "source": "stockanalysis",
    "last": "2026-11-02",
-   "price": 202.2,
+   "price": 202.06,
    "fwd_pe": 16.71,
-   "peg": 0.34,
-   "pe": 25.57,
-   "cross_check": "2026-11-02 頁面股價 202.2 vs repo 收盤 202.06（差 +0.07%）",
+   "peg": 0.33,
+   "pe": 25.55,
+   "cross_check": "2026-11-02 頁面股價 202.06 vs repo 收盤 202.06（差 +0.00%）",
    "cross_check_ok": true,
-   "week_check": "隱含 EPS 較 2026-10-26 +0.1%（超過 ±20% 要人工確認）",
+   "week_check": "隱含 EPS 較 2026-10-26 -0.0%（超過 ±20% 要人工確認）",
    "week_check_ok": true
   },
   "valuation/TSLA": {
@@ -451,7 +454,7 @@
    "last": "2026-11-02",
    "price": 403.82,
    "fwd_pe": 188.9,
-   "peg": 5.44,
+   "peg": 5.49,
    "pe": 443.67,
    "cross_check": "2026-11-02 頁面股價 403.82 vs repo 收盤 403.82（差 +0.00%）",
    "cross_check_ok": true,
@@ -475,12 +478,13 @@
    "status": "ok",
    "source": "stockanalysis",
    "last": "2026-11-02",
-   "price": 338.56,
-   "fwd_pe": 36.89,
-   "peg": 3.52,
-   "pe": 38.84,
-   "cross_check": "頁面為盤中價（Nov 2, 2026, 3:35 PM EST），未核對",
-   "week_check": "隱含 EPS 較 2026-10-26 +0.1%（超過 ±20% 要人工確認）",
+   "price": 338.32,
+   "fwd_pe": 35.39,
+   "peg": 3.33,
+   "pe": 37.67,
+   "cross_check": "2026-11-02 頁面股價 338.32 vs repo 收盤 338.32（差 +0.00%）",
+   "cross_check_ok": true,
+   "week_check": "隱含 EPS 較 2026-10-26 +4.3%（超過 ±20% 要人工確認）",
    "week_check_ok": true
   },
   "calendar/tw_holidays": {
@@ -513,10 +517,7 @@
    "rows": 48,
    "first": "2026-10-07",
    "last": "2026-11-02",
-   "added": [
-    "2026-11-02 TWSE",
-    "2026-11-02 TPEX"
-   ],
+   "added": [],
    "latest_total": {
     "00411A": -5083795,
     "009816": -80507341,
@@ -531,9 +532,7 @@
    "rows": 16,
    "first": "2026-10-07",
    "last": "2026-11-02",
-   "added": [
-    "2026-11-02"
-   ],
+   "added": [],
    "latest_foreign": -73520805132,
    "latest_total": -54993116016,
    "cross_check": "合計＝分項加總",
@@ -545,9 +544,7 @@
    "rows": 16,
    "first": "2026-10-07",
    "last": "2026-11-02",
-   "added": [
-    "2026-11-02"
-   ],
+   "added": [],
    "latest_margin_amount_k": 622699365,
    "cross_check": "單一來源，未核對"
   },
@@ -562,7 +559,7 @@
    "top10_in": 1,
    "top10_out": 1,
    "weight_moves": 0,
-   "cross_check": "nav_history 沒有 2026-11-02，淨值未核對；權重加總 94.35% vs 股票市值／淨資產 94.36%",
+   "cross_check": "2026-11-02 淨值 26.51 vs 證交所 mis 26.51（差 +0.00）；權重加總 94.35% vs 股票市值／淨資產 94.36%",
    "cross_check_ok": true
   },
   "holdings/00411A": {
@@ -601,6 +598,51 @@
    "official_last": "2026-11-02",
    "finmind_last": "2026-11-02",
    "cross_check": "OpenAPI 與 FinMind 重疊 1 天，收盤不一致 0 天",
+   "cross_check_ok": true
+  },
+  "dividends/tw_etf": {
+   "status": "ok",
+   "source": "FinMind TaiwanStockDividend（歷史、發放日）＋證交所 OpenAPI TWT48U_ALL（除權除息預告）",
+   "codes": 5,
+   "events": 48,
+   "last": "2026-10-22",
+   "next": [
+    "00878 2026-11-17 金額未公布"
+   ],
+   "cross_check": "預告表 1 筆，與 FinMind 不一致 0 筆",
+   "cross_check_ok": true
+  },
+  "tw_watch/0056": {
+   "status": "ok",
+   "source": "FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL（最新一天）",
+   "rows": 263,
+   "first": "2025-09-26",
+   "last": "2026-11-02",
+   "last_close": 55.75,
+   "prev_close": 55.85,
+   "cross_check": "2026-11-02 收盤 OpenAPI 55.75 vs FinMind 55.75",
+   "cross_check_ok": true
+  },
+  "tw_watch/00878": {
+   "status": "ok",
+   "source": "FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL（最新一天）",
+   "rows": 263,
+   "first": "2025-09-26",
+   "last": "2026-11-02",
+   "last_close": 34.8,
+   "prev_close": 34.81,
+   "cross_check": "2026-11-02 收盤 OpenAPI 34.8 vs FinMind 34.8",
+   "cross_check_ok": true
+  },
+  "tw_watch/00919": {
+   "status": "ok",
+   "source": "FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL（最新一天）",
+   "rows": 263,
+   "first": "2025-09-26",
+   "last": "2026-11-02",
+   "last_close": 32.48,
+   "prev_close": 32.59,
+   "cross_check": "2026-11-02 收盤 OpenAPI 32.48 vs FinMind 32.48",
    "cross_check_ok": true
   },
   "news/headlines": {
@@ -715,10 +757,9 @@
  "us_cutoff_ny": "2026-11-02",
  "tw_cutoff_taipei": "2026-11-02",
  "summary": {
-  "ok": 52,
+  "ok": 56,
   "stale": 0,
   "fail": 0
  },
- "cross_check_conflicts": [],
- "nav_refreshed_at_taipei": "2026-11-03 10:52"
+ "cross_check_conflicts": []
 }

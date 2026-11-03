@@ -1,6 +1,6 @@
 {
  "generated_from": "repo 日線（indicators.py）；綜合評分來自 TradingView",
- "tv_fetched_at_taipei": "2026-11-03 06:15",
+ "tv_fetched_at_taipei": "2026-11-03 11:21",
  "rules": {
   "trend_adx": 25,
   "range_adx": 20
@@ -577,16 +577,16 @@
    "close": 15.56,
    "change_pct": -0.701978302488826,
    "rating": {
-    "all": "賣出",
-    "ma": "強力賣出",
-    "osc": "中立",
-    "all_value": -0.38461538461538464
+    "all": "無資料",
+    "ma": "無資料",
+    "osc": "無資料",
+    "all_value": null
    },
    "one_line": "趨勢不明，等方向確認",
    "structure": "趨勢不明（ADX 22.8，介於 20～25）",
    "position": "站上 1/10 條（EMA100）；短均線全數失守、只剩部分長均線撐著，結構偏弱（樣本不足：EMA200、SMA200）",
    "contradictions": [
-    "綜合評分賣出，但 StochRSI 4.7、W%R -94.5 超賣 → 短線殺過頭，追空風險高"
+    "訊號一致"
    ],
    "support": [
     {
@@ -627,7 +627,7 @@
    },
    "last_date": "2026-11-02",
    "rows": 177,
-   "rating_skipped": null
+   "rating_skipped": "收盤 15.31 ≠ 15.56（可能是盤中數字）"
   },
   "00981A": {
    "code": "00981A",
@@ -635,16 +635,16 @@
    "close": 26.57,
    "change_pct": -0.33758439609902213,
    "rating": {
-    "all": "賣出",
-    "ma": "強力賣出",
-    "osc": "中立",
-    "all_value": -0.3333333333333333
+    "all": "無資料",
+    "ma": "無資料",
+    "osc": "無資料",
+    "all_value": null
    },
    "one_line": "空方趨勢成立，不宜接刀",
    "structure": "有趨勢（ADX 28.8 > 25，空方主導）",
    "position": "站上 2/12 條（EMA200、SMA200）；短均線全數失守、只剩部分長均線撐著，結構偏弱",
    "contradictions": [
-    "綜合評分賣出，但 StochRSI 9.0、W%R -92.5 超賣 → 短線殺過頭，追空風險高"
+    "訊號一致"
    ],
    "support": [
     {
@@ -685,7 +685,7 @@
    },
    "last_date": "2026-11-02",
    "rows": 241,
-   "rating_skipped": null
+   "rating_skipped": "收盤 25.92 ≠ 26.57（可能是盤中數字）"
   },
   "00411A": {
    "code": "00411A",
@@ -739,7 +739,7 @@
    },
    "last_date": "2026-11-02",
    "rows": 44,
-   "rating_skipped": "ATR 0.37 vs 0.25（TradingView 高低點資料有誤）"
+   "rating_skipped": "收盤 9.19 ≠ 9.60（可能是盤中數字）；ATR 0.37 vs 0.25（TradingView 高低點資料有誤）"
   }
  }
 }
