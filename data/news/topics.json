@@ -1,5 +1,5 @@
 {
- "generated_at_taipei": "2026-11-03 11:21",
+ "generated_at_taipei": "2026-11-03 11:40",
  "rule": "count_1d＝最近 24 小時；count_7d／count_30d＝最近 7／30 個台北日曆日（含今天）；rise＝(count_7d/7)÷(count_30d/30)，歷史不足時分母用已有天數；rising_terms 的 score＝近 24 小時則數÷(今天以外的日平均＋1)。固定規則計數，不做預測",
  "days_available": 3,
  "history_since": "2026-11-01",
@@ -50,9 +50,9 @@
   {
    "topic": "china",
    "label": "中國",
-   "count_1d": 45,
-   "count_7d": 54,
-   "count_30d": 54,
+   "count_1d": 46,
+   "count_7d": 55,
+   "count_30d": 55,
    "rise": 1.0,
    "sample_ids": [
     "bdeabf64fa270333",
@@ -65,9 +65,9 @@
   {
    "topic": "taiwan",
    "label": "台灣",
-   "count_1d": 61,
-   "count_7d": 75,
-   "count_30d": 75,
+   "count_1d": 60,
+   "count_7d": 76,
+   "count_30d": 76,
    "rise": 1.0,
    "sample_ids": [
     "b7619de912f9f06d",
@@ -80,9 +80,9 @@
   {
    "topic": "oil",
    "label": "油價",
-   "count_1d": 14,
-   "count_7d": 15,
-   "count_30d": 15,
+   "count_1d": 16,
+   "count_7d": 17,
+   "count_30d": 17,
    "rise": 1.0,
    "sample_ids": [
     "23eecc68c21daf80",
@@ -95,9 +95,9 @@
   {
    "topic": "war",
    "label": "戰爭與地緣",
-   "count_1d": 12,
-   "count_7d": 15,
-   "count_30d": 15,
+   "count_1d": 13,
+   "count_7d": 16,
+   "count_30d": 16,
    "rise": 1.0,
    "sample_ids": [
     "a47ab37875676e3d",
@@ -134,16 +134,16 @@
   {
    "topic": "earnings",
    "label": "財報",
-   "count_1d": 81,
-   "count_7d": 92,
-   "count_30d": 92,
+   "count_1d": 89,
+   "count_7d": 102,
+   "count_30d": 102,
    "rise": 1.0,
    "sample_ids": [
     "90e5baf29f10498e",
     "c570447d10220e8c",
     "004c6177bae2349c",
     "af960ea26cb65f9a",
-    "aa2c914bd01a0fa0"
+    "cdcc0186acf4509b"
    ]
   },
   {
@@ -158,9 +158,9 @@
   {
    "topic": "merger",
    "label": "併購",
-   "count_1d": 15,
-   "count_7d": 17,
-   "count_30d": 17,
+   "count_1d": 16,
+   "count_7d": 18,
+   "count_30d": 18,
    "rise": 1.0,
    "sample_ids": [
     "671c5f7522a5b663",
@@ -175,35 +175,61 @@
  "rising_terms": [
   {
    "term": "revenue",
-   "count_1d": 28,
-   "count_30d": 28,
-   "score": 28.0,
+   "count_1d": 33,
+   "count_30d": 33,
+   "score": 33.0,
    "sample_ids": [
     "90e5baf29f10498e",
     "aa2c914bd01a0fa0",
-    "eb8760011deb0dfa",
+    "88cc6c12eada6996",
+    "172f93dcd0a4a742",
+    "eb8760011deb0dfa"
+   ]
+  },
+  {
+   "term": "anthropic",
+   "count_1d": 71,
+   "count_30d": 74,
+   "score": 28.4,
+   "sample_ids": [
+    "90e5baf29f10498e",
+    "08233f503ef0a79a",
+    "004c6177bae2349c",
+    "6c399aac8555b5f6",
+    "e7937c921499e29c"
+   ]
+  },
+  {
+   "term": "ipo",
+   "count_1d": 41,
+   "count_30d": 42,
+   "score": 27.33,
+   "sample_ids": [
+    "90e5baf29f10498e",
+    "08233f503ef0a79a",
+    "e7937c921499e29c",
     "47fa43d961b88e46",
     "9e9b498a3429278c"
    ]
   },
   {
    "term": "boost",
-   "count_1d": 24,
-   "count_30d": 24,
-   "score": 24.0,
+   "count_1d": 26,
+   "count_30d": 26,
+   "score": 26.0,
    "sample_ids": [
+    "3b10aba378cac494",
     "8c05d24f2d415a81",
     "a5b5d6e96d10e71d",
     "b8afdd6e2674e8f6",
-    "b56dbd1fd14f9284",
-    "e4c91b508e5dfad0"
+    "b56dbd1fd14f9284"
    ]
   },
   {
    "term": "mobile",
-   "count_1d": 23,
-   "count_30d": 23,
-   "score": 23.0,
+   "count_1d": 24,
+   "count_30d": 24,
+   "score": 24.0,
    "sample_ids": [
     "8c05d24f2d415a81",
     "7ac238a08b60d850",
@@ -213,16 +239,16 @@
    ]
   },
   {
-   "term": "anthropic",
-   "count_1d": 72,
-   "count_30d": 77,
-   "score": 20.57,
+   "term": "estimates",
+   "count_1d": 20,
+   "count_30d": 20,
+   "score": 20.0,
    "sample_ids": [
-    "90e5baf29f10498e",
-    "004c6177bae2349c",
-    "6c399aac8555b5f6",
-    "e7937c921499e29c",
-    "47fa43d961b88e46"
+    "5c5125e5d453bed5",
+    "c0a05ad1c52e4c95",
+    "698a20acacebe0a2",
+    "4261dfc2cb36516c",
+    "5efda6f025bc722e"
    ]
   },
   {
@@ -239,42 +265,29 @@
    ]
   },
   {
-   "term": "ipo",
-   "count_1d": 42,
-   "count_30d": 45,
-   "score": 16.8,
-   "sample_ids": [
-    "90e5baf29f10498e",
-    "e7937c921499e29c",
-    "47fa43d961b88e46",
-    "9e9b498a3429278c",
-    "eac0bcb975df7ef5"
-   ]
-  },
-  {
    "term": "apple",
-   "count_1d": 73,
-   "count_30d": 80,
-   "score": 16.22,
+   "count_1d": 80,
+   "count_30d": 87,
+   "score": 17.78,
    "sample_ids": [
     "6df006e6a87b13ea",
     "47251a6642a7a0f2",
     "5c5125e5d453bed5",
-    "c570447d10220e8c",
-    "af960ea26cb65f9a"
+    "29486050041057b7",
+    "c570447d10220e8c"
    ]
   },
   {
-   "term": "estimates",
-   "count_1d": 16,
-   "count_30d": 16,
-   "score": 16.0,
+   "term": "results",
+   "count_1d": 17,
+   "count_30d": 17,
+   "score": 17.0,
    "sample_ids": [
-    "5c5125e5d453bed5",
-    "c0a05ad1c52e4c95",
-    "698a20acacebe0a2",
-    "4261dfc2cb36516c",
-    "eb8760011deb0dfa"
+    "76792b1d4efd8e18",
+    "2a57a2e77c7255c3",
+    "2e6875d8a5cfe4df",
+    "546c2202031f58e1",
+    "b4da606b406f1e8a"
    ]
   },
   {
@@ -285,22 +298,9 @@
    "sample_ids": [
     "c9d070c919a4cbd5",
     "e6f9f6e5b85b4de5",
+    "de2387142b422ba5",
     "d5811a5f6f7e3233",
-    "8bad60a95844d284",
-    "1f9e2bdc3587a60c"
-   ]
-  },
-  {
-   "term": "results",
-   "count_1d": 16,
-   "count_30d": 16,
-   "score": 16.0,
-   "sample_ids": [
-    "76792b1d4efd8e18",
-    "2a57a2e77c7255c3",
-    "2e6875d8a5cfe4df",
-    "546c2202031f58e1",
-    "b4da606b406f1e8a"
+    "8bad60a95844d284"
    ]
   },
   {
@@ -317,6 +317,19 @@
    ]
   },
   {
+   "term": "quarter",
+   "count_1d": 15,
+   "count_30d": 15,
+   "score": 15.0,
+   "sample_ids": [
+    "151a8473b1aeee16",
+    "6c7ebc33073085e0",
+    "ba0d63ac0d3b4260",
+    "6f1d30164c37906e",
+    "cb430857d5850dc5"
+   ]
+  },
+  {
    "term": "ahead",
    "count_1d": 21,
    "count_30d": 22,
@@ -330,32 +343,6 @@
    ]
   },
   {
-   "term": "midterm",
-   "count_1d": 21,
-   "count_30d": 22,
-   "score": 14.0,
-   "sample_ids": [
-    "7a6eb92c1a8ef495",
-    "87149241edfd74a1",
-    "e419ad52d7947f96",
-    "e85f22cd04816e77",
-    "4ad95245a24be4d3"
-   ]
-  },
-  {
-   "term": "quarter",
-   "count_1d": 14,
-   "count_30d": 14,
-   "score": 14.0,
-   "sample_ids": [
-    "151a8473b1aeee16",
-    "6c7ebc33073085e0",
-    "ba0d63ac0d3b4260",
-    "6f1d30164c37906e",
-    "cb430857d5850dc5"
-   ]
-  },
-  {
    "term": "中國",
    "count_1d": 14,
    "count_30d": 14,
@@ -366,6 +353,19 @@
     "da438599ca3f1383",
     "25a4e9409e5829af",
     "47a444d1eb289e2f"
+   ]
+  },
+  {
+   "term": "midterm",
+   "count_1d": 20,
+   "count_30d": 21,
+   "score": 13.33,
+   "sample_ids": [
+    "7a6eb92c1a8ef495",
+    "87149241edfd74a1",
+    "e419ad52d7947f96",
+    "e85f22cd04816e77",
+    "4ad95245a24be4d3"
    ]
   }
  ]
