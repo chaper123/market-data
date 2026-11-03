@@ -1,5 +1,5 @@
 {
- "fetched_at_taipei": "2026-11-03 11:44",
+ "fetched_at_taipei": "2026-11-03 16:49",
  "week_limit_pct": 20,
  "symbols": {
   "VOO": {
@@ -22,7 +22,7 @@
   "GOOGL": {
    "kind": "stock",
    "fwd_pe": 20.24,
-   "peg": 1.56,
+   "peg": 1.55,
    "pe": 14.56,
    "price": 278.99,
    "price_date": "2026-11-02",
@@ -105,19 +105,19 @@
   },
   "AAPL": {
    "kind": "stock",
-   "fwd_pe": 35.39,
-   "peg": 3.33,
+   "fwd_pe": 35.6,
+   "peg": 3.34,
    "pe": 37.67,
    "price": 338.32,
    "price_date": "2026-11-02",
    "price_time": "Nov 2, 2026, 4:00 PM EST",
    "market_state": "closed",
    "source": "https://stockanalysis.com/stocks/aapl/statistics/",
-   "implied_eps": 9.5598,
+   "implied_eps": 9.5034,
    "week": {
     "ref_date": "2026-10-26",
     "ref_ratio": 37.52,
-    "eps_change_pct": 4.3
+    "eps_change_pct": 3.68
    },
    "earnings_dates": [
     "2026-11-02"
