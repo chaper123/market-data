@@ -56,14 +56,19 @@
       {"id": "FED",    "q": "\"Federal Reserve\" OR Powell OR FOMC",             "symbols": [],                "match": ["federal reserve", "powell", "fomc", "fed"]},
       {"id": "TARIFF", "q": "tariffs OR \"Trump trade\"",                       "symbols": [],                "match": ["tariff", "trade war"]},
       {"id": "CHIPS",  "q": "\"export controls\" chips OR semiconductors",       "symbols": [],                "match": ["export control", "chip export"]},
-      {"id": "TAIWAN", "q": "Taiwan",                                          "symbols": [],                "match": ["taiwan"]}
+      {"id": "TAIWAN", "q": "Taiwan",                                          "symbols": [],                "match": ["taiwan"]},
+      {"id": "SEMI",   "q": "semiconductor supply chain OR chipmakers OR CoWoS", "symbols": [],              "match": ["semiconductor", "chipmaker", "cowos", "foundry"]},
+      {"id": "ANTHROPIC", "q": "Anthropic",                                    "symbols": ["ANTHROPIC"],     "match": ["anthropic"]},
+      {"id": "OPENAI", "q": "OpenAI OR ChatGPT OR \"Sam Altman\"",              "symbols": ["OPENAI"],        "match": ["openai", "chatgpt", "sam altman"]}
     ],
     "zh": [
       {"id": "2330",   "q": "台積電",                                          "symbols": ["2330", "TSM"],   "match": ["台積電", "台積"]},
       {"id": "TWSE",   "q": "台股 OR 加權指數",                                "symbols": [],                "match": ["台股", "加權指數", "大盤"]},
       {"id": "009816", "q": "009816 OR 凱基台灣TOP50",                         "symbols": ["009816"],        "match": ["009816", "凱基台灣top50"]},
       {"id": "00981A", "q": "00981A OR 主動統一台股增長",                      "symbols": ["00981A"],        "match": ["00981a", "主動統一台股增長"]},
-      {"id": "00411A", "q": "00411A OR 主動統一前沿科技",                      "symbols": ["00411A"],        "match": ["00411a", "主動統一前沿科技"]}
+      {"id": "00411A", "q": "00411A OR 主動統一前沿科技",                      "symbols": ["00411A"],        "match": ["00411a", "主動統一前沿科技"]},
+      {"id": "SEMI_ZH", "q": "半導體 供應鏈 OR CoWoS OR 先進封裝",            "symbols": [],                "match": ["半導體", "供應鏈", "cowos", "先進封裝", "晶圓代工"]},
+      {"id": "AI_ZH",  "q": "Anthropic OR OpenAI OR ChatGPT",                  "symbols": [],                "match": ["anthropic", "openai", "chatgpt"]}
     ],
     "site_filter": {
       "en": ["reuters.com", "apnews.com", "bloomberg.com", "cnbc.com", "wsj.com", "ft.com", "barrons.com", "marketwatch.com", "axios.com", "finance.yahoo.com"],
@@ -96,8 +101,11 @@
                   "speech": "https://www.federalreserve.gov/feeds/speeches.xml"},
     "fed_days": 7,
     "cna_feeds": {"finance": "https://feeds.feedburner.com/rsscna/finance",
-                  "technology": "https://feeds.feedburner.com/rsscna/technology"},
-    "cna_feeds_available": {"intworld": "https://feeds.feedburner.com/rsscna/intworld",
-                            "mainland": "https://feeds.feedburner.com/rsscna/mainland"}
+                  "technology": "https://feeds.feedburner.com/rsscna/technology",
+                  "intworld": "https://feeds.feedburner.com/rsscna/intworld",
+                  "mainland": "https://feeds.feedburner.com/rsscna/mainland"},
+    "topic_labels": {"fed": "Fed／利率", "tariff": "關稅", "export_controls": "出口管制", "china": "中國", "taiwan": "台灣",
+                     "oil": "油價", "war": "戰爭與地緣", "cpi": "通膨", "jobs": "就業", "earnings": "財報",
+                     "antitrust": "反壟斷", "merger": "併購"}
   }
 }

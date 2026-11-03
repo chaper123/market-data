@@ -45,6 +45,7 @@ import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor
 from email.utils import parsedate_to_datetime
 
+import topics
 from common import DATA, NOW, ROOT, TPE, UA, UTC, http, write_json
 
 OUT_JSON = os.path.join(DATA, "news", "headlines.json")
@@ -640,7 +641,7 @@ def markdown(doc, fed_doc, queries):
     return "\n".join(lines)
 
 
-def update_meta(doc, fed_doc):
+def update_meta(doc, fed_doc, topic_doc=None, topic_error=None):
     """只寫 news/headlines、news/fed 兩個資料集；其他內容不動（推回 repo 時 publish.py 會再合併一次）。"""
     try:
         meta = json.load(open(META, encoding="utf-8"))
@@ -664,6 +665,12 @@ def update_meta(doc, fed_doc):
                           "last": max((it["published_taipei"] for it in mine), default=None), "items": len(mine),
                           "feeds_ok": f"{sum(f['ok'] for f in cna_feeds)}/{len(cna_feeds)}",
                           "checked_at_taipei": doc["generated_at_taipei"]}
+    if topic_doc is not None or topic_error:
+        ds["news/topics"] = ({"status": "ok", "source": "headlines.json 的 topics 與標題詞（topics.py）",
+                              "last": topic_doc["generated_at_taipei"], "days_available": topic_doc["days_available"],
+                              "rising_topic": topic_doc["rising_topic"],
+                              "rising_terms": [t["term"] for t in topic_doc["rising_terms"][:5]]}
+                             if topic_doc is not None else {"status": "stale", "error": str(topic_error)[:300]})
     fed_ok = all(f["ok"] for f in fed_doc["feeds"])
     ds["news/fed"] = {"status": "ok" if fed_ok else "fail", "source": "federalreserve.gov RSS",
                       "last": fed_doc["items"][0]["date"] if fed_doc["items"] else None,
@@ -722,7 +729,15 @@ def main():
     write_json(OUT_FED, fed_doc)
     with open(OUT_MD, "w", encoding="utf-8") as f:
         f.write(markdown(doc, fed_doc, cfg["en"] + cfg["zh"]) + "\n")
-    update_meta(doc, fed_doc)
+    topic_doc, topic_error = None, None
+    try:
+        out_dir = os.path.dirname(OUT_JSON)  # topics.json、topic_history.json 和標題清單放在一起
+        topic_doc = topics.update(doc["items"], NOW.astimezone(TPE), cfg, os.path.join(out_dir, "topic_history.json"),
+                                  os.path.join(out_dir, "topics.json"))
+    except Exception as ex:  # noqa: BLE001 — 話題統計失敗不影響標題清單
+        topic_error = ex
+        print("話題統計失敗：", ex, file=sys.stderr)
+    update_meta(doc, fed_doc, topic_doc, topic_error)
     print(json.dumps(doc["stats"]["by_tier"], ensure_ascii=False), "total", len(items), "fed", len(fed_items),
           "feeds ok", f"{sum(f['ok'] for f in all_feeds)}/{len(all_feeds)}",
           "url", json.dumps(url_stats, ensure_ascii=False),

@@ -216,6 +216,7 @@ class NewsTest(unittest.TestCase):
         self.assertEqual(u["ok"], u["target"] - 1)
         h = meta["datasets"]["news/headlines"]
         self.assertEqual((h["url_ok"], h["url_total"]), (u["ok"], u["target"]))
+        self.assertEqual(meta["datasets"]["news/topics"]["status"], "ok")  # 話題統計也寫進 meta
 
     def test_url_reused_and_old_items_skipped(self):
         prev = {"items": [
