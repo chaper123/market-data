@@ -51,6 +51,23 @@ PHASE1_STEPS = (macro.fetch_macro, macro.fetch_cnn, macro.fetch_taifex_vix, fxbo
                 chips.fetch_chips, holdings.fetch_holdings, twindex.fetch_index,
                 dividends.fetch_dividends, twwatch.fetch_watch)
 
+# 停用的資料集：meta 照樣列出（status＝disabled、原因、停用前最後一次的 latest），檔案保留停用前的內容、不再更新
+DISABLED = {
+    "tw/nav": ("2026-11-03 停用：證交所基本市況報導網站（MIS）的使用條款禁止未經同意以程式下載，"
+               "也找不到合規的 ETF 淨值來源（證交所／櫃買 OpenAPI、FinMind、政府資料開放平臺都沒有）；"
+               "data/tw/nav_history.csv、nav_raw.json 保留到停用前"),
+    "intraday/tw": ("2026-11-03 停用：同樣是 MIS；盤中價改由網站在使用者自己的瀏覽器查（富果，不轉發）；"
+                    "data/tw/intraday.json 保留到停用前"),
+}
+
+
+def mark_disabled(meta):
+    for key, why in DISABLED.items():
+        old = prev_meta(key)
+        meta["datasets"][key] = {"status": "disabled", "reason": why,
+                                 **{k: old[k] for k in ("last", "latest", "source") if old.get(k)}}
+
+
 META = {"generated_at_utc": NOW.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "generated_at_taipei": NOW.astimezone(TPE).strftime("%Y-%m-%d %H:%M"),
         "datasets": {}, "errors": []}
@@ -244,7 +261,8 @@ def close_on(code, day):
 
 
 def fetch_nav(cfg):
-    """mis.twse.com.tw 的 ETF 淨值資訊（上市、上櫃 ETF 都有）。欄位 h 是「前一營業日單位淨值」。
+    """2026-11-03 起停用、不再呼叫（見 DISABLED）。
+    mis.twse.com.tw 的 ETF 淨值資訊（上市、上櫃 ETF 都有）。欄位 h 是「前一營業日單位淨值」。
     每次把各檔的 (淨值日期, 淨值) 累積到 data/tw/nav_history.csv，再用同一天的官方收盤算折溢價。"""
     raw_path = os.path.join(DATA, "tw", "nav_raw.json")
     hist_path = os.path.join(DATA, "tw", "nav_history.csv")
@@ -420,19 +438,11 @@ def fresh_today():
 
 def main():
     if "--skip-if-fresh" in sys.argv and fresh_today():
-        # 日線今天已成功；淨值由投信在收盤後才公布，仍每次更新（晨報前的 08:41、09:47 都會跑到）
-        global META
-        meta_path = os.path.join(DATA, "meta.json")
-        META = json.load(open(meta_path))
-        META.setdefault("errors", [])
-        fetch_nav(json.load(open(os.path.join(ROOT, "config.json"))))
-        META["nav_refreshed_at_taipei"] = NOW.astimezone(TPE).strftime("%Y-%m-%d %H:%M")
-        with open(meta_path, "w") as fh:
-            json.dump(META, fh, ensure_ascii=False, indent=1)
-        print("日線今天已成功抓取，只更新淨值")
+        # 日線今天已成功。原本這裡只更新淨值（MIS），2026-11-03 淨值停用後就什麼都不做
+        print("日線今天已成功抓取，略過（淨值已停用）")
         return
     cfg = json.load(open(os.path.join(ROOT, "config.json")))
-    for step in (fetch_us, fetch_tw, fetch_tw_quotes, fetch_nav, fetch_tv):
+    for step in (fetch_us, fetch_tw, fetch_tw_quotes, fetch_tv):
         try:
             step(cfg)
         except Exception as ex:  # noqa: BLE001 — 單一步驟失敗不影響其他
@@ -447,6 +457,7 @@ def main():
             step(cfg, META)
         except Exception as ex:  # noqa: BLE001 — 新資料失敗不影響既有日線
             META["errors"].append(f"{step.__name__}: {ex}")
+    mark_disabled(META)
     ds = META["datasets"]
     META["summary"] = {s: sum(1 for v in ds.values() if v.get("status") == s) for s in ("ok", "stale", "fail")}
     META["cross_check_conflicts"] = [k for k, v in ds.items() if v.get("cross_check_ok") is False]

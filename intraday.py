@@ -1,4 +1,4 @@
-"""證交所 MIS 盤中快照，給台股晨報取代鉅亨網的盤中價（只用 Python 標準庫）。
+"""證交所 MIS 盤中快照（2026-11-03 起停用：MIS 網站條款禁止程式下載，intraday.yml 不再執行這支；程式保留，取得同意後可恢復）。
 
 由 .github/workflows/intraday.yml 執行（cron-job.org 約台北 10:05、11:20、12:00 觸發，都寫同一個檔，用 slot 分辨）；
 meta.json 只寫 intraday/tw（推回 repo 用 publish.py --meta-own intraday/），不影響 fetch.yml 的略過判斷。

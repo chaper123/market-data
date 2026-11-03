@@ -11,12 +11,12 @@
 
 GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所以排多次。另外由 cron-job.org 在**美東 17:15（週一～五，America/New_York）**用 workflow_dispatch 準時觸發一次完整抓取（2026-10-20 設定；token 只限本 repo 的 Actions 讀寫，2027-10-20 到期），期貨能在 17:10～18:00 收到當天收盤。需要立刻更新時，到 Actions → fetch-market-data → Run workflow。
 
-另外兩個只由 cron-job.org（或手動）觸發的 workflow，不排程，也不影響上面的略過判斷（news 只更新 meta.json 的 news/*，intraday 只更新 intraday/tw）：
+另外兩個只由 cron-job.org（或手動）觸發的 workflow，不排程，也不影響上面的略過判斷（news 只更新 meta.json 的 news/*）：
 - `news-headlines`（`news.yml` → `news.py`）：台北 08:20 與 11:10（週一～五；11:10 是 2026-11-03 為 11:30 的第二次新聞晨報加的），更新 `data/news/`，給 08:40 的「新聞與社群晨報」排程讀。
-- `intraday-snapshot`（`intraday.yml` → `intraday.py`）：台北 10:05、11:20、12:00（週一～五；11:20 給 11:30 新聞晨報、12:00 給午間儀表板，2026-11-03 加），都寫 `data/tw/intraday.json`（`slot` 欄分辨早盤／午前／午間），10:05 那次給 10:17 的台股晨報讀。meta 的 `intraday/tw`：`status`、`last`（抓取時間）、`slot`、`session`、`quotes`、`no_price`（沒有價格的代號）、`errors`；失敗時標 stale 並讓 workflow 失敗寄通知。
+- `intraday-snapshot`（`intraday.yml`）：**2026-11-03 停用**（MIS 網站條款禁止程式下載；檔案保留停用前內容、不再更新，meta 標 `disabled`）：workflow 只留手動觸發、什麼都不做，請在 cron-job.org 暫停 intraday 三個工作。盤中價改由網站在使用者瀏覽器自己查（富果，不轉發）。
 - `longterm-macro`（`longterm.yml` → `longterm.py`）：GitHub 排程（2026-10-29 使用者同意加入，cron-job.org 沒設）：景氣燈號每月 27 日～次月 3 日台北 17:40、巴菲特指標每週六台北 09:40；已經有該有的月份／季度就略過、不 commit。也可手動觸發（兩份都重抓）。更新 `data/longterm/`（回測用的長週期資料），meta 只更新 longterm/*。只抓資料，不接進晨報。
 
-四個 workflow 都用 `publish.py` 推送：每次從最新的 main 重新套用自己的檔案與自己負責的 meta 資料集（fetch 負責 news/*、longterm/* 以外的全部，news 只負責 news/*，longterm 只負責 longterm/*），被拒就重來（最多 5 次），不會衝突，也不會蓋掉別人的更新。
+會推送的 workflow（fetch、news、longterm）都用 `publish.py`：每次從最新的 main 重新套用自己的檔案與自己負責的 meta 資料集（fetch 負責 news/*、longterm/* 以外的全部，news 只負責 news/*，longterm 只負責 longterm/*），被拒就重來（最多 5 次），不會衝突，也不會蓋掉別人的更新。
 
 ## 檔案
 
@@ -26,9 +26,9 @@ GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所�
 | `data/tw/<代號>_norm.csv` | 台股日線，已收盤的交易日 | FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL／櫃買 OpenAPI 收盤行情（最新一天）/ 鉅亨網；00411A 另有 MoneyDJ。2026-11-03 起不再抓證交所 STOCK_DAY 與櫃買網站（換之前逐日比對全同；上櫃成交量仍是張） |
 | `data/tw/0056_norm.csv`、`00878_norm.csv`、`00919_norm.csv` | 追蹤用 ETF 日線（`config.json` 的 `tw_watch`，算殖利率用），格式同上、約 13 個月；meta 是 `tw_watch/<代號>`（不在 tw/ 底下，不影響「日線已完整」判斷） | FinMind TaiwanStockPrice（歷史）/ 證交所 OpenAPI STOCK_DAY_ALL（最新一天，同一天以它為準並核對） |
 | `data/tw/quotes.json` | 抓取當下的盤中快照（備援用） | 鉅亨網 |
-| `data/tw/intraday.json` | 證交所盤中快照（`slot`：早盤＝盤中 11:00 前、午前＝11:00～11:44、午間＝11:45 起、盤外＝不是盤中）：三檔 ETF 與加權指數（TAIEX）的現價 `price`、漲跌、開高低、昨收、累積成交張數、最後成交時間（`time`），ETF 另有最佳一檔買賣價 `bid1`／`ask1`。`price_field` 標價格來源：`z` 最後成交價、`z_retry` 那一刻沒成交（MIS 的 z 是「-」）隔幾秒重抓拿到的（`price_retries` 第幾次，最多 3 次、約 30 秒）、`pz` 前一筆成交價、`bid_ask_mid` 仍沒成交時用買賣中間價、`bid1`／`ask1` 只有單邊報價、`null` 都沒有（原因在 `price_note`）；change 用採用的價格計算。`limit_up`／`limit_down` 不合理就是 null（上櫃的 00411A 無漲跌幅限制，MIS 給 9999.95），原因在 `limit_note`。`session` 標盤前／盤中／收盤後／休市日，只有盤中 `is_trading=true`，其他時段 `note` 寫明價格是哪一天幾點的資料；每檔 `is_today` 標資料日期是不是今天 | 證交所 mis.twse.com.tw getStockInfo；`intraday.py`，由 cron-job.org 約台北 10:05 觸發 |
-| `data/tw/nav_history.csv` | ETF 每日淨值與當日收盤折溢價：date,code,nav,close,premium_pct,source（逐日累積） | 證交所基本市況報導網站 mis.twse.com.tw |
-| `data/tw/nav_raw.json` | 最新一次抓到的淨值原始資料，含盤中預估淨值（f）與預估折溢價（g） | 同上 |
+| `data/tw/intraday.json` | **2026-11-03 停用**（MIS 網站條款禁止程式下載；檔案保留停用前內容、不再更新，meta 標 `disabled`）：證交所盤中快照（`slot`：早盤＝盤中 11:00 前、午前＝11:00～11:44、午間＝11:45 起、盤外＝不是盤中）：三檔 ETF 與加權指數（TAIEX）的現價 `price`、漲跌、開高低、昨收、累積成交張數、最後成交時間（`time`），ETF 另有最佳一檔買賣價 `bid1`／`ask1`。`price_field` 標價格來源：`z` 最後成交價、`z_retry` 那一刻沒成交（MIS 的 z 是「-」）隔幾秒重抓拿到的（`price_retries` 第幾次，最多 3 次、約 30 秒）、`pz` 前一筆成交價、`bid_ask_mid` 仍沒成交時用買賣中間價、`bid1`／`ask1` 只有單邊報價、`null` 都沒有（原因在 `price_note`）；change 用採用的價格計算。`limit_up`／`limit_down` 不合理就是 null（上櫃的 00411A 無漲跌幅限制，MIS 給 9999.95），原因在 `limit_note`。`session` 標盤前／盤中／收盤後／休市日，只有盤中 `is_trading=true`，其他時段 `note` 寫明價格是哪一天幾點的資料；每檔 `is_today` 標資料日期是不是今天 | 證交所 mis.twse.com.tw getStockInfo；`intraday.py`，由 cron-job.org 約台北 10:05 觸發 |
+| `data/tw/nav_history.csv` | **2026-11-03 停用**（MIS 網站條款禁止程式下載；檔案保留停用前內容、不再更新，meta 標 `disabled`）：ETF 每日淨值與當日收盤折溢價：date,code,nav,close,premium_pct,source（逐日累積） | 證交所基本市況報導網站 mis.twse.com.tw |
+| `data/tw/nav_raw.json` | **2026-11-03 停用**（MIS 網站條款禁止程式下載；檔案保留停用前內容、不再更新，meta 標 `disabled`）：最新一次抓到的淨值原始資料，含盤中預估淨值（f）與預估折溢價（g） | 同上 |
 | `data/fx/usdtwd_mid.csv` | 美元兌台幣收盤（市場中間價），約 2 年。台銀網站擋 GitHub 伺服器，即期賣出由排程任務自己抓，這份是備援 | Yahoo |
 | `data/fx/usdtwd_bot_sell.csv` | 台銀美元即期賣出：date,rate，約 13 個月，16:30 前不收當天。格式同上，可直接當排程的 fx_csv（台銀網站擋 GitHub，改由 FinMind 取得，已與台銀網頁 6 個月表逐筆比對一致） | FinMind TaiwanExchangeRate / 與 usdtwd_mid 核對價差 |
 | `data/tv/snapshot.json` | TradingView 日線技術面快照 | TradingView scanner |
