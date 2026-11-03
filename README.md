@@ -40,9 +40,9 @@ GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所�
 | `data/valuation/us.json` | 可買標的最新估值：個股 Forward PE、PEG，VOO 本益比；頁面股價與交易日、隱含預估 EPS 與一週前比較（變動超過 ±20% 標記）、Yahoo 下次財報日 | stockanalysis / 頁面股價與 repo 日線核對；財報日 Yahoo |
 | `data/valuation/us_history.csv` | 估值每日紀錄：date,symbol,price,fwd_pe,peg,pe（逐日累積，空白＝n/a） | 同上 |
 | `data/calendar/calendar.json` | 行事曆：台股開休市（entries 含「開始交易日」等其實有交易的日子，closed 是平日休市日）、FOMC 會議（今年與已公布的明年，sep＝有經濟預測）、可買個股下次財報日；CPI 目前標「未取得」 | 證交所 OpenAPI / rwd 版核對；Fed 官網；財報日同 valuation |
-| `data/chips/tw_insti.csv` | 關注代號三大法人買賣超（股）：date,code,foreign,foreign_dealer,trust,dealer,total（foreign 不含外資自營商，dealer＝自行買賣＋避險；逐日累積） | 上市：證交所 T86；上櫃：櫃買中心 / 合計＝分項加總 |
-| `data/chips/tw_market_insti.csv` | 集中市場三大法人買賣差額（元）：date,dealer_self,dealer_hedge,trust,foreign,foreign_dealer,total（逐日累積） | 證交所 BFI82U / 合計＝分項加總 |
-| `data/chips/tw_margin.csv` | 集中市場信用交易：date,margin_lots,short_lots,margin_amount_k（融資餘額張、融券餘額張、融資金額仟元；逐日累積） | 證交所 MI_MARGN |
+| `data/chips/tw_insti.csv` | 關注代號三大法人買賣超（股）：date,code,foreign,foreign_dealer,trust,dealer,total（foreign 不含外資自營商，dealer＝自行買賣＋避險；逐日累積） | FinMind TaiwanStockInstitutionalInvestorsBuySell（2026-11-03 起；換之前與證交所 T86、櫃買 dailyTrade 逐筆比對一致）/ 單一來源 |
+| `data/chips/tw_market_insti.csv` | 集中市場三大法人買賣差額（元）：date,dealer_self,dealer_hedge,trust,foreign,foreign_dealer,total（逐日累積） | FinMind TaiwanStockTotalInstitutionalInvestors（2026-11-03 起，原證交所 BFI82U，逐筆比對一致）/ 合計＝分項加總 |
+| `data/chips/tw_margin.csv` | 集中市場信用交易：date,margin_lots,short_lots,margin_amount_k（融資餘額張、融券餘額張、融資金額仟元；逐日累積） | FinMind TaiwanStockTotalMarginPurchaseShortSale（2026-11-03 起，原證交所 MI_MARGN，逐筆比對一致） |
 | `data/holdings/<代號>.json` | 主動式 ETF（00981A、00411A）最新持股：資料日、每單位淨值、全部持股與權重、期貨與現金、前十大，以及與前一資料日比較（前十大新進／退出、權重變動 ≥1 個百分點、新增／出清）。00411A 持有美股，資料日通常晚一天 | 統一投信 ezmoney / 淨值與 nav_history 核對、權重加總與股票市值核對 |
 | `data/holdings/<代號>_history.csv` | 每日持股：date,code,name,shares,weight（逐日累積） | 同上 |
 | `data/news/headlines.json` | 新聞標題（最近 72 小時），格式見下方「新聞標題格式」。約 0.7 MB，讀取時請用程式篩選 | Google News RSS（每個查詢跑兩次：限定白名單網站與不限定；2026-11-03 加半導體供應鏈、Anthropic、OpenAI 查詢，symbols 多 `ANTHROPIC`、`OPENAI`）、中央社官方 RSS（財經、科技、國際、兩岸）、federalreserve.gov RSS（新聞稿、演講）；`news.py`，查詢詞、來源等級與主題詞在 `config.json` 的 `news` |
