@@ -23,7 +23,7 @@ GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所�
 | 路徑 | 內容 | 來源（主 / 核對） |
 |---|---|---|
 | `data/us/<代號>.csv` | 美股日線，已收盤的交易日，最近一年 | MoneyDJ / Yahoo；最後一根 K 棒兩家一致才採用，不一致或缺一家時用 Nasdaq 官方當裁判 |
-| `data/tw/<代號>_norm.csv` | 台股日線，已收盤的交易日 | 上市：證交所 / 鉅亨網；00411A（上櫃）：櫃買中心 / MoneyDJ |
+| `data/tw/<代號>_norm.csv` | 台股日線，已收盤的交易日 | FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL／櫃買 OpenAPI 收盤行情（最新一天）/ 鉅亨網；00411A 另有 MoneyDJ。2026-11-03 起不再抓證交所 STOCK_DAY 與櫃買網站（換之前逐日比對全同；上櫃成交量仍是張） |
 | `data/tw/0056_norm.csv`、`00878_norm.csv`、`00919_norm.csv` | 追蹤用 ETF 日線（`config.json` 的 `tw_watch`，算殖利率用），格式同上、約 13 個月；meta 是 `tw_watch/<代號>`（不在 tw/ 底下，不影響「日線已完整」判斷） | FinMind TaiwanStockPrice（歷史）/ 證交所 OpenAPI STOCK_DAY_ALL（最新一天，同一天以它為準並核對） |
 | `data/tw/quotes.json` | 抓取當下的盤中快照（備援用） | 鉅亨網 |
 | `data/tw/intraday.json` | 證交所盤中快照（`slot`：早盤＝盤中 11:00 前、午前＝11:00～11:44、午間＝11:45 起、盤外＝不是盤中）：三檔 ETF 與加權指數（TAIEX）的現價 `price`、漲跌、開高低、昨收、累積成交張數、最後成交時間（`time`），ETF 另有最佳一檔買賣價 `bid1`／`ask1`。`price_field` 標價格來源：`z` 最後成交價、`z_retry` 那一刻沒成交（MIS 的 z 是「-」）隔幾秒重抓拿到的（`price_retries` 第幾次，最多 3 次、約 30 秒）、`pz` 前一筆成交價、`bid_ask_mid` 仍沒成交時用買賣中間價、`bid1`／`ask1` 只有單邊報價、`null` 都沒有（原因在 `price_note`）；change 用採用的價格計算。`limit_up`／`limit_down` 不合理就是 null（上櫃的 00411A 無漲跌幅限制，MIS 給 9999.95），原因在 `limit_note`。`session` 標盤前／盤中／收盤後／休市日，只有盤中 `is_trading=true`，其他時段 `note` 寫明價格是哪一天幾點的資料；每檔 `is_today` 標資料日期是不是今天 | 證交所 mis.twse.com.tw getStockInfo；`intraday.py`，由 cron-job.org 約台北 10:05 觸發 |
@@ -145,7 +145,7 @@ curl -sSf https://raw.githubusercontent.com/<帳號>/market-data/main/data/meta.
 
 ## 注意
 
-**證交所資料的使用條款（2026-10-30 查）**：證交所網站使用條款第 6 條禁止「非依臺灣證券交易所同意之方式」以自動程式、爬蟲下載資料，第 8 條未經書面同意不得重製，但證交所已授權政府資料開放平臺的資料除外；證交所 OpenAPI（openapi.twse.com.tw）標示的授權是政府資料開放授權條款（需標示出處）。所以 2026-10-30 起新加的證交所資料（加權指數、報酬指數、除權息預告、上市個股日成交）都走 OpenAPI，歷史部分用 FinMind（教育、非商業用途，未註冊每小時約 300 次）。既有的日線（STOCK_DAY）、法人（T86、BFI82U）、融資（MI_MARGN）與 MIS 盤中快照、淨值仍是讀證交所網站，要不要改由使用者決定。
+**證交所資料的使用條款（2026-10-30 查）**：證交所網站使用條款第 6 條禁止「非依臺灣證券交易所同意之方式」以自動程式、爬蟲下載資料，第 8 條未經書面同意不得重製，但證交所已授權政府資料開放平臺的資料除外；證交所 OpenAPI（openapi.twse.com.tw）標示的授權是政府資料開放授權條款（需標示出處）。所以 2026-10-30 起新加的證交所資料（加權指數、報酬指數、除權息預告、上市個股日成交）都走 OpenAPI，歷史部分用 FinMind（教育、非商業用途，未註冊每小時約 300 次）。櫃買中心網站條款相同（第五、七條），也改用櫃買 OpenAPI。2026-11-03 起日線也改走 FinMind＋OpenAPI（見下方各列）。
 
 TradingView scanner 不是官方公開 API，改版時可能失效；失效時雷達只少了綜合評分。TradingView 偶爾有錯誤的 K 棒（00411A 的高低點曾出錯，ADX、ATR、Pivot 全部失真），所以雷達的指標一律用 repo 的官方日線計算。
 技術面雷達只描述結構，不是投資建議，也不改變排程任務的買區判定。

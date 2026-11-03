@@ -356,6 +356,14 @@ def twse_openapi(path):
     return json.loads(raw.decode("utf-8-sig"))
 
 
+def tpex_openapi(path):
+    """櫃買中心 OpenAPI（櫃買網站的使用條款同樣禁止未經同意以程式下載，開放資料走這裡）。"""
+    status, raw = http(f"https://www.tpex.org.tw/openapi/v1/{path}", timeout=40)
+    if status != 200:
+        raise RuntimeError(f"櫃買 OpenAPI {path} HTTP {status}")
+    return json.loads(raw.decode("utf-8-sig"))
+
+
 def roc_ymd(s):
     """OpenAPI 的民國日期 '1151001' → '2026-10-01'。"""
     s = str(s).strip()

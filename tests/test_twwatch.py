@@ -68,6 +68,17 @@ class WatchTest(unittest.TestCase):
         self.assertEqual((m["status"], len(rows)), ("ok", 70))
         self.assertIn("OpenAPI", m["warnings"][0])
 
+    def test_tpex_volume_in_lots(self):
+        fm = [{"date": "2026-10-30", "Trading_Volume": 8822678, "open": 9.7, "max": 9.8, "min": 9.6, "close": 9.73}]
+        tp = [{"Date": "1151030", "SecuritiesCompanyCode": "00411A", "TradingShares": "8822678", "Open": "9.70",
+               "High": "9.80", "Low": "9.60", "Close": "9.73"}]
+        with mock.patch.multiple(twwatch, finmind=lambda *a: fm, tpex_openapi=lambda p: tp):
+            latest, err = twwatch.openapi_latest({"TPEX": {"00411A"}})
+            rows, check, ok, warn = twwatch.official_daily("00411A", "TPEX", "2026-10-01", latest)
+        self.assertEqual(err, [])
+        self.assertEqual(rows["2026-10-30"], ("2026-10-30", 8823, 9.7, 9.8, 9.6, 9.73))  # 股換成張，和舊檔一致
+        self.assertTrue(ok)
+
 
 if __name__ == "__main__":
     unittest.main()

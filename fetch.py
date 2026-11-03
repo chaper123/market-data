@@ -117,75 +117,6 @@ def months_back(n):
     return out
 
 
-def roc_date(s):
-    m = re.match(r"\s*(\d{2,3})/(\d{1,2})/(\d{1,2})", str(s))
-    if not m:
-        return None
-    return f"{int(m.group(1)) + 1911:04d}-{int(m.group(2)):02d}-{int(m.group(3)):02d}"
-
-
-def pick(fields, *keys):
-    for i, f in enumerate(fields):
-        if any(k in f for k in keys):
-            return i
-    return None
-
-
-def twse_daily(code, n_months):
-    rows = {}
-    for y, mo in months_back(n_months):
-        j = None
-        for url in (f"https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date={y}{mo:02d}01&stockNo={code}&response=json",
-                    f"https://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date={y}{mo:02d}01&stockNo={code}"):
-            try:
-                j = get_json(url, headers={"Referer": "https://www.twse.com.tw/"})
-                if j.get("stat") == "OK" or j.get("data"):
-                    break
-            except Exception:  # noqa: BLE001
-                j = None
-            time.sleep(1.5)
-        if not j or not j.get("data"):
-            time.sleep(2)
-            continue
-        f = j.get("fields") or ["日期", "成交股數", "成交金額", "開盤價", "最高價", "最低價", "收盤價"]
-        idx = dict(d=pick(f, "日期"), v=pick(f, "成交股數"), o=pick(f, "開盤"), h=pick(f, "最高"),
-                   l=pick(f, "最低"), c=pick(f, "收盤"))
-        for r in j["data"]:
-            day = roc_date(r[idx["d"]])
-            if day:
-                rows[day] = (day, num(r[idx["v"]]) or 0, num(r[idx["o"]]), num(r[idx["h"]]),
-                             num(r[idx["l"]]), num(r[idx["c"]]))
-        time.sleep(2.5)  # 證交所有頻率限制
-    if not rows:
-        raise RuntimeError(f"TWSE {code}: 無資料")
-    return rows
-
-
-def tpex_daily(code, n_months, min_date=None):
-    """櫃買中心個股日成交（官方，一次一個月）。成交量單位是張，與原本的鉅亨網、MoneyDJ 相同（證交所是股）。"""
-    rows = {}
-    for y, mo in months_back(n_months):
-        if min_date and f"{y}-{mo:02d}-31" < min_date:  # 上市前的月份不用抓
-            continue
-        j = get_json(f"https://www.tpex.org.tw/www/zh-tw/afterTrading/tradingStock?code={code}"
-                     f"&date={y}/{mo:02d}/01&response=json")
-        t = (j.get("tables") or [{}])[0]
-        f = t.get("fields") or []
-        idx = dict(d=pick(f, "日"), v=pick(f, "成交張數"), o=pick(f, "開盤"), h=pick(f, "最高"),
-                   l=pick(f, "最低"), c=pick(f, "收盤"))
-        if None in idx.values():
-            raise RuntimeError(f"TPEX {code}: 欄位變了 {f}")
-        for r in t.get("data") or []:
-            day = roc_date(r[idx["d"]])  # 上市日會標成「115/08/26*」，roc_date 只取前面的日期
-            if day:
-                rows[day] = (day, num(r[idx["v"]]) or 0, num(r[idx["o"]]), num(r[idx["h"]]),
-                             num(r[idx["l"]]), num(r[idx["c"]]))
-        time.sleep(1.5)
-    if not rows:
-        raise RuntimeError(f"TPEX {code}: 無資料")
-    return rows
-
-
 def fix_volume_units(rows):
     """鉅亨網台股日線偶爾某天用「股」而不是「張」。成交量是前後中位數的 300 倍以上、
     除以 1000 後又落在正常範圍時，視為單位錯誤並除以 1000。回傳修正後的列與被修正的日期。"""
@@ -206,24 +137,30 @@ def fetch_tw(cfg):
     cut = tw_cutoff()
     META["tw_cutoff_taipei"] = cut
     n = cfg.get("tw_months", 7)
+    y, mo = months_back(n)[-1]
+    start = f"{y}-{mo:02d}-01"
+    by_market, extra_off = {}, {}
+    for code, e in cfg["tw"].items():
+        by_market.setdefault(e["market"], set()).add(code)
+    latest, oa_err = twwatch.openapi_latest(by_market)
+    META["errors"] += [f"TW {x}" for x in oa_err]
     for code, e in cfg["tw"].items():
         path = os.path.join(DATA, "tw", f"{code}_norm.csv")
         got, extra = [], {}
-        # 依序嘗試：官方（上市證交所／上櫃櫃買中心；上櫃再加 MoneyDJ）→ 鉅亨網 → Yahoo；
-        # 第一個列數足夠的當主來源，下一個用來核對。鉅亨網美股最後一根常停在盤中價（2026-10-16 檢查），
-        # 上櫃原本以它為主，改為櫃買官方為主、MoneyDJ 核對
-        if e["market"] == "TWSE":
+        # 依序嘗試：官方開放資料（FinMind 歷史＋證交所／櫃買 OpenAPI 最新一天；上櫃再加 MoneyDJ）→ 鉅亨網 → Yahoo；
+        # 第一個列數足夠的當主來源，下一個用來核對。證交所、櫃買網站的使用條款禁止程式下載，2026-11 起不再抓
+        # STOCK_DAY 與櫃買個股日成交（換之前逐日比對：開高低收全同，上市成交股數全同，上櫃換成張後一致）
+        try:
+            rows_off, check, _, warn = twwatch.official_daily(code, e["market"], start, latest)
+            got.append((twwatch.SOURCE[e["market"]], finalize(rows_off, cut, e.get("min_date"))))
+            extra_off[code] = {"official_check": check, **({"official_warnings": warn} if warn else {})}
+        except Exception as ex:  # noqa: BLE001
+            META["errors"].append(f"TW {code} FinMind/OpenAPI: {ex}")
+        if e["market"] == "TPEX":
             try:
-                got.append(("TWSE", finalize(twse_daily(code, n), cut, e.get("min_date"))))
+                got.append(("moneydj", finalize(moneydj_tw_daily(code), cut, e.get("min_date"))))
             except Exception as ex:  # noqa: BLE001
-                META["errors"].append(f"TW {code} TWSE: {ex}")
-        else:
-            for name, fn in (("TPEX", lambda: tpex_daily(code, n, e.get("min_date"))),
-                             ("moneydj", lambda: moneydj_tw_daily(code))):
-                try:
-                    got.append((name, finalize(fn(), cut, e.get("min_date"))))
-                except Exception as ex:  # noqa: BLE001
-                    META["errors"].append(f"TW {code} {name}: {ex}")
+                META["errors"].append(f"TW {code} moneydj: {ex}")
         try:
             raw, extra = cnyes_daily(f"TWS:{code}:STOCK", [TPE, UTC])
             fixed_rows = finalize(raw, cut, e.get("min_date"))
@@ -247,6 +184,7 @@ def fetch_tw(cfg):
                 m["last_bar_source"], m["last_bar_referee"] = name, False
                 if name == "cnyes":
                     m.update(extra)
+                m.update(extra_off.get(code, {}))
                 others = [x for j, x in enumerate(got) if j != i]
                 if others:
                     cross_check(m, rows, others[0][1], others[0][0])
