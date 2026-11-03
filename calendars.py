@@ -2,7 +2,7 @@
 
 輸出 data/calendar/calendar.json：
   tw_market  證交所開休市日期：entries（date、name、description、trading＝當天其實有交易，例如「開始交易日」），
-             closed（週一～五休市的日期）。今年用 OpenAPI，並與 rwd 版核對；明年公布後一併收錄
+             closed（週一～五休市的日期）。證交所 OpenAPI；明年的 OpenAPI 公布後收錄，之前沿用上一次的檔案
   fomc       FOMC 會議（今年與已公布的未來年度）：start、end、sep（Fed 標 *，會公布經濟預測）、note
   earnings   可買個股下次財報日（取自 data/valuation/us.json，來源 Yahoo，is_estimate＝尚未正式公告）
   cpi        未取得：BLS 對 GitHub 機房回 403，尚未找到替代來源
@@ -17,7 +17,6 @@ from common import DATA, NOW, TPE, get_json, http, mark_failed, write_json
 
 PATH = os.path.join(DATA, "calendar", "calendar.json")
 TWSE_OPENAPI = "https://openapi.twse.com.tw/v1/holidaySchedule/holidaySchedule"
-TWSE_RWD = "https://www.twse.com.tw/rwd/zh/holidaySchedule/holidaySchedule?response=json&date={}0101"
 FED_URL = "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
 MONTHS = {m: i for i, m in enumerate(("jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct",
                                       "nov", "dec"), 1)}
@@ -32,30 +31,29 @@ def tw_entry(day, name, desc):
             "trading": "開始交易" in name or "最後交易" in name}
 
 
-def tw_market(today):
+def tw_market(today, previous=None):
+    """證交所 OpenAPI 開休市日期。證交所網站的使用條款禁止程式下載，2026-11 起不再讀 rwd 版（原本拿來核對今年、
+    補明年）：OpenAPI 只給今年，明年的 OpenAPI 有就收，沒有就沿用上一次檔案裡已有的明年資料。"""
     year = today.year
-    ref = {"Referer": "https://www.twse.com.tw/"}
     api = get_json(TWSE_OPENAPI)
     entries = [tw_entry(f"{int(x['Date'][:-4]) + 1911}-{x['Date'][-4:-2]}-{x['Date'][-2:]}", x["Name"],
                         x.get("Description")) for x in api]
-    if not entries or entries[0]["date"][:4] != str(year):
-        raise RuntimeError(f"OpenAPI 不是 {year} 年的資料")
-    rwd = get_json(TWSE_RWD.format(year), headers=ref)
-    rwd_days = {r[0] for r in rwd.get("data") or []}
-    api_days = {e["date"] for e in entries}
-    nxt = get_json(TWSE_RWD.format(year + 1), headers=ref)  # 明年通常年底才公布，沒有就是 0 筆
-    entries += [tw_entry(r[0], r[1], r[2] if len(r) > 2 else "") for r in nxt.get("data") or []]
+    if not entries or str(year) not in {e["date"][:4] for e in entries}:
+        raise RuntimeError(f"OpenAPI 沒有 {year} 年的資料")
+    api_years = {e["date"][:4] for e in entries}
+    kept = [e for e in (previous or {}).get("entries", []) if e["date"][:4] > str(year) and e["date"][:4] not in api_years]
+    entries += kept
     entries.sort(key=lambda e: e["date"])
     closed = sorted({e["date"] for e in entries if not e["trading"]
                      and dt.date.fromisoformat(e["date"]).weekday() < 5})
     m = {"status": "ok", "source": "證交所 OpenAPI holidaySchedule", "rows": len(entries),
          "years": sorted({e["date"][:4] for e in entries}), "last": entries[-1]["date"],
-         "next_closed": next((d for d in closed if d >= today.isoformat()), None)}
-    if rwd_days == api_days:
-        m["cross_check"], m["cross_check_ok"] = f"{year} 年與 rwd 版一致（{len(api_days)} 筆）", True
-    else:
-        m["cross_check"] = f"{year} 年與 rwd 版不同：只在 OpenAPI {sorted(api_days - rwd_days)}，只在 rwd {sorted(rwd_days - api_days)}"
-        m["cross_check_ok"] = False
+         "next_closed": next((d for d in closed if d >= today.isoformat()), None),
+         "cross_check": "單一來源（2026-11 起不再讀證交所網站 rwd 版核對）", "cross_check_ok": None}
+    if str(year + 1) not in m["years"]:
+        m["next_year"] = f"{year + 1} 年還沒有（OpenAPI 公布後自動收錄）"
+    elif kept:
+        m["next_year"] = f"{year + 1} 年沿用上一次的 {len(kept)} 筆"
     return {"source": TWSE_OPENAPI, "entries": entries, "closed": closed}, m
 
 
@@ -109,7 +107,7 @@ def fetch_calendar(cfg, meta):
     cal = {"generated_at_taipei": NOW.astimezone(TPE).strftime("%Y-%m-%d %H:%M")}
     for name, key, fn in (("tw_market", "calendar/tw_holidays", tw_market), ("fomc", "calendar/fomc", fomc)):
         try:
-            cal[name], meta["datasets"][key] = fn(today)
+            cal[name], meta["datasets"][key] = fn(today, old.get(name)) if name == "tw_market" else fn(today)
         except Exception as ex:  # noqa: BLE001
             if name in old:
                 cal[name] = old[name]
