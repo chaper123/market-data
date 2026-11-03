@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-11-03T03:21:08Z",
- "generated_at_taipei": "2026-11-03 11:21",
+ "generated_at_utc": "2026-11-03T03:44:59Z",
+ "generated_at_taipei": "2026-11-03 11:44",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -164,40 +164,43 @@
   },
   "tw/009816": {
    "status": "ok",
-   "source": "TWSE",
+   "source": "FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL（最新一天）",
    "rows": 177,
    "first": "2026-02-03",
    "last": "2026-11-02",
    "last_close": 15.56,
    "prev_close": 15.67,
-   "last_bar_source": "TWSE",
+   "last_bar_source": "FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL（最新一天）",
    "last_bar_referee": false,
+   "official_check": "2026-11-02 收盤 OpenAPI 15.56 vs FinMind 15.56",
    "cross_check": "2026-11-02 收盤 15.56 vs cnyes 15.56（差 +0.00%）",
    "cross_check_ok": true
   },
   "tw/00981A": {
    "status": "ok",
-   "source": "TWSE",
+   "source": "FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL（最新一天）",
    "rows": 241,
    "first": "2025-11-03",
    "last": "2026-11-02",
    "last_close": 26.57,
    "prev_close": 26.66,
-   "last_bar_source": "TWSE",
+   "last_bar_source": "FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL（最新一天）",
    "last_bar_referee": false,
+   "official_check": "2026-11-02 收盤 OpenAPI 26.57 vs FinMind 26.57",
    "cross_check": "2026-11-02 收盤 26.57 vs cnyes 26.57（差 +0.00%）",
    "cross_check_ok": true
   },
   "tw/00411A": {
    "status": "ok",
-   "source": "TPEX",
+   "source": "FinMind（歷史）＋櫃買 OpenAPI tpex_mainboard_daily_close_quotes（最新一天）",
    "rows": 44,
    "first": "2026-08-26",
    "last": "2026-11-02",
    "last_close": 9.6,
    "prev_close": 9.73,
-   "last_bar_source": "TPEX",
+   "last_bar_source": "FinMind（歷史）＋櫃買 OpenAPI tpex_mainboard_daily_close_quotes（最新一天）",
    "last_bar_referee": false,
+   "official_check": "2026-11-02 收盤 OpenAPI 9.6 vs FinMind 9.6",
    "cross_check": "2026-11-02 收盤 9.6 vs moneydj 9.6（差 +0.00%）",
    "cross_check_ok": true
   },
@@ -242,7 +245,7 @@
    "rows": 517,
    "first": "2024-11-04",
    "last": "2026-11-03",
-   "last_rate": 32.696
+   "last_rate": 32.72
   },
   "macro/SPX": {
    "status": "ok",
@@ -496,8 +499,9 @@
    ],
    "last": "2026-12-25",
    "next_closed": "2026-12-25",
-   "cross_check": "2026 年與 rwd 版一致（27 筆）",
-   "cross_check_ok": true
+   "cross_check": "單一來源（2026-11 起不再讀證交所網站 rwd 版核對）",
+   "cross_check_ok": null,
+   "next_year": "2027 年還沒有（OpenAPI 公布後自動收錄）"
   },
   "calendar/fomc": {
    "status": "ok",
@@ -511,24 +515,9 @@
    "next": "2026-12-08～2026-12-09（SEP）",
    "cross_check": "官方單一來源，未核對"
   },
-  "chips/tw_insti": {
-   "status": "ok",
-   "source": "證交所 T86（上市）、櫃買 dailyTrade（上櫃）",
-   "rows": 48,
-   "first": "2026-10-07",
-   "last": "2026-11-02",
-   "added": [],
-   "latest_total": {
-    "00411A": -5083795,
-    "009816": -80507341,
-    "00981A": -62913197
-   },
-   "cross_check": "各代號合計＝分項加總",
-   "cross_check_ok": true
-  },
   "chips/tw_market_insti": {
    "status": "ok",
-   "source": "證交所 BFI82U",
+   "source": "FinMind（證交所、櫃買資料）",
    "rows": 16,
    "first": "2026-10-07",
    "last": "2026-11-02",
@@ -540,13 +529,28 @@
   },
   "chips/tw_margin": {
    "status": "ok",
-   "source": "證交所 MI_MARGN",
+   "source": "FinMind（證交所、櫃買資料）",
    "rows": 16,
    "first": "2026-10-07",
    "last": "2026-11-02",
    "added": [],
    "latest_margin_amount_k": 622699365,
    "cross_check": "單一來源，未核對"
+  },
+  "chips/tw_insti": {
+   "status": "ok",
+   "source": "FinMind（證交所、櫃買資料）",
+   "rows": 48,
+   "first": "2026-10-07",
+   "last": "2026-11-02",
+   "added": [],
+   "latest_total": {
+    "00411A": -5083795,
+    "009816": -80507341,
+    "00981A": -62913197
+   },
+   "cross_check": "單一來源（換來源前與證交所 T86、櫃買 dailyTrade 逐筆比對一致）",
+   "cross_check_ok": null
   },
   "holdings/00981A": {
    "status": "ok",
@@ -761,6 +765,5 @@
   "stale": 0,
   "fail": 0
  },
- "cross_check_conflicts": [],
- "nav_refreshed_at_taipei": "2026-11-03 11:39"
+ "cross_check_conflicts": []
 }

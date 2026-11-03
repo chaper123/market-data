@@ -1,6 +1,6 @@
 {
  "generated_from": "repo 日線（indicators.py）；綜合評分來自 TradingView",
- "tv_fetched_at_taipei": "2026-11-03 11:21",
+ "tv_fetched_at_taipei": "2026-11-03 11:44",
  "rules": {
   "trend_adx": 25,
   "range_adx": 20
@@ -627,7 +627,7 @@
    },
    "last_date": "2026-11-02",
    "rows": 177,
-   "rating_skipped": "收盤 15.31 ≠ 15.56（可能是盤中數字）"
+   "rating_skipped": "收盤 15.23 ≠ 15.56（可能是盤中數字）"
   },
   "00981A": {
    "code": "00981A",
@@ -685,7 +685,7 @@
    },
    "last_date": "2026-11-02",
    "rows": 241,
-   "rating_skipped": "收盤 25.92 ≠ 26.57（可能是盤中數字）"
+   "rating_skipped": "收盤 25.52 ≠ 26.57（可能是盤中數字）"
   },
   "00411A": {
    "code": "00411A",
@@ -739,7 +739,7 @@
    },
    "last_date": "2026-11-02",
    "rows": 44,
-   "rating_skipped": "收盤 9.19 ≠ 9.60（可能是盤中數字）；ATR 0.37 vs 0.25（TradingView 高低點資料有誤）"
+   "rating_skipped": "收盤 9.13 ≠ 9.60（可能是盤中數字）；ATR 0.37 vs 0.25（TradingView 高低點資料有誤）"
   }
  }
 }
