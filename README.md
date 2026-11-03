@@ -145,6 +145,8 @@ curl -sSf https://raw.githubusercontent.com/<帳號>/market-data/main/data/meta.
 
 ## 注意
 
+**資料出處與授權（2026-11-03 查）**：證交所 OpenAPI、櫃買中心 OpenAPI 的資料依「政府資料開放授權條款－第 1 版」（https://data.gov.tw/license）使用，出處：臺灣證券交易所、證券櫃檯買賣中心。國發會景氣指標同一授權，出處：國家發展委員會。FinMind 只寫明「教育、非商業用途」，沒有說明能否把取得的資料公開再散布：用到 FinMind 的檔案（data/tw/*_norm.csv 的歷史、data/index/、data/dividends/、data/chips/、data/fx/usdtwd_bot_sell.csv）是否能放在公開 repo 待使用者決定。
+
 **證交所資料的使用條款（2026-10-30 查）**：證交所網站使用條款第 6 條禁止「非依臺灣證券交易所同意之方式」以自動程式、爬蟲下載資料，第 8 條未經書面同意不得重製，但證交所已授權政府資料開放平臺的資料除外；證交所 OpenAPI（openapi.twse.com.tw）標示的授權是政府資料開放授權條款（需標示出處）。所以 2026-10-30 起新加的證交所資料（加權指數、報酬指數、除權息預告、上市個股日成交）都走 OpenAPI，歷史部分用 FinMind（教育、非商業用途，未註冊每小時約 300 次）。櫃買中心網站條款相同（第五、七條），也改用櫃買 OpenAPI。2026-11-03 起日線也改走 FinMind＋OpenAPI（見下方各列）。
 
 TradingView scanner 不是官方公開 API，改版時可能失效；失效時雷達只少了綜合評分。TradingView 偶爾有錯誤的 K 棒（00411A 的高低點曾出錯，ADX、ATR、Pivot 全部失真），所以雷達的指標一律用 repo 的官方日線計算。
