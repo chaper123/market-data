@@ -731,8 +731,8 @@
   "intraday/tw": {
    "status": "ok",
    "source": "mis.twse.com.tw getStockInfo",
-   "last": "2026-11-03 10:05:17",
-   "slot": "早盤",
+   "last": "2026-11-03 11:35:46",
+   "slot": "午前",
    "session": "盤中",
    "quotes": 4,
    "no_price": [],
