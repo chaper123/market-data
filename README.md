@@ -47,6 +47,7 @@ GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所�
 | `data/news/headlines.json` | 新聞標題（最近 72 小時），格式見下方「新聞標題格式」。約 0.7 MB，讀取時請用程式篩選 | Google News RSS（每個查詢跑兩次：限定白名單網站與不限定）、中央社官方 RSS（財經、科技）、federalreserve.gov RSS；`news.py`，查詢詞、來源等級與主題詞在 `config.json` 的 `news` |
 | `data/news/fed.json` | Fed 新聞稿與演講（最近 7 天）：`items[]` 的 `date`（台北日期）、`title`、`link`、`type`（press／speech）、`published_taipei`、`published_utc` | federalreserve.gov RSS |
 | `data/news/headlines.md` | 精簡版給人看：每個查詢列標題提到它的 T1～T2 新聞（最多 15 則）與 T3～T4 3 則 | 同上 |
+| `data/dividends/tw_etf.json` | ETF 配息（`config.json` 的 `dividend_etfs`：009816、00981A、0056、00878、00919），近 4 年起逐次累積：`etfs[代號].events[]` 的 `ex_date`（除息交易日）、`pay_date`（發放日，預告表補的事件為 null）、`cash`（每單位現金元）、`year`（民國年度）、`source`、`official_checked`（與證交所預告表核對過）；`ttm_cash`／`ttm_count`（除息日在最近 365 天）、`last`、`next`。009816 目前沒有配息紀錄 | FinMind TaiwanStockDividend / 證交所 OpenAPI TWT48U_ALL（除權除息預告表，核對即將除息的日期與金額） |
 | `data/index/TAIEX.csv` | 加權指數日線：date,open,high,low,close,volume_shares,value_twd（成交股數、成交金額元；無表頭），2003-01-02 起，台北 14:30 前不收當天 | 證交所 OpenAPI MI_5MINS_HIST＋FMTQIK（當月，同一天以它為準）/ FinMind TaiwanStockPrice（TAIEX，歷史）；重疊日逐日核對收盤 |
 | `data/index/TAIEX_TR.csv` | 加權報酬指數日線：date,close，2003-01-02 起 | 證交所 OpenAPI MFI94U（當月）/ FinMind TaiwanStockTotalReturnIndex（歷史） |
 | `data/longterm/tw_business_cycle.csv` | 國發會景氣對策信號（月，1984-01 起）：month,score,light,release_est,release_actual,initial_score,initial_light,first_seen_taipei，說明見下方「長週期資料」 | data.gov.tw 資料集 6099（國發會 zip）/ 國發會景氣指標查詢系統 JSON |

@@ -31,6 +31,7 @@
   },
   "valuation": {"VOO": "etf", "GOOGL": "stock", "NVDA": "stock", "TSLA": "stock", "SPCX": "stock", "AAPL": "stock"},
   "holdings": {"00981A": "49YTW", "00411A": "64YTW"},
+  "dividend_etfs": ["009816", "00981A", "0056", "00878", "00919"],
   "news": {
     "window_hours": 72,
     "query_when": "2d",
