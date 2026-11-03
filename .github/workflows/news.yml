@@ -1,7 +1,7 @@
 name: news-headlines
 
 # 新聞三層架構的第一層：整理 Google News RSS 與 Fed 新聞稿標題（news.py → data/news/）。
-# 只由 cron-job.org（約台北 08:20）或手動觸發，不排程。meta.json 只更新 news/*，不影響 fetch.yml 的略過判斷。
+# 只由 cron-job.org（約台北 08:20、11:10）或手動觸發，不排程。meta.json 只更新 news/*，不影響 fetch.yml 的略過判斷。
 on:
   workflow_dispatch: {}
 

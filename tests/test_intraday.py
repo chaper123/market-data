@@ -90,6 +90,8 @@ class IntradayTest(IntradayBase):
         self.assertEqual(doc["slot"], "早盤")
         m = self.meta["datasets"]["intraday/tw"]
         self.assertEqual((m["status"], m["slot"], m["last"], m["quotes"]), ("ok", "早盤", "2026-10-23 10:05:00", 4))
+        doc = self.run_at(tpe(2026, 10, 23, 11, 20), mis(all_items("20261023", "11:19:58")))
+        self.assertEqual(doc["slot"], "午前")
         doc = self.run_at(tpe(2026, 10, 23, 12, 0), mis(all_items("20261023", "11:59:58")))
         self.assertEqual(doc["slot"], "午間")
         self.assertEqual(self.meta["datasets"]["intraday/tw"]["slot"], "午間")

@@ -1,13 +1,14 @@
 """證交所 MIS 盤中快照，給台股晨報取代鉅亨網的盤中價（只用 Python 標準庫）。
 
-由 .github/workflows/intraday.yml 執行（cron-job.org 約台北 10:05 與 12:00 觸發，兩次都寫同一個檔，用 slot 分辨）；
+由 .github/workflows/intraday.yml 執行（cron-job.org 約台北 10:05、11:20、12:00 觸發，都寫同一個檔，用 slot 分辨）；
 meta.json 只寫 intraday/tw（推回 repo 用 publish.py --meta-own intraday/），不影響 fetch.yml 的略過判斷。
 來源：mis.twse.com.tw 的 getStockInfo（抓 ETF 淨值用的同一個站）。上市用 tse_、上櫃用 otc_，加權指數是 tse_t00。
 
 輸出 data/tw/intraday.json：
   session      盤前／盤中／收盤後／休市日（依台北時間與 data/calendar/calendar.json 的休市日）
   is_trading   只有盤中是 true；其他時段 note 會寫清楚價格是哪一天、幾點的資料
-  slot         早盤（盤中 11:00 前，10:05 那次）／午間（盤中 11:00 起，12:00 那次）／盤外（不是盤中）
+  slot         早盤（盤中 11:00 前，10:05 那次）／午前（11:00～11:44，11:20 那次，給 11:30 新聞晨報）／
+               午間（11:45 起，12:00 那次，給網站）／盤外（不是盤中）
   quotes       代號 → name、market、data_date、time（一般交易最後成交時間，台北）、updated（MIS 最後更新，收盤後的
                ETF 會是 14:30 盤後定價交易）、price、price_field、price_note、price_retries、bid1、ask1、change、
                change_pct、open、high、low、prev_close、volume_lots（累積成交張數，指數為 null）、limit_up、limit_down、
@@ -59,11 +60,12 @@ def session(now, closed):
 
 
 def slot_of(now, sess):
-    """這次快照是哪一個時段：盤中 11:00 前是早盤（10:05 那次），11:00 起是午間（12:00 那次），其他是盤外。"""
+    """這次快照是哪一個時段：盤中 11:00 前早盤（10:05）、11:00～11:44 午前（11:20）、11:45 起午間（12:00），其他是盤外。"""
     if sess != "盤中":
         return "盤外"
     tp = now.astimezone(TPE)
-    return "早盤" if (tp.hour, tp.minute) < (11, 0) else "午間"
+    hm = (tp.hour, tp.minute)
+    return "早盤" if hm < (11, 0) else "午前" if hm < (11, 45) else "午間"
 
 
 def first_level(text):

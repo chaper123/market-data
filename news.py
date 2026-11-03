@@ -1,6 +1,6 @@
 """新聞三層架構的第一層：整理新聞標題給「新聞與社群晨報」排程與兩個晨報讀取（只用 Python 標準庫）。
 
-由 .github/workflows/news.yml 執行（cron-job.org 約台北 08:20 觸發）。輸出格式依 stock-dashboard 的
+由 .github/workflows/news.yml 執行（cron-job.org 約台北 08:20、11:10 觸發）。輸出格式依 stock-dashboard 的
 docs/NEWS_ROUTINE.md 第 3.1 節約定，差異寫在 README。
 
 來源：
