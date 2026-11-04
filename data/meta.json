@@ -656,36 +656,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-04 08:20",
-   "items": 1518,
+   "last": "2026-11-04 11:10",
+   "items": 1579,
    "by_tier": {
     "4": 383,
-    "2": 1123,
+    "2": 1183,
     "1": 3,
-    "3": 9
+    "3": 10
    },
    "feeds_ok": "48/48",
    "errors": 0,
-   "url_ok": 812,
-   "url_total": 812,
-   "time_suspect_detected": 41,
-   "time_fixed": 41,
+   "url_ok": 827,
+   "url_total": 827,
+   "time_suspect_detected": 38,
+   "time_fixed": 38,
    "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-10-30",
-   "checked_at_taipei": "2026-11-04 08:20",
+   "checked_at_taipei": "2026-11-04 11:10",
    "items": 2
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-04 07:42",
-   "items": 139,
+   "last": "2026-11-04 10:49",
+   "items": 145,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-04 08:20"
+   "checked_at_taipei": "2026-11-04 11:10"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -739,15 +739,15 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-04 08:20",
+   "last": "2026-11-04 11:10",
    "days_available": 4,
    "rising_topic": "fed",
    "rising_terms": [
     "powell",
+    "schools",
     "amd",
-    "claude",
-    "search",
-    "schools"
+    "tells",
+    "election"
    ]
   }
  },
