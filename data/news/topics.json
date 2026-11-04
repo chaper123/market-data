@@ -1,125 +1,125 @@
 {
- "generated_at_taipei": "2026-11-03 11:40",
+ "generated_at_taipei": "2026-11-04 08:20",
  "rule": "count_1d＝最近 24 小時；count_7d／count_30d＝最近 7／30 個台北日曆日（含今天）；rise＝(count_7d/7)÷(count_30d/30)，歷史不足時分母用已有天數；rising_terms 的 score＝近 24 小時則數÷(今天以外的日平均＋1)。固定規則計數，不做預測",
- "days_available": 3,
+ "days_available": 4,
  "history_since": "2026-11-01",
  "topics": [
   {
    "topic": "fed",
    "label": "Fed／利率",
-   "count_1d": 28,
-   "count_7d": 33,
-   "count_30d": 33,
+   "count_1d": 22,
+   "count_7d": 35,
+   "count_30d": 35,
    "rise": 1.0,
    "sample_ids": [
     "d5f01f9dd738c00b",
     "847a7abc2726921c",
-    "cb430857d5850dc5",
-    "59e22e6621540f7f",
-    "7c03349bd26f23b5"
+    "3a4c3a6938165a6b",
+    "134ea08bfa891605",
+    "cb430857d5850dc5"
    ]
   },
   {
    "topic": "tariff",
    "label": "關稅",
-   "count_1d": 26,
-   "count_7d": 31,
-   "count_30d": 31,
+   "count_1d": 23,
+   "count_7d": 34,
+   "count_30d": 34,
    "rise": 1.0,
    "sample_ids": [
+    "fc2099414f22aea0",
+    "70bfad498fbdfaf4",
+    "713bb549fcf7783b",
     "76c18b05437a2560",
-    "7ca48864c108a114",
-    "f8e9c52041026b3b",
-    "795643c6239da581",
-    "27b54ad27d3c5f71"
+    "7ca48864c108a114"
    ]
   },
   {
    "topic": "export_controls",
    "label": "出口管制",
-   "count_1d": 0,
-   "count_7d": 2,
-   "count_30d": 2,
+   "count_1d": 1,
+   "count_7d": 3,
+   "count_30d": 3,
    "rise": 1.0,
    "sample_ids": [
+    "035556adee4eb67b",
     "fed9604e4fb42906",
-    "93944751f164330b",
-    "13911d7ae2b2c555"
+    "93944751f164330b"
    ]
   },
   {
    "topic": "china",
    "label": "中國",
    "count_1d": 46,
-   "count_7d": 55,
-   "count_30d": 55,
+   "count_7d": 82,
+   "count_30d": 82,
    "rise": 1.0,
    "sample_ids": [
-    "bdeabf64fa270333",
-    "1ccfd20dc0596993",
-    "3b11b5ee1ccfafcb",
-    "5a28d900de006d5f",
-    "44b67bd822fbe22b"
+    "46c0f8278f4ec3a4",
+    "9ff8dc2833c37961",
+    "ddf85c1fe8554a30",
+    "c4158b44943b7721",
+    "0fdcdc0d6485e44b"
    ]
   },
   {
    "topic": "taiwan",
    "label": "台灣",
-   "count_1d": 60,
-   "count_7d": 76,
-   "count_30d": 76,
+   "count_1d": 55,
+   "count_7d": 94,
+   "count_30d": 94,
    "rise": 1.0,
    "sample_ids": [
-    "b7619de912f9f06d",
-    "5ece2a842457c8c3",
-    "74a68e4920265e19",
-    "1a02226941532695",
-    "fae9b76c4ab138af"
+    "b2c9cbb3ac1cbc12",
+    "0720beaaa7988a7c",
+    "746fac0e3f9910d5",
+    "499e895e545a3752",
+    "d20244fa3f032c85"
    ]
   },
   {
    "topic": "oil",
    "label": "油價",
    "count_1d": 16,
-   "count_7d": 17,
-   "count_30d": 17,
+   "count_7d": 26,
+   "count_30d": 26,
    "rise": 1.0,
    "sample_ids": [
-    "23eecc68c21daf80",
-    "58c64f68331d647e",
-    "fea65eea7ab4214b",
-    "70d20804f98984c3",
-    "23eecc68c21daf80"
+    "24115a4edd3393a8",
+    "a65308b048f13d66",
+    "d5a40f3c3b496b2d",
+    "e031e3b1b9bf3e14",
+    "e12ff1ae3d2a29e9"
    ]
   },
   {
    "topic": "war",
    "label": "戰爭與地緣",
    "count_1d": 13,
-   "count_7d": 16,
-   "count_30d": 16,
+   "count_7d": 19,
+   "count_30d": 19,
    "rise": 1.0,
    "sample_ids": [
-    "a47ab37875676e3d",
-    "a33025f49bb7f112",
-    "78062c9e7ed538b1",
-    "fc6dfc9881946596",
-    "36a9e5a263bb747f"
+    "278f29f7f24c23aa",
+    "813a16256d54e984",
+    "630e84b12b2689a6",
+    "43d74e9288d99739",
+    "4cff9f46d0f7a61a"
    ]
   },
   {
    "topic": "cpi",
    "label": "通膨",
-   "count_1d": 3,
-   "count_7d": 4,
-   "count_30d": 4,
+   "count_1d": 4,
+   "count_7d": 7,
+   "count_30d": 7,
    "rise": 1.0,
    "sample_ids": [
+    "a41bec224830b9c8",
     "fea65eea7ab4214b",
     "7c03349bd26f23b5",
     "a5b5d6e96d10e71d",
-    "0e306091306d124f",
-    "2f1f11b5c3f1f14a"
+    "0e306091306d124f"
    ]
   },
   {
@@ -134,16 +134,16 @@
   {
    "topic": "earnings",
    "label": "財報",
-   "count_1d": 89,
-   "count_7d": 102,
-   "count_30d": 102,
+   "count_1d": 38,
+   "count_7d": 100,
+   "count_30d": 100,
    "rise": 1.0,
    "sample_ids": [
-    "90e5baf29f10498e",
-    "c570447d10220e8c",
-    "004c6177bae2349c",
-    "af960ea26cb65f9a",
-    "cdcc0186acf4509b"
+    "5439c047c1a4c92d",
+    "baf80fff74ca9a5a",
+    "3f15c45ec4c7a806",
+    "da380df0014252c4",
+    "ffcb9f09c21bafbc"
    ]
   },
   {
@@ -158,214 +158,214 @@
   {
    "topic": "merger",
    "label": "併購",
-   "count_1d": 16,
-   "count_7d": 18,
-   "count_30d": 18,
+   "count_1d": 13,
+   "count_7d": 24,
+   "count_30d": 24,
    "rise": 1.0,
    "sample_ids": [
-    "671c5f7522a5b663",
-    "4908e83a531a8dfe",
-    "ad983f6d5a33300a",
-    "c0172fa6b8e64bd9",
-    "2dc872e2787a33d6"
+    "b178b11d84449878",
+    "acf1f454165ad021",
+    "2eb4c4f4375428c5",
+    "822b948f84852ac9",
+    "28c76f389b0d0398"
    ]
   }
  ],
  "rising_topic": "fed",
  "rising_terms": [
   {
-   "term": "revenue",
-   "count_1d": 33,
-   "count_30d": 33,
-   "score": 33.0,
-   "sample_ids": [
-    "90e5baf29f10498e",
-    "aa2c914bd01a0fa0",
-    "88cc6c12eada6996",
-    "172f93dcd0a4a742",
-    "eb8760011deb0dfa"
-   ]
-  },
-  {
-   "term": "anthropic",
-   "count_1d": 71,
-   "count_30d": 74,
-   "score": 28.4,
-   "sample_ids": [
-    "90e5baf29f10498e",
-    "08233f503ef0a79a",
-    "004c6177bae2349c",
-    "6c399aac8555b5f6",
-    "e7937c921499e29c"
-   ]
-  },
-  {
-   "term": "ipo",
-   "count_1d": 41,
-   "count_30d": 42,
-   "score": 27.33,
-   "sample_ids": [
-    "90e5baf29f10498e",
-    "08233f503ef0a79a",
-    "e7937c921499e29c",
-    "47fa43d961b88e46",
-    "9e9b498a3429278c"
-   ]
-  },
-  {
-   "term": "boost",
-   "count_1d": 26,
-   "count_30d": 26,
-   "score": 26.0,
-   "sample_ids": [
-    "3b10aba378cac494",
-    "8c05d24f2d415a81",
-    "a5b5d6e96d10e71d",
-    "b8afdd6e2674e8f6",
-    "b56dbd1fd14f9284"
-   ]
-  },
-  {
-   "term": "mobile",
-   "count_1d": 24,
-   "count_30d": 24,
-   "score": 24.0,
-   "sample_ids": [
-    "8c05d24f2d415a81",
-    "7ac238a08b60d850",
-    "b8afdd6e2674e8f6",
-    "b56dbd1fd14f9284",
-    "e4c91b508e5dfad0"
-   ]
-  },
-  {
-   "term": "estimates",
+   "term": "powell",
    "count_1d": 20,
    "count_30d": 20,
    "score": 20.0,
    "sample_ids": [
-    "5c5125e5d453bed5",
-    "c0a05ad1c52e4c95",
-    "698a20acacebe0a2",
-    "4261dfc2cb36516c",
-    "5efda6f025bc722e"
+    "3a4c3a6938165a6b",
+    "3a3adc1ed8e32a65",
+    "a81efaf09305d6c0",
+    "42a349c5e5ec3175",
+    "bab8f7b1bd46dbc6"
    ]
   },
   {
-   "term": "talks",
-   "count_1d": 19,
-   "count_30d": 19,
-   "score": 19.0,
-   "sample_ids": [
-    "2d1caaf392e37cbe",
-    "58c64f68331d647e",
-    "78062c9e7ed538b1",
-    "e0af63ee253befff",
-    "59f5e71a505ad5f9"
-   ]
-  },
-  {
-   "term": "apple",
-   "count_1d": 80,
-   "count_30d": 87,
-   "score": 17.78,
-   "sample_ids": [
-    "6df006e6a87b13ea",
-    "47251a6642a7a0f2",
-    "5c5125e5d453bed5",
-    "29486050041057b7",
-    "c570447d10220e8c"
-   ]
-  },
-  {
-   "term": "results",
-   "count_1d": 17,
-   "count_30d": 17,
-   "score": 17.0,
-   "sample_ids": [
-    "76792b1d4efd8e18",
-    "2a57a2e77c7255c3",
-    "2e6875d8a5cfe4df",
-    "546c2202031f58e1",
-    "b4da606b406f1e8a"
-   ]
-  },
-  {
-   "term": "powell",
-   "count_1d": 16,
-   "count_30d": 16,
-   "score": 16.0,
-   "sample_ids": [
-    "c9d070c919a4cbd5",
-    "e6f9f6e5b85b4de5",
-    "de2387142b422ba5",
-    "d5811a5f6f7e3233",
-    "8bad60a95844d284"
-   ]
-  },
-  {
-   "term": "costs",
-   "count_1d": 15,
-   "count_30d": 15,
-   "score": 15.0,
-   "sample_ids": [
-    "6df006e6a87b13ea",
-    "5a28d900de006d5f",
-    "ba7d6ce9106025e1",
-    "5efda6f025bc722e",
-    "76792b1d4efd8e18"
-   ]
-  },
-  {
-   "term": "quarter",
-   "count_1d": 15,
-   "count_30d": 15,
-   "score": 15.0,
-   "sample_ids": [
-    "151a8473b1aeee16",
-    "6c7ebc33073085e0",
-    "ba0d63ac0d3b4260",
-    "6f1d30164c37906e",
-    "cb430857d5850dc5"
-   ]
-  },
-  {
-   "term": "ahead",
-   "count_1d": 21,
-   "count_30d": 22,
-   "score": 14.0,
-   "sample_ids": [
-    "e419ad52d7947f96",
-    "47fa43d961b88e46",
-    "9e9b498a3429278c",
-    "8fa41ac5192c6af7",
-    "858819f604c7a77d"
-   ]
-  },
-  {
-   "term": "中國",
-   "count_1d": 14,
-   "count_30d": 14,
-   "score": 14.0,
-   "sample_ids": [
-    "bdeabf64fa270333",
-    "3b11b5ee1ccfafcb",
-    "da438599ca3f1383",
-    "25a4e9409e5829af",
-    "47a444d1eb289e2f"
-   ]
-  },
-  {
-   "term": "midterm",
+   "term": "amd",
    "count_1d": 20,
-   "count_30d": 21,
-   "score": 13.33,
+   "count_30d": 22,
+   "score": 12.0,
    "sample_ids": [
-    "7a6eb92c1a8ef495",
-    "87149241edfd74a1",
+    "f5551190a5258510",
+    "195e22bc9907cb66",
+    "3f15c45ec4c7a806",
+    "08a12b1bffcf8960",
+    "a359927a615fa718"
+   ]
+  },
+  {
+   "term": "claude",
+   "count_1d": 12,
+   "count_30d": 12,
+   "score": 12.0,
+   "sample_ids": [
+    "80d7c1195eea0611",
+    "31e373d1920ac1ca",
+    "1ef3973a8d33b029",
+    "22b2d13816550319",
+    "13f71de2c4d56956"
+   ]
+  },
+  {
+   "term": "search",
+   "count_1d": 19,
+   "count_30d": 21,
+   "score": 11.4,
+   "sample_ids": [
+    "32bf8e373cd03d9c",
+    "7b2249241064f6bd",
+    "bb657af615e11c54",
+    "b9d7a892885cc68b",
+    "18741047b67e61ca"
+   ]
+  },
+  {
+   "term": "schools",
+   "count_1d": 10,
+   "count_30d": 10,
+   "score": 10.0,
+   "sample_ids": [
+    "32bf8e373cd03d9c",
+    "bb657af615e11c54",
+    "b9d7a892885cc68b",
+    "94185cf36be333e4",
+    "ced84e66d925b92e"
+   ]
+  },
+  {
+   "term": "election",
+   "count_1d": 16,
+   "count_30d": 18,
+   "score": 9.6,
+   "sample_ids": [
+    "f5551190a5258510",
+    "111f30c01d094a8a",
+    "7ebf2b98634209ea",
+    "4af6ff5b1731048e",
+    "9a0dad381d7c2ce6"
+   ]
+  },
+  {
+   "term": "台股重",
+   "count_1d": 12,
+   "count_30d": 13,
+   "score": 9.0,
+   "sample_ids": [
+    "ff09b0d80b86f68e",
+    "47fff50ca0046326",
+    "73c3bc59750b8f87",
+    "2c8869b9b2f66221",
+    "fa1b0cc31c5c9634"
+   ]
+  },
+  {
+   "term": "股重挫",
+   "count_1d": 12,
+   "count_30d": 13,
+   "score": 9.0,
+   "sample_ids": [
+    "ff09b0d80b86f68e",
+    "47fff50ca0046326",
+    "73c3bc59750b8f87",
+    "2c8869b9b2f66221",
+    "fa1b0cc31c5c9634"
+   ]
+  },
+  {
+   "term": "tells",
+   "count_1d": 9,
+   "count_30d": 9,
+   "score": 9.0,
+   "sample_ids": [
+    "28c76f389b0d0398",
+    "45195f3c81cc7b9f",
+    "49f95f0fdf5fef20",
+    "eabc633acacefa46",
+    "9ca1b49b842a4333"
+   ]
+  },
+  {
+   "term": "google",
+   "count_1d": 38,
+   "count_30d": 49,
+   "score": 8.14,
+   "sample_ids": [
+    "32bf8e373cd03d9c",
+    "c8312cd88f0b5518",
+    "7b2249241064f6bd",
+    "bb657af615e11c54",
+    "69c8f26f82c7d2e3"
+   ]
+  },
+  {
+   "term": "tools",
+   "count_1d": 8,
+   "count_30d": 8,
+   "score": 8.0,
+   "sample_ids": [
+    "7b2249241064f6bd",
+    "e76a6f86cdf0c6c2",
+    "18741047b67e61ca",
+    "ced84e66d925b92e",
+    "a289c650c6b5f4ff"
+   ]
+  },
+  {
+   "term": "data",
+   "count_1d": 15,
+   "count_30d": 18,
+   "score": 7.5,
+   "sample_ids": [
+    "a83f12af4b60326d",
+    "a359927a615fa718",
+    "6fc228dcba5c7706",
     "e419ad52d7947f96",
-    "e85f22cd04816e77",
-    "4ad95245a24be4d3"
+    "746fac0e3f9910d5"
+   ]
+  },
+  {
+   "term": "管會",
+   "count_1d": 12,
+   "count_30d": 14,
+   "score": 7.2,
+   "sample_ids": [
+    "ff09b0d80b86f68e",
+    "41e79a668af699d4",
+    "587cc4897b090b92",
+    "d374c9c5cbbc492e",
+    "9b1dac3afe4404f3"
+   ]
+  },
+  {
+   "term": "金管",
+   "count_1d": 12,
+   "count_30d": 14,
+   "score": 7.2,
+   "sample_ids": [
+    "ff09b0d80b86f68e",
+    "41e79a668af699d4",
+    "587cc4897b090b92",
+    "d374c9c5cbbc492e",
+    "9b1dac3afe4404f3"
+   ]
+  },
+  {
+   "term": "選舉",
+   "count_1d": 19,
+   "count_30d": 24,
+   "score": 7.12,
+   "sample_ids": [
+    "6d6d769a9a065bfb",
+    "20f0dcc98147c5e6",
+    "9db1cb46618cd2ce",
+    "5c0e81bf0080e276",
+    "dc00b61c0d464dd3"
    ]
   }
  ]
