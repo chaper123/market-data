@@ -657,36 +657,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-05 08:20",
-   "items": 1776,
+   "last": "2026-11-05 11:10",
+   "items": 1811,
    "by_tier": {
-    "4": 382,
-    "2": 1378,
+    "4": 380,
+    "2": 1415,
     "1": 5,
     "3": 11
    },
    "feeds_ok": "48/48",
    "errors": 0,
-   "url_ok": 730,
-   "url_total": 730,
-   "time_suspect_detected": 41,
-   "time_fixed": 41,
-   "time_removed": 0
+   "url_ok": 735,
+   "url_total": 735,
+   "time_suspect_detected": 36,
+   "time_fixed": 34,
+   "time_removed": 2
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-10-30",
-   "checked_at_taipei": "2026-11-05 08:20",
+   "checked_at_taipei": "2026-11-05 11:10",
    "items": 1
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-05 05:59",
-   "items": 192,
+   "last": "2026-11-05 10:42",
+   "items": 210,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-05 08:20"
+   "checked_at_taipei": "2026-11-05 11:10"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -740,15 +740,15 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-05 08:20",
+   "last": "2026-11-05 11:10",
    "days_available": 5,
    "rising_topic": "fed",
    "rising_terms": [
     "democrats",
-    "qualcomm",
+    "民主",
     "congress",
-    "powell",
-    "democratic"
+    "democratic",
+    "powell"
    ]
   }
  },
