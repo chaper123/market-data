@@ -1,54 +1,54 @@
 {
- "fetched_at_taipei": "2026-11-05 06:15",
- "time_utc": "2026-11-04T21:59:36+00:00",
- "score": 27.29,
- "rating": "fear",
- "previous_close": 19.09,
- "previous_1_week": 34.4,
- "previous_1_month": 38.2,
- "previous_1_year": 20.94,
+ "fetched_at_taipei": "2026-11-06 06:15",
+ "time_utc": "2026-11-05T21:58:11+00:00",
+ "score": 19.88,
+ "rating": "extreme fear",
+ "previous_close": 27.29,
+ "previous_1_week": 30.77,
+ "previous_1_month": 43.09,
+ "previous_1_year": 23.06,
  "components": {
   "market_momentum_sp500": {
-   "score": 26.4,
-   "rating": "fear",
-   "time_utc": "2026-11-04T21:51:11Z",
-   "value": 7688.62
+   "score": 6.4,
+   "rating": "extreme fear",
+   "time_utc": "2026-11-05T21:34:08Z",
+   "value": 7353.73
   },
   "stock_price_strength": {
-   "score": 39.2,
+   "score": 41.8,
    "rating": "fear",
-   "time_utc": "2026-11-04T21:59:36Z",
-   "value": -3.57514459562229
+   "time_utc": "2026-11-05T21:58:00Z",
+   "value": -3.29787174199178
   },
   "stock_price_breadth": {
    "score": 45.4,
    "rating": "neutral",
-   "time_utc": "2026-11-04T21:59:36Z",
-   "value": 605.699306502602
+   "time_utc": "2026-11-05T21:58:11Z",
+   "value": 601.926326105175
   },
   "put_call_options": {
-   "score": 17.6,
+   "score": 8.4,
    "rating": "extreme fear",
-   "time_utc": "2026-11-04T21:17:59Z",
-   "value": 0.831749018828839
+   "time_utc": "2026-11-05T21:56:26Z",
+   "value": 0.872910564441658
   },
   "market_volatility_vix": {
-   "score": 50,
-   "rating": "neutral",
-   "time_utc": "2026-11-04T21:15:01Z",
-   "value": 16.61
+   "score": 2.14285714285714,
+   "rating": "extreme fear",
+   "time_utc": "2026-11-05T21:15:01Z",
+   "value": 28.18
   },
   "junk_bond_demand": {
-   "score": 2.6,
-   "rating": "extreme fear",
-   "time_utc": "2026-11-04T21:10:00Z",
-   "value": 1.3650167511023599
+   "score": 34.4,
+   "rating": "fear",
+   "time_utc": "2026-11-05T21:10:00Z",
+   "value": 1.24771431865146
   },
   "safe_haven_demand": {
-   "score": 9.8,
+   "score": 0.6,
    "rating": "extreme fear",
-   "time_utc": "2026-11-04T20:59:59Z",
-   "value": -3.36432174288932
+   "time_utc": "2026-11-05T20:59:58Z",
+   "value": -8.6807235319938
   }
  },
  "source": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
