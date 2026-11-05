@@ -65,14 +65,14 @@
       {"id": "2330",   "q": "台積電",                                          "symbols": ["2330", "TSM"],   "match": ["台積電", "台積"]},
       {"id": "TWSE",   "q": "台股 OR 加權指數",                                "symbols": [],                "match": ["台股", "加權指數", "大盤"]},
       {"id": "009816", "q": "009816 OR 凱基台灣TOP50",                         "symbols": ["009816"],        "match": ["009816", "凱基台灣top50"]},
-      {"id": "00981A", "q": "00981A OR 主動統一台股增長",                      "symbols": ["00981A"],        "match": ["00981a", "主動統一台股增長"]},
+      {"id": "00981A", "q": "00981A OR 主動統一台股增長 OR 瑤池金母",          "symbols": ["00981A"],        "match": ["00981a", "統一台股增長", "瑤池金母"]},
       {"id": "00411A", "q": "00411A OR 主動統一前沿科技",                      "symbols": ["00411A"],        "match": ["00411a", "主動統一前沿科技"]},
       {"id": "SEMI_ZH", "q": "半導體 供應鏈 OR CoWoS OR 先進封裝",            "symbols": [],                "match": ["半導體", "供應鏈", "cowos", "先進封裝", "晶圓代工"]},
       {"id": "AI_ZH",  "q": "Anthropic OR OpenAI OR ChatGPT",                  "symbols": [],                "match": ["anthropic", "openai", "chatgpt"]}
     ],
     "site_filter": {
       "en": ["reuters.com", "apnews.com", "bloomberg.com", "cnbc.com", "wsj.com", "ft.com", "barrons.com", "marketwatch.com", "axios.com", "finance.yahoo.com"],
-      "zh": ["cna.com.tw", "money.udn.com", "ctee.com.tw", "udn.com"]
+      "zh": ["cna.com.tw", "money.udn.com", "ctee.com.tw", "udn.com", "news.cnyes.com", "moneydj.com", "tw.stock.yahoo.com"]
     },
     "tiers": {
       "1": ["federalreserve.gov", "sec.gov", "whitehouse.gov", "ustr.gov", "commerce.gov", "bis.gov", "treasury.gov", "bls.gov",
@@ -80,7 +80,8 @@
             "ir.tesla.com", "abc.xyz", "apple.com", "spacex.com", "tsmc.com", "pr.tsmc.com", "twse.com.tw", "tpex.org.tw",
             "president.gov.tw", "moea.gov.tw", "cbc.gov.tw", "fsc.gov.tw", "ezmoney.com.tw", "kgifund.com.tw"],
       "2A": ["reuters.com", "apnews.com", "bloomberg.com", "wsj.com", "ft.com", "cnbc.com", "cna.com.tw"],
-      "2B": ["barrons.com", "marketwatch.com", "axios.com", "finance.yahoo.com", "money.udn.com", "ctee.com.tw", "udn.com"],
+      "2B": ["barrons.com", "marketwatch.com", "axios.com", "finance.yahoo.com", "money.udn.com", "ctee.com.tw", "udn.com",
+             "cnyes.com", "moneydj.com", "tw.stock.yahoo.com"],
       "3": ["blogs.nvidia.com", "developer.nvidia.com", "blog.google", "x.com", "truthsocial.com"]
     },
     "topic_rules": {
