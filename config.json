@@ -31,7 +31,7 @@
     "TSM":  {"yahoo": "TSM",      "moneydj": "TSM",         "name": "台積電 ADR"}
   },
   "valuation": {"VOO": "etf", "GOOGL": "stock", "NVDA": "stock", "TSLA": "stock", "SPCX": "stock", "AAPL": "stock"},
-  "holdings": {"00981A": "49YTW", "00411A": "64YTW"},
+  "holdings": {"00981A": {"source": "ezmoney", "fund": "49YTW"}, "009816": {"source": "kgifund", "fund": "J023"}},
   "dividend_etfs": ["009816", "00981A", "0056", "00878", "00919"],
   "news": {
     "window_hours": 72,

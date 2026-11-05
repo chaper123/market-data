@@ -18,7 +18,7 @@ Phase 1 新資料由各模組產生（只在完整抓取時執行，失敗不影
   dividends.py             data/dividends/tw_etf.json（ETF 配息，FinMind＋證交所 OpenAPI 除權除息預告表）
   twwatch.py               data/tw/<tw_watch 代號>_norm.csv（0056、00878、00919 日線，FinMind＋證交所 OpenAPI）
   chips.py                 data/chips/（關注代號三大法人、集中市場三大法人金額、融資）
-  holdings.py              data/holdings/（主動式 ETF 每日持股與前十大變化，統一投信）
+  holdings.py              2026-11-06 停用（只在私人 repo 執行，見 DISABLED 與 holdings.py 說明）
 
 用法：python fetch.py [--skip-if-fresh]
   --skip-if-fresh：meta.json 顯示日線已完整（美股、台股最後日期都到台北今天的前一個平日且狀態 ok，沒有待核對的單一來源 K 棒）
@@ -39,7 +39,6 @@ import calendars
 import chips
 import dividends
 import fxbot
-import holdings
 import macro
 import twindex
 import twwatch
@@ -48,7 +47,7 @@ import valuation
 # Phase 1 新資料：放在既有日線與匯率之後，每步各自 try，簽名都是 step(cfg, META)
 PHASE1_STEPS = (macro.fetch_macro, macro.fetch_cnn, fxbot.fetch_bot_fx,
                 valuation.fetch_valuation, calendars.fetch_calendar,
-                chips.fetch_chips, holdings.fetch_holdings, twindex.fetch_index,
+                chips.fetch_chips, twindex.fetch_index,
                 dividends.fetch_dividends, twwatch.fetch_watch)
 
 # 停用的資料集：meta 照樣列出（status＝disabled、原因、停用前最後一次的 latest），檔案保留停用前的內容、不再更新
@@ -60,6 +59,9 @@ DISABLED = {
                     "data/tw/intraday.json 保留到停用前"),
     "sentiment/taifex_vix": ("2026-11-03 停用：期交所網站下載區（Dailydownload）不是開放資料介面，期交所 OpenAPI 沒有 VIX；"
                              "網站與新聞拿掉這一項；data/sentiment/taifex_vix.csv 保留到停用前"),
+    "holdings/00981A": ("2026-11-06 停用：統一投信網站寫明內容未經同意不得轉載；持股改由私人 repo 每天收集"
+                        "（holdings.py --out），data/holdings/00981A.* 保留到新聞晨報改讀私人 repo 為止"),
+    "holdings/00411A": ("2026-11-06 停用：同上（統一投信），且已不是關注標的；data/holdings/00411A.* 保留到停用前"),
 }
 
 

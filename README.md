@@ -43,8 +43,8 @@ GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所�
 | `data/chips/tw_insti.csv` | 關注代號三大法人買賣超（股）：date,code,foreign,foreign_dealer,trust,dealer,total（foreign 不含外資自營商，dealer＝自行買賣＋避險；逐日累積） | FinMind TaiwanStockInstitutionalInvestorsBuySell（2026-11-03 起；換之前與證交所 T86、櫃買 dailyTrade 逐筆比對一致）/ 單一來源 |
 | `data/chips/tw_market_insti.csv` | 集中市場三大法人買賣差額（元）：date,dealer_self,dealer_hedge,trust,foreign,foreign_dealer,total（逐日累積） | FinMind TaiwanStockTotalInstitutionalInvestors（2026-11-03 起，原證交所 BFI82U，逐筆比對一致）/ 合計＝分項加總 |
 | `data/chips/tw_margin.csv` | 集中市場信用交易：date,margin_lots,short_lots,margin_amount_k（融資餘額張、融券餘額張、融資金額仟元；逐日累積） | FinMind TaiwanStockTotalMarginPurchaseShortSale（2026-11-03 起，原證交所 MI_MARGN，逐筆比對一致） |
-| `data/holdings/<代號>.json` | 主動式 ETF（00981A、00411A）最新持股：資料日、每單位淨值、全部持股與權重、期貨與現金、前十大，以及與前一資料日比較（前十大新進／退出、權重變動 ≥1 個百分點、新增／出清）。00411A 持有美股，資料日通常晚一天 | 統一投信 ezmoney / 淨值與 nav_history 核對、權重加總與股票市值核對 |
-| `data/holdings/<代號>_history.csv` | 每日持股：date,code,name,shares,weight（逐日累積） | 同上 |
+| `data/holdings/<代號>.json` | **2026-11-06 停用，保留到停用前**（投信網站寫明不得轉載，持股改放私人 repo，見下方「注意」）。主動式 ETF（00981A、00411A）最新持股：資料日、每單位淨值、全部持股與權重、期貨與現金、前十大，以及與前一資料日比較（前十大新進／退出、權重變動 ≥1 個百分點、新增／出清）。00411A 持有美股，資料日通常晚一天 | 統一投信 ezmoney / 淨值與 nav_history 核對、權重加總與股票市值核對 |
+| `data/holdings/<代號>_history.csv` | 每日持股：date,code,name,shares,weight（逐日累積；2026-11-06 停用，同上） | 同上 |
 | `data/news/headlines.json` | 新聞標題（最近 72 小時），格式見下方「新聞標題格式」。約 0.7 MB，讀取時請用程式篩選 | Google News RSS（每個查詢跑兩次：限定白名單網站與不限定；2026-11-03 加半導體供應鏈、Anthropic、OpenAI 查詢，symbols 多 `ANTHROPIC`、`OPENAI`）、中央社官方 RSS（財經、科技、國際、兩岸）、federalreserve.gov RSS（新聞稿、演講）；`news.py`，查詢詞、來源等級與主題詞在 `config.json` 的 `news` |
 | `data/news/topics.json` | 話題統計（每次 news.py 後更新，`topics.py`）：`topics[]`（`topic`、`label`、`count_1d` 最近 24 小時、`count_7d`、`count_30d`、`rise`＝(count_7d/7)÷(count_30d/30)、`sample_ids`）、`rising_topic`、`rising_terms[]`（標題詞近 24 小時相對 30 天日平均上升最多的：`term`、`count_1d`、`count_30d`、`score`、`sample_ids`）、`days_available`（2026-11-01 起累積，不足 30 天時 rise 的分母用已有天數）。固定規則計數，不做預測；`topic_history.json` 是逐日累積的計數 | `headlines.json` 的 topics 與標題 |
 | `data/news/fed.json` | Fed 新聞稿與演講（最近 7 天）：`items[]` 的 `date`（台北日期）、`title`、`link`、`type`（press／speech）、`published_taipei`、`published_utc` | federalreserve.gov RSS |
@@ -148,6 +148,8 @@ curl -sSf https://raw.githubusercontent.com/<帳號>/market-data/main/data/meta.
 **資料出處與授權（2026-11-03 查）**：證交所 OpenAPI、櫃買中心 OpenAPI 的資料依「政府資料開放授權條款－第 1 版」（https://data.gov.tw/license）使用，出處：臺灣證券交易所、證券櫃檯買賣中心。國發會景氣指標同一授權，出處：國家發展委員會。FinMind 只寫明「教育、非商業用途」，沒有說明能否把取得的資料公開再散布：用到 FinMind 的檔案（data/tw/*_norm.csv 的歷史、data/index/、data/dividends/、data/chips/、data/fx/usdtwd_bot_sell.csv）是否能放在公開 repo 待使用者決定。
 
 **證交所資料的使用條款（2026-10-30 查）**：證交所網站使用條款第 6 條禁止「非依臺灣證券交易所同意之方式」以自動程式、爬蟲下載資料，第 8 條未經書面同意不得重製，但證交所已授權政府資料開放平臺的資料除外；證交所 OpenAPI（openapi.twse.com.tw）標示的授權是政府資料開放授權條款（需標示出處）。所以 2026-10-30 起新加的證交所資料（加權指數、報酬指數、除權息預告、上市個股日成交）都走 OpenAPI，歷史部分用 FinMind（教育、非商業用途，未註冊每小時約 300 次）。櫃買中心網站條款相同（第五、七條），也改用櫃買 OpenAPI。2026-11-03 起日線也改走 FinMind＋OpenAPI（見下方各列）。
+
+**ETF 持股（2026-11-06 起不放這裡）**：統一投信網站寫明「任何人未經同意，不得將網站全部或部分內容轉載」，凱基投信網站寫明「未經授權不得複製、修改或散發引用」。所以 `fetch.py` 不再抓持股，改由私人 repo 的 workflow 每天執行 `python holdings.py --out <資料夾>`（00981A 統一投信、009816 凱基投信，程式仍在這個 repo；00411A 已不是關注標的，不再收）。這裡的 `data/holdings/` 保留到新聞晨報改讀私人 repo 為止，之後刪除；git 歷史裡已公開的部分不改寫。
 
 TradingView scanner 不是官方公開 API，改版時可能失效；失效時雷達只少了綜合評分。TradingView 偶爾有錯誤的 K 棒（00411A 的高低點曾出錯，ADX、ATR、Pivot 全部失真），所以雷達的指標一律用 repo 的官方日線計算。
 技術面雷達只描述結構，不是投資建議，也不改變排程任務的買區判定。
