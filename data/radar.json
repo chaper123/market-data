@@ -1,6 +1,6 @@
 {
  "generated_from": "repo 日線（indicators.py）；綜合評分來自 TradingView",
- "tv_fetched_at_taipei": "2026-11-07 02:50",
+ "tv_fetched_at_taipei": "2026-11-07 02:53",
  "rules": {
   "trend_adx": 25,
   "range_adx": 20
@@ -62,7 +62,7 @@
    },
    "last_date": "2026-11-05",
    "rows": 252,
-   "rating_skipped": "收盤 678.94 ≠ 673.97（可能是盤中數字）"
+   "rating_skipped": "收盤 678.16 ≠ 673.97（可能是盤中數字）"
   },
   "GOOGL": {
    "code": "GOOGL",
@@ -120,7 +120,7 @@
    },
    "last_date": "2026-11-05",
    "rows": 252,
-   "rating_skipped": "收盤 285.78 ≠ 282.57（可能是盤中數字）；SMA20 不一致"
+   "rating_skipped": "收盤 285.70 ≠ 282.57（可能是盤中數字）；SMA20 不一致"
   },
   "NVDA": {
    "code": "NVDA",
@@ -169,7 +169,7 @@
    },
    "last_date": "2026-11-05",
    "rows": 252,
-   "rating_skipped": "收盤 187.12 ≠ 181.60（可能是盤中數字）"
+   "rating_skipped": "收盤 186.87 ≠ 181.60（可能是盤中數字）"
   },
   "TSLA": {
    "code": "TSLA",
@@ -218,7 +218,7 @@
    },
    "last_date": "2026-11-05",
    "rows": 252,
-   "rating_skipped": "收盤 360.56 ≠ 343.69（可能是盤中數字）"
+   "rating_skipped": "收盤 359.63 ≠ 343.69（可能是盤中數字）"
   },
   "SPCX": {
    "code": "SPCX",
@@ -272,7 +272,7 @@
    },
    "last_date": "2026-11-05",
    "rows": 102,
-   "rating_skipped": "收盤 133.50 ≠ 123.62（可能是盤中數字）"
+   "rating_skipped": "收盤 132.94 ≠ 123.62（可能是盤中數字）；SMA20 不一致"
   },
   "AAPL": {
    "code": "AAPL",
@@ -433,7 +433,7 @@
    },
    "last_date": "2026-11-05",
    "rows": 252,
-   "rating_skipped": "收盤 75.38 ≠ 73.15（可能是盤中數字）"
+   "rating_skipped": "收盤 75.06 ≠ 73.15（可能是盤中數字）"
   },
   "ARKQ": {
    "code": "ARKQ",
@@ -482,7 +482,7 @@
    },
    "last_date": "2026-11-05",
    "rows": 252,
-   "rating_skipped": "收盤 104.65 ≠ 99.38（可能是盤中數字）"
+   "rating_skipped": "收盤 104.50 ≠ 99.38（可能是盤中數字）"
   },
   "ARKX": {
    "code": "ARKX",
@@ -531,7 +531,7 @@
    },
    "last_date": "2026-11-05",
    "rows": 252,
-   "rating_skipped": "收盤 28.38 ≠ 27.05（可能是盤中數字）"
+   "rating_skipped": "收盤 28.30 ≠ 27.05（可能是盤中數字）"
   },
   "009816": {
    "code": "009816",
