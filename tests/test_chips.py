@@ -51,6 +51,11 @@ class ChipsTest(unittest.TestCase):
             rows = {k: common.read_rows(p) for k, p in paths.items()}
         return rows, meta["datasets"]
 
+    def test_new_code_backfills_to_earliest_day(self):
+        rows, _ = self.run_fetch()
+        self.assertIn(["2026-10-30", "00981A", "0", "0", "0", "0", "0"], rows["tw_insti"])  # 新代號補到檔案最早的 10/30
+        self.assertEqual(len([r for r in rows["tw_insti"] if r[0] == "2026-10-30"]), 2)
+
     def test_conversion_and_zero_fill(self):
         rows, ds = self.run_fetch()
         self.assertIn(["2026-11-02", "009816", "-13507165", "0", "0", "-171551760", "-185058925"], rows["tw_insti"])

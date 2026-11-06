@@ -63,6 +63,12 @@ class StocksTest(unittest.TestCase):
         self.assertIn(["2026-11-05", "2330", "34596", "47"], m)  # 同一天以新抓的為準
         self.assertEqual(len(m), 3)
 
+    def test_holders_check_accepts_minus_adjustment(self):
+        # 實際資料（2026-10-30）：1～15 加總扣掉 16 差異數調整才等於合計
+        minus = TDCC.replace("2330  ,17,2612263,25932370067", "2330  ,17,2612263,25932368067")
+        _, meta = self.run_fetch(tdcc=minus)
+        self.assertTrue(meta["datasets"]["chips/tw_holders"]["cross_check_ok"])
+
     def test_holders_check_fails_when_sum_differs(self):
         bad = TDCC.replace("2330  ,16,1,1000", "2330  ,16,1,999")
         _, meta = self.run_fetch(tdcc=bad)

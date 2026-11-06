@@ -126,14 +126,21 @@ def fetch_chips(cfg, meta):
     try:
         hist = {(r[0], r[1]): r for r in read_rows(path)}
         missing = [d for d in days if not all((d, c) in hist for c in codes)]
+        # 新加入的代號（檔案裡完全沒有）往前補到檔案最早的日子，跟其他代號一樣長（2026-11-07 加 2330、0050 時加）
+        known = sorted({d for d, _ in hist})
+        fresh = [c for c in codes if not any(k[1] == c for k in hist)]
+        backfill = [d for d in known if d not in missing] if fresh else []
         added = []
-        if missing:
-            got = {c: stock_insti(c, missing[0]) for c in codes}
-            have = trading_days | {d for g in got.values() for d in g}
-            for d in missing:
+        if missing or backfill:
+            start = min(missing + backfill)
+            got = {c: stock_insti(c, start) for c in (codes if missing else fresh)}
+            have = trading_days | set(known) | {d for g in got.values() for d in g}
+            for d in sorted(set(missing) | set(backfill)):
                 if d not in have:
                     continue
-                for c in codes:
+                for c in got:
+                    if d in backfill and (d, c) in hist:
+                        continue
                     hist[(d, c)] = [d, c] + [int(v) for v in got[c].get(d, [0] * 5)]
                 added.append(d)
         rows = sorted(hist.values())

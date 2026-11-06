@@ -15,7 +15,7 @@
 - 個股日線與三大法人：代號另外加在 config.json 的 tw，由 fetch.py fetch_tw 與 chips.py 處理。
 
 每次都重抓最近一段（融資 LOOKBACK_DAYS 天、營收 13 個月）並跟舊檔合併，漏跑會自動補；同一天（週、月）以新抓的為準。
-核對：股權分散的分級 1～16 股數加總要等於合計；占比合計要是 100。
+核對：股權分散的分級 1～15 股數加總扣掉（或加上）16 差異數調整要等於合計；占比合計要是 100。
 """
 import csv
 import datetime as dt
@@ -51,9 +51,12 @@ def merge(path, new_rows, key_len):
 
 
 def stock_margin(codes):
-    start = (NOW.astimezone(TPE).date() - dt.timedelta(days=LOOKBACK_DAYS)).isoformat()
+    have = {r[1] for r in read_rows(PATHS["chips/tw_stock_margin"])}
     out = []
     for code in codes:
+        # 新代號先補 120 天，之後每次只重抓最近 LOOKBACK_DAYS 天
+        days = LOOKBACK_DAYS if code in have else 120
+        start = (NOW.astimezone(TPE).date() - dt.timedelta(days=days)).isoformat()
         for x in finmind("TaiwanStockMarginPurchaseShortSale", code, start):
             out.append([x["date"], code, int(x["MarginPurchaseTodayBalance"]), int(x["ShortSaleTodayBalance"])])
     return out
@@ -93,9 +96,10 @@ def check_holders(rows):
         if 17 not in g:
             problems.append(f"{code} {d} 沒有合計列")
             continue
-        parts = sum(v[0] for lv, v in g.items() if lv <= 16)
-        if parts != g[17][0]:
-            problems.append(f"{code} {d} 分級股數加總 {parts} ≠ 合計 {g[17][0]}")
+        # 分級 1～15 加總再扣掉（或加上）16 差異數調整要等於合計；2026-10-30 實際資料是扣掉
+        parts, adj = sum(v[0] for lv, v in g.items() if lv <= 15), g.get(16, (0, 0))[0]
+        if g[17][0] not in (parts - adj, parts + adj):
+            problems.append(f"{code} {d} 分級股數加總 {parts}（差異數 {adj}）≠ 合計 {g[17][0]}")
         if abs(g[17][1] - 100) > 0.01:
             problems.append(f"{code} {d} 占比合計 {g[17][1]}")
     return problems
