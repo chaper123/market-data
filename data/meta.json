@@ -1,12 +1,12 @@
 {
- "generated_at_utc": "2026-11-06T18:53:21Z",
- "generated_at_taipei": "2026-11-07 02:53",
+ "generated_at_utc": "2026-11-06T19:01:05Z",
+ "generated_at_taipei": "2026-11-07 03:01",
  "datasets": {
   "us/VOO": {
    "status": "ok",
    "source": "yahoo",
-   "rows": 252,
-   "first": "2025-11-05",
+   "rows": 501,
+   "first": "2024-11-06",
    "last": "2026-11-05",
    "last_close": 673.97,
    "prev_close": 704.780029296875,
@@ -15,14 +15,14 @@
    "last_bar_votes": "2026-11-05 moneydj 673.97、yahoo 673.969970703125 一致",
    "last_bar_single_source": false,
    "last_bar_referee": false,
-   "cross_check": "最後一根：2026-11-05 moneydj 673.97、yahoo 673.969970703125 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check": "最後一根：2026-11-05 moneydj 673.97、yahoo 673.969970703125 一致；保留期間兩家收盤差 >0.5% 共 0 根",
    "cross_check_ok": true
   },
   "us/GOOGL": {
    "status": "ok",
    "source": "yahoo",
-   "rows": 252,
-   "first": "2025-11-05",
+   "rows": 501,
+   "first": "2024-11-06",
    "last": "2026-11-05",
    "last_close": 282.57,
    "prev_close": 288.92999267578125,
@@ -31,14 +31,14 @@
    "last_bar_votes": "2026-11-05 moneydj 282.57、yahoo 282.57000732421875 一致",
    "last_bar_single_source": false,
    "last_bar_referee": false,
-   "cross_check": "最後一根：2026-11-05 moneydj 282.57、yahoo 282.57000732421875 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check": "最後一根：2026-11-05 moneydj 282.57、yahoo 282.57000732421875 一致；保留期間兩家收盤差 >0.5% 共 0 根",
    "cross_check_ok": true
   },
   "us/NVDA": {
    "status": "ok",
    "source": "yahoo",
-   "rows": 252,
-   "first": "2025-11-05",
+   "rows": 501,
+   "first": "2024-11-06",
    "last": "2026-11-05",
    "last_close": 181.6,
    "prev_close": 200.1300048828125,
@@ -47,14 +47,14 @@
    "last_bar_votes": "2026-11-05 moneydj 181.6、yahoo 181.60000610351562 一致",
    "last_bar_single_source": false,
    "last_bar_referee": false,
-   "cross_check": "最後一根：2026-11-05 moneydj 181.6、yahoo 181.60000610351562 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check": "最後一根：2026-11-05 moneydj 181.6、yahoo 181.60000610351562 一致；保留期間兩家收盤差 >0.5% 共 0 根",
    "cross_check_ok": true
   },
   "us/TSLA": {
    "status": "ok",
    "source": "yahoo",
-   "rows": 252,
-   "first": "2025-11-05",
+   "rows": 501,
+   "first": "2024-11-06",
    "last": "2026-11-05",
    "last_close": 343.69,
    "prev_close": 385.19000244140625,
@@ -63,7 +63,7 @@
    "last_bar_votes": "2026-11-05 moneydj 343.69、yahoo 343.69000244140625 一致",
    "last_bar_single_source": false,
    "last_bar_referee": false,
-   "cross_check": "最後一根：2026-11-05 moneydj 343.69、yahoo 343.69000244140625 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check": "最後一根：2026-11-05 moneydj 343.69、yahoo 343.69000244140625 一致；保留期間兩家收盤差 >0.5% 共 0 根",
    "cross_check_ok": true
   },
   "us/SPCX": {
@@ -79,14 +79,14 @@
    "last_bar_votes": "2026-11-05 moneydj 123.62、yahoo 123.62000274658203 一致",
    "last_bar_single_source": false,
    "last_bar_referee": false,
-   "cross_check": "最後一根：2026-11-05 moneydj 123.62、yahoo 123.62000274658203 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check": "最後一根：2026-11-05 moneydj 123.62、yahoo 123.62000274658203 一致；保留期間兩家收盤差 >0.5% 共 0 根",
    "cross_check_ok": true
   },
   "us/AAPL": {
    "status": "ok",
    "source": "yahoo",
-   "rows": 252,
-   "first": "2025-11-05",
+   "rows": 501,
+   "first": "2024-11-06",
    "last": "2026-11-05",
    "last_close": 344.17,
    "prev_close": 349.510009765625,
@@ -95,14 +95,14 @@
    "last_bar_votes": "2026-11-05 moneydj 344.17、yahoo 344.1700134277344 一致",
    "last_bar_single_source": false,
    "last_bar_referee": false,
-   "cross_check": "最後一根：2026-11-05 moneydj 344.17、yahoo 344.1700134277344 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check": "最後一根：2026-11-05 moneydj 344.17、yahoo 344.1700134277344 一致；保留期間兩家收盤差 >0.5% 共 0 根",
    "cross_check_ok": true
   },
   "us/IAUM": {
    "status": "ok",
    "source": "yahoo",
-   "rows": 252,
-   "first": "2025-11-05",
+   "rows": 501,
+   "first": "2024-11-06",
    "last": "2026-11-05",
    "last_close": 40.82,
    "prev_close": 40.5,
@@ -111,14 +111,14 @@
    "last_bar_votes": "2026-11-05 moneydj 40.82、yahoo 40.81999969482422 一致",
    "last_bar_single_source": false,
    "last_bar_referee": false,
-   "cross_check": "最後一根：2026-11-05 moneydj 40.82、yahoo 40.81999969482422 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check": "最後一根：2026-11-05 moneydj 40.82、yahoo 40.81999969482422 一致；保留期間兩家收盤差 >0.5% 共 0 根",
    "cross_check_ok": true
   },
   "us/ARKK": {
    "status": "ok",
    "source": "yahoo",
-   "rows": 252,
-   "first": "2025-11-05",
+   "rows": 501,
+   "first": "2024-11-06",
    "last": "2026-11-05",
    "last_close": 73.15,
    "prev_close": 80.37000274658203,
@@ -127,14 +127,14 @@
    "last_bar_votes": "2026-11-05 moneydj 73.15、yahoo 73.1500015258789 一致",
    "last_bar_single_source": false,
    "last_bar_referee": false,
-   "cross_check": "最後一根：2026-11-05 moneydj 73.15、yahoo 73.1500015258789 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check": "最後一根：2026-11-05 moneydj 73.15、yahoo 73.1500015258789 一致；保留期間兩家收盤差 >0.5% 共 0 根",
    "cross_check_ok": true
   },
   "us/ARKQ": {
    "status": "ok",
    "source": "yahoo",
-   "rows": 252,
-   "first": "2025-11-05",
+   "rows": 501,
+   "first": "2024-11-06",
    "last": "2026-11-05",
    "last_close": 99.38,
    "prev_close": 107.73999786376953,
@@ -143,14 +143,14 @@
    "last_bar_votes": "2026-11-05 moneydj 99.38、yahoo 99.37999725341797 一致",
    "last_bar_single_source": false,
    "last_bar_referee": false,
-   "cross_check": "最後一根：2026-11-05 moneydj 99.38、yahoo 99.37999725341797 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check": "最後一根：2026-11-05 moneydj 99.38、yahoo 99.37999725341797 一致；保留期間兩家收盤差 >0.5% 共 0 根",
    "cross_check_ok": true
   },
   "us/ARKX": {
    "status": "ok",
    "source": "yahoo",
-   "rows": 252,
-   "first": "2025-11-05",
+   "rows": 501,
+   "first": "2024-11-06",
    "last": "2026-11-05",
    "last_close": 27.045,
    "prev_close": 28.920000076293945,
@@ -159,7 +159,7 @@
    "last_bar_votes": "2026-11-05 moneydj 27.045、yahoo 27.045000076293945 一致",
    "last_bar_single_source": false,
    "last_bar_referee": false,
-   "cross_check": "最後一根：2026-11-05 moneydj 27.045、yahoo 27.045000076293945 一致；近一年兩家收盤差 >0.5% 共 0 根",
+   "cross_check": "最後一根：2026-11-05 moneydj 27.045、yahoo 27.045000076293945 一致；保留期間兩家收盤差 >0.5% 共 0 根",
    "cross_check_ok": true
   },
   "tw/009816": {
@@ -179,8 +179,8 @@
   "tw/00981A": {
    "status": "ok",
    "source": "FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL（最新一天）",
-   "rows": 245,
-   "first": "2025-11-03",
+   "rows": 354,
+   "first": "2025-05-27",
    "last": "2026-11-06",
    "last_close": 21.46,
    "prev_close": 23.05,
@@ -207,8 +207,8 @@
   "tw/0050": {
    "status": "ok",
    "source": "FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL（最新一天）",
-   "rows": 245,
-   "first": "2025-11-03",
+   "rows": 463,
+   "first": "2024-12-02",
    "last": "2026-11-06",
    "last_close": 92.5,
    "prev_close": 97.15,
@@ -221,8 +221,8 @@
   "tw/2330": {
    "status": "ok",
    "source": "FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL（最新一天）",
-   "rows": 245,
-   "first": "2025-11-03",
+   "rows": 468,
+   "first": "2024-12-02",
    "last": "2026-11-06",
    "last_close": 2135.0,
    "prev_close": 2240.0,
@@ -249,7 +249,7 @@
    "rows": 518,
    "first": "2024-11-06",
    "last": "2026-11-06",
-   "last_rate": 32.763
+   "last_rate": 32.765
   },
   "macro/SPX": {
    "status": "ok",
@@ -383,10 +383,10 @@
    "rows": 269,
    "first": "2025-10-15",
    "last": "2026-11-05",
-   "last_score": 23.3,
-   "score_now": 23.48,
+   "last_score": 23.27,
+   "score_now": 23.2,
    "rating_now": "extreme fear",
-   "time_utc": "2026-11-06T18:49:59+00:00",
+   "time_utc": "2026-11-06T18:55:32+00:00",
    "components": 7,
    "cross_check": "無第二來源，未核對"
   },
@@ -399,7 +399,7 @@
    "last_rate": 32.82,
    "last_spot_buy": 32.72,
    "last_cash_sell": 33.04,
-   "cross_check": "2026-11-06 即期賣出 32.82 vs Yahoo 中間價 32.763（差 +0.057 元，正常 -0.3～+0.4）",
+   "cross_check": "2026-11-06 即期賣出 32.82 vs Yahoo 中間價 32.765（差 +0.055 元，正常 -0.3～+0.4）",
    "cross_check_ok": true
   },
   "valuation/earnings": {
@@ -540,21 +540,7 @@
    "rows": 100,
    "first": "2026-10-07",
    "last": "2026-11-06",
-   "added": [
-    "2026-10-07",
-    "2026-10-08",
-    "2026-10-12",
-    "2026-10-13",
-    "2026-10-14",
-    "2026-10-15",
-    "2026-10-16",
-    "2026-10-19",
-    "2026-10-20",
-    "2026-10-21",
-    "2026-10-22",
-    "2026-10-27",
-    "2026-10-28"
-   ],
+   "added": [],
    "latest_total": {
     "00411A": -2035613,
     "0050": -537977747,
@@ -604,8 +590,8 @@
   "tw_watch/0056": {
    "status": "ok",
    "source": "FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL（最新一天）",
-   "rows": 266,
-   "first": "2025-09-30",
+   "rows": 494,
+   "first": "2024-10-24",
    "last": "2026-11-06",
    "last_close": 49.91,
    "prev_close": 51.55,
@@ -615,8 +601,8 @@
   "tw_watch/00878": {
    "status": "ok",
    "source": "FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL（最新一天）",
-   "rows": 266,
-   "first": "2025-09-30",
+   "rows": 494,
+   "first": "2024-10-24",
    "last": "2026-11-06",
    "last_close": 31.99,
    "prev_close": 33.03,
@@ -626,8 +612,8 @@
   "tw_watch/00919": {
    "status": "ok",
    "source": "FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL（最新一天）",
-   "rows": 266,
-   "first": "2025-09-30",
+   "rows": 494,
+   "first": "2024-10-24",
    "last": "2026-11-06",
    "last_close": 30.14,
    "prev_close": 31.19,
@@ -643,7 +629,7 @@
    "codes": [
     "2330"
    ],
-   "changed": 71,
+   "changed": 0,
    "cross_check": "單一來源，未核對"
   },
   "chips/tw_holders": {
@@ -662,13 +648,13 @@
   "fundamentals/tw_revenue": {
    "status": "ok",
    "source": "FinMind（證交所、公開資訊觀測站資料）",
-   "rows": 12,
-   "first": "2025-10",
+   "rows": 24,
+   "first": "2024-10",
    "last": "2026-09",
    "codes": [
     "2330"
    ],
-   "changed": 0,
+   "changed": 12,
    "cross_check": "單一來源，未核對"
   },
   "tw/nav": {
