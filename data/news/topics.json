@@ -1,5 +1,5 @@
 {
- "generated_at_taipei": "2026-11-06 18:33",
+ "generated_at_taipei": "2026-11-06 18:39",
  "rule": "count_1d＝最近 24 小時；count_7d／count_30d＝最近 7／30 個台北日曆日（含今天）；rise＝(count_7d/7)÷(count_30d/30)，歷史不足時分母用已有天數；rising_terms 的 score＝近 24 小時則數÷(今天以外的日平均＋1)。固定規則計數，不做預測",
  "days_available": 6,
  "history_since": "2026-11-01",
@@ -66,7 +66,7 @@
   {
    "topic": "taiwan",
    "label": "台灣",
-   "count_1d": 66,
+   "count_1d": 65,
    "count_7d": 155,
    "count_30d": 155,
    "rise": 1.0,
@@ -126,11 +126,13 @@
   {
    "topic": "jobs",
    "label": "就業",
-   "count_1d": 2,
-   "count_7d": 3,
-   "count_30d": 3,
+   "count_1d": 5,
+   "count_7d": 6,
+   "count_30d": 6,
    "rise": 1.0,
    "sample_ids": [
+    "314d162e36c884f1",
+    "99627535d23437b4",
     "942ce0127946d65b",
     "ab7dbbf134b22133",
     "d5f2b68acf062469"
@@ -166,9 +168,9 @@
   {
    "topic": "merger",
    "label": "併購",
-   "count_1d": 14,
-   "count_7d": 37,
-   "count_30d": 37,
+   "count_1d": 15,
+   "count_7d": 38,
+   "count_30d": 38,
    "rise": 1.0,
    "sample_ids": [
     "73bac700880b771c",
@@ -183,48 +185,48 @@
  "rising_terms": [
   {
    "term": "國安基",
-   "count_1d": 59,
-   "count_30d": 59,
-   "score": 59.0,
+   "count_1d": 68,
+   "count_30d": 68,
+   "score": 68.0,
    "sample_ids": [
-    "ecddf62d83d2441b",
+    "31a497fd0b9dc604",
+    "e5f6f2e88749c0b6",
     "9fdf2d610a921be9",
     "5b643ba62cae839b",
-    "3e286a281c1aa6c6",
-    "7594d842bcda3d95"
+    "3e286a281c1aa6c6"
    ]
   },
   {
    "term": "安基金",
-   "count_1d": 59,
-   "count_30d": 59,
-   "score": 59.0,
+   "count_1d": 68,
+   "count_30d": 68,
+   "score": 68.0,
    "sample_ids": [
-    "ecddf62d83d2441b",
+    "31a497fd0b9dc604",
+    "e5f6f2e88749c0b6",
     "9fdf2d610a921be9",
     "5b643ba62cae839b",
-    "3e286a281c1aa6c6",
-    "7594d842bcda3d95"
+    "3e286a281c1aa6c6"
    ]
   },
   {
    "term": "崩跌",
-   "count_1d": 36,
-   "count_30d": 36,
-   "score": 36.0,
+   "count_1d": 38,
+   "count_30d": 38,
+   "score": 38.0,
    "sample_ids": [
+    "e79873e9177920bb",
+    "06c29b38b460affd",
     "7594d842bcda3d95",
     "e118a9c64b310ad4",
-    "c732b236150e2035",
-    "12615a24d19f52aa",
-    "80c05f04a0790a88"
+    "c732b236150e2035"
    ]
   },
   {
    "term": "最大",
-   "count_1d": 27,
-   "count_30d": 28,
-   "score": 22.5,
+   "count_1d": 28,
+   "count_30d": 29,
+   "score": 23.33,
    "sample_ids": [
     "27b115d602b13c1d",
     "d83986a8b70c3a4f",
@@ -241,22 +243,35 @@
    "sample_ids": [
     "9fdf2d610a921be9",
     "5b643ba62cae839b",
+    "06c29b38b460affd",
     "7594d842bcda3d95",
-    "e3bdb5749964baaa",
-    "dbaf16473ee583e3"
+    "e3bdb5749964baaa"
    ]
   },
   {
    "term": "股崩",
-   "count_1d": 18,
-   "count_30d": 18,
-   "score": 18.0,
+   "count_1d": 21,
+   "count_30d": 21,
+   "score": 21.0,
    "sample_ids": [
+    "e79873e9177920bb",
+    "06c29b38b460affd",
     "7594d842bcda3d95",
     "c732b236150e2035",
-    "2842e6110fd74762",
-    "80c05f04a0790a88",
-    "1c200c9f61041dfd"
+    "2842e6110fd74762"
+   ]
+  },
+  {
+   "term": "cybertruck",
+   "count_1d": 17,
+   "count_30d": 17,
+   "score": 17.0,
+   "sample_ids": [
+    "24661df2a0c95520",
+    "80a8b760b5b8ce92",
+    "80a8b760b5b8ce92",
+    "8343235dbe17728a",
+    "f44b40a45f6ceba3"
    ]
   },
   {
@@ -266,10 +281,10 @@
    "score": 17.0,
    "sample_ids": [
     "5b87798739a6a1bc",
+    "ef03d031fcc6091a",
     "241d0ed804836fa6",
     "25391719492eb5e5",
-    "b6ea33c9aceaeb22",
-    "b1b0432b3240843e"
+    "b6ea33c9aceaeb22"
    ]
   },
   {
@@ -287,9 +302,9 @@
   },
   {
    "term": "股暴跌",
-   "count_1d": 27,
-   "count_30d": 30,
-   "score": 16.88,
+   "count_1d": 26,
+   "count_30d": 29,
+   "score": 16.25,
    "sample_ids": [
     "051702f7fa2dd0ce",
     "3300d929e0d0b9e8",
@@ -300,28 +315,54 @@
   },
   {
    "term": "史上",
-   "count_1d": 41,
-   "count_30d": 49,
-   "score": 15.77,
+   "count_1d": 42,
+   "count_30d": 50,
+   "score": 16.15,
    "sample_ids": [
+    "06c29b38b460affd",
+    "f5a2e98286651f79",
     "e118a9c64b310ad4",
-    "717e492a0bbcc310",
     "c732b236150e2035",
-    "d83986a8b70c3a4f",
-    "309c814418e2f91d"
+    "d83986a8b70c3a4f"
    ]
   },
   {
-   "term": "cybertruck",
-   "count_1d": 15,
-   "count_30d": 15,
-   "score": 15.0,
+   "term": "空令",
+   "count_1d": 16,
+   "count_30d": 16,
+   "score": 16.0,
    "sample_ids": [
-    "24661df2a0c95520",
-    "80a8b760b5b8ce92",
-    "80a8b760b5b8ce92",
-    "36806894cf07dba7",
-    "64207824aa54d5d1"
+    "901ac5fa27a76f7c",
+    "27b115d602b13c1d",
+    "0d3265b1ed6d49e9",
+    "f6aa6b8d10018d73",
+    "60b453d6879e1af0"
+   ]
+  },
+  {
+   "term": "限空",
+   "count_1d": 16,
+   "count_30d": 16,
+   "score": 16.0,
+   "sample_ids": [
+    "901ac5fa27a76f7c",
+    "27b115d602b13c1d",
+    "0d3265b1ed6d49e9",
+    "f6aa6b8d10018d73",
+    "60b453d6879e1af0"
+   ]
+  },
+  {
+   "term": "護盤",
+   "count_1d": 40,
+   "count_30d": 48,
+   "score": 15.38,
+   "sample_ids": [
+    "31a497fd0b9dc604",
+    "3e286a281c1aa6c6",
+    "06c29b38b460affd",
+    "7594d842bcda3d95",
+    "e3bdb5749964baaa"
    ]
   },
   {
@@ -332,48 +373,9 @@
    "sample_ids": [
     "65697c22c1b6ee63",
     "16dcb8c68a339602",
-    "f22730d8c8a9e8fb",
-    "ce95ff49ed4ceb0a",
-    "12077eb25061959c"
-   ]
-  },
-  {
-   "term": "場護",
-   "count_1d": 15,
-   "count_30d": 15,
-   "score": 15.0,
-   "sample_ids": [
-    "7594d842bcda3d95",
-    "e3bdb5749964baaa",
-    "5d9551310da14fb8",
-    "0cdbef9985e85686",
-    "4fb8332ee43535c0"
-   ]
-  },
-  {
-   "term": "空令",
-   "count_1d": 15,
-   "count_30d": 15,
-   "score": 15.0,
-   "sample_ids": [
-    "27b115d602b13c1d",
-    "0d3265b1ed6d49e9",
-    "f6aa6b8d10018d73",
-    "60b453d6879e1af0",
-    "91ddb5dedbe36233"
-   ]
-  },
-  {
-   "term": "股史",
-   "count_1d": 15,
-   "count_30d": 15,
-   "score": 15.0,
-   "sample_ids": [
-    "d87479158d61a9cb",
-    "74aa2a3e80e9460a",
-    "6072662d4e20b9cf",
-    "a9c1d6f9bdbfc645",
-    "cc1dbfa92e8083ad"
+    "cb7cceb07a7ce556",
+    "998905ef2e13c7cb",
+    "ce95ff49ed4ceb0a"
    ]
   }
  ]

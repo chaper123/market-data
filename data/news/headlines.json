@@ -1,6 +1,6 @@
 {
- "generated_at_taipei": "2026-11-06 18:33",
- "generated_at_utc": "2026-11-06T10:33:40Z",
+ "generated_at_taipei": "2026-11-06 18:39",
+ "generated_at_utc": "2026-11-06T10:39:56Z",
  "window_hours": 72,
  "status": "ok",
  "tiers": {
@@ -78,7 +78,7 @@
   {
    "name": "Google News 全部：TSMC",
    "ok": true,
-   "count": 64
+   "count": 65
   },
   {
    "name": "Google News 白名單：FED",
@@ -103,7 +103,7 @@
   {
    "name": "Google News 白名單：CHIPS",
    "ok": true,
-   "count": 97
+   "count": 96
   },
   {
    "name": "Google News 全部：CHIPS",
@@ -173,12 +173,12 @@
   {
    "name": "Google News 白名單：009816",
    "ok": true,
-   "count": 75
+   "count": 76
   },
   {
    "name": "Google News 全部：009816",
    "ok": true,
-   "count": 11
+   "count": 10
   },
   {
    "name": "Google News 白名單：00981A",
@@ -218,7 +218,7 @@
   {
    "name": "Google News 全部：SEMI_ZH",
    "ok": true,
-   "count": 31
+   "count": 30
   },
   {
    "name": "Google News 白名單：AI_ZH",
@@ -263,24 +263,24 @@
  ],
  "errors": [],
  "stats": {
-  "total": 2198,
+  "total": 2209,
   "by_tier": {
-   "4": 397,
-   "2": 1789,
+   "4": 396,
+   "2": 1801,
    "3": 7,
    "1": 5
   },
   "by_symbol": {
-   "OPENAI": 106,
+   "TSLA": 94,
+   "NVDA": 113,
+   "OPENAI": 107,
    "2330": 177,
    "TSM": 177,
-   "NVDA": 114,
-   "VOO": 160,
+   "VOO": 161,
+   "SPCX": 116,
    "AAPL": 83,
-   "ANTHROPIC": 162,
-   "GOOGL": 78,
-   "TSLA": 93,
-   "SPCX": 115,
+   "ANTHROPIC": 161,
+   "GOOGL": 79,
    "2454": 23,
    "2383": 5,
    "3017": 1,
@@ -297,25 +297,25 @@
    "8996": 1
   },
   "by_topic": {
-   "china": 94,
    "taiwan": 114,
+   "china": 94,
    "fed": 45,
    "earnings": 92,
+   "jobs": 6,
+   "merger": 27,
+   "tariff": 54,
    "oil": 15,
    "cpi": 11,
-   "tariff": 54,
-   "merger": 26,
    "antitrust": 2,
-   "jobs": 3,
    "export_controls": 4,
    "war": 18
   },
   "url": {
    "hours": 36,
-   "target": 1135,
-   "ok": 1135,
-   "cached": 972,
-   "new": 163,
+   "target": 1147,
+   "ok": 1147,
+   "cached": 1123,
+   "new": 24,
    "failed": 0,
    "left": 0,
    "stopped": null,
@@ -358,7 +358,162 @@
  },
  "items": [
   {
-   "id": "130b0b3b9d3ca6ad",
+   "id": "8343235dbe17728a",
+   "published_utc": "2026-11-06T10:37:10Z",
+   "published_taipei": "2026-11-06 18:37",
+   "source": "Mashable",
+   "source_url": "https://mashable.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Is it over for the Cybertruck? Tesla to wind down production in Texas.",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9URjlSb0hqRzNBdlpxRno4STRuSVpmc1cyV2g5NjhxN2FSaXlpeHVqY3FkclNKV3dpcW5ZYnRhbGVleVRBZGJSenlZSHdDVXlJdFBxdmEtOW5vVmc?oc=5",
+   "url": null,
+   "symbols": [
+    "TSLA"
+   ],
+   "topics": [],
+   "queries": [
+    "TSLA"
+   ],
+   "title_queries": [
+    "TSLA"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "901ac5fa27a76f7c",
+   "published_utc": "2026-11-06T10:35:25Z",
+   "published_taipei": "2026-11-06 18:35",
+   "source": "經濟日報",
+   "source_url": "https://money.udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "金管會正式發佈限空令 提出五大救市措施 | 政經焦點 | 要聞",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPbTAyaTBYaWF2dUx2OEFNRjNMc2dNRGQ5ZHF4T2xWYU9BOGJUdGl3SmhNc2ZqbEVjY3R5V0NBWUV6UHBWUzMtSWczR1JJV1pUMnAzRGhHazVyWVlfZkFYY2RPWjB4c0c2ZGw3RDhwRW9JTmc2d21Rb24xakpwRk9CSg?oc=5",
+   "url": "https://money.udn.com/money/story/7307/9862547?from=edn_related_storybottom",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "NSF"
+   ],
+   "title_queries": [
+    "NSF"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "4403935c543a9052",
+   "published_utc": "2026-11-06T10:35:03Z",
+   "published_taipei": "2026-11-06 18:35",
+   "source": "Moomoo",
+   "source_url": "https://www.moomoo.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Nvidia Concludes $1 Billion Investment in Naver to Fund AI Factory Expansion",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObV85X1F6dzNSQWxDUmtSOVBPSWtKVFdfVjVQT3RyQ3N0YmV5eUJJR3lRLURoMzUyaUQyM282ZWw1UEtjTF85SF9sNnkzY2dxX0x5am85bmxrRDdNSDlEOGN3bEZPYW9VenhUZWhFY0pKd3dGVjFVRHYwWVItckpiVTlfdkpOMnNGM3AwU0FIcEZaQU02VUI4dlV5bzFxSEZVS1hz?oc=5",
+   "url": null,
+   "symbols": [
+    "NVDA"
+   ],
+   "topics": [],
+   "queries": [
+    "NVDA"
+   ],
+   "title_queries": [
+    "NVDA"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "5b86be84f92e15b1",
+   "published_utc": "2026-11-06T10:34:44Z",
+   "published_taipei": "2026-11-06 18:34",
+   "source": "IMDb",
+   "source_url": "https://www.imdb.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Weta FX to build AI hub in Taiwan, buy into Moonshine Studio",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE11Z3dDSW0zTzR4a1EzMzB5MjB3RkJoeUVXUDVCaWcxNEs0TlJHenQ0cmxYeHNSelpwX0ZueUhLbWFsazBfaVA3SDhjbTJvVTZQd2tPNGRzVXVDcGdVTG52ME1wSXdZM2c1dUE?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [
+    "taiwan"
+   ],
+   "queries": [
+    "TAIWAN"
+   ],
+   "title_queries": [
+    "TAIWAN"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "63c70db0966feeb5",
+   "published_utc": "2026-11-06T10:33:11Z",
+   "published_taipei": "2026-11-06 18:33",
+   "source": "In.Comms",
+   "source_url": "https://www.incomms.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "OpenAI appoints Uber vet as chief corporate affairs officer",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPY0tyd012S2prWS0zVEVjY21zZWIyY3FHWnlFYzBSdFI5Rmg4LXdTY09MdGVfU0J6dVF5MzVrSlNST29GRlk4ME9CMDhLQWNOdXlwaGRVdEVsTGFZZ2R4Nmk0bGJacVd3VlZWa2lQdm1FS0hwbzE4YkQ5cFlURWR0b2oyXzFFLUdDZng2RjRUaGh4Nk1FbVhjNVgzT3ZDdG9SV3RKSnQ4b3B1MG9RRFBjMDhyeG9WdnQ5TWc?oc=5",
+   "url": null,
+   "symbols": [
+    "OPENAI"
+   ],
+   "topics": [],
+   "queries": [
+    "OPENAI"
+   ],
+   "title_queries": [
+    "OPENAI",
+    "AI_ZH"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "2d23aebed4f5a48e",
+   "published_utc": "2026-11-06T10:33:00Z",
+   "published_taipei": "2026-11-06 18:33",
+   "source": "marketscreener.com",
+   "source_url": "https://www.marketscreener.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Nvidia Completes $1 Billion Investment in Naver",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOZnFrU2VpMmR4WTRvUjNXX2k5WVdfRTJPalhYam00Q3hYb3lLdTl3UnJtZm1xTlJXaEp4MENOZS0zb3dfbEdlUXdORXZhMFFkNTRManIydXNUN25XbkVsVWhJQ0pVbHZyU1FmRmduOW5GNDk0RzJZUnd5NUgxM0pPdExYQm9ja0JmRG9ETGNRVGNBLUZGZi1ET2luN2NtMkxf?oc=5",
+   "url": null,
+   "symbols": [
+    "NVDA"
+   ],
+   "topics": [],
+   "queries": [
+    "NVDA"
+   ],
+   "title_queries": [
+    "NVDA"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "e8e4711a72473014",
    "published_utc": "2026-11-06T10:31:45Z",
    "published_taipei": "2026-11-06 18:31",
    "source": "台灣好新聞",
@@ -367,7 +522,7 @@
    "rank": null,
    "lang": "zh",
    "title": "史上第十次！國安基金5000億銀彈上膛 過去9次護盤8勝1敗、近8次全勝",
-   "link": "https://news.google.com/rss/articles/CBMixgNBVV95cUxONTJEMWRVb3drbjk5cmFoVFlwUU5ienBHdnZQZnVJMjRKa2xTbmNIMktFam4wSTB1TUdMUWswSVdubWxtWDVvS2Fka2ZyZGZjbTNTbXNBWXAwa1ZLSGplYTlkQlRaaE15Z3I1NkdjeFg1OEtCaFhiZTlMV0JKak9QMU9kc2xIbHk1ZjFyZEFDV2szSFJhWE5NSlNSN29RZ0o3QzlKdDBaQkdwZi1tZnBWOEZfUlJOTTJ6YkFnUU1mV0c0bHJvSXJoUFo4R2tzWHBGNDdmZEdMdjFUbXZGMW5lYk5GSnI2TUxMUE84UVhYQnVpdmJEeElRN1UySF9lbjdxZnpWeU03Mi1VeG85VzVZdUZXXzViYW1saXNaanhUSXdfcE5TeXlTZG1jQVhubUdUSzBfVVpjOTRKZHRXTGp0MnZIOXRxSkZ3MUZ5aXlpbjlEMVVkek5tbGtrdUVlOTlRVXNkeUhlMGlsTS1XNWlwX1VGSkYyRmRTbWJCZTlMUC1ZaFAyOGp4WnBwTjlpZ0hnMVF3dEp1SU8xTWZSeExzeGFxc0V4VGRRWjJ0dUlBYmczeVphOGI3ODJwMXd5MzFiQzl6ZG9n?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMioANBVV95cUxQZHpybjB6RndKbzRkWEhtV1dHMkVtV19JMTd1anM1ZkpEUXVwWG4zUTRyTG56UE9CTFRZNW9zTU1KRkUzcVdSVXBybWV3OGpwa2RkM0YzVnlNX2dMMEFhWWJOWUI0d0gwSlBMU2JIay1tblE3YkJzM3l0SHkxWkdHWk5kVXZWUGFkNEZpR0Y3Q0hyd1ZBT3V1ZFZ4UUdfWmJmZkkzNms3SWpjU2JBSGdBMUZzeFBqMF8tVUxmV2lHRExtMG1KQm1FZ2JadWpJLXlBZGZ5MVRlQlRqZEVnZUpDbkloeHlyTHRkalBoNmdPRzNmelAwNU15ajlDUERUNGpwMFR0YW4xUWQ5bXdNSGxlSXpsRWtOZDBfSkc2TDVOdXNYck5CemdCRjRBNXpwYzBxWmZIZzBhaVhvSE55THlBdldVSHZPNGF4UlF3YUk1ZkMzT1ZTbTBOeU93TWx4ZUxKVlJLMUJnX0NRQnEwSTB2YUNpYWlhRDdRb0FQOTBXYUtWRGlSRWU5NmlOYnNMZHhzdUh0UGJ3NUxyTDhzeWI4Qw?oc=5",
    "url": null,
    "symbols": [],
    "topics": [],
@@ -376,6 +531,30 @@
    ],
    "title_queries": [
     "NSF"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "ce2df12fb8698ed0",
+   "published_utc": "2026-11-06T10:31:37Z",
+   "published_taipei": "2026-11-06 18:31",
+   "source": "天下雜誌",
+   "source_url": "https://www.cw.com.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "台股股災分析》AI股還是可以逢低買進？投資人關鍵五問",
+   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1jcjQ5b0xLaXUtTlhKRFRPaUVKMmphOVRjNmtMa3RQV2Zvd2VicjJFazgtdFJ0cXdjLU16WF9oRW9JaGVkRnUyYmd1bWU4QQ?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
    ],
    "title_match": true,
    "also": [],
@@ -400,6 +579,81 @@
    ],
    "title_queries": [],
    "title_match": false,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "31a497fd0b9dc604",
+   "published_utc": "2026-11-06T10:29:33Z",
+   "published_taipei": "2026-11-06 18:29",
+   "source": "Yahoo股市",
+   "source_url": "https://tw.stock.yahoo.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "國安基金喊話護盤成股海「定海神針」？學者點頭：即便不買也穩信心",
+   "link": "https://news.google.com/rss/articles/CBMiuANBVV95cUxQbnV0UFZnS001Y0FoZ0NRLWl2dG9FbG5UaEd5UldGRFk1bWFXaFNLOEF0eE42OXByUDk1UnNaZ3dzeE9GbHA3dFNLamJ4azE1SmNDWURJTmhjUUNtUUZQWVdHYlctTy1jcUd3VXUwcnFGUGoyOFJQdkZUS1B0SnpRUGNPcWgyVUFpTTRUUEdNZ2xyU0JtblBnLXJLc1I1UTE3Nk8yREdLSklMT1JVdnRGell3aWZ2ZEVVVGdRZHdXT3BvUDRWZy1YQUx0M29aWVNHQ3drZDZIR3hkNGtpQWg3TzhsaDdYenk3LXRldmstbV9KVGlydlNZUjBWOXRGaEp4R2duV3JQdURLVVRiT0hhdVBxYVUwcnRpdk92dC1MVjJTcWlpQmJzTWpPc21oUVdmSkpyWXBteVh4dWk2UzJVdXNSeThqcTBhN2k5Q3NUdlY0Q0xSUVVaV0hGc18zLVRXSGVQSzctTnF3a0k0UUJHZEdZRTRrTTVXQjZTVWdvTHRETW5YNGFLYi1QQmNZS2ZnbVlyc1RLYXJmOWJKOGNfaDRKSzd4RjJDQW9BVmIxaEtPcHNBTEU3Rg?oc=5",
+   "url": "https://tw.stock.yahoo.com/news/%E5%9C%8B%E5%AE%89%E5%9F%BA%E9%87%915%E5%8D%83%E5%84%84%E9%8A%80%E5%BD%88%E8%AD%B7%E7%9B%A4%E8%93%84%E5%8B%A2%E5%BE%85%E7%99%BC%EF%BC%81%E5%AD%B8%E8%80%85%E9%BB%9E%E9%A0%AD%EF%BC%9A%E6%98%AF%E6%99%82%E5%80%99%E7%A9%A9%E4%BD%8F%E5%B8%82%E5%A0%B4%E4%BF%A1%E5%BF%83-102933831.html",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "NSF"
+   ],
+   "title_queries": [
+    "NSF"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "e5f6f2e88749c0b6",
+   "published_utc": "2026-11-06T10:29:33Z",
+   "published_taipei": "2026-11-06 18:29",
+   "source": "Yahoo股市",
+   "source_url": "https://tw.stock.yahoo.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "國安基金5000億銀彈成股海「定海神針」？學者點頭：即便不買也穩軍心",
+   "link": "https://news.google.com/rss/articles/CBMiyANBVV95cUxQRnhUTG1YQ2g4S2YzdmZnS3NZcmh1MTFvcG1veHRmRUhjdzd4bmtTWDNnY0FsS0dOZ202S0ZYMzVLdmxmVjdTZ2dXRE5BemtwdHF0c0hOT3Z5WFhDS2Zxc3BBbzVTQmI0el9mYUVfekpacVNZWUp4Q2dJU1V2TktMZDNVMVNVbWc4bTMtUTVtZlpNMzE2UDNnb3VhaWV1WjNQdVdkVXBUN05IQy1yUzNFd1VSUHY3UFN6YVNSdFIxN0NUVWhwc3E2TW1vMFJteUVubXZaMV9DZU5CZjBBaE1RcmlmY1MxY1FyTnNoSGdYN3RXWVdrVUoxdXpFaURKOGNwRVd0OTVSbHZJekY1VVRpSTB6WHpXbnZLOXBrZmNBVDgtbFc1WTl4WU5PUFlRbnRRTFQ3akxqYzY1Z2YzM3FtYS13ZHFxd1pVbEtVdS1zRzg3RE9LckxhSnFnTFgyZUR3bHB4N2hBcVNyWHpReGRHTVZVM1ZBdTVYVEcyQ2F2dU91cFlHcEQzZUVLU1JXVTBBRHZYZXU1Z0xkZm92Z1piakVIYldzbDZFZFVqbi1FeWcyMnFrRDMzS3pkdTZTUUhjZm5kM20yQlU?oc=5",
+   "url": "https://tw.stock.yahoo.com/news/%E5%9C%8B%E5%AE%89%E5%9F%BA%E9%87%915000%E5%84%84%E9%8A%80%E5%BD%88%E6%88%90%E8%82%A1%E6%B5%B7%E3%80%8C%E5%AE%9A%E6%B5%B7%E7%A5%9E%E9%87%9D%E3%80%8D%EF%BC%9F%E5%AD%B8%E8%80%85%E9%BB%9E%E9%A0%AD%EF%BC%9A%E5%8D%B3%E4%BE%BF%E4%B8%8D%E8%B2%B7%E4%B9%9F%E7%A9%A9%E4%BF%A1%E5%BF%83-103158625.html",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "NSF"
+   ],
+   "title_queries": [
+    "NSF"
+   ],
+   "title_match": true,
+   "also": [
+    "Yahoo新聞"
+   ],
+   "time_fixed_from": null
+  },
+  {
+   "id": "c09cc9283f64753c",
+   "published_utc": "2026-11-06T10:28:57Z",
+   "published_taipei": "2026-11-06 18:28",
+   "source": "非凡新聞台",
+   "source_url": "https://news.ustv.com.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "國際利空干擾台股國安基金啟動護盤機制| 金融",
+   "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBfZk93Wlp4Wk93VjRfQ3lXb0hGSVEtUVluZDRzOWE1R3puTmdTZVRJUkM5REpBYkE1Q2puV3RkWDJlaFY3ajB4aldZMGVpbjRUdmZnT1RVWmVHMDhwaUtkdVY1WkhSY2huVnBiMEdsaXltZWpyUE1rT1BsZw?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "NSF"
+   ],
+   "title_queries": [
+    "TWSE",
+    "NSF"
+   ],
+   "title_match": true,
    "also": [],
    "time_fixed_from": null
   },
@@ -429,6 +683,31 @@
    "time_fixed_from": null
   },
   {
+   "id": "d1de2ff86fdeaf6f",
+   "published_utc": "2026-11-06T10:26:00Z",
+   "published_taipei": "2026-11-06 18:26",
+   "source": "鏡週刊Mirror Media",
+   "source_url": "https://www.mirrormedia.mg",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "維持台股穩定 國安基金將進場了！",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1Vd3g3VVU5M0tGdXppYWw2LTg2ZG5nQnJOQ19QSUtEQ1dFWmpVODhCTUpEUGtPUWxpOHJlb2JBamQwNkI4WWdCeDJOZUxuN05DQWp4ck16OGFJbVlhelhoN3BsVllRTU3SAWtBVV95cUxPN3N6N2IyaUNya1MybVBVZVdabkxncTVSM3N3WHBZLVV5Xzc0bUI5S0x1QzJGSjBjaVI1Q01JVUMyNUR5a1FzQ3RMd3hMYUVRb0tsUk1ya2dqd3F3QmFxYjliT19pdzkyeXN6WQ?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "NSF"
+   ],
+   "title_queries": [
+    "TWSE",
+    "NSF"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "d2e22fea4f39cb9f",
    "published_utc": "2026-11-06T10:23:44Z",
    "published_taipei": "2026-11-06 18:23",
@@ -448,6 +727,32 @@
    "title_queries": [
     "TWSE",
     "NSF"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "9f1eed7a29fee81a",
+   "published_utc": "2026-11-06T10:23:08Z",
+   "published_taipei": "2026-11-06 18:23",
+   "source": "Hedgeweek",
+   "source_url": "https://hedgeweek.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Hedge fund managers back Nvidia, Disney and ASML at Sohn Queenstown conference amid technology selloff",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQWmpJQ29HZW5zd0c5VEtkS0RCUVhiQ09rb29CTVd4SkR0ckdKMF8zNlRWazVNODhTRThXZHpXUWNhUzcyREpZVUdyODJzUWZRT3BOQ0ZLNFJsU2pKbTJyT040VFpqWVQ5UXBINm9uelcwc01VS3lieDFfbDk1cWZVNElDTWdraDU3SW1GQWtVVi1lcmpLMHZKeTNaSWhzZlFrRl9YSnRuek45TnpvUkpHTHhQMVlKbTJKcXhoSHUyV290WTlvbXNr?oc=5",
+   "url": null,
+   "symbols": [
+    "NVDA"
+   ],
+   "topics": [],
+   "queries": [
+    "NVDA"
+   ],
+   "title_queries": [
+    "NVDA"
    ],
    "title_match": true,
    "also": [],
@@ -480,6 +785,28 @@
    "time_fixed_from": null
   },
   {
+   "id": "e50773dfae20b294",
+   "published_utc": "2026-11-06T10:21:42Z",
+   "published_taipei": "2026-11-06 18:21",
+   "source": "經濟日報",
+   "source_url": "https://money.udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "韓股與韓元出現罕見股匯反向 | 國際焦點 | 國際",
+   "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBPa2hEZDRyNC0yUE9RYkQyWmZLbkc0cm9YMXV2Tk5tcDdiSHQ2dW1CdzA1aHRoZTBDdG5Pbmx0WXNFemsxanhDbHFrM0RoWFhfaHlHWU9LLWdRSjR3STJjdnZvVkJ2V2pXYW1jdlBBY2hBSlJxdmZEaFBpTQ?oc=5",
+   "url": "https://money.udn.com/money/story/5599/9862529?from=edn_newestlist_rank",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "NSF"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "e4394647f6155f75",
    "published_utc": "2026-11-06T10:21:42Z",
    "published_taipei": "2026-11-06 18:21",
@@ -502,13 +829,62 @@
    "time_fixed_from": null
   },
   {
+   "id": "476272958ff6df22",
+   "published_utc": "2026-11-06T10:21:00Z",
+   "published_taipei": "2026-11-06 18:21",
+   "source": "鏡週刊Mirror Media",
+   "source_url": "https://www.mirrormedia.mg",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "國安基金啟動護盤！ 財政部分析台股重挫原因喊話「基本面良好」",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9rN1I2a0hQeXVjZnRlRHZlUjRLQTlDTTVSQnFVdEY3b1BEbFlrWklzdTdpRkhsVnY1dEpTR1JpRktBZ2ZMZmg1UHhnQ2dHWTdpNGN0Rmt3UEl6MkXSAWBBVV95cUxNX1BualdlMDZlY0pUbGNMS25SMksyZUJTNTZuWFdRTzVYWjk5Wm15MEpDZDNweHd3WmIyZHE0UnBBcHAyWlNOMlRKekNSR09iNW1lQUFCZG5hQVdNV09rcnk?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "NSF"
+   ],
+   "title_queries": [
+    "TWSE",
+    "NSF"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "e79873e9177920bb",
+   "published_utc": "2026-11-06T10:20:23Z",
+   "published_taipei": "2026-11-06 18:20",
+   "source": "Yahoo股市",
+   "source_url": "https://tw.stock.yahoo.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "黃鐙輝股票獲利200%一夕變虧損！台股崩跌仍砸20萬買ETF",
+   "link": "https://news.google.com/rss/articles/CBMi2wJBVV95cUxNWkI4eXZpMVRHNk5xUGVhdEhIakdCLXF6TlNFTFE2R3lUNnNHTlB1OXJ6LUtmS0NCQTJ6ejhmQ3ppNFNhNm5PZmFxQVJFYVBLMGVOZVo3WV8zOFhjOWRpWE1CaFZSd191SDBYN1ZMMm1vanpyc3VfX1JSeDFscVR0NjRRN0FWcmNvRXJWY05yVWZfTnUtSkNpNlctTFpMejNhUTBySzZJdloxTFdnNnYzNUJTQVhYamw0dzhVelNGVVg0YVhjeEhER1dtNWhnR0ZZWXRlWTZUUnpCTXFoOGs4UGNGYS14MWZaRFRKRnZ1ZnBMeHFzTWFtWG1nUEpHdHFHM2VycVUyXzFCZlFJdXNUdUExU0ZYWHFmdnBEaW9yR2FKUGhQeDVpS3dLUlFtcDR1R3VSTXN6WFQ5WExmUWdpb3pvWEloVVhMYlk1ZUxVVHhTOTVRU21uWWMtTQ?oc=5",
+   "url": "https://tw.stock.yahoo.com/%E9%BB%83%E9%90%99%E8%BC%9D%E8%82%A1%E7%A5%A8%E7%8D%B2%E5%88%A9200%E4%B8%80%E5%A4%95%E8%AE%8A%E8%99%A7%E6%90%8D%EF%BC%81%E5%8F%B0%E8%82%A1%E5%B4%A9%E8%B7%8C%E4%BB%8D%E7%A0%B820%E8%90%AC%E8%B2%B7etf-102023220.html",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "ecddf62d83d2441b",
    "published_utc": "2026-11-06T10:20:14Z",
    "published_taipei": "2026-11-06 18:20",
    "source": "udn部落格",
    "source_url": "http://blog.udn.com",
-   "tier": 2,
-   "rank": "B",
+   "tier": 4,
+   "rank": null,
    "lang": "zh",
    "title": "國安基金決定啟動安定市場任務，維護臺股穩定-1106晚間最新- ★蒼弟來襲〃樂此不疲！",
    "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9tdWVGcEpZRktoYl9EVk5kd01kU2xTclVWS2E5QXF1cW1uWXNwai1Rd0x0UjNhWUYyc0lVcVlnX2tQX1NFZjBNa2lzUnEwLU83dGlKMmVuWEdoelBLYUtxSHFsdGxibHlDQWhDYXRB?oc=5",
@@ -594,7 +970,8 @@
    "symbols": [],
    "topics": [],
    "queries": [
-    "NSF"
+    "NSF",
+    "TWSE"
    ],
    "title_queries": [
     "TWSE",
@@ -615,6 +992,31 @@
    "lang": "zh",
    "title": "TWA00 加權指數- 快訊！國安基金確定進場護盤！🎉🎉🎉🎉🎉🎉🎋🧧 - 股市爆料同學會",
    "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBOMllIYmtjd3FqMmxXRXFaWnlleUZUVjYyU0FJaXo3aXd0ck5LZFU0ZWxDajhUUF9mZW1HUktCbGhMbF9LSzUxUE9SVW1xQVdnVDl2MlEyRUw?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "NSF"
+   ],
+   "title_queries": [
+    "TWSE",
+    "NSF"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "3a1a0eb4014f596d",
+   "published_utc": "2026-11-06T10:18:00Z",
+   "published_taipei": "2026-11-06 18:18",
+   "source": "Yahoo新聞",
+   "source_url": "https://tw.news.yahoo.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "台股5天跌掉5,510點！外資狂賣1.5兆 國安基金宣布啟動護盤機制",
+   "link": "https://news.google.com/rss/articles/CBMi9gJBVV95cUxPeF9wbE9QUHU2UXgzdUxYWk9rbzVPeEd3SEgtem5Ic2tSZFlNUE9qcmRQeHFfNUstbWUtNndCWGRrTFI5YlRsOHFVMTl3TWlsTG1GM2Y1SzRYZG1mUGFLam9FYUJOdmVpU1pfSjZFN1Zyc2U5cTVyVEV4V1hFTlFVMWJlQmxvNHF2eUJmMXVHdkFJUE13Z3hJLUFHZFBaTkltVDU4eE9YVjM4OHRaOFM0X294Qmg3ZFVXOVVaN0JVV0xBSUt0YXdsX1drUWV6NHMwRlVjYnRYMlBzbzd3YmRDMzExX1VOTFp4YlU2S3lBMG9TZWVYT3B6R0lFeHhfbjl6cXY4ampJUzJmSnJFNXpIcVp3ODN2N1FPdkVURFhTd0dDU1oxT2VsYWRVM29XSmwtUTF5M1RwVER6UVFaVlBzWFZ2TWhLdS1vNTFvaWpyVmhwaXd3TFJSZkVsM1J4cXBTbmxabGMwX3lPajQ1cDZOeV9xN2FGQQ?oc=5",
    "url": null,
    "symbols": [],
    "topics": [],
@@ -707,28 +1109,31 @@
    "time_fixed_from": null
   },
   {
-   "id": "f0de3dea0f6083ec",
+   "id": "496e5be2d17b7f05",
    "published_utc": "2026-11-06T10:15:17Z",
    "published_taipei": "2026-11-06 18:15",
-   "source": "中天新聞網",
-   "source_url": "https://ctinews.com",
+   "source": "Yahoo新聞",
+   "source_url": "https://tw.news.yahoo.com",
    "tier": 4,
    "rank": null,
    "lang": "zh",
    "title": "台股崩跌國安基金要進場了！視情況動用資金安定市場",
-   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1hU0xkVXhXMzhMNE8tMzlXNXF2ZF9oNnBKZmNrdVF4a0VhTkVlTS1GZzU3NzZUTEgwYnBMVkdsejhYUVB5RzhEQU5pNEhwcHBpYm9z?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMi6AJBVV95cUxQdWF5aXMzR2R0SzAzR0ZzZ0xRWV9HWGtIc3pyUjllc05CRG1XNnpUeWJxdGNjTWtpZkdVQ0JvRllsZDVNZzFab21fSlRKLWRKOGVhNzlmQXNCYThzd2kzUG5yQW9lNDRzQzMtQXRURW1DNlFpc0J0d2pIMWdsdGVNN1FEUnFXcVRuVElFMkttdV9SZVU2ZEEzYVd0Y2FERDJiMW5McGxYeHd5dDFXYnNJSGh6eW9mZUt0VURvdDdvTUtSYnZKVjVNWm1objBrcHhzbFk4a2NhSFFoN3BIYVBnRk4yN25nVWU0WDRYZ0YtS2cxNXdrZmJaQzk1ZGNVUm1ZSWFKdDFzRkZla3RDX1JBT3BidGdVWFlack5oRUxJVjRCOS1QWmF3YUtJRjlzMWhyTHdfenFHMjhyWHRZb3hTZng2RDZiUDFfSjJPNUpFX0pJcjV0MG5mWklJYUtXMlNGZnFYZmFPVXk?oc=5",
    "url": null,
    "symbols": [],
    "topics": [],
    "queries": [
-    "NSF"
+    "NSF",
+    "TWSE"
    ],
    "title_queries": [
     "TWSE",
     "NSF"
    ],
    "title_match": true,
-   "also": [],
+   "also": [
+    "中天新聞網"
+   ],
    "time_fixed_from": null
   },
   {
@@ -755,6 +1160,87 @@
    ],
    "title_match": true,
    "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "9447a5d24eff4091",
+   "published_utc": "2026-11-06T10:14:49Z",
+   "published_taipei": "2026-11-06 18:14",
+   "source": "Benzinga",
+   "source_url": "https://www.benzinga.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Stock Market Today: Dow Jones, S&P 500 Futures Trade Mixed Ahead of October's Jobs Report— Airbnb, Cloudf",
+   "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxPM0lNVS1aWUE0a0lKUzQ0T25KMW9rbHB5U21xWnZxak5KdzJ1Yk9hc1Boc0drdEFIRTZZMW5TTXZBOWZJVzduSjdOWHJ1UC13d1MwalREdW9UNXh3aGMyb0p1dk1fVjNyWjR1MGN6ZzBYOWRwVmlBQ3ZSRFFfcmZyV3JEeGx6N19zZjBtVUxWR3pUbFpPbXV5ZmRBNTVuX3FIZEo4OGV1aU40TXJsRDRHaDZDR2s4VGhGRmdyRVcyOS1wUW1FMmEzNE1VOXE5UDZ3S1E2eDVLT1BxWVZlQndKbHFhZXhzTE1Sd0QxbmNHMTB5S0U4ZThkcTlWWWdSMU94Yk9ibVo2eG5UX3Myam1R?oc=5",
+   "url": null,
+   "symbols": [
+    "VOO"
+   ],
+   "topics": [
+    "jobs"
+   ],
+   "queries": [
+    "MARKET"
+   ],
+   "title_queries": [
+    "MARKET"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "ac454dd167111eff",
+   "published_utc": "2026-11-06T10:14:00Z",
+   "published_taipei": "2026-11-06 18:14",
+   "source": "東森新聞",
+   "source_url": "https://news.ebc.net.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "台股單周重挫逾5千點 國安基金宣布啟動護盤",
+   "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE0yTWhwTVdqamZRYkxEdnJCclcyanJCeEFCbzBmeEhuekNwYmVESnVuOV8tZk85TkhkM0w4a2dFbzNhRTV2dlBGRmN6cFJsY0tHOWFjY0Z3cw?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "NSF"
+   ],
+   "title_queries": [
+    "TWSE",
+    "NSF"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "06c29b38b460affd",
+   "published_utc": "2026-11-06T10:13:21Z",
+   "published_taipei": "2026-11-06 18:13",
+   "source": "經濟日報",
+   "source_url": "https://money.udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "台股崩跌信心不足 國安基金宣布史上第10次進場護盤",
+   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE90WFhXQXpFZzRsTnk5TXB3dXdBRFkzbHI0eWVxMVRuY2htTnVMQ2g1elJtOG5WQVV1N2Fya0ZaZWJxeF9LaWx2NndjaGZVMFM4MlFYa1dvNkhDcW1qSVI4Ynh3NDM3YVF4SmpBbFY4QUJBd1pPRk1R0gFfQVVfeXFMUFN5Tk4wQXJ6SUxHb2kxVEhPSHZEYVlRNDdQbmVNZHdRRlhuY0R4YzV5enl3b1JOUTFEdS14X3BkU09wa0w5dHZMd0phd21HTGYyc3FMc0ZxeWZZNF81Vlk?oc=5",
+   "url": "https://money.udn.com/money/story/5612/9862516?from=edn_newest_index",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "NSF",
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE",
+    "NSF"
+   ],
+   "title_match": true,
+   "also": [
+    "TechNews 科技新報"
+   ],
    "time_fixed_from": null
   },
   {
@@ -823,6 +1309,33 @@
    "title_queries": [
     "TWSE",
     "NSF"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "4ce55406cae87720",
+   "published_utc": "2026-11-06T10:12:23Z",
+   "published_taipei": "2026-11-06 18:12",
+   "source": "CMoney",
+   "source_url": "https://www.cmoney.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "2330 台積電 - 00406A日報 - 股市爆料同學會",
+   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE50bkZaMF8zdFFmd1RzQmV5cllVanppdE56QThIWFhWSVJmVURVTE9ybW1fY2xKTkQ1dGMzRHB3MkRqOHREVHV0bTdqNlNsemxvVkU5YVJkUkE?oc=5",
+   "url": null,
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
+   "topics": [],
+   "queries": [
+    "2330"
+   ],
+   "title_queries": [
+    "2330"
    ],
    "title_match": true,
    "also": [],
@@ -979,6 +1492,112 @@
    "time_fixed_from": null
   },
   {
+   "id": "037396c616ef596a",
+   "published_utc": "2026-11-06T10:10:00Z",
+   "published_taipei": "2026-11-06 18:10",
+   "source": "工商時報",
+   "source_url": "https://www.ctee.com.tw",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "國安基金第十度進埸維護台股穩定- 要聞",
+   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBES0ROT1pGNk5qQmdsM0pVRTNvQ2QyZ0hTak9vWHZvVW5WbTR0SEYyVlp3ekNiQlZHbHJmaC1LYWJBMnVTWk9mTS1oLW5zbzVPWTBfMk44dlVEQ3N2RGRn?oc=5",
+   "url": "https://www.ctee.com.tw/news/20261106701846-430104",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "NSF",
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE",
+    "NSF"
+   ],
+   "title_match": true,
+   "also": [
+    "Yahoo股市"
+   ],
+   "time_fixed_from": null
+  },
+  {
+   "id": "978f657cbae3b05b",
+   "published_utc": "2026-11-06T10:10:00Z",
+   "published_taipei": "2026-11-06 18:10",
+   "source": "The Motley Fool",
+   "source_url": "https://www.fool.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Could Investing $500 a Month in SpaceX Stock Help You Retire a Millionaire?",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNdnlRM2JpZGhnVEdMZEg1bkdOU1FoZFBmc3hMN3FZd2VQbEllVkQySlE5SUtDaWswNTV0ZFNqa3R4UHE0cHdjMjd3YjZVS1BMZnYxckR1X0w0bTBtOUNSSDhCSVJKM0RkSkljWGVOX0tSc193YkdMV1ZNZUxfRXBmeTRtXzA3REV6RHN3M09GekZ0SEd2d3pjSQ?oc=5",
+   "url": null,
+   "symbols": [
+    "SPCX"
+   ],
+   "topics": [],
+   "queries": [
+    "SPCX"
+   ],
+   "title_queries": [
+    "SPCX"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "eae5f4c8e43b7ddc",
+   "published_utc": "2026-11-06T10:10:00Z",
+   "published_taipei": "2026-11-06 18:10",
+   "source": "Taiwan News",
+   "source_url": "https://www.taiwannews.com.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Taiwan plans space development fund with private investors",
+   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBKZ1lWOXpRampkS1BmSWw1bWtvLVJ1anR4WGg0SmRBSTFRcUhtWDMwY2F4OXR5TVNEeTd3THZBX003RXZ6SmgzNTk5S0JkX0oyNmZCbENKYU8?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [
+    "taiwan"
+   ],
+   "queries": [
+    "TAIWAN"
+   ],
+   "title_queries": [
+    "TAIWAN"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "ba93266f8fefc8dc",
+   "published_utc": "2026-11-06T10:09:46Z",
+   "published_taipei": "2026-11-06 18:09",
+   "source": "旺得富理財網",
+   "source_url": "https://wantrich.chinatimes.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "國安基金救市也會跌？去年進場台股仍殺千點分析師揭這次反攻2大考驗- 上市櫃",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBQeWNNTFBraVpwaFdiNlVjUDJRazdWQWo1ZjlzMVU0QWRUS1A3d0l4NVg0VGVyWEwzMHc0M2VocWQ3OUVvbUJuVFhjbjhMS0E4dEFFTTZ4VHZkbkRuQ0JiZldXSlVZeDhPT2c?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "NSF",
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE",
+    "NSF"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "20d71c82c2c128c3",
    "published_utc": "2026-11-06T10:09:09Z",
    "published_taipei": "2026-11-06 18:09",
@@ -1074,6 +1693,59 @@
    ],
    "title_queries": [
     "NSF"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "f44b40a45f6ceba3",
+   "published_utc": "2026-11-06T10:07:31Z",
+   "published_taipei": "2026-11-06 18:07",
+   "source": "Automotive Manufacturing Solutions",
+   "source_url": "https://www.automotivemanufacturingsolutions.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Tesla sidelines Cybertruck as Cybercab takes centre stage",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVXhydEJUcVZQc2NhUmg1QkM4Z0tNbUd5b0FJZ05GTmlqbS1DS2JNUGxmQWlFeTlzVFluTU5xWlpHdHR4Y2FlaGZoUzkwRHZWWlVfbzZNZzQweTFkNTFTb1puU3hvNHNyZnhfaUI1eWZVZ3NUTEFIQS1VUnFOTWhRNzRkZkt4S3FsS3FtaWdoRzkxWlNhLWNVWjVZQmFUdWVKMVhST2NRaDFaVzVwQm9iSE9jOGwyQkhLUmE4?oc=5",
+   "url": null,
+   "symbols": [
+    "TSLA"
+   ],
+   "topics": [],
+   "queries": [
+    "TSLA"
+   ],
+   "title_queries": [
+    "TSLA"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "cb7cceb07a7ce556",
+   "published_utc": "2026-11-06T10:07:00Z",
+   "published_taipei": "2026-11-06 18:07",
+   "source": "The Columbus Dispatch",
+   "source_url": "https://www.dispatch.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Powell starts land acquisition process for Scioto Street expansion project",
+   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOWkJ1SlpsbFh6NnA1WWY1RGxoZEtSd1BDUVRCRWMxMUNmU0JkMnFTa282NnJtRC1Pb01PZXRGYmdVR0tZRnpaVUctXzZFTWE1R1JhNlVGZmd6eGhEbEJFZWVraDJPNW9LcVhXY0hCMjg5VENCdGNORFhGb3U2Z3hnYkM0SmxDY0R2bWJLZE4yZlBtQzR6WFJTSFdGdEtLUzQxVlZoZlY5eUw4clV4RTlVaDhfbmNydGs0SVdlcmQzeV9sYmxBQVA5VExUeS1wWjNBdXRtbkpHZw?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [
+    "fed",
+    "merger"
+   ],
+   "queries": [
+    "FED"
+   ],
+   "title_queries": [
+    "FED"
    ],
    "title_match": true,
    "also": [],
@@ -1283,6 +1955,58 @@
    "time_fixed_from": null
   },
   {
+   "id": "1404f7ff2ec3e4d8",
+   "published_utc": "2026-11-06T10:02:24Z",
+   "published_taipei": "2026-11-06 18:02",
+   "source": "Torque News",
+   "source_url": "https://www.torquenews.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Elon Musk Announces Tesla Will Discontinue Cybertruck Production After 9 Months – He Says, “Tesla Will Wind Down Cybertruck Production In The Middle Of Next Year To Make Room For Cybercab Production”",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVzFnTTlwdlBGQUZkMnJHZWZpMGFudi1tNGhaYUVkQjQ4WHRfRGdFTEtIUVpxelZfQ1NPSG4yMDVYdTlCZjFXc0Y4WTdYN3lKSW1ETlhReUFDWi0wNVZfeWxRRWlSSG5wQ1BybXhXd3F6RldROHZiVFlsVnNEcHlPOHZudGlPNGhfV08zZ2x5Q3pUdGp4ckZ3MUdEdDF2ZHFoM04ydktzdmNlSVR2MG83aWMxUHd0cms0SklhTWFYX0JldjhF?oc=5",
+   "url": null,
+   "symbols": [
+    "TSLA"
+   ],
+   "topics": [],
+   "queries": [
+    "TSLA"
+   ],
+   "title_queries": [
+    "TSLA"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "d7651ca700c14d17",
+   "published_utc": "2026-11-06T10:02:11Z",
+   "published_taipei": "2026-11-06 18:02",
+   "source": "The New York Times",
+   "source_url": "https://www.nytimes.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Opinion | Remember When Republicans Hated Tariffs? They Should Again.",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5GNXpOaE1ibmZOenc2aHdzZFNSM1hvYUUwTnJtdlRzZlJ0ZGx3LUhjTG1fcDRDRWZHWHF6M0tuVm1MbkFybFpCVnRHNGlxT3dNX09WSGZHbXlybm9hQU1rWlJERi1RZ0NoMFdiTHR5cnRXVXdjOE1XNg?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [
+    "tariff"
+   ],
+   "queries": [
+    "TARIFF"
+   ],
+   "title_queries": [
+    "TARIFF"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "dbaf16473ee583e3",
    "published_utc": "2026-11-06T10:01:53Z",
    "published_taipei": "2026-11-06 18:01",
@@ -1463,7 +2187,9 @@
     "OPENAI"
    ],
    "title_match": true,
-   "also": [],
+   "also": [
+    "930 WFMD Free Talk"
+   ],
    "time_fixed_from": null
   },
   {
@@ -1609,32 +2335,8 @@
    "symbols": [],
    "topics": [],
    "queries": [
-    "NSF"
-   ],
-   "title_queries": [
-    "TWSE",
-    "NSF"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "63a6c5de09679392",
-   "published_utc": "2026-11-06T09:58:57Z",
-   "published_taipei": "2026-11-06 17:58",
-   "source": "Rti 中央廣播電臺",
-   "source_url": "https://www.rti.org.tw",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "台股失守4萬點 距高點已跌萬點 國安基金宣布啟動護盤",
-   "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9oX1RaWEtzbVZaY1pkY0JlV3lUTlViemtYTnc5Y255YVdBa0tyTWNQYmpkZF90M1FxelI3UE96S0tCTFhzUGdKTWJSZ1ZlOUtqa3h6ZEVQOA?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "NSF"
+    "NSF",
+    "TWSE"
    ],
    "title_queries": [
     "TWSE",
@@ -1671,6 +2373,30 @@
    "time_fixed_from": null
   },
   {
+   "id": "cbadbe3bba56d7af",
+   "published_utc": "2026-11-06T09:56:37Z",
+   "published_taipei": "2026-11-06 17:56",
+   "source": "財訊",
+   "source_url": "https://www.wealth.com.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "台股市值2年暴增124％，成亞資中心新商機！金管會拚「4年有變」，先克服3道關卡",
+   "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5XbzhYd1FZR21sSHlZejhVdklHV01MT2R3djA0REV2VFUzSmxoSXdFb0wzX253cHZ2c0V1SWF5QTNwYnBNM1pzaXlzVS1aVnRrNUUxeXpXeFRRVXUtYUVaU0lXVjZjSU1kRGZ3ZUZ6cEFFdXB1ZUZSRUNmNA?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "46136205cc8f709c",
    "published_utc": "2026-11-06T09:56:24Z",
    "published_taipei": "2026-11-06 17:56",
@@ -1696,6 +2422,33 @@
    "also": [
     "經濟日報"
    ],
+   "time_fixed_from": null
+  },
+  {
+   "id": "fafa759179a1548d",
+   "published_utc": "2026-11-06T09:55:15Z",
+   "published_taipei": "2026-11-06 17:55",
+   "source": "Yahoo新聞",
+   "source_url": "https://tw.news.yahoo.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "台積電盤中零股交易金額衝247億元 (圖)",
+   "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNUzc4VVFjU09SdF9KUl9kcjBLVVZjZU83RlFfdFdtTG83cmxRSnhBVnE2eDNTWnhqMTNUQzVLdHR2ZXlPQWdkWWk1VFNoWVlMUzN0YmVOc01xMlQ3MlVKM29Fc0lsN1pTYWxOMjRtUGNpLVBoYUlqdjI3cTNjR0Fhb1VSQW1lQlExY053NW5PejhSbzZaandJM0wtYW5ycUJrSGpsZXhuOFJrRTBJOWo2a1NkeV9BVFhzSGtkUUIxcXo1M0dkR1FMVG95NGVMVVhaMFlhLWVua2JYYUZhRy1ib3NEXzZkM1RaSWJfSWtuOHFJS2MtTEpSQmlkUDZtdy1vZTI4X202S0ktYzE3?oc=5",
+   "url": null,
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
+   "topics": [],
+   "queries": [
+    "2330"
+   ],
+   "title_queries": [
+    "2330"
+   ],
+   "title_match": true,
+   "also": [],
    "time_fixed_from": null
   },
   {
@@ -1776,6 +2529,31 @@
    "time_fixed_from": null
   },
   {
+   "id": "f5a2e98286651f79",
+   "published_utc": "2026-11-06T09:53:21Z",
+   "published_taipei": "2026-11-06 17:53",
+   "source": "Yahoo股市",
+   "source_url": "https://tw.stock.yahoo.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "史上第十次！國安基金宣布進場護盤 5千億元銀彈上膛",
+   "link": "https://news.google.com/rss/articles/CBMi8gJBVV95cUxQOU9OOGpMTlQwS2JVSDJFM0lyUTR1ODRnLWtTOTM2UU1YcFBZUUpJbU1rVmthTGpLZjFPRzMyZHptSWR0UEZtNkpsR0ZSLTNWNUNveExENkpHMjAtN3BETDh0b0lKOWlvMlNoRFUzMGZMaVVMaWtmMEVfQm1CQ2E5REZibU9JMzkyTzM3ai1SSWgtREhZaWFCbzN2YUlQOE4zLWg4dkIwN0J2dmZXam42TU1KRWpaYjVCMUZOMFhUbk9sMjk0SG1xcmZkaElkZldvV05qTU5RODg1d2F2U0pwMWFXaXVVR2M4Y0pYRFpmeS1QS0lsYkF6bEdDV1E3VlZJRnVGcmRvdmJYeVJvdVZNSDhiRnV3UGdKLTB3T21GWS1hR2doN0MwM3dyMkVLeUphOTJzRDhERDh3ZVA5MGs0U2ZmS0VsX093Y0FHTFRZMDZuYVdwVDd2Z0RTdDVfZHdGZ2IzTmkwem1vSlpLaF9Gc0pR?oc=5",
+   "url": "https://tw.stock.yahoo.com/news/%E5%8F%B2%E4%B8%8A%E7%AC%AC%E5%8D%81%E6%AC%A1%EF%BC%81%E5%9C%8B%E5%AE%89%E5%9F%BA%E9%87%91%E5%AE%A3%E5%B8%83%E9%80%B2%E5%A0%B4%E8%AD%B7%E7%9B%A4-5%E5%8D%83%E5%84%84%E5%85%83%E9%8A%80%E5%BD%88%E4%B8%8A%E8%86%9B-101441531.html",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "NSF",
+    "TWSE"
+   ],
+   "title_queries": [
+    "NSF"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "e118a9c64b310ad4",
    "published_utc": "2026-11-06T09:53:21Z",
    "published_taipei": "2026-11-06 17:53",
@@ -1792,55 +2570,6 @@
    "queries": [
     "NSF",
     "TWSE"
-   ],
-   "title_queries": [
-    "TWSE",
-    "NSF"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "717e492a0bbcc310",
-   "published_utc": "2026-11-06T09:53:21Z",
-   "published_taipei": "2026-11-06 17:53",
-   "source": "Yahoo股市",
-   "source_url": "https://tw.stock.yahoo.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "史上第十次！國安基金宣布進場護盤 5千億銀彈上膛",
-   "link": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxPVUpPM2x3QWY1OGs2Wkp5Q24tQVpxZUNoT3QzNlQ3eFhlSkN0b3hzQnVqTVhhWW1qTlFPQzJlQTBKTEQwVEVKZ3ZDbHk1eEpST2llVFpxbkpINjF0TVg0WHBuYzlxTFhlVFJqdXRIdXp1Ty1Fekd6ZFpfWlFDb1FPVjB3LUdTeFVma0dVMnFKTGtZSGlIaTRBUFBmTkJBck5DTU9KT0NKUUE4eE1FeEJPNWJfYUIxMVNQeV9fTEowUEZNUW9NZ19DTl90NXFQY3JOOTRFM2J3OUdRc3EtaHJYOEdXU1lYNUFlaElDQzdzak1XWWJ4NmJIOXNNOHpONC12UE80N0Vlb0F5MG5MSks4Wkg5NEs2WDdpSkZweTRhOVZxRXdNcTlIck04WGdFcTdJcjlycDBDdGoyd19zbFpxTGF1SC1UUzI3WU5tS19UOXlIS2ZLYXlyVFI3MGtGWDdGbGlFdUZn?oc=5",
-   "url": "https://tw.stock.yahoo.com/news/%E5%8F%B2%E4%B8%8A%E7%AC%AC%E5%8D%81%E6%AC%A1%EF%BC%81%E5%9C%8B%E5%AE%89%E5%9F%BA%E9%87%91%E5%AE%A3%E5%B8%83%E9%80%B2%E5%A0%B4%E8%AD%B7%E7%9B%A4-5%E5%8D%83%E5%84%84%E9%8A%80%E5%BD%88%E4%B8%8A%E8%86%9B-101232188.html",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "NSF"
-   ],
-   "title_queries": [
-    "NSF"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "6d57f89ead38eb0d",
-   "published_utc": "2026-11-06T09:52:09Z",
-   "published_taipei": "2026-11-06 17:52",
-   "source": "Yahoo新聞",
-   "source_url": "https://tw.news.yahoo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "快訊／國安基金宣布第10度進場護盤 維護台股穩定",
-   "link": "https://news.google.com/rss/articles/CBMiyAJBVV95cUxPNU9fdDRKNGdIR0ZkRGNBZGVRXzNRNWFIdmp0aHJTU0Q5cDFidS14QVg2ZU53QXE1Vnc4VlRhLXRpdzNBSy10ckNNQ2loaVZmY1c3bHlJY3hRSWpYc2NLaGpjOFY0M1dkNXNibDFNc09MZ3d2cnlQZmR3Y2Y1bFJjV2hGU0xjT19fSHFJaHNDOG0zTW42ZW9XX2cwRXdadjZ3dkZ1REFsckU1TE14T0FWUEZZT2JIeklPZW4tRElhTF9ZUFF1elBTMllQWkVDZnpkTlV0LU9RT0RzbUlwcEFXcjg4SjM5c1FaUTd2TmlFMDFpQVBFTlktWDRHSUNPRUVPamQ0NWEwWnpsTVY3Sl9tS2gweG5ERDBiZFlUR1djTTdSUHdHMER4djJnZ3RVejh2WUh2aHhudURBMFZsQUFsMUV0b1cybG1E?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "NSF"
    ],
    "title_queries": [
     "TWSE",
@@ -1905,6 +2634,37 @@
    "time_fixed_from": null
   },
   {
+   "id": "2539c65c8d37c520",
+   "published_utc": "2026-11-06T09:51:01Z",
+   "published_taipei": "2026-11-06 17:51",
+   "source": "MarketBeat",
+   "source_url": "https://www.marketbeat.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Taiwan Semiconductor Manufacturing Company Ltd. $TSM Stock: Chicago Partners Investment Group LLC Boosts Position",
+   "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNNVhCRjE0OXVRWVNJUjNLM3dIQUZwVmIxZE5WdjBlT182SUhac0pFbjVqdHZMRG95WEI4RUkxMnVFajVLUDJNNndLTmJnYnQxWjBPdDg1UjFzdVJ5TUpka1ZBenB0a0NobFhyNEN3d3VCUG53b19XaFluVThkdHdkZGpVSjRGR0o1eWZSRFN2SW0tNDF4bEhJaTJEbUJsMjlOa2VIVkZ0QVJSdlpFclY0d3BFdHdHUXdjR1cyYjRubGdjVTg5blJWUU96QTVWaHJDdHpCLVpXMHVydFJxY2pFWnZSVDZaQkxGMGpGTTZGeE9nV2l3Sm9UUDNJT2ptMDQw?oc=5",
+   "url": null,
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
+   "topics": [
+    "taiwan"
+   ],
+   "queries": [
+    "TSMC"
+   ],
+   "title_queries": [
+    "TSMC",
+    "TAIWAN",
+    "SEMI"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "7a0c9492ecae721d",
    "published_utc": "2026-11-06T09:50:16Z",
    "published_taipei": "2026-11-06 17:50",
@@ -1958,30 +2718,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "0f65f6beeaee71ef",
-   "published_utc": "2026-11-06T09:49:43Z",
-   "published_taipei": "2026-11-06 17:49",
-   "source": "商業周刊",
-   "source_url": "https://www.businessweekly.com.tw",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "商周-限空令是什麼？何時實施？最新消息、4大措施與股市影響一次看- 商業周刊",
-   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5id1lvMXBhSVVrb0xnR3pfQzVESFNkZkgwNk1ISnRtd0cxRlZSYWU2Q3ZJcUxpYnBJb0tVYUxPNXFhX3BDdkQ0Rm1vb05XdnhqeWhYMjJiY1BucXhYdHNmc2lLRTdDUQ?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "NSF"
-   ],
-   "title_queries": [
-    "NSF"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "e556badd51c12a60",
    "published_utc": "2026-11-06T09:49:03Z",
    "published_taipei": "2026-11-06 17:49",
@@ -2003,6 +2739,32 @@
    ],
    "title_queries": [
     "2330"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "f6b191db3ae836bb",
+   "published_utc": "2026-11-06T09:47:52Z",
+   "published_taipei": "2026-11-06 17:47",
+   "source": "NBC News",
+   "source_url": "https://www.nbcnews.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Wall Street left reeling after tech stock sell-off",
+   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQdjF6WWV6NGg5d0F2LV9oVkZPbGM2RDg4U0RNOEtJX0pzYzhkNTc1OGZOUzZIcm1vX3VMcl8ySU9fNk5DWnB4dDRpZ2tUM25icW5rS1AtSThCZlA1bHBvdmxackVaT0hOQ29YUGY5eWQzNEFKT016VlZxSWNpWFVRWlVGdEhtMzQydjE2aFJTbTNCOFA3YWJ0d0FoYS1iVlJFNmc?oc=5",
+   "url": null,
+   "symbols": [
+    "VOO"
+   ],
+   "topics": [],
+   "queries": [
+    "MARKET"
+   ],
+   "title_queries": [
+    "MARKET"
    ],
    "title_match": true,
    "also": [],
@@ -2055,6 +2817,62 @@
    ],
    "title_queries": [
     "MARKET"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "65d4dc34fd939a53",
+   "published_utc": "2026-11-06T09:46:25Z",
+   "published_taipei": "2026-11-06 17:46",
+   "source": "BigGo 財經",
+   "source_url": "https://finance.biggo.com.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "OpenAI、Google接連推出資安專用AI，韓國Naver、SK電信力拚明年上半年",
+   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1udUlFc1BPTDUyY3FnRFpnQ2ZpVmFfbEludE04N1JnMmJLdmhpN2FkaTRkYUY3REs4OVdBNGdzanVBN3JXNFFQSXd6djkyejdfX25YbV9UaTJua1ZsZVJ2WXNqbTU1aVFCejE3LWRjRno4dVRxZTlzLXN3?oc=5",
+   "url": null,
+   "symbols": [
+    "GOOGL",
+    "OPENAI"
+   ],
+   "topics": [],
+   "queries": [
+    "AI_ZH"
+   ],
+   "title_queries": [
+    "GOOGL",
+    "OPENAI",
+    "AI_ZH"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "1a873cdf929b40b3",
+   "published_utc": "2026-11-06T09:46:18Z",
+   "published_taipei": "2026-11-06 17:46",
+   "source": "FourWeekMBA",
+   "source_url": "https://fourweekmba.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Anthropic IPO Explained: 5 Steps From S-1 to 180-Day Lockup",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNZXJiQW5rYk1oNHVQOUFET1pzV2Z5M25FNURlQWtvTTZnZFAzcktBRjZkYWUycnlHSV9GbVV1dFAtYnRESU1tNU0ya1lmSTJOd2RYVDVqbklfRUJpVnkxS1Jqck1tZHlueHI2UW9pNy1uZm5VRnVqTVdGOVh5ZVJZU1BPZVZ0OGtESFJaYWREVQ?oc=5",
+   "url": null,
+   "symbols": [
+    "ANTHROPIC"
+   ],
+   "topics": [],
+   "queries": [
+    "ANTHROPIC"
+   ],
+   "title_queries": [
+    "ANTHROPIC",
+    "AI_ZH"
    ],
    "title_match": true,
    "also": [],
@@ -2160,6 +2978,34 @@
     "SEMI_ZH"
    ],
    "title_match": true,
+   "also": [
+    "https://g4.village.tw/"
+   ],
+   "time_fixed_from": null
+  },
+  {
+   "id": "e222b6acfddb8034",
+   "published_utc": "2026-11-06T09:44:45Z",
+   "published_taipei": "2026-11-06 17:44",
+   "source": "Dataconomy",
+   "source_url": "https://dataconomy.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Google Launches Gemini Omni 1.2 Flash With 15-second AI Videos",
+   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOanEzZnNHNlowT2swSFBTSmNELVp0ZkhiQVF2cHZ4Rkg3X0kyam5NNTlCaG5McjMxMHhIdWk0bzhGUmE0c2ZqZFU5M0Z2SzZJanFJQ1cybG0zTjhHLVo2czBJN19fZzFfMUZiVzRMb251bzNPV0pBRFRtN3ZGMEpRUDhTTlVYaXhzbGdLeEJYNkczUlU?oc=5",
+   "url": null,
+   "symbols": [
+    "GOOGL"
+   ],
+   "topics": [],
+   "queries": [
+    "GOOGL"
+   ],
+   "title_queries": [
+    "GOOGL"
+   ],
+   "title_match": true,
    "also": [],
    "time_fixed_from": null
   },
@@ -2182,6 +3028,30 @@
    ],
    "title_queries": [],
    "title_match": false,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "8ab933c2db9a15de",
+   "published_utc": "2026-11-06T09:43:56Z",
+   "published_taipei": "2026-11-06 17:43",
+   "source": "非凡新聞台",
+   "source_url": "https://news.ustv.com.tw",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "台股一度摜破3萬8 盤中跌3737點創史上最大| 金融",
+   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBSNDZRMVpPbzNEZTdwNk5xZHBaTjdPOWlkSUZlNElkWWVDWktJb0hIOHdvcHJGT1dfY1FnazU1eWRhaV9qbmNCV01WdXNhY1dIMFByNDVsRHlBLWE4?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
+   ],
+   "title_match": true,
    "also": [],
    "time_fixed_from": null
   },
@@ -2284,7 +3154,8 @@
     "taiwan"
    ],
    "queries": [
-    "NSF"
+    "NSF",
+    "TWSE"
    ],
    "title_queries": [
     "TWSE",
@@ -2655,6 +3526,30 @@
    "time_fixed_from": null
   },
   {
+   "id": "e24f143c46afd3b9",
+   "published_utc": "2026-11-06T09:37:10Z",
+   "published_taipei": "2026-11-06 17:37",
+   "source": "Yahoo股市",
+   "source_url": "https://tw.stock.yahoo.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "神準！韓命理師3個月前預言台股「這時段」震盪 網驚：以後不分析、直接算命",
+   "link": "https://news.google.com/rss/articles/CBMi0gJBVV95cUxQZ1JocWJoTWtfc1BKX2JYT21jajIwckNKbmFvWEhEQVRYdnZPblo2RVhmdlpMb0dZZFRvYzJWQmdvOGRvWS1NT1JTZ09TMVFVYkZabFpTNTlhWkFMdGdMbVJpODVDTnplTzJzTExncGRvR1M0d3pjQmU4Tm5aNlFTYk1Wck1DWFAzWGVZRFJuYWU4TDc5eWhlckVWaDlCclloSjE4elBPYVJReHM1WGl6TjRNMmQteDlGd0RWcEFuWE5HamF4WW9oVzBhVDFKUFdpYU9ONWMtVFExOFl1UDdhNzNLU1EwckJmcXJtLU8yQnRNbjJrTEZ1ZlI5SU94VUl4RVVEY1dyTlZfd1BJbFhmaTRwMWFucGpzUWZScnhTNkFoeGNQdDFCMG53OXNrNjFkVUNOM1dhcWMyajlDRW9HejFOWjltaWpCaXpYSGpnMHZRUQ?oc=5",
+   "url": "https://tw.stock.yahoo.com/news/%E7%A5%9E%E6%BA%96-%E9%9F%93%E5%91%BD%E7%90%86%E5%B8%AB3%E5%80%8B%E6%9C%88%E5%89%8D%E9%A0%90%E8%A8%80%E5%8F%B0%E8%82%A1-%E9%80%99%E6%99%82%E6%AE%B5-%E9%9C%87%E7%9B%AA-%E7%B6%B2%E9%A9%9A-093710891.html",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "86baff5823c86214",
    "published_utc": "2026-11-06T09:36:27Z",
    "published_taipei": "2026-11-06 17:36",
@@ -2725,6 +3620,32 @@
    ],
    "title_queries": [
     "TWSE"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "be1c30172034dd3d",
+   "published_utc": "2026-11-06T09:36:00Z",
+   "published_taipei": "2026-11-06 17:36",
+   "source": "BigGo Finance",
+   "source_url": "https://finance.biggo.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "NVIDIA Releases Free Steam Demo Recreating 20-Year-Old GeForce 8800 GTX Unboxing, Recommends RTX 5080",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5QSG1zU1IwOGhmUWJhMDF2SFJwc1JFejhhTXZQS1NUQUx2d3pBcFNXbEdwOGVFVDU5TUpVRkdPSVBaWS0tU3hobTFsTFR0eV9malhDbVBCQ1dZYkRGSWZiMllLVnNpTjlYMEJPdzRwX3pYYlh5Rnc?oc=5",
+   "url": null,
+   "symbols": [
+    "NVDA"
+   ],
+   "topics": [],
+   "queries": [
+    "NVDA"
+   ],
+   "title_queries": [
+    "NVDA"
    ],
    "title_match": true,
    "also": [],
@@ -2832,6 +3753,33 @@
    "time_fixed_from": null
   },
   {
+   "id": "b56ccdf493e19573",
+   "published_utc": "2026-11-06T09:32:58Z",
+   "published_taipei": "2026-11-06 17:32",
+   "source": "CyberSecurityNews",
+   "source_url": "https://cybersecuritynews.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Hackers Could Bypass ChatGPT Lockdown Mode to Steal Conversations Without Users Knowing",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9HcDFHTmpuc3VjR0FiWjJ4dkxqdmttTG5sc2M5OEVtX2ZHX20wTWwwNFdQbThXMTVJZ1lEX1lGWUtFYmFGeTQ0SUhIODQ5a3QtV04ybGZ2UGh2RmhMX0h2V1FDTXV4X1EtWUlR0gFwQVVfeXFMT2F1SVNmVnFjdUs4RUJsM201VXA5RGVpSlpQcUtoRkFiYk1PYlFzUjFoeGhUY3I3cnhudk1fVFFFRkR3UDJkQVNibVNNaFJQN3dUT1FKSXFIZXRCcVkxSlRYMC12Rl9MNk1kSlMwclhIYg?oc=5",
+   "url": null,
+   "symbols": [
+    "OPENAI"
+   ],
+   "topics": [],
+   "queries": [
+    "OPENAI"
+   ],
+   "title_queries": [
+    "OPENAI",
+    "AI_ZH"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "2842e6110fd74762",
    "published_utc": "2026-11-06T09:32:00Z",
    "published_taipei": "2026-11-06 17:32",
@@ -2932,6 +3880,32 @@
    "time_fixed_from": null
   },
   {
+   "id": "55d88e4d68dc5d50",
+   "published_utc": "2026-11-06T09:30:41Z",
+   "published_taipei": "2026-11-06 17:30",
+   "source": "Asia Times",
+   "source_url": "https://asiatimes.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Korea, Taiwan and Japan take first jolt from Democratic AI shock",
+   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNN29NaFRScG9wdk1Ub0tadzNZZmo1QXAyZmx1SEotaDBPUGZSbEFYXzZzLU9EN292QTVob2ZlS1E0OVBKOVpldlBvVS1zT09hLVB3aFZxY3E3NDdmakI4UGg3RlRMc09vSWdaeURXR0VFZlI2NFphZW14S2ZDX3FkVzBzTE93Sy05U0NhNlo3YzJXYkZZNGlTUVN3?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [
+    "taiwan"
+   ],
+   "queries": [
+    "TAIWAN"
+   ],
+   "title_queries": [
+    "TAIWAN"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "27b115d602b13c1d",
    "published_utc": "2026-11-06T09:30:35Z",
    "published_taipei": "2026-11-06 17:30",
@@ -2996,6 +3970,32 @@
    ],
    "title_queries": [],
    "title_match": false,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "bc15c9f9c4a6697b",
+   "published_utc": "2026-11-06T09:30:02Z",
+   "published_taipei": "2026-11-06 17:30",
+   "source": "Yahoo Finance UK",
+   "source_url": "https://uk.finance.yahoo.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "en",
+   "title": "Wall Street Peers Into Abyss of AI Trade as Midterms Expose Risk",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNdXZFc3NLOU1WaUlick5QOWY1WVdINTVEMUFYbkFSc2dYRXVtU3I4Q21KTDg0MldHZ2FabG9ZMHNjLWhfZFNqWUd4MU5DZ0FoRE00RnZkR2hsb09idnZ1V2lPdzVoY1NDVW9NOG9UWFZCV0d2ZnZvNGZraFYzdGFrTw?oc=5",
+   "url": "https://uk.finance.yahoo.com/news/wall-street-peers-abyss-ai-093002270.html",
+   "symbols": [
+    "VOO"
+   ],
+   "topics": [],
+   "queries": [
+    "MARKET"
+   ],
+   "title_queries": [
+    "MARKET"
+   ],
+   "title_match": true,
    "also": [],
    "time_fixed_from": null
   },
@@ -3254,6 +4254,32 @@
    ],
    "title_queries": [],
    "title_match": false,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "ad29a66aca79488d",
+   "published_utc": "2026-11-06T09:26:06Z",
+   "published_taipei": "2026-11-06 17:26",
+   "source": "تسنیم",
+   "source_url": "https://www.tasnimnews.ir",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Google Whistleblower Exposes Tech Giant’s Complicity in Israeli Genocide in Gaza",
+   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOdUpiUGpnSDRONnRnQzZNR1U4a1ZRNnlBdFVSYURzWjFCaDFQOFFTNEZ6cnFUTmg0enU2N3lIUFhkRU11WGI0OUo1Z2ZYaUprX1BTbENUNUJRekY5THB0YVNHQkRqT1dkaG5aei1fZWFBOGVWU0k3aWtIRlM5MVpNclNJQ0IwaG5QZERweURNaGIxRG5xSlJnOW9IdzBINjVaYS1OU1U5VkdtaE84N1RpRGZaNGVJM09uY3FCOGdIVFZaYlF4d2VoUTl3ODN3UdIB0wFBVV95cUxOazBFY04wWlJHQV8wbVB5MHJUMDI2MXBjR1JEYkU2Z0RRcndOWm9DRnFOd3dFZUI4eWVIYk80YXBXd2JNZG1IcGlqUWVUUDZWMDRDNlA2WGdWTV9MMEhZMTltWU9kY0hyczgybjN5bGdNaGZnZGxacklpTWprbm81NnVOSTVHblhzTVNYbDhVWVBBUXFKYWlFeE1ENFR1VU1WSkUyRF9wVFkzcUdSQnlEZ3l3R2Nsamo3YWpFZ2Y5eTBlS3V1WWNSXzlVa2dZakxxTTk0?oc=5",
+   "url": null,
+   "symbols": [
+    "GOOGL"
+   ],
+   "topics": [],
+   "queries": [
+    "GOOGL"
+   ],
+   "title_queries": [
+    "GOOGL"
+   ],
+   "title_match": true,
    "also": [],
    "time_fixed_from": null
   },
@@ -3661,6 +4687,33 @@
    "time_fixed_from": null
   },
   {
+   "id": "91a3aaeda6856e67",
+   "published_utc": "2026-11-06T09:16:26Z",
+   "published_taipei": "2026-11-06 17:16",
+   "source": "Cybernews",
+   "source_url": "https://cybernews.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "ChatGPT murder lawsuit alleges chatbot aided poisoning plot",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB2YS1TTjlHZW45dzJzQnRzcjMxTTBESENZLXVpaTVqallhUHFGZWZfdDFCU3NVaTVzT3RPLVdob0VqLWNhLTNQd2MyNGplVy1rTGI5VWpJS3FPdHpMeHRPRzZ2dVBOcXM?oc=5",
+   "url": null,
+   "symbols": [
+    "OPENAI"
+   ],
+   "topics": [],
+   "queries": [
+    "OPENAI"
+   ],
+   "title_queries": [
+    "OPENAI",
+    "AI_ZH"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "a4f162ae94e25986",
    "published_utc": "2026-11-06T09:15:19Z",
    "published_taipei": "2026-11-06 17:15",
@@ -3826,31 +4879,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "73bac700880b771c",
-   "published_utc": "2026-11-06T09:13:00Z",
-   "published_taipei": "2026-11-06 17:13",
-   "source": "Yahoo股市",
-   "source_url": "https://tw.stock.yahoo.com",
-   "tier": 2,
-   "rank": "B",
-   "lang": "zh",
-   "title": "【公告】安格 2026年10月合併營收1650.7萬元 年增-33.67%",
-   "link": "https://news.google.com/rss/articles/CBMilwJBVV95cUxOSlFROFJVMHhidHJmWVQ4TmE0VTROOU0xVVpkc0ZucXFfSXBFWnFFMERSMnV2V1BSZ1JIWk1aLTBteExwZ0phRGVTX2haODhWS09zaEJQNzBzdkxHanBLeWE5TGJ6cWhtcFo5a3FnOV95ZUo3MlpuZi1ZV0pfb0Jna19fUDhkUVZEYXlJMzQydWp6T1FwS2Zfak8zZmF3S1RJNlpleWxob3JSblhJQmxaU1U2VHRBcmRjeURfVE1sS0Y1dHYxSXYteE15anpSUGtMU1JPdi1HOU5kZWtVcVFyaXhtVEpRbndudzJTd1dYS2EzVmhKbnNQdTE5ZDlKSW5oYUFBNTZ3Rl8ydzdHM1djcHFwS0QteUE?oc=5",
-   "url": "https://tw.stock.yahoo.com/news/%E5%85%AC%E5%91%8A-%E5%AE%89%E6%A0%BC-2026%E5%B9%B410%E6%9C%88%E5%90%88%E4%BD%B5%E7%87%9F%E6%94%B61650-7%E8%90%AC%E5%85%83-%E5%B9%B4%E5%A2%9E-091300125.html",
-   "symbols": [],
-   "topics": [
-    "earnings",
-    "merger"
-   ],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "59e92fc9598eda2c",
    "published_utc": "2026-11-06T09:13:00Z",
    "published_taipei": "2026-11-06 17:13",
@@ -3880,8 +4908,34 @@
    "title_match": true,
    "also": [
     "Yahoo股市",
-    "經濟日報"
+    "經濟日報",
+    "華視新聞網"
    ],
+   "time_fixed_from": null
+  },
+  {
+   "id": "73bac700880b771c",
+   "published_utc": "2026-11-06T09:13:00Z",
+   "published_taipei": "2026-11-06 17:13",
+   "source": "Yahoo股市",
+   "source_url": "https://tw.stock.yahoo.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "【公告】安格 2026年10月合併營收1650.7萬元 年增-33.67%",
+   "link": "https://news.google.com/rss/articles/CBMilwJBVV95cUxOSlFROFJVMHhidHJmWVQ4TmE0VTROOU0xVVpkc0ZucXFfSXBFWnFFMERSMnV2V1BSZ1JIWk1aLTBteExwZ0phRGVTX2haODhWS09zaEJQNzBzdkxHanBLeWE5TGJ6cWhtcFo5a3FnOV95ZUo3MlpuZi1ZV0pfb0Jna19fUDhkUVZEYXlJMzQydWp6T1FwS2Zfak8zZmF3S1RJNlpleWxob3JSblhJQmxaU1U2VHRBcmRjeURfVE1sS0Y1dHYxSXYteE15anpSUGtMU1JPdi1HOU5kZWtVcVFyaXhtVEpRbndudzJTd1dYS2EzVmhKbnNQdTE5ZDlKSW5oYUFBNTZ3Rl8ydzdHM1djcHFwS0QteUE?oc=5",
+   "url": "https://tw.stock.yahoo.com/news/%E5%85%AC%E5%91%8A-%E5%AE%89%E6%A0%BC-2026%E5%B9%B410%E6%9C%88%E5%90%88%E4%BD%B5%E7%87%9F%E6%94%B61650-7%E8%90%AC%E5%85%83-%E5%B9%B4%E5%A2%9E-091300125.html",
+   "symbols": [],
+   "topics": [
+    "earnings",
+    "merger"
+   ],
+   "queries": [
+    "2330"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": [],
    "time_fixed_from": null
   },
   {
@@ -4173,32 +5227,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "da640ff019eb15e5",
-   "published_utc": "2026-11-06T09:07:07Z",
-   "published_taipei": "2026-11-06 17:07",
-   "source": "Yahoo",
-   "source_url": "https://www.yahoo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "British Comedy Producer Who “Laughed” During Russell Brand Assault Dropped From BBC & Apple Shows",
-   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPUWFwejUtbGpzWVRDMFBubFI4RU9Nd1BOUDgyWG5xQTFCMjNuRmlYUndJNjV6Ylg1QmIycXk0dEhsWVk2SG52cUI3Sk5mOVZOMVAwZkx3WWJZQVF4Q1JiRTk3aExUQ1JELXBpaE42cF81RnJnTkk1cEdkZGRMZ1VrbGM3VTdWcFJ6QlFmclplVUdCakJna1JQd001UFlmRzRzU0o4?oc=5",
-   "url": null,
-   "symbols": [
-    "AAPL"
-   ],
-   "topics": [],
-   "queries": [
-    "AAPL"
-   ],
-   "title_queries": [
-    "AAPL"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "43f2991680a4f56f",
    "published_utc": "2026-11-06T09:07:00Z",
    "published_taipei": "2026-11-06 17:07",
@@ -4221,6 +5249,34 @@
    "title_match": true,
    "also": [
     "Yahoo股市"
+   ],
+   "time_fixed_from": null
+  },
+  {
+   "id": "a542d19f43ef1833",
+   "published_utc": "2026-11-06T09:07:00Z",
+   "published_taipei": "2026-11-06 17:07",
+   "source": "Deadline",
+   "source_url": "https://deadline.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "British Comedy Producer Who “Laughed” During Russell Brand Assault Dropped From BBC & Apple Shows",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQN3p2OS1ISUhsXzAwakdKNG93UDN5bnVJVlJzbWJnY0NwWHI5aTlWZWR6ZXdMRm85RzZfYVJubGNCVG43WVlJS3Y5U01SQjRtcEF3YmF2aFY4NHMyMzNmZUx2MTdwbU5QeklNT0k3WnZpOUF5cEFTRVJJcGJPMzJSM0JkOGtkWWhKLWR2UlNLbnA4VVdwc1NJbjlzcFZoWi1x?oc=5",
+   "url": null,
+   "symbols": [
+    "AAPL"
+   ],
+   "topics": [],
+   "queries": [
+    "AAPL"
+   ],
+   "title_queries": [
+    "AAPL"
+   ],
+   "title_match": true,
+   "also": [
+    "Yahoo"
    ],
    "time_fixed_from": null
   },
@@ -4542,7 +5598,7 @@
    "time_fixed_from": null
   },
   {
-   "id": "f22730d8c8a9e8fb",
+   "id": "998905ef2e13c7cb",
    "published_utc": "2026-11-06T09:01:02Z",
    "published_taipei": "2026-11-06 17:01",
    "source": "BBC",
@@ -4551,7 +5607,7 @@
    "rank": null,
    "lang": "en",
    "title": "Elliot Powell: Jersey Bulls boss targets title after Manager of the Month award",
-   "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNUDBIcjYzTDd1emxBLVFMeXNPZ3pJRXJlbkFBMkRvLWtBT1oxV0ptQ0hjUWJUQi0zUDZic09YVk9nTGxnZVFaeWJERFhBR2s2cGFSd1hIbjY2NkRrLV9GYnl6TmRscnplN01fWGE2YzJUelo0RXNZMzBSM1JITjdpQ1FQSVFWa21EOGVDY2VjX0YySWYtMkc0TUszUGtXN0h5N2NRWlgxQnRlRnhyUjJsTmdYMVI4M1ZBWTNjRmVZN25UZnpPMGd5cWhtVU5WMjBTYlpxV0ZLYjZ5amtXaEtJYjZRTHp0ckZfZzNFR0EtQU93QQ?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5QU3ozcG5VTzBMazdYWHpONTMtVEhBOTJKWkR6d3R2aXpsZ2pYZDI0WEY3RXFXazc5MDlYbld0T3VuNzJOdkhEcWRsNWl6M25hZzdhZ3ExYmVhWHhIVGVoZTlTV1V0X2N4?oc=5",
    "url": null,
    "symbols": [],
    "topics": [
@@ -4675,32 +5731,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "fe4fa8078f39899b",
-   "published_utc": "2026-11-06T09:00:00Z",
-   "published_taipei": "2026-11-06 17:00",
-   "source": "Pittsburgh Post-Gazette",
-   "source_url": "https://www.post-gazette.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Humanoid developer Agility debuts on Wall Street as it 'doubles down' on Pittsburgh",
-   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOM25EdGExMTBmRFZmLVpzcWlod2hwQnV0am5nZ3U1NG94YW4tcFo0blVPZ3FwZmN5NDNudnF2Z1RWdExIeFRiV29VZVhOYTMwWEFUWXpIbWpsQ1IwejVBTWxKdlpIcUU5SmR5LUFsSk5NbUhNa05wQW04ZDNhdThydHVfNldGNHc1ZVZyV1FYU012UVl3NEVNdE1DYmNpNjd6b0ZVZUxQNlhZQ1VKazZmMDNYWUpXb00tUGc?oc=5",
-   "url": null,
-   "symbols": [
-    "VOO"
-   ],
-   "topics": [],
-   "queries": [
-    "MARKET"
-   ],
-   "title_queries": [
-    "MARKET"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "e159f992954a234a",
    "published_utc": "2026-11-06T09:00:00Z",
    "published_taipei": "2026-11-06 17:00",
@@ -4747,6 +5777,32 @@
    ],
    "title_queries": [
     "TAIWAN"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "fe4fa8078f39899b",
+   "published_utc": "2026-11-06T09:00:00Z",
+   "published_taipei": "2026-11-06 17:00",
+   "source": "Pittsburgh Post-Gazette",
+   "source_url": "https://www.post-gazette.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Humanoid developer Agility debuts on Wall Street as it 'doubles down' on Pittsburgh",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOM25EdGExMTBmRFZmLVpzcWlod2hwQnV0am5nZ3U1NG94YW4tcFo0blVPZ3FwZmN5NDNudnF2Z1RWdExIeFRiV29VZVhOYTMwWEFUWXpIbWpsQ1IwejVBTWxKdlpIcUU5SmR5LUFsSk5NbUhNa05wQW04ZDNhdThydHVfNldGNHc1ZVZyV1FYU012UVl3NEVNdE1DYmNpNjd6b0ZVZUxQNlhZQ1VKazZmMDNYWUpXb00tUGc?oc=5",
+   "url": null,
+   "symbols": [
+    "VOO"
+   ],
+   "topics": [],
+   "queries": [
+    "MARKET"
+   ],
+   "title_queries": [
+    "MARKET"
    ],
    "title_match": true,
    "also": [],
@@ -4830,6 +5886,28 @@
     "AI_ZH"
    ],
    "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "99dfa50f80434671",
+   "published_utc": "2026-11-06T08:59:18Z",
+   "published_taipei": "2026-11-06 16:59",
+   "source": "Bloomberg.com",
+   "source_url": "https://www.bloomberg.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "Mystery Seller Seeks to Dump $500 Million of Data Center Loans",
+   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPc3l0QXB3MW5hNE1uQUpzcUloU0NuckhSWG9ZWUFDeVdLYVp0MmlVR25Lb0c0bnhlbUdzZ09TYzh2RnkxTnJnZ1d6WkFkWkw3TEMzZUlDaWJsb0xCSXBiMXhDTEZyVkhOVzJpR3prSkk1SEQ1bWcwZXN1RnUzNFlRMFNOVDhGZUNiXzVqRGMwVTVybmRkbUZiVWthVGc4aDNHTXMzMDF4SXJyODdFb0syUWRJWWFVNVEzRHlYd2tVOXQ2SzlVVWE0SA?oc=5",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-05/mystery-seller-puts-up-500-million-data-center-loans-backing-stargate-cyrusone",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "OPENAI"
+   ],
+   "title_queries": [],
+   "title_match": false,
    "also": [],
    "time_fixed_from": null
   },
@@ -5042,6 +6120,30 @@
    "time_fixed_from": null
   },
   {
+   "id": "2b1a87d2089cb687",
+   "published_utc": "2026-11-06T08:52:14Z",
+   "published_taipei": "2026-11-06 16:52",
+   "source": "CNBC",
+   "source_url": "https://www.cnbc.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "Tanks or drones? Defense earnings reveal a more complicated rearmament boom",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBHVXRVbi13ZThTR1JnN1M0M1RCaHVfWjlFemVQbjlidEdDeVZJb0pJYU5KRm8taDRCdGlIbzdBNEptVFdKdGtsNWN1SW9ac2d0SDVhdlJNVXYzWHA2Q0JYY3kzTE1GalVHbUdGMlJDQUg2cVJTNmfSAXtBVV95cUxPQTdUNVBoU0pHWEk3Uld5dWJZbHd4ZnlXeTFKN2xWR21mNDUyeWVnTHBldUF5Ykc1WGlkUmdvT2V0WFkxQ1psTmt1TnFNUU8yYlZjSWRxeVJDVzcxNU9OajdYQVBYelB0LXB5RVQ0TkQ3Vll0M1hBQ1lGY28?oc=5",
+   "url": "https://www.cnbc.com/2026/11/06/defense-military-tech-earnings.html",
+   "symbols": [],
+   "topics": [
+    "earnings"
+   ],
+   "queries": [
+    "GOOGL"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "ddea922f24669c6c",
    "published_utc": "2026-11-06T08:52:00Z",
    "published_taipei": "2026-11-06 16:52",
@@ -5070,26 +6172,26 @@
    "time_fixed_from": null
   },
   {
-   "id": "4b66f66f35fec96b",
-   "published_utc": "2026-11-06T08:51:47Z",
+   "id": "314d162e36c884f1",
+   "published_utc": "2026-11-06T08:51:00Z",
    "published_taipei": "2026-11-06 16:51",
-   "source": "永豐金證券",
-   "source_url": "https://www.sinotrade.com.tw",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "今日漲停股｜台股巨量震盪重挫1873點失守4萬點，元晶、廣豐、力新強攻亮燈1106｜豐雲學堂2026 年 11 月",
-   "link": "https://news.google.com/rss/articles/CBMi5ANBVV95cUxQdkNHRW9aODlaWElnZTVHMjhvZ3IwbVVyZDlpQ3BtTm5ycnZZZDE1MVFNTVIwWkpvSTRuVDc4TnU1REtjdi1HV1M2d0hvempHb1l0elczZGxaZkhHZDVSdmR5bjBRVnd4Wk9EZVJud1dOd21ac2NiczhiMU5rd2hqNS1KaG9razZrRHFXbC02MmQxWS00ZDExcndoLU1DVk9sS2NCUXdUcTlUS1FLaWZ5MEE4a1VnaDdUMFFvS1F6clUtN1pRSWFtUm1TYWZyc2tNMUM4blFNb1FrMi1nYnNReW1pQXBGQlhVX2tDQThQMU9EQU8xZ2RpcVZ3Q2d3c0xwV0pVSnRwRkZTRlBBOEw2cUh2Q1VQNlRnVmNTUGs5UVlBTS1BVmptcVRPRHE5MlJqYzROcUhBNlRUc0pKQVM4dmZNSE1qY0U2ZEZlSUhPU1VFd0EteWNmSjZwMHU2dWhEMDg0bUlNX1l2enVaSUxxRjBkQm14XzRtd2pUemxXNlpGb2twS3ZaQUxvSEJ6ajEzQUNWb216RTdieXlzcGhqbFRoNlZ5Mi1CSm5kVWhiYTVvTmJpalJ5UXhDaVhHMzR5QmxQaG5vY04tNFJ5bUhFX3VlYjBsaHhuT2pNRUpEdE4xVmhK?oc=5",
-   "url": null,
+   "source": "WSJ",
+   "source_url": "https://www.wsj.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "Gold Falls But Remains on Track for Weekly Gains Ahead of Payrolls Data",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNZkU3OVFVM25vYlFiVHJBYk4xRnY1R1NXQkI3Y3E0ZHd3R1J3UmN1ZXIybXBkdm9EN3JkMExQTUk3YjFqYkxpbXNLS2MyZTNtV1ZqSXplMXhmeEtNeUVGeXZZeXltZ00zODl5ZnhYWjBRbTVDNG16WF82MVZHbTBJajFrSWFMNVZmQmpjdGhmdm5fcDR6bzcwdFVCXzBxUXZrdkRPdl9Nc3hMZw?oc=5",
+   "url": "https://www.wsj.com/finance/commodities-futures/gold-continues-to-rise-amid-better-risk-sentiment-e2d133ff",
    "symbols": [],
-   "topics": [],
+   "topics": [
+    "jobs"
+   ],
    "queries": [
-    "TWSE"
+    "FED"
    ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
+   "title_queries": [],
+   "title_match": false,
    "also": [],
    "time_fixed_from": null
   },
@@ -5228,6 +6330,35 @@
    "time_fixed_from": null
   },
   {
+   "id": "4c51dcb0a61bdc17",
+   "published_utc": "2026-11-06T08:47:00Z",
+   "published_taipei": "2026-11-06 16:47",
+   "source": "風傳媒",
+   "source_url": "https://www.storm.mg",
+   "tier": 4,
+   "rank": null,
+   "lang": "zh",
+   "title": "八大官股》台股崩跌1873點！官股砸逾14億狂買中鋼、台積電也入列，這10檔成護盤焦點| 下班經濟學| 財經",
+   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9aTHJFLURhMWs1RjZTQVlRSjVmUDgzVGpsb09Fd0NidGlEanl4TXkzUHNtQ1BPLVltamNVQVdrempZMmZBTEdwZmpKX0NQdw?oc=5",
+   "url": null,
+   "symbols": [
+    "2330",
+    "TSM"
+   ],
+   "topics": [],
+   "queries": [
+    "2330"
+   ],
+   "title_queries": [
+    "2330",
+    "TWSE",
+    "NSF"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "aab951b6e81f763a",
    "published_utc": "2026-11-06T08:46:23Z",
    "published_taipei": "2026-11-06 16:46",
@@ -5251,30 +6382,6 @@
    ],
    "title_queries": [
     "2330"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "d56a364850ac77a4",
-   "published_utc": "2026-11-06T08:45:55Z",
-   "published_taipei": "2026-11-06 16:45",
-   "source": "PChome Online 新聞",
-   "source_url": "https://news.pchome.com.tw",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "台股暴跌近3800點！路透揭財政部召集公股銀行官方回應- 財經新聞",
-   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNVpkRmRQR2g5c2FLang5clBkeWZFQXA3eURPV3IyUExDSGpjU2FRWHpwdER1NHU2QnVrcC1MR19aMDZBZUJXV0RTX1JxZzlRaVE0TmlEd1dGMjYxM2NaSEVwaTR5LVVNbXlNdmlqdk9oX3Z2WkxIUExrSDNCMFNNT2ZoNmI4OUwzS0E?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "NSF"
-   ],
-   "title_queries": [
-    "TWSE"
    ],
    "title_match": true,
    "also": [],
@@ -5407,6 +6514,30 @@
     "GOOGL"
    ],
    "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "99627535d23437b4",
+   "published_utc": "2026-11-06T08:43:24Z",
+   "published_taipei": "2026-11-06 16:43",
+   "source": "Bloomberg.com",
+   "source_url": "https://www.bloomberg.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "US Treasury Traders Make Bullish Bets Ahead of Jobs Report",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNYWdhbUJ5Ui1rc0tMbmNPTERJVDR2Wm1LX2pCeV9iQTlYMU1GZWVCNmRuMWJGS2dnZnppWEtpazQ1S1k3M0NQNXdoOEhVY2JXRjBzamFuaE9tWHZyV0Z5VXEtVVZLbFZWSkJSLVVEX0hrb0o1WHFlc1FYbDU5OTlvTnZjTU83bVpiM05RVjA4WXFNaWVodUJxRkxsOWp1M3FpcnppMUpoZ1ZIazBZb3c?oc=5",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-06/us-treasury-traders-make-bullish-bets-ahead-of-jobs-report",
+   "symbols": [],
+   "topics": [
+    "jobs"
+   ],
+   "queries": [
+    "FED"
+   ],
+   "title_queries": [],
+   "title_match": false,
    "also": [],
    "time_fixed_from": null
   },
@@ -5744,55 +6875,6 @@
     "2330"
    ],
    "title_queries": [],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "13e3b79e3c3b7c7c",
-   "published_utc": "2026-11-06T08:34:11Z",
-   "published_taipei": "2026-11-06 16:34",
-   "source": "LINE TODAY",
-   "source_url": "https://today.line.me",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "台股殺破紀錄！路透爆：財政部致電公股銀行護盤 | EBC 東森新聞",
-   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE96NVdOYzN6QlBJOHBHYTd0YmNzTTJ1Smp2M3U4LXI4WGtKMElaTUJzRFNpZk10Rk5iOW1VTlhRb1lvZmhPazRjd051SVRJTW1Pc0RMMjln?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "NSF"
-   ],
-   "title_queries": [
-    "TWSE",
-    "NSF"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "966169f7578a5d95",
-   "published_utc": "2026-11-06T08:34:00Z",
-   "published_taipei": "2026-11-06 16:34",
-   "source": "Yahoo新聞",
-   "source_url": "https://tw.news.yahoo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "外資連7砍台股！今提款911億元 期貨空單口數創歷史新高",
-   "link": "https://news.google.com/rss/articles/CBMi4wJBVV95cUxNTDNfYWdCZDM3QnotVUcxTEdYeTFwbE1wMVhhSmRxay1udXZLdjhEN0pRb3I1c0Z4YThKYW5veXR5WnpXZmRLS1hENDdZYVh6R0JGWWNOc0R0UDAwajVzMWRoSlBJS0ZrQXdVdnF0TnlpY04yZEdBaE5UU2haWEpseXpkdEZYTE5uOU9ZZkdFcF9pbUV2VVhlRzhyb3F4Z2JCTGtLX0VjMXNoc2N3UlhsSjNtcDllZ05BOTZucE5lN2FnTUhWb21vcF8xdENhbUxIWFlReG5IQzRhd2xnWkZaMFlFVENVNjZUbThHV0RDTFBIRGZTLXpxWlJxRjZGZ1JES2M4OGZ2Z2NUTElqOTZKMDN2cWw4S0pIQUZPT3JkNDhHcE9lMjlsYUtqT3pUYkRPcmVYMmYtNFlwa3JNSFVCWDQzY3VqcmtCMTAzWmhseXZaclRMWWd1dUlYd0UyeTJFblRj?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
    "title_match": true,
    "also": [],
    "time_fixed_from": null
@@ -6404,30 +7486,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "7e4d56ead4720a97",
-   "published_utc": "2026-11-06T08:24:00Z",
-   "published_taipei": "2026-11-06 16:24",
-   "source": "ETtoday財經雲",
-   "source_url": "https://finance.ettoday.net",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "台股為何崩跌？網曝「一片綠」原因：進場好時機",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5yYWlMLUhSOFpNcXlxX0h2RzVRdjU3SXNCMWV4UERHV2dqSWxMLVdnS3VZckM5Wk14aEVhOWtEX2NtdXpkQUotaDFJRGFlMEFYNVHSAVBBVV95cUxOWFkyUkFGUVE1WUs4eDhDTERBd0dKVFRBVDNQZTBGRFBNcW9QN3lRVzZNYnNPZllPUWFidVNRVExTUENwd25sczgxZzE4SG1xMQ?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "6085a9f947310621",
    "published_utc": "2026-11-06T08:23:58Z",
    "published_taipei": "2026-11-06 16:23",
@@ -6611,7 +7669,7 @@
    "time_fixed_from": null
   },
   {
-   "id": "87c3e198891f8616",
+   "id": "30b6747f1d014f14",
    "published_utc": "2026-11-06T08:20:58Z",
    "published_taipei": "2026-11-06 16:20",
    "source": "UDN",
@@ -6620,8 +7678,8 @@
    "rank": "B",
    "lang": "zh",
    "title": "台積電可以買了嗎？法人三大面向解析",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1kaTNxbVQyLW1maEZqLXlMOEEyMmRPSUZlZndXUkFwTmg4ckhldXpzWXNQVFBiNERmRUpuQlZSeVFRdGtMQkdjTWZGLW84M1lq0gFWQVVfeXFMT2JHWkk4b1I2d0hhcFpWMGhjZ2xjZFBXeGZxd1hQQ2NrT2VKZWd2M291Tzk2clYwTHhhakNULTR3dGRyMUhES094dUhOQUYyWmgtQ2FsWEE?oc=5",
-   "url": "https://udn.com/news/story/7252/9862248",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE8yM0VNRmZzODBSTUl4MDdWNzdUTDhLOFhvT3hwc1Vvd3JXN3otTWQ1bDlSd1pVZDRHMThFYnE2ci01VHlHVVdZdVkyTDJqN0Qy0gFWQVVfeXFMTlZ2b04zRFZWdkc0eXpwYmhobnl3aFE1MzZJUHp1R3hDelE3Q1VRODkyYl9Lc0JvZmhXNWNkVEdpRlZXNEEzTkoyMU12S1V0SWFaalg2TVE?oc=5",
+   "url": "https://udn.com/news/story/7240/9862248",
    "symbols": [
     "2330",
     "TSM"
@@ -7319,7 +8377,7 @@
    "time_fixed_from": null
   },
   {
-   "id": "d3a11665dc0223d4",
+   "id": "03474e3e1e1edb05",
    "published_utc": "2026-11-06T08:10:51Z",
    "published_taipei": "2026-11-06 16:10",
    "source": "UDN",
@@ -7328,8 +8386,8 @@
    "rank": "B",
    "lang": "zh",
    "title": "不只台積電（2330）！黃金也藏「2330」密碼…009834鎖定全球金礦商機",
-   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBYcjFJZ1BZeXJic2FmZ0tsWDM1QzQzZWVwUV9uSWowSWtVenVja0Z0blRJdVVzWmJDTVh6cjhDdkJVc0hrNFRJQkVkS2d6SnJqR3Vj0gFYQVVfeXFMTlFFeGFCY1JxSXEzY3gzNGhreUVndXRZRmVybFVVelFaVlBoSDFxSzFEalNsV3d2cG1ZajdqWUlRbHhKRUJhNHdwYkI2NU8xWm1DNVhSMWo1WA?oc=5",
-   "url": "https://udn.com/news/story/123006/9862205",
+   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5RRXhhQmNScUlxM2N4MzRoa3lFZ3V0WUZlcmxVVXpRWlZQaEgxcUsxRGpTbFd3dnBtWWo3allJUWx4SkVCYTR3cGJCNjVPMVptQzVYUjFqNVjSAVhBVV95cUxOUUV4YUJjUnFJcTNjeDM0aGt5RWd1dFlGZXJsVVV6UVpWUGhIMXFLMURqU2xXd3ZwbVlqN2pZSVFseEpFQmE0d3BiQjY1TzFabUM1WFIxajVY?oc=5",
+   "url": "https://udn.com/news/amp/story/123006/9862205",
    "symbols": [
     "2330",
     "TSM"
@@ -7531,6 +8589,30 @@
    "time_fixed_from": null
   },
   {
+   "id": "ff6ff633d01541e4",
+   "published_utc": "2026-11-06T08:07:54Z",
+   "published_taipei": "2026-11-06 16:07",
+   "source": "Yahoo股市",
+   "source_url": "https://tw.stock.yahoo.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "台股雪崩安心丸》11月ETF配息大爆發！3檔年化逾2成 00878配14.8％才第6名",
+   "link": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxOWnV5X1FGbll6aktfRS1POFg5S2Q4YlZiS2pFVGwxWHVyS3VhX2czZl9tN3dzdk5XTE1aZHZmam1GbUxIOV85cDNGYmdZanlfZTBLUGRoOGVXd1k4S0xfTGEyeVNxWmt3WGJSZ3dLMGpCcnZvZmNKNVQ1d2tfSTRBWXcyX1VTY2QwQ3JKTkRIbllRNGo4Y29Qb1pQTW9BWk1mRktSWlk5cFhPR0l1OXRKSjgxNDVUakRENTBRR3psbFJtejY3VlFYcmo1a1hZX2FVckR0anF5X29sY1d0X3VUd19WRXZ0WXdoeTh1S1VfMnczQ3FIelZib1NpTHBJalNnR0VxOFFWS0hyNURIR2hMdENoWk42d09CYWQwVXh5SjVGU0dCcVFKamFHS1lPYzgxbk1SVzNZeFlfWnNxVGliYzVIa1dLczcwOFZxVlFyVEJtTW4tYjNucA?oc=5",
+   "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E9%9B%AA%E5%B4%A9%E5%AE%89%E5%BF%83%E4%B8%B8-11%E6%9C%88etf%E9%85%8D%E6%81%AF%E5%A4%A7%E7%88%86%E7%99%BC-3%E6%AA%94%E5%B9%B4%E5%8C%96%E9%80%BE2%E6%88%90-00878%E9%85%8D14-8-080754385.html",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TWSE"
+   ],
+   "title_queries": [
+    "TWSE"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "02a96a6496457dcf",
    "published_utc": "2026-11-06T08:07:26Z",
    "published_taipei": "2026-11-06 16:07",
@@ -7699,30 +8781,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "426e92e638a27bc7",
-   "published_utc": "2026-11-06T08:03:53Z",
-   "published_taipei": "2026-11-06 16:03",
-   "source": "Yahoo新聞",
-   "source_url": "https://tw.news.yahoo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "台股重挫1873點！0050、正2爆量近289萬張",
-   "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPRm9MMk1TQ29WcFJTN003aHZqUm1ZR0tHN2g4V1dYb1Z6ZFo1MWV3aVRmaGszQUlQMW9seXBNQVhsWWI2cHpTQzhFbU1nSFk4SVVNRjBaTTk3NWg1RVQ3cDh0YlMwaXBwSGR3T3VDaGxDQXdVRENybnBhY2V1bkZ5MjZUZ3lmanl3d21oLUN4SlFOVFd6YVdSTVhlZGN3MVJ6TTdMcFlzdU9wSTgwUGlBNHFNZ29YeGpkX0RhU2huT0xaVFdfVFJyYlBJQWNzcFcyanJzWXQwamkxNUVudTBpVjZYQzh1OUUwWEE?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "cc1cce2402555dea",
    "published_utc": "2026-11-06T08:03:28Z",
    "published_taipei": "2026-11-06 16:03",
@@ -7777,32 +8835,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "d03b82446f063254",
-   "published_utc": "2026-11-06T08:02:15Z",
-   "published_taipei": "2026-11-06 16:02",
-   "source": "Benzinga",
-   "source_url": "https://www.benzinga.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Elon Musk Confirms Cybertruck Production Wind-Down at Texas Factory as Tesla Makes Room for Cybercab",
-   "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQTEZMUkJXN3VoLWttMS1jcmRmbm5GU1VIQ3JHQVplSk8xMW9oV2lSaE9ON2o3U1g2aUFJVlFNR3llaEMyaFA4NUY0MFNORkdUeTc0M2YzdUh4M3N5WVpRNjJzcF9hZjRqSDE0R1cyWXQta2JEbWVscnBPQ3ExWkQ1a0QzMHlwYnJPUzc5Tk9TVE0ybnpZajZlOXJqZFczSXdJc29ReHRZSW8xZDVWRWtxU3hhU0g5SHNKRWJscDhNdVBuT19OU2k0WDVKM3BZMEtvazZXdjk0dDNtWlNzXzFON3lyMUxlWDE2?oc=5",
-   "url": null,
-   "symbols": [
-    "TSLA"
-   ],
-   "topics": [],
-   "queries": [
-    "TSLA"
-   ],
-   "title_queries": [
-    "TSLA"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "f73eb412ea13344e",
    "published_utc": "2026-11-06T08:01:49Z",
    "published_taipei": "2026-11-06 16:01",
@@ -7846,30 +8878,6 @@
    "title_queries": [
     "ANTHROPIC",
     "AI_ZH"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "336ff0b897e75ddb",
-   "published_utc": "2026-11-06T08:01:22Z",
-   "published_taipei": "2026-11-06 16:01",
-   "source": "Rti 中央廣播電臺",
-   "source_url": "https://www.rti.org.tw",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "台股重挫失守4萬點 經部拿出經濟數據信心喊話",
-   "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1NOGZtMVNmekE4V1BtMDhNWU5CdHlJVEFxYVBTX2VkM1Y0enRuNEpXTFVqZXJqTjk1dU5Ya2s2UEpodkNuUnpldjZSTVNhUGtBN0pZNlczTQ?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
    ],
    "title_match": true,
    "also": [],
@@ -7984,30 +8992,6 @@
    ],
    "title_queries": [],
    "title_match": false,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "28230a9e1b598357",
-   "published_utc": "2026-11-06T08:00:48Z",
-   "published_taipei": "2026-11-06 16:00",
-   "source": "Yahoo新聞",
-   "source_url": "https://tw.news.yahoo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "台股史詩級暴跌 投資人搶反彈「兩檔正2 ETF」爆百萬張天量",
-   "link": "https://news.google.com/rss/articles/CBMi-wJBVV95cUxNc0hPajhiX2ZTRnlxOV9yTmkxX0p3cE9xMGJYLVMyTEgzLVpjcmo1V1djcW0zMzFYS25uUnVCSkdqajZtR3BRRnk1OGpCUzREOHR4M01nUW5FbVFTSk0taGtNTkNYM2M4UVlQRVpPNElvbFlHdVFacEdlUERFZS1HVExINWFweFJtcWZodEg4ZmFLOWZOcWNDV0d3OEJqMGNSazI0ckdJZF9DdGpacTBtekYtd2pMNWtzMjFtWVpMbzNicjJnS2ZNV0tmWTZMdW9Ec1plYmJhWmt5LXlBd25jNGVOWWE1ZjdESEZua1hKZm1WbFY3dlk4RTNkZldBdXVsOW9tY2FnVmhDZHJiRlRiVmtuVXB2R0pwS0p3cHQ0b1QtMWE3SGZ5WE1uZkM2WFNVdnVEN0hRS1ZjanRoYnlsck45ek1NbUo0T0hiQVhES3duZHpJQmNKZk9sRGd6Z3V3SjFUVllVN0JBQXBkT010VTYwNWRrV1owMkJz?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
    "also": [],
    "time_fixed_from": null
   },
@@ -8209,30 +9193,6 @@
     "2330"
    ],
    "title_queries": [],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "571c85dfe1cdf175",
-   "published_utc": "2026-11-06T07:58:48Z",
-   "published_taipei": "2026-11-06 15:58",
-   "source": "Yahoo新聞",
-   "source_url": "https://tw.news.yahoo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "台股大跌！網自嘲大湖公園「卡位者」非洋流 超商看準商機突做一事",
-   "link": "https://news.google.com/rss/articles/CBMihANBVV95cUxQWmVON0JWYVdiTU9XRjl3LXVOQ2U0WGFGRkVzSWZyNS0xUHl4NXZYX1Q2VDJGUDM5QndrZ1dOUmVOdVhaVG5jSWZsV0FhNWJXVVVBNGVYQXd4QXhVVDdJSHp2cGNJWkVncDd1TjI2NHFySDBCLXplVnBNRTNreGstanRYblZuOFZwRFU3bnVIRXA1c21QdFhqcFViM0Rucm11TnB1SURIOTlFZGc1OUFzQWZ1U3BobmtuSHZFT1F2VmEtY2tObno4WVBQb2JNaTJ1cDJ5dTRwU2tXeDE4VDRRcDU2QWYyUmVJMGZBYldMUXhhN1BTTzE4NzB6RjBnUEpBUTZ0X1VYYV85cGtjVmlRVy1DdzZ1YUpldXVwN1Z5TjYzQ1BzUExYVUs4aEtzMFlTSE1XU3lQVlBTS2tDZ3FYZjNocTNBb2wzUlZQdC1zTHBQRmEyYzVMMjlZRGk5clkwWTJuY3BXcnc1YU1iaC1nd0RtRUN0SjY2XzM4bjJaUE00UFhi?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TWSE"
-   ],
-   "title_queries": [
-    "TWSE"
-   ],
    "title_match": true,
    "also": [],
    "time_fixed_from": null
@@ -8834,26 +9794,26 @@
    "time_fixed_from": null
   },
   {
-   "id": "b35d9593691a4ce1",
-   "published_utc": "2026-11-06T07:47:07Z",
-   "published_taipei": "2026-11-06 15:47",
-   "source": "Android Central",
-   "source_url": "https://www.androidcentral.com",
-   "tier": 4,
-   "rank": null,
+   "id": "a0b705be1ce59368",
+   "published_utc": "2026-11-06T07:46:00Z",
+   "published_taipei": "2026-11-06 15:46",
+   "source": "Reuters",
+   "source_url": "https://www.reuters.com",
+   "tier": 2,
+   "rank": "A",
    "lang": "en",
-   "title": "Google's Find Hub just got a feature that could save you from losing your wallet",
-   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNMm9FX1VoMDJLYUMxSTVIeldZSXBmRVJtRE4tb0x5Q0ZZZTRWM0RqQ1RfUzQ5eHRNS0NuRUxXRndIRTJuYldNd09GZi16aUFieTJWZmwwbkg3T0Y1dl9xZ21LTEVVcEJxVDdqQi1jZVYwSENuSElHYWVsZTZLUjlrMWtRMFI5Rng0Zzc0ZVQ1eEJmMXF5MGZSdlctdC1iUQ?oc=5",
-   "url": null,
+   "title": "India's Coforge joins SpaceX partner network to deploy Grok AI tools for enterprises",
+   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPVm1rN0dhNG5aaDhDRVRyQVpMaXVROE8wbUFRVUJLZnYwaUQwZF9jMGtfX0doQjVZM3JaRFZHd2FSNFRvODVIUy1TeXJ3d09OZEZPMDB6cEE0eWhHdDNGa3FTRWRCRkhjaERjTnhudVNMTDV6RmdBX0ZqOTNjbDZFblljUE9INGpzN05KSV81YzdHTlVFS1lKeExydFBaaHVLV0pzR2tyQTBSbHV5SUF3VEY3STZHX0gzZzM1S1VYOWtpSEZsRXhKWjl3YzhQQUpy?oc=5",
+   "url": "https://www.reuters.com/business/media-telecom/indias-coforge-joins-spacex-partner-network-deploy-grok-ai-tools-enterprises-2026-11-06/",
    "symbols": [
-    "GOOGL"
+    "SPCX"
    ],
    "topics": [],
    "queries": [
-    "GOOGL"
+    "SPCX"
    ],
    "title_queries": [
-    "GOOGL"
+    "SPCX"
    ],
    "title_match": true,
    "also": [],
@@ -9066,32 +10026,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "051e048118b15c4c",
-   "published_utc": "2026-11-06T07:40:39Z",
-   "published_taipei": "2026-11-06 15:40",
-   "source": "marketscreener.com",
-   "source_url": "https://www.marketscreener.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Wall Street: Citadel Turns Bullish Again on US Equities",
-   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQRWlleFFJZ0RPNkZtbVRvcWJoZHpsdlJVQkdxT2x0T2RRNEdoZDJ1eGhsRUJ5SmN3eWhQbklLQ052b3J5X1piNTRYc0tqYWFXaW9OLUxpQ2Q3UXBHWWdSdGtjbWtGRkdaWVZyTmJnQkd4clJJc1BUa0c3NEZTM1Z3engzVHNLbmMtQVNoVXhxRHowQmE1UHVZRmZvUjNZSHVUY2J4cTVGeW5SOGs?oc=5",
-   "url": null,
-   "symbols": [
-    "VOO"
-   ],
-   "topics": [],
-   "queries": [
-    "MARKET"
-   ],
-   "title_queries": [
-    "MARKET"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "312b4950e82d5b47",
    "published_utc": "2026-11-06T07:40:00Z",
    "published_taipei": "2026-11-06 15:40",
@@ -9117,58 +10051,6 @@
    "also": [
     "Proactive financial news"
    ],
-   "time_fixed_from": null
-  },
-  {
-   "id": "f360dcd6e3a07ab5",
-   "published_utc": "2026-11-06T07:39:17Z",
-   "published_taipei": "2026-11-06 15:39",
-   "source": "GuruFocus",
-   "source_url": "https://www.gurufocus.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Nvidia (NVDA) Explores AI Data Center Expansion in Telecom Buildings Amid Stock Sell-Off",
-   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNaHhGTlk2emctWENUYTNNT1UxdUlGY0ZjZTFnUVY2dURkUVJyaXplbXZ4VlhiZUZabUFpWDhMVFdvak5LVGY5NHJ5UWFGb1NKY2JYa2IwNG84TGJfLVpJd1lRTmhuNmRhOG9BcUxfVDdORk0zQ1RMU1czQTRwVDhadmNSa19FcGJBTjQzMWpVY1NWXzZHNFpJLTg1SkR4UGoxNThHS0xpMVZ0UFZIenNHVzJxY0lyLVhjeDV5SlFlenVDUQ?oc=5",
-   "url": null,
-   "symbols": [
-    "NVDA"
-   ],
-   "topics": [],
-   "queries": [
-    "NVDA"
-   ],
-   "title_queries": [
-    "NVDA"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "1fc322ed6c08eb09",
-   "published_utc": "2026-11-06T07:39:17Z",
-   "published_taipei": "2026-11-06 15:39",
-   "source": "GuruFocus",
-   "source_url": "https://www.gurufocus.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Market Plunge After Midterm Elections: Nvidia (NVDA) and AMD (AM",
-   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbXlqNlJuY21TRjVDWExRN1d1bDNTYWlFWV9uNUpHMGxkaHBSU1N3QUpfUTJ5bzFIMHBBcTFwX0hsanFleDJoekswNVc2dTJuR1lONkZ5NlVpNHFtR3pTTk4xWkFfVzhHZW5wMy1oU2hPT3Jua3JhcTNDWjNEM01BQlhfaGhXVkp3RHRlWlByQlZXaGlScmtNSFUzZTlpanBxLXdwUHAwZVRSUXVVbnc?oc=5",
-   "url": null,
-   "symbols": [
-    "NVDA"
-   ],
-   "topics": [],
-   "queries": [
-    "NVDA"
-   ],
-   "title_queries": [
-    "NVDA"
-   ],
-   "title_match": true,
-   "also": [],
    "time_fixed_from": null
   },
   {
@@ -9252,32 +10134,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "9d1cf6c6629ac2ab",
-   "published_utc": "2026-11-06T07:38:24Z",
-   "published_taipei": "2026-11-06 15:38",
-   "source": "Investing.com",
-   "source_url": "https://www.investing.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Gold Vs. S&P 500: A Key Ratio Could Signal the Next Bull Market Move",
-   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNQjZmRWZiQml6MkRZUGx1ckMzdUZrN0RVbmROWG0zYWc5QUpzZzRKeElYLTVaaEtUUE9GR2U4QlFDajFld0dySkRXRmd5dElocHloWEtIcHltYVBwc2RxMFBBUVVrSFpoZEZkdFhJWkZpMzF5cnlOLTk2MWsybkxfRWtFdjU1Qm5uenhFUndHdnViZ3pPSGEwLXM5NUFUMXZuNkpTczFPMGhrczVWeWUw?oc=5",
-   "url": null,
-   "symbols": [
-    "VOO"
-   ],
-   "topics": [],
-   "queries": [
-    "MARKET"
-   ],
-   "title_queries": [
-    "MARKET"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "5488ff33ca1c153a",
    "published_utc": "2026-11-06T07:36:47Z",
    "published_taipei": "2026-11-06 15:36",
@@ -9299,32 +10155,6 @@
    ],
    "title_queries": [
     "2330"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "de29a1229d0ee591",
-   "published_utc": "2026-11-06T07:36:00Z",
-   "published_taipei": "2026-11-06 15:36",
-   "source": "The Times of India",
-   "source_url": "https://timesofindia.indiatimes.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Google founder Sergey Brin wins battle against tax that made many billionaires 'flee' California; but clo",
-   "link": "https://news.google.com/rss/articles/CBMi9gJBVV95cUxQUE5GZndTOVIwZUI1S3d4MnJYOFNHMUJ3enBYenkxdUNDczFZY1BrLXVkYkNrRGFEaFAwRnNKRmpBMnpITDRma3N4V0RHcS1qZWMwNF9rVmFEdENkdDl1RXMxRENwRGltMzY3OXVoNFJ0VVk0d1FyaFdKTDlaTTl3dmdNWnFMYmpWLTdENTA5aVlHVTdlNUJtSklnRE1sbWxZWlFGN1Eyd3drZF9WQkFXd3Q4eFRBU2c0YlNUajVXS3hXdk5MbmZDV2loTHZET1M2M2ZoZDVtNjhBV0xtYjh4TkgyMXA2RXBNMkdzTFYxSlRZaFNGUnZCeHMxMHhONFZBSG5NZ1JwUTYwdU5Jc20tdU90U2pCd1VjQ1JMYW9qMHJpUFFXR1lld2h3SGZTS3pSeTBGLWJmQzZpLXA4eWNLZlNwdFRJY0xGbXlJTDdORnpIa2t4TnVTTDlFbm4xV212TXJqcnFPMFdLZnBDRmR6SFhHemJGd9IB-wJBVV95cUxPUDJIVG8tdFBaSVV0UDgxOEoyTGtZMC1UT1ZQV1JlODlNS0VxdkhjUjcwSHRDdGt3VExqZWRnV1RncTVNY2tnYUtfZzU0clJ2SHBtQmF3R20zYW5ORGVoVmxaa2NMZXpWZGtZWkRpSjdYY2FCZEFQYmlzVGdieGVMWFF6M2o2MWNjWUFhblhHMnUwVG43MURvdFdHd0lvTmJQQ0duOXoyNVFzcWUwRUt5bDBmbVBnb0RSMEIzS1IxaGtJYjR3TXRhVXBFWHVXbzZsSURwWm9KRFdrQTBFamczcHR5OFAxSnZaeG05QWFLaFJDUkx4aG91MEE1Z216UHQta1gtSHpzd21wUy1BWTQ1a1N5c2NJWkJDS3ZPenhGQ0Q2TmVpWEUzcFlmRjBWN3daZlBOY2IxWElteERiMG9JVDMwcFNmaGhfZzNac1Vub2xGXzNxQUgtelpzM2dBZkRrRzJoNnoxd01CT0x6RW11TE1tZTF1YlFIVU1V?oc=5",
-   "url": null,
-   "symbols": [
-    "GOOGL"
-   ],
-   "topics": [],
-   "queries": [
-    "GOOGL"
-   ],
-   "title_queries": [
-    "GOOGL"
    ],
    "title_match": true,
    "also": [],
@@ -9488,58 +10318,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "71020b3ba1491e98",
-   "published_utc": "2026-11-06T07:33:00Z",
-   "published_taipei": "2026-11-06 15:33",
-   "source": "ETtoday財經雲",
-   "source_url": "https://finance.ettoday.net",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "台積電跌到2020元「神人砸42億進場」刷一排87 成交24筆",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBYLU1PdE5oXzF4eXhyTG1XMDZ3c1NnYVZiLVlJb3NadHViZ3pnVzhLMERyOU52bmVNejlqNm9JMzVxZ3FNb1NjZjBIaWtKb2xnR0HSAVBBVV95cUxPanJZUVJTYmIwRTVRbGlxclU1djRTYXM3WGoxeDRoalNzUGRkRC04OW5VX1pmU1M0cmJpSURhSFd1V3QwY0VjNy1lU0FnWHMyMg?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "f84697aa80c92d41",
-   "published_utc": "2026-11-06T07:32:17Z",
-   "published_taipei": "2026-11-06 15:32",
-   "source": "Yahoo新聞",
-   "source_url": "https://tw.news.yahoo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "台股重挫 金管會將開會提救市措施 (圖)",
-   "link": "https://news.google.com/rss/articles/CBMilgJBVV95cUxOOG0zVm1ZSHBoRHVPSlNFSXJ6aFpQNmNsZjBXd2pfVDRGVmsxWGY1VFVRdE00ZkJiNy1BMUNySUVnbjJXZlVDdFA2UUtBaVNmVkViVk5ObHNJd2V1bVpWVXpBTVZTbDNHVk16UExDRXM0VHQtcFVkRFlXeDg2dTB2X0pTUERPdzdfUUltb082bWhtbDV0eXlmSkJRWFBZRXhiYkhhRG9CQ0Qwb0toRS1oSWh5dzJORkdhMUtzM0FXbW9ZeGM2SkxHSXQxLUFHRlFMWXJpTURCeld2YmdPZ0F6dHFidElmWks3dmZrWkNIYWpFaUFrdTJ3ZXFhcWFGaHRURXgzOGZ3d2pnRkkzTkJydWdPdVEzUQ?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "NSF"
-   ],
-   "title_queries": [
-    "TWSE",
-    "NSF"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "32b04f296330e495",
    "published_utc": "2026-11-06T07:32:15Z",
    "published_taipei": "2026-11-06 15:32",
@@ -9584,6 +10362,30 @@
    ],
    "title_queries": [
     "TWSE"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "57a20c7c315cb173",
+   "published_utc": "2026-11-06T07:31:57Z",
+   "published_taipei": "2026-11-06 15:31",
+   "source": "Yahoo股市",
+   "source_url": "https://tw.stock.yahoo.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "限空令、國安基金要來了嗎？政府最大考量是什麼 兩大分析師解答",
+   "link": "https://news.google.com/rss/articles/CBMiuANBVV95cUxOeTJ1WGJUakdHZUVzUTBleXN4ZFJSQ2Fkbm1BUjJCOGNPeHE2b1MwVlEyTFlRX2tNQmxZWjEtQlZOd0NRWUxfMC1UZVIwOW04NEpaNmpZdEsxMl84cVlfbkZTU1M2MHNDTXBacUdqRm9WMk4yMXpIOWlNV1d2UFhMaTJVVFFjWGJtbkVZVDB5M2RtdEdZa1pYRFZ6cFBiWGw4RHhxbF9NSy1XOU5wUnZWREZidTQ5TEQwOTVyTWpXQkVXX2J4ejU4Q2I5aG1DUkhQaXJzVDNJNHJYNmR0cDlLd1pvTVpkMm01ZjExMUdfN3lCUkdDNkJ3ZlpnUHptVFYzM1Y2bzNLd0tLZDhBUFJkd3EwcVNaOHp0TDhQU3NhSjVEZUtyUGFKNFFGRERZTC0tcXdSVWNodXgtOXVwQzJHX25OVTVIWDRiM1oyNHdvZEtJLTlKR0JDbjI2TzZLUmpHeGk5Ri1KcHpTeVVuYUJZaVVFaGo0NDhLSmszODAzdEVfMzFYNWdMcjlZQ3hxbF9hMDVEQzJHMjFiUklJOENjbVp0OEpnOTlfaTBQTWRkbzFhTW11TF9zUw?oc=5",
+   "url": "https://tw.stock.yahoo.com/news/%E9%99%90%E7%A9%BA%E4%BB%A4%E3%80%81%E5%9C%8B%E5%AE%89%E5%9F%BA%E9%87%91%E8%A6%81%E4%BE%86%E4%BA%86%E5%97%8E%EF%BC%9F%E6%94%BF%E5%BA%9C%E6%9C%80%E5%A4%A7%E8%80%83%E9%87%8F%E6%98%AF%E4%BB%80%E9%BA%BC-%E5%85%A9%E5%A4%A7%E5%88%86%E6%9E%90%E5%B8%AB%E8%A7%A3%E7%AD%94-094414453.html",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "NSF"
+   ],
+   "title_queries": [
+    "NSF"
    ],
    "title_match": true,
    "also": [],
@@ -9655,60 +10457,6 @@
     "TWSE"
    ],
    "title_queries": [
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "3147cc6308f6d524",
-   "published_utc": "2026-11-06T07:30:58Z",
-   "published_taipei": "2026-11-06 15:30",
-   "source": "NDTV Profit",
-   "source_url": "https://www.ndtvprofit.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Tech Selloff: The Kobeissi Letter Says NVIDIA is Cheap at 13 PE; Users Counter View",
-   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxORGJ5Q1hEbHpPNHBFY0RiVEY3dnVDWHBldXZxZVRMbkotZ1FKbEdjUktmZmQ2WjBPYmNIRjVQOW9TbHMyZGhtSDVIOHZyR2VjbVI5ZWpVMk5MRm1hQWZaamV0M1dmRGFXYUlhNC1KaDJ3TEIzSUg2UTl4N05BcjFib3lxZlF1OHV1bFBhbEdSTWN0Z1pJb0FnVFI4OHNtaWR4dGdtd2FSMWNubEw2cnFz0gG3AUFVX3lxTE1oX2lLMW1Pel9Dc0tqdGhUdkljYnRiemVuTmRPODkzR2lMcXRaaVNRVVlscjQzZU1qdEpOajJwU19jQW4yUWpCdTFEd1BldDdpYUpDdV9qWWUwUmthMjN4R3ZVMFR4NUFmMW54dEc1UGtCd29GeDlONzhxaU5qVk5IOUluUmFiYndMRFlVT0tZUFFNNXVjYnpEV3pLd1dNVEpzZGFjd2E1VThobG92SHdONGNsVGdlMA?oc=5",
-   "url": null,
-   "symbols": [
-    "NVDA"
-   ],
-   "topics": [],
-   "queries": [
-    "NVDA"
-   ],
-   "title_queries": [
-    "NVDA"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "83449e5a74bd1aaf",
-   "published_utc": "2026-11-06T07:30:45Z",
-   "published_taipei": "2026-11-06 15:30",
-   "source": "CMoney",
-   "source_url": "https://www.cmoney.tw",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "2330 台積電 - 費半暴跌台股承壓！AIDC建設恐遞延？野村點名3大指標逢低加碼AI - 股市爆料同學會",
-   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5HSDRsNzRRQnpUVmpVU1ZCYlQ0UTY4ajlubDZ6b1RSUDdYcVB3aF9YMHJMeFpTN2FzLVNoeE5uQmhNTDVjT1prbXN2eXhXMHlxaWhhNXhtSzQ?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330",
     "TWSE"
    ],
    "title_match": true,
@@ -9822,34 +10570,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "7087e862e7a89ba6",
-   "published_utc": "2026-11-06T07:26:25Z",
-   "published_taipei": "2026-11-06 15:26",
-   "source": "CMoney",
-   "source_url": "https://www.cmoney.tw",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "2330 台積電 - 台股史上最大跌點！融資維持率135%恐引爆斷頭潮，4 個反彈觀察訊號與2檔觀察股一次看 - 股市爆料同學會",
-   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9rd3lkaEJvWFZTcnRvOEhCcTV0QXNnVGhTUmc3QXBXeDBjT2RUdTZ3ZUp6WEJrbmhRbXBxdjRlUjRCZ1diaXBicTl0Yy1GVUxaeWpsM09LSWQ?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [],
-   "queries": [
-    "2330"
-   ],
-   "title_queries": [
-    "2330",
-    "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "57369475bc999292",
    "published_utc": "2026-11-06T07:26:15Z",
    "published_taipei": "2026-11-06 15:26",
@@ -9871,32 +10591,6 @@
    "title_queries": [
     "OPENAI",
     "AI_ZH"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "4ba1b947dd498a7c",
-   "published_utc": "2026-11-06T07:26:11Z",
-   "published_taipei": "2026-11-06 15:26",
-   "source": "Blockhead",
-   "source_url": "https://www.blockhead.co",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Taiwan's Draft Stablecoin Rules Require a Bank to Own More Than 25% of Any Issuer",
-   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNRlI1WHBYbVVZVk9WdlUyNHRvNzh1NFR4aHMtSmpBME15Z1F4TkRILUU4RE1HaDBGWnVGSjlyRnZoWEZyMU1WX19Dalo0YTRhbmlzQzBhUVBRdW1aMzFsTG83aUtTMTR6QzZ2bFBJTlljazI3RWVYQnZyaVdwZFpabUdCT2hFdFA4UVMxVTJDMV8xbmhVU2lQdzVMZklVNktEbDZ6ZkVaaFFzM3dZWE82cmlrZkwzUmM?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [
-    "taiwan"
-   ],
-   "queries": [
-    "TAIWAN"
-   ],
-   "title_queries": [
-    "TAIWAN"
    ],
    "title_match": true,
    "also": [],
@@ -9927,32 +10621,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "3293858455543d29",
-   "published_utc": "2026-11-06T07:25:00Z",
-   "published_taipei": "2026-11-06 15:25",
-   "source": "BigGo Finance",
-   "source_url": "https://finance.biggo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Nvidia Plunges 9.26% in a Single Day, Tumbling Into a Bear Market as $447 Billion in Market Value Evaporates Overnight — Fund Managers Buck the Trend and Call It a Buying Opportunity",
-   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE94dGk4elAza2Y2dWFrSWZ4dUVJNnlidGFzNUdpSWFuMU1STmdoRGxmUXZ1LVNwM3lJcC1iaWFhVUM5eEdXMVJDam1IdTBDeU5Zc3BkNThwTGRKWEJMeE1PT3BBblBJa3BuYjNoMk1FMHVRQktGLXc?oc=5",
-   "url": null,
-   "symbols": [
-    "NVDA"
-   ],
-   "topics": [],
-   "queries": [
-    "NVDA"
-   ],
-   "title_queries": [
-    "NVDA"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "9ca15cf7a13c6a80",
    "published_utc": "2026-11-06T07:24:07Z",
    "published_taipei": "2026-11-06 15:24",
@@ -9974,33 +10642,6 @@
    "title_queries": [
     "ANTHROPIC",
     "AI_ZH"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "30530b4b9c6687e7",
-   "published_utc": "2026-11-06T07:24:00Z",
-   "published_taipei": "2026-11-06 15:24",
-   "source": "finance.biggo.com",
-   "source_url": "https://finance.biggo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "【Wisher Industrial FY2026 Q3 Earnings Call】Taiwan's Wisher Industrial Swings to Profit as Currency Tailwind Lifts H1 EPS to NT$0.18, but Q3 Revenue Falls 9.6% Year-on-Year",
-   "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9SUjFNQW1BYkE5VE0xczgzZkhfUkVMbDBFVVByMmhrYkFTaEtaTEZHVHIzUkFkUzE0Wnczb2cwRFUwSUlhTG1GdTVWMGdWQzktYmY2RkUxd1dDaElnY2R1UHRB?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [
-    "taiwan",
-    "earnings"
-   ],
-   "queries": [
-    "TAIWAN"
-   ],
-   "title_queries": [
-    "TAIWAN"
    ],
    "title_match": true,
    "also": [],
@@ -10395,7 +11036,8 @@
     "Eagle-Tribune",
     "Herald Bulletin",
     "Union-Bulletin",
-    "Black Hills Pioneer"
+    "Black Hills Pioneer",
+    "WREG.com"
    ],
    "time_fixed_from": null
   },
@@ -10572,6 +11214,30 @@
    "time_fixed_from": null
   },
   {
+   "id": "ef03d031fcc6091a",
+   "published_utc": "2026-11-06T07:07:00Z",
+   "published_taipei": "2026-11-06 15:07",
+   "source": "Bloomberg.com",
+   "source_url": "https://www.bloomberg.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "AI Selloff Drives Asian Stock Markets to Fresh Grim Milestones",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOUFppeDBuZUlDMXNlcURWLTVHSmlCQlVacUtPbjNuWWlpWl93Ty1BRUY1Z0JmN0t2aWZjMVN1QXhBd0xBUUFNekpHajhWdURlUXJFblRXbzRia2RCRDRqNUdpbS1LQURtUlpwLWVwUWNncDkwYmo0SUhlR2daRUM2MGIydHJOQ3B1aDlSY05vRFFvY1hQNmFwMThiUmRmWktfdTRLM3JiR3N6LXN2VlBJREdMLXFRU2M?oc=5",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-06/ai-selloff-asian-stock-markets-nikkei-kospi-taiex-grim-milestones",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "SEMI",
+    "TAIWAN",
+    "TSMC"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "b5c21d2a3ae48118",
    "published_utc": "2026-11-06T07:05:26Z",
    "published_taipei": "2026-11-06 15:05",
@@ -10681,59 +11347,6 @@
     "Investing.com",
     "Automotive News"
    ],
-   "time_fixed_from": null
-  },
-  {
-   "id": "74e650c97e33e21b",
-   "published_utc": "2026-11-06T07:03:00Z",
-   "published_taipei": "2026-11-06 15:03",
-   "source": "知新聞",
-   "source_url": "https://www.knews.com.tw",
-   "tier": 4,
-   "rank": null,
-   "lang": "zh",
-   "title": "AI概念股慘跌拖累 Anthropic IPO估值恐大砍3分之1",
-   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE0wVUJDQ0phUUtrNnFLaVk2YnNIX1RkdG10OVo0UjJSRHp6S1Y1RVhfbXlKb05FYnJCNUJhWE4wSURSY1g2blFxRnBLdVBxbGxkc3lWMzZncUV5OG5wRlRhdzhNeFFxLU5ZLXV4S2NrRQ?oc=5",
-   "url": null,
-   "symbols": [
-    "ANTHROPIC"
-   ],
-   "topics": [],
-   "queries": [
-    "AI_ZH"
-   ],
-   "title_queries": [
-    "ANTHROPIC",
-    "AI_ZH"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "67db4a583c584ee3",
-   "published_utc": "2026-11-06T07:01:00Z",
-   "published_taipei": "2026-11-06 15:01",
-   "source": "Focus Taiwan",
-   "source_url": "https://focustaiwan.tw",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Taiwan forex reserves dip below US$600 billion amid intervention",
-   "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5IY1RSdVctdk9ORjJ4SXZST19uNHFNbFBzSkltS2pYcTBYRDI1bHVDemkzcGtybld4a3dWdloyT010WDhlQm5jUGZOR25YRS1XenpvNUsxWQ?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [
-    "taiwan"
-   ],
-   "queries": [
-    "TAIWAN"
-   ],
-   "title_queries": [
-    "TAIWAN"
-   ],
-   "title_match": true,
-   "also": [],
    "time_fixed_from": null
   },
   {
@@ -11256,33 +11869,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "2e965366f6368f67",
-   "published_utc": "2026-11-06T06:36:10Z",
-   "published_taipei": "2026-11-06 14:36",
-   "source": "FourWeekMBA",
-   "source_url": "https://fourweekmba.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Anthropic Run Rate Tops $80B as IPO Raise May Shrink to $80B",
-   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSGhIY2tvaXoxSWhhcW9VcnhrUG9MbFRrdkN5RDFpZ2hIZ1c5OWNEanNZanRVX2RJQ2RUNXlXck5WdS1xb0pMd01IbU5heVVGLVlmTzVYU0FhZ2J0YUM1QzM2c3FBYkJ5VlJ3UU5hYXV5RFloR2REZ2JtUFJVSzIzMVpYUXptbXpGX1hyMDl5MA?oc=5",
-   "url": null,
-   "symbols": [
-    "ANTHROPIC"
-   ],
-   "topics": [],
-   "queries": [
-    "ANTHROPIC"
-   ],
-   "title_queries": [
-    "ANTHROPIC",
-    "AI_ZH"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "6072662d4e20b9cf",
    "published_utc": "2026-11-06T06:34:57Z",
    "published_taipei": "2026-11-06 14:34",
@@ -11358,8 +11944,8 @@
   },
   {
    "id": "937dfd9f0ac74fec",
-   "published_utc": "2026-11-06T06:29:24Z",
-   "published_taipei": "2026-11-06 14:29",
+   "published_utc": "2026-11-06T06:28:57Z",
+   "published_taipei": "2026-11-06 14:28",
    "source": "Yahoo股市",
    "source_url": "https://tw.stock.yahoo.com",
    "tier": 2,
@@ -11998,6 +12584,32 @@
    ],
    "title_queries": [
     "TWSE"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "6f8789ce5778a502",
+   "published_utc": "2026-11-06T06:01:40Z",
+   "published_taipei": "2026-11-06 14:01",
+   "source": "R&D World",
+   "source_url": "https://www.rdworldonline.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Sam Altman says a machine for scientific discovery is closer than he expected",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPd0VoNFhRT2VqS0ptNUFyeG42UWNjQXRUQW90T0l0NUxJSUNNR0FsNS16QVdSZHBmZ3JpM0ZUQUc0QndibWVkQ19aZktfZTBQV0xJWlB3enNNRV9MaE5PM3lmQ0lpRC1hWVhYMVdoTHo1T1oxRjNEQ0dvR1hWOFRrMkpoUkJRcmVVSE9qM2JKYWU3ZEFTckFxcXJ2dU81UF95elc5SUxUX1JjejBL?oc=5",
+   "url": null,
+   "symbols": [
+    "OPENAI"
+   ],
+   "topics": [],
+   "queries": [
+    "OPENAI"
+   ],
+   "title_queries": [
+    "OPENAI"
    ],
    "title_match": true,
    "also": [],
@@ -13460,6 +14072,28 @@
    "time_fixed_from": null
   },
   {
+   "id": "032c6f74a749131d",
+   "published_utc": "2026-11-06T05:03:00Z",
+   "published_taipei": "2026-11-06 13:03",
+   "source": "AP News",
+   "source_url": "https://apnews.com",
+   "tier": 2,
+   "rank": "A",
+   "lang": "en",
+   "title": "Uninsured and flooded out, a Colorado man worries if life will be normal again",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNZkQ5VDVNeWV0REZlckNNYkgzbC1XejRIaTQ1NDRSQUxSQlRVRjNTN0JoY2ItOEJwbU13YS14T2FyZTNhMU9mci1KaFV3WWl5djd3Zjd1TExWN196VmtyWkwtQWRFcmlmTnZoa1VjeFBVZ2JqSnBIVGhFN0Q0a2FoVTNIRVFJSkhzZlkxVGdTWlR1U1ZSd2dZSGtDWTJRMGpkSE1ZTnBMYw?oc=5",
+   "url": "https://apnews.com/article/flooding-weather-southwest-fema-four-corners-6133ba92b4bf347f90ab91657ee91477",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "TARIFF"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "2717a0f511d4f509",
    "published_utc": "2026-11-06T05:03:00Z",
    "published_taipei": "2026-11-06 13:03",
@@ -14248,38 +14882,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "1769ca94b4f23ca6",
-   "published_utc": "2026-11-06T04:29:00Z",
-   "published_taipei": "2026-11-06 12:29",
-   "source": "TradingView",
-   "source_url": "https://www.tradingview.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Nvidia loses $440 billion as Nasdaq crashes 5.5%; Tesla, SpaceX and Big Tech stocks wipe out trillions",
-   "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNY2Q5RzBobVNqdTQzOGNjU1pIN3Voai0yVXBDWUdiRmFVVXRMSGhYamd5OU1BMUhMcE9sTXFVSXUxWUJIekFoeUxBZ1VqeGhIcm56UzBISHBUa2F0cXptTFFuR2VEMm96QmVhR2dyOEdFSC1tcC1vWDk0ZERsTlFoLXVjQ1hiNkFiS2sySDFYYzVSZWktVjVrMWQzSXFLSTRkS1RSLTlGVmdfMV9yaWRONlFvZy1KVXBzRHNmMF9VNFp4Q0hlaW1EZGZweTFoU2k3VGFHSmZTNjRjS0JWNjMyQWY2djg5TlRpOF8wU3pqRjZveTQ?oc=5",
-   "url": null,
-   "symbols": [
-    "NVDA",
-    "SPCX",
-    "TSLA"
-   ],
-   "topics": [],
-   "queries": [
-    "NVDA",
-    "SPCX",
-    "TSLA"
-   ],
-   "title_queries": [
-    "NVDA",
-    "TSLA",
-    "SPCX"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "5a78d223e105cc2d",
    "published_utc": "2026-11-06T04:28:10Z",
    "published_taipei": "2026-11-06 12:28",
@@ -14922,6 +15524,28 @@
    "time_fixed_from": null
   },
   {
+   "id": "fd6fd481c644857e",
+   "published_utc": "2026-11-06T04:04:47Z",
+   "published_taipei": "2026-11-06 12:04",
+   "source": "Yahoo Finance",
+   "source_url": "https://finance.yahoo.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "en",
+   "title": "META_TITLE_QUOTE",
+   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9pUnVuQ3AzSDN2ZjNaRU14NEpwR0tOZTJibGx3TGlrM050RW9UdHRSMWZJX0RUcE9TZDU5QkJkWU5SYS1zNW9rR1pTZDRCZw?oc=5",
+   "url": "https://finance.yahoo.com/quote/GOOG/",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "GOOGL"
+   ],
+   "title_queries": [],
+   "title_match": false,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "6ec67778e210f4bb",
    "published_utc": "2026-11-06T04:04:46Z",
    "published_taipei": "2026-11-06 12:04",
@@ -15043,32 +15667,6 @@
    ],
    "title_queries": [
     "TSMC"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "8eaac7f78e359c9d",
-   "published_utc": "2026-11-06T04:00:00Z",
-   "published_taipei": "2026-11-06 12:00",
-   "source": "VOI.ID",
-   "source_url": "https://voi.id",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Donald Trump Defends Tariffs Even as Republicans Lose Midterm Elections",
-   "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE5uTW1xVmVVSU1KdjV0NzlYbF9sb0RtTHphNElKMzk1Ym1COHhTODNoU2ZrYWc4X2FFR1hnUS1nWG5iRHfSAUJBVV95cUxOUFhPR3hLSFNfWU1FRXlGU2lBelhGSnc4R0p5RlFGTkVJYjdUU0Q0N2xkYkQyRWRQN1NyVlRRYmt2N1E?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [
-    "tariff"
-   ],
-   "queries": [
-    "TARIFF"
-   ],
-   "title_queries": [
-    "TARIFF"
    ],
    "title_match": true,
    "also": [],
@@ -15412,33 +16010,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "cfae7dced368147a",
-   "published_utc": "2026-11-06T03:49:50Z",
-   "published_taipei": "2026-11-06 11:49",
-   "source": "PCMag Middle East",
-   "source_url": "https://me.pcmag.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "ChatGPT Rolls Out Images 2.6 Model With Support for GIF Creation",
-   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOTXAzM3QzanYyaktPdzBhcFpHbF9uYWI4Zk9ER2FwLUhnZF80QXZqR29sWVJwYlFBdjR2YnhPWkgxSWpXbDZYRkJZeGxVWHd1Q19NTGhBQm4yR00tWUF6aVFOZ3pNcVRpXzdoeWRNNjFLUTdlbHZMaUpaOXRJT09WRDhyMGtVY2FlUnVJTS1OUlI0Yi1hN2UwN3RKQ2Q?oc=5",
-   "url": null,
-   "symbols": [
-    "OPENAI"
-   ],
-   "topics": [],
-   "queries": [
-    "OPENAI"
-   ],
-   "title_queries": [
-    "OPENAI",
-    "AI_ZH"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "735fd4c2e1780457",
    "published_utc": "2026-11-06T03:49:42Z",
    "published_taipei": "2026-11-06 11:49",
@@ -15569,33 +16140,6 @@
    ],
    "title_queries": [
     "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "47b0dcdae0fa297d",
-   "published_utc": "2026-11-06T03:45:00Z",
-   "published_taipei": "2026-11-06 11:45",
-   "source": "The National",
-   "source_url": "https://www.thenationalnews.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "OpenAI deal to cut Abu Dhabi government processing times from days to minutes",
-   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQNlp5MUNfTUJWY2dLYS1CR2dqa3Q4UWhTN2FEX0p3U2NkNWd5MmNMQmlxQlZNUmhOQUNOTktuRU1CWmFaLVhoajgzWDg0OFBYc3dDdlZxdnZ4aXZCUl9ObDRXdy1Id1VKbEFsTHh4Z3ZkblpFWGZjc21abFNEcWRLR2ZKaXo4TmNaUG12VkU4NHYtdXVwdHRvMDRHcENvNUJ1a1E4ZXdmenVGNHFOWnJVUl9UV1dRX3Zja1pLMXJLTUF3Tnoyd2NaS2xSdDFJT1Y4dzN6aE1B?oc=5",
-   "url": null,
-   "symbols": [
-    "OPENAI"
-   ],
-   "topics": [],
-   "queries": [
-    "OPENAI"
-   ],
-   "title_queries": [
-    "OPENAI",
-    "AI_ZH"
    ],
    "title_match": true,
    "also": [],
@@ -16125,33 +16669,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "37ee5aaad979a5f1",
-   "published_utc": "2026-11-06T03:25:01Z",
-   "published_taipei": "2026-11-06 11:25",
-   "source": "Hindustan Times",
-   "source_url": "https://www.hindustantimes.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "From murders to suicides: OpenAI faces mounting lawsuits over ChatGPT | Hindustan Times",
-   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOWnp5WEVaOC0zczkxOVI0ZFJoTGRvMnVOcS16RDZ3LXlzR0ZfSzBzNDNzWVp1NVJJLW1IWFBkQ3RLYjRzSWNveTQ5T3hJZzFOWWRvZWM3RHRleXprYkNxbGtaVVZjSndFYmFYYTNEczNQWm04dHFiMGROQkdFdFpwUWs2emVKVElORVRxYmhRYTQxQWRLVlBDUmZQNjZOSUlUWDNmYUF5M3hpdThGZTN6c3JMYUo1eGtqZzk2OHBPUTFFaEkzdHhmdncxcE1iVzFRazBXMTdR0gHbAUFVX3lxTE9sQnIyQXBrMDdvRWEwV0xPcTdic0RGVW94LUlyWXR0aGRlUmVJNWJ5TWx6VU9CdFNSSEZxVmVFUmNRbDdwWDlhN3U3c3ZGMlAtNUo3U3o3dHhMRzlTZDZ2ZF9FZG5VTjIzbkE5ZUxzbFNFeUJzbEV2MnpzN0JGTWNFQ25DcmE3bXc4MF9ZWWxKa0x0UTJZVGZLSEtuc1g4VHpUdzg2U3ozYzZJcEhyanhvTVkzQk9rcm5xdTNQZ2lIQnhfUmhtUTlvM3NwTU56eldvUF9NY2l4bTZQZw?oc=5",
-   "url": null,
-   "symbols": [
-    "OPENAI"
-   ],
-   "topics": [],
-   "queries": [
-    "OPENAI"
-   ],
-   "title_queries": [
-    "OPENAI",
-    "AI_ZH"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "ae1d92ddcf01a37a",
    "published_utc": "2026-11-06T03:23:13Z",
    "published_taipei": "2026-11-06 11:23",
@@ -16505,6 +17022,31 @@
    ],
    "title_queries": [
     "TWSE"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
+   "id": "30856724cd906007",
+   "published_utc": "2026-11-06T03:12:23Z",
+   "published_taipei": "2026-11-06 11:12",
+   "source": "UDN",
+   "source_url": "https://udn.com",
+   "tier": 2,
+   "rank": "B",
+   "lang": "zh",
+   "title": "AI概念股報酬差逾100個百分點！施羅德00419A主動選股 鎖定台股AI供應鏈",
+   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1kVUwxdnh5dmFReWtHanZQV1dEcDhTZmhpbEdDeEpCV0tWUFBqRTlLXzRXaVQ3bWFhcjFqVkR3bXpWUk1qNTF2S1I1Wk5vR1N6VXhV0gFYQVVfeXFMTVA0bDFsWW1HQ05ycFB0S29iS1ZCUUZfdE9NS0Y4LU5BZ1BvUVdGWjFYbklkWFRKaGNxZHBiMU42S01naWFnT0d3TjJQcWs2Ujc4YkJEVjhCYw?oc=5",
+   "url": "https://udn.com/news/story/123006/9861373",
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "SEMI_ZH"
+   ],
+   "title_queries": [
+    "TWSE",
+    "SEMI_ZH"
    ],
    "title_match": true,
    "also": [],
@@ -18766,33 +19308,6 @@
    ],
    "title_queries": [
     "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "ea46cceb208953c1",
-   "published_utc": "2026-11-06T01:55:34Z",
-   "published_taipei": "2026-11-06 09:55",
-   "source": "Moomoo",
-   "source_url": "https://www.moomoo.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "OpenAI pledges to cover data center power costs amid growing public opposition after US polls",
-   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxORHREemFJTm43UUFrTmg2U1djcHA0Vko1bVNuMTRoZS01bGl2MHBiWnJRblZ3WTRUWHpOM0N3RDZrU0VPSDV2eEFVMEl5WFFUbVk1M2g0WDQ3Y1BNR3VpV1JPVXVCT0dDMHN0V19BdTlNN0pYREUzdWllOUt2X0dZcG1NRmVzaXJTZGNqYmlwY0xuSm41TVAzQkJhMXNBVGRTX3lMYmJVN0RvaEZKV1NqTVZnTzA?oc=5",
-   "url": null,
-   "symbols": [
-    "OPENAI"
-   ],
-   "topics": [],
-   "queries": [
-    "OPENAI"
-   ],
-   "title_queries": [
-    "OPENAI",
-    "AI_ZH"
    ],
    "title_match": true,
    "also": [],
@@ -21068,28 +21583,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "578c4634361d86ae",
-   "published_utc": "2026-11-06T00:40:00Z",
-   "published_taipei": "2026-11-06 08:40",
-   "source": "Bloomberg.com",
-   "source_url": "https://www.bloomberg.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "NFL Player Rice Reveals Lien on Super Bowl Ring in Bankruptcy",
-   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQLTVja1FsUVBhQzBNRktwUjB0cDZvX0NCZk9JQlJ5SkVVYnB4d0hmZ2hWWXlTcDFMLWdDbEpITG4zU1JwYTFEUTJ1cDBWUnd3Yk1JT3RoT2t4dXFOZ0VNMktwRXlTNUhVM0JXQjdvMzJCcW9Lc3JzMGhwTFhENndoQXBFRGw2UVRpYjl6eWFHdFAtY1pSckNJcmZIQnJJY045aEw2MEE5cDJlcEZSeHRSbjFvVUFlOHBCYjNXRThyZE1Xdw?oc=5",
-   "url": "https://www.bloomberg.com/news/articles/2026-11-06/kansas-city-chiefs-rice-reveals-lien-on-nfl-super-bowl-ring-in-bankruptcy",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TARIFF"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "9ba50a48c879386e",
    "published_utc": "2026-11-06T00:39:15Z",
    "published_taipei": "2026-11-06 08:39",
@@ -22963,29 +23456,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "2841f8039f51e4ed",
-   "published_utc": "2026-11-05T23:07:42Z",
-   "published_taipei": "2026-11-06 07:07",
-   "source": "Reuters",
-   "source_url": "https://www.reuters.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "Midterms upended Congress but Trump still commands foreign policy",
-   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPaFdhWXVRZDFtNThlVzMtcUs4eU9nTlVZZHJHZzAxbUhKNVBYN3FoR0lSMHJNSzVkQVJQdXlaWTZQZXNwUzEwSkhxRjBwQ1dRZzIyMFV5QkhTaWRmWHVKWEdSQmhyR1NHaUhyMlpnV09GVkxPbmh5MTlUZEphbVE1OENqSXlNTmdEejZPbUlNdmdzRTBiRnVYTHNuWHVQUEo0VXFvODJTaElxQQ?oc=5",
-   "url": "https://www.reuters.com/world/us/midterms-upended-congress-trump-still-commands-foreign-policy-2026-11-05/",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "TAIWAN",
-    "TARIFF"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "0c5ebecf1248cf39",
    "published_utc": "2026-11-05T23:07:06Z",
    "published_taipei": "2026-11-06 07:07",
@@ -23078,6 +23548,7 @@
    "queries": [
     "ANTHROPIC",
     "MARKET",
+    "NVDA",
     "TSLA"
    ],
    "title_queries": [
@@ -23776,50 +24247,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "fcf7488ad3860abd",
-   "published_utc": "2026-11-05T22:20:19Z",
-   "published_taipei": "2026-11-06 06:20",
-   "source": "CNBC",
-   "source_url": "https://www.cnbc.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "Mississippi Senate: Colom, Hyde-Smith gird for ballot legal fight in razor-thin race",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOakxhcDZneXF2MVZCSXh2YzFDVWp5UVBOT0w1cmtoQ1R4NHBKTkNRMTJFOV9DN18xd3hwTEo5cGNUWVhLdElWd3VvLUcteXRzMThLek4tWXE0UWV1WHJwWEhacmQtRkszZDNVcTVKaGpjYzdGMkFSLWphTk41OGxmb0UxMnBfbUhVLUNQbm5CN3nSAZYBQVVfeXFMUGk2V0ZVVUdnZFo4M2tuUklLTy1SQVZBZUR3b19SdWxreWpLOExrVzcyeUwzTTg0MlZ1bW1Zd1dsUmNUcVJYb2VXY3B6MDRMbjl4YndEa2Z4eW9YYmo2bjlkajV3aHhvYm1YVzUxaG01ck1OYklJQl9FUGlraHotVlZuTkVfU0ZVWTVMckV5S0ZONlJnMmZ3?oc=5",
-   "url": "https://www.cnbc.com/2026/11/05/mississippi-senate-election-scott-colom-hyde-smith.html",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "GOOGL"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "fcf7488ad3860abd",
-   "published_utc": "2026-11-05T22:20:19Z",
-   "published_taipei": "2026-11-06 06:20",
-   "source": "CNBC",
-   "source_url": "https://www.cnbc.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "Mississippi Senate election: Democrat Scott Colom narrowly leads Republican Cindy Hyde-Smith",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOakxhcDZneXF2MVZCSXh2YzFDVWp5UVBOT0w1cmtoQ1R4NHBKTkNRMTJFOV9DN18xd3hwTEo5cGNUWVhLdElWd3VvLUcteXRzMThLek4tWXE0UWV1WHJwWEhacmQtRkszZDNVcTVKaGpjYzdGMkFSLWphTk41OGxmb0UxMnBfbUhVLUNQbm5CN3nSAZYBQVVfeXFMUGk2V0ZVVUdnZFo4M2tuUklLTy1SQVZBZUR3b19SdWxreWpLOExrVzcyeUwzTTg0MlZ1bW1Zd1dsUmNUcVJYb2VXY3B6MDRMbjl4YndEa2Z4eW9YYmo2bjlkajV3aHhvYm1YVzUxaG01ck1OYklJQl9FUGlraHotVlZuTkVfU0ZVWTVMckV5S0ZONlJnMmZ3?oc=5",
-   "url": "https://www.cnbc.com/2026/11/05/mississippi-senate-election-scott-colom-hyde-smith.html",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "GOOGL"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "9552c1f1534c9053",
    "published_utc": "2026-11-05T22:20:06Z",
    "published_taipei": "2026-11-06 06:20",
@@ -23911,6 +24338,7 @@
    ],
    "topics": [],
    "queries": [
+    "AAPL",
     "SPCX",
     "TSLA"
    ],
@@ -25299,30 +25727,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "5e412fbc266983ac",
-   "published_utc": "2026-11-05T21:17:00Z",
-   "published_taipei": "2026-11-06 05:17",
-   "source": "WSJ",
-   "source_url": "https://www.wsj.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "AI Panic Grips Stocks",
-   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9HMEZ1QUI4OGozSS1aN3Zrd0tSRDJIVVoyNmx2QldNczdqREhwaTFSRHlHR1c3dS1oNzRuc193NlhBOHBzVjcxUTNldHN0dXZjbXV6SDJ0Xy1qZk9HZ3VJb2xLcWV1ZkJ1ZnBkRDl0N0I3UEtmYVhN?oc=5",
-   "url": "https://www.wsj.com/finance/investing/ai-panic-grips-stocks-60a59518",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "AAPL",
-    "FED",
-    "MARKET"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "bf081404ea1d8386",
    "published_utc": "2026-11-05T21:16:00Z",
    "published_taipei": "2026-11-06 05:16",
@@ -25341,32 +25745,6 @@
    ],
    "title_queries": [
     "TWSE"
-   ],
-   "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "6bb791912627372c",
-   "published_utc": "2026-11-05T21:14:48Z",
-   "published_taipei": "2026-11-06 05:14",
-   "source": "WhatNow",
-   "source_url": "https://whatnow.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Land-Grant Brewing Applies for Liquor License at Former Nocterra Space in Powell",
-   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNeFdpb21LZEp3S2Q1QnUtYlRfOEg5VjY2cV9OaVhIOGhSQW1xOVZXc2RRQW9CWjdGdFNicnRqblVwUUdJNHJzbWp0VDBhcHBMUHktUUw1VG9MMk5WMHVCOHFjOFRHb2RoMmdkZjM5NHB5ZHBZVzA1eERzQjFvOXBtLU9uNWRlTEYwVmozYXk1Qlprc3dJcWlPVlRVZmRhU2QzcmthUWhrYUtXZ2t3YVhaTHJJWUowODUydU14WHVycw?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [
-    "fed"
-   ],
-   "queries": [
-    "FED"
-   ],
-   "title_queries": [
-    "FED"
    ],
    "title_match": true,
    "also": [],
@@ -25762,28 +26140,6 @@
    "time_fixed_from": null
   },
   {
-   "id": "a91fcb9cf3376abc",
-   "published_utc": "2026-11-05T20:46:03Z",
-   "published_taipei": "2026-11-06 04:46",
-   "source": "Bloomberg.com",
-   "source_url": "https://www.bloomberg.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "Treasuries Soar as Tech-Stock Selloff Stokes Haven Demand",
-   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPVkloRjhzaFhUVFFUc1hMQWpZVk9IZmNTRE5KYTBhekdoN0xXby1MOUVpaGRmYnJjdW5rc1hfanFVYUNIdXVYbGV1MDhUX1Q5Wk1yTk1DWVFuM1lzMERVRVhnMmhSOW5EcWp3dl94eS1JcHZMNEhiOFNtUVlialFYNS1Vb3dOeENpazN5SmVyUWJKNTJDMXFUUm9TRFZreUlObm40S0lpUmQ3YVFNUUFJ?oc=5",
-   "url": "https://www.bloomberg.com/news/articles/2026-11-05/treasuries-extend-advance-as-technology-shares-resume-slide",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "FED"
-   ],
-   "title_queries": [],
-   "title_match": false,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
    "id": "e2ab7e62fcd599ce",
    "published_utc": "2026-11-05T20:39:55Z",
    "published_taipei": "2026-11-06 04:39",
@@ -26129,40 +26485,6 @@
    "title_queries": [],
    "title_match": false,
    "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "440aca5f38fe4460",
-   "published_utc": "2026-11-05T20:00:00Z",
-   "published_taipei": "2026-11-06 04:00",
-   "source": "The Motley Fool",
-   "source_url": "https://www.fool.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "Advanced Micro Devices vs. Taiwan Semiconductor Manufacturing: The AI Sell-Off Is Exposing a Critical Difference Investors Shouldn't Ignore for 2027",
-   "link": "https://news.google.com/rss/articles/CBMipgJBVV95cUxPc3B3bFh1MUd0MGdPVUxMaUpoQ200MmtGZU0tOGYtZ2xWbGpJWC1XTU1odkJhRWV4WDdKMmh6a1lfYnpMU3lMbnRaaDNxYVJETWFURnZoMjlsbk5VSFBjeUFUbkxndkY1YkJpT3dOT1VWTi11MTFGcWUtRTFqRFBvWFhjaTN5YVhQTW5kMzdqX0NESFc0ZTJXMVRFa2lDM3A1WnZ6VnRYamIzZHVmVjFUUDBuc1EtcDYxUmN5OVZIOEIyWXk2bFF0SVRDWVNRZERmVVp4MWlJQlZiNzllSDBDVVZuUUFoMGFhRTI5ZmtpSXF0YjZ2WDYwRW83Ym9SZ05PSkZyVHNnUXNVbWE0OEVVWjFfd3Y1bVh3Vk44SlFLczlDTHFpQlE?oc=5",
-   "url": null,
-   "symbols": [
-    "2330",
-    "TSM"
-   ],
-   "topics": [
-    "taiwan"
-   ],
-   "queries": [
-    "TAIWAN",
-    "TSMC"
-   ],
-   "title_queries": [
-    "TSMC",
-    "TAIWAN",
-    "SEMI"
-   ],
-   "title_match": true,
-   "also": [
-    "The Globe and Mail"
-   ],
    "time_fixed_from": null
   },
   {
@@ -27461,7 +27783,9 @@
     "SPCX"
    ],
    "title_match": true,
-   "also": [],
+   "also": [
+    "Fox Business"
+   ],
    "time_fixed_from": null
   },
   {
@@ -33859,7 +34183,7 @@
    "time_fixed_from": null
   },
   {
-   "id": "91d972b25a2a6942",
+   "id": "d7022a7f8a0ef53d",
    "published_utc": "2026-11-05T08:09:40Z",
    "published_taipei": "2026-11-05 16:09",
    "source": "UDN",
@@ -33868,8 +34192,8 @@
    "rank": "B",
    "lang": "zh",
    "title": "「創新服務」跨足半導體產業有成 老董對市府提「工廠立體化」有興趣",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1yU2lRM2Q1RmtOZXR3dTZXY0dyNTU1U3ZCWS1sR092cEY4SW5QcEtRRzdrYy1nUG5Wc1JOX05EdEdRRHZYaXpIaHVVcDZnUzdW0gFWQVVfeXFMT1hhV2NQRTZ0akJ2YjFYZGFVc2VYUGczUWlhTnVLbUM2cW1GTlFOMXNfcDUwTE9UZE5yeFowZ2Rpdk15VTFBTjI3VDRfbHdES0hxbS1wSGc?oc=5",
-   "url": "https://udn.com/news/story/7238/9859798",
+   "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4teEpjak95SVhpTVRFU05fRm84MXd0UzJPZkdONEhzMkdZdDJjRGNkZWZuU2hsMVFLdUpmdXExNDdiZUI2WVBUNDNLLUl2aDlwZGN0dmlqUzE2Qm5TNTBmR2hsTi1MbS1HdzJ0LTZHMmZUV0RYRk1ONy1xa9IBVkFVX3lxTE9YYVdjUEU2dGpCdmIxWGRhVXNlWFBnM1FpYU51S21DNnFtRk5RTjFzX3A1MExPVGROcnhaMGdkaXZNeVUxQU4yN1Q0X2x3REtIcW0tcEhn?oc=5",
+   "url": "https://udn.com/news/story/7238/9859798?from=udn-ch1_breaknews-1-0-news",
    "symbols": [],
    "topics": [],
    "queries": [
@@ -35151,6 +35475,30 @@
    "time_fixed_from": null
   },
   {
+   "id": "b63ce6f67886837b",
+   "published_utc": "2026-11-05T06:13:17Z",
+   "published_taipei": "2026-11-05 14:13",
+   "source": "StreetInsider",
+   "source_url": "https://www.streetinsider.com",
+   "tier": 4,
+   "rank": null,
+   "lang": "en",
+   "title": "Vertiv signs 3-year semiconductor supply deal with Infineon",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQNmpzMXcyRG9WY3VZYVJRNDY5QWVPeUNIXzJCZEYwSXRDV2UyS2Roay1jR1BYRjlNMnFSa3N6S0ZoUzhfVXcxTUtkS1UtOEdVMkhMYS1GNENkdWh2Wk9hbmJ0ZktJR2RFSkUxNmxubFk4ay1Hcld0MnZic1VBSHpaQW5OX1hwdG4tdV9laGdZMjM3NkcwWUNyOEE1VVlTbUdYWkRfTHJHZVVkTHNyWTliQmlWVGo0eEwya1E?oc=5",
+   "url": null,
+   "symbols": [],
+   "topics": [],
+   "queries": [
+    "SEMI"
+   ],
+   "title_queries": [
+    "SEMI"
+   ],
+   "title_match": true,
+   "also": [],
+   "time_fixed_from": null
+  },
+  {
    "id": "b91351f63c1a7216",
    "published_utc": "2026-11-05T06:10:12Z",
    "published_taipei": "2026-11-05 14:10",
@@ -35533,29 +35881,6 @@
     "TWSE"
    ],
    "title_match": true,
-   "also": [],
-   "time_fixed_from": null
-  },
-  {
-   "id": "947cb108e2ab7f49",
-   "published_utc": "2026-11-05T05:01:00Z",
-   "published_taipei": "2026-11-05 13:01",
-   "source": "Bloomberg.com",
-   "source_url": "https://www.bloomberg.com",
-   "tier": 2,
-   "rank": "A",
-   "lang": "en",
-   "title": "Billionaire Mittal’s Satellite Ambition Pitches OneWeb Against Musk’s Starlink",
-   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNNlpoQmhKdGhmUXV1UExpeURTWV84X2hmVHpEVFprWm83VmdsTmdiRWlRakRXZEhJaWRORWRqODZWSGY5RUJBMVBzTV9keXlGUENfR1JCSHFHeXg1QWZHU0FoQlc1MHZNdjk4UnJ0T2s3SVJiS0FZeEFhQm9oc3Noczg4ajVRRmZRU3pRaDFiNzUtRzdCN0hockQ5MkM3TzUyQlFPalhoTmJJTG9UUEFyYm5qUnM3TFB6UGc1U2I0TWZYZjlLaTdjSw?oc=5",
-   "url": "https://www.bloomberg.com/news/articles/2026-11-05/billionaire-mittal-s-satellite-ambition-pitches-oneweb-against-musk-s-starlink",
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "SPCX",
-    "TSMC"
-   ],
-   "title_queries": [],
-   "title_match": false,
    "also": [],
    "time_fixed_from": null
   },
@@ -47250,30 +47575,6 @@
    "also": [
     "經濟日報"
    ],
-   "time_fixed_from": null
-  },
-  {
-   "id": "dc43c8947207c1db",
-   "published_utc": "2026-11-04T07:12:18Z",
-   "published_taipei": "2026-11-04 15:12",
-   "source": "The Korea Daily",
-   "source_url": "https://en.koreadaily.com",
-   "tier": 4,
-   "rank": null,
-   "lang": "en",
-   "title": "AI semiconductor substrate — Global Tech Giants Pour Billions into Supply",
-   "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9TaS1Ea2ZjRV82TmxONGVheUJndkR3a1BjZ0FRUS1XZUlNdV96cTZRemZIcjV4VkZBcENnbF90MXJCdUViMThZQTY4SV9acF96SVdrTUxfTVpZdE51RkNpUWhXWQ?oc=5",
-   "url": null,
-   "symbols": [],
-   "topics": [],
-   "queries": [
-    "SEMI"
-   ],
-   "title_queries": [
-    "SEMI"
-   ],
-   "title_match": true,
-   "also": [],
    "time_fixed_from": null
   },
   {
@@ -59442,7 +59743,7 @@
   "ba0f40d3d236ab21": {
    "published_utc": "2026-11-05T23:34:00Z",
    "by": "datePublished",
-   "checked_at": "2026-11-06T10:33:40Z"
+   "checked_at": "2026-11-06T10:39:56Z"
   },
   "6b953aa7f854940e": {
    "published_utc": "2026-11-05T23:34:00Z",
@@ -59457,17 +59758,17 @@
   "64641370e8614b28": {
    "published_utc": "2026-11-05T19:00:00Z",
    "by": "datePublished",
-   "checked_at": "2026-11-06T10:33:40Z"
+   "checked_at": "2026-11-06T10:39:56Z"
   },
   "8f2c9f06ba91240d": {
    "published_utc": "2026-11-05T19:00:00Z",
    "by": "datePublished",
-   "checked_at": "2026-11-06T10:33:40Z"
+   "checked_at": "2026-11-06T10:39:56Z"
   },
   "6766bb707b4fcac6": {
    "published_utc": "2026-11-05T19:00:00Z",
    "by": "datePublished",
-   "checked_at": "2026-11-06T10:33:40Z"
+   "checked_at": "2026-11-06T10:39:56Z"
   },
   "72ad7695e2fd215a": {
    "published_utc": "2026-11-05T19:00:00Z",
@@ -59477,12 +59778,12 @@
   "d408d1be19dfb3e9": {
    "published_utc": "2026-11-05T19:00:00Z",
    "by": "datePublished",
-   "checked_at": "2026-11-06T10:33:40Z"
+   "checked_at": "2026-11-06T10:39:56Z"
   },
   "5e51b9c12b055200": {
    "published_utc": "2026-11-05T19:00:00Z",
    "by": "datePublished",
-   "checked_at": "2026-11-06T10:33:40Z"
+   "checked_at": "2026-11-06T10:39:56Z"
   },
   "3a95fe85d4ffa3a7": {
    "published_utc": "2026-11-05T07:12:49Z",
@@ -59502,7 +59803,7 @@
   "60f19aafd9483834": {
    "published_utc": "2026-11-05T19:00:00Z",
    "by": "datePublished",
-   "checked_at": "2026-11-06T10:33:40Z"
+   "checked_at": "2026-11-06T10:39:56Z"
   },
   "4eebf69274850943": {
    "published_utc": "2026-11-05T19:00:00Z",

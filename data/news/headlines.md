@@ -1,6 +1,6 @@
-# 新聞標題（2026-11-06 18:33 台北）
+# 新聞標題（2026-11-06 18:39 台北）
 
-最近 72 小時，共 2198 則（官方 5、主要媒體 1789、第一手 7、其他 397）。T1 官方、T2A 通訊社與一線財經媒體、T2B 其他主要財經媒體、T3 第一手發言、T4 其他。時間為台北時間。
+最近 72 小時，共 2209 則（官方 5、主要媒體 1801、第一手 7、其他 396）。T1 官方、T2A 通訊社與一線財經媒體、T2B 其他主要財經媒體、T3 第一手發言、T4 其他。時間為台北時間。
 
 ## Fed（官方）
 
@@ -47,9 +47,9 @@
 - 2026-11-06 03:46 T2B｜Yahoo Finance｜Prediction: These Will Be Nvidia's and Palantir's Stock Prices by 2027 (Hint: Only 1 Is a Buy)
 - 2026-11-06 03:37 T2B｜Yahoo Finance｜Historically Bullish Signal Emerges for Nvidia Stock
 - 2026-11-06 03:34 T2B｜Yahoo Finance Singapore｜Nvidia and Microsoft Get a New Spotlight From Bank of America
-- 2026-11-06 18:11 T4｜The Next Web｜China holds back approval for Nvidia H200 chips stored in Hong Kong
-- 2026-11-06 18:00 T4｜Business Insider｜Nvidia is taking on new risks to help neoclouds through their growing pains
-- 2026-11-06 17:46 T4｜GuruFocus｜NVIDIA Invests $1 Billion in Naver, Acquiring 4.13% Stake
+- 2026-11-06 18:35 T4｜Moomoo｜Nvidia Concludes $1 Billion Investment in Naver to Fund AI Factory Expansion
+- 2026-11-06 18:33 T4｜marketscreener.com｜Nvidia Completes $1 Billion Investment in Naver
+- 2026-11-06 18:23 T4｜Hedgeweek｜Hedge fund managers back Nvidia, Disney and ASML at Sohn Queenstown conference amid technology selloff
 - …另有 116 則（見 headlines.json）
 
 ## TSLA（Tesla）
@@ -69,10 +69,10 @@
 - 2026-11-06 02:51 T2A｜Bloomberg.com｜Watch Tesla, SpaceX Slide as Investors Price in Political Risk
 - 2026-11-06 02:44 T2B｜Yahoo Finance｜Tesla and SpaceX brace for political scrutiny as Elon Musk is targeted
 - 2026-11-06 02:43 T2B｜Yahoo Finance｜Tesla Sinks 12%, SpaceX Down 9% as Midterm Sweep Puts Merger on “A Much Tougher Regulatory Roadmap”
-- 2026-11-06 17:57 T4｜marketscreener.com｜Tesla to Wind Down Cybertruck Production at Texas Plant
-- 2026-11-06 17:50 T4｜تسنیم｜Musk’s Political Gamble Backfires as Tesla, SpaceX Lose $456 Billion
-- 2026-11-06 17:46 T4｜TradingKey｜Tesla Rises Nearly 3% Premarket as Musk Says Texas Plant to Phase Out Cybertruck Production by Mid-2027 to Make Way for Cybercab Expansion
-- …另有 111 則（見 headlines.json）
+- 2026-11-06 18:37 T4｜Mashable｜Is it over for the Cybertruck? Tesla to wind down production in Texas.
+- 2026-11-06 18:07 T4｜Automotive Manufacturing Solutions｜Tesla sidelines Cybertruck as Cybercab takes centre stage
+- 2026-11-06 18:02 T4｜Torque News｜Elon Musk Announces Tesla Will Discontinue Cybertruck Production After 9 Months – He Says, “Tesla Will Wind Down Cybertruck Production In The Middle Of Next Year To Make Room For Cybercab Production”
+- …另有 112 則（見 headlines.json）
 
 ## GOOGL（Alphabet OR Google）
 
@@ -92,8 +92,8 @@
 - 2026-11-06 03:02 T2A｜Bloomberg.com｜Google Plans to Spend $17 Billion on Wyoming Data Center
 - 2026-11-06 01:30 T2B｜Yahoo Finance｜Alphabet's Google Plans $17 Billion Investment in Wyoming Data Center
 - 2026-11-06 18:00 T4｜Business Insider｜Google's AI debate with schools raises a bigger question about the technology we rely on every day
+- 2026-11-06 17:44 T4｜Dataconomy｜Google Launches Gemini Omni 1.2 Flash With 15-second AI Videos
 - 2026-11-06 17:43 T4｜Dataconomy｜Google Expands Voluntary Buyouts To Five Countries Amid AI Spending
-- 2026-11-06 17:42 T4｜Basketball Network｜"I lost all in my divorce" – Shaquille O'Neal on what happened to millions he made from Google
 - …另有 80 則（見 headlines.json）
 
 ## AAPL（Apple）
@@ -120,6 +120,7 @@
 
 ## SPCX（SpaceX）
 
+- 2026-11-06 15:46 T2A｜Reuters｜India's Coforge joins SpaceX partner network to deploy Grok AI tools for enterprises
 - 2026-11-06 15:40 T2B｜Yahoo Finance｜Scottish Mortgage NAV total return rises 31.5% as SpaceX listing and Moderna trial success lift performance
 - 2026-11-06 08:30 T2B｜Yahoo Finance｜Elon Musk's SpaceX Could Build More Data Center Capacity in 18 Months Than Google Did in 27 Years, Says SemiAnalysis
 - 2026-11-06 08:24 T2B｜Yahoo Finance｜AT&T, T-Mobile Are Reportedly Ready To Boot Boost Mobile If SpaceX Buys It
@@ -134,14 +135,14 @@
 - 2026-11-06 02:44 T2B｜Yahoo Finance｜Tesla and SpaceX brace for political scrutiny as Elon Musk is targeted
 - 2026-11-06 02:43 T2B｜Yahoo Finance｜Tesla Sinks 12%, SpaceX Down 9% as Midterm Sweep Puts Merger on “A Much Tougher Regulatory Roadmap”
 - 2026-11-06 02:20 T2A｜Reuters｜US proposes space launch rule changes in potential boost for SpaceX
-- 2026-11-06 01:59 T2B｜Yahoo Finance｜SpaceX Stock Falls as Banks Test Demand for AI Debt
+- 2026-11-06 18:10 T4｜The Motley Fool｜Could Investing $500 a Month in SpaceX Stock Help You Retire a Millionaire?
 - 2026-11-06 17:50 T4｜تسنیم｜Musk’s Political Gamble Backfires as Tesla, SpaceX Lose $456 Billion
 - 2026-11-06 17:43 T4｜AzerNews｜Tesla, SpaceX shares plunge 15% after Democrats’ midterm election victory
-- 2026-11-06 17:29 T4｜marketscreener.com｜Scottish Mortgage Investment Trust cuts SpaceX exposure as beats index
 - …另有 114 則（見 headlines.json）
 
 ## MARKET（"S&P 500" OR "Wall Street"）
 
+- 2026-11-06 17:30 T2B｜Yahoo Finance UK｜Wall Street Peers Into Abyss of AI Trade as Midterms Expose Risk
 - 2026-11-06 15:10 T2A｜AP News｜Asian shares skid after AI worries send Wall Street tumbling
 - 2026-11-06 14:43 T2B｜Yahoo Finance UK｜MARKETS LIVE: FTSE 100 set to slide as Wall Street rout sweeps through Asia
 - 2026-11-06 10:44 T2B｜Yahoo Finance｜Xponential Fitness (XPOF) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates
@@ -156,10 +157,9 @@
 - 2026-11-06 09:00 T2B｜Yahoo Finance｜S&P 500, Nasdaq, Dow Futures Dip As Investors Step Back From AI And Tech With Nasdaq In Correction Territory — NVDA, AAPL, UBER, SOXX In Focus
 - 2026-11-06 07:35 T2A｜WSJ｜Print Edition | Wall Street Journal
 - 2026-11-06 07:30 T2B｜Yahoo Finance｜Guardant Health (GH) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates
-- 2026-11-06 07:14 T2A｜Bloomberg.com｜Wall Street Reverses Course in Massive AI Selloff
+- 2026-11-06 18:14 T4｜Benzinga｜Stock Market Today: Dow Jones, S&P 500 Futures Trade Mixed Ahead of October's Jobs Report— Airbnb, Cloudf
 - 2026-11-06 18:03 T4｜MarketForces Africa｜Global Markets Tumble On Tech Stocks Rout, Nasdaq, S&P 500 Fall
 - 2026-11-06 18:00 T4｜CNN｜What sparked Wall Street’s crazy sell-off?
-- 2026-11-06 18:00 T4｜Politico｜‘Total bloodbath’: Democrats‘ sweeping wins rock Wall Street over AI fears
 - …另有 159 則（見 headlines.json）
 
 ## TSMC（TSMC OR "Taiwan Semiconductor"）
@@ -176,9 +176,9 @@
 - 2026-11-04 23:15 T2B｜Yahoo Finance｜Better AI Semiconductor Monopoly Stock: Taiwan Semiconductor vs. ASML
 - 2026-11-04 18:50 T2B｜Yahoo Finance｜Broadcom vs. Taiwan Semiconductor: Two AI Powerhouses, but One Offers a Better Value for 2027
 - 2026-11-03 23:45 T2B｜Yahoo Finance｜Until Next Gen Computing Implodes I’ll Keep Buying Taiwan Semiconductor
+- 2026-11-06 17:51 T4｜MarketBeat｜Taiwan Semiconductor Manufacturing Company Ltd. $TSM Stock: Chicago Partners Investment Group LLC Boosts Position
 - 2026-11-06 17:06 T4｜MarketBeat｜Taiwan Semiconductor Manufacturing Company Ltd. $TSM Stock: Inscription Capital LLC Lowers Stake
 - 2026-11-06 17:06 T4｜MarketBeat｜Taiwan Semiconductor Manufacturing Company Ltd. $TSM Stock: Commonwealth Equity Services LLC Trims Stake
-- 2026-11-06 14:08 T4｜news.sbs.co.kr｜TSMC Plunges to Daily Limit Amid AI Shock, Asian Stock Markets Plummet
 - …另有 44 則（見 headlines.json）
 
 ## FED（"Federal Reserve" OR Powell OR FOMC）
@@ -199,8 +199,8 @@
 - 2026-11-05 06:59 T2B｜Yahoo Finance｜Powell Industries, Inc. (POWL) Stock Forecasts
 - 2026-11-05 04:32 T2A｜Reuters｜Election stiffens the Fed's guardrails, but independence risks remain
 - 2026-11-06 18:23 T4｜Cal Coast News｜Gaea Powell’s delay tactics continue, another attorney appointed
+- 2026-11-06 18:07 T4｜The Columbus Dispatch｜Powell starts land acquisition process for Scioto Street expansion project
 - 2026-11-06 17:53 T4｜The Standard (HK)｜US economy resilient but inflation too high: Fed's Williams
-- 2026-11-06 17:15 T4｜The Motley Fool｜Fed Chair Kevin Warsh Is Planning to Break 45 Years of Precedent With a Stunning Change to Monetary Policy -- It Could Rattle Wall Street for Years to Come
 - …另有 38 則（見 headlines.json）
 
 ## TARIFF（tariffs OR "Trump trade"）
@@ -220,10 +220,10 @@
 - 2026-11-05 06:18 T2A｜Bloomberg.com｜Carney’s US Trade Minister Warns Blue Wave Didn’t Wipe Out Tariff War
 - 2026-11-05 04:54 T2B｜Barron's｜Why Trump Won’t Let Up on Tariffs, Even With Democrats in Control
 - 2026-11-05 03:47 T2A｜Bloomberg.com｜FitLab Blames Bankruptcy on Loss of Nike Partnership, Trump Tariffs
+- 2026-11-06 18:02 T4｜The New York Times｜Opinion | Remember When Republicans Hated Tariffs? They Should Again.
 - 2026-11-06 17:18 T4｜Seoul Economic Daily｜Trump Threatens 300% Tariffs as Cabinet Exodus Talk Spreads
 - 2026-11-06 17:17 T4｜Seeking Alpha｜Democrats weigh measure to roll back Trump's Canada tariffs - report
-- 2026-11-06 17:00 T4｜CBC｜Republicans ran away from Trump's Canadian tariffs, but not far enough
-- …另有 54 則（見 headlines.json）
+- …另有 53 則（見 headlines.json）
 
 ## CHIPS（"export controls" chips OR semiconductors）
 
@@ -248,10 +248,10 @@
 - 2026-11-05 18:35 T2B｜Yahoo Finance｜Better Foundry Stock: Taiwan Semiconductor vs. Intel
 - 2026-11-05 18:24 T2A｜Reuters｜Two confirmed dead after Taiwan Panasonic factory fire
 - 2026-11-05 18:20 T2B｜Yahoo Finance｜3 Semiconductor Stocks Investors Are Watching For Taiwan Supply Chain Risk
+- 2026-11-06 18:34 T4｜IMDb｜Weta FX to build AI hub in Taiwan, buy into Moonshine Studio
+- 2026-11-06 18:10 T4｜Taiwan News｜Taiwan plans space development fund with private investors
 - 2026-11-06 17:51 T4｜IntelliNews｜China tightens the noose around Taiwan
-- 2026-11-06 17:36 T4｜Taiwan News｜Hackers exploit Taiwan bank's online system for NT$41.76 million in transfers
-- 2026-11-06 17:35 T4｜BigGo Finance｜Foreign Investors Pull Funds for 7th Straight Day as Taiwan Stocks Swing Wildly After Record Intraday Plunge
-- …另有 63 則（見 headlines.json）
+- …另有 62 則（見 headlines.json）
 
 ## SEMI（semiconductor supply chain OR chipmakers OR CoWoS）
 
@@ -264,7 +264,7 @@
 - 2026-11-06 17:23 T4｜Global Trade Magazine｜How Global Semiconductor Supply Chains Are Reshaping Electronics Manufacturing
 - 2026-11-06 10:26 T4｜ad-hoc-news.de｜OCI stock adds semiconductor materials unit in 2027 reshuffle
 - 2026-11-05 23:24 T4｜富途牛牛｜U.S. AI hardware supply chain faces sell-off; Philadelphia Semiconductor Index drops 7.25%, with AMD, Micron, and other stocks falling more than 10%
-- …另有 37 則（見 headlines.json）
+- …另有 38 則（見 headlines.json）
 
 ## ANTHROPIC（Anthropic）
 
@@ -284,8 +284,8 @@
 - 2026-11-06 03:21 T2B｜Yahoo Finance｜Anthropic's IPO plans run up against a battered Wall Street
 - 2026-11-06 03:11 T2A｜Bloomberg.com｜Anthropic News: Latest Updates on the AI Company Behind Claude - Bloomberg
 - 2026-11-06 18:00 T4｜Dataconomy｜Anthropic Leaves Claude Flaw Enabling Cross-device Code Execution Unfixed
+- 2026-11-06 17:46 T4｜FourWeekMBA｜Anthropic IPO Explained: 5 Steps From S-1 to 180-Day Lockup
 - 2026-11-06 17:46 T4｜Dataconomy｜METR Says Anthropic’s AI Development Pace Has Doubled
-- 2026-11-06 17:35 T4｜www.tokenpost.com｜Sharon Zhou Joins Anthropic After AMD AI Chief of Staff Role
 - …另有 111 則（見 headlines.json）
 
 ## OPENAI（OpenAI OR ChatGPT OR "Sam Altman"）
@@ -305,10 +305,10 @@
 - 2026-11-05 10:00 T2A｜WSJ｜OpenAI Co-Founder Greg Brockman at WSJ Tech
 - 2026-11-05 08:26 T2B｜Yahoo Finance｜The Deal With Meta & OpenAI Just Cost AMD $1.1 Billion
 - 2026-11-05 08:01 T2A｜Bloomberg.com｜Claude Narrows ChatGPT’s Lead in $1.4 Billion UK Consumer AI Market
+- 2026-11-06 18:33 T4｜In.Comms｜OpenAI appoints Uber vet as chief corporate affairs officer
 - 2026-11-06 18:19 T4｜Help Net Security｜OpenAI’s GPT-6 Cyber found 81 Firefox flaws earlier AI testing missed
 - 2026-11-06 18:00 T4｜Fox News｜Oil-rich UAE makes massive AI bet as Sam Altman unveils ambitious plan to transform energy industry
-- 2026-11-06 17:43 T4｜Security Affairs｜OpenAI Reports Covert Underperformance in GPT-6 Astra
-- …另有 63 則（見 headlines.json）
+- …另有 64 則（見 headlines.json）
 
 ## 2330（台積電）
 
@@ -328,31 +328,31 @@
 - 2026-11-06 15:08 T2A｜中央社｜台股崩跌寫多項紀錄 台積電收跌105元創史上第2大
 - 2026-11-06 15:08 T2B｜Yahoo股市｜【盤後焦點】台股崩跌創多項紀錄 台積電跌105元創史上收盤第2大
 - 2026-11-06 18:17 T4｜非凡新聞台｜台積電觸跌停散戶抄底成交金額衝破2千億| 金融
+- 2026-11-06 18:12 T4｜CMoney｜2330 台積電 - 00406A日報 - 股市爆料同學會
 - 2026-11-06 18:03 T4｜Facebook｜【台股大屠殺！外資進出前10一文看 重砍台積電2.2萬張】 沒什麼好說的，恨外資！(┛`д´)┛ （#豬頭皮）
-- 2026-11-06 17:51 T4｜科技島｜台積電1奈米基地可望落腳台南沙崙 吳誠文：園區預留1奈米以下製程空間
 - …另有 253 則（見 headlines.json）
 
 ## TWSE（台股 OR 加權指數）
 
+- 2026-11-06 18:20 T2B｜Yahoo股市｜黃鐙輝股票獲利200%一夕變虧損！台股崩跌仍砸20萬買ETF
 - 2026-11-06 18:19 T2B｜Yahoo股市｜台股活水來了？國安基金5000億元銀彈要進場 分析師：下周一反彈機率大
+- 2026-11-06 18:19 T2B｜Yahoo股市｜台股活水來了？國安基金宣布進場 分析師：下周一反彈機率大
 - 2026-11-06 18:15 T2B｜Yahoo股市｜快訊／台股加權指單周狂崩5000點！國安基金決議第10度出動護盤
+- 2026-11-06 18:13 T2B｜經濟日報｜台股崩跌信心不足 國安基金宣布史上第10次進場護盤
+- 2026-11-06 18:10 T2B｜工商時報｜國安基金第十度進埸維護台股穩定- 要聞
 - 2026-11-06 18:09 T2B｜鉅亨網｜外資狠砍台股911億元、空單直逼10萬口 投信逆勢狂敲「7大金控」抗賣壓
 - 2026-11-06 18:08 T2A｜中央社 CNA｜台股崩跌信心不足國安基金宣布第10次進場護盤| 證券
 - 2026-11-06 18:01 T2B｜Yahoo股市｜國安基金第10次進場！ 啟動安定市場任務維護台股穩定
 - 2026-11-06 18:01 T2B｜UDN｜台股巨幅波動！國安基金下午召開會議 決議啟動第10次進場護盤
+- 2026-11-06 17:59 T2B｜工商時報｜國安基金出動了！ 決定啟動安定市場任務維護台股穩定- 金融
 - 2026-11-06 17:56 T2B｜UDN｜台股今開盤暴跌近3,800點 國安基金拍板授權護盤
 - 2026-11-06 17:55 T2B｜UDN｜台股跌日暴跌 國安基金宣布第10度進場護盤
 - 2026-11-06 17:53 T2B｜Yahoo股市｜史上第十次！台股一周崩跌5510點 國安基金5千億銀彈要進場護盤了
 - 2026-11-06 17:49 T2A｜中央社 CNA｜亞股崩跌哀鴻遍野 台股慘寫史上第4大收盤跌點
-- 2026-11-06 17:38 T2B｜鉅亨網｜股災還沒結束？融資不殺乾淨，台股難見真正大底！
-- 2026-11-06 17:38 T2B｜Yahoo股市｜台股慘兮兮！友驚徐乃麟兒「資產波動小」 他鬆口「全身而退」2關鍵
-- 2026-11-06 17:38 T2A｜中央社 CNA｜台股收盤創第4大跌點外資台指期淨空單逼近10萬口| 證券
-- 2026-11-06 17:28 T2B｜工商時報｜大盤創史上最大單周跌點小資族瘋狂搶進0050！投信法人：台股ETF逢低分批穩健布局- 理財
-- 2026-11-06 17:24 T2B｜Yahoo股市｜台股崩跌不減旅展買氣？東南旅遊「百萬刷手」專程到場下單 鳳凰挑戰業績2.5億元
+- 2026-11-06 18:31 T4｜天下雜誌｜台股股災分析》AI股還是可以逢低買進？投資人關鍵五問
+- 2026-11-06 18:15 T4｜Yahoo新聞｜台股崩跌國安基金要進場了！視情況動用資金安定市場
 - 2026-11-06 18:12 T4｜旺得富理財網｜快訊》台股跌破4萬點國安基金宣布進場護盤- 上市櫃
-- 2026-11-06 18:10 T4｜Yahoo新聞｜台股連日重挫失守4萬點！國安基金宣布史上第10次進場護盤
-- 2026-11-06 18:07 T4｜Yahoo新聞｜台股有救了？國安基金宣布下週一進場 史上第10次護盤
-- …另有 433 則（見 headlines.json）
+- …另有 440 則（見 headlines.json）
 
 ## 009816（009816 OR 凱基台灣TOP50）
 
@@ -389,10 +389,14 @@
 
 ## NSF（國安基金 OR 護盤 OR 救市 OR 限空令）
 
-- 2026-11-06 18:20 T2B｜udn部落格｜國安基金決定啟動安定市場任務，維護臺股穩定-1106晚間最新- ★蒼弟來襲〃樂此不疲！
+- 2026-11-06 18:35 T2B｜經濟日報｜金管會正式發佈限空令 提出五大救市措施 | 政經焦點 | 要聞
+- 2026-11-06 18:29 T2B｜Yahoo股市｜國安基金喊話護盤成股海「定海神針」？學者點頭：即便不買也穩信心
+- 2026-11-06 18:29 T2B｜Yahoo股市｜國安基金5000億銀彈成股海「定海神針」？學者點頭：即便不買也穩軍心
 - 2026-11-06 18:19 T2B｜Yahoo股市｜台股活水來了？國安基金5000億元銀彈要進場 分析師：下周一反彈機率大
 - 2026-11-06 18:19 T2B｜Yahoo股市｜台股活水來了？國安基金宣布進場 分析師：下周一反彈機率大
 - 2026-11-06 18:15 T2B｜Yahoo股市｜快訊／台股加權指單周狂崩5000點！國安基金決議第10度出動護盤
+- 2026-11-06 18:13 T2B｜經濟日報｜台股崩跌信心不足 國安基金宣布史上第10次進場護盤
+- 2026-11-06 18:10 T2B｜工商時報｜國安基金第十度進埸維護台股穩定- 要聞
 - 2026-11-06 18:08 T2A｜中央社 CNA｜台股崩跌信心不足國安基金宣布第10次進場護盤| 證券
 - 2026-11-06 18:04 T2B｜鉅亨網｜台股下周「安」了！國安基金緊急召開臨時會 拍板進場護盤
 - 2026-11-06 18:01 T2B｜Yahoo股市｜國安基金第10次進場！ 啟動安定市場任務維護台股穩定
@@ -400,14 +404,10 @@
 - 2026-11-06 18:01 T2B｜經濟日報｜國安基金下午召開臨時委員會議 決議啟動第10次進場護盤
 - 2026-11-06 17:59 T2B｜工商時報｜國安基金出動了！ 決定啟動安定市場任務維護台股穩定- 金融
 - 2026-11-06 17:56 T2B｜UDN｜台股今開盤暴跌近3,800點 國安基金拍板授權護盤
-- 2026-11-06 17:55 T2B｜UDN｜台股跌日暴跌 國安基金宣布第10度進場護盤
-- 2026-11-06 17:53 T2B｜Yahoo股市｜史上第十次！台股一周崩跌5510點 國安基金5千億銀彈要進場護盤了
-- 2026-11-06 17:53 T2B｜Yahoo股市｜史上第十次！國安基金宣布進場護盤 5千億銀彈上膛
-- 2026-11-06 17:25 T2B｜Yahoo股市｜限空令、國安基金齊發？政府護盤最大考量 兩大分析師看法不一
 - 2026-11-06 18:31 T4｜台灣好新聞｜史上第十次！國安基金5000億銀彈上膛 過去9次護盤8勝1敗、近8次全勝
-- 2026-11-06 18:23 T4｜民視新聞網｜最新／國安基金進場救台股！第10度啟動護盤任務
-- 2026-11-06 18:18 T4｜CMoney｜TWA00 加權指數- 快訊！國安基金確定進場護盤！🎉🎉🎉🎉🎉🎉🎋🧧 - 股市爆料同學會
-- …另有 82 則（見 headlines.json）
+- 2026-11-06 18:28 T4｜非凡新聞台｜國際利空干擾台股國安基金啟動護盤機制| 金融
+- 2026-11-06 18:26 T4｜鏡週刊Mirror Media｜維持台股穩定 國安基金將進場了！
+- …另有 89 則（見 headlines.json）
 
 ## SEMI_ZH（半導體 供應鏈 OR CoWoS OR 先進封裝）
 
@@ -415,6 +415,7 @@
 - 2026-11-06 15:43 T2B｜MoneyDJ｜工研院：科技主權與AI交織供應鏈重組形塑產業創新- 新聞
 - 2026-11-06 15:33 T2B｜經濟日報｜研調：台灣半導體明年產值衝逾11兆元創高 AI 與 HPC 帶動
 - 2026-11-06 13:12 T2B｜工商時報｜《半導體》穎崴Q3獲利躍升登峰前3季倍增創年度新高- 證券
+- 2026-11-06 11:12 T2B｜UDN｜AI概念股報酬差逾100個百分點！施羅德00419A主動選股 鎖定台股AI供應鏈
 - 2026-11-06 11:04 T2A｜中央社 CNA｜東海半導體論壇 張國恩：教育是臺灣「第二座護國神山」
 - 2026-11-06 10:33 T2B｜UDN｜美民主黨擬推「超級AI禁令」 洪毓祥：中長期對台半導體產業仍有信心
 - 2026-11-06 10:03 T2B｜Yahoo股市｜中國對日氧化釔出口銳減98%，日本半導體設備供應鏈憂庫存告急
@@ -425,11 +426,10 @@
 - 2026-11-05 17:13 T2B｜Yahoo股市｜經部A＋通過三計畫 聚焦自主智慧電信、創新抗癌新藥及半導體關鍵濾材技術
 - 2026-11-05 16:40 T2B｜MoneyDJ｜《日股》AI/半導體權值股承壓，日經收跌1.79%-新聞內容-基金
 - 2026-11-05 16:39 T2B｜工商時報｜陸掌握全球逾半晶片特氣產能美智庫示警：恐成半導體供應鏈新瓶頸- 兩岸
-- 2026-11-05 16:09 T2B｜UDN｜「創新服務」跨足半導體產業有成 老董對市府提「工廠立體化」有興趣
 - 2026-11-06 18:03 T4｜CMoney投資網誌｜AI 股災燒出「晶片封裝大戰」：台廠搶吃 NVDA 訂單、先進封裝成半導體新金礦
 - 2026-11-06 17:44 T4｜民安救護車｜日月光將投資南科臺南園區 黃偉哲：強化先進封裝產業聚落 帶動臺南半導體發展
 - 2026-11-06 16:17 T4｜CMoney投資網誌｜AI政策轉向重擊半導體供應鏈！台股單月狂瀉8400點，台積電盤中觸跌停-財經焦點情報站
-- …另有 97 則（見 headlines.json）
+- …另有 98 則（見 headlines.json）
 
 ## AI_ZH（Anthropic OR OpenAI OR ChatGPT）
 
@@ -448,8 +448,8 @@
 - 2026-11-06 12:28 T2B｜MoneyDJ｜Anthropic遇AI股慘崩逆風、傳IPO估值恐少逾3成-新聞內容-基金
 - 2026-11-06 12:12 T2B｜MoneyDJ｜Anthropic遇AI股慘崩逆風、傳IPO估值恐少逾3成
 - 2026-11-06 12:05 T2B｜鉅亨網｜ChatGPT竟成謀殺幫兇？男子控訴妻子用AI策劃毒殺自己
+- 2026-11-06 17:46 T4｜BigGo 財經｜OpenAI、Google接連推出資安專用AI，韓國Naver、SK電信力拚明年上半年
 - 2026-11-06 17:40 T4｜TVBS新聞網｜OpenAI推資安模型GPT-6 Cyber 強化漏洞研究、初期限核准客戶使用
 - 2026-11-06 17:29 T4｜電腦領域HKEPC Hardware｜OpenAI 發布 GPT-6 Cyber 模型 成功率飆至 48.5% 找出近千個 Linux 漏洞
-- 2026-11-06 17:15 T4｜Root-Nation.com｜Anthropic 推出個人人工智慧財務助理
 - …另有 138 則（見 headlines.json）
 
