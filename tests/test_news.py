@@ -281,6 +281,25 @@ class NewsTest(unittest.TestCase):
         self.assertEqual([x["title"] for x in news.parse_rss(raw)],
                          ["瑤池金母抄底也扛不住？「這檔ETF」兩天加碼近50億", "台積電(2330)法說會：第四季營收看增"])
 
+    def test_nsf_list(self):
+        page = ('<table class="table-list"><thead><tr><th>序號</th><th>標題</th><th>發布日期</th></tr></thead><tbody>'
+                '<tr><td><span>1</span></td><td><span><a href="/singlehtml/383?cntId=abc" title=\'x\'> 國安基金決定啟動安定市場任務，'
+                '維護臺股穩定 </a></span></td><td><span>2026-11-06</span></td></tr>'
+                '<tr><td><span>2</span></td><td><span><a href="/singlehtml/383?cntId=def">國家金融安定基金停止執行安定市場任務</a>'
+                '</span></td><td><span>2026-01-12</span></td></tr></tbody></table>').encode("utf-8")
+        got = news.parse_nsf(page, "https://www.mof.gov.tw/multiplehtml/383")
+        self.assertEqual(got[0], {"date": "2026-11-06", "title": "國安基金決定啟動安定市場任務，維護臺股穩定",
+                                  "link": "https://www.mof.gov.tw/singlehtml/383?cntId=abc"})
+        self.assertEqual([x["date"] for x in got], ["2026-11-06", "2026-01-12"])
+        errors = []
+        with mock.patch.object(news, "http", return_value=(200, page)):
+            doc = news.nsf({"nsf_url": "https://www.mof.gov.tw/multiplehtml/383", "nsf_max": 1}, errors)
+        self.assertEqual((len(doc["items"]), errors), (1, []))
+        with mock.patch.object(news, "http", return_value=(500, b"")):
+            self.assertEqual(news.nsf({"nsf_url": "https://www.mof.gov.tw/multiplehtml/383"}, errors), {})
+        self.assertEqual(len(errors), 1)
+        self.assertIsNone(news.nsf({}, []))
+
     def test_helpers(self):
         self.assertEqual(news.tier_of("https://ca.finance.yahoo.com", CFG["tiers"]), (2, "B"))
         self.assertEqual(news.tier_of("https://www.marketbeat.com", CFG["tiers"]), (4, None))

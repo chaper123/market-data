@@ -28,12 +28,15 @@ time_fixed_from，改正後超出時間窗的拿掉；找不回來的移到頂�
 輸出：
   data/news/headlines.json  generated_at_taipei、window_hours、status、feeds[]、errors[]、items[]（見 README）
   data/news/fed.json        Fed 新聞稿與演講（最近 fed_days 天）：items[].date、title、link、type
+  data/news/nsf.json        財政部「國家金融安定基金訊息」新聞稿列表（官方，最新 nsf_max 則）：items[].date、title、link。
+                            政府資料開放授權條款第 1 版，使用時註明出處；讀不到時保留上一次的檔案
   data/news/headlines.md    精簡版給人看
   data/meta.json            只更新 datasets 的 news/headlines、news/fed（推回 repo 時由 publish.py 合併）
 """
 import datetime as dt
 import gzip
 import hashlib
+import html
 import json
 import os
 import re
@@ -51,6 +54,7 @@ from common import DATA, NOW, ROOT, TPE, UA, UTC, http, write_json
 OUT_JSON = os.path.join(DATA, "news", "headlines.json")
 OUT_FED = os.path.join(DATA, "news", "fed.json")
 OUT_MD = os.path.join(DATA, "news", "headlines.md")
+OUT_NSF = os.path.join(DATA, "news", "nsf.json")
 META = os.path.join(DATA, "meta.json")
 GN = "https://news.google.com/rss/search?q={q}&{loc}"
 LOC = {"en": "hl=en-US&gl=US&ceid=US:en", "zh": "hl=zh-TW&gl=TW&ceid=TW:zh-Hant"}
@@ -270,6 +274,39 @@ def fed(cfg, errors):
             feeds.append({"name": name, "ok": False, "count": 0, "error": str(ex)[:200]})
             errors.append(f"{name}: {ex}")
     return sorted(out, key=lambda x: x["published"], reverse=True), feeds
+
+
+def parse_nsf(raw, base):
+    """財政部新聞稿列表頁（表格：序號、標題、發布日期）→ [{date, title, link}]，照頁面順序（新的在前）。"""
+    text = html.unescape(raw.decode("utf-8", "replace"))
+    out = []
+    for row in re.findall(r"<tr[^>]*>(.*?)</tr>", text, re.S):
+        a = re.search(r'<a[^>]*href="([^"]*cntId=[^"]+)"[^>]*>(.*?)</a>', row, re.S)
+        d = re.search(r"<span>\s*(\d{4}-\d{2}-\d{2})\s*</span>", row)
+        if a and d:
+            out.append({"date": d.group(1), "title": re.sub(r"<[^>]+>|\s+", " ", a.group(2)).strip(),
+                        "link": urllib.parse.urljoin(base, a.group(1))})
+    return out
+
+
+def nsf(cfg, errors):
+    """國安基金官方新聞稿（news.nsf_url）。回傳要寫的 doc；失敗回傳 {}（保留上一次的檔案）；沒設定回傳 None。"""
+    url = cfg.get("nsf_url")
+    if not url:
+        return None
+    try:
+        code, raw = http(url)
+        if code != 200:
+            raise RuntimeError(f"HTTP {code}")
+        items = parse_nsf(raw, url)
+        if not items:
+            raise RuntimeError("列表裡沒有新聞稿")
+        return {"generated_at_taipei": tpe(NOW), "source": url,
+                "attribution": "資料出處：財政部（國家金融安定基金訊息）；政府資料開放授權條款－第 1 版",
+                "items": items[:cfg.get("nsf_max", 10)]}
+    except Exception as ex:  # noqa: BLE001 — 官方列表失敗不影響新聞標題
+        errors.append(f"國安基金新聞稿: {ex}")
+        return {}
 
 
 # ---------------------------------------------------------------- 原文網址（解開 Google News 轉址）
@@ -648,8 +685,8 @@ def markdown(doc, fed_doc, queries):
     return "\n".join(lines)
 
 
-def update_meta(doc, fed_doc, topic_doc=None, topic_error=None):
-    """只寫 news/headlines、news/fed 兩個資料集；其他內容不動（推回 repo 時 publish.py 會再合併一次）。"""
+def update_meta(doc, fed_doc, topic_doc=None, topic_error=None, nsf_doc=None):
+    """只寫 news/ 開頭的資料集；其他內容不動（推回 repo 時 publish.py 會再合併一次）。"""
     try:
         meta = json.load(open(META, encoding="utf-8"))
     except Exception:  # noqa: BLE001
@@ -682,6 +719,12 @@ def update_meta(doc, fed_doc, topic_doc=None, topic_error=None):
     ds["news/fed"] = {"status": "ok" if fed_ok else "fail", "source": "federalreserve.gov RSS",
                       "last": fed_doc["items"][0]["date"] if fed_doc["items"] else None,
                       "checked_at_taipei": fed_doc["generated_at_taipei"], "items": len(fed_doc["items"])}
+    if nsf_doc is not None:  # 沒設定 news.nsf_url 時不寫
+        src = "財政部 國家金融安定基金訊息"
+        ds["news/nsf"] = ({"status": "ok", "source": src, "last": nsf_doc["items"][0]["date"],
+                           "checked_at_taipei": nsf_doc["generated_at_taipei"], "items": len(nsf_doc["items"])}
+                          if nsf_doc else {"status": "stale" if os.path.exists(OUT_NSF) else "fail", "source": src,
+                                           "last": ds.get("news/nsf", {}).get("last"), "checked_at_taipei": doc["generated_at_taipei"]})
     write_json(META, meta)
 
 
@@ -691,6 +734,7 @@ def main():
     fresh, feeds = google_news(cfg, errors)
     cna_items, cna_feeds = cna(cfg, errors)
     fed_items, fed_feeds = fed(cfg, errors)
+    nsf_doc = nsf(cfg, errors)
     if not any(f["ok"] for f in feeds):
         print("Google News 查詢全部失敗，保留上一次的檔案", file=sys.stderr)
         for e in errors:
@@ -734,6 +778,8 @@ def main():
                          for f in fed_items]}
     write_json(OUT_JSON, doc)
     write_json(OUT_FED, fed_doc)
+    if nsf_doc:
+        write_json(OUT_NSF, nsf_doc)
     with open(OUT_MD, "w", encoding="utf-8") as f:
         f.write(markdown(doc, fed_doc, cfg["en"] + cfg["zh"]) + "\n")
     topic_doc, topic_error = None, None
@@ -744,7 +790,7 @@ def main():
     except Exception as ex:  # noqa: BLE001 — 話題統計失敗不影響標題清單
         topic_error = ex
         print("話題統計失敗：", ex, file=sys.stderr)
-    update_meta(doc, fed_doc, topic_doc, topic_error)
+    update_meta(doc, fed_doc, topic_doc, topic_error, nsf_doc)
     print(json.dumps(doc["stats"]["by_tier"], ensure_ascii=False), "total", len(items), "fed", len(fed_items),
           "feeds ok", f"{sum(f['ok'] for f in all_feeds)}/{len(all_feeds)}",
           "url", json.dumps(url_stats, ensure_ascii=False),
