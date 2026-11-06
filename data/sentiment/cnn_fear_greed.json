@@ -1,7 +1,7 @@
 {
- "fetched_at_taipei": "2026-11-07 03:01",
- "time_utc": "2026-11-06T18:55:32+00:00",
- "score": 23.2,
+ "fetched_at_taipei": "2026-11-07 06:15",
+ "time_utc": "2026-11-06T21:56:51+00:00",
+ "score": 22.08,
  "rating": "extreme fear",
  "previous_close": 19.88,
  "previous_1_week": 26.32,
@@ -9,46 +9,46 @@
  "previous_1_year": 24.34,
  "components": {
   "market_momentum_sp500": {
-   "score": 9,
+   "score": 8,
    "rating": "extreme fear",
-   "time_utc": "2026-11-06T18:46:35Z",
-   "value": 7405.98
+   "time_utc": "2026-11-06T21:37:09Z",
+   "value": 7376.86
   },
   "stock_price_strength": {
    "score": 42,
    "rating": "fear",
-   "time_utc": "2026-11-06T18:41:34Z",
-   "value": -3.3216653144401698
+   "time_utc": "2026-11-06T21:56:51Z",
+   "value": -3.33689137845251
   },
   "stock_price_breadth": {
-   "score": 46.8,
+   "score": 45.4,
    "rating": "neutral",
-   "time_utc": "2026-11-06T18:41:34Z",
-   "value": 608.222553162699
+   "time_utc": "2026-11-06T21:56:47Z",
+   "value": 597.547152669738
   },
   "put_call_options": {
-   "score": 14.6,
+   "score": 13.4,
    "rating": "extreme fear",
-   "time_utc": "2026-11-06T18:41:38Z",
-   "value": 0.854246969527047
+   "time_utc": "2026-11-06T21:53:12Z",
+   "value": 0.860975633788479
   },
   "market_volatility_vix": {
-   "score": 14.0845070422535,
+   "score": 9.15492957746479,
    "rating": "extreme fear",
-   "time_utc": "2026-11-06T18:41:31Z",
-   "value": 24.62
+   "time_utc": "2026-11-06T21:15:01Z",
+   "value": 25.64
   },
   "junk_bond_demand": {
-   "score": 35.2,
+   "score": 35.6,
    "rating": "fear",
-   "time_utc": "2026-11-06T18:41:37Z",
-   "value": 1.24635746231228
+   "time_utc": "2026-11-06T21:10:00Z",
+   "value": 1.2456472567024302
   },
   "safe_haven_demand": {
-   "score": 1.2,
+   "score": 1,
    "rating": "extreme fear",
-   "time_utc": "2026-11-06T18:55:32Z",
-   "value": -7.85954627052413
+   "time_utc": "2026-11-06T20:59:59Z",
+   "value": -8.157836530760889
   }
  },
  "source": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
