@@ -14,8 +14,11 @@
   "tw": {
     "009816": {"market": "TWSE"},
     "00981A": {"market": "TWSE"},
-    "00411A": {"market": "TPEX", "min_date": "2026-08-26"}
+    "00411A": {"market": "TPEX", "min_date": "2026-08-26"},
+    "0050":   {"market": "TWSE", "note": "持股體檢的比較基準（2026-11-07 加）"},
+    "2330":   {"market": "TWSE", "note": "台積電：網站分析頁（2026-11-07 加）"}
   },
+  "stocks": ["2330"],
   "tw_watch": {"0056": {"market": "TWSE"}, "00878": {"market": "TWSE"}, "00919": {"market": "TWSE"}},
   "tw_index": "TSE01",
   "tw_months": 13,
@@ -28,11 +31,12 @@
     "DXY":  {"yahoo": "DX-Y.NYB", "cnyes": "GI:DXY:INDEX",  "name": "美元指數", "session": "24h"},
     "GOLD": {"yahoo": "GC=F",                               "name": "COMEX 黃金期貨（近月）", "session": "24h"},
     "WTI":  {"yahoo": "CL=F",                               "name": "WTI 原油期貨（近月）", "session": "24h"},
-    "TSM":  {"yahoo": "TSM",      "moneydj": "TSM",         "name": "台積電 ADR"}
+    "TSM":  {"yahoo": "TSM",      "moneydj": "TSM",         "name": "台積電 ADR"},
+    "KOSPI": {"yahoo": "^KS11",                             "name": "韓國綜合指數"}
   },
   "valuation": {"VOO": "etf", "GOOGL": "stock", "NVDA": "stock", "TSLA": "stock", "SPCX": "stock", "AAPL": "stock"},
   "holdings": {"00981A": {"source": "ezmoney", "fund": "49YTW"}, "009816": {"source": "kgifund", "fund": "J023"}},
-  "dividend_etfs": ["009816", "00981A", "0056", "00878", "00919"],
+  "dividend_etfs": ["009816", "00981A", "0050", "0056", "00878", "00919"],
   "news": {
     "window_hours": 72,
     "query_when": "2d",

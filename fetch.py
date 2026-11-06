@@ -40,6 +40,7 @@ import chips
 import dividends
 import fxbot
 import macro
+import stocks
 import twindex
 import twwatch
 import valuation
@@ -48,7 +49,7 @@ import valuation
 PHASE1_STEPS = (macro.fetch_macro, macro.fetch_cnn, fxbot.fetch_bot_fx,
                 valuation.fetch_valuation, calendars.fetch_calendar,
                 chips.fetch_chips, twindex.fetch_index,
-                dividends.fetch_dividends, twwatch.fetch_watch)
+                dividends.fetch_dividends, twwatch.fetch_watch, stocks.fetch_stocks)
 
 # 停用的資料集：meta 照樣列出（status＝disabled、原因、停用前最後一次的 latest），檔案保留停用前的內容、不再更新
 DISABLED = {

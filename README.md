@@ -23,7 +23,7 @@ GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所�
 | 路徑 | 內容 | 來源（主 / 核對） |
 |---|---|---|
 | `data/us/<代號>.csv` | 美股日線，已收盤的交易日，最近一年 | MoneyDJ / Yahoo；最後一根 K 棒兩家一致才採用，不一致或缺一家時用 Nasdaq 官方當裁判 |
-| `data/tw/<代號>_norm.csv` | 台股日線，已收盤的交易日 | FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL／櫃買 OpenAPI 收盤行情（最新一天）/ 鉅亨網；00411A 另有 MoneyDJ。2026-11-03 起不再抓證交所 STOCK_DAY 與櫃買網站（換之前逐日比對全同；上櫃成交量仍是張） |
+| `data/tw/<代號>_norm.csv` | 台股日線，已收盤的交易日（`config.json` 的 `tw`：三檔 ETF，2026-11-07 起加 0050 與 2330） | FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL／櫃買 OpenAPI 收盤行情（最新一天）/ 鉅亨網；00411A 另有 MoneyDJ。2026-11-03 起不再抓證交所 STOCK_DAY 與櫃買網站（換之前逐日比對全同；上櫃成交量仍是張） |
 | `data/tw/0056_norm.csv`、`00878_norm.csv`、`00919_norm.csv` | 追蹤用 ETF 日線（`config.json` 的 `tw_watch`，算殖利率用），格式同上、約 13 個月；meta 是 `tw_watch/<代號>`（不在 tw/ 底下，不影響「日線已完整」判斷） | FinMind TaiwanStockPrice（歷史）/ 證交所 OpenAPI STOCK_DAY_ALL（最新一天，同一天以它為準並核對） |
 | `data/tw/quotes.json` | 抓取當下的盤中快照（備援用） | 鉅亨網 |
 | `data/tw/intraday.json` | **2026-11-03 停用**（MIS 網站條款禁止程式下載；檔案保留停用前內容、不再更新，meta 標 `disabled`）：證交所盤中快照（`slot`：早盤＝盤中 11:00 前、午前＝11:00～11:44、午間＝11:45 起、盤外＝不是盤中）：三檔 ETF 與加權指數（TAIEX）的現價 `price`、漲跌、開高低、昨收、累積成交張數、最後成交時間（`time`），ETF 另有最佳一檔買賣價 `bid1`／`ask1`。`price_field` 標價格來源：`z` 最後成交價、`z_retry` 那一刻沒成交（MIS 的 z 是「-」）隔幾秒重抓拿到的（`price_retries` 第幾次，最多 3 次、約 30 秒）、`pz` 前一筆成交價、`bid_ask_mid` 仍沒成交時用買賣中間價、`bid1`／`ask1` 只有單邊報價、`null` 都沒有（原因在 `price_note`）；change 用採用的價格計算。`limit_up`／`limit_down` 不合理就是 null（上櫃的 00411A 無漲跌幅限制，MIS 給 9999.95），原因在 `limit_note`。`session` 標盤前／盤中／收盤後／休市日，只有盤中 `is_trading=true`，其他時段 `note` 寫明價格是哪一天幾點的資料；每檔 `is_today` 標資料日期是不是今天 | 證交所 mis.twse.com.tw getStockInfo；`intraday.py`，由 cron-job.org 約台北 10:05 觸發 |
@@ -33,7 +33,7 @@ GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所�
 | `data/fx/usdtwd_bot_sell.csv` | 台銀美元即期賣出：date,rate，約 13 個月，16:30 前不收當天。格式同上，可直接當排程的 fx_csv（台銀網站擋 GitHub，改由 FinMind 取得，已與台銀網頁 6 個月表逐筆比對一致） | FinMind TaiwanExchangeRate / 與 usdtwd_mid 核對價差 |
 | `data/tv/snapshot.json` | TradingView 日線技術面快照 | TradingView scanner |
 | `data/radar.json`、`data/radar.md` | 技術面雷達判讀（結構、位置、訊號矛盾、關鍵價位）。指標由 repo 日線自己算，TradingView 只提供綜合評分，且只在數據一致時採用 | `radar.py`、`indicators.py` |
-| `data/macro/<名稱>.csv` | 美股指數與總經日線，已收盤的交易日，約 2 年：SPX、IXIC、SOX、VIX、TNX（10 年期殖利率 %）、DXY、GOLD、WTI、TSM（代號對照見 `config.json` 的 `macro`）。DXY、GOLD、WTI 是 24 小時交易：不收週末列；交易日在美東 17:00 結束、18:00 晚盤開盤後 Yahoo 的當天 K 棒會變成晚盤未完成資料，所以只在美東 17:10～18:00 收當天，其餘時間只到前一天（meta 的 `cutoff`、`cutoff_rule`；晚盤重抓時沿用先前收到的乾淨 K 棒，記在 `last_kept_from_previous`） | Yahoo / 鉅亨網（SPX、IXIC、SOX、DXY）、MoneyDJ（TSM，最後一根多數決同 us/） |
+| `data/macro/<名稱>.csv` | 美股指數與總經日線，已收盤的交易日，約 2 年：SPX、IXIC、SOX、VIX、TNX（10 年期殖利率 %）、DXY、GOLD、WTI、TSM、KOSPI（韓國綜合指數，2026-11-07 加；代號對照見 `config.json` 的 `macro`）。DXY、GOLD、WTI 是 24 小時交易：不收週末列；交易日在美東 17:00 結束、18:00 晚盤開盤後 Yahoo 的當天 K 棒會變成晚盤未完成資料，所以只在美東 17:10～18:00 收當天，其餘時間只到前一天（meta 的 `cutoff`、`cutoff_rule`；晚盤重抓時沿用先前收到的乾淨 K 棒，記在 `last_kept_from_previous`） | Yahoo / 鉅亨網（SPX、IXIC、SOX、DXY）、MoneyDJ（TSM，最後一根多數決同 us/） |
 | `data/sentiment/cnn_fear_greed.json` | CNN 恐懼貪婪目前分數與評等、前收／一週／一月／一年前，以及 7 個分項 | CNN dataviz |
 | `data/sentiment/cnn_fear_greed.csv` | 恐懼貪婪每日收盤分數：date,score,rating（逐日累積） | 同上 |
 | `data/sentiment/taifex_vix.csv` | **2026-11-03 停用**（期交所網站下載區，期交所 OpenAPI 沒有 VIX；檔案保留停用前內容，meta 標 `disabled`）：臺指選擇權波動率指數每日收盤：date,vix（逐日累積） | 期交所月檔 |
@@ -43,6 +43,9 @@ GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所�
 | `data/chips/tw_insti.csv` | 關注代號三大法人買賣超（股）：date,code,foreign,foreign_dealer,trust,dealer,total（foreign 不含外資自營商，dealer＝自行買賣＋避險；逐日累積） | FinMind TaiwanStockInstitutionalInvestorsBuySell（2026-11-03 起；換之前與證交所 T86、櫃買 dailyTrade 逐筆比對一致）/ 單一來源 |
 | `data/chips/tw_market_insti.csv` | 集中市場三大法人買賣差額（元）：date,dealer_self,dealer_hedge,trust,foreign,foreign_dealer,total（逐日累積） | FinMind TaiwanStockTotalInstitutionalInvestors（2026-11-03 起，原證交所 BFI82U，逐筆比對一致）/ 合計＝分項加總 |
 | `data/chips/tw_margin.csv` | 集中市場信用交易：date,margin_lots,short_lots,margin_amount_k（融資餘額張、融券餘額張、融資金額仟元；逐日累積） | FinMind TaiwanStockTotalMarginPurchaseShortSale（2026-11-03 起，原證交所 MI_MARGN，逐筆比對一致） |
+| `data/chips/tw_stock_margin.csv` | 個股融資融券（`config.json` 的 `stocks`，目前 2330）：date,code,margin_lots,short_lots（融資餘額張、融券餘額張；每次重抓最近 14 天合併） | FinMind TaiwanStockMarginPurchaseShortSale（`stocks.py`，2026-11-07 起） |
+| `data/chips/tw_holders.csv` | 集保戶股權分散表（每週）：date,code,level,people,shares,pct；分級 1～15 是 1～999 股 …… 1,000,001 股以上，16 差異數調整、17 合計（核對：1～16 股數加總＝合計）。來源只給最新一週，歷史從 2026-11 起累積 | 集保結算所開放資料（政府資料開放平臺 dataset 11452，政府資料開放授權條款第 1 版，提供機關金管會證期局；憑證要 Python 3.12） |
+| `data/fundamentals/tw_revenue.csv` | 個股月營收：month,code,revenue（營收所屬月份 YYYY-MM、元；每次重抓 13 個月合併） | FinMind TaiwanStockMonthRevenue（`stocks.py`，2026-11-07 起） |
 | `data/holdings/<代號>.json` | **2026-11-06 停用，保留到停用前**（投信網站寫明不得轉載，持股改放私人 repo，見下方「注意」）。主動式 ETF（00981A、00411A）最新持股：資料日、每單位淨值、全部持股與權重、期貨與現金、前十大，以及與前一資料日比較（前十大新進／退出、權重變動 ≥1 個百分點、新增／出清）。00411A 持有美股，資料日通常晚一天 | 統一投信 ezmoney / 淨值與 nav_history 核對、權重加總與股票市值核對 |
 | `data/holdings/<代號>_history.csv` | 每日持股：date,code,name,shares,weight（逐日累積；2026-11-06 停用，同上） | 同上 |
 | `data/news/headlines.json` | 新聞標題（最近 72 小時），格式見下方「新聞標題格式」。約 0.7 MB，讀取時請用程式篩選 | Google News RSS（每個查詢跑兩次：限定白名單網站與不限定；2026-11-03 加半導體供應鏈、Anthropic、OpenAI 查詢，symbols 多 `ANTHROPIC`、`OPENAI`）、中央社官方 RSS（財經、科技、國際、兩岸）、federalreserve.gov RSS（新聞稿、演講）；`news.py`，查詢詞、來源等級與主題詞在 `config.json` 的 `news` |
