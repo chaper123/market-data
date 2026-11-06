@@ -94,16 +94,23 @@ def to_utc(text):
     return (t if t.tzinfo else t.replace(tzinfo=UTC)).astimezone(UTC)
 
 
+# 行情網站的個股資料頁（不是新聞），Yahoo股市 2026-11-05 列為 Tier 2 後會混進來：
+# 例「凱基台灣TOP50期貨2706(WVWFM7) 大戶籌碼」「台積電(2330) 走勢圖」
+DATA_PAGE = re.compile(r"\([0-9A-Z]{4,8}(?:\.[A-Z]{2,4})?\)\s*(走勢圖|成交彙整|資券變化|股利政策|申報轉讓|大戶籌碼|法人買賣|個股健診|"
+                       r"股價淨值比河流圖|本益比河流圖|估價|技術分析|基本資料|營收盈餘|財務報表|\d{4}年\d{1,2}月\d{1,2}日)$")
+
+
 def parse_rss(raw):
-    """回傳 [{title, link, source, source_url, published(datetime UTC)}]；沒有發布時間的略過。"""
+    """回傳 [{title, link, source, source_url, published(datetime UTC)}]；沒有發布時間的、個股資料頁略過。"""
     out = []
     for it in ET.fromstring(raw).findall("./channel/item"):
         src = it.find("source")
         name = (src.text or "").strip() if src is not None else ""
         pub = to_utc(it.findtext("pubDate"))
-        if not pub:
+        title = clean_title(it.findtext("title"), name)
+        if not pub or DATA_PAGE.search(title):
             continue
-        out.append({"title": clean_title(it.findtext("title"), name), "link": it.findtext("link"),
+        out.append({"title": title, "link": it.findtext("link"),
                     "source": name, "source_url": src.get("url") if src is not None else None, "published": pub})
     return out
 
@@ -585,8 +592,8 @@ def load_previous(path, tiers):
             t = dt.datetime.strptime(it["published_utc"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=UTC)
         except (KeyError, ValueError):
             continue
-        if it.get("source") == "Federal Reserve":
-            continue  # Fed 每次重抓
+        if it.get("source") == "Federal Reserve" or DATA_PAGE.search(it.get("title", "")):
+            continue  # Fed 每次重抓；個股資料頁不是新聞
         tier, rank = tier_of(it.get("source_url"), tiers)
         # 舊格式（10/22 第一版）的 topics 是查詢名稱
         queries = it.get("queries") or (it.get("topics") if isinstance(it.get("tier"), str) else None) or []

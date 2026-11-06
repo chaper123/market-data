@@ -271,6 +271,16 @@ class NewsTest(unittest.TestCase):
                     news.main()
             self.assertFalse(os.path.exists(os.path.join(tmp, "h.json")))
 
+    def test_data_pages_dropped(self):
+        raw = rss([("凱基台灣TOP50期貨2706(WVWFM7) 大戶籌碼", "Yahoo股市", "https://tw.stock.yahoo.com", "Wed, 21 Oct 2026 08:00:00 GMT"),
+                   ("台積電(2330) 走勢圖", "Yahoo股市", "https://tw.stock.yahoo.com", "Wed, 21 Oct 2026 08:00:00 GMT"),
+                   ("台積電(2330.TW) 2026年11月6日", "Yahoo股市", "https://tw.stock.yahoo.com", "Wed, 21 Oct 2026 08:00:00 GMT"),
+                   ("瑤池金母抄底也扛不住？「這檔ETF」兩天加碼近50億", "Yahoo股市", "https://tw.stock.yahoo.com",
+                    "Wed, 21 Oct 2026 08:00:00 GMT"),
+                   ("台積電(2330)法說會：第四季營收看增", "經濟日報", "https://money.udn.com", "Wed, 21 Oct 2026 08:00:00 GMT")])
+        self.assertEqual([x["title"] for x in news.parse_rss(raw)],
+                         ["瑤池金母抄底也扛不住？「這檔ETF」兩天加碼近50億", "台積電(2330)法說會：第四季營收看增"])
+
     def test_helpers(self):
         self.assertEqual(news.tier_of("https://ca.finance.yahoo.com", CFG["tiers"]), (2, "B"))
         self.assertEqual(news.tier_of("https://www.marketbeat.com", CFG["tiers"]), (4, None))
