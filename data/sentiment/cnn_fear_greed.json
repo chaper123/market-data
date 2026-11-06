@@ -1,7 +1,7 @@
 {
- "fetched_at_taipei": "2026-11-07 02:46",
- "time_utc": "2026-11-06T18:38:32+00:00",
- "score": 22.39,
+ "fetched_at_taipei": "2026-11-07 02:50",
+ "time_utc": "2026-11-06T18:45:46+00:00",
+ "score": 22.94,
  "rating": "extreme fear",
  "previous_close": 19.88,
  "previous_1_week": 26.32,
@@ -9,46 +9,46 @@
  "previous_1_year": 24.34,
  "components": {
   "market_momentum_sp500": {
-   "score": 8.8,
+   "score": 9,
    "rating": "extreme fear",
-   "time_utc": "2026-11-06T18:31:34Z",
-   "value": 7400.91
+   "time_utc": "2026-11-06T18:36:35Z",
+   "value": 7406.78
   },
   "stock_price_strength": {
    "score": 42,
    "rating": "fear",
-   "time_utc": "2026-11-06T18:26:30Z",
-   "value": -3.32020093318356
+   "time_utc": "2026-11-06T18:31:33Z",
+   "value": -3.3201398384171
   },
   "stock_price_breadth": {
    "score": 46.4,
    "rating": "neutral",
-   "time_utc": "2026-11-06T18:26:25Z",
-   "value": 605.228443013986
+   "time_utc": "2026-11-06T18:31:28Z",
+   "value": 606.303512049573
   },
   "put_call_options": {
    "score": 14.6,
    "rating": "extreme fear",
-   "time_utc": "2026-11-06T18:26:34Z",
-   "value": 0.853909661208028
+   "time_utc": "2026-11-06T18:31:39Z",
+   "value": 0.854287246625074
   },
   "market_volatility_vix": {
-   "score": 10.5633802816901,
+   "score": 11.9718309859155,
    "rating": "extreme fear",
-   "time_utc": "2026-11-06T18:26:31Z",
-   "value": 25.45
+   "time_utc": "2026-11-06T18:31:31Z",
+   "value": 25.01
   },
   "junk_bond_demand": {
    "score": 35.2,
    "rating": "fear",
-   "time_utc": "2026-11-06T18:26:32Z",
-   "value": 1.246246091238
+   "time_utc": "2026-11-06T18:31:36Z",
+   "value": 1.24631455556355
   },
   "safe_haven_demand": {
    "score": 1.2,
    "rating": "extreme fear",
-   "time_utc": "2026-11-06T18:38:32Z",
-   "value": -7.89754027761408
+   "time_utc": "2026-11-06T18:45:46Z",
+   "value": -7.90844832588376
   }
  },
  "source": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
