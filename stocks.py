@@ -51,11 +51,11 @@ def merge(path, new_rows, key_len):
 
 
 def stock_margin(codes):
-    have = {r[1] for r in read_rows(PATHS["chips/tw_stock_margin"])}
+    old = read_rows(PATHS["chips/tw_stock_margin"])
     out = []
     for code in codes:
-        # 新代號先補 120 天，之後每次只重抓最近 LOOKBACK_DAYS 天
-        days = LOOKBACK_DAYS if code in have else 120
+        # 歷史不到 60 個交易日（新代號）先補 120 天，之後每次只重抓最近 LOOKBACK_DAYS 天
+        days = LOOKBACK_DAYS if sum(r[1] == code for r in old) >= 60 else 120
         start = (NOW.astimezone(TPE).date() - dt.timedelta(days=days)).isoformat()
         for x in finmind("TaiwanStockMarginPurchaseShortSale", code, start):
             out.append([x["date"], code, int(x["MarginPurchaseTodayBalance"]), int(x["ShortSaleTodayBalance"])])

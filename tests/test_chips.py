@@ -56,6 +56,20 @@ class ChipsTest(unittest.TestCase):
         self.assertIn(["2026-10-30", "00981A", "0", "0", "0", "0", "0"], rows["tw_insti"])  # 新代號補到檔案最早的 10/30
         self.assertEqual(len([r for r in rows["tw_insti"] if r[0] == "2026-10-30"]), 2)
 
+    def test_code_with_recent_rows_backfills_older_days(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            paths = {k: os.path.join(tmp, "chips", f"{k}.csv") for k in chips.PATHS}
+            common.write_rows(paths["tw_insti"], [["2026-10-29", "009816", 0, 0, 0, 0, 0], ["2026-10-30", "009816", 0, 0, 0, 0, 0],
+                                                  ["2026-10-30", "00981A", 0, 0, 0, 0, 0], ["2026-11-02", "009816", 0, 0, 0, 0, 0],
+                                                  ["2026-11-02", "00981A", 0, 0, 0, 0, 0]])
+            common.write_rows(paths["tw_market_insti"], [["2026-11-02", -10, -20, 30, -40, 0, -40]])
+            common.write_rows(paths["tw_margin"], [["2026-11-02", 1, 1, 1]])
+            meta = {"datasets": {}, "errors": []}
+            with mock.patch.multiple(chips, DATA=tmp, NOW=NOW, PATHS=paths, finmind=fake_finmind, LOOKBACK_DAYS=2),                     mock.patch.object(common, "_PREV_META", {}):
+                chips.fetch_chips({"tw": {"009816": {"market": "TWSE"}, "00981A": {"market": "TWSE"}}}, meta)
+            rows = common.read_rows(paths["tw_insti"])
+        self.assertIn(["2026-10-29", "00981A", "0", "0", "0", "0", "0"], rows)  # 00981A 缺的 10/29 補上
+
     def test_conversion_and_zero_fill(self):
         rows, ds = self.run_fetch()
         self.assertIn(["2026-11-02", "009816", "-13507165", "0", "0", "-171551760", "-185058925"], rows["tw_insti"])
