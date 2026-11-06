@@ -86,6 +86,7 @@
       "2A": ["reuters.com", "apnews.com", "bloomberg.com", "wsj.com", "ft.com", "cnbc.com", "cna.com.tw"],
       "2B": ["barrons.com", "marketwatch.com", "axios.com", "finance.yahoo.com", "money.udn.com", "ctee.com.tw", "udn.com",
              "cnyes.com", "moneydj.com", "tw.stock.yahoo.com"],
+      "4": ["blog.udn.com"],
       "3": ["blogs.nvidia.com", "developer.nvidia.com", "blog.google", "x.com", "truthsocial.com"]
     },
     "topic_rules": {

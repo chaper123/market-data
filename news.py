@@ -74,9 +74,10 @@ def domain(url):
 
 
 def tier_of(url, tiers):
-    """回傳 (tier, rank)：tier 1～4；主要媒體再分 rank A／B，其他為 None。"""
+    """回傳 (tier, rank)：tier 1～4；主要媒體再分 rank A／B，其他為 None。
+    tiers["4"] 先比對：主要媒體網域底下的部落格這類（例 blog.udn.com）直接算 4。"""
     host = domain(url)
-    for key, tier, rank in (("1", 1, None), ("2A", 2, "A"), ("2B", 2, "B"), ("3", 3, None)):
+    for key, tier, rank in (("4", 4, None), ("1", 1, None), ("2A", 2, "A"), ("2B", 2, "B"), ("3", 3, None)):
         if any(host == d or host.endswith("." + d) for d in tiers.get(key, [])):
             return tier, rank
     return 4, None

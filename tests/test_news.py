@@ -303,6 +303,8 @@ class NewsTest(unittest.TestCase):
     def test_helpers(self):
         self.assertEqual(news.tier_of("https://ca.finance.yahoo.com", CFG["tiers"]), (2, "B"))
         self.assertEqual(news.tier_of("https://www.marketbeat.com", CFG["tiers"]), (4, None))
+        blog = {"4": ["blog.udn.com"], "2B": ["udn.com"]}
+        self.assertEqual((news.tier_of("https://blog.udn.com", blog), news.tier_of("https://udn.com", blog)), ((4, None), (2, "B")))
         self.assertEqual(news.clean_title("Fed holds rates - Reuters", "Reuters"), "Fed holds rates")
         self.assertTrue(news.term_hit("fed", "fed's powell signals pause"))
         self.assertFalse(news.term_hit("apple", "pineapple prices jump"))
