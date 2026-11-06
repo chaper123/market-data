@@ -14,7 +14,7 @@
   集保的憑證在 Python 3.13 起會被嚴格檢查擋下（Missing Subject Key Identifier），workflow 固定 3.12。
 - 個股日線與三大法人：代號另外加在 config.json 的 tw，由 fetch.py fetch_tw 與 chips.py 處理。
 
-每次都重抓最近一段（融資 LOOKBACK_DAYS 天、營收 13 個月）並跟舊檔合併，漏跑會自動補；同一天（週、月）以新抓的為準。
+每次都重抓最近一段（融資 LOOKBACK_DAYS 天、營收兩年）並跟舊檔合併，漏跑會自動補；同一天（週、月）以新抓的為準。
 核對：股權分散的分級 1～15 股數加總扣掉（或加上）16 差異數調整要等於合計；占比合計要是 100。
 """
 import csv
@@ -64,7 +64,7 @@ def stock_margin(codes):
 
 def revenue(codes):
     tp = NOW.astimezone(TPE).date()
-    start = f"{tp.year - 1}-{tp.month:02d}-01"
+    start = f"{tp.year - 2}-{tp.month:02d}-01"  # 兩年：最新月份也算得出年增率
     out = []
     for code in codes:
         for x in finmind("TaiwanStockMonthRevenue", code, start):

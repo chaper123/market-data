@@ -22,9 +22,9 @@ GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所�
 
 | 路徑 | 內容 | 來源（主 / 核對） |
 |---|---|---|
-| `data/us/<代號>.csv` | 美股日線，已收盤的交易日，最近一年 | MoneyDJ / Yahoo；最後一根 K 棒兩家一致才採用，不一致或缺一家時用 Nasdaq 官方當裁判 |
-| `data/tw/<代號>_norm.csv` | 台股日線，已收盤的交易日（`config.json` 的 `tw`：三檔 ETF，2026-11-07 起加 0050 與 2330） | FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL／櫃買 OpenAPI 收盤行情（最新一天）/ 鉅亨網；00411A 另有 MoneyDJ。2026-11-03 起不再抓證交所 STOCK_DAY 與櫃買網站（換之前逐日比對全同；上櫃成交量仍是張） |
-| `data/tw/0056_norm.csv`、`00878_norm.csv`、`00919_norm.csv` | 追蹤用 ETF 日線（`config.json` 的 `tw_watch`，算殖利率用），格式同上、約 13 個月；meta 是 `tw_watch/<代號>`（不在 tw/ 底下，不影響「日線已完整」判斷） | FinMind TaiwanStockPrice（歷史）/ 證交所 OpenAPI STOCK_DAY_ALL（最新一天，同一天以它為準並核對） |
+| `data/us/<代號>.csv` | 美股日線，已收盤的交易日，最近兩年（2026-11-07 從一年延長） | MoneyDJ / Yahoo；最後一根 K 棒兩家一致才採用，不一致或缺一家時用 Nasdaq 官方當裁判 |
+| `data/tw/<代號>_norm.csv` | 台股日線，已收盤的交易日，約 24 個月（`tw_months`；2026-11-07 從 13 個月延長，網站持股體檢要算近 1 年在 200 日均線下的天數）（`config.json` 的 `tw`：三檔 ETF，2026-11-07 起加 0050 與 2330） | FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL／櫃買 OpenAPI 收盤行情（最新一天）/ 鉅亨網；00411A 另有 MoneyDJ。2026-11-03 起不再抓證交所 STOCK_DAY 與櫃買網站（換之前逐日比對全同；上櫃成交量仍是張） |
+| `data/tw/0056_norm.csv`、`00878_norm.csv`、`00919_norm.csv` | 追蹤用 ETF 日線（`config.json` 的 `tw_watch`，算殖利率用），格式同上、約 24 個月；meta 是 `tw_watch/<代號>`（不在 tw/ 底下，不影響「日線已完整」判斷） | FinMind TaiwanStockPrice（歷史）/ 證交所 OpenAPI STOCK_DAY_ALL（最新一天，同一天以它為準並核對） |
 | `data/tw/quotes.json` | 抓取當下的盤中快照（備援用） | 鉅亨網 |
 | `data/tw/intraday.json` | **2026-11-03 停用**（MIS 網站條款禁止程式下載；檔案保留停用前內容、不再更新，meta 標 `disabled`）：證交所盤中快照（`slot`：早盤＝盤中 11:00 前、午前＝11:00～11:44、午間＝11:45 起、盤外＝不是盤中）：三檔 ETF 與加權指數（TAIEX）的現價 `price`、漲跌、開高低、昨收、累積成交張數、最後成交時間（`time`），ETF 另有最佳一檔買賣價 `bid1`／`ask1`。`price_field` 標價格來源：`z` 最後成交價、`z_retry` 那一刻沒成交（MIS 的 z 是「-」）隔幾秒重抓拿到的（`price_retries` 第幾次，最多 3 次、約 30 秒）、`pz` 前一筆成交價、`bid_ask_mid` 仍沒成交時用買賣中間價、`bid1`／`ask1` 只有單邊報價、`null` 都沒有（原因在 `price_note`）；change 用採用的價格計算。`limit_up`／`limit_down` 不合理就是 null（上櫃的 00411A 無漲跌幅限制，MIS 給 9999.95），原因在 `limit_note`。`session` 標盤前／盤中／收盤後／休市日，只有盤中 `is_trading=true`，其他時段 `note` 寫明價格是哪一天幾點的資料；每檔 `is_today` 標資料日期是不是今天 | 證交所 mis.twse.com.tw getStockInfo；`intraday.py`，由 cron-job.org 約台北 10:05 觸發 |
 | `data/tw/nav_history.csv` | **2026-11-03 停用**（MIS 網站條款禁止程式下載；檔案保留停用前內容、不再更新，meta 標 `disabled`）：ETF 每日淨值與當日收盤折溢價：date,code,nav,close,premium_pct,source（逐日累積） | 證交所基本市況報導網站 mis.twse.com.tw |
@@ -45,7 +45,7 @@ GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所�
 | `data/chips/tw_margin.csv` | 集中市場信用交易：date,margin_lots,short_lots,margin_amount_k（融資餘額張、融券餘額張、融資金額仟元；逐日累積） | FinMind TaiwanStockTotalMarginPurchaseShortSale（2026-11-03 起，原證交所 MI_MARGN，逐筆比對一致） |
 | `data/chips/tw_stock_margin.csv` | 個股融資融券（`config.json` 的 `stocks`，目前 2330）：date,code,margin_lots,short_lots（融資餘額張、融券餘額張；每次重抓最近 14 天合併） | FinMind TaiwanStockMarginPurchaseShortSale（`stocks.py`，2026-11-07 起） |
 | `data/chips/tw_holders.csv` | 集保戶股權分散表（每週）：date,code,level,people,shares,pct；分級 1～15 是 1～999 股 …… 1,000,001 股以上，16 差異數調整、17 合計（核對：1～16 股數加總＝合計）。來源只給最新一週，歷史從 2026-11 起累積 | 集保結算所開放資料（政府資料開放平臺 dataset 11452，政府資料開放授權條款第 1 版，提供機關金管會證期局；憑證要 Python 3.12） |
-| `data/fundamentals/tw_revenue.csv` | 個股月營收：month,code,revenue（營收所屬月份 YYYY-MM、元；每次重抓 13 個月合併） | FinMind TaiwanStockMonthRevenue（`stocks.py`，2026-11-07 起） |
+| `data/fundamentals/tw_revenue.csv` | 個股月營收：month,code,revenue（營收所屬月份 YYYY-MM、元；每次重抓兩年合併） | FinMind TaiwanStockMonthRevenue（`stocks.py`，2026-11-07 起） |
 | `data/holdings/<代號>.json` | **2026-11-06 停用，保留到停用前**（投信網站寫明不得轉載，持股改放私人 repo，見下方「注意」）。主動式 ETF（00981A、00411A）最新持股：資料日、每單位淨值、全部持股與權重、期貨與現金、前十大，以及與前一資料日比較（前十大新進／退出、權重變動 ≥1 個百分點、新增／出清）。00411A 持有美股，資料日通常晚一天 | 統一投信 ezmoney / 淨值與 nav_history 核對、權重加總與股票市值核對 |
 | `data/holdings/<代號>_history.csv` | 每日持股：date,code,name,shares,weight（逐日累積；2026-11-06 停用，同上） | 同上 |
 | `data/news/headlines.json` | 新聞標題（最近 72 小時），格式見下方「新聞標題格式」。約 0.7 MB，讀取時請用程式篩選 | Google News RSS（每個查詢跑兩次：限定白名單網站與不限定；2026-11-03 加半導體供應鏈、Anthropic、OpenAI 查詢，symbols 多 `ANTHROPIC`、`OPENAI`）、中央社官方 RSS（財經、科技、國際、兩岸）、federalreserve.gov RSS（新聞稿、演講）；`news.py`，查詢詞、來源等級與主題詞在 `config.json` 的 `news` |
@@ -65,7 +65,7 @@ CSV 欄位：`date,volume,open,high,low,close`（無表頭），與排程任務�
 `macro/`、`sentiment/`、`fx/usdtwd_bot_sell.csv`、`valuation/`、`calendar/`、`chips/`、`holdings/` 等 Phase 1 新資料由 `macro.py` 等模組產生，只在完整抓取時更新（只更新淨值的那幾次不動）；某一項失敗時保留舊檔、meta 標 stale，不影響日線。
 
 `meta.json` 的 `status`：`ok` 本次成功；`stale` 本次失敗，檔案是上一次的；`fail` 從未成功。
-`cross_check_ok=false` 代表主來源與核對來源的收盤差超過 0.5%。美股（us/、macro/TSM）另有 `last_bar_source`（最後一根 K 棒採用的來源）、`last_bar_referee`（是否動用 Nasdaq 官方裁判）、`last_bar_votes`（各來源的值）、`history_mismatch`（近一年兩家收盤差超過 0.5% 的根數）；只有 MoneyDJ 一票、Yahoo 與 Nasdaq 都還沒有那一天時，先收 MoneyDJ 的值並標 `last_bar_single_source=true`、`cross_check_ok=null`（尚未核對，不是核對失敗），日期記在 `single_source_days`；之後的抓取等 Yahoo 有了再核對（一致就清除標記，不一致照常請 Nasdaq 裁判、必要時改正，結果記在 `rechecked`；超過 10 天仍無法核對就停止追蹤）。有待核對的日子時不算「日線已完整」，後面的排程會再做一次完整抓取。裁判也無法判定時，那一根先不收，`last_bar_unresolved` 記日期、`cross_check_ok=false`。
+`cross_check_ok=false` 代表主來源與核對來源的收盤差超過 0.5%。美股（us/、macro/TSM）另有 `last_bar_source`（最後一根 K 棒採用的來源）、`last_bar_referee`（是否動用 Nasdaq 官方裁判）、`last_bar_votes`（各來源的值）、`history_mismatch`（保留期間兩家收盤差超過 0.5% 的根數）；只有 MoneyDJ 一票、Yahoo 與 Nasdaq 都還沒有那一天時，先收 MoneyDJ 的值並標 `last_bar_single_source=true`、`cross_check_ok=null`（尚未核對，不是核對失敗），日期記在 `single_source_days`；之後的抓取等 Yahoo 有了再核對（一致就清除標記，不一致照常請 Nasdaq 裁判、必要時改正，結果記在 `rechecked`；超過 10 天仍無法核對就停止追蹤）。有待核對的日子時不算「日線已完整」，後面的排程會再做一次完整抓取。裁判也無法判定時，那一根先不收，`last_bar_unresolved` 記日期、`cross_check_ok=false`。
 
 鉅亨網的美股最後一根 K 棒常停在盤中價（2026-10-16 檢查：ARKX、TSM 到台北中午仍未更新；過去一年 VOO、IAUM、ARK 系列、TSM 各有 5～9 根收盤錯 0.5% 以上，成交量也偏少），所以美股與 00411A 不再以鉅亨網為主。
 

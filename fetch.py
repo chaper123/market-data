@@ -78,7 +78,7 @@ META = {"generated_at_utc": NOW.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "datasets": {}, "errors": []}
 
 
-US_DAYS = 365  # 只留最近一年（約 250 列，和過去用鉅亨網時相同）
+US_DAYS = 730  # 留最近兩年（約 500 列；2026-11-07 從一年延長，網站持股體檢要算近 1 年在 200 日均線下的天數）
 
 
 def daily_meta(rows, vote):
@@ -86,7 +86,7 @@ def daily_meta(rows, vote):
     null＝最後一根是單一來源、尚未核對（last_bar_single_source=true，不算核對失敗）；false＝無法判定、那根沒收。"""
     m = summary(rows, vote.pop("base_source"))
     m.update(vote)
-    m["cross_check"] = (f"最後一根：{vote['last_bar_votes']}；近一年兩家收盤差 >0.5% 共 "
+    m["cross_check"] = (f"最後一根：{vote['last_bar_votes']}；保留期間兩家收盤差 >0.5% 共 "
                         f"{vote.get('history_mismatch', '—')} 根")
     if vote.get("single_source_days"):
         m["cross_check"] += f"；待核對 {'、'.join(vote['single_source_days'])}"
