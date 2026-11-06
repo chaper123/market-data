@@ -642,36 +642,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-06 18:39",
-   "items": 2209,
+   "last": "2026-11-06 21:00",
+   "items": 2313,
    "by_tier": {
-    "4": 396,
-    "2": 1801,
+    "4": 401,
+    "2": 1900,
     "3": 7,
     "1": 5
    },
    "feeds_ok": "50/50",
    "errors": 0,
-   "url_ok": 1147,
-   "url_total": 1147,
-   "time_suspect_detected": 7,
-   "time_fixed": 7,
+   "url_ok": 1248,
+   "url_total": 1248,
+   "time_suspect_detected": 9,
+   "time_fixed": 9,
    "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-06 18:39",
+   "checked_at_taipei": "2026-11-06 21:00",
    "items": 1
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-06 17:33",
-   "items": 274,
+   "last": "2026-11-06 19:50",
+   "items": 303,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-06 18:39"
+   "checked_at_taipei": "2026-11-06 21:00"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -725,22 +725,22 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-06 18:39",
+   "last": "2026-11-06 21:00",
    "days_available": 6,
    "rising_topic": "fed",
    "rising_terms": [
     "國安基",
     "安基金",
     "崩跌",
-    "最大",
-    "進場"
+    "空令",
+    "限空"
    ]
   },
   "news/nsf": {
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-06 18:39",
+   "checked_at_taipei": "2026-11-06 21:00",
    "items": 10
   }
  },
