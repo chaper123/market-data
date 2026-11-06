@@ -642,36 +642,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-06 11:10",
-   "items": 1976,
+   "last": "2026-11-06 13:40",
+   "items": 2042,
    "by_tier": {
-    "2": 1585,
-    "4": 380,
-    "3": 6,
+    "2": 1645,
+    "4": 385,
+    "3": 7,
     "1": 5
    },
    "feeds_ok": "48/48",
    "errors": 0,
-   "url_ok": 956,
-   "url_total": 956,
-   "time_suspect_detected": 22,
-   "time_fixed": 22,
+   "url_ok": 1006,
+   "url_total": 1006,
+   "time_suspect_detected": 16,
+   "time_fixed": 16,
    "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-06 11:10",
+   "checked_at_taipei": "2026-11-06 13:40",
    "items": 1
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-06 10:20",
-   "items": 217,
+   "last": "2026-11-06 12:59",
+   "items": 227,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-06 11:10"
+   "checked_at_taipei": "2026-11-06 13:40"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -725,15 +725,15 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-06 11:10",
+   "last": "2026-11-06 13:40",
    "days_available": 6,
    "rising_topic": "fed",
    "rising_terms": [
-    "跌停",
     "國安",
+    "安基",
     "崩跌",
     "最大",
-    "selloff"
+    "救市"
    ]
   }
  },
