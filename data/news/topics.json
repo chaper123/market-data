@@ -1,5 +1,5 @@
 {
- "generated_at_taipei": "2026-11-06 16:30",
+ "generated_at_taipei": "2026-11-06 18:33",
  "rule": "count_1d＝最近 24 小時；count_7d／count_30d＝最近 7／30 個台北日曆日（含今天）；rise＝(count_7d/7)÷(count_30d/30)，歷史不足時分母用已有天數；rising_terms 的 score＝近 24 小時則數÷(今天以外的日平均＋1)。固定規則計數，不做預測",
  "days_available": 6,
  "history_since": "2026-11-01",
@@ -7,7 +7,7 @@
   {
    "topic": "fed",
    "label": "Fed／利率",
-   "count_1d": 33,
+   "count_1d": 32,
    "count_7d": 58,
    "count_30d": 58,
    "rise": 1.0,
@@ -22,16 +22,16 @@
   {
    "topic": "tariff",
    "label": "關稅",
-   "count_1d": 28,
-   "count_7d": 63,
-   "count_30d": 63,
+   "count_1d": 27,
+   "count_7d": 64,
+   "count_30d": 64,
    "rise": 1.0,
    "sample_ids": [
     "d909a9bf6db3203c",
     "8edaf191d3c6c7f8",
     "62d7ffd1ae65e3cf",
     "4271c6b376df6def",
-    "739d05c640a86563"
+    "7611974afcdfe5fd"
    ]
   },
   {
@@ -51,43 +51,43 @@
   {
    "topic": "china",
    "label": "中國",
-   "count_1d": 44,
-   "count_7d": 140,
-   "count_30d": 140,
+   "count_1d": 47,
+   "count_7d": 144,
+   "count_30d": 144,
    "rise": 1.0,
    "sample_ids": [
-    "c362e90a6be3fae6",
-    "253c2b3c2e384631",
-    "b5c21d2a3ae48118",
-    "e452da9d620edc0d",
-    "3546b25ffc740c71"
+    "9de8c1a94aded9ca",
+    "2a5d7b4d71825d01",
+    "0fa9ebe7a0c0d8ac",
+    "ba45acd89da74ec5",
+    "d122db2bb8704807"
    ]
   },
   {
    "topic": "taiwan",
    "label": "台灣",
-   "count_1d": 73,
-   "count_7d": 167,
-   "count_30d": 167,
+   "count_1d": 66,
+   "count_7d": 155,
+   "count_30d": 155,
    "rise": 1.0,
    "sample_ids": [
     "ca69f0b1fa666a21",
-    "ad1f8fc5a8c2b08d",
-    "a214fe0d9da3def6",
-    "c4f222ee4aac3ad9",
-    "2c3a54977ef12140"
+    "9de8c1a94aded9ca",
+    "5b87798739a6a1bc",
+    "c5702717041f93b9",
+    "45d261a1070866e5"
    ]
   },
   {
    "topic": "oil",
    "label": "油價",
-   "count_1d": 5,
-   "count_7d": 25,
-   "count_30d": 25,
+   "count_1d": 6,
+   "count_7d": 26,
+   "count_30d": 26,
    "rise": 1.0,
    "sample_ids": [
-    "1a750dd3204303d4",
-    "c362e90a6be3fae6",
+    "a06eab15f23bd393",
+    "d122db2bb8704807",
     "fad6547739da9640",
     "558b8b69a0b20d97",
     "2233179a00b34bd7"
@@ -102,120 +102,161 @@
    "rise": 1.0,
    "sample_ids": [
     "f998f9e80fa42324",
+    "7611974afcdfe5fd",
     "f5e4a912fba5bec6",
     "831f04b5de88ae42",
-    "ef9267105d3d1d5e",
-    "59264640941409fd"
+    "ef9267105d3d1d5e"
    ]
   },
   {
    "topic": "cpi",
    "label": "通膨",
-   "count_1d": 7,
-   "count_7d": 13,
-   "count_30d": 13,
+   "count_1d": 8,
+   "count_7d": 15,
+   "count_30d": 15,
    "rise": 1.0,
    "sample_ids": [
+    "35f0dc5be2e022ad",
     "f0f7c0b704c9f477",
     "667f05aa2d25b512",
     "63dc85ebcc647202",
-    "ff4e373c88fdf2be",
-    "b7bf056515e4d478"
+    "ff4e373c88fdf2be"
    ]
   },
   {
    "topic": "jobs",
    "label": "就業",
-   "count_1d": 1,
-   "count_7d": 2,
-   "count_30d": 2,
+   "count_1d": 2,
+   "count_7d": 3,
+   "count_30d": 3,
    "rise": 1.0,
    "sample_ids": [
     "942ce0127946d65b",
+    "ab7dbbf134b22133",
     "d5f2b68acf062469"
    ]
   },
   {
    "topic": "earnings",
    "label": "財報",
-   "count_1d": 39,
-   "count_7d": 154,
-   "count_30d": 154,
+   "count_1d": 44,
+   "count_7d": 162,
+   "count_30d": 162,
    "rise": 1.0,
    "sample_ids": [
-    "ecc37f90cfc9cfa8",
-    "64677cb0a5e6923d",
-    "d9d5421ca9f9dd02",
-    "6f4be49fa9209058",
-    "176dabf53d632580"
+    "cba3a922853a51a3",
+    "dcfed4339909c3d8",
+    "73bac700880b771c",
+    "44cd76909d011cda",
+    "38556b47cb629226"
    ]
   },
   {
    "topic": "antitrust",
    "label": "反壟斷",
-   "count_1d": 0,
-   "count_7d": 1,
-   "count_30d": 1,
+   "count_1d": 1,
+   "count_7d": 2,
+   "count_30d": 2,
    "rise": 1.0,
    "sample_ids": [
-    "20f2ab730351081e"
+    "20f2ab730351081e",
+    "80d21bb28613d461"
    ]
   },
   {
    "topic": "merger",
    "label": "併購",
-   "count_1d": 13,
-   "count_7d": 36,
-   "count_30d": 36,
+   "count_1d": 14,
+   "count_7d": 37,
+   "count_30d": 37,
    "rise": 1.0,
    "sample_ids": [
-    "0854301cb32d0070",
-    "64677cb0a5e6923d",
-    "52f8ff33a196da50",
-    "d9d5421ca9f9dd02",
-    "4d72f2379b5e0b1f"
+    "73bac700880b771c",
+    "44cd76909d011cda",
+    "38556b47cb629226",
+    "bd2cb4fa9c126f9a",
+    "e5b136a041d6f49b"
    ]
   }
  ],
  "rising_topic": "fed",
  "rising_terms": [
   {
-   "term": "國安",
-   "count_1d": 20,
-   "count_30d": 20,
-   "score": 20.0,
+   "term": "國安基",
+   "count_1d": 59,
+   "count_30d": 59,
+   "score": 59.0,
    "sample_ids": [
-    "90c8c57471d8743b",
-    "9226fe44d01537ff",
-    "9f1df181e1278f64",
-    "3f55556f89a4bae3",
-    "569f4a112b3915cb"
+    "ecddf62d83d2441b",
+    "9fdf2d610a921be9",
+    "5b643ba62cae839b",
+    "3e286a281c1aa6c6",
+    "7594d842bcda3d95"
+   ]
+  },
+  {
+   "term": "安基金",
+   "count_1d": 59,
+   "count_30d": 59,
+   "score": 59.0,
+   "sample_ids": [
+    "ecddf62d83d2441b",
+    "9fdf2d610a921be9",
+    "5b643ba62cae839b",
+    "3e286a281c1aa6c6",
+    "7594d842bcda3d95"
    ]
   },
   {
    "term": "崩跌",
-   "count_1d": 20,
-   "count_30d": 20,
-   "score": 20.0,
+   "count_1d": 36,
+   "count_30d": 36,
+   "score": 36.0,
    "sample_ids": [
-    "272d50ef4186aecd",
-    "d22e28a1d7d7bf55",
-    "9a8f21cead69fe6d",
-    "90c8c57471d8743b",
-    "e149763c9f539404"
+    "7594d842bcda3d95",
+    "e118a9c64b310ad4",
+    "c732b236150e2035",
+    "12615a24d19f52aa",
+    "80c05f04a0790a88"
    ]
   },
   {
-   "term": "股暴跌",
-   "count_1d": 26,
+   "term": "最大",
+   "count_1d": 27,
    "count_30d": 28,
-   "score": 18.57,
+   "score": 22.5,
    "sample_ids": [
-    "e150337d68aa124a",
-    "21fb76af07b80cc8",
-    "937dfd9f0ac74fec",
-    "be8ebd03647fcede",
-    "5dfee7dab70a58ce"
+    "27b115d602b13c1d",
+    "d83986a8b70c3a4f",
+    "0d3265b1ed6d49e9",
+    "9a2854ee9155b765",
+    "5488ff33ca1c153a"
+   ]
+  },
+  {
+   "term": "進場",
+   "count_1d": 38,
+   "count_30d": 42,
+   "score": 21.11,
+   "sample_ids": [
+    "9fdf2d610a921be9",
+    "5b643ba62cae839b",
+    "7594d842bcda3d95",
+    "e3bdb5749964baaa",
+    "dbaf16473ee583e3"
+   ]
+  },
+  {
+   "term": "股崩",
+   "count_1d": 18,
+   "count_30d": 18,
+   "score": 18.0,
+   "sample_ids": [
+    "7594d842bcda3d95",
+    "c732b236150e2035",
+    "2842e6110fd74762",
+    "80c05f04a0790a88",
+    "1c200c9f61041dfd"
    ]
   },
   {
@@ -224,154 +265,115 @@
    "count_30d": 17,
    "score": 17.0,
    "sample_ids": [
+    "5b87798739a6a1bc",
     "241d0ed804836fa6",
     "25391719492eb5e5",
     "b6ea33c9aceaeb22",
-    "b1b0432b3240843e",
-    "22d42d2c7cb0a05e"
-   ]
-  },
-  {
-   "term": "powell",
-   "count_1d": 16,
-   "count_30d": 16,
-   "score": 16.0,
-   "sample_ids": [
-    "65697c22c1b6ee63",
-    "12077eb25061959c",
-    "652ee172a9fb1883",
-    "1f465be74695ab82",
-    "7ab64f20c228eb11"
-   ]
-  },
-  {
-   "term": "最大",
-   "count_1d": 19,
-   "count_30d": 20,
-   "score": 15.83,
-   "sample_ids": [
-    "c362e90a6be3fae6",
-    "5488ff33ca1c153a",
-    "b95ada3a83fbd0d7",
-    "942ce0127946d65b",
-    "3926fa02e99b899d"
-   ]
-  },
-  {
-   "term": "股崩",
-   "count_1d": 15,
-   "count_30d": 15,
-   "score": 15.0,
-   "sample_ids": [
-    "272d50ef4186aecd",
-    "d22e28a1d7d7bf55",
-    "9a8f21cead69fe6d",
-    "90c8c57471d8743b",
-    "283d4adbe58390e5"
+    "b1b0432b3240843e"
    ]
   },
   {
    "term": "股狂",
-   "count_1d": 15,
-   "count_30d": 15,
-   "score": 15.0,
-   "sample_ids": [
-    "c502cfa3cfc57ce6",
-    "fafc3498b9183d0b",
-    "49fa7c74f2a109e7",
-    "9f1df181e1278f64",
-    "9c3005485a05dec8"
-   ]
-  },
-  {
-   "term": "料中",
    "count_1d": 17,
-   "count_30d": 18,
-   "score": 14.17,
+   "count_30d": 17,
+   "score": 17.0,
    "sample_ids": [
-    "4b529c29d9f38772",
-    "8c85dc23f2f3f631",
-    "a59327339d8c86bd",
-    "c0a55b857cbaebec",
-    "99d9825ff5f72d40"
+    "9ef4ad9d4b379486",
+    "39bdf6b9c33166e6",
+    "c502cfa3cfc57ce6",
+    "c502cfa3cfc57ce6",
+    "fafc3498b9183d0b"
    ]
   },
   {
-   "term": "安基",
-   "count_1d": 14,
-   "count_30d": 14,
-   "score": 14.0,
+   "term": "股暴跌",
+   "count_1d": 27,
+   "count_30d": 30,
+   "score": 16.88,
    "sample_ids": [
-    "90c8c57471d8743b",
-    "9226fe44d01537ff",
-    "9f1df181e1278f64",
-    "735fd4c2e1780457",
-    "1fbabee98bb20a74"
-   ]
-  },
-  {
-   "term": "救市",
-   "count_1d": 14,
-   "count_30d": 14,
-   "score": 14.0,
-   "sample_ids": [
-    "2dccfdf0b53a9fec",
-    "49fa7c74f2a109e7",
-    "9caf27884a451e40",
-    "3bf3c7ac4c0d5a0f",
-    "dbaae02f5a3aa4e1"
-   ]
-  },
-  {
-   "term": "暴跌",
-   "count_1d": 46,
-   "count_30d": 58,
-   "score": 13.53,
-   "sample_ids": [
-    "b57a40f28a60bfa9",
-    "e150337d68aa124a",
-    "577b96b18d5c27f8",
+    "051702f7fa2dd0ce",
+    "3300d929e0d0b9e8",
+    "bb82da6513aa67e5",
     "21fb76af07b80cc8",
-    "6072662d4e20b9cf"
-   ]
-  },
-  {
-   "term": "台股暴",
-   "count_1d": 21,
-   "count_30d": 24,
-   "score": 13.12,
-   "sample_ids": [
-    "e150337d68aa124a",
-    "21fb76af07b80cc8",
-    "937dfd9f0ac74fec",
-    "be8ebd03647fcede",
-    "5dfee7dab70a58ce"
-   ]
-  },
-  {
-   "term": "rout",
-   "count_1d": 18,
-   "count_30d": 20,
-   "score": 12.86,
-   "sample_ids": [
-    "6fa2be2b31b92e45",
-    "5e08b157316f0518",
-    "e6144f684604e575",
-    "28f46f7081ae6fb0",
-    "4271c6b376df6def"
+    "937dfd9f0ac74fec"
    ]
   },
   {
    "term": "史上",
-   "count_1d": 28,
-   "count_30d": 35,
-   "score": 11.67,
+   "count_1d": 41,
+   "count_30d": 49,
+   "score": 15.77,
    "sample_ids": [
-    "272d50ef4186aecd",
-    "b57a40f28a60bfa9",
-    "d22e28a1d7d7bf55",
-    "b95ada3a83fbd0d7",
-    "9a8f21cead69fe6d"
+    "e118a9c64b310ad4",
+    "717e492a0bbcc310",
+    "c732b236150e2035",
+    "d83986a8b70c3a4f",
+    "309c814418e2f91d"
+   ]
+  },
+  {
+   "term": "cybertruck",
+   "count_1d": 15,
+   "count_30d": 15,
+   "score": 15.0,
+   "sample_ids": [
+    "24661df2a0c95520",
+    "80a8b760b5b8ce92",
+    "80a8b760b5b8ce92",
+    "36806894cf07dba7",
+    "64207824aa54d5d1"
+   ]
+  },
+  {
+   "term": "powell",
+   "count_1d": 15,
+   "count_30d": 15,
+   "score": 15.0,
+   "sample_ids": [
+    "65697c22c1b6ee63",
+    "16dcb8c68a339602",
+    "f22730d8c8a9e8fb",
+    "ce95ff49ed4ceb0a",
+    "12077eb25061959c"
+   ]
+  },
+  {
+   "term": "場護",
+   "count_1d": 15,
+   "count_30d": 15,
+   "score": 15.0,
+   "sample_ids": [
+    "7594d842bcda3d95",
+    "e3bdb5749964baaa",
+    "5d9551310da14fb8",
+    "0cdbef9985e85686",
+    "4fb8332ee43535c0"
+   ]
+  },
+  {
+   "term": "空令",
+   "count_1d": 15,
+   "count_30d": 15,
+   "score": 15.0,
+   "sample_ids": [
+    "27b115d602b13c1d",
+    "0d3265b1ed6d49e9",
+    "f6aa6b8d10018d73",
+    "60b453d6879e1af0",
+    "91ddb5dedbe36233"
+   ]
+  },
+  {
+   "term": "股史",
+   "count_1d": 15,
+   "count_30d": 15,
+   "score": 15.0,
+   "sample_ids": [
+    "d87479158d61a9cb",
+    "74aa2a3e80e9460a",
+    "6072662d4e20b9cf",
+    "a9c1d6f9bdbfc645",
+    "cc1dbfa92e8083ad"
    ]
   }
  ]

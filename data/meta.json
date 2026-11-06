@@ -642,18 +642,18 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-06 16:30",
-   "items": 2088,
+   "last": "2026-11-06 18:33",
+   "items": 2198,
    "by_tier": {
-    "2": 1689,
-    "4": 387,
+    "4": 397,
+    "2": 1789,
     "3": 7,
     "1": 5
    },
-   "feeds_ok": "48/48",
+   "feeds_ok": "50/50",
    "errors": 0,
-   "url_ok": 1048,
-   "url_total": 1048,
+   "url_ok": 1135,
+   "url_total": 1135,
    "time_suspect_detected": 7,
    "time_fixed": 7,
    "time_removed": 0
@@ -662,16 +662,16 @@
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-06 16:30",
+   "checked_at_taipei": "2026-11-06 18:33",
    "items": 1
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-06 15:13",
-   "items": 250,
+   "last": "2026-11-06 17:33",
+   "items": 274,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-06 16:30"
+   "checked_at_taipei": "2026-11-06 18:33"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -725,23 +725,30 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-06 16:30",
+   "last": "2026-11-06 18:33",
    "days_available": 6,
    "rising_topic": "fed",
    "rising_terms": [
-    "國安",
+    "國安基",
+    "安基金",
     "崩跌",
-    "股暴跌",
-    "selloff",
-    "powell"
+    "最大",
+    "進場"
    ]
+  },
+  "news/nsf": {
+   "status": "ok",
+   "source": "財政部 國家金融安定基金訊息",
+   "last": "2026-11-06",
+   "checked_at_taipei": "2026-11-06 18:33",
+   "items": 10
   }
  },
  "errors": [],
  "us_cutoff_ny": "2026-11-05",
  "tw_cutoff_taipei": "2026-11-05",
  "summary": {
-  "ok": 51,
+  "ok": 52,
   "stale": 0,
   "fail": 0
  },
