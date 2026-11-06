@@ -642,36 +642,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-05 11:10",
-   "items": 1811,
+   "last": "2026-11-06 08:20",
+   "items": 1888,
    "by_tier": {
+    "2": 1497,
     "4": 380,
-    "2": 1415,
-    "1": 5,
-    "3": 11
+    "3": 6,
+    "1": 5
    },
    "feeds_ok": "48/48",
    "errors": 0,
-   "url_ok": 735,
-   "url_total": 735,
-   "time_suspect_detected": 36,
-   "time_fixed": 34,
-   "time_removed": 2
+   "url_ok": 866,
+   "url_total": 866,
+   "time_suspect_detected": 17,
+   "time_fixed": 17,
+   "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
-   "last": "2026-10-30",
-   "checked_at_taipei": "2026-11-05 11:10",
+   "last": "2026-11-06",
+   "checked_at_taipei": "2026-11-06 08:20",
    "items": 1
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-05 10:42",
-   "items": 210,
+   "last": "2026-11-06 07:42",
+   "items": 219,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-05 11:10"
+   "checked_at_taipei": "2026-11-06 08:20"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -725,15 +725,15 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-05 11:10",
-   "days_available": 5,
+   "last": "2026-11-06 08:20",
+   "days_available": 6,
    "rising_topic": "fed",
    "rising_terms": [
-    "democrats",
-    "民主",
-    "congress",
-    "democratic",
-    "powell"
+    "跌停",
+    "powell",
+    "selloff",
+    "sue",
+    "交所"
    ]
   }
  },
