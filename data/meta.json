@@ -714,36 +714,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-09 08:20",
-   "items": 1588,
+   "last": "2026-11-09 11:10",
+   "items": 1612,
    "by_tier": {
-    "4": 369,
-    "2": 1208,
-    "1": 6,
+    "2": 1220,
+    "4": 380,
+    "1": 7,
     "3": 5
    },
    "feeds_ok": "50/50",
    "errors": 0,
-   "url_ok": 445,
-   "url_total": 445,
-   "time_suspect_detected": 55,
-   "time_fixed": 55,
+   "url_ok": 574,
+   "url_total": 574,
+   "time_suspect_detected": 47,
+   "time_fixed": 47,
    "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-09 08:20",
+   "checked_at_taipei": "2026-11-09 11:10",
    "items": 1
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-09 05:32",
-   "items": 188,
+   "last": "2026-11-09 10:30",
+   "items": 179,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-09 08:20"
+   "checked_at_taipei": "2026-11-09 11:10"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -797,22 +797,22 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-09 08:20",
+   "last": "2026-11-09 11:10",
    "days_available": 9,
    "rising_topic": "export_controls",
    "rising_terms": [
     "affair",
-    "發電",
-    "admits",
-    "jensen",
-    "ceo"
+    "仁勳",
+    "黃仁",
+    "強彈",
+    "jensen"
    ]
   },
   "news/nsf": {
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-09 08:20",
+   "checked_at_taipei": "2026-11-09 11:10",
    "items": 10
   }
  },
