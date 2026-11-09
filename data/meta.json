@@ -714,36 +714,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-09 11:10",
-   "items": 1612,
+   "last": "2026-11-09 13:40",
+   "items": 1596,
    "by_tier": {
-    "2": 1220,
-    "4": 380,
-    "1": 7,
-    "3": 5
+    "2": 1202,
+    "4": 381,
+    "1": 9,
+    "3": 4
    },
    "feeds_ok": "50/50",
    "errors": 0,
-   "url_ok": 574,
-   "url_total": 574,
-   "time_suspect_detected": 47,
-   "time_fixed": 47,
+   "url_ok": 652,
+   "url_total": 652,
+   "time_suspect_detected": 43,
+   "time_fixed": 43,
    "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-09 11:10",
+   "checked_at_taipei": "2026-11-09 13:40",
    "items": 1
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-09 10:30",
-   "items": 179,
+   "last": "2026-11-09 13:15",
+   "items": 175,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-09 11:10"
+   "checked_at_taipei": "2026-11-09 13:40"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -797,22 +797,22 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-09 11:10",
+   "last": "2026-11-09 13:40",
    "days_available": 9,
    "rising_topic": "export_controls",
    "rising_terms": [
     "affair",
-    "仁勳",
-    "黃仁",
+    "jensen",
     "強彈",
-    "jensen"
+    "仁勳",
+    "黃仁"
    ]
   },
   "news/nsf": {
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-09 11:10",
+   "checked_at_taipei": "2026-11-09 13:40",
    "items": 10
   }
  },
