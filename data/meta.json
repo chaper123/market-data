@@ -718,36 +718,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-10 16:30",
-   "items": 2124,
+   "last": "2026-11-10 21:00",
+   "items": 2295,
    "by_tier": {
-    "2": 1710,
-    "4": 397,
-    "1": 13,
+    "4": 382,
+    "2": 1894,
+    "1": 15,
     "3": 4
    },
    "feeds_ok": "50/50",
    "errors": 0,
-   "url_ok": 1383,
-   "url_total": 1383,
-   "time_suspect_detected": 17,
-   "time_fixed": 17,
+   "url_ok": 1509,
+   "url_total": 1509,
+   "time_suspect_detected": 22,
+   "time_fixed": 22,
    "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-10",
-   "checked_at_taipei": "2026-11-10 16:30",
-   "items": 2
+   "checked_at_taipei": "2026-11-10 21:00",
+   "items": 3
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-10 16:01",
-   "items": 270,
+   "last": "2026-11-10 20:02",
+   "items": 300,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-10 16:30"
+   "checked_at_taipei": "2026-11-10 21:00"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -801,22 +801,22 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-10 16:30",
+   "last": "2026-11-10 21:00",
    "days_available": 10,
    "rising_topic": "export_controls",
    "rising_terms": [
     "scandal",
-    "jensen",
-    "fable",
     "加權指",
-    "權指數"
+    "權指數",
+    "每股",
+    "速報"
    ]
   },
   "news/nsf": {
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-10 16:30",
+   "checked_at_taipei": "2026-11-10 21:00",
    "items": 10
   }
  },

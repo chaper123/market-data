@@ -1,5 +1,5 @@
 {
- "generated_at_taipei": "2026-11-10 16:30",
+ "generated_at_taipei": "2026-11-10 21:00",
  "days": 7,
  "feeds": [
   {
@@ -10,10 +10,18 @@
   {
    "name": "Fed 演講",
    "ok": true,
-   "count": 0
+   "count": 1
   }
  ],
  "items": [
+  {
+   "date": "2026-11-10",
+   "title": "Waller, The Economic Outlook and Some Thoughts on Labor Market Dynamism",
+   "link": "https://www.federalreserve.gov/newsevents/speech/waller20261110a.htm",
+   "type": "speech",
+   "published_taipei": "2026-11-10 17:00",
+   "published_utc": "2026-11-10T09:00:00Z"
+  },
   {
    "date": "2026-11-10",
    "title": "Federal Reserve Board announces approval of two applications by Mutual Federal Bancorp, MHC, and MFB Bancorp, Inc.",
