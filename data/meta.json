@@ -715,38 +715,38 @@
    "source": "統一投信 ezmoney"
   },
   "news/headlines": {
-   "status": "ok",
+   "status": "partial",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-11 13:40",
-   "items": 2799,
+   "last": "2026-11-11 16:30",
+   "items": 2892,
    "by_tier": {
-    "4": 387,
-    "2": 2384,
-    "3": 10,
-    "1": 18
+    "4": 393,
+    "2": 2472,
+    "3": 11,
+    "1": 16
    },
-   "feeds_ok": "50/50",
-   "errors": 0,
-   "url_ok": 1502,
-   "url_total": 1502,
-   "time_suspect_detected": 31,
-   "time_fixed": 31,
+   "feeds_ok": "49/50",
+   "errors": 1,
+   "url_ok": 1524,
+   "url_total": 1524,
+   "time_suspect_detected": 25,
+   "time_fixed": 25,
    "time_removed": 0
   },
   "news/fed": {
-   "status": "ok",
+   "status": "fail",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-11",
-   "checked_at_taipei": "2026-11-11 13:40",
-   "items": 4
+   "checked_at_taipei": "2026-11-11 16:30",
+   "items": 2
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-11 13:07",
-   "items": 371,
+   "last": "2026-11-11 15:33",
+   "items": 399,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-11 13:40"
+   "checked_at_taipei": "2026-11-11 16:30"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -800,22 +800,22 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-11 13:40",
+   "last": "2026-11-11 16:30",
    "days_available": 11,
    "rising_topic": "cpi",
    "rising_terms": [
-    "翠雲",
-    "莊翠",
     "事會",
     "董事",
-    "財長"
+    "財長",
+    "rate",
+    "核准"
    ]
   },
   "news/nsf": {
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-11 13:40",
+   "checked_at_taipei": "2026-11-11 16:30",
    "items": 10
   }
  },
@@ -823,9 +823,9 @@
  "us_cutoff_ny": "2026-11-10",
  "tw_cutoff_taipei": "2026-11-10",
  "summary": {
-  "ok": 58,
+  "ok": 56,
   "stale": 0,
-  "fail": 0
+  "fail": 1
  },
  "cross_check_conflicts": []
 }

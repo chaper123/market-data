@@ -1,11 +1,12 @@
 {
- "generated_at_taipei": "2026-11-11 13:40",
+ "generated_at_taipei": "2026-11-11 16:30",
  "days": 7,
  "feeds": [
   {
    "name": "Fed 新聞稿",
-   "ok": true,
-   "count": 2
+   "ok": false,
+   "count": 0,
+   "error": "HTTP 404"
   },
   {
    "name": "Fed 演講",
@@ -29,22 +30,6 @@
    "type": "speech",
    "published_taipei": "2026-11-10 17:00",
    "published_utc": "2026-11-10T09:00:00Z"
-  },
-  {
-   "date": "2026-11-10",
-   "title": "Federal Reserve Board announces approval of two applications by Mutual Federal Bancorp, MHC, and MFB Bancorp, Inc.",
-   "link": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm",
-   "type": "press",
-   "published_taipei": "2026-11-10 05:00",
-   "published_utc": "2026-11-09T21:00:00Z"
-  },
-  {
-   "date": "2026-11-06",
-   "title": "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc",
-   "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261105a.htm",
-   "type": "press",
-   "published_taipei": "2026-11-06 00:00",
-   "published_utc": "2026-11-05T16:00:00Z"
   }
  ]
 }
