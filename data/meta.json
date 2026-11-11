@@ -717,36 +717,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-11 11:10",
-   "items": 2724,
+   "last": "2026-11-11 13:40",
+   "items": 2799,
    "by_tier": {
-    "4": 389,
-    "2": 2308,
-    "1": 18,
-    "3": 9
+    "4": 387,
+    "2": 2384,
+    "3": 10,
+    "1": 18
    },
    "feeds_ok": "50/50",
    "errors": 0,
-   "url_ok": 1472,
-   "url_total": 1472,
-   "time_suspect_detected": 41,
-   "time_fixed": 41,
+   "url_ok": 1502,
+   "url_total": 1502,
+   "time_suspect_detected": 31,
+   "time_fixed": 31,
    "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-11",
-   "checked_at_taipei": "2026-11-11 11:10",
+   "checked_at_taipei": "2026-11-11 13:40",
    "items": 4
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-11 10:52",
-   "items": 353,
+   "last": "2026-11-11 13:07",
+   "items": 371,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-11 11:10"
+   "checked_at_taipei": "2026-11-11 13:40"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -800,22 +800,22 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-11 11:10",
+   "last": "2026-11-11 13:40",
    "days_available": 11,
    "rising_topic": "cpi",
    "rising_terms": [
+    "翠雲",
+    "莊翠",
     "事會",
     "董事",
-    "入股",
-    "核准",
-    "決議"
+    "財長"
    ]
   },
   "news/nsf": {
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-11 11:10",
+   "checked_at_taipei": "2026-11-11 13:40",
    "items": 10
   }
  },
