@@ -1,54 +1,54 @@
 {
- "fetched_at_taipei": "2026-11-12 06:15",
- "time_utc": "2026-11-11T21:56:00+00:00",
- "score": 36.97,
+ "fetched_at_taipei": "2026-11-13 06:15",
+ "time_utc": "2026-11-12T21:58:42+00:00",
+ "score": 39.94,
  "rating": "fear",
- "previous_close": 33.46,
- "previous_1_week": 34.17,
- "previous_1_month": 43.51,
- "previous_1_year": 30.46,
+ "previous_close": 36.97,
+ "previous_1_week": 19.99,
+ "previous_1_month": 45.23,
+ "previous_1_year": 34.57,
  "components": {
   "market_momentum_sp500": {
-   "score": 17,
+   "score": 16,
    "rating": "extreme fear",
-   "time_utc": "2026-11-11T21:42:03Z",
-   "value": 7619.38
+   "time_utc": "2026-11-12T21:58:23Z",
+   "value": 7592.4
   },
   "stock_price_strength": {
-   "score": 50.6,
+   "score": 48.8,
    "rating": "neutral",
-   "time_utc": "2026-11-11T21:56:00Z",
-   "value": -2.6398958383482203
+   "time_utc": "2026-11-12T21:58:42Z",
+   "value": -2.87673156009774
   },
   "stock_price_breadth": {
-   "score": 53.4,
+   "score": 51.2,
    "rating": "neutral",
-   "time_utc": "2026-11-11T21:56:00Z",
-   "value": 655.044073036899
+   "time_utc": "2026-11-12T21:58:31Z",
+   "value": 642.17868554156
   },
   "put_call_options": {
-   "score": 19.4,
-   "rating": "extreme fear",
-   "time_utc": "2026-11-11T21:53:08Z",
-   "value": 0.835984850823717
+   "score": 26.2,
+   "rating": "fear",
+   "time_utc": "2026-11-12T21:33:33Z",
+   "value": 0.800133109404506
   },
   "market_volatility_vix": {
    "score": 50,
    "rating": "neutral",
-   "time_utc": "2026-11-11T21:15:01Z",
-   "value": 17.49
+   "time_utc": "2026-11-12T21:15:01Z",
+   "value": 18.7
   },
   "junk_bond_demand": {
-   "score": 51,
-   "rating": "neutral",
-   "time_utc": "2026-11-11T21:10:00Z",
-   "value": 1.20975620340776
+   "score": 58,
+   "rating": "greed",
+   "time_utc": "2026-11-12T21:10:00Z",
+   "value": 1.19603701447246
   },
   "safe_haven_demand": {
-   "score": 17.4,
-   "rating": "extreme fear",
-   "time_utc": "2026-11-11T20:59:59Z",
-   "value": -2.2003359257919097
+   "score": 29.2,
+   "rating": "fear",
+   "time_utc": "2026-11-12T20:59:59Z",
+   "value": -0.565640698708822
   }
  },
  "source": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"

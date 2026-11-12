@@ -1,5 +1,5 @@
 {
- "generated_at_taipei": "2026-11-12 06:15",
+ "generated_at_taipei": "2026-11-13 06:15",
  "tw_market": {
   "source": "https://openapi.twse.com.tw/v1/holidaySchedule/holidaySchedule",
   "entries": [
@@ -245,7 +245,7 @@
   {
    "start": "2027-03-16",
    "end": "2027-03-17",
-   "sep": true,
+   "sep": false,
    "note": null
   },
   {
@@ -257,7 +257,7 @@
   {
    "start": "2027-06-08",
    "end": "2027-06-09",
-   "sep": true,
+   "sep": false,
    "note": null
   },
   {
@@ -269,7 +269,7 @@
   {
    "start": "2027-09-14",
    "end": "2027-09-15",
-   "sep": true,
+   "sep": false,
    "note": null
   },
   {
@@ -279,15 +279,15 @@
    "note": null
   },
   {
-   "start": "2027-12-07",
-   "end": "2027-12-08",
-   "sep": true,
+   "start": "2027-11-16",
+   "end": "2027-11-17",
+   "sep": false,
    "note": null
   }
  ],
  "earnings": {
   "source": "Yahoo quoteSummary（經 data/valuation/us.json）",
-  "fetched_at_taipei": "2026-11-12 06:15",
+  "fetched_at_taipei": "2026-11-13 06:15",
   "symbols": {
    "GOOGL": {
     "dates": [
