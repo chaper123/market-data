@@ -80,5 +80,33 @@ class WatchTest(unittest.TestCase):
         self.assertTrue(ok)
 
 
+    def test_day_all_response_is_kept_for_reuse(self):
+        rows = [{"Date": "1151111", "Code": "0056", "TradeVolume": "1", "OpeningPrice": "1", "HighestPrice": "1",
+                 "LowestPrice": "1", "ClosingPrice": "1"}]
+
+        def down(p):
+            raise RuntimeError("HTTP 503")
+
+        with mock.patch.object(twwatch, "LAST_DAY_ALL", None):
+            with mock.patch.object(twwatch, "twse_openapi", lambda p: rows):
+                latest, _ = twwatch.openapi_latest({"TWSE": {"0056"}})
+            self.assertIs(twwatch.LAST_DAY_ALL, rows)  # candidates.py 重用這份，不再打一次
+            self.assertEqual(latest["0056"][0], "2026-11-11")
+            with mock.patch.object(twwatch, "twse_openapi", down):
+                twwatch.openapi_latest({"TWSE": {"0056"}})
+            self.assertEqual(twwatch.LAST_DAY_ALL, [])  # 打了但失敗：[]，和「還沒打過」(None) 分得開
+
+    def test_official_daily_accepts_custom_fetch(self):
+        seen = []
+
+        def fetch(dataset, code, start):
+            seen.append((dataset, code, start))
+            return fm_rows(n=3)
+
+        rows, _, _, warn = twwatch.official_daily("00900", "TWSE", "2026-07-01", {}, fetch=fetch)
+        self.assertEqual(seen, [("TaiwanStockPrice", "00900", "2026-07-01")])
+        self.assertEqual((len(rows), warn), (3, []))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -27,15 +27,26 @@ def lots(v):
     return round(v / 1000)
 
 
+# 同一次執行裡最近一次打 STOCK_DAY_ALL 的結果（None＝還沒打過，[]＝打了但失敗）。candidates.py 重用它，不多打一次
+LAST_DAY_ALL = None
+
+
+def twse_day_bars(rows, codes):
+    """STOCK_DAY_ALL 的回應 → {代號: 最新一天的 bar}（只留 codes）。"""
+    return {r["Code"]: bar(roc_ymd(r["Date"]), r["TradeVolume"], r["OpeningPrice"], r["HighestPrice"],
+                           r["LowestPrice"], r["ClosingPrice"])
+            for r in rows if r.get("Code") in codes}
+
+
 def openapi_latest(codes_by_market):
     """{代號: 最新一天的 bar}；回傳 (bars, 錯誤清單)。上櫃的成交量換成張。"""
+    global LAST_DAY_ALL
     out, errors = {}, []
     if codes_by_market.get("TWSE"):
         try:
-            for r in twse_openapi("exchangeReport/STOCK_DAY_ALL"):
-                if r.get("Code") in codes_by_market["TWSE"]:
-                    out[r["Code"]] = bar(roc_ymd(r["Date"]), r["TradeVolume"], r["OpeningPrice"], r["HighestPrice"],
-                                         r["LowestPrice"], r["ClosingPrice"])
+            LAST_DAY_ALL = []  # 先標成「打了」，失敗時就維持空串列
+            LAST_DAY_ALL = twse_openapi("exchangeReport/STOCK_DAY_ALL")
+            out.update(twse_day_bars(LAST_DAY_ALL, codes_by_market["TWSE"]))
         except Exception as ex:  # noqa: BLE001
             errors.append(f"證交所 OpenAPI STOCK_DAY_ALL：{ex}")
     if codes_by_market.get("TPEX"):
@@ -50,13 +61,14 @@ def openapi_latest(codes_by_market):
     return out, errors
 
 
-def official_daily(code, market, start, latest, previous=None):
+def official_daily(code, market, start, latest, previous=None, fetch=None):
     """FinMind 歷史＋OpenAPI 最新一天。回傳 ({date: bar}, 核對說明, 核對結果, 警告)。
-    previous：舊檔的列（FinMind 失敗時沿用）。兩個都沒有就丟例外。"""
+    previous：舊檔的列（FinMind 失敗時沿用）。兩個都沒有就丟例外。
+    fetch：取代 finmind 的抓取函式（candidates.py 用它節流、重用已抓的回應），簽名同 finmind。"""
     rows, warn = dict(previous or {}), []
     try:
         fm = {}
-        for x in finmind("TaiwanStockPrice", code, start):
+        for x in (fetch or finmind)("TaiwanStockPrice", code, start):
             v = x.get("Trading_Volume") or 0
             fm[x["date"]] = bar(x["date"], lots(v) if market == "TPEX" else v, x["open"], x["max"], x["min"], x["close"])
     except Exception as ex:  # noqa: BLE001 — FinMind 失敗就沿用舊檔＋OpenAPI 最新一天
