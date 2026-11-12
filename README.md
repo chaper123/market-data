@@ -56,13 +56,17 @@ GitHub 的排程常延遲（實測 2.5～5 小時），偶爾整個漏跑，所�
 | `data/dividends/tw_etf.json` | ETF 配息（`config.json` 的 `dividend_etfs`：009816、00981A、0056、00878、00919），近 4 年起逐次累積：`etfs[代號].events[]` 的 `ex_date`（除息交易日）、`pay_date`（發放日，預告表補的事件為 null）、`cash`（每單位現金元）、`year`（民國年度）、`source`、`official_checked`（與證交所預告表核對過）；`ttm_cash`／`ttm_count`（除息日在最近 365 天）、`last`、`next`。009816 目前沒有配息紀錄 | FinMind TaiwanStockDividend / 證交所 OpenAPI TWT48U_ALL（除權除息預告表，核對即將除息的日期與金額） |
 | `data/index/TAIEX.csv` | 加權指數日線：date,open,high,low,close,volume_shares,value_twd（成交股數、成交金額元；無表頭），2003-01-02 起，台北 14:30 前不收當天 | 證交所 OpenAPI MI_5MINS_HIST＋FMTQIK（當月，同一天以它為準）/ FinMind TaiwanStockPrice（TAIEX，歷史）；重疊日逐日核對收盤 |
 | `data/index/TAIEX_TR.csv` | 加權報酬指數日線：date,close，2003-01-02 起 | 證交所 OpenAPI MFI94U（當月）/ FinMind TaiwanStockTotalReturnIndex（歷史） |
+| `data/candidates/universe.json` | 機會頁的候選 ETF 名單（`candidates.py`，2026-11-12 起）：從上市 ETF 挑「台股股票型與海外股票型、上市滿一年、近 60 個交易日日均成交金額前 30」。頂層 `generated_at_taipei`、`ranked_on`（排名日＝成交金額資料的最後交易日）、`window_days`（實際拿幾個交易日算日均，最多 60；累積不到 60 天就用現有天數，至少 5 天）、`rule`、`source`；`items[]`：`rank`（1～30）、`code`、`name`（基金簡稱）、`category`（`tw`＝基金類型含「國內成分」、`overseas`＝含「國外成分」，且是指數股票型基金或主動式（股票））、`listed`（上市日 YYYY-MM-DD）、`avg_value`（日均成交金額，元）；`excluded[]`：`code`、`name`、`reason`（多個原因用「、」連接）——代號尾碼 B、L、R、U、K、C、T、D（`尾碼 B`），基金類型含 槓桿、反向、期貨、平衡、債券、連結、境外、外幣，名稱含 黃金、白銀、原油、石油、不動產、REIT、債，另外上市未滿一年、窗口內成交資料不到 5 天的也列在這裡。只有上市，上櫃 ETF 不列入。每月第一個交易日重排（實作是「這個月還沒排過就排」，漏跑時下一次補排），其他日子不動這個檔；重排失敗保留舊名單、meta 標 stale。新進的補日線歷史，退出的檔案保留、不再更新 | 證交所 OpenAPI `opendata/t187ap47_L`（基金基本資料彙總表，上市日期是民國 YYYMMDD）＋ `exchangeReport/STOCK_DAY_ALL` 的成交金額 / 單一來源 |
+| `data/candidates/turnover.csv` | 候選 ETF 的成交金額：`date,code,value`（無表頭，元）。通過類別與排除規則的上市 ETF（不論上市多久，未滿一年的也記，之後才有歷史可排）每天一列，保留最近 90 個交易日。每天加 STOCK_DAY_ALL 的 `TradeValue`（和 `twwatch.py` 同一次執行共用同一份回應，不多打一次）；第一次、或某檔不到半個窗口的天數，向 FinMind 補近 60 個交易日（`Trading_money`，單位元，2026-11-12 實測 0050 在 2026-11-11 是 12,595,528,482，和 OpenAPI 完全一致），補完才排名 | 證交所 OpenAPI STOCK_DAY_ALL（每天）/ FinMind TaiwanStockPrice（補歷史） |
+| `data/candidates/<代號>_norm.csv` | 名單內每檔 ETF 的日線，格式同 `data/tw/<代號>_norm.csv`（`date,volume,open,high,low,close`，無表頭），約 15 個月。已在 `config.json` 的 `tw` 或 `tw_watch` 的代號（0050、0056、00878、00919 …）不重抓，直接用 `data/tw/` 的檔，這裡不會有。價格沒有還原配息與分割 | FinMind（歷史）＋證交所 OpenAPI STOCK_DAY_ALL（最新一天），做法同 `twwatch.official_daily`；每檔每天最多向 FinMind 抓一次歷史，同一天後面幾次執行只用 OpenAPI 補最新一天 |
+| `data/candidates/closes.csv` | 名單內 30 檔的收盤合併檔：第一列表頭 `date,<代號1>,<代號2>…`（照 `universe.json` 的名次排），每列一個交易日，那天沒有資料的格子留空，最近 300 個交易日。meta：`candidates/universe`（`status`、`last`＝`ranked_on`、`items`、`window_days`）、`candidates/closes`（`status`、`rows`、`first`、`last`、`history_fetched`＝各檔最近一次向 FinMind 抓歷史的台北日期、`warnings`）。key 不是 `tw/` 開頭、也沒有單一來源標記，所以不影響「日線已完整」判斷 | 上面各檔日線 |
 | `data/longterm/tw_business_cycle.csv` | 國發會景氣對策信號（月，1984-01 起）：month,score,light,release_est,release_actual,initial_score,initial_light,first_seen_taipei，說明見下方「長週期資料」 | data.gov.tw 資料集 6099（國發會 zip）/ 國發會景氣指標查詢系統 JSON |
 | `data/longterm/tw_business_cycle_revisions.csv` | 景氣燈號修正紀錄（逐次累加）：seen_taipei,month,old_score,new_score,old_light,new_light,release | 同上 |
 | `data/longterm/buffett_indicator.csv` | 巴菲特指標（季，1951Q4 起）：quarter,equities_bn,gdp_bn,ratio_pct,trend_pct,dev_sigma,dev_sigma_expanding,release,release_basis,initial_equities_bn,initial_gdp_bn,initial_ratio_pct,initial_dev_sigma_expanding,first_seen_taipei，說明見下方「長週期資料」 | FRED NCBEILQ027S ÷ GDP；發布日取 Fed Z.1 Release Dates |
 | `data/meta.json` | 每個資料集的狀態、列數、最後日期、雙來源核對結果、錯誤 | — |
 
 CSV 欄位：`date,volume,open,high,low,close`（無表頭），與排程任務的 `monitor.py`、`monitor_us.py` 相同。
-`macro/`、`sentiment/`、`fx/usdtwd_bot_sell.csv`、`valuation/`、`calendar/`、`chips/`、`holdings/` 等 Phase 1 新資料由 `macro.py` 等模組產生，只在完整抓取時更新（只更新淨值的那幾次不動）；某一項失敗時保留舊檔、meta 標 stale，不影響日線。
+`macro/`、`sentiment/`、`fx/usdtwd_bot_sell.csv`、`valuation/`、`calendar/`、`chips/`、`holdings/`、`candidates/` 等 Phase 1 新資料由 `macro.py` 等模組產生，只在完整抓取時更新（只更新淨值的那幾次不動）；某一項失敗時保留舊檔、meta 標 stale，不影響日線。
 
 `meta.json` 的 `status`：`ok` 本次成功；`stale` 本次失敗，檔案是上一次的；`fail` 從未成功。
 `cross_check_ok=false` 代表主來源與核對來源的收盤差超過 0.5%。美股（us/、macro/TSM）另有 `last_bar_source`（最後一根 K 棒採用的來源）、`last_bar_referee`（是否動用 Nasdaq 官方裁判）、`last_bar_votes`（各來源的值）、`history_mismatch`（保留期間兩家收盤差超過 0.5% 的根數）；只有 MoneyDJ 一票、Yahoo 與 Nasdaq 都還沒有那一天時，先收 MoneyDJ 的值並標 `last_bar_single_source=true`、`cross_check_ok=null`（尚未核對，不是核對失敗），日期記在 `single_source_days`；之後的抓取等 Yahoo 有了再核對（一致就清除標記，不一致照常請 Nasdaq 裁判、必要時改正，結果記在 `rechecked`；超過 10 天仍無法核對就停止追蹤）。有待核對的日子時不算「日線已完整」，後面的排程會再做一次完整抓取。裁判也無法判定時，那一根先不收，`last_bar_unresolved` 記日期、`cross_check_ok=false`。
@@ -139,7 +143,7 @@ CSV 欄位：`date,volume,open,high,low,close`（無表頭），與排程任務�
 python -m unittest discover -s tests
 ```
 
-用假資料測多數決、單一來源補核對、24 小時品項的收盤截止與週末列、略過判斷、新聞整理、盤中快照、長週期資料的解析與計算（初值寫入、修正不覆蓋初值、重跑不重複寫入、排程略過），不連網；`test_publish.py` 用暫存的 git repo 模擬三個 workflow 同時推送。
+用假資料測多數決、單一來源補核對、24 小時品項的收盤截止與週末列、略過判斷、新聞整理、盤中快照、長週期資料的解析與計算（初值寫入、修正不覆蓋初值、重跑不重複寫入、排程略過）、候選 ETF 的類別與排除規則、民國日期與上市滿一年、排名與 window_days、名單變動、成交金額只留 90 天、合併檔表頭與留空、沿用 tw 的日線、抓失敗保留舊檔與 FinMind 節流，不連網；`test_publish.py` 用暫存的 git repo 模擬三個 workflow 同時推送。
 
 ## 讀取方式
 
@@ -149,9 +153,11 @@ curl -sSf https://raw.githubusercontent.com/<帳號>/market-data/main/data/meta.
 
 ## 注意
 
-**資料出處與授權（2026-11-03 查）**：證交所 OpenAPI、櫃買中心 OpenAPI 的資料依「政府資料開放授權條款－第 1 版」（https://data.gov.tw/license）使用，出處：臺灣證券交易所、證券櫃檯買賣中心。國發會景氣指標同一授權，出處：國家發展委員會。FinMind 只寫明「教育、非商業用途」，沒有說明能否把取得的資料公開再散布：用到 FinMind 的檔案（data/tw/*_norm.csv 的歷史、data/index/、data/dividends/、data/chips/、data/fx/usdtwd_bot_sell.csv）是否能放在公開 repo 待使用者決定。
+**資料出處與授權（2026-11-03 查）**：證交所 OpenAPI、櫃買中心 OpenAPI 的資料依「政府資料開放授權條款－第 1 版」（https://data.gov.tw/license）使用，出處：臺灣證券交易所、證券櫃檯買賣中心。國發會景氣指標同一授權，出處：國家發展委員會。FinMind 只寫明「教育、非商業用途」，沒有說明能否把取得的資料公開再散布：用到 FinMind 的檔案（data/tw/*_norm.csv 的歷史、data/index/、data/dividends/、data/chips/、data/fx/usdtwd_bot_sell.csv、data/candidates/）使用者 2026-11-12 決定照現有做法放公開 repo。
 
-**證交所資料的使用條款（2026-10-30 查）**：證交所網站使用條款第 6 條禁止「非依臺灣證券交易所同意之方式」以自動程式、爬蟲下載資料，第 8 條未經書面同意不得重製，但證交所已授權政府資料開放平臺的資料除外；證交所 OpenAPI（openapi.twse.com.tw）標示的授權是政府資料開放授權條款（需標示出處）。所以 2026-10-30 起新加的證交所資料（加權指數、報酬指數、除權息預告、上市個股日成交）都走 OpenAPI，歷史部分用 FinMind（教育、非商業用途，未註冊每小時約 300 次）。櫃買中心網站條款相同（第五、七條），也改用櫃買 OpenAPI。2026-11-03 起日線也改走 FinMind＋OpenAPI（見下方各列）。
+**證交所資料的使用條款（2026-10-30 查）**：證交所網站使用條款第 6 條禁止「非依臺灣證券交易所同意之方式」以自動程式、爬蟲下載資料，第 8 條未經書面同意不得重製，但證交所已授權政府資料開放平臺的資料除外；證交所 OpenAPI（openapi.twse.com.tw）標示的授權是政府資料開放授權條款（需標示出處）。所以 2026-10-30 起新加的證交所資料（加權指數、報酬指數、除權息預告、上市個股日成交）都走 OpenAPI，歷史部分用 FinMind（教育、非商業用途，未註冊每小時約 300 次）。櫃買中心網站條款相同（第五、七條），也改用櫃買 OpenAPI。2026-11-03 起日線也改走 FinMind＋OpenAPI（見下方各列）。2026-11-12 起的候選 ETF（`candidates.py`）同樣只用 OpenAPI（基金基本資料彙總表 t187ap47_L、STOCK_DAY_ALL）與 FinMind；FinMind 每小時約 300 次，所以候選 ETF 自己節流：兩次請求至少隔 1.5 秒、一次執行最多 250 次，額度用完（402）就整個停、不重試，已補到的成交金額先寫檔，下次只補缺的。第一次要補上市滿一年的每一檔（2026-11-12 本機實測 153 檔、153 次請求，名單內各檔的日線歷史用同一次回應，不再多抓），一次執行就補得完；萬一額度不夠會分到下一次（補完才排名）。補完之後平常只有新進名單的檔需要 FinMind（各一次）；名單內各檔的日線歷史每檔每天抓一次，約 25 次。
+
+**已知限制**：日線的價格都沒有還原配息與分割（`data/us/`、`data/tw/`、`data/candidates/`，以及 `closes.csv`）。0050 在 2025-06-18 一拆四（188.65 → 47.57），跨過分割日的報酬、相關性、跌幅都會失真；用 `closes.csv` 算之前請先檢查單日漲跌是否超過 ±30%。
 
 **ETF 持股（2026-11-06 起不放這裡）**：統一投信網站寫明「任何人未經同意，不得將網站全部或部分內容轉載」，凱基投信網站寫明「未經授權不得複製、修改或散發引用」。所以 `fetch.py` 不再抓持股，改由私人 repo 的 workflow 每天執行 `python holdings.py --out <資料夾>`（00981A 統一投信、009816 凱基投信，程式仍在這個 repo；00411A 已不是關注標的，不再收）。這裡的 `data/holdings/` 保留到新聞晨報改讀私人 repo 為止，之後刪除；git 歷史裡已公開的部分不改寫。
 
