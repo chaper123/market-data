@@ -719,36 +719,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-12 11:10",
-   "items": 3158,
+   "last": "2026-11-12 13:40",
+   "items": 3203,
    "by_tier": {
-    "1": 16,
-    "4": 395,
-    "2": 2730,
+    "4": 399,
+    "2": 2772,
+    "1": 15,
     "3": 17
    },
    "feeds_ok": "50/50",
    "errors": 0,
-   "url_ok": 1325,
-   "url_total": 1325,
-   "time_suspect_detected": 34,
-   "time_fixed": 34,
+   "url_ok": 1380,
+   "url_total": 1380,
+   "time_suspect_detected": 30,
+   "time_fixed": 30,
    "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-11",
-   "checked_at_taipei": "2026-11-12 11:10",
+   "checked_at_taipei": "2026-11-12 13:40",
    "items": 4
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-12 10:46",
-   "items": 453,
+   "last": "2026-11-12 12:59",
+   "items": 450,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-12 11:10"
+   "checked_at_taipei": "2026-11-12 13:40"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -802,13 +802,13 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-12 11:10",
+   "last": "2026-11-12 13:40",
    "days_available": 12,
    "rising_topic": "cpi",
    "rising_terms": [
-    "coreweave",
     "oust",
-    "preparing",
+    "coreweave",
+    "kimberly",
     "侯永",
     "永清"
    ]
@@ -817,7 +817,7 @@
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-12 11:10",
+   "checked_at_taipei": "2026-11-12 13:40",
    "items": 10
   }
  },
