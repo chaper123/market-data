@@ -719,36 +719,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-12 16:30",
+   "last": "2026-11-12 21:00",
    "items": 3197,
    "by_tier": {
-    "4": 383,
-    "2": 2781,
-    "3": 18,
-    "1": 15
+    "4": 393,
+    "2": 2769,
+    "1": 17,
+    "3": 18
    },
    "feeds_ok": "50/50",
    "errors": 0,
-   "url_ok": 1408,
-   "url_total": 1408,
-   "time_suspect_detected": 24,
-   "time_fixed": 24,
+   "url_ok": 1427,
+   "url_total": 1427,
+   "time_suspect_detected": 19,
+   "time_fixed": 19,
    "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-11",
-   "checked_at_taipei": "2026-11-12 16:30",
+   "checked_at_taipei": "2026-11-12 21:00",
    "items": 4
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-12 15:48",
-   "items": 449,
+   "last": "2026-11-12 20:44",
+   "items": 443,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-12 16:30"
+   "checked_at_taipei": "2026-11-12 21:00"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -802,22 +802,22 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-12 16:30",
+   "last": "2026-11-12 21:00",
    "days_available": 12,
-   "rising_topic": "cpi",
+   "rising_topic": "export_controls",
    "rising_terms": [
-    "oust",
     "個資",
-    "coreweave",
-    "員工",
-    "工個"
+    "oust",
+    "萬筆",
+    "preparing",
+    "員工個"
    ]
   },
   "news/nsf": {
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-12 16:30",
+   "checked_at_taipei": "2026-11-12 21:00",
    "items": 10
   }
  },
