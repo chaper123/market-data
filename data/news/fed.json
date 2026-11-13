@@ -1,11 +1,12 @@
 {
- "generated_at_taipei": "2026-11-13 11:10",
+ "generated_at_taipei": "2026-11-13 13:40",
  "days": 7,
  "feeds": [
   {
    "name": "Fed 新聞稿",
-   "ok": true,
-   "count": 4
+   "ok": false,
+   "count": 0,
+   "error": "HTTP 404"
   },
   {
    "name": "Fed 演講",
@@ -14,30 +15,6 @@
   }
  ],
  "items": [
-  {
-   "date": "2026-11-13",
-   "title": "Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services",
-   "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261112a.htm",
-   "type": "press",
-   "published_taipei": "2026-11-13 02:30",
-   "published_utc": "2026-11-12T18:30:00Z"
-  },
-  {
-   "date": "2026-11-13",
-   "title": "Federal Reserve announces revised tentative schedule of Federal Open Market Committee meetings in 2027",
-   "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
-   "type": "press",
-   "published_taipei": "2026-11-13 01:45",
-   "published_utc": "2026-11-12T17:45:00Z"
-  },
-  {
-   "date": "2026-11-13",
-   "title": "Federal Reserve Board issues enforcement action with former employee of United Community Bank",
-   "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261112a.htm",
-   "type": "press",
-   "published_taipei": "2026-11-13 00:00",
-   "published_utc": "2026-11-12T16:00:00Z"
-  },
   {
    "date": "2026-11-12",
    "title": "Barr, American Inequality and the Future of AI",
@@ -61,14 +38,6 @@
    "type": "speech",
    "published_taipei": "2026-11-10 17:00",
    "published_utc": "2026-11-10T09:00:00Z"
-  },
-  {
-   "date": "2026-11-10",
-   "title": "Federal Reserve Board announces approval of two applications by Mutual Federal Bancorp, MHC, and MFB Bancorp, Inc.",
-   "link": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm",
-   "type": "press",
-   "published_taipei": "2026-11-10 05:00",
-   "published_utc": "2026-11-09T21:00:00Z"
   }
  ]
 }
