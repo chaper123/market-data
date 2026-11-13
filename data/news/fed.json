@@ -1,19 +1,51 @@
 {
- "generated_at_taipei": "2026-11-12 21:00",
+ "generated_at_taipei": "2026-11-13 08:20",
  "days": 7,
  "feeds": [
   {
    "name": "Fed 新聞稿",
    "ok": true,
-   "count": 2
+   "count": 4
   },
   {
    "name": "Fed 演講",
    "ok": true,
-   "count": 2
+   "count": 3
   }
  ],
  "items": [
+  {
+   "date": "2026-11-13",
+   "title": "Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261112a.htm",
+   "type": "press",
+   "published_taipei": "2026-11-13 02:30",
+   "published_utc": "2026-11-12T18:30:00Z"
+  },
+  {
+   "date": "2026-11-13",
+   "title": "Federal Reserve announces revised tentative schedule of Federal Open Market Committee meetings in 2027",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
+   "type": "press",
+   "published_taipei": "2026-11-13 01:45",
+   "published_utc": "2026-11-12T17:45:00Z"
+  },
+  {
+   "date": "2026-11-13",
+   "title": "Federal Reserve Board issues enforcement action with former employee of United Community Bank",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261112a.htm",
+   "type": "press",
+   "published_taipei": "2026-11-13 00:00",
+   "published_utc": "2026-11-12T16:00:00Z"
+  },
+  {
+   "date": "2026-11-12",
+   "title": "Barr, American Inequality and the Future of AI",
+   "link": "https://www.federalreserve.gov/newsevents/speech/barr20261112a.htm",
+   "type": "speech",
+   "published_taipei": "2026-11-12 23:00",
+   "published_utc": "2026-11-12T15:00:00Z"
+  },
   {
    "date": "2026-11-11",
    "title": "Bowman, The U.S. Economy and Considerations for Monetary Policy",
@@ -37,14 +69,6 @@
    "type": "press",
    "published_taipei": "2026-11-10 05:00",
    "published_utc": "2026-11-09T21:00:00Z"
-  },
-  {
-   "date": "2026-11-06",
-   "title": "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc",
-   "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261105a.htm",
-   "type": "press",
-   "published_taipei": "2026-11-06 00:00",
-   "published_utc": "2026-11-05T16:00:00Z"
   }
  ]
 }
