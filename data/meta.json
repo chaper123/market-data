@@ -751,36 +751,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-13 08:20",
-   "items": 3200,
+   "last": "2026-11-13 11:10",
+   "items": 3214,
    "by_tier": {
-    "4": 384,
-    "2": 2774,
-    "1": 21,
-    "3": 21
+    "2": 2780,
+    "4": 391,
+    "3": 22,
+    "1": 21
    },
    "feeds_ok": "50/50",
    "errors": 0,
-   "url_ok": 1330,
-   "url_total": 1330,
-   "time_suspect_detected": 30,
-   "time_fixed": 30,
+   "url_ok": 1366,
+   "url_total": 1366,
+   "time_suspect_detected": 33,
+   "time_fixed": 33,
    "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-13",
-   "checked_at_taipei": "2026-11-13 08:20",
+   "checked_at_taipei": "2026-11-13 11:10",
    "items": 7
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-13 07:34",
-   "items": 443,
+   "last": "2026-11-13 10:43",
+   "items": 451,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-13 08:20"
+   "checked_at_taipei": "2026-11-13 11:10"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -834,22 +834,22 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-13 08:20",
+   "last": "2026-11-13 11:10",
    "days_available": 13,
    "rising_topic": "export_controls",
    "rising_terms": [
     "resigns",
-    "執行長",
     "仁勳辭",
     "exit",
-    "個資"
+    "執行長",
+    "colette"
    ]
   },
   "news/nsf": {
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-13 08:20",
+   "checked_at_taipei": "2026-11-13 11:10",
    "items": 10
   }
  },
