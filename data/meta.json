@@ -750,36 +750,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-16 16:30",
-   "items": 1588,
+   "last": "2026-11-16 21:00",
+   "items": 1611,
    "by_tier": {
-    "4": 388,
-    "2": 1185,
-    "3": 4,
-    "1": 11
+    "4": 385,
+    "2": 1210,
+    "1": 13,
+    "3": 3
    },
    "feeds_ok": "50/50",
    "errors": 0,
-   "url_ok": 793,
-   "url_total": 793,
-   "time_suspect_detected": 5,
-   "time_fixed": 5,
-   "time_removed": 0
+   "url_ok": 954,
+   "url_total": 954,
+   "time_suspect_detected": 10,
+   "time_fixed": 8,
+   "time_removed": 2
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
-   "last": "2026-11-14",
-   "checked_at_taipei": "2026-11-16 16:30",
-   "items": 9
+   "last": "2026-11-16",
+   "checked_at_taipei": "2026-11-16 21:00",
+   "items": 10
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-16 16:02",
-   "items": 180,
+   "last": "2026-11-16 18:45",
+   "items": 179,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-16 16:30"
+   "checked_at_taipei": "2026-11-16 21:00"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -833,14 +833,14 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-16 16:30",
+   "last": "2026-11-16 21:00",
    "days_available": 16,
    "rising_topic": "export_controls",
    "rising_terms": [
     "楊金",
     "金龍",
-    "bessent",
     "二大跌",
+    "達財報",
     "力士"
    ]
   },
@@ -848,7 +848,7 @@
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-16 16:30",
+   "checked_at_taipei": "2026-11-16 21:00",
    "items": 10
   }
  },
