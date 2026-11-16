@@ -1,19 +1,35 @@
 {
- "generated_at_taipei": "2026-11-13 21:00",
+ "generated_at_taipei": "2026-11-16 08:20",
  "days": 7,
  "feeds": [
   {
    "name": "Fed 新聞稿",
    "ok": true,
-   "count": 4
+   "count": 5
   },
   {
    "name": "Fed 演講",
    "ok": true,
-   "count": 3
+   "count": 4
   }
  ],
  "items": [
+  {
+   "date": "2026-11-14",
+   "title": "Jefferson, New Technology, Old Questions: Productivity Puzzles and the Macroeconomy",
+   "link": "https://www.federalreserve.gov/newsevents/speech/jefferson20261113a.htm",
+   "type": "speech",
+   "published_taipei": "2026-11-14 08:00",
+   "published_utc": "2026-11-14T00:00:00Z"
+  },
+  {
+   "date": "2026-11-14",
+   "title": "Agencies extend comment period for proposed third-party risk management guidance",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm",
+   "type": "press",
+   "published_taipei": "2026-11-14 05:15",
+   "published_utc": "2026-11-13T21:15:00Z"
+  },
   {
    "date": "2026-11-13",
    "title": "Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services",
