@@ -750,36 +750,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-16 08:20",
-   "items": 1446,
+   "last": "2026-11-16 11:10",
+   "items": 1486,
    "by_tier": {
-    "2": 1054,
-    "4": 378,
-    "3": 5,
-    "1": 9
+    "2": 1091,
+    "4": 380,
+    "1": 11,
+    "3": 4
    },
    "feeds_ok": "50/50",
    "errors": 0,
-   "url_ok": 435,
-   "url_total": 435,
-   "time_suspect_detected": 54,
-   "time_fixed": 54,
+   "url_ok": 563,
+   "url_total": 563,
+   "time_suspect_detected": 43,
+   "time_fixed": 43,
    "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-14",
-   "checked_at_taipei": "2026-11-16 08:20",
+   "checked_at_taipei": "2026-11-16 11:10",
    "items": 9
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-16 06:11",
-   "items": 172,
+   "last": "2026-11-16 09:54",
+   "items": 159,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-16 08:20"
+   "checked_at_taipei": "2026-11-16 11:10"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -833,22 +833,22 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-16 08:20",
+   "last": "2026-11-16 11:10",
    "days_available": 16,
    "rising_topic": "export_controls",
    "rising_terms": [
     "bessent",
-    "comeback",
-    "taipei",
-    "allies",
-    "shakeup"
+    "health",
+    "return",
+    "study",
+    "指數下"
    ]
   },
   "news/nsf": {
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-16 08:20",
+   "checked_at_taipei": "2026-11-16 11:10",
    "items": 10
   }
  },
