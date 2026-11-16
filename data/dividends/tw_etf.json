@@ -1,7 +1,7 @@
 {
- "generated_at_taipei": "2026-11-14 06:15",
+ "generated_at_taipei": "2026-11-17 06:15",
  "source": "FinMind TaiwanStockDividend（歷史、發放日）＋證交所 OpenAPI TWT48U_ALL（除權除息預告）",
- "since": "2022-11-14",
+ "since": "2022-11-17",
  "etfs": {
   "009816": {
    "events": [],
@@ -394,24 +394,17 @@
      "official_checked": true
     }
    ],
-   "ttm_cash": 2.49,
-   "ttm_count": 4,
+   "ttm_cash": 3.74,
+   "ttm_count": 5,
    "last": {
-    "ex_date": "2026-08-18",
-    "pay_date": "2026-09-11",
-    "cash": 1.01,
-    "year": "115",
-    "source": "FinMind",
-    "official_checked": false
-   },
-   "next": {
     "ex_date": "2026-11-17",
     "pay_date": "2026-12-11",
     "cash": 1.25,
     "year": "115",
     "source": "FinMind",
     "official_checked": true
-   }
+   },
+   "next": null
   },
   "00919": {
    "events": [
