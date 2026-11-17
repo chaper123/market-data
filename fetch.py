@@ -16,7 +16,7 @@ Phase 1 新資料由各模組產生（只在完整抓取時執行，失敗不影
   calendars.py             data/calendar/calendar.json（台股休市、FOMC、財報日；CPI 未取得）
   twindex.py               data/index/TAIEX.csv、TAIEX_TR.csv（加權指數與報酬指數，證交所 OpenAPI＋FinMind）
   dividends.py             data/dividends/tw_etf.json（ETF 配息，FinMind＋證交所 OpenAPI 除權除息預告表）
-  twwatch.py               data/tw/<tw_watch 代號>_norm.csv（0056、00878、00919 日線，FinMind＋證交所 OpenAPI）
+  twwatch.py               data/tw/<tw_watch 代號>_norm.csv（0056、00878、00919、00735、00679B 日線，FinMind＋證交所／櫃買 OpenAPI）
   candidates.py            data/candidates/（機會頁的候選 ETF：名單、成交金額、每檔日線、收盤合併檔；放在最後，重用 twwatch 抓的 STOCK_DAY_ALL）
   chips.py                 data/chips/（關注代號三大法人、集中市場三大法人金額、融資）
   holdings.py              2026-11-06 停用（只在私人 repo 執行，見 DISABLED 與 holdings.py 說明）

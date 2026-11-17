@@ -19,7 +19,9 @@
     "2330":   {"market": "TWSE", "note": "台積電：網站分析頁（2026-11-07 加）"}
   },
   "stocks": ["2330"],
-  "tw_watch": {"0056": {"market": "TWSE"}, "00878": {"market": "TWSE"}, "00919": {"market": "TWSE"}},
+  "tw_watch": {"0056": {"market": "TWSE"}, "00878": {"market": "TWSE"}, "00919": {"market": "TWSE"},
+               "00735": {"market": "TWSE", "note": "帳本已賣出的持股（2026-07～09），網站組合績效要用（2026-11-17 加）"},
+               "00679B": {"market": "TPEX", "note": "帳本已賣出的持股（2026-04～05），網站組合績效要用（2026-11-17 加）"}},
   "tw_index": "TSE01",
   "tw_months": 24,
   "macro": {
@@ -36,7 +38,7 @@
   },
   "valuation": {"VOO": "etf", "GOOGL": "stock", "NVDA": "stock", "TSLA": "stock", "SPCX": "stock", "AAPL": "stock"},
   "holdings": {"00981A": {"source": "ezmoney", "fund": "49YTW"}, "009816": {"source": "kgifund", "fund": "J023"}},
-  "dividend_etfs": ["009816", "00981A", "0050", "0056", "00878", "00919"],
+  "dividend_etfs": ["009816", "00981A", "0050", "0056", "00878", "00919", "00735", "00679B"],
   "news": {
     "window_hours": 72,
     "query_when": "2d",
