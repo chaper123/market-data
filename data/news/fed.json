@@ -1,5 +1,5 @@
 {
- "generated_at_taipei": "2026-11-17 16:30",
+ "generated_at_taipei": "2026-11-17 21:00",
  "days": 7,
  "feeds": [
   {
@@ -10,7 +10,7 @@
   {
    "name": "Fed 演講",
    "ok": true,
-   "count": 6
+   "count": 5
   }
  ],
  "items": [
@@ -85,14 +85,6 @@
    "type": "speech",
    "published_taipei": "2026-11-11 04:30",
    "published_utc": "2026-11-10T20:30:00Z"
-  },
-  {
-   "date": "2026-11-10",
-   "title": "Waller, The Economic Outlook and Some Thoughts on Labor Market Dynamism",
-   "link": "https://www.federalreserve.gov/newsevents/speech/waller20261110a.htm",
-   "type": "speech",
-   "published_taipei": "2026-11-10 17:00",
-   "published_utc": "2026-11-10T09:00:00Z"
   }
  ]
 }
