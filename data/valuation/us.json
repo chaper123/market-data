@@ -1,39 +1,39 @@
 {
- "fetched_at_taipei": "2026-11-17 06:15",
+ "fetched_at_taipei": "2026-11-17 23:43",
  "week_limit_pct": 20,
  "symbols": {
   "VOO": {
    "kind": "etf",
-   "fwd_pe": 17.82,
+   "fwd_pe": 17.74,
    "peg": null,
-   "pe": 22.71,
-   "price": 679.41,
+   "pe": 22.63,
+   "price": 680.26,
    "price_date": "2026-11-16",
-   "price_time": "Nov 16, 2026, 3:26 PM EST",
-   "market_state": "open",
+   "price_time": "Nov 16, 2026, 4:00 PM EST",
+   "market_state": "closed",
    "source": "https://stockanalysis.com/etf/voo/",
-   "implied_eps": 29.9168,
+   "implied_eps": 30.0601,
    "week": {
     "ref_date": "2026-11-09",
     "ref_ratio": 23.18,
-    "eps_change_pct": -0.09
+    "eps_change_pct": 0.39
    }
   },
   "GOOGL": {
    "kind": "stock",
    "fwd_pe": 20.58,
-   "peg": 1.64,
-   "pe": 14.85,
-   "price": 284.51,
+   "peg": 1.58,
+   "pe": 14.81,
+   "price": 283.72,
    "price_date": "2026-11-16",
-   "price_time": "Nov 16, 2026, 3:17 PM EST",
-   "market_state": "open",
+   "price_time": "Nov 16, 2026, 4:00 PM EST",
+   "market_state": "closed",
    "source": "https://stockanalysis.com/stocks/googl/statistics/",
-   "implied_eps": 13.8246,
+   "implied_eps": 13.7862,
    "week": {
     "ref_date": "2026-11-09",
     "ref_ratio": 20.93,
-    "eps_change_pct": 0.43
+    "eps_change_pct": 0.15
    },
    "earnings_dates": [
     "2026-10-28"
@@ -42,19 +42,19 @@
   },
   "NVDA": {
    "kind": "stock",
-   "fwd_pe": 12.83,
-   "peg": 0.27,
-   "pe": 19.63,
-   "price": 155.22,
+   "fwd_pe": 12.9,
+   "peg": 0.26,
+   "pe": 19.74,
+   "price": 156.14,
    "price_date": "2026-11-16",
-   "price_time": "Nov 16, 2026, 3:25 PM EST",
-   "market_state": "open",
+   "price_time": "Nov 16, 2026, 4:00 PM EST",
+   "market_state": "closed",
    "source": "https://stockanalysis.com/stocks/nvda/statistics/",
-   "implied_eps": 12.0982,
+   "implied_eps": 12.1039,
    "week": {
     "ref_date": "2026-11-09",
     "ref_ratio": 14.77,
-    "eps_change_pct": 0.06
+    "eps_change_pct": 0.1
    },
    "earnings_dates": [
     "2026-11-17"
@@ -63,19 +63,19 @@
   },
   "TSLA": {
    "kind": "stock",
-   "fwd_pe": 176.58,
-   "peg": 5.31,
-   "pe": 414.31,
-   "price": 377.1,
+   "fwd_pe": 177.72,
+   "peg": 5.17,
+   "pe": 417.21,
+   "price": 379.74,
    "price_date": "2026-11-16",
-   "price_time": "Nov 16, 2026, 3:12 PM EST",
-   "market_state": "open",
+   "price_time": "Nov 16, 2026, 4:00 PM EST",
+   "market_state": "closed",
    "source": "https://stockanalysis.com/stocks/tsla/statistics/",
-   "implied_eps": 2.1356,
+   "implied_eps": 2.1367,
    "week": {
     "ref_date": "2026-11-09",
     "ref_ratio": 176.8,
-    "eps_change_pct": -0.1
+    "eps_change_pct": -0.05
    },
    "earnings_dates": [
     "2027-01-27"
@@ -84,19 +84,19 @@
   },
   "SPCX": {
    "kind": "stock",
-   "fwd_pe": 46.17,
+   "fwd_pe": 46.36,
    "peg": null,
    "pe": null,
-   "price": 139.5,
-   "price_date": "2026-11-16",
-   "price_time": "Nov 16, 2026, 3:45 PM EST",
+   "price": 140.07,
+   "price_date": "2026-11-17",
+   "price_time": "Nov 17, 2026, 9:52 AM EST",
    "market_state": "open",
    "source": "https://stockanalysis.com/stocks/spcx/statistics/",
    "implied_eps": 3.0214,
    "week": {
-    "ref_date": "2026-11-09",
-    "ref_ratio": 46.82,
-    "eps_change_pct": 0.01
+    "ref_date": "2026-11-10",
+    "ref_ratio": 46.97,
+    "eps_change_pct": -0.03
    },
    "earnings_dates": [
     "2026-10-20"
@@ -106,18 +106,18 @@
   "AAPL": {
    "kind": "stock",
    "fwd_pe": 37.45,
-   "peg": 4.4,
-   "pe": 39.3,
-   "price": 352.89,
+   "peg": 4.36,
+   "pe": 39.29,
+   "price": 352.78,
    "price_date": "2026-11-16",
-   "price_time": "Nov 16, 2026, 2:04 PM EST",
-   "market_state": "open",
+   "price_time": "Nov 16, 2026, 4:00 PM EST",
+   "market_state": "closed",
    "source": "https://stockanalysis.com/stocks/aapl/statistics/",
-   "implied_eps": 9.423,
+   "implied_eps": 9.42,
    "week": {
     "ref_date": "2026-11-09",
     "ref_ratio": 37.34,
-    "eps_change_pct": 0.2
+    "eps_change_pct": 0.17
    },
    "earnings_dates": [
     "2027-01-28"
