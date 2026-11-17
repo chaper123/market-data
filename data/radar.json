@@ -1,6 +1,6 @@
 {
  "generated_from": "repo 日線（indicators.py）；綜合評分來自 TradingView",
- "tv_fetched_at_taipei": "2026-11-17 23:43",
+ "tv_fetched_at_taipei": "2026-11-18 01:20",
  "rules": {
   "trend_adx": 25,
   "range_adx": 20
@@ -62,7 +62,7 @@
    },
    "last_date": "2026-11-16",
    "rows": 500,
-   "rating_skipped": "收盤 677.00 ≠ 680.26（可能是盤中數字）"
+   "rating_skipped": "收盤 672.04 ≠ 680.26（可能是盤中數字）"
   },
   "GOOGL": {
    "code": "GOOGL",
@@ -116,7 +116,7 @@
    },
    "last_date": "2026-11-16",
    "rows": 500,
-   "rating_skipped": "收盤 282.56 ≠ 283.72（可能是盤中數字）"
+   "rating_skipped": "收盤 281.31 ≠ 283.72（可能是盤中數字）"
   },
   "NVDA": {
    "code": "NVDA",
@@ -165,7 +165,7 @@
    },
    "last_date": "2026-11-16",
    "rows": 500,
-   "rating_skipped": "收盤 153.87 ≠ 156.14（可能是盤中數字）；SMA20 不一致"
+   "rating_skipped": "收盤 153.75 ≠ 156.14（可能是盤中數字）；SMA20 不一致"
   },
   "TSLA": {
    "code": "TSLA",
@@ -173,10 +173,10 @@
    "close": 379.74,
    "change_pct": -2.6856648013733553,
    "rating": {
-    "all": "無資料",
-    "ma": "無資料",
-    "osc": "無資料",
-    "all_value": null
+    "all": "中立",
+    "ma": "賣出",
+    "osc": "中立",
+    "all_value": -0.06666666666666667
    },
    "one_line": "盤整格局，看區間上下緣，不看均線排列",
    "structure": "盤整（ADX 12.9 < 20）：均線排列參考性低，改看 Pivot 區間上下緣",
@@ -223,7 +223,7 @@
    },
    "last_date": "2026-11-16",
    "rows": 500,
-   "rating_skipped": "收盤 381.13 ≠ 379.74（可能是盤中數字）"
+   "rating_skipped": null
   },
   "SPCX": {
    "code": "SPCX",
@@ -277,7 +277,7 @@
    },
    "last_date": "2026-11-16",
    "rows": 109,
-   "rating_skipped": "收盤 141.10 ≠ 137.36（可能是盤中數字）"
+   "rating_skipped": "收盤 140.38 ≠ 137.36（可能是盤中數字）"
   },
   "AAPL": {
    "code": "AAPL",
@@ -335,7 +335,7 @@
    },
    "last_date": "2026-11-16",
    "rows": 500,
-   "rating_skipped": "收盤 353.96 ≠ 352.78（可能是盤中數字）"
+   "rating_skipped": "收盤 350.48 ≠ 352.78（可能是盤中數字）"
   },
   "IAUM": {
    "code": "IAUM",
@@ -393,7 +393,7 @@
    },
    "last_date": "2026-11-16",
    "rows": 500,
-   "rating_skipped": "收盤 38.54 ≠ 38.36（可能是盤中數字）"
+   "rating_skipped": "收盤 38.56 ≠ 38.36（可能是盤中數字）"
   },
   "ARKK": {
    "code": "ARKK",
@@ -442,7 +442,7 @@
    },
    "last_date": "2026-11-16",
    "rows": 500,
-   "rating_skipped": "收盤 71.30 ≠ 71.55（可能是盤中數字）"
+   "rating_skipped": "收盤 70.31 ≠ 71.55（可能是盤中數字）"
   },
   "ARKQ": {
    "code": "ARKQ",
@@ -491,7 +491,7 @@
    },
    "last_date": "2026-11-16",
    "rows": 500,
-   "rating_skipped": "收盤 102.84 ≠ 103.40（可能是盤中數字）"
+   "rating_skipped": "收盤 102.10 ≠ 103.40（可能是盤中數字）"
   },
   "ARKX": {
    "code": "ARKX",
@@ -540,7 +540,7 @@
    },
    "last_date": "2026-11-16",
    "rows": 500,
-   "rating_skipped": "收盤 27.90 ≠ 28.05（可能是盤中數字）"
+   "rating_skipped": "收盤 27.69 ≠ 28.05（可能是盤中數字）"
   },
   "009816": {
    "code": "009816",
