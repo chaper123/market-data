@@ -1,39 +1,39 @@
 {
- "fetched_at_taipei": "2026-11-18 06:15",
+ "fetched_at_taipei": "2026-11-19 06:15",
  "week_limit_pct": 20,
  "symbols": {
   "VOO": {
    "kind": "etf",
-   "fwd_pe": 17.49,
+   "fwd_pe": 17.43,
    "peg": null,
-   "pe": 22.32,
-   "price": 670.93,
-   "price_date": "2026-11-17",
-   "price_time": "Nov 17, 2026, 3:28 PM EST",
-   "market_state": "open",
+   "pe": 22.15,
+   "price": 671.31,
+   "price_date": "2026-11-18",
+   "price_time": "Nov 18, 2026, 4:00 PM EST",
+   "market_state": "closed",
    "source": "https://stockanalysis.com/etf/voo/",
-   "implied_eps": 30.0596,
+   "implied_eps": 30.3074,
    "week": {
-    "ref_date": "2026-11-10",
-    "ref_ratio": 23.38,
-    "eps_change_pct": 1.89
+    "ref_date": "2026-11-11",
+    "ref_ratio": 23.48,
+    "eps_change_pct": 1.9
    }
   },
   "GOOGL": {
    "kind": "stock",
-   "fwd_pe": 20.34,
-   "peg": 1.58,
-   "pe": 14.64,
-   "price": 280.4,
-   "price_date": "2026-11-17",
-   "price_time": "Nov 17, 2026, 3:18 PM EST",
+   "fwd_pe": 20.58,
+   "peg": 1.56,
+   "pe": 14.8,
+   "price": 283.58,
+   "price_date": "2026-11-18",
+   "price_time": "Nov 18, 2026, 2:54 PM EST",
    "market_state": "open",
    "source": "https://stockanalysis.com/stocks/googl/statistics/",
-   "implied_eps": 13.7856,
+   "implied_eps": 13.7794,
    "week": {
-    "ref_date": "2026-11-10",
-    "ref_ratio": 20.85,
-    "eps_change_pct": -0.0
+    "ref_date": "2026-11-11",
+    "ref_ratio": 21.32,
+    "eps_change_pct": 0.11
    },
    "earnings_dates": [
     "2026-10-28"
@@ -42,19 +42,19 @@
   },
   "NVDA": {
    "kind": "stock",
-   "fwd_pe": 12.69,
-   "peg": 0.26,
-   "pe": 19.43,
-   "price": 153.69,
-   "price_date": "2026-11-17",
-   "price_time": "Nov 17, 2026, 3:27 PM EST",
+   "fwd_pe": 10.4,
+   "peg": 0.22,
+   "pe": 16.22,
+   "price": 150.99,
+   "price_date": "2026-11-18",
+   "price_time": "Nov 18, 2026, 3:50 PM EST",
    "market_state": "open",
    "source": "https://stockanalysis.com/stocks/nvda/statistics/",
-   "implied_eps": 12.1111,
+   "implied_eps": 14.5183,
    "week": {
-    "ref_date": "2026-11-10",
-    "ref_ratio": 13.94,
-    "eps_change_pct": 0.03
+    "ref_date": "2026-11-11",
+    "ref_ratio": 14.35,
+    "eps_change_pct": 19.92
    },
    "earnings_dates": [
     "2026-11-17"
@@ -63,19 +63,19 @@
   },
   "TSLA": {
    "kind": "stock",
-   "fwd_pe": 177.1,
+   "fwd_pe": 179.5,
    "peg": 5.17,
-   "pe": 415.92,
-   "price": 378.56,
-   "price_date": "2026-11-17",
-   "price_time": "Nov 17, 2026, 3:14 PM EST",
-   "market_state": "open",
+   "pe": 421.59,
+   "price": 383.72,
+   "price_date": "2026-11-18",
+   "price_time": "Nov 18, 2026, 4:00 PM EST",
+   "market_state": "closed",
    "source": "https://stockanalysis.com/stocks/tsla/statistics/",
-   "implied_eps": 2.1375,
+   "implied_eps": 2.1377,
    "week": {
-    "ref_date": "2026-11-10",
-    "ref_ratio": 176.86,
-    "eps_change_pct": 0.01
+    "ref_date": "2026-11-11",
+    "ref_ratio": 182.74,
+    "eps_change_pct": -0.0
    },
    "earnings_dates": [
     "2027-01-27"
@@ -84,19 +84,19 @@
   },
   "SPCX": {
    "kind": "stock",
-   "fwd_pe": 46.78,
+   "fwd_pe": 47.5,
    "peg": null,
    "pe": null,
-   "price": 141.37,
-   "price_date": "2026-11-17",
-   "price_time": "Nov 17, 2026, 3:53 PM EST",
-   "market_state": "open",
+   "price": 143.5,
+   "price_date": "2026-11-18",
+   "price_time": "Nov 18, 2026, 4:00 PM EST",
+   "market_state": "closed",
    "source": "https://stockanalysis.com/stocks/spcx/statistics/",
-   "implied_eps": 3.022,
+   "implied_eps": 3.0211,
    "week": {
-    "ref_date": "2026-11-10",
-    "ref_ratio": 46.97,
-    "eps_change_pct": -0.01
+    "ref_date": "2026-11-11",
+    "ref_ratio": 46.26,
+    "eps_change_pct": 0.0
    },
    "earnings_dates": [
     "2026-10-20"
@@ -105,19 +105,19 @@
   },
   "AAPL": {
    "kind": "stock",
-   "fwd_pe": 37.21,
-   "peg": 4.36,
-   "pe": 39.03,
-   "price": 350.51,
-   "price_date": "2026-11-17",
-   "price_time": "Nov 17, 2026, 2:10 PM EST",
-   "market_state": "open",
+   "fwd_pe": 37.42,
+   "peg": 4.34,
+   "pe": 39.25,
+   "price": 352.45,
+   "price_date": "2026-11-18",
+   "price_time": "Nov 18, 2026, 4:00 PM EST",
+   "market_state": "closed",
    "source": "https://stockanalysis.com/stocks/aapl/statistics/",
-   "implied_eps": 9.4198,
+   "implied_eps": 9.4188,
    "week": {
-    "ref_date": "2026-11-10",
-    "ref_ratio": 37.1,
-    "eps_change_pct": 0.22
+    "ref_date": "2026-11-11",
+    "ref_ratio": 37.76,
+    "eps_change_pct": 0.21
    },
    "earnings_dates": [
     "2027-01-28"
