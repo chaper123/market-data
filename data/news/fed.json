@@ -1,5 +1,5 @@
 {
- "generated_at_taipei": "2026-11-17 21:00",
+ "generated_at_taipei": "2026-11-18 11:10",
  "days": 7,
  "feeds": [
   {
@@ -14,6 +14,14 @@
   }
  ],
  "items": [
+  {
+   "date": "2026-11-17",
+   "title": "Waller, Considerations at the Intersection of Payments and Tokenized Markets",
+   "link": "https://www.federalreserve.gov/newsevents/speech/waller20261117a.htm",
+   "type": "speech",
+   "published_taipei": "2026-11-17 22:10",
+   "published_utc": "2026-11-17T14:10:00Z"
+  },
   {
    "date": "2026-11-17",
    "title": "Warsh, Opening Remarks",
@@ -77,14 +85,6 @@
    "type": "speech",
    "published_taipei": "2026-11-12 23:00",
    "published_utc": "2026-11-12T15:00:00Z"
-  },
-  {
-   "date": "2026-11-11",
-   "title": "Bowman, The U.S. Economy and Considerations for Monetary Policy",
-   "link": "https://www.federalreserve.gov/newsevents/speech/bowman20261110a.htm",
-   "type": "speech",
-   "published_taipei": "2026-11-11 04:30",
-   "published_utc": "2026-11-10T20:30:00Z"
   }
  ]
 }
