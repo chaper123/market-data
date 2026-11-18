@@ -769,36 +769,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-18 11:10",
-   "items": 2645,
+   "last": "2026-11-18 13:40",
+   "items": 2738,
    "by_tier": {
-    "4": 404,
-    "2": 2205,
-    "1": 22,
-    "3": 14
+    "4": 397,
+    "2": 2303,
+    "1": 23,
+    "3": 15
    },
    "feeds_ok": "50/50",
    "errors": 0,
-   "url_ok": 1309,
-   "url_total": 1322,
-   "time_suspect_detected": 7,
-   "time_fixed": 7,
+   "url_ok": 1361,
+   "url_total": 1371,
+   "time_suspect_detected": 11,
+   "time_fixed": 11,
    "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-17",
-   "checked_at_taipei": "2026-11-18 11:10",
+   "checked_at_taipei": "2026-11-18 13:40",
    "items": 9
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-18 10:19",
-   "items": 339,
+   "last": "2026-11-18 12:55",
+   "items": 368,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-18 11:10"
+   "checked_at_taipei": "2026-11-18 13:40"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -852,22 +852,22 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-18 11:10",
+   "last": "2026-11-18 13:40",
    "days_available": 18,
    "rising_topic": "export_controls",
    "rising_terms": [
     "矽品",
-    "優良",
-    "景碩",
     "outages",
-    "險守"
+    "景碩",
+    "優良",
+    "台廠"
    ]
   },
   "news/nsf": {
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-18 11:10",
+   "checked_at_taipei": "2026-11-18 13:40",
    "items": 10
   }
  },
