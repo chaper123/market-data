@@ -769,36 +769,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-18 16:30",
-   "items": 2836,
+   "last": "2026-11-18 21:00",
+   "items": 2973,
    "by_tier": {
-    "4": 402,
-    "2": 2396,
+    "4": 406,
+    "2": 2530,
     "1": 23,
-    "3": 15
+    "3": 14
    },
    "feeds_ok": "50/50",
    "errors": 0,
-   "url_ok": 1399,
-   "url_total": 1410,
-   "time_suspect_detected": 2,
-   "time_fixed": 2,
+   "url_ok": 1404,
+   "url_total": 1437,
+   "time_suspect_detected": 6,
+   "time_fixed": 6,
    "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-17",
-   "checked_at_taipei": "2026-11-18 16:30",
+   "checked_at_taipei": "2026-11-18 21:00",
    "items": 9
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-18 16:00",
-   "items": 386,
+   "last": "2026-11-18 19:49",
+   "items": 419,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-18 16:30"
+   "checked_at_taipei": "2026-11-18 21:00"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -852,7 +852,7 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-18 16:30",
+   "last": "2026-11-18 21:00",
    "days_available": 18,
    "rising_topic": "export_controls",
    "rising_terms": [
@@ -860,14 +860,14 @@
     "minutes",
     "fomc",
     "台廠",
-    "outages"
+    "守住"
    ]
   },
   "news/nsf": {
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-18 16:30",
+   "checked_at_taipei": "2026-11-18 21:00",
    "items": 10
   }
  },
