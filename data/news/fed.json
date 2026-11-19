@@ -1,19 +1,35 @@
 {
- "generated_at_taipei": "2026-11-18 21:00",
+ "generated_at_taipei": "2026-11-19 08:20",
  "days": 7,
  "feeds": [
   {
    "name": "Fed 新聞稿",
    "ok": true,
-   "count": 4
+   "count": 5
   },
   {
    "name": "Fed 演講",
    "ok": true,
-   "count": 5
+   "count": 6
   }
  ],
  "items": [
+  {
+   "date": "2026-11-19",
+   "title": "Minutes of the Federal Open Market Committee, October 27-28, 2026",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm",
+   "type": "press",
+   "published_taipei": "2026-11-19 03:00",
+   "published_utc": "2026-11-18T19:00:00Z"
+  },
+  {
+   "date": "2026-11-19",
+   "title": "Barr, Investing in America’s Underserved Communities",
+   "link": "https://www.federalreserve.gov/newsevents/speech/barr20261118a.htm",
+   "type": "speech",
+   "published_taipei": "2026-11-19 02:35",
+   "published_utc": "2026-11-18T18:35:00Z"
+  },
   {
    "date": "2026-11-17",
    "title": "Waller, Considerations at the Intersection of Payments and Tokenized Markets",
