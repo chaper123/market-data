@@ -1,5 +1,5 @@
 {
- "generated_at_taipei": "2026-11-19 11:10",
+ "generated_at_taipei": "2026-11-19 13:40",
  "rule": "count_1d＝最近 24 小時；count_7d／count_30d＝最近 7／30 個台北日曆日（含今天）；rise＝(count_7d/7)÷(count_30d/30)，歷史不足時分母用已有天數；rising_terms 的 score＝近 24 小時則數÷(今天以外的日平均＋1)。固定規則計數，不做預測",
  "days_available": 19,
  "history_since": "2026-11-01",
@@ -7,7 +7,7 @@
   {
    "topic": "fed",
    "label": "Fed／利率",
-   "count_1d": 48,
+   "count_1d": 46,
    "count_7d": 185,
    "count_30d": 369,
    "rise": 1.36,
@@ -22,73 +22,73 @@
   {
    "topic": "tariff",
    "label": "關稅",
-   "count_1d": 23,
-   "count_7d": 76,
-   "count_30d": 183,
-   "rise": 1.13,
+   "count_1d": 25,
+   "count_7d": 79,
+   "count_30d": 186,
+   "rise": 1.15,
    "sample_ids": [
+    "2c89d0054f5ec403",
+    "a138da361ad0f53c",
     "eed2380af8976495",
     "8d397395bca7e2f8",
-    "066a033f973d6312",
-    "966469262815c60a",
-    "d36a25fdb179caea"
+    "066a033f973d6312"
    ]
   },
   {
    "topic": "export_controls",
    "label": "出口管制",
-   "count_1d": 12,
-   "count_7d": 39,
-   "count_30d": 55,
-   "rise": 1.92,
+   "count_1d": 14,
+   "count_7d": 41,
+   "count_30d": 57,
+   "rise": 1.95,
    "sample_ids": [
     "88630bda9d965d04",
+    "a95e7cbcbc544b13",
     "3635fc2f0648424a",
     "d09c3695c6ab4496",
-    "42351f0123d1c444",
-    "6224388fd36dc022"
+    "42351f0123d1c444"
    ]
   },
   {
    "topic": "china",
    "label": "中國",
-   "count_1d": 78,
-   "count_7d": 247,
-   "count_30d": 610,
-   "rise": 1.1,
+   "count_1d": 83,
+   "count_7d": 259,
+   "count_30d": 622,
+   "rise": 1.13,
    "sample_ids": [
-    "f488200c135bca03",
-    "f0ca62ad1e8d6b4e",
-    "2b2e6974bac02f64",
-    "271f0a080e83d5e6",
-    "bee76a2a4f89a0cb"
+    "2c89d0054f5ec403",
+    "781300e51f7c8722",
+    "61d213b803e092e6",
+    "a252b00f2157dacc",
+    "ff20784f2a09d43c"
    ]
   },
   {
    "topic": "taiwan",
    "label": "台灣",
-   "count_1d": 69,
-   "count_7d": 206,
-   "count_30d": 502,
+   "count_1d": 62,
+   "count_7d": 204,
+   "count_30d": 500,
    "rise": 1.11,
    "sample_ids": [
     "91bcfaa0ca59a9d7",
-    "f0ca62ad1e8d6b4e",
-    "22b06debcbea0f3a",
-    "f09fddf32b33cba9",
-    "7b63e25e72256f57"
+    "380f948d5d0b6e00",
+    "a255a82894ba8ea5",
+    "bf6f8b43fedada13",
+    "f09fddf32b33cba9"
    ]
   },
   {
    "topic": "oil",
    "label": "油價",
-   "count_1d": 3,
-   "count_7d": 21,
-   "count_30d": 72,
-   "rise": 0.79,
+   "count_1d": 4,
+   "count_7d": 22,
+   "count_30d": 73,
+   "rise": 0.82,
    "sample_ids": [
+    "38eba6e7cbb50745",
     "01bdc6087639eac9",
-    "991fd2b52457e487",
     "197efecbbc3709b2",
     "ee922adf30090684",
     "de7cd41c575e88c2"
@@ -98,30 +98,30 @@
    "topic": "war",
    "label": "戰爭與地緣",
    "count_1d": 15,
-   "count_7d": 29,
-   "count_30d": 81,
-   "rise": 0.97,
+   "count_7d": 30,
+   "count_30d": 82,
+   "rise": 0.99,
    "sample_ids": [
     "58151fc67388ec3b",
+    "38eba6e7cbb50745",
+    "58151fc67388ec3b",
     "ba7025090c1ff6d8",
-    "04acc2886ccc61d6",
-    "df5a882a2ff08835",
-    "90d1812b8b3857a3"
+    "5989b304269bffdb"
    ]
   },
   {
    "topic": "cpi",
    "label": "通膨",
-   "count_1d": 9,
-   "count_7d": 35,
-   "count_30d": 121,
-   "rise": 0.79,
+   "count_1d": 7,
+   "count_7d": 33,
+   "count_30d": 119,
+   "rise": 0.75,
    "sample_ids": [
-    "6e382441c0b3e5d0",
     "90bc463e83395013",
     "5bf016b91c636f9e",
     "fef7d3807237a1f2",
-    "ee0d8f76e05dd947"
+    "ee0d8f76e05dd947",
+    "ce0940bc639aa9cc"
    ]
   },
   {
@@ -141,16 +141,16 @@
   {
    "topic": "earnings",
    "label": "財報",
-   "count_1d": 66,
-   "count_7d": 280,
-   "count_30d": 646,
+   "count_1d": 60,
+   "count_7d": 281,
+   "count_30d": 647,
    "rise": 1.18,
    "sample_ids": [
     "4532bcae0da2463f",
+    "6e7ed9db2c13aa29",
     "e4898ffecf6154e3",
     "5286337fa99a96b9",
-    "9286cda1eaf1ff27",
-    "10251c43f98d28f7"
+    "9286cda1eaf1ff27"
    ]
   },
   {
@@ -165,10 +165,10 @@
   {
    "topic": "merger",
    "label": "併購",
-   "count_1d": 5,
-   "count_7d": 34,
-   "count_30d": 97,
-   "rise": 0.95,
+   "count_1d": 3,
+   "count_7d": 33,
+   "count_30d": 96,
+   "rise": 0.93,
    "sample_ids": [
     "5dc9c0a144933048",
     "79b744c2906ab04a",
@@ -181,29 +181,55 @@
  "rising_topic": "export_controls",
  "rising_terms": [
   {
-   "term": "超越",
+   "term": "debut",
+   "count_1d": 21,
+   "count_30d": 27,
+   "score": 15.75,
+   "sample_ids": [
+    "9d1afb3d5e0a2e85",
+    "f9bbf19e600080db",
+    "95ef7fd8c0cd6703",
+    "1931e8107f5e3062",
+    "f72ff33c5920acc1"
+   ]
+  },
+  {
+   "term": "普丁",
    "count_1d": 14,
    "count_30d": 14,
    "score": 14.0,
    "sample_ids": [
-    "4f57e3d89bb355a8",
-    "41dc460b6a687ec9",
-    "4ca497cbe1855fce",
-    "07c618867f7cc1d9",
-    "7a398d405d9ac6a8"
+    "f83467c115aac9e4",
+    "f604d7a9863a9f09",
+    "0c9d63928f707999",
+    "135a3df0e05b06bb",
+    "ff20784f2a09d43c"
    ]
   },
   {
-   "term": "定價",
-   "count_1d": 29,
-   "count_30d": 51,
-   "score": 13.05,
+   "term": "習近",
+   "count_1d": 16,
+   "count_30d": 20,
+   "score": 13.09,
    "sample_ids": [
-    "e3e9a98632eb80ee",
-    "35e59ec04fddc825",
-    "764f090967c846d0",
-    "8d4d306f64f52a43",
-    "fa251ca6e3d2c85e"
+    "61d213b803e092e6",
+    "ff20784f2a09d43c",
+    "2f61f10d52cc4d59",
+    "2d44f0981ea2945b",
+    "566bb60664740fd4"
+   ]
+  },
+  {
+   "term": "近平",
+   "count_1d": 16,
+   "count_30d": 20,
+   "score": 13.09,
+   "sample_ids": [
+    "61d213b803e092e6",
+    "ff20784f2a09d43c",
+    "2f61f10d52cc4d59",
+    "2d44f0981ea2945b",
+    "566bb60664740fd4"
    ]
   },
   {
@@ -220,68 +246,29 @@
    ]
   },
   {
-   "term": "習近",
-   "count_1d": 13,
-   "count_30d": 13,
-   "score": 13.0,
+   "term": "定價",
+   "count_1d": 28,
+   "count_30d": 50,
+   "score": 12.6,
    "sample_ids": [
-    "2b2e6974bac02f64",
-    "1e1cb49c4e4d8284",
-    "4c8192411e8c0deb",
-    "2b302bd8bf0a3f4d",
-    "0dddbdc128bb15ec"
-   ]
-  },
-  {
-   "term": "近平",
-   "count_1d": 13,
-   "count_30d": 13,
-   "score": 13.0,
-   "sample_ids": [
-    "2b2e6974bac02f64",
-    "1e1cb49c4e4d8284",
-    "4c8192411e8c0deb",
-    "2b302bd8bf0a3f4d",
-    "0dddbdc128bb15ec"
-   ]
-  },
-  {
-   "term": "debut",
-   "count_1d": 15,
-   "count_30d": 21,
-   "score": 11.25,
-   "sample_ids": [
-    "7edfc44c7e6bf1fe",
-    "f72ff33c5920acc1",
-    "4a5f7cde00576215",
-    "edab2b46d2f82f68",
-    "86752c63b5365c0d"
+    "e3e9a98632eb80ee",
+    "010664becb995b84",
+    "35e59ec04fddc825",
+    "764f090967c846d0",
+    "8d4d306f64f52a43"
    ]
   },
   {
    "term": "minutes",
-   "count_1d": 11,
-   "count_30d": 11,
-   "score": 11.0,
+   "count_1d": 12,
+   "count_30d": 12,
+   "score": 12.0,
    "sample_ids": [
     "dbea10a75a84833c",
     "b38633ecf9062f92",
     "5bf016b91c636f9e",
     "862d70293fa013ad",
     "ee0d8f76e05dd947"
-   ]
-  },
-  {
-   "term": "高於",
-   "count_1d": 11,
-   "count_30d": 11,
-   "score": 11.0,
-   "sample_ids": [
-    "fa251ca6e3d2c85e",
-    "0dd9fa0df97b2881",
-    "f17bb394c089e060",
-    "4410be0a37ca7558",
-    "1f00fc5956ef3601"
    ]
   },
   {
@@ -298,81 +285,94 @@
    ]
   },
   {
-   "term": "per",
+   "term": "高於",
    "count_1d": 10,
    "count_30d": 10,
    "score": 10.0,
    "sample_ids": [
-    "588da3c277ad7f7a",
-    "72473df1c253c493",
-    "e9f49273b711cfdd",
-    "4e30dee80cc3a46c",
-    "116df3ce73e41c80"
+    "fa251ca6e3d2c85e",
+    "0dd9fa0df97b2881",
+    "f17bb394c089e060",
+    "4410be0a37ca7558",
+    "1f00fc5956ef3601"
    ]
   },
   {
-   "term": "glen",
-   "count_1d": 9,
-   "count_30d": 9,
-   "score": 9.0,
+   "term": "違約",
+   "count_1d": 12,
+   "count_30d": 16,
+   "score": 9.82,
    "sample_ids": [
-    "9af3e29f71b0cde6",
-    "0c435355228c47b1",
-    "a59ae58dfd73d4a9",
-    "a794d3ef2422934d",
-    "3166750b8c5c90f5"
-   ]
-  },
-  {
-   "term": "振榮",
-   "count_1d": 9,
-   "count_30d": 9,
-   "score": 9.0,
-   "sample_ids": [
-    "d97b704c05b64788",
-    "fade27bd82c53965",
-    "f4241eb6ccb043ac",
-    "302bced3e7f74938",
-    "a78282ded4921b84"
-   ]
-  },
-  {
-   "term": "施振",
-   "count_1d": 9,
-   "count_30d": 9,
-   "score": 9.0,
-   "sample_ids": [
-    "d97b704c05b64788",
-    "fade27bd82c53965",
-    "f4241eb6ccb043ac",
-    "302bced3e7f74938",
-    "a78282ded4921b84"
+    "7dd59c724515a559",
+    "80a9774b46285ddb",
+    "fb7d0222abf5a906",
+    "996033f96d108759",
+    "b4ab79a35c75cdad"
    ]
   },
   {
    "term": "交割",
-   "count_1d": 10,
-   "count_30d": 14,
-   "score": 8.18,
+   "count_1d": 11,
+   "count_30d": 15,
+   "score": 9.0,
    "sample_ids": [
+    "7dd59c724515a559",
     "fb7d0222abf5a906",
     "996033f96d108759",
     "b4ab79a35c75cdad",
-    "ef474d7d4bbee8ff",
-    "f260d753177c9551"
+    "ef474d7d4bbee8ff"
    ]
   },
   {
    "term": "約交",
-   "count_1d": 10,
-   "count_30d": 14,
-   "score": 8.18,
+   "count_1d": 11,
+   "count_30d": 15,
+   "score": 9.0,
    "sample_ids": [
+    "7dd59c724515a559",
     "fb7d0222abf5a906",
     "996033f96d108759",
     "b4ab79a35c75cdad",
-    "ef474d7d4bbee8ff",
-    "f260d753177c9551"
+    "ef474d7d4bbee8ff"
+   ]
+  },
+  {
+   "term": "per",
+   "count_1d": 9,
+   "count_30d": 9,
+   "score": 9.0,
+   "sample_ids": [
+    "04ce96895a61de68",
+    "588da3c277ad7f7a",
+    "72473df1c253c493",
+    "e9f49273b711cfdd",
+    "4e30dee80cc3a46c"
+   ]
+  },
+  {
+   "term": "raises",
+   "count_1d": 19,
+   "count_30d": 42,
+   "score": 8.34,
+   "sample_ids": [
+    "9d1afb3d5e0a2e85",
+    "24996ec57e288d32",
+    "8d1b0e1a3e0115b4",
+    "140da128423afacc",
+    "53e77c071e40e21a"
+   ]
+  },
+  {
+   "term": "服務",
+   "count_1d": 12,
+   "count_30d": 21,
+   "score": 8.0,
+   "sample_ids": [
+    "260e2e1161742ab0",
+    "7c462809d4f57d43",
+    "a95e7cbcbc544b13",
+    "0634f16d20933917",
+    "ed9c3bba262967fe"
    ]
   }
  ]
