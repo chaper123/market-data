@@ -773,38 +773,38 @@
    "source": "統一投信 ezmoney"
   },
   "news/headlines": {
-   "status": "ok",
+   "status": "partial",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-20 16:30",
-   "items": 3354,
+   "last": "2026-11-20 21:00",
+   "items": 3381,
    "by_tier": {
+    "2": 2956,
     "4": 393,
-    "2": 2926,
-    "3": 13,
-    "1": 22
+    "3": 14,
+    "1": 18
    },
-   "feeds_ok": "50/50",
-   "errors": 0,
-   "url_ok": 1677,
-   "url_total": 1699,
-   "time_suspect_detected": 16,
-   "time_fixed": 16,
+   "feeds_ok": "49/50",
+   "errors": 1,
+   "url_ok": 1742,
+   "url_total": 1742,
+   "time_suspect_detected": 17,
+   "time_fixed": 17,
    "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-20",
-   "checked_at_taipei": "2026-11-20 16:30",
+   "checked_at_taipei": "2026-11-20 21:00",
    "items": 9
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-20 15:22",
-   "items": 449,
+   "last": "2026-11-20 20:03",
+   "items": 459,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-20 16:30"
+   "checked_at_taipei": "2026-11-20 21:00"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -858,22 +858,22 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-20 16:30",
+   "last": "2026-11-20 21:00",
    "days_available": 20,
    "rising_topic": "export_controls",
    "rising_terms": [
     "首日",
-    "debut",
     "fails",
     "上市首",
-    "暫停"
+    "上第三",
+    "第三大"
    ]
   },
   "news/nsf": {
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-20 16:30",
+   "checked_at_taipei": "2026-11-20 21:00",
    "items": 10
   }
  },
@@ -883,7 +883,7 @@
  "us_cutoff_ny": "2026-11-19",
  "tw_cutoff_taipei": "2026-11-19",
  "summary": {
-  "ok": 62,
+  "ok": 61,
   "stale": 1,
   "fail": 0
  },
