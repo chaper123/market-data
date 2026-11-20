@@ -1,9 +1,11 @@
-# 新聞標題（2026-11-19 21:00 台北）
+# 新聞標題（2026-11-20 08:20 台北）
 
-最近 72 小時，共 3198 則（官方 25、主要媒體 2765、第一手 15、其他 393）。T1 官方、T2A 通訊社與一線財經媒體、T2B 其他主要財經媒體、T3 第一手發言、T4 其他。時間為台北時間。
+最近 72 小時，共 3232 則（官方 23、主要媒體 2802、第一手 12、其他 395）。T1 官方、T2A 通訊社與一線財經媒體、T2B 其他主要財經媒體、T3 第一手發言、T4 其他。時間為台北時間。
 
 ## Fed（官方）
 
+- 2026-11-20 00:00 [press] Federal Reserve Board issues enforcement action with former employee of First Security Bancorp
+- 2026-11-19 22:25 [speech] Jefferson, Monetary Policy amid Frequent and Complex Shocks
 - 2026-11-19 03:00 [press] Minutes of the Federal Open Market Committee, October 27-28, 2026
 - 2026-11-19 02:35 [speech] Barr, Investing in America’s Underserved Communities
 - 2026-11-17 22:10 [speech] Waller, Considerations at the Intersection of Payments and Tokenized Markets
@@ -11,169 +13,168 @@
 - 2026-11-16 18:00 [speech] Barr, Some Potential Financial Stability Implications of Artificial Intelligence
 - 2026-11-14 08:00 [speech] Jefferson, New Technology, Old Questions: Productivity Puzzles and the Macroeconomy
 - 2026-11-14 05:15 [press] Agencies extend comment period for proposed third-party risk management guidance
-- 2026-11-13 02:30 [press] Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services
-- 2026-11-13 01:45 [press] Federal Reserve announces revised tentative schedule of Federal Open Market Committee meetings in 2027
-- 2026-11-13 00:00 [press] Federal Reserve Board issues enforcement action with former employee of United Community Bank
-- 2026-11-12 23:00 [speech] Barr, American Inequality and the Future of AI
 
 ## 中央社（官方 RSS，資料出處：中央通訊社）
 
-- 2026-11-19 19:33 阿爾巴尼亞AI助理升級 民眾語音申辦服務更輕鬆
-- 2026-11-19 19:17 美中俄領袖峰會 發布和平宣言
-- 2026-11-19 19:04 金管會加碼限空 超過半數上市櫃股票20日平盤下禁放空
-- 2026-11-19 19:03 金管會提3理由擴大限空 1028檔股票11/20禁平盤下放空
-- 2026-11-19 18:33 外資連4賣提款243億元 大砍主動式ETF、連6賣台積電
-- 2026-11-19 18:31 玉晶光：光通訊需求強勁 目標明年整體營收成長20%
-- 2026-11-19 18:23 新加坡總理APEC談話 籲亞太自由貿易避經濟集團對立
-- 2026-11-19 18:23 Politico：歐盟執委會遭網攻 大量個資恐外洩
-- 2026-11-19 18:23 台化股票爆4172萬元違約交割 今年上市公司第20起
-- 2026-11-19 18:22 美中俄領袖峰會結束 塔斯社：持續一個半小時
-- 2026-11-19 18:16 華芸擬12月中旬上櫃 施崇棠盼成私有雲信賴品牌
-- 2026-11-19 18:10 川習三會 分析：台海議題內容在預期之內
-- 2026-11-19 18:05 Disney+登台5週年 陳永樂：靠飛輪效應突圍串流市場
-- 2026-11-19 18:01 美中俄領袖峰會 川普：絕不讓伊朗擁有核武
-- 2026-11-19 18:00 瑞銀估明年底標普達8200點 金價上看5000美元
-- 2026-11-19 17:52 中華電信5G加速器攜手6新創 布局AI、雲端新應用
-- 2026-11-19 17:48 財部：菸酒製造及進口業 年底前須繳納許可年費
-- 2026-11-19 17:46 水庫設光電引議 太陽能七大公協會盼以科學評估、勿污名化
-- 2026-11-19 17:45 輝達危機籠罩科技股 亞股多收低
-- 2026-11-19 17:37 台股重挫失守4萬點 新台幣盤中貶破33元終場小升0.5分
-- …另有 421 則（見 headlines.json）
+- 2026-11-20 05:58 最新財務申報曝光 川普9月買進逾870萬輝達股票
+- 2026-11-20 05:42 美股收挫 Anthropic漲逾17%未能帶動大盤
+- 2026-11-20 05:07 油輪運輸受阻抵銷供應過剩疑慮 國際油價持平
+- 2026-11-20 04:47 美特使會歐洲盟友 稱俄不排斥烏克蘭獲得類北約安全保障
+- 2026-11-20 04:07 美中俄峰會同日基輔遇襲 荷蘭、奧地利使館受損
+- 2026-11-20 03:57 中國供應鏈疑慮衝擊超微 股價重挫8%
+- 2026-11-20 03:05 川普結束中國行返美 20日在白宮召開記者會
+- 2026-11-20 02:12 葉門叛軍襲擊沙烏地阿拉伯首都 市內最高樓受損
+- 2026-11-20 02:08 Anthropic掛牌掀AI熱潮 歐股仍收低
+- 2026-11-20 01:47 Anthropic上市首日開盤漲34% 市值突破2兆美元
+- 2026-11-20 01:45 稱伊朗研究生化武器 川普：看元旦後美伊局勢如何發展
+- 2026-11-20 00:26 中俄美元首會晤 中國外長：大國加強溝通符合世界期待
+- 2026-11-19 23:59 川普與高市早苗通話 商討美中俄領袖會談情況
+- 2026-11-19 22:53 美中俄宣言 普丁：三方認為國際刑事法院逾越權限
+- 2026-11-19 22:53 Anthropic掛牌上市提振AI交易 美股開盤走高
+- 2026-11-19 22:29 立陶宛在野黨挺台反對代表處更名 考慮對外長提不信任案
+- 2026-11-19 22:24 蚊子機場一籮筐 中國7成機場靠財政補貼維持
+- 2026-11-19 22:15 金管會：台灣週展現4大亮點 45場活動吸引近4萬人次
+- 2026-11-19 22:08 威力彩第115093期 頭獎槓龜
+- 2026-11-19 21:55 美中俄峰會 普丁：同意美國解決烏克蘭戰爭妥協方案
+- …另有 433 則（見 headlines.json）
 
 ## NVDA（Nvidia）
 
-- 2026-11-19 20:30 T2B｜Yahoo Finance｜Howard Lutnick’s family firm cut its Nvidia stake nearly in half before a 36% plunge. Now Congress wants its records
-- 2026-11-19 20:12 T2B｜MarketWatch｜Can Anthropic’s IPO do for the stock market what Nvidia’s earnings couldn’t?
-- 2026-11-19 20:02 T2A｜Bloomberg.com｜Nvidia Moves Ousted CEO Jensen Huang Out of the Spotlight
-- 2026-11-19 19:45 T2A｜WSJ｜Nvidia Is the Central Bank to AI’s Circular Economy. See Where the Money Goes.
-- 2026-11-19 19:45 T2B｜Yahoo Finance｜Nvidia’s $500B AI Machine Is Getting Bigger. Semiconductor ETFs May Need a Rethink
-- 2026-11-19 19:38 T2A｜WSJ｜How Everyday Investors Manage Their Stakes in Nvidia
-- 2026-11-19 19:15 T2B｜Yahoo Finance｜‘Nvidia’s turmoil has me spooked’: Should I sell my stocks and buy real estate — or ride out the storm?
-- 2026-11-19 19:03 T2A｜WSJ｜Wall Street Pledged $500 Billion for Nvidia. Not a Dollar Has Been Deployed.
-- 2026-11-19 19:00 T2B｜Yahoo Finance｜Nvidia Made $10 Billion on Private AI Bets. But $2 Billion Warning Is Emerging
-- 2026-11-19 19:00 T2A｜Bloomberg.com｜Nvidia’s Scandals Make the Case for Chip Controls
-- 2026-11-19 18:10 T2B｜Barron's｜Nvidia Stock Is Rebounding on Hope Anthropic IPO Will Rescue the AI Trade
-- 2026-11-19 17:15 T2B｜Yahoo Finance｜2 Words From Nvidia’s Colette Kress That Should Reassure Investors
-- 2026-11-19 15:51 T2A｜Financial Times｜Virtual ‘Jensanity’ rocks Taipei in support for Nvidia chief
-- 2026-11-19 15:38 T2B｜Yahoo Finance｜‘Near Zero Chance’: Gary Black Explains Why Nvidia Board Won’t Reconsider Jensen Huang, Crypto Bettors See This Outcome
-- 2026-11-19 14:46 T2A｜CNBC｜U.S. will become more hawkish on China following Nvidia scandal: Asia Society
-- 2026-11-19 20:35 T4｜CNN｜Blacklisted Chinese universities procured Nvidia chips, records show
-- 2026-11-19 20:11 T4｜Morningstar｜Nvidia Is in Crisis. But Active ETF Managers Aren’t Blinking
-- 2026-11-19 20:05 T4｜Crypto Briefing｜Nvidia ousts CEO Jensen Huang amid leadership transition
-- …另有 337 則（見 headlines.json）
+- 2026-11-20 08:01 T2A｜WSJ｜California Attorney General Issues Investigative Subpoena to Nvidia
+- 2026-11-20 07:32 T2A｜Reuters｜Alibaba defrauded shareholders by concealing ties to suspected spy in Nvidia scandal, lawsuit says
+- 2026-11-20 07:22 T2A｜CNBC｜Cramer says Nvidia’s woes are trumping Anthropic excitement for the rest of the AI trade
+- 2026-11-20 07:04 T2B｜Yahoo Finance｜California subpoenas Nvidia as questions about CEO affair, AI chips mount
+- 2026-11-20 07:01 T2A｜Bloomberg.com｜California Probing If Nvidia Misled Investors on China Risks
+- 2026-11-20 06:53 T2A｜Reuters｜California AG subpoenas Nvidia over concerns about former CEO, China ties
+- 2026-11-20 06:49 T2A｜CNBC｜California attorney general issues Nvidia subpoena in probe of China chip diversion
+- 2026-11-20 06:20 T2B｜Yahoo Finance｜Nvidia vs. Intel: One AI Stock Is Worth the Drama, the Other Isn’t Worth the Wait, Says Investor
+- 2026-11-20 05:45 T2B｜MarketWatch｜Nvidia’s stock falls further. It has lost $669 billion in six trading days.
+- 2026-11-20 05:21 T2B｜Yahoo Finance｜Nvidia, Broadcom, and Micron stocks decline as Anthropic goes public
+- 2026-11-20 05:12 T2B｜Yahoo Finance｜Nvidia, AMD, Micron Sink as Anthropic Closes 17% Above IPO Price
+- 2026-11-20 04:44 T2B｜Yahoo Finance｜Nvidia Up 8.9% After a Strong Anthropic IPO? That’s What Tilt’s New Investing Tool Modeled
+- 2026-11-20 04:15 T2B｜Yahoo Finance｜First Nvidia, Now AMD: A Short Seller Just Put Its China Business Under the Microscope
+- 2026-11-20 04:02 T2B｜Barron's｜AMD Stock Drops After Short Report Says It Isn’t an Nvidia Replacement
+- 2026-11-20 03:42 T2B｜Yahoo Finance｜‘SpaceX Has Gone All In With Nvidia’: Nvidia’s Biggest Customer Is Also Its Biggest Stock Holding at $19.7B
+- 2026-11-20 08:01 T4｜The Washington Post｜Nvidia scandal could be tipping point toward tougher export control enforcement
+- 2026-11-20 07:57 T4｜The Washington Post｜Bloomberg News journalist barred from China meeting after Nvidia question
+- 2026-11-20 07:55 T4｜ABC10｜California attorney general subpoenas Nvidia over concerns about China and investor disclosures
+- …另有 303 則（見 headlines.json）
 
 ## TSLA（Tesla）
 
+- 2026-11-20 05:07 T2B｜Barron's｜Pony AI Results Show Just How Big Tesla’s Robo-Taxi Fleet Needs to Get
+- 2026-11-20 04:51 T2A｜Bloomberg.com｜Tesla Shareholders Urged to Vote Against Chair by Proxy Adviser
+- 2026-11-20 04:29 T2B｜Yahoo Finance｜Trump Just Disclosed Tesla and SpaceX Stock Purchases. Here's What His Portfolio Moves Reveal
+- 2026-11-20 03:03 T2B｜Yahoo Finance｜Trump's New Filing Reveals Nvidia, SpaceX And Tesla Purchases. White House Says He Didn't Direct Trades.
+- 2026-11-20 02:44 T2B｜Yahoo Finance｜Tesla Has Another New Vehicle Coming, but Who Actually Wants It?
+- 2026-11-20 02:23 T2B｜Yahoo Finance｜Can Tesla's Cash Cover $20 Billion Of Spending?
+- 2026-11-20 02:02 T2A｜WSJ｜What the Blue Wave in Texas Means for Elon Musk’s Tesla and SpaceX
+- 2026-11-19 23:30 T2B｜Yahoo Finance｜174-year-old American bank’s Bitcoin exposure nears Tesla and SpaceX
+- 2026-11-19 19:54 T2B｜Yahoo Finance｜Strong Tesla Cybertruck Demand Helps Push U.S. New-Vehicle Prices to All-Time High
 - 2026-11-19 18:59 T2B｜Yahoo Finance｜Elon Musk Reportedly Says Tesla Will Continue To Increase Production In China – TSLA Stock Rises Premarket
 - 2026-11-19 17:19 T2B｜Yahoo Finance｜Campaign Urges Ripple to Burn $30B in XRP as Analyst Cites Tesla in $70 XRP Call
 - 2026-11-19 13:34 T2A｜Reuters｜Musk pledges higher Tesla output at China plant, Chinese state media says
 - 2026-11-19 11:30 T2B｜Yahoo Finance｜EXCLUSIVE: Tesla Still Rules Leveraged ETFs, but Anthropic IPO and Micron’s Rise Signal What’s Next
 - 2026-11-19 07:35 T2A｜CNBC｜Elon Musk on his compensation if Tesla were to merge with SpaceX
 - 2026-11-19 07:26 T2A｜CNBC｜Elon Musk: More areas of overlap between SpaceX and Tesla than before
-- 2026-11-19 05:46 T2A｜Bloomberg.com｜Tesla Scores Legal Win Against Manitoba in EV Rebate Case
-- 2026-11-19 01:00 T2B｜Axios｜Tesla's Cybercab: Your car, Tesla's rules
-- 2026-11-19 00:30 T2B｜Yahoo Finance｜'Coming Soon': Elon Musk Hints Tesla Owners Could Put Their Model Ys to Work as Robotaxis Without Driving
-- 2026-11-18 22:00 T2B｜Yahoo Finance｜Bad News For Tesla, As Waymo Gets Pulled Off The Road
-- 2026-11-18 21:26 T2A｜CNBC｜Here are Wednesday's biggest analyst calls: Nvidia, SpaceX, Tesla, Apple, Microsoft, Oracle, Coca-Cola & more
-- 2026-11-18 21:10 T2B｜Yahoo Finance UK｜3 ETFs For Tesla As Its Germany Expansion Changes The Mix
-- 2026-11-18 20:58 T2B｜Barron's｜Waymo’s Speed Bump Is Bad News for Tesla Stock
-- 2026-11-18 19:24 T2B｜Yahoo Finance｜Elon Musk Makes Major Tesla Production Shift After Cybertruck Sales Collapse
-- 2026-11-18 18:30 T2A｜Bloomberg.com｜Tesla’s Invite-Only Cybercab Isn’t for You
-- 2026-11-19 20:56 T4｜InsideEVs｜Americans Bought More Used EVs In October. Fewer Of Them Were Teslas
-- 2026-11-19 20:39 T4｜24/7 Wall St.｜4 Stocks Analysts and Hedge Funds Surprisingly Prefer Over Tesla
-- 2026-11-19 20:39 T4｜Foreign Policy Journal｜Roamly Targets Tesla (NASDAQ: TSLA) Cybercab Owners With First-Of-Its-Kind Autonomous Vehicle Insurance Policy
-- …另有 115 則（見 headlines.json）
+- 2026-11-20 08:12 T4｜Drive Tesla Canada｜Tesla expands Supercharger Waitlist to 300 sites across the U.S.
+- 2026-11-20 08:11 T4｜bmwblog｜The BMW iX3 Beat Tesla And Volvo In A Seven-Car Driver Assistance Test
+- 2026-11-20 07:05 T4｜BASENOR - Tesla Accessories｜Tesla Supercharger Waitlist, Explained in 5 Points
+- …另有 104 則（見 headlines.json）
 
 ## GOOGL（Alphabet OR Google）
 
+- 2026-11-20 07:38 T2A｜CNBC｜Cramer: My favorite chartist sees two major signs of a rally brewing in Alphabet stock
+- 2026-11-20 06:03 T2A｜Bloomberg.com｜Alphabet to Raise at Least $3.5 Billion With Canadian Debt Sale
+- 2026-11-20 05:47 T2B｜Barron's｜Anthropic, AMD, Alphabet, Palo Alto, Take-Two, Walmart, and More Stocks That Explain Today’s Market
+- 2026-11-20 05:28 T2B｜Yahoo Finance｜Google’s SpaceX Stake Lost More Than $10 Billion in Value Last Quarter While Its Share Count Edged Up
+- 2026-11-20 05:15 T2A｜Bloomberg.com｜Google-Tied Prepaid Bond Deals Delayed Due to Lackluster Demand
+- 2026-11-20 05:06 T2B｜Yahoo Finance｜Google selects Blue Origin’s New Glenn for Project Suncatcher
+- 2026-11-20 04:03 T2A｜CNBC｜Bessemer's Byron Deeter calls Anthropic IPO a 'Google moment'
+- 2026-11-20 02:55 T2A｜Bloomberg.com｜Google’s Gemini Can Now Control Mac Devices on Users’ Behalf
+- 2026-11-20 02:18 T2B｜Yahoo Finance｜Why Alphabet Stock Popped Today
+- 2026-11-20 02:02 T2A｜CNBC｜Final Trades: Boeing, Disney, Anthropic and Alphabet
+- 2026-11-20 01:19 T2A｜Bloomberg.com｜Google Workers Urge Bosses to Give Schools Search Without AI
+- 2026-11-20 00:07 T2B｜Yahoo Finance｜Alphabet (GOOG) Slips as 2026 Capex Outlook Rises
+- 2026-11-19 23:09 T2B｜Barron's｜Alphabet Stock Is Jumping. 2 Reasons the Comeback Starts Now.
+- 2026-11-19 22:22 T2A｜Reuters｜Google picks Bezos' Blue Origin to launch AI computing satellites in 2029
 - 2026-11-19 20:14 T2B｜Barron's｜Google Stock Is in a Slump. 2 Reasons the Comeback Could Start Today.
-- 2026-11-19 19:33 T2B｜Barron's｜Anthropic, Google, Palo Alto, Walmart, and More Stocks That Explain Today’s Market
-- 2026-11-19 13:02 T2A｜Bloomberg.com｜Watch Inside Google's AI Race with Ruth Porat
-- 2026-11-19 13:00 T2A｜Bloomberg.com｜Google’s Porat Pledges Data Center Local Support Amid Backlash
-- 2026-11-19 11:27 T2B｜Yahoo Finance｜Alphabet (GOOGL) Stock Could Be 47% Undervalued As AI Spending Fears Bite
-- 2026-11-19 08:00 T2B｜Yahoo Finance｜Google Signs Landmark Superhot Geothermal Deal
-- 2026-11-19 07:57 T2B｜Yahoo Finance｜Is Alphabet Stock a Buy Right Now?
-- 2026-11-19 07:45 T2B｜Yahoo Finance｜Alphabet vs. Apple: Which Warren Buffett Stock Is the Better Buy?
-- 2026-11-19 07:44 T2A｜Bloomberg.com｜Ex-Google Engineer May Face New Charges Over Bets on Gemini 3.0
-- 2026-11-19 05:01 T2B｜MarketWatch｜Google turns to a volcano and rock-melting technology in a wild new bid to power AI
-- 2026-11-19 04:25 T2B｜Yahoo Finance｜Alphabet is Buying Around $10 Billion More Anthropic Shares on Day 1. Should You Follow?
-- 2026-11-19 04:07 T2B｜Yahoo Finance｜Why Isn’t Alphabet Stock Taking Off After Reporting Record Cloud Growth?
-- 2026-11-19 03:57 T2B｜Yahoo Finance｜Alphabet Stock Is Falling. Here’s Why Investors Should Be Buying the Dip.
-- 2026-11-19 02:16 T2B｜Yahoo Finance｜Anthropic Valuation Is 8.5 Times Next Year’s Sales: Multiples More Like Microsoft, Alphabet Than Palantir, New Street Analyst Says
-- 2026-11-19 01:30 T2B｜Yahoo Finance｜Amazon and Alphabet Will Own Over 28% of Anthropic After Its IPO. Here’s What That Means for Their Stocks.
-- 2026-11-19 20:52 T4｜University Herald｜NYC, LA and Chicago May Ditch Google Over AI Features in Student Search
-- 2026-11-19 20:51 T4｜Search Engine Roundtable｜Google Search With AI-Generated Emojis In What People Are Saying
-- 2026-11-19 20:41 T4｜Search Engine Roundtable｜Google Hotel Search Listings With Continue On Google To Book In AI Mode
-- …另有 145 則（見 headlines.json）
+- 2026-11-20 08:00 T4｜Virginia Business｜Google awards $3.9M in Virginia watershed grants
+- 2026-11-20 07:44 T4｜EdSurge｜Google Says Schools Can’t Have Search Without AI. Some Are Finding a Way.
+- 2026-11-20 07:43 T4｜Untapped New York｜Pigeons & The Alphabet with Brooklyn Artist Sarah Feingold
+- …另有 151 則（見 headlines.json）
 
 ## AAPL（Apple）
 
+- 2026-11-20 07:51 T2B｜Barron's｜Apple May Try to Challenge Meta for Personal Agent Supremacy
+- 2026-11-20 05:44 T2A｜Bloomberg.com｜Apple Is Working on AI Agent for Device Control, Apps, Browsing and Coding
+- 2026-11-20 05:05 T2A｜Bloomberg.com｜Watch Joanna Stern on Siri’s iOS 27 Issues and Her Viral ‘Apple Dad’ Review
+- 2026-11-20 04:01 T2A｜Bloomberg.com｜Apple’s Executive in Charge of the iPhone’s Camera App Has Left
+- 2026-11-20 03:15 T2B｜Yahoo Finance｜Apple (AAPL) Faces UK Backdoor Admission And French Obsolescence Trial
+- 2026-11-20 03:03 T1｜Apple｜“Wild Things,” led by Jude Law and Andrew Garfield, roars onto Apple TV on April 16
+- 2026-11-20 02:38 T2A｜Reuters｜UK tribunal confirms government order demanding access to Apple data
+- 2026-11-20 00:22 T2B｜Yahoo Finance｜Services Franchise and Installed Base Anchor Apple’s (AAPL) Durable Earnings Growth
+- 2026-11-20 00:04 T1｜Apple｜Apple TV becomes the new U.S. home of F1 ACADEMY™, the all-female racing series
+- 2026-11-19 23:03 T2B｜Yahoo Finance｜If Apple Reaches $400, Your $5,000 Investment Would Be Worth This Much
+- 2026-11-19 21:21 T2A｜CNBC｜Here are Thursday's biggest analyst calls: Nvidia, Anthropic, SpaceX, Apple, Abbott Labs, Box, Strategy & more
+- 2026-11-19 21:17 T2A｜Financial Times｜UK loses bid to keep Apple ‘backdoor’ order secret
 - 2026-11-19 19:00 T2A｜WSJ｜The 60 Best Black Friday Apple and Tech Deals
 - 2026-11-19 18:00 T2B｜Yahoo! Finance Canada｜Microsoft, Apple, JPMorgan Chase and the FAA all failed in 6 days — why experts say Canadians should brace for more
 - 2026-11-19 07:45 T2B｜Yahoo Finance｜Alphabet vs. Apple: Which Warren Buffett Stock Is the Better Buy?
-- 2026-11-19 02:10 T2A｜CNBC｜Is Apple the safe haven investors think it is? Here's a way to trade it with less risk
-- 2026-11-19 00:43 T2B｜Yahoo Finance｜Apple Stock Shows Strength Now, and a Key Catalyst Is Brewing in June 2027
-- 2026-11-18 21:26 T2A｜CNBC｜Here are Wednesday's biggest analyst calls: Nvidia, SpaceX, Tesla, Apple, Microsoft, Oracle, Coca-Cola & more
-- 2026-11-18 20:22 T2B｜Yahoo Finance｜Apple Is the Only Magnificent Seven Stock Near a Record
-- 2026-11-18 18:57 T2A｜Bloomberg.com｜Apple’s Haven Status Makes It One of Priciest Stocks in Market
-- 2026-11-18 18:56 T2B｜Yahoo! Finance Canada｜Apple Inc. (AAPL) Stock Price, News, Quote & History
-- 2026-11-18 11:04 T2A｜WSJ｜Our Reporter Tried About 50 Apple Varieties to Find the Crispest One
-- 2026-11-18 06:55 T2A｜Reuters｜Apple works to restore services after outage caused by internal update
-- 2026-11-18 06:01 T2A｜AP News｜Apple joins a parade of technology hiccups in recent days
-- 2026-11-18 04:35 T2A｜CNBC｜Widespread outages hit banks, air travel, the NSA and Apple, disrupting seemingly everything
-- 2026-11-18 04:07 T2A｜Bloomberg.com｜Apple Works to Fix Systems After Update Caused Internal, Retail and iCloud Outages
-- 2026-11-18 03:57 T2B｜Yahoo Finance｜Apple outage today: iCloud and App Store down after a week of big outages
-- 2026-11-19 20:58 T4｜Mezha.net｜Apple may delay or cancel OLED iMac plans over cost and demand
-- 2026-11-19 20:58 T4｜Mezha.net｜Apple may scrap OLED iMac upgrade after weak iPad Pro OLED sales
-- 2026-11-19 20:51 T4｜MacRumors｜Apple Faces 'Planned Obsolescence' Trial Over iPhone Repairs
-- …另有 104 則（見 headlines.json）
+- 2026-11-20 08:03 T4｜Engadget｜Job posting seemingly confirms Apple is working on its own AI agent for coding and other tasks
+- 2026-11-20 07:47 T4｜Macworld｜Apple job listing gives away proactive agentic AI project
+- 2026-11-20 07:46 T4｜IGN Nordic｜The Apple TV Black Friday Deal Gets You 6 Months of Ad-free Streaming for Half the Price
+- …另有 113 則（見 headlines.json）
 
 ## SPCX（SpaceX）
 
-- 2026-11-19 19:57 T2B｜Barron's｜SpaceX Stock Is Up. Anthropic’s IPO Answers a Key Question.
-- 2026-11-19 19:35 T2B｜Yahoo Finance｜Jim Cramer Isn't Buying SpaceX Stock Yet. Cathie Wood Keeps Buying. Here’s Who’s Right.
-- 2026-11-19 18:35 T2B｜Yahoo Finance｜Anthropic’s Amended S-1 Shows $895 Billion in Spending Commitments. Here’s How Much Flows Straight to SpaceX -- and When.
-- 2026-11-19 16:43 T2A｜Bloomberg.com｜Watch Anthropic Tops SpaceX With $107.3B Raise as Trump and Xi Meet at APEC
-- 2026-11-19 16:20 T2B｜Yahoo Finance｜Prediction: This Will Be SpaceX's Stock Price by the End of 2030
-- 2026-11-19 15:31 T2A｜Bloomberg.com｜Anthropic Raises $107.3 Billion to Top SpaceX’s Record Debut
-- 2026-11-19 15:17 T2A｜Bloomberg.com｜Anthropic Raises Record $107.3 Billion IPO Surpassing SpaceX
-- 2026-11-19 15:04 T2B｜Yahoo Finance｜RKLB Stock Rises Overnight: Jim Cramer Likes SpaceX But Calls Rocket Lab ‘Too Cheap’ — Electron Tops Falcon 9 In 100 Launches
-- 2026-11-19 13:35 T2B｜Yahoo Finance｜Anthropic to begin trading after record-breaking market debut tops SpaceX record
-- 2026-11-19 13:16 T2A｜Bloomberg｜Watch Anthropic IPO Raises $107.3B to Top SpaceX's Record Debut
-- 2026-11-19 10:55 T2B｜Yahoo Finance｜SpaceX’s December Lock-Up Frees Another 17% of Its Shares. Here’s What October’s Unlock Did to the Stock.
-- 2026-11-19 09:02 T2B｜Yahoo Finance｜Hot demand lifts Anthropic IPO price to $83 a share, breaks SpaceX's record raise
-- 2026-11-19 07:35 T2A｜CNBC｜Elon Musk on his compensation if Tesla were to merge with SpaceX
-- 2026-11-19 07:26 T2A｜CNBC｜Elon Musk: More areas of overlap between SpaceX and Tesla than before
-- 2026-11-19 06:58 T2B｜Yahoo Finance｜Anthropic to debut amid security worries and SpaceX to finance GPU rentals
-- 2026-11-19 20:53 T4｜Benzinga｜Bitcoin’s SpaceX IPO Rally Faded in Five Days: Will ANT Follow the Same Script?
-- 2026-11-19 20:49 T4｜shattered.io｜SpaceX Orbital Data Centers Model: 5,000 Launches a Year
-- 2026-11-19 20:48 T4｜Fox Business｜Anthropic raises $81B in history's biggest IPO to topple SpaceX
-- …另有 198 則（見 headlines.json）
+- 2026-11-20 08:15 T2A｜Financial Times｜Lenders aim to bar SpaceX from launching $40bn of chips into orbit
+- 2026-11-20 06:37 T2B｜Yahoo Finance｜SpaceX Stock Price Forecast: How Much Upside Do Analysts See as Anthropic Goes Public?
+- 2026-11-20 06:30 T2B｜Yahoo Finance｜Ripple CEO sees crypto rebound, draws Anthropic IPO-SpaceX parallel
+- 2026-11-20 05:52 T2A｜Bloomberg.com｜Arizona AG Asks to Delay Vote on $50 Billion SpaceX Data Center
+- 2026-11-20 05:48 T2B｜Barron's｜Anthropic IPO Nets Wall Street Underwriters $550 Million, Topping SpaceX
+- 2026-11-20 05:28 T2B｜Yahoo Finance｜Google’s SpaceX Stake Lost More Than $10 Billion in Value Last Quarter While Its Share Count Edged Up
+- 2026-11-20 05:23 T2B｜Yahoo Finance｜Retail traders pile into Anthropic IPO, but net buying trails SpaceX
+- 2026-11-20 05:15 T2B｜Barron's｜SpaceX Stock Fails to Reach Orbit After Anthropic’s Blockbuster Debut
+- 2026-11-20 04:29 T2B｜Yahoo Finance｜Trump Just Disclosed Tesla and SpaceX Stock Purchases. Here's What His Portfolio Moves Reveal
+- 2026-11-20 04:22 T2B｜Yahoo Finance｜What does SpaceX have that Anthropic doesn't? Why the stock is losing steam
+- 2026-11-20 03:42 T2B｜Yahoo Finance｜‘SpaceX Has Gone All In With Nvidia’: Nvidia’s Biggest Customer Is Also Its Biggest Stock Holding at $19.7B
+- 2026-11-20 03:18 T2B｜Yahoo Finance｜Why SpaceX Stock Is Down Today
+- 2026-11-20 03:03 T2B｜Yahoo Finance｜Trump's New Filing Reveals Nvidia, SpaceX And Tesla Purchases. White House Says He Didn't Direct Trades.
+- 2026-11-20 02:33 T2A｜Bloomberg.com｜Watch Anthropic's Blockbuster IPO Surpasses SpaceX Ahead of First Trade
+- 2026-11-20 02:02 T2A｜WSJ｜What the Blue Wave in Texas Means for Elon Musk’s Tesla and SpaceX
+- 2026-11-20 07:38 T4｜Fortune｜Anthropic’s IPO nets Goldman Sachs and Morgan Stanley $113 million apiece in fees, eclipsing their SpaceX paydays
+- 2026-11-20 07:37 T4｜TechCrunch｜Elon Musk says SpaceX has a plan to eliminate cell phone dead zones
+- 2026-11-20 07:35 T4｜Eastern Arizona Courier｜Mayes urges Cochise County to delay SpaceX data center vote
+- …另有 210 則（見 headlines.json）
 
 ## MARKET（"S&P 500" OR "Wall Street"）
 
-- 2026-11-19 20:39 T2B｜Barron's｜Walmart Stock Falls as Forecast Leaves Wall Street Asking for More
-- 2026-11-19 20:30 T2B｜Barron's｜S&P 500 Futures Rise in Premarket Trading; Credicorp, Intercorp Finl Svcs Lead
-- 2026-11-19 20:17 T2B｜Yahoo Finance｜4 S&P 500 Dividend Stocks Paying Shareholders More Than Their Free Cash Flow
-- 2026-11-19 20:00 T2B｜Yahoo Finance｜Who really gets rich in an IPO? Wall Street insider explains
-- 2026-11-19 19:46 T2B｜Barron's｜Sell the S&P 500 Because the AI Bubble Is About to Burst, Analyst Says. Buy This Instead.
-- 2026-11-19 19:06 T2B｜Barron's｜Sell the S&P 500 Because the AI Bubble Is About to Burst
-- 2026-11-19 19:03 T2A｜WSJ｜Wall Street Pledged $500 Billion for Nvidia. Not a Dollar Has Been Deployed.
-- 2026-11-19 18:51 T2B｜Yahoo Finance｜US Stock Futures Rise as Anthropic Prepares for Record IPO, Fed Signals Rate Hikes and Oil Prices Advance: Dow Jones, S&P, Nasdaq, Wall Street
-- 2026-11-19 18:51 T2B｜Yahoo Finance UK｜Wall Street Futures Advance Ahead of Anthropic’s Record IPO as Fed Signals Further Rate Increases: Dow Jones, S&P, Nasdaq
-- 2026-11-19 18:27 T2B｜Yahoo Finance UK｜Two major banks just released their S&P 500 forecasts for 2027!
-- 2026-11-19 18:22 T2B｜Yahoo Finance｜Is Investing in an S&P 500 ETF Really Enough? Here's My Honest Take.
-- 2026-11-19 14:33 T2B｜Yahoo Finance｜Is Summit Insights Wrong to Give Up on NVIDIA? Wall Street Still Sees $251
-- 2026-11-19 14:12 T2B｜Yahoo Finance｜Stryker Stock Outlook: Is Wall Street Bullish or Bearish?
-- 2026-11-19 12:15 T2B｜Yahoo Finance｜Nasdaq, Dow, S&P 500 Futures Climb Ahead Of Anthropic’s Record Debut: SLS, GLD, TTWO, UNH In Focus
-- 2026-11-19 11:58 T2B｜Yahoo Finance｜Netskope (NTSK) is Gaining Serious Wall Street Attention
-- 2026-11-19 20:50 T4｜Barchart.com｜LyondellBasell Stock Outlook: Is Wall Street Bullish or Bearish?
-- 2026-11-19 20:50 T4｜Barchart.com｜Thermo Fisher Scientific Stock: Is Wall Street Bullish or Bearish?
-- 2026-11-19 20:46 T4｜KVUE｜Anthropic to go public Thursday on Wall Street despite concerns
-- …另有 227 則（見 headlines.json）
+- 2026-11-20 08:00 T2A｜WSJ｜Anthropic’s Mega IPO Lives Up to Wall Street Hype but Fails to Revive AI Trade
+- 2026-11-20 07:01 T2B｜Yahoo Finance｜S&P 500, Nasdaq, Dow End Lower As Anthropic Trading Debut Fails To Provide Adequate Confidence — ANT, META, AAPL, GME In Focus
+- 2026-11-20 06:53 T2B｜MarketWatch｜Intuit’s downbeat outlook deepens Wall Street’s anxiety about software companies
+- 2026-11-20 06:33 T2B｜Yahoo Finance Australia｜Jefferies Has Wall Street’s Highest Target on Eli Lilly (LLY). Why?
+- 2026-11-20 06:18 T2A｜Reuters｜Anthropic's blockbuster debut tests Wall Street's faith in AI boom
+- 2026-11-20 06:10 T2B｜Yahoo Finance｜Stock Market Today, Nov. 19: Dow Plunges 1,100 Points as the S&P 500 Suffers Its 6th Straight Day of Losses
+- 2026-11-20 05:50 T2B｜Yahoo Finance｜Blue Owl Taps Wall Street For $513M To Finance Amazon Data Center
+- 2026-11-20 05:50 T2A｜Financial Times｜FirstFT: Anthropic shares jump 17% after record Wall Street debut
+- 2026-11-20 05:48 T2B｜Barron's｜Anthropic IPO Nets Wall Street Underwriters $550 Million, Topping SpaceX
+- 2026-11-20 05:30 T2B｜Yahoo Finance｜Elastic (ESTC) Q2 Earnings: How Key Metrics Compare to Wall Street Estimates
+- 2026-11-20 05:28 T2B｜Yahoo Finance｜Anthropic soars in Wall Street as broader market tumbles
+- 2026-11-20 05:21 T2A｜AP News｜Wall Street tumbles to its longest losing streak since 2024 as the Dow drops 1,100 points
+- 2026-11-20 05:02 T2A｜Financial Times｜Anthropic shares jump 17% after record Wall Street listing
+- 2026-11-20 03:52 T2A｜CNBC｜S&P 500 heads for 6th straight decline. Plus, J&J advances two key products
+- 2026-11-20 03:08 T2B｜Yahoo Finance｜Bitcoin Enters Death Cross as Anthropic IPO Fails to Lift Wall Street
+- 2026-11-20 08:06 T4｜marketscreener.com｜Wall Street ends sharply lower after Anthropic's stock market debut
+- 2026-11-20 08:00 T4｜Seeking Alpha｜Anthropic Hits The Market, But Wall Street Hits The Brakes
+- 2026-11-20 07:39 T4｜New Hampshire Union Leader｜Anthropic's blockbuster debut tests Wall Street's faith in A...
+- …另有 220 則（見 headlines.json）
 
 ## TSMC（TSMC OR "Taiwan Semiconductor"）
 
+- 2026-11-20 02:12 T2B｜Yahoo! Finance Canada｜Ken Fisher’s Quiet Bet on TSMC (TSM): Owning the AI Boom Without Picking a Winner
+- 2026-11-20 00:35 T2B｜Yahoo Finance｜Here’s What Weighed on Taiwan Semiconductor Manufacturing Company Limited (TSM) in Q3
+- 2026-11-19 20:46 T2B｜Yahoo! Finance Canada｜TSMC tightens China AI chip curbs as new US rules close manufacturing loophole, sources say
 - 2026-11-19 19:27 T2B｜Yahoo Finance｜TSMC Stock Falls 5% on China Chip Pause: What Is at Risk?
 - 2026-11-19 18:21 T2A｜Financial Times｜TSMC and Samsung suspend some chip shipments to Chinese customers
 - 2026-11-19 05:08 T2B｜Yahoo Finance｜Taiwan Semiconductor Stock (TSM) Looks Too Cheap for Its Growth Outlook
@@ -186,35 +187,32 @@
 - 2026-11-18 06:01 T2B｜Yahoo! Finance Canada｜AMD, Broadcom, and TSMC stocks rise on Nvidia earnings beat
 - 2026-11-18 04:21 T2B｜Yahoo Finance｜Surging AI Demand and Advanced Chipmaking Strengthens Taiwan Semiconductor Manufacturing Company Limited (TSM) Growth Outlook
 - 2026-11-17 23:46 T2B｜Yahoo Finance｜Taiwan Semiconductor Manufacturing Company Limited (TSM) Pulled Back Amid Broader AI Buildout Correction
-- 2026-11-17 23:02 T2B｜Yahoo Finance｜TSMC Fell 7.7% in Two Days. Joseph Carlson Thinks Its Business Is More Durable Than Nvidia’s
-- 2026-11-17 19:06 T1｜TSMC｜TSMC 2026 Supply Chain Management Forum Presents Awards to Outstanding Suppliers
-- 2026-11-17 15:08 T2B｜Yahoo Finance｜Zacks.com featured highlights include NVIDIA, J.M. Smucker, Taiwan Semiconductor, Corning, Lockheed and Cardinal Health
-- 2026-11-19 20:47 T4｜marketscreener.com｜TSMC tightens China AI chip curbs as new US rules close manufacturing loophole, sources say
-- 2026-11-19 20:26 T4｜Stocktwits｜TSMC, Samsung Reportedly Suspend Some Chip Deliveries To Chinese Customers Amid New US Export Rules
-- 2026-11-19 20:22 T4｜GuruFocus｜ETFs Are Net Sellers of Taiwan Semiconductor (TSM) on Nov. 17
-- …另有 68 則（見 headlines.json）
+- 2026-11-20 08:15 T4｜www.marketscreener.com｜TSMC Tightens Restrictions on Chinese Chip Designers
+- 2026-11-20 07:59 T4｜bne IntelliNews｜TSMC halts advanced chip orders from Chinese designers in Taiwan
+- 2026-11-20 07:55 T4｜BigGo Finance｜New U.S. Chip Rules Take Effect; TSMC Halts Orders from Chinese AI Customers for 16nm and Below
+- …另有 69 則（見 headlines.json）
 
 ## FED（"Federal Reserve" OR Powell OR FOMC）
 
+- 2026-11-20 07:42 T2A｜Bloomberg.com｜Fed Tells Regional Staff to Expect Lower Pay Increases in 2027
+- 2026-11-20 05:52 T2A｜Bloomberg.com｜Mexican Peso Hits 17-Month Low as Fed Outlook Rattles Markets
+- 2026-11-20 05:35 T2A｜Reuters｜AI surge could strain US capacity and overheat economy, Fed's Goolsbee says
+- 2026-11-20 04:56 T2A｜Reuters｜Fed's Barr worried regulatory changes may increase financial sector risks
+- 2026-11-20 04:56 T2A｜Bloomberg.com｜Fed’s Goolsbee Says All Options on FOMC Table Amid Hot Inflation
+- 2026-11-20 03:36 T2A｜Reuters｜US Fed tells regional staff to expect lower pay increases in 2027, Bloomberg News reports
+- 2026-11-20 02:59 T2A｜Reuters｜Goolsbee says the Fed's job right now is to keep AI surge from overheating the economy
+- 2026-11-20 02:53 T2A｜Reuters｜J.P. Morgan sees Fed rate hikes at next three meetings as inflation persists
+- 2026-11-19 23:24 T2A｜WSJ｜Dollar Has Further Scope to Rally as Fed Could Out-Hike Peers
+- 2026-11-19 22:27 T2A｜Reuters｜Fed's Jefferson says AI boosting inflation, productivity impact possible 'in the future'
 - 2026-11-19 12:10 T2A｜WSJ｜Bank of Japan’s Ueda Vows to Keep Careful Eye on Fed Moves
 - 2026-11-19 09:10 T2B｜Yahoo Finance｜Powell Industries, Inc. (POWL) Stock Forecasts
 - 2026-11-19 07:24 T2A｜Bloomberg｜Gold Steadies Near 14-Month Low as Fed Signals More Rate Hikes
 - 2026-11-19 06:48 T2A｜AP News｜Fed minutes: Higher interest rates needed in December as inflation worries mount
 - 2026-11-19 05:15 T2A｜Reuters｜Fed policymakers focused on inflation risks in October, with some seeing need for bigger rate hike
-- 2026-11-19 05:02 T2A｜Reuters｜Fed policymakers concerned about financial system risks, minutes show
-- 2026-11-19 04:52 T2A｜Bloomberg.com｜Fed Minutes Show Almost All Officials Expect More Rate Hikes
-- 2026-11-19 04:51 T2B｜MarketWatch｜Fed minutes show growing unease about the outlook for inflation
-- 2026-11-19 04:41 T2B｜Barron's｜Fed Minutes Show AI Fears and That a Bigger Rate Increase Is Still on the Table
-- 2026-11-19 03:41 T2A｜WSJ｜Fed Officials Saw Higher Rates Ahead When They Held Steady Last Month
-- 2026-11-19 03:00 T2A｜CNBC｜Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show
-- 2026-11-19 02:38 T2A｜Reuters｜Fed's Barr says rate rises likely lie ahead for economy
-- 2026-11-19 02:16 T2A｜Bloomberg.com｜Fed’s Daly Urges Rate Hikes With a Thoughtful, Measured Approach
-- 2026-11-19 01:15 T2B｜Axios｜The Fed's next moves come into focus
-- 2026-11-18 21:52 T2A｜Reuters｜Waller says on CNBC the Fed needs to get more aggressive in inflation response
-- 2026-11-19 20:31 T4｜Managing Intellectual Property｜Powell Gilbert doubles down on Germany with Düsseldorf hires
-- 2026-11-19 20:26 T4｜Nacionale｜When does The Comeback King come out? Glen Powell's country comedy hits theaters February 5, 2027
-- 2026-11-19 20:01 T4｜ChartMill｜Powell Industries (NASDAQ:POWL) Dividend Quality Backed by Strong Financial Health
-- …另有 90 則（見 headlines.json）
+- 2026-11-20 08:03 T4｜StreetInsider｜Form 4 TRUSTCO BANK CORP N Y For: Nov 17 Filed by: Powell Curtis N
+- 2026-11-20 07:41 T4｜Hilton Head Island Packet｜Fed's Paulson says understanding, not guidance, drives effective communication
+- 2026-11-20 07:30 T4｜Traders Union｜Tom McClellan: New article explores Doctor Copper and Federal Reserve surprise
+- …另有 81 則（見 headlines.json）
 
 ## TARIFF（tariffs OR "Trump trade"）
 
@@ -232,10 +230,9 @@
 - 2026-11-17 13:19 T2A｜Bloomberg.com｜China and Canada Expand Tariff Relief as Xi Meets Carney
 - 2026-11-17 11:49 T2A｜Reuters｜How Trump and Xi went from tariff war to trade truce
 - 2026-11-17 11:37 T2A｜Bloomberg.com｜China, Canada Expand Tariff Relief in Deepening Trade Thaw
-- 2026-11-17 00:13 T2A｜Reuters｜EU sets tariffs on steel from India, Japan, Taiwan, Turkey, Vietnam
-- 2026-11-19 20:35 T4｜The Chartered Institute of Export & International Trade｜The Day in Trade: Trump meets Xi and Putin, UK declines to match EU tariffs on China and leaders’ summit preview
-- 2026-11-19 19:47 T4｜WGBH｜GBH Daily: $14,000 in tariffs, $12 in refunds
-- 2026-11-19 18:56 T4｜Fortune｜The bill for Trump’s trade war is coming due—at home and abroad
+- 2026-11-20 07:33 T4｜Free Malaysia Today｜Canada sees little US movement on tariff relief
+- 2026-11-20 07:21 T4｜weareiowa.com｜Iowa soybean farmers hope latest meeting between Trump, Chinese leader will result in end of tariffs
+- 2026-11-20 07:20 T4｜North Penn Now｜Officials raise concerns about tariffs' impact on California
 - …另有 54 則（見 headlines.json）
 
 ## CHIPS（"export controls" chips OR semiconductors）
@@ -243,13 +240,15 @@
 - 2026-11-17 20:44 T2A｜WSJ｜The Morning Risk Report: Commerce Department Moves to Crack Down on Chip Exports
 - 2026-11-17 18:51 T2A｜Bloomberg.com｜Nvidia Forms Export Control Board Committee After Chip Curbs
 - 2026-11-17 18:26 T2A｜Financial Times｜Nvidia creates committee to oversee compliance with US chip export controls
-- 2026-11-19 18:00 T4｜NOLA.com｜See where Mike Johnson, Steve Scalise stand on AI chip exports after Nvidia scandal
-- 2026-11-19 17:36 T4｜The Indian Express｜Nvidia stops shipping AI chips to China as pressure mounts over US export controls
-- 2026-11-19 17:22 T4｜파이낸셜뉴스｜China Hawks Take the Lead in U.S. Congress ... as Washington Tightens Grip on AI Chip Export Controls [Jensen Huang Risk Hits the AI Ecosystem]
-- …另有 70 則（見 headlines.json）
+- 2026-11-20 08:01 T4｜The Washington Post｜Nvidia scandal could be tipping point toward tougher export control enforcement
+- 2026-11-20 04:39 T4｜The Edge Malaysia｜New US export controls on Malaysia, Singapore for advanced chips to take effect Nov 19
+- 2026-11-19 23:58 T4｜TradingKey｜AMD Shares Plunge 8% as Ties to Multiple US Entity List Firms Draw Scrutiny, Export Controls May Curb Overseas Sales
+- …另有 65 則（見 headlines.json）
 
 ## TAIWAN（Taiwan）
 
+- 2026-11-20 00:35 T2B｜Yahoo Finance｜Here’s What Weighed on Taiwan Semiconductor Manufacturing Company Limited (TSM) in Q3
+- 2026-11-19 21:13 T2A｜Bloomberg.com｜AI, Nuclear Arms, Taiwan: Takeaways From Trump’s China Trip
 - 2026-11-19 19:46 T2A｜Reuters｜China's Xi says US should do 'right thing' on Taiwan to avoid setbacks in relations
 - 2026-11-19 15:58 T2A｜Reuters｜Japan's position on Taiwan has not changed, PM Takaichi says
 - 2026-11-19 15:11 T2A｜Reuters｜Taiwan to enact new short-selling curbs in response to market drop
@@ -263,46 +262,49 @@
 - 2026-11-18 20:02 T2A｜Bloomberg.com｜China’s Xi Shakes Hands With Takaichi a Year After Taiwan Rift
 - 2026-11-18 11:11 T2B｜Yahoo Finance｜Taiwan Semiconductor Manufacturing (NYSE:TSM) Shares Tumble As Customer Shock Clouds AI Outlook
 - 2026-11-18 11:11 T2A｜Reuters｜Taiwan in 'close contact' with US ahead of US-China-Russia talks at APEC
-- 2026-11-18 08:00 T2B｜Yahoo Finance｜RIMAN Taiwan Hosts "Made Different" Convention, Spotlighting Leadership and Future Growth
-- 2026-11-18 07:00 T2A｜Bloomberg.com｜Taiwan Created an Island of Super Rich. How Long Will It Last?
-- 2026-11-19 20:47 T4｜Arise News｜Takaichi Reaffirms Japan’s Longstanding Position On Taiwan As China Tensions Persist
-- 2026-11-19 20:35 T4｜BigGo Finance｜AI Spillover Effect Kicks In: Taiwan's Q3 Manufacturing Output Tops NT$7.5 Trillion, Up 43% for 11th Straight Quarter of Growth
-- 2026-11-19 20:19 T4｜Moomoo｜$Taiwan Semiconductor (TSM.US)$ $99SMART (5326.MY)$
-- …另有 105 則（見 headlines.json）
+- 2026-11-20 07:59 T4｜bne IntelliNews｜TSMC halts advanced chip orders from Chinese designers in Taiwan
+- 2026-11-20 07:46 T4｜digitimes｜Nvidia builds physical AI ecosystem with Taiwan partners
+- 2026-11-20 07:41 T4｜digitimes｜Physical AI robots open global path for Taiwan's precision suppliers
+- …另有 97 則（見 headlines.json）
 
 ## SEMI（semiconductor supply chain OR chipmakers OR CoWoS）
 
 - 2026-11-19 19:45 T2B｜Yahoo Finance｜Nvidia’s $500B AI Machine Is Getting Bigger. Semiconductor ETFs May Need a Rethink
 - 2026-11-19 14:24 T2A｜Bloomberg.com｜Chinese Chip Design Stocks Sink on Concerns Over Foundry Access
-- 2026-11-19 19:48 T4｜KLSE Screener｜DNeX’s net profit jumps three-fold in 3Q on improved semiconductor ops
-- 2026-11-19 18:54 T4｜gasworld｜Messer targets Taiwan chipmakers through new JV
-- 2026-11-19 18:30 T4｜CXO Digitalpulse｜GlobalFoundries to Invest $10 Million in Cyient Semiconductors
-- …另有 62 則（見 headlines.json）
+- 2026-11-20 03:13 T4｜pib.gov.in｜Semiconductor and AI Revolution
+- 2026-11-20 00:46 T4｜Telangana Today｜Editorial: Big dream, bigger challenges for India’s semiconductor ambitions
+- 2026-11-20 00:38 T4｜texasinsider.org｜Governor Abbott Announces Texas Semiconductor Innovation Fund Grant To Quantum Global Technologies
+- …另有 56 則（見 headlines.json）
 
 ## ANTHROPIC（Anthropic）
 
-- 2026-11-19 20:52 T2A｜Bloomberg.com｜Anthropic IPO Could Reset Top of UK Billionaires List
-- 2026-11-19 20:45 T2B｜Barron's｜Anthropic Stock Market Debut Will Change the AI Trade Forever
-- 2026-11-19 20:30 T2A｜CNBC｜Anthropic IPO could create thousands of multimillionaire employees
-- 2026-11-19 20:29 T2A｜CNBC｜Anthropic lifts Nasdaq futures and tech stocks ahead of its record-breaking IPO
-- 2026-11-19 20:25 T2A｜Bloomberg.com｜Watch Anthropic IPO Fuels AI Enthusiasm
-- 2026-11-19 20:22 T2B｜Axios｜Anthropic's IPO signals a new (old) tech era
-- 2026-11-19 20:12 T2B｜MarketWatch｜Can Anthropic’s IPO do for the stock market what Nvidia’s earnings couldn’t?
-- 2026-11-19 20:09 T2A｜CNBC｜Anthropic is ready for its IPO. Three analysts see huge gains for the stock
-- 2026-11-19 20:06 T2A｜Bloomberg.com｜Anthropic IPO Banks Land $550 Million Fee Windfall on Record IPO
-- 2026-11-19 20:00 T2B｜Yahoo Finance｜Everything you need to know about the Anthropic IPO
-- 2026-11-19 19:52 T2A｜CNBC｜Anthropic raises $81B+ in historic IPO: Here's what to know
-- 2026-11-19 19:51 T2A｜CNBC｜Anthropic's IPO should lift the AI trade, says Paul Meeks
-- 2026-11-19 19:47 T2A｜Reuters｜Anthropic's rise from AI upstart to world's largest IPO
-- 2026-11-19 19:45 T2B｜Yahoo Finance｜Anthropic raises $81.3bn in biggest IPO on record
-- 2026-11-19 19:33 T2B｜Barron's｜Anthropic, Google, Palo Alto, Walmart, and More Stocks That Explain Today’s Market
-- 2026-11-19 20:48 T4｜Fox Business｜Anthropic raises $81B in history's biggest IPO to topple SpaceX
-- 2026-11-19 20:46 T4｜Al Jazeera｜Can Anthropic afford to put AI safety first?
-- 2026-11-19 20:33 T4｜The Washington Post｜Opinion | Anthropic says AI should slow down. Washington should make it.
-- …另有 350 則（見 headlines.json）
+- 2026-11-20 08:00 T2A｜WSJ｜Anthropic’s Mega IPO Lives Up to Wall Street Hype but Fails to Revive AI Trade
+- 2026-11-20 07:56 T2A｜Reuters｜Anthropic's meteoric rise from AI startup to $2 trillion market debut
+- 2026-11-20 07:56 T2B｜MarketWatch｜After Anthropic’s ‘bittersweet’ IPO, here’s what lies ahead
+- 2026-11-20 07:35 T2A｜Bloomberg.com｜Anthropic IPO Raises Only $110 Million From Australian Investors
+- 2026-11-20 07:22 T2A｜CNBC｜Cramer says Nvidia’s woes are trumping Anthropic excitement for the rest of the AI trade
+- 2026-11-20 07:22 T2A｜AP News｜Anthropic surges in market debut after biggest IPO on record, despite fears that AI is running amok
+- 2026-11-20 07:16 T2A｜Bloomberg.com｜Anthropic Becomes World’s 7th Most Valuable Company After IPO
+- 2026-11-20 07:01 T2B｜Yahoo Finance｜S&P 500, Nasdaq, Dow End Lower As Anthropic Trading Debut Fails To Provide Adequate Confidence — ANT, META, AAPL, GME In Focus
+- 2026-11-20 06:58 T2A｜Reuters｜Who is getting rich from Anthropic's record IPO
+- 2026-11-20 06:41 T2A｜CNBC｜Anthropic was supposed to save the AI trade. What went wrong?
+- 2026-11-20 06:41 T2A｜WSJ｜Anthropic’s IPO Mints New Millionaires | What’s News for Nov. 19
+- 2026-11-20 06:35 T2B｜Barron's｜Anthropic’s IPO Was a Success, but You Don’t Need to Chase the Stock
+- 2026-11-20 06:18 T2A｜Reuters｜Anthropic's blockbuster debut tests Wall Street's faith in AI boom
+- 2026-11-20 06:07 T2B｜Yahoo Finance｜Jim Cramer’s Warning for Anyone Buying Anthropic Stock: Use a Limit Order
+- 2026-11-20 06:04 T2A｜WSJ｜U.S. Stocks Slide as AI Bust Continues Despite Anthropic IPO
+- 2026-11-20 08:03 T4｜The Washington Post｜Opinion | Anthropic’s IPO is worth celebrating. So is the Fed’s caution.
+- 2026-11-20 07:52 T4｜BBC｜How did Anthropic's stock market debut unfold?
+- 2026-11-20 07:40 T4｜PBS｜Anthropic's trillion-dollar valuation tests its promise to develop AI responsibly
+- …另有 363 則（見 headlines.json）
 
 ## OPENAI（OpenAI OR ChatGPT OR "Sam Altman"）
 
+- 2026-11-20 06:07 T2A｜Reuters｜Democratic lawmakers probe DOJ filing in OpenAI copyright case
+- 2026-11-20 05:14 T2B｜Yahoo Finance｜How ChatGPT Sales Plugin At DocuSign (DOCU) Has Changed Its Investment Story
+- 2026-11-20 02:08 T2B｜Yahoo Finance｜Anthropic vs. OpenAI: Why there's 'a lot of power' in being the first to IPO
+- 2026-11-19 23:30 T2B｜Yahoo Finance｜SoftBank Chose OpenAI Over 'Wonderful' Anthropic, Now Masayoshi Son Regrets Picking Only One: 'I Wish I Had Invested Back Then'
+- 2026-11-19 21:53 T2B｜Yahoo Finance｜Sam Altman Owns No Direct Stake in OpenAI, and Now He Regrets It
 - 2026-11-19 17:29 T2A｜Reuters｜The Exchange: 'Anthropic does look stronger than OpenAI'
 - 2026-11-19 12:44 T2A｜CNBC｜Nancy Tengler: I'd much rather own Anthropic over OpenAI
 - 2026-11-19 10:00 T2A｜WSJ｜Anthropic vs. OpenAI: The Financial Metrics Behind the AI Battle
@@ -313,79 +315,75 @@
 - 2026-11-19 00:44 T2A｜WSJ｜Why OpenAI Has Hit Pause on Some Product Launches
 - 2026-11-19 00:38 T2A｜CNBC｜OpenAI CEO Sam Altman on Jensen Huang's resignation
 - 2026-11-18 23:14 T2A｜CNBC｜OpenAI CEO Sam Altman: We plan to be a public company at some point
-- 2026-11-18 23:06 T2A｜CNBC｜OpenAI CEO Sam Altman: It's hard to imagine the AI industry without Jensen Huang
-- 2026-11-18 09:29 T2A｜CNBC｜OpenAI bugging case defendant Alfozan set for trial in January
-- 2026-11-18 06:09 T2B｜Axios｜Scoop: Democrats probe DOJ's role in OpenAI copyright fight
-- 2026-11-18 04:13 T2B｜Yahoo Finance｜OpenAI floated $5B+ for the lab trying to stop rogue models
-- 2026-11-18 02:18 T2A｜Reuters｜Microsoft unveils AI models for coding, cybersecurity as it takes on Anthropic, OpenAI
-- 2026-11-19 20:52 T4｜HackerNoon｜I Found My Own Website Blocking ChatGPT. Then I Checked 640 Others.
-- 2026-11-19 20:43 T4｜The Next Web｜US advertisers spent $70.7M on ChatGPT ads in October, AdClarity estimates
-- 2026-11-19 20:32 T4｜The Paypers｜BlackLine brings OpenAI models to finance operations
-- …另有 105 則（見 headlines.json）
+- 2026-11-20 08:05 T4｜shattered.io｜Claude vs ChatGPT Summary Test: 12 Steps, 80 Min
+- 2026-11-20 07:56 T4｜Mezha.net｜OpenAI tests ChatGPT Dots with Plus users and expands Business access
+- 2026-11-20 07:47 T4｜9to5Mac｜OpenAI begins testing dots with ChatGPT Plus users, expands Business access
+- …另有 103 則（見 headlines.json）
 
 ## 2330（台積電）
 
-- 2026-11-19 20:25 T2B｜經濟日報｜大摩亞太高峰會：對台積電重申3,088元目標價 2027年 EPS 估148.64元 | 市場焦點 | 證券
-- 2026-11-19 20:25 T2B｜UDN｜大摩亞太高峰會：對台積電重申3,088元目標價 2027年 EPS 估148.64元
-- 2026-11-19 20:09 T2A｜中央社 CNA｜傳美出口管制新規衝擊台積電、三星暫停部分對中晶片出貨| 國際
-- 2026-11-19 20:00 T2B｜鉅亨網｜快訊／美國晶片管制擴大！台積電、三星暫停部分中國客戶出貨
-- 2026-11-19 19:54 T2B｜MoneyDJ｜新光鋼子公司6/15~11/19出清台積電246張，獲利約4509萬元- 新聞
-- 2026-11-19 19:25 T2B｜UDN｜FT：台積電和三星電子暫停向陸客戶出貨部分晶片手機品牌也受影響| 全球財經| 全球
-- 2026-11-19 18:01 T2B｜Yahoo股市｜台積電洩密案 東京威力員工涉湮滅證據判刑10月、緩刑3年確定
-- 2026-11-19 17:47 T2B｜Yahoo股市｜台積電出手了！砸5億美元買進美國AI公司602萬股
-- 2026-11-19 17:25 T2B｜Yahoo股市｜台積電入股Anthropic！砸5億美元 持股比例0.03%
-- 2026-11-19 17:13 T2A｜中央社 CNA｜台積電洩密案東京威力員工湮滅證據緩刑3年確定| 社會
-- 2026-11-19 17:10 T2B｜鉅亨網｜台積電斥資近5億美元入股Anthropic 取得602萬股持股約0.03%
-- 2026-11-19 17:00 T2B｜MoneyDJ｜厚生7/14~11/19取得台積電140張，計約3.2億元- 新聞
-- 2026-11-19 16:52 T2B｜Yahoo股市｜台積電砸近5億美元入股Anthropic 持股約0.03%
-- 2026-11-19 16:48 T2B｜Yahoo股市｜1028檔上市櫃公司明禁平盤下放空！台積電不在內 金管會：請證交所緊盯「禿鷹」
-- 2026-11-19 16:46 T2B｜鉅亨網｜台積電傳收緊AI客戶信用額度 超額訂單須付現
-- 2026-11-19 20:55 T4｜優分析 UAnalyze｜美國晶片禁令今正式生效！台積電緊急喊停中國16奈米先進製程訂單，AI晶片設計完成也恐無廠可代工
-- 2026-11-19 20:50 T4｜風傳媒｜美國擴大晶片出口管制！FT：台積電、三星暫停部分中國客戶出貨，多手機品牌恐受波及| 李靖棠| 新聞
-- 2026-11-19 20:30 T4｜自由財經｜美國晶片封鎖再升級！外媒揭台積電、三星暫停向部分中國客戶出貨
-- …另有 305 則（見 headlines.json）
+- 2026-11-20 07:51 T2B｜Yahoo股市｜美媒：台積電暫停中國16奈米以下訂單 替代輝達晶片研發受阻
+- 2026-11-20 07:51 T2A｜中央社 CNA｜路透：台積電暫停中國16奈米以下訂單替代輝達晶片研發受阻| 國際
+- 2026-11-20 07:27 T2B｜Yahoo股市｜美收緊晶片出口管制，台積電、三星傳暫停對中國部分出貨
+- 2026-11-20 07:15 T2B｜Yahoo股市｜史上最大IPO也救不了！道瓊狂瀉1101點失守5萬點、AI股慘崩台積電ADR跌2.9%、台指期夜盤退回38K
+- 2026-11-20 06:55 T2B｜UDN｜台積電ADR跌2.9% 台指期跌500點
+- 2026-11-20 06:18 T2B｜工商時報｜美股｜Anthropic上市行情也救不了 道瓊崩1,101點 台積電ADR跌近3％
+- 2026-11-20 05:46 T2B｜Yahoo股市｜台積電ADR19日下跌10.53美元跌幅2.90%折台股2319.71元
+- 2026-11-20 05:10 T2B｜鉅亨網｜〈台股盤前要聞〉金管會祭「有條件禁空令」、全體券商10月獲利月減近6成、台積電砸5億美元取得Anthropic 602萬股
+- 2026-11-19 22:55 T2B｜Yahoo股市｜超車SpaceX奪史上最大IPO！Anthropic今掛牌上市、美股四大指數全開高 台積電ADR漲3.14%
+- 2026-11-19 22:40 T2B｜Yahoo股市｜台積電發重訊！豪砸近160億元入股Anthropic、取得逾602萬股 持股比例約0.03%
+- 2026-11-19 22:05 T2B｜鉅亨網｜台積電子公司斥資約5億美元認購Anthropic股票
+- 2026-11-19 21:41 T2B｜Yahoo股市｜美國加強出口管制 金融時報：台積電、三星暫停部分對中晶片出貨
+- 2026-11-19 21:24 T2B｜Yahoo股市｜海外下單也要查！台積電傳收緊對中代工 中國AI晶片再卡關
+- 2026-11-19 21:23 T2B｜工商時報｜美出口管制新規上路台積電、三星暫停出貨部分中國客戶晶片- 兩岸
+- 2026-11-19 21:00 T2B｜鉅亨網｜美國晶片禁令今正式生效！台積電緊急喊停中國16奈米先進製程訂單，AI晶片設計完成也恐無廠可代工
+- 2026-11-20 08:10 T4｜ETtoday新聞雲｜命理師預言2027年大事 台積電有望創新高
+- 2026-11-20 07:57 T4｜Newtalk新聞｜Anthropic難救買氣 美股主指全下跌、道瓊暴跌逾千點 台積電ADR跌近3％
+- 2026-11-20 07:55 T4｜BigGo 財經｜美晶片新規生效 台積電暫停中國AI客戶16奈米以下訂單
+- …另有 297 則（見 headlines.json）
 
 ## TWSE（台股 OR 加權指數）
 
-- 2026-11-19 20:38 T2B｜經濟日報｜台股擂台／「股市軒昂」張嘉軒：國際股市反彈 台股不可能持續獨自往下 | 台股擂台 | 證券
-- 2026-11-19 19:50 T2B｜Yahoo股市｜台股重挫1768點後 台指期夜盤急拉大漲逾900點 年線收復戰提前上演
-- 2026-11-19 19:46 T2B｜經濟日報｜台股跌跌不休 世界、萬泰科爆違約交割
-- 2026-11-19 19:46 T2B｜UDN｜台股跌跌不休世界、萬泰科爆違約交割| 股市要聞| 股市
-- 2026-11-19 19:24 T2B｜Yahoo股市｜台股違約交割連環爆！3檔個股總額達1.29億
-- 2026-11-19 19:05 T2B｜UDN｜台股劇震再傳鉅額違約交割！台化爆4,172萬元違約案 今年達45起
-- 2026-11-19 18:21 T2B｜工商時報｜11／19台股雷達｜大盤震盪兆豐金、聯強、祥碩逆勢漲原因曝- 證券
-- 2026-11-19 18:05 T2B｜Yahoo股市｜台股失守4萬大關！史上收盤第7大跌點 128檔跌停、外資11月狂賣8303億
-- 2026-11-19 17:43 T2B｜Yahoo股市｜台股創收盤史上第7大跌點失守年線 謝金河：台灣相對有底氣
-- 2026-11-19 17:37 T2A｜中央社｜台股重挫失守4萬點 新台幣盤中貶破33元終場小升0.5分
-- 2026-11-19 17:37 T2B｜Yahoo股市｜台股盤中跌破年線狂瀉1900點 專家點出台灣5優勢
-- 2026-11-19 17:35 T2B｜Yahoo股市｜台股狂瀉1768點！巴逆逆面臨「ETF虧損50％危機」網全跪
-- 2026-11-19 17:28 T2B｜Yahoo股市｜台股最慘10月！全體券商獲利月減近6成 前10月仍大賺2087億元
-- 2026-11-19 17:23 T2B｜Yahoo股市｜美、日、韓全漲！ 台股獨崩1768點 法人揪背後真凶
-- 2026-11-19 17:15 T2B｜工商時報｜台股逐洞賽│市場波動加劇AI ASIC開始大幅貢獻- 證券
-- 2026-11-19 20:26 T4｜Business Insider Taiwan｜台股跌入熊市、高點回檔 23%！金管會加碼限空令、鼓勵金融業進場
-- 2026-11-19 20:23 T4｜Yahoo新聞｜台股違約交割又爆1.29億！3檔全由同券商申報
-- 2026-11-19 20:20 T4｜Facebook｜不敗教主-陳重銘. . 唉，台股又崩了，已經跌破3萬9千點，麻煩糖漿給力一點啊⋯⋯ 大跌的原因在哪裡？我找到了主要戰犯了！
-- …另有 540 則（見 headlines.json）
+- 2026-11-20 08:11 T2B｜Yahoo股市｜台股「違約交割」連爆！2天「12檔金額5.56億」
+- 2026-11-20 07:50 T2B｜Yahoo股市｜台股潰堤1768點退守38K！國家隊逆勢出清「這三檔」逾9500張 再放血00937B捲破1億元
+- 2026-11-20 07:40 T2B｜Yahoo股市｜台股又有違約交割！單日1.29億元「大戶翻車」 上市櫃今年已爆45起
+- 2026-11-20 07:24 T2B｜Yahoo股市｜AI股週四又成殺盤重心，留意週五台股是否有開低走高機會
+- 2026-11-20 07:20 T2B｜鉅亨網｜Fed年底升息 AI股操作新策略 外資撤退台股震盪 不代表AI及半導體成長趨勢反轉
+- 2026-11-20 06:36 T2B｜Yahoo股市｜台股開盤挫咧等？受美股拖累翻黑 台指期夜盤重挫500點
+- 2026-11-20 05:56 T2B｜Yahoo股市｜台股殺手！《FX戰士久留美》10月開播已跌9926點 股魚急喊撐住：還剩4集
+- 2026-11-20 05:46 T2B｜Yahoo股市｜台積電ADR19日下跌10.53美元跌幅2.90%折台股2319.71元
+- 2026-11-20 05:46 T2B｜Yahoo股市｜友達ADR19日下跌0.54美元跌幅6.75%折台股24.57元
+- 2026-11-20 05:46 T2B｜Yahoo股市｜中華電信ADR19日下跌0.07美元跌幅0.14%折台股163.23元
+- 2026-11-20 05:46 T2B｜Yahoo股市｜聯電ADR19日下跌0.56美元跌幅4.01%折台股88.28元
+- 2026-11-20 05:10 T2B｜鉅亨網｜〈台股盤前要聞〉金管會祭「有條件禁空令」、全體券商10月獲利月減近6成、台積電砸5億美元取得Anthropic 602萬股
+- 2026-11-20 04:05 T2B｜經濟日報｜台股上演年線保衛戰 四訊號、兩變數 牽動後市
+- 2026-11-20 00:51 T2B｜UDN｜台股跌跌不休 投信喊逢低布局ETF
+- 2026-11-20 00:00 T2B｜udn｜台股賣壓罩頂 金管會祭放空「雙限令」
+- 2026-11-20 08:16 T4｜旺得富理財網｜1圖懂》金管會禁空令出鞘！台股人道走廊逃或等？老手揭「5狀況」擋不住：3階段策略曝光- 上市櫃
+- 2026-11-20 07:48 T4｜CMoney｜2330 台積電 - ANT I P O美元強勢，台股持續走空方勢- 股市爆料同學會
+- 2026-11-20 07:38 T4｜CMoney｜TWA00 加權指數- 工商時報晨訊- 股市爆料同學會
+- …另有 525 則（見 headlines.json）
 
 ## 009816（009816 OR 凱基台灣TOP50）
 
+- 2026-11-19 22:45 T2B｜Yahoo股市｜009816剔除名單效應發酵？群創遭自營商盯上狂賣逾2億淪賣超王「這檔」布局3D AI Foundry也遭調節
+- 2026-11-19 21:30 T2B｜Yahoo股市｜利多出盡？台玻獲利創高仍成三大法人提款重災區 「這檔面板」先被009816剔除再入賣超榜
 - 2026-11-18 18:30 T2B｜Yahoo股市｜配息1.25元創新高！「這檔高股息」連3黑深陷貼息泥潭、外資提款2.11億 再砍009816超1.5萬張
 - 2026-11-18 15:22 T2B｜鉅亨網｜台股大洗盤市值型ETF也難逃！近半年僅6檔正報酬 009816逆勢突圍
 - 2026-11-18 14:41 T2B｜Yahoo股市｜台股近半年已跌逾2%！市值型ETF僅6檔逆勢賺錢 009816勝過0050
 - 2026-11-17 18:45 T2B｜Yahoo股市｜101萬股民注意！009816換血3進3出 載板三雄「這檔」獲青睞 群創慘被踢除
 - 2026-11-17 18:08 T2B｜工商時報｜009816、00940等九檔ETF成份股大洗牌今公布最新個股調整- 證券
 - 2026-11-17 17:26 T2B｜UDN｜009816、00940等台股ETF 成分股異動一次看| 存股族愛ETF | 股市
-- 2026-11-17 05:00 T2B｜經濟日報｜009816、00940等台股 ETF 成分股異動一次看
 - 2026-11-19 16:01 T4｜風傳媒｜009816績效更勝0050？換股「3進3出」台塑四寶全到齊 專家揭兩檔關鍵差異 | 張庭維 | 新聞
 - 2026-11-19 10:33 T4｜CMoney投資網誌｜【即時新聞】009816近日換股破2200億，這3檔獲資金卡位將轉強？
 - 2026-11-18 22:06 T4｜永豐金證券｜009816值得追嗎？從持股比重拆解0050、006208的績效差異真相｜超馬芭樂｜豐雲學堂2026 年 11 月
-- …另有 60 則（見 headlines.json）
+- …另有 75 則（見 headlines.json）
 
 ## 00981A（00981A OR 主動統一台股增長 OR 瑤池金母）
 
 - 2026-11-19 18:20 T2B｜Yahoo股市｜「瑤池金母」崩8％破底！主動ETF竟比正二還慘 專家示警：最怕這件事
-- 2026-11-19 17:51 T2B｜Yahoo股市｜熊市拉回3成！00981A、00406A、00991A、00403A…主動式ETF誰最抗跌？年漲4成就能拿冠軍
 - 2026-11-19 16:59 T2B｜Yahoo股市｜台股牛轉熊！00981A、00409A跌逾3成 0050跌逾17％ 它僅跌0.X％：達人死心塌地長抱
+- 2026-11-19 15:37 T2B｜Yahoo股市｜熊市拉回3成！00981A、00406A、00991A、00403A…主動式ETF誰最抗跌？年漲4成就能拿冠軍
 - 2026-11-19 11:35 T2B｜Yahoo股市｜台股接連摜破40K、39K防線！0050陷90元保衛戰噴25萬 「瑤池金母」下挫7.7%爆出31萬張
 - 2026-11-19 11:10 T2B｜UDN｜主動式ETF績效排名洗牌！股添樂揭00985A漲40％奪冠、00981A以39％居次
 - 2026-11-19 11:10 T2B｜UDN｜主動式ETF績效排名洗牌！股添樂揭00985A漲40％奪冠、00981A以39％居次| 存股族愛ETF | 股市
@@ -396,40 +394,41 @@
 - 2026-11-17 14:22 T2B｜Yahoo股市｜大盤打8折！00981A、00403A、00406A、00991A…主動式該撿誰？達人4考量選它
 - 2026-11-17 12:52 T2B｜Yahoo股市｜台股開盤閃現3萬9！「這檔」逆勢衝上11元飆37萬 「瑤池金母」墜4.5%噴走31萬張
 - 2026-11-17 10:56 T2B｜Yahoo股市｜金母大跌不接刀 00981A出清台玻近萬張 估獲利逾10%
-- 2026-11-17 07:50 T2B｜Yahoo股市｜台股狂殺2635創第二大跌點！國家隊輸血「瑤池金母」與00406A逾7.8萬張再砸21.5億補貨0050
+- 2026-11-19 23:09 T4｜三立新聞網SETN.com｜00981A「崩8.25％破底」無望了？專家：不想跟它天長地久
 - 2026-11-19 20:15 T4｜CMoney投資網誌｜【00981A】11/19 操作日報｜淨值重挫防守，唯一逆勢加碼智邦
-- 2026-11-19 18:09 T4｜CMoney｜2026/11/19 00981A今日操作明細
-- 2026-11-19 14:40 T4｜ETtoday財經雲｜250億元抄底買盤流入主動式台股ETF！ 00406A、00981A成吸金主力
-- …另有 96 則（見 headlines.json）
+- 2026-11-19 20:15 T4｜LIFE 生活網｜不只比名次！高雄瑤池金母獎邁入第6屆 吳威儀盼書法走進生活
+- …另有 105 則（見 headlines.json）
 
 ## 00411A（00411A OR 主動統一前沿科技）
 
-- …另有 13 則（見 headlines.json）
+- …另有 11 則（見 headlines.json）
 
 ## NSF（國安基金 OR 護盤 OR 救市 OR 限空令）
 
+- 2026-11-20 07:32 T2B｜工商時報｜11／20盤前｜限空令2.0登場、新台幣回穩、國安基金抄底名單奉上- 證券
+- 2026-11-20 04:08 T2B｜經濟日報｜國安基金喊全力護盤 官員證實已實質進場 | 金融脈動 | 金融
+- 2026-11-20 04:06 T2B｜經濟日報｜法人看限空令2.0 有助底部確立
+- 2026-11-20 03:30 T2B｜UDN｜國安基金喊話 全力護盤
+- 2026-11-20 03:28 T2B｜UDN｜限空令2.0 有助底部確立
+- 2026-11-20 01:57 T2B｜UDN｜再下重手！金管會救市擴大限空令 借券規定更嚴格
+- 2026-11-19 21:49 T2B｜經濟日報｜金管會剛祭出限空令 為何10日後再度出手？ | 金融脈動 | 金融
 - 2026-11-19 19:30 T2B｜Yahoo股市｜投信買超護盤卻狠砍「這檔」！單日提款10.3億、倒貨逾萬張淪賣超王玉山金前10月EPS 2.14元釋股利展望也入榜
 - 2026-11-19 19:04 T2A｜中央社｜金管會加碼限空 超過半數上市櫃股票20日平盤下禁放空
 - 2026-11-19 18:29 T2B｜Yahoo股市｜【千金股為何不自救2】股王信驊買100張要花10億？占公司現金二成會護盤嗎？
+- 2026-11-19 18:18 T2B｜Yahoo股市｜半個台股進「禁空冷凍庫」！1028檔踩線 金管會祭最嚴1%限令被問選舉護盤不置評
 - 2026-11-19 17:11 T2B｜Yahoo股市｜史上第七慘！台股摔1768點3萬9、年線雙破防 金管會限空第二箭明上膛｜Yahoo財經掃描
 - 2026-11-19 16:48 T2B｜UDN｜金管會第二波限空令 1028家過半上市櫃公司明天平盤下不得放空
-- 2026-11-19 16:42 T2B｜Yahoo股市｜金管會出手救市！台股明啟動限空令 達人揭後續漲勢機率逾70%
-- 2026-11-19 16:00 T2B｜Yahoo股市｜統一期貨：台股開低翻黑重挫再摜破年線，國安基金進場擋不住賣壓
-- 2026-11-19 15:58 T2B｜Yahoo股市｜台股跌破3萬9金管會禁平盤放空 政府救市還有招？網友喊「乾脆休市到1128」
-- 2026-11-19 15:51 T2B｜Yahoo股市｜金管會祭第二波限空令！網酸「跌完才出手」股民怨聲四起
-- 2026-11-19 15:26 T2B｜工商時報｜4萬點、年線雙失守！限空令2.0能讓台股喘口氣？分析師揭3大觀察- 證券
-- 2026-11-19 15:20 T2B｜UDN｜金管會祭第二波限空令 專家：升級為放空價量的雙重管制
-- 2026-11-19 15:02 T2B｜MoneyDJ｜台股跌跌不休...金管會祭限空令2.0！跌逾3.5%隔日平盤下禁空- 新聞
-- 2026-11-19 14:50 T2B｜Yahoo股市｜台股3天重摔5248點！金管會出手救市祭「限空令2.0」：明起跌逾3.5％隔日不得平盤下放空
-- 2026-11-19 14:48 T2B｜Yahoo股市｜新一波限空令來了！台股3天已崩跌5248點 金管會出手
-- 2026-11-19 14:44 T2A｜中央社｜金管會加碼限空令11/20實施 跌幅3.5%個股隔日禁平盤下放空
-- 2026-11-19 20:26 T4｜Business Insider Taiwan｜台股跌入熊市、高點回檔 23%！金管會加碼限空令、鼓勵金融業進場
-- 2026-11-19 20:17 T4｜公視新聞｜台股重挫1768點跌破年線 金管會宣布限空令2.0
-- 2026-11-19 20:13 T4｜聚財網｜國安基金護盤！意藍差一檔漲停，康全電訊、中磊盤中創高！
-- …另有 172 則（見 headlines.json）
+- 2026-11-19 16:48 T2B｜Yahoo股市｜1028檔上市櫃公司明禁平盤下放空！台積電不在內 金管會曝加大救市原因
+- 2026-11-19 16:46 T2B｜UDN｜儘管國安基金可能進場，台股為何仍無法止跌？
+- 2026-11-20 08:02 T4｜富聯網｜《盤前掃瞄-國內消息》限空令2.0勢在壓空方；三檔爆鉅額違約交割
+- 2026-11-20 08:00 T4｜富聯網｜經濟日報頭條：金管會救市，擴大限空令
+- 2026-11-20 07:59 T4｜富聯網｜《今日焦點新聞》金管會擴大限空令 借券規定更嚴格
+- …另有 181 則（見 headlines.json）
 
 ## SEMI_ZH（半導體 供應鏈 OR CoWoS OR 先進封裝）
 
+- 2026-11-20 07:26 T2A｜中央社 CNA｜早安世界》施振榮APEC峰會倡AI邁向智慧籲強化半導體供應鏈韌性| 生活
+- 2026-11-19 23:29 T2B｜UDN｜銳澤攜德商設合資公司 攻半導體氣體
 - 2026-11-19 18:19 T2A｜中央社 CNA｜施振榮APEC倡AI邁向智慧籲強化半導體供應鏈韌性| 政治
 - 2026-11-19 17:51 T2B｜UDN｜半導體、伺服器帶動！第3季製造業產值逾7.5兆元 連11季正成長
 - 2026-11-19 17:26 T2A｜中央社｜APEC深圳峰會 施振榮：AI永續有賴於半導體供應鏈穩定
@@ -438,37 +437,35 @@
 - 2026-11-19 14:21 T2A｜中央社｜韓國總統APEC提3大願景 強調AI創新與供應鏈韌性
 - 2026-11-19 14:14 T2B｜鉅亨號｜大摩：20%算力建設向後挪，雲半導體增長見頂，上行空間有限
 - 2026-11-19 14:10 T2B｜鉅亨網｜日月光布局AI世代 高雄仁武投資2489億元擴大高階半導體測試聚落
-- 2026-11-19 13:52 T2B｜鉅亨網｜銳澤攜手德國MESSER成立合資公司 搶攻半導體特氣整合服務
 - 2026-11-19 13:45 T2B｜MoneyDJ｜日月光加碼高階半導體測試布局仁武J坵塊新廠動土- 新聞
 - 2026-11-19 12:29 T2B｜工商時報｜《產業》輝達擴大供應鏈合作支持AI基礎設施建設- 產業
 - 2026-11-19 12:17 T2B｜UDN｜強強聯手攻半導體氣體市場！銳澤攜手德商 MESSER 成立合資公司
 - 2026-11-19 12:03 T2B｜UDN｜全球最大私營氣體商Messer攜手銳澤 搶攻半導體電子特氣市場
-- 2026-11-19 11:53 T2B｜經濟日報｜銳澤攜手德商 MESSER 成立合資公司 搶攻半導體特氣整合服務 | 產業熱點 | 產業
-- 2026-11-19 11:48 T2B｜UDN｜日月光布局 AI 仁武 J 坵塊投資2,489億元擴大高階半導體測試聚落
-- 2026-11-19 20:39 T4｜上報Up Media｜APEC峰會落幕 施振榮提AI合作3方向：強化半導體供應鏈韌性
-- 2026-11-19 20:17 T4｜自由時報｜AI熱潮促供應鏈外溢需求 Q3製造業產值年增43％、連11季紅
-- 2026-11-19 20:00 T4｜ETtoday財經雲｜台灣AI供應鏈新規今生效！美國限90天補許可 4大關鍵時程曝光
-- …另有 122 則（見 headlines.json）
+- 2026-11-19 11:53 T2B｜UDN｜銳澤攜手德商 MESSER 成立合資公司 搶攻半導體特氣整合服務
+- 2026-11-20 06:52 T4｜蕃新聞｜比較越南、泰國與馬來西亞三國在吸引台灣半導體封測與AI伺服器供應鏈布局上的政策優惠、基礎設施與產業聚落差異。
+- 2026-11-20 05:30 T4｜自由時報｜深圳APEC》施振榮：台灣供應鏈可協助全球AI永續
+- 2026-11-19 21:05 T4｜CMoney投資網誌｜【即時新聞】避談輝達(NVDA)與黃仁勳！川習會半導體僵局未解，AI晶片供應鏈恐添變數
+- …另有 117 則（見 headlines.json）
 
 ## AI_ZH（Anthropic OR OpenAI OR ChatGPT）
 
-- 2026-11-19 20:30 T2B｜鉅亨網｜Anthropic IPO造富：這些億萬富豪成為最大贏家
-- 2026-11-19 20:08 T2B｜經濟日報｜Anthropic 股價在暗盤市場上漲約20% | 美股動態 | 國際
-- 2026-11-19 20:06 T2B｜鉅亨網｜史上最大IPO將登場！Anthropic身價1.5兆美元 華爾街買單嗎？
-- 2026-11-19 20:05 T2B｜鉅亨網｜OpenAI推出ChatGPT會計工作檯：接入8款插件，幫企業對賬、做報表
-- 2026-11-19 20:05 T2B｜鉅亨網｜OpenAI董事長創辦的AI客服公司，半年估值擬翻倍至300億美元
-- 2026-11-19 20:05 T2B｜鉅亨網｜Anthropic前員工：Amodei曾談公司未來可能比政府更強大，超級AI就像「魔戒」
-- 2026-11-19 20:05 T2B｜鉅亨網｜OpenAI總裁Greg持有近300億美元OpenAI股權，Sam後悔：當年該聽他的
-- 2026-11-19 20:05 T2B｜鉅亨網｜Anthropic IPO獲約5000億美元認購需求，指數基金首月或買入2.77億股
-- 2026-11-19 20:05 T2B｜鉅亨網｜多家華爾街機構看好Anthropic，Melius給予目標價155美元
-- 2026-11-19 20:04 T2A｜华尔街日报中文网｜關於Anthropic創紀錄的IPO，你需要了解什麼？
-- 2026-11-19 19:20 T2B｜鉅亨網｜Anthropic上市催生數千名「紙上百萬富翁」 從早期工程師到行政人員都有機會一夕致富
-- 2026-11-19 19:15 T2B｜鉅亨號｜軟銀集團選擇了OpenAI而非「出色」的Anthropic，如今Masayoshi Son後悔只押注了一家：「我真希望當時就投資了」
-- 2026-11-19 19:11 T2B｜鉅亨網｜Anthropic今拚1.4兆美元估值IPO！AI步入「算力變現」期 投信點名投資轉向這關鍵
-- 2026-11-19 18:50 T2B｜Yahoo股市｜Anthropic上市倒數 估值衝1.5兆美元IPO新猷
-- 2026-11-19 18:05 T2B｜鉅亨網｜Anthropic創紀錄IPO提振市場情緒，美股盤前AI概念集體走強，存儲板塊多數漲超4%
-- 2026-11-19 20:49 T4｜TradingView｜隨著投資者對Anthropic首次公開募股持觀望態度，美元匯率走低
-- 2026-11-19 20:40 T4｜TradingView｜在Anthropic即將上市之際，受人工智能領域樂觀情緒重燃提振，納斯達克期貨大幅上漲
-- 2026-11-19 20:38 T4｜公視新聞｜Anthropic將掛牌上市 IPO募資金額創紀錄
-- …另有 256 則（見 headlines.json）
+- 2026-11-20 08:17 T2B｜經濟日報｜AI交易玩完了嗎？Anthropic掛牌日 美股浮現四線索 | 美股動態 | 國際
+- 2026-11-20 08:17 T2B｜UDN｜AI交易玩完了嗎？Anthropic掛牌日美股浮現四線索| 全球財經| 全球
+- 2026-11-20 08:06 T2B｜鉅亨號｜史上最大IPO落地！Anthropic登陸納斯達克首秀大漲34%後回吐，華爾街稱後續股價成AI投資熱情試金石
+- 2026-11-20 08:05 T2B｜鉅亨網｜分析師：Anthropic上市首秀強勁，但仍面臨多重風險
+- 2026-11-20 08:05 T2B｜鉅亨網｜富時羅素：Anthropic將快速納入富時全球股票指數系列
+- 2026-11-20 08:05 T2B｜鉅亨網｜MSCI將Anthropic納入全球標準指數，自12月1日生效
+- 2026-11-20 08:05 T2B｜鉅亨網｜Anthropic日本募資約30億美元，獲逾3倍超額認購
+- 2026-11-20 08:05 T2B｜鉅亨網｜Anthropic在兩種不同估值算法下相差逾5000億美元
+- 2026-11-20 08:05 T2B｜鉅亨網｜Anthropic超級IPO之後，人才留存迎來考驗
+- 2026-11-20 08:05 T2B｜鉅亨網｜Anthropic重磅IPO衍生超1560億美元公益資金
+- 2026-11-20 08:05 T2B｜鉅亨網｜Anthropic創紀錄IPO推動美國全年融資規模創新高
+- 2026-11-20 07:38 T2B｜UDN｜今晨國際頭條一次看／Anthropic創史上最大IPO 首日漲17%仍難救美股| 全球財經| 全球
+- 2026-11-20 07:37 T2B｜鉅亨網｜Anthropic 上市首日大漲17%！史上最大 IPO 的「高光與裂痕」華爾街多空激辯交鋒
+- 2026-11-20 07:34 T2B｜Yahoo股市｜Anthropic掛牌首日漲17%，經濟學家黃安娜示警估值考驗、兩券商喊買
+- 2026-11-20 07:32 T2B｜工商時報｜Anthropic上市首日收紅17％ 市值達1.8兆美元躍居全美第7大企業- 國際
+- 2026-11-20 08:11 T4｜旺得富理財網｜Anthropic殞落？超微步輝達後塵？道瓊跌破5萬點美股齊崩- 國際
+- 2026-11-20 08:04 T4｜CMoney投資網誌｜【即時新聞】AI巨頭Anthropic(ANT)狂募813億美元！算力引爆缺電危機，這5檔能源股迎爆發
+- 2026-11-20 08:01 T4｜流動日報｜OpenAI 測試 ChatGPT dot Plus 用戶加入體驗行列
+- …另有 300 則（見 headlines.json）
 

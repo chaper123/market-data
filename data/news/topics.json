@@ -1,189 +1,230 @@
 {
- "generated_at_taipei": "2026-11-19 21:00",
+ "generated_at_taipei": "2026-11-20 08:20",
  "rule": "count_1d＝最近 24 小時；count_7d／count_30d＝最近 7／30 個台北日曆日（含今天）；rise＝(count_7d/7)÷(count_30d/30)，歷史不足時分母用已有天數；rising_terms 的 score＝近 24 小時則數÷(今天以外的日平均＋1)。固定規則計數，不做預測",
- "days_available": 19,
+ "days_available": 20,
  "history_since": "2026-11-01",
  "topics": [
   {
    "topic": "fed",
    "label": "Fed／利率",
-   "count_1d": 46,
-   "count_7d": 194,
-   "count_30d": 378,
-   "rise": 1.39,
+   "count_1d": 45,
+   "count_7d": 164,
+   "count_30d": 395,
+   "rise": 1.19,
    "sample_ids": [
-    "aba2c427837101a6",
-    "82ba770a292c7512",
-    "b8182560b02548a6",
-    "6baae670e70b3489",
-    "3782bb16c65ebcec"
+    "241d9c35f2a8e1cf",
+    "648561c2a28ea251",
+    "5156fdfd8570cde6",
+    "dfb5092afe6b1c9a",
+    "b0ecc5a639c6157f"
    ]
   },
   {
    "topic": "tariff",
    "label": "關稅",
-   "count_1d": 24,
-   "count_7d": 79,
+   "count_1d": 22,
+   "count_7d": 52,
    "count_30d": 186,
-   "rise": 1.15,
+   "rise": 0.8,
    "sample_ids": [
+    "02f583a899f59a2f",
     "2c89d0054f5ec403",
     "a138da361ad0f53c",
     "eed2380af8976495",
-    "8d397395bca7e2f8",
-    "221cb8bb6cde440a"
+    "8d397395bca7e2f8"
    ]
   },
   {
    "topic": "export_controls",
    "label": "出口管制",
-   "count_1d": 14,
-   "count_7d": 45,
-   "count_30d": 61,
-   "rise": 2.0,
+   "count_1d": 18,
+   "count_7d": 33,
+   "count_30d": 63,
+   "rise": 1.5,
    "sample_ids": [
     "88630bda9d965d04",
-    "574e7fef2421c87e",
-    "a95e7cbcbc544b13",
-    "3635fc2f0648424a",
-    "d09c3695c6ab4496"
+    "be4c8bf0c6ca3d6b",
+    "349bc38e96806c80",
+    "a936648b53ae7eaa",
+    "4553516c102d16a6"
    ]
   },
   {
    "topic": "china",
    "label": "中國",
-   "count_1d": 94,
-   "count_7d": 290,
-   "count_30d": 653,
-   "rise": 1.21,
+   "count_1d": 100,
+   "count_7d": 233,
+   "count_30d": 671,
+   "rise": 0.99,
    "sample_ids": [
-    "58151fc67388ec3b",
-    "0ed65478cd31c636",
-    "34b29be2a04ee0ad",
-    "07fc183e5add010b",
-    "a3b0cbabf1021357"
+    "eb302bd2f4695539",
+    "422cf5bdfc598ce4",
+    "b912c3664894b3a0",
+    "be4c8bf0c6ca3d6b",
+    "533bc5028971eba0"
    ]
   },
   {
    "topic": "taiwan",
    "label": "台灣",
-   "count_1d": 61,
-   "count_7d": 214,
-   "count_30d": 510,
-   "rise": 1.14,
+   "count_1d": 57,
+   "count_7d": 173,
+   "count_30d": 515,
+   "rise": 0.96,
    "sample_ids": [
     "91bcfaa0ca59a9d7",
-    "07fc183e5add010b",
-    "150c20a106b98c28",
-    "dacd535f79b0db18",
-    "7b22ffadbbc2177d"
+    "56cf7124d4786270",
+    "c492d3f33b3cb740",
+    "0c217230406d376a",
+    "60fd693572a09917"
    ]
   },
   {
    "topic": "oil",
    "label": "油價",
-   "count_1d": 6,
-   "count_7d": 24,
+   "count_1d": 5,
+   "count_7d": 15,
    "count_30d": 75,
-   "rise": 0.87,
+   "rise": 0.57,
    "sample_ids": [
-    "3782bb16c65ebcec",
+    "dfca08da936792f4",
     "7941e9ee5c73974d",
-    "a3ff3b8a27f9642d",
-    "38eba6e7cbb50745",
-    "01bdc6087639eac9"
+    "e0b4b766408a04c5",
+    "3782bb16c65ebcec",
+    "a3ff3b8a27f9642d"
    ]
   },
   {
    "topic": "war",
    "label": "戰爭與地緣",
-   "count_1d": 16,
-   "count_7d": 34,
-   "count_30d": 86,
-   "rise": 1.07,
+   "count_1d": 12,
+   "count_7d": 25,
+   "count_30d": 83,
+   "rise": 0.86,
    "sample_ids": [
-    "706a04c78f3cbc78",
-    "b66c6d539d89edd9",
-    "fecdc438a146ba17",
-    "84e6ccc08ea80d9d",
-    "d1da6885b1848970"
+    "ec38f96bd657d21d",
+    "7e1367f8b272d29b",
+    "b1aa2847a86d5b2a",
+    "c8dfe6344fe23361",
+    "84e6ccc08ea80d9d"
    ]
   },
   {
    "topic": "cpi",
    "label": "通膨",
-   "count_1d": 5,
-   "count_7d": 32,
-   "count_30d": 118,
-   "rise": 0.74,
+   "count_1d": 4,
+   "count_7d": 24,
+   "count_30d": 122,
+   "rise": 0.56,
    "sample_ids": [
+    "e2bb375cb41971b1",
+    "3cbf3043d9818a55",
+    "b46426b439604a49",
     "5bf016b91c636f9e",
-    "fef7d3807237a1f2",
-    "ee0d8f76e05dd947",
-    "ce0940bc639aa9cc",
-    "3e22b7054ba5f359"
+    "fef7d3807237a1f2"
    ]
   },
   {
    "topic": "jobs",
    "label": "就業",
-   "count_1d": 0,
-   "count_7d": 3,
-   "count_30d": 13,
-   "rise": 0.63,
+   "count_1d": 1,
+   "count_7d": 4,
+   "count_30d": 14,
+   "rise": 0.82,
    "sample_ids": [
+    "94cf125767a028f8",
     "d76e616091d6ef8f",
-    "5cd6247fba99088b",
-    "5f759b93a982f458"
+    "5cd6247fba99088b"
    ]
   },
   {
    "topic": "earnings",
    "label": "財報",
-   "count_1d": 45,
-   "count_7d": 290,
-   "count_30d": 656,
-   "rise": 1.2,
+   "count_1d": 27,
+   "count_7d": 257,
+   "count_30d": 657,
+   "rise": 1.12,
    "sample_ids": [
     "4532bcae0da2463f",
-    "a28d746b6cc258e5",
-    "2d0cf536d077d589",
-    "622f4f2b57d24425",
-    "7920e615b62758e3"
+    "19350f4027eb4308",
+    "c4c390f2f99cfe5b",
+    "31852dccd60846c4",
+    "05435b412b0563f7"
    ]
   },
   {
    "topic": "antitrust",
    "label": "反壟斷",
-   "count_1d": 0,
-   "count_7d": 0,
-   "count_30d": 2,
-   "rise": 0.0,
-   "sample_ids": []
+   "count_1d": 1,
+   "count_7d": 1,
+   "count_30d": 3,
+   "rise": 0.95,
+   "sample_ids": [
+    "511dc618d5a9f1a4"
+   ]
   },
   {
    "topic": "merger",
    "label": "併購",
-   "count_1d": 2,
-   "count_7d": 32,
-   "count_30d": 95,
-   "rise": 0.91,
+   "count_1d": 3,
+   "count_7d": 19,
+   "count_30d": 96,
+   "rise": 0.57,
    "sample_ids": [
-    "1af2d11485584bc3",
+    "cc79c2df7ba9e6c8",
+    "3bb6c9de3a89a4f1",
     "5dc9c0a144933048",
     "79b744c2906ab04a",
-    "a7c474568e8c5e4e",
-    "5310fcb5ee6827de"
+    "a7c474568e8c5e4e"
    ]
   }
  ],
  "rising_topic": "export_controls",
  "rising_terms": [
   {
+   "term": "debut",
+   "count_1d": 37,
+   "count_30d": 52,
+   "score": 20.68,
+   "sample_ids": [
+    "dcdb2007659431a7",
+    "94b21dad308a7fcb",
+    "c5e1b1e9de522913",
+    "5ad6ef4935455c4f",
+    "92376b4ef31c68ef"
+   ]
+  },
+  {
+   "term": "放空",
+   "count_1d": 18,
+   "count_30d": 18,
+   "score": 18.0,
+   "sample_ids": [
+    "6ab00cb000511573",
+    "18c115c8d4778109",
+    "e31d1f6b040805a7",
+    "a1db0781c9fc77ed",
+    "0f36c7f5bf575c8d"
+   ]
+  },
+  {
+   "term": "平盤",
+   "count_1d": 17,
+   "count_30d": 17,
+   "score": 17.0,
+   "sample_ids": [
+    "18c115c8d4778109",
+    "e31d1f6b040805a7",
+    "a1db0781c9fc77ed",
+    "0f36c7f5bf575c8d",
+    "eb3e9c8a4d31843b"
+   ]
+  },
+  {
    "term": "破年",
-   "count_1d": 20,
-   "count_30d": 20,
-   "score": 20.0,
+   "count_1d": 17,
+   "count_30d": 17,
+   "score": 17.0,
    "sample_ids": [
     "bca4d977379c2342",
     "84b6400e808364ac",
@@ -193,49 +234,10 @@
    ]
   },
   {
-   "term": "debut",
-   "count_1d": 28,
-   "count_30d": 36,
-   "score": 19.38,
-   "sample_ids": [
-    "cf147559c891f573",
-    "c2349998771cb9ed",
-    "957794cd0caa08c3",
-    "6a68b542c72b42ba",
-    "d2dc15f313502cc0"
-   ]
-  },
-  {
-   "term": "平盤",
+   "term": "盤下",
    "count_1d": 16,
    "count_30d": 16,
    "score": 16.0,
-   "sample_ids": [
-    "18c115c8d4778109",
-    "e31d1f6b040805a7",
-    "a1db0781c9fc77ed",
-    "0f36c7f5bf575c8d",
-    "eb3e9c8a4d31843b"
-   ]
-  },
-  {
-   "term": "放空",
-   "count_1d": 15,
-   "count_30d": 15,
-   "score": 15.0,
-   "sample_ids": [
-    "18c115c8d4778109",
-    "e31d1f6b040805a7",
-    "a1db0781c9fc77ed",
-    "0f36c7f5bf575c8d",
-    "eb3e9c8a4d31843b"
-   ]
-  },
-  {
-   "term": "盤下",
-   "count_1d": 15,
-   "count_30d": 15,
-   "score": 15.0,
    "sample_ids": [
     "1a8143bc4cdac163",
     "18c115c8d4778109",
@@ -245,133 +247,133 @@
    ]
   },
   {
-   "term": "年線",
-   "count_1d": 32,
-   "count_30d": 56,
-   "score": 13.71,
+   "term": "首日",
+   "count_1d": 15,
+   "count_30d": 15,
+   "score": 15.0,
    "sample_ids": [
-    "a34e9b8b8c1852c3",
+    "e6e9bd57ba9686ca",
+    "e82e8edac95d6340",
+    "d4037959dccfaa1e",
+    "1e665f979c882963",
+    "d638925222bb5855"
+   ]
+  },
+  {
+   "term": "年線",
+   "count_1d": 30,
+   "count_30d": 53,
+   "score": 13.57,
+   "sample_ids": [
+    "f086786bbea9cf87",
+    "1ab7cf122efe7d79",
     "d0790a52f2517372",
     "bca4d977379c2342",
-    "32033205e7cf058c",
-    "84b6400e808364ac"
+    "32033205e7cf058c"
    ]
   },
   {
-   "term": "普丁",
-   "count_1d": 15,
-   "count_30d": 17,
-   "score": 13.5,
+   "term": "agent",
+   "count_1d": 13,
+   "count_30d": 13,
+   "score": 13.0,
    "sample_ids": [
-    "fd85de1a1371991f",
-    "f4148eca6e6ab5a1",
-    "76ca56da70191c09",
-    "f83467c115aac9e4",
-    "f604d7a9863a9f09"
+    "63bacb835290742d",
+    "cc3d0148a96f9406",
+    "31cce13beecfe2f2",
+    "c1b6b80cc5851666",
+    "4c68f834074cdfb6"
    ]
   },
   {
-   "term": "minutes",
-   "count_1d": 11,
-   "count_30d": 11,
+   "term": "難救",
+   "count_1d": 12,
+   "count_30d": 12,
+   "score": 12.0,
+   "sample_ids": [
+    "e6e9bd57ba9686ca",
+    "768e5bb0dd5494a1",
+    "c50b62336943c40f",
+    "fc7c5f89b2bb0960",
+    "9286cda1eaf1ff27"
+   ]
+  },
+  {
+   "term": "ant",
+   "count_1d": 12,
+   "count_30d": 13,
+   "score": 11.4,
+   "sample_ids": [
+    "5ad6ef4935455c4f",
+    "7f199b9806ad2373",
+    "7ce498c51c634292",
+    "2fb0fcc6d9297f4d",
+    "bf5ff3a9662572da"
+   ]
+  },
+  {
+   "term": "掛牌",
+   "count_1d": 22,
+   "count_30d": 41,
    "score": 11.0,
    "sample_ids": [
-    "dbea10a75a84833c",
-    "b38633ecf9062f92",
-    "5bf016b91c636f9e",
-    "f51e752cfdb89291",
-    "862d70293fa013ad"
-   ]
-  },
-  {
-   "term": "定價",
-   "count_1d": 25,
-   "count_30d": 49,
-   "score": 10.71,
-   "sample_ids": [
-    "e3e9a98632eb80ee",
-    "010664becb995b84",
-    "92b0f4477e7324fe",
-    "35e59ec04fddc825",
-    "764f090967c846d0"
-   ]
-  },
-  {
-   "term": "違約",
-   "count_1d": 16,
-   "count_30d": 25,
-   "score": 10.67,
-   "sample_ids": [
-    "a1872695f70f609e",
-    "4ba019588886af1d",
-    "4ef548bdab13a54d",
-    "8a227b81b8e33b96",
-    "90400b4ca56adb09"
-   ]
-  },
-  {
-   "term": "約交割",
-   "count_1d": 15,
-   "count_30d": 24,
-   "score": 10.0,
-   "sample_ids": [
-    "a1872695f70f609e",
-    "4ba019588886af1d",
-    "4ef548bdab13a54d",
-    "8a227b81b8e33b96",
-    "90400b4ca56adb09"
-   ]
-  },
-  {
-   "term": "messer",
-   "count_1d": 10,
-   "count_30d": 10,
-   "score": 10.0,
-   "sample_ids": [
-    "ac84227a477ccd4e",
-    "85d30b9040b36c9e",
-    "32e0de85a5078fe3",
-    "7c462809d4f57d43",
-    "202954809b6ea088"
-   ]
-  },
-  {
-   "term": "raises",
-   "count_1d": 22,
-   "count_30d": 46,
-   "score": 9.43,
-   "sample_ids": [
-    "bd991d6289f8a5d0",
-    "1d4cbfa5035a42eb",
-    "6a68b542c72b42ba",
-    "affde5fec81beb8a",
-    "588da3c277ad7f7a"
+    "d1bc839d7edb0434",
+    "9494b8d7bd1781bf",
+    "d4037959dccfaa1e",
+    "92725953bc62c7b4",
+    "f0fbb113f8fa5cb4"
    ]
   },
   {
    "term": "下放",
-   "count_1d": 9,
-   "count_30d": 9,
-   "score": 9.0,
+   "count_1d": 11,
+   "count_30d": 11,
+   "score": 11.0,
    "sample_ids": [
     "e31d1f6b040805a7",
     "eb3e9c8a4d31843b",
-    "231e596859b72b1e",
-    "0399111e70223698",
-    "414d4b9cbbcd67a5"
+    "b33160a1390ebd3f",
+    "79c079197198c3cc",
+    "3cb7db179eba3eb4"
    ]
   },
   {
-   "term": "中華",
-   "count_1d": 9,
-   "count_30d": 9,
-   "score": 9.0,
+   "term": "萬股",
+   "count_1d": 11,
+   "count_30d": 11,
+   "score": 11.0,
    "sample_ids": [
-    "6ab004b6eb90099d",
-    "0361a11d9d2d4c19",
-    "18fc0c0a2f68a489",
-    "57b5c7fee1266cd4",
-    "1a97aadbf60008cf"
+    "e73d6b68c5b13281",
+    "afd8c5847044c4bb",
+    "fcad3ee8f7d3680f",
+    "7d3ae3adcc09c12d",
+    "cbd0759126d5e491"
+   ]
+  },
+  {
+   "term": "上市櫃",
+   "count_1d": 11,
+   "count_30d": 12,
+   "score": 10.45,
+   "sample_ids": [
+    "ba291f73d54aca40",
+    "18c115c8d4778109",
+    "0f36c7f5bf575c8d",
+    "eb3e9c8a4d31843b",
+    "b33160a1390ebd3f"
+   ]
+  },
+  {
+   "term": "銳澤",
+   "count_1d": 10,
+   "count_30d": 10,
+   "score": 10.0,
+   "sample_ids": [
+    "a111e7ef7204ce82",
+    "85d30b9040b36c9e",
+    "32e0de85a5078fe3",
+    "beba8906dfa6e02c",
+    "202954809b6ea088"
    ]
   }
  ]
