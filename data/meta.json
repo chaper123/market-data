@@ -756,38 +756,38 @@
    "source": "統一投信 ezmoney"
   },
   "news/headlines": {
-   "status": "ok",
+   "status": "partial",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-23 16:30",
-   "items": 1690,
+   "last": "2026-11-23 21:00",
+   "items": 1673,
    "by_tier": {
-    "4": 396,
-    "2": 1275,
+    "4": 402,
+    "2": 1253,
     "1": 13,
-    "3": 6
+    "3": 5
    },
-   "feeds_ok": "50/50",
-   "errors": 0,
-   "url_ok": 768,
-   "url_total": 793,
-   "time_suspect_detected": 25,
-   "time_fixed": 24,
-   "time_removed": 1
+   "feeds_ok": "49/50",
+   "errors": 1,
+   "url_ok": 943,
+   "url_total": 943,
+   "time_suspect_detected": 28,
+   "time_fixed": 28,
+   "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-21",
-   "checked_at_taipei": "2026-11-23 16:30",
-   "items": 11
+   "checked_at_taipei": "2026-11-23 21:00",
+   "items": 10
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-23 15:47",
-   "items": 154,
+   "last": "2026-11-23 18:20",
+   "items": 141,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-23 16:30"
+   "checked_at_taipei": "2026-11-23 21:00"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -841,22 +841,22 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-23 16:30",
+   "last": "2026-11-23 21:00",
    "days_available": 23,
    "rising_topic": "export_controls",
    "rising_terms": [
+    "卓揆",
+    "製程",
     "維持",
-    "股護",
-    "降至",
-    "持率",
-    "卓揆"
+    "不應",
+    "供不"
    ]
   },
   "news/nsf": {
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
-   "last": "2026-11-06",
-   "checked_at_taipei": "2026-11-23 16:30",
+   "last": "2026-11-23",
+   "checked_at_taipei": "2026-11-23 21:00",
    "items": 10
   }
  },
@@ -880,7 +880,7 @@
  "us_cutoff_ny": "2026-11-20",
  "tw_cutoff_taipei": "2026-11-20",
  "summary": {
-  "ok": 55,
+  "ok": 54,
   "stale": 8,
   "fail": 0
  },

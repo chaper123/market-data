@@ -1,5 +1,5 @@
 {
- "generated_at_taipei": "2026-11-23 16:30",
+ "generated_at_taipei": "2026-11-23 21:00",
  "days": 7,
  "feeds": [
   {
@@ -10,7 +10,7 @@
   {
    "name": "Fed 演講",
    "ok": true,
-   "count": 7
+   "count": 6
   }
  ],
  "items": [
@@ -93,14 +93,6 @@
    "type": "speech",
    "published_taipei": "2026-11-17 01:00",
    "published_utc": "2026-11-16T17:00:00Z"
-  },
-  {
-   "date": "2026-11-16",
-   "title": "Barr, Some Potential Financial Stability Implications of Artificial Intelligence",
-   "link": "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm",
-   "type": "speech",
-   "published_taipei": "2026-11-16 18:00",
-   "published_utc": "2026-11-16T10:00:00Z"
   }
  ]
 }
