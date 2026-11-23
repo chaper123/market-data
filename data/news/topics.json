@@ -1,5 +1,5 @@
 {
- "generated_at_taipei": "2026-11-23 08:20",
+ "generated_at_taipei": "2026-11-23 11:10",
  "rule": "count_1d＝最近 24 小時；count_7d／count_30d＝最近 7／30 個台北日曆日（含今天）；rise＝(count_7d/7)÷(count_30d/30)，歷史不足時分母用已有天數；rising_terms 的 score＝近 24 小時則數÷(今天以外的日平均＋1)。固定規則計數，不做預測",
  "days_available": 23,
  "history_since": "2026-11-01",
@@ -7,76 +7,76 @@
   {
    "topic": "fed",
    "label": "Fed／利率",
-   "count_1d": 30,
-   "count_7d": 173,
-   "count_30d": 447,
-   "rise": 1.27,
+   "count_1d": 33,
+   "count_7d": 178,
+   "count_30d": 452,
+   "rise": 1.29,
    "sample_ids": [
-    "60ca6b764d779823",
-    "6f1e2a1f80a3632f",
-    "a12be4c4631a69d3",
-    "715be72fd916e9c1",
-    "3867efe43323ab7e"
+    "137217fbade893d4",
+    "62496b2db1339ced",
+    "241d9c35f2a8e1cf",
+    "d5c0d22f5d9bf9b2",
+    "ee4486786ce7b146"
    ]
   },
   {
    "topic": "tariff",
    "label": "關稅",
    "count_1d": 22,
-   "count_7d": 69,
-   "count_30d": 218,
-   "rise": 1.04,
+   "count_7d": 70,
+   "count_30d": 219,
+   "rise": 1.05,
    "sample_ids": [
     "a28c160e1ececf89",
+    "02021f94a4459df5",
     "b33c643dc74386df",
     "87b1b2d8c8f83854",
-    "784580f1a1af3954",
-    "14d8b5c0f90405c0"
+    "784580f1a1af3954"
    ]
   },
   {
    "topic": "export_controls",
    "label": "出口管制",
-   "count_1d": 4,
-   "count_7d": 50,
-   "count_30d": 82,
-   "rise": 2.0,
+   "count_1d": 8,
+   "count_7d": 54,
+   "count_30d": 86,
+   "rise": 2.06,
    "sample_ids": [
+    "c57d181cbee677d4",
     "dbf0a6309accf155",
     "e9a9ef29d7236d61",
     "ff69eba3891caca4",
-    "60d8498e377ee154",
-    "55d04133b6908843"
+    "60d8498e377ee154"
    ]
   },
   {
    "topic": "china",
    "label": "中國",
-   "count_1d": 42,
-   "count_7d": 279,
-   "count_30d": 764,
-   "rise": 1.2,
+   "count_1d": 56,
+   "count_7d": 297,
+   "count_30d": 782,
+   "rise": 1.25,
    "sample_ids": [
-    "2931a8de30900703",
-    "f67261bcbf067eb2",
-    "40db8b46ac63d2b3",
-    "23a685498e8d2d6e",
-    "d0a4d5d43f3ed547"
+    "25b67771da7c1967",
+    "5eab93f3d7cfe8e0",
+    "a208c972231ac303",
+    "eb302bd2f4695539",
+    "1b4bd000d3d419d3"
    ]
   },
   {
    "topic": "taiwan",
    "label": "台灣",
-   "count_1d": 37,
-   "count_7d": 217,
-   "count_30d": 599,
-   "rise": 1.19,
+   "count_1d": 43,
+   "count_7d": 225,
+   "count_30d": 607,
+   "rise": 1.22,
    "sample_ids": [
-    "2a32e28b8c437da2",
-    "7eda9e2cd3c68d2e",
-    "33d990d3fc015e25",
-    "8569cd66c8b0733a",
-    "70dbf7ede3736b64"
+    "0b9b33c2ed5b0794",
+    "1839d0b7d1d5c9b6",
+    "b02654314d2b5aed",
+    "a7a8424f007265bc",
+    "fc05e86ddb50c21b"
    ]
   },
   {
@@ -94,16 +94,16 @@
   {
    "topic": "war",
    "label": "戰爭與地緣",
-   "count_1d": 6,
-   "count_7d": 36,
-   "count_30d": 98,
-   "rise": 1.21,
+   "count_1d": 8,
+   "count_7d": 37,
+   "count_30d": 99,
+   "rise": 1.23,
    "sample_ids": [
+    "5eab93f3d7cfe8e0",
     "4632fa1c9823aa16",
     "a3a68b149251eef2",
     "0f86270d31a37cb2",
-    "64d2723f0ae25ca8",
-    "a4579ea4a422e7fa"
+    "64d2723f0ae25ca8"
    ]
   },
   {
@@ -114,8 +114,8 @@
    "count_30d": 134,
    "rise": 0.61,
    "sample_ids": [
+    "9d696a5cbf09167c",
     "bc575448e5d43d96",
-    "ff62bfd7b7acfa14",
     "ce26da26655b40c0",
     "d62be1f9b9066055",
     "b4208e3e2de574cd"
@@ -135,13 +135,13 @@
   {
    "topic": "earnings",
    "label": "財報",
-   "count_1d": 7,
-   "count_7d": 202,
-   "count_30d": 676,
-   "rise": 0.98,
+   "count_1d": 3,
+   "count_7d": 200,
+   "count_30d": 674,
+   "rise": 0.97,
    "sample_ids": [
+    "ab0c20c8928f9cc8",
     "52e71cedf80a83d8",
-    "63bf9c6fd9e6441c",
     "a6117f1d7703b67d",
     "ad800f6812909d77",
     "ec10a17023468fc3"
@@ -159,14 +159,14 @@
   {
    "topic": "merger",
    "label": "併購",
-   "count_1d": 6,
-   "count_7d": 23,
-   "count_30d": 106,
-   "rise": 0.71,
+   "count_1d": 7,
+   "count_7d": 25,
+   "count_30d": 108,
+   "rise": 0.76,
    "sample_ids": [
     "4795c4b12e08735c",
-    "aeb245b206338fa4",
     "830b9874248c26cf",
+    "a0dfb401ec878fbc",
     "3fba8a9c73fbf819",
     "e53b84185350387f"
    ]
@@ -175,6 +175,19 @@
  "rising_topic": "export_controls",
  "rising_terms": [
   {
+   "term": "學家",
+   "count_1d": 14,
+   "count_30d": 14,
+   "score": 14.0,
+   "sample_ids": [
+    "a906bd2b65f75a8a",
+    "a7d447604ee0e972",
+    "7cd1f96d16e64424",
+    "9211ee697a4ad617",
+    "a29f548323e17ac4"
+   ]
+  },
+  {
    "term": "limits",
    "count_1d": 11,
    "count_30d": 11,
@@ -182,9 +195,61 @@
    "sample_ids": [
     "950e9cf7a029287c",
     "f89eb185bfa1e8c3",
-    "e5d2ddc643b0f29d",
-    "178bcf03a8e2701a",
-    "edcb027131abf6af"
+    "fd2f352c650389a4",
+    "48f49ca51288e12e",
+    "88a347bdcfa7efb8"
+   ]
+  },
+  {
+   "term": "科學",
+   "count_1d": 11,
+   "count_30d": 11,
+   "score": 11.0,
+   "sample_ids": [
+    "a906bd2b65f75a8a",
+    "a7d447604ee0e972",
+    "7cd1f96d16e64424",
+    "40da34d93f94e51c",
+    "3fffa82759ba3108"
+   ]
+  },
+  {
+   "term": "首席",
+   "count_1d": 10,
+   "count_30d": 10,
+   "score": 10.0,
+   "sample_ids": [
+    "a906bd2b65f75a8a",
+    "7cd1f96d16e64424",
+    "3fffa82759ba3108",
+    "6f02ea4ddccd6787",
+    "79728f7c4154debf"
+   ]
+  },
+  {
+   "term": "scientist",
+   "count_1d": 9,
+   "count_30d": 9,
+   "score": 9.0,
+   "sample_ids": [
+    "950e9cf7a029287c",
+    "f89eb185bfa1e8c3",
+    "48f49ca51288e12e",
+    "88a347bdcfa7efb8",
+    "6ecb050454dde075"
+   ]
+  },
+  {
+   "term": "席科",
+   "count_1d": 9,
+   "count_30d": 9,
+   "score": 9.0,
+   "sample_ids": [
+    "a906bd2b65f75a8a",
+    "7cd1f96d16e64424",
+    "3fffa82759ba3108",
+    "6f02ea4ddccd6787",
+    "79728f7c4154debf"
    ]
   },
   {
@@ -193,24 +258,37 @@
    "count_30d": 9,
    "score": 9.0,
    "sample_ids": [
+    "97e649bdd6aae6f0",
+    "4b19295087afcb3e",
+    "b3e8998a9a3dd383",
     "da813eda0830ebb2",
-    "07f3dcf5a0dfa494",
-    "07704a534e05ff38",
-    "891032ca766a8505",
-    "9dd9e6b56de5eb81"
+    "07f3dcf5a0dfa494"
    ]
   },
   {
-   "term": "工商",
+   "term": "商情",
+   "count_1d": 14,
+   "count_30d": 30,
+   "score": 8.11,
+   "sample_ids": [
+    "6987394c91008a1d",
+    "3444c230fe137bf2",
+    "b02654314d2b5aed",
+    "a7a8424f007265bc",
+    "fc05e86ddb50c21b"
+   ]
+  },
+  {
+   "term": "intelligence",
    "count_1d": 8,
    "count_30d": 8,
    "score": 8.0,
    "sample_ids": [
-    "8319ead62c94162c",
-    "acc1e2169d0e7fa4",
-    "60377e13daa14b38",
-    "564a92cf868f0886",
-    "c5f13afc0b262b46"
+    "e7bd5bfc7708eddb",
+    "950e9cf7a029287c",
+    "6f9d194c2152d222",
+    "c305109d40239129",
+    "bb96442e65fcad27"
    ]
   },
   {
@@ -219,154 +297,76 @@
    "count_30d": 8,
    "score": 8.0,
    "sample_ids": [
+    "97e649bdd6aae6f0",
+    "4b19295087afcb3e",
+    "b3e8998a9a3dd383",
     "da813eda0830ebb2",
-    "07f3dcf5a0dfa494",
-    "07704a534e05ff38",
-    "891032ca766a8505",
-    "9dd9e6b56de5eb81"
+    "07f3dcf5a0dfa494"
    ]
   },
   {
-   "term": "development",
-   "count_1d": 9,
-   "count_30d": 14,
-   "score": 7.33,
+   "term": "翻紅",
+   "count_1d": 14,
+   "count_30d": 35,
+   "score": 7.16,
    "sample_ids": [
-    "f89eb185bfa1e8c3",
-    "bcc98ee2f3488ead",
-    "24ffaec5860d953b",
-    "5fb6d20d299cb0cb",
-    "eb37a320cf0a63e3"
+    "7eb8242567d4bc2b",
+    "442d753f8bef12ad",
+    "a7aae592bcc6d153",
+    "426307e72e246757",
+    "88eaa3d296a1b6d8"
    ]
   },
   {
-   "term": "bulls",
-   "count_1d": 7,
-   "count_30d": 7,
-   "score": 7.0,
+   "term": "禁空",
+   "count_1d": 13,
+   "count_30d": 33,
+   "score": 6.81,
    "sample_ids": [
-    "f9374a2f0b2a9e79",
-    "d0e958a9d884cbed",
-    "30017eb854086819",
-    "4aa0a53c379ec4cd",
-    "fb9326b8b5a9bc4f"
+    "b7e489237804378f",
+    "518c41ff2fb76cd1",
+    "b3e8998a9a3dd383",
+    "8a16cc7a455fd504",
+    "97cf4a3bde4feff6"
    ]
   },
   {
-   "term": "intelligence",
-   "count_1d": 7,
-   "count_30d": 7,
-   "score": 7.0,
-   "sample_ids": [
-    "950e9cf7a029287c",
-    "6f9d194c2152d222",
-    "c305109d40239129",
-    "f1493b7fc8ddfa49",
-    "edcb027131abf6af"
-   ]
-  },
-  {
-   "term": "scientist",
-   "count_1d": 7,
-   "count_30d": 7,
-   "score": 7.0,
-   "sample_ids": [
-    "950e9cf7a029287c",
-    "f89eb185bfa1e8c3",
-    "e5d2ddc643b0f29d",
-    "7b467a3d53dff66a",
-    "24ffaec5860d953b"
-   ]
-  },
-  {
-   "term": "準備",
+   "term": "black",
    "count_1d": 7,
    "count_30d": 9,
    "score": 6.42,
    "sample_ids": [
-    "5e67e0d32d41f13f",
-    "8688eef2a7b4e1f0",
-    "7e9b2e05b683e88a",
-    "f8d0b3dcb44fed69",
-    "bed2d1e807c98854"
+    "d4a25ce3b81753aa",
+    "a12f9175ce193df0",
+    "e6b108c4eaf361f4",
+    "1de67a1b98833224",
+    "507ed37571a6d661"
    ]
   },
   {
-   "term": "bessent",
-   "count_1d": 9,
-   "count_30d": 18,
-   "score": 6.39,
+   "term": "proposes",
+   "count_1d": 7,
+   "count_30d": 9,
+   "score": 6.42,
    "sample_ids": [
-    "2cfbc199eb2e2584",
-    "762188f3e4e713af",
-    "6793275c5f77fd6a",
-    "715be72fd916e9c1",
-    "a5f0b71a07bb09cf"
+    "950e9cf7a029287c",
+    "48f49ca51288e12e",
+    "88a347bdcfa7efb8",
+    "6ecb050454dde075",
+    "7b467a3d53dff66a"
    ]
   },
   {
-   "term": "chief",
-   "count_1d": 9,
-   "count_30d": 18,
-   "score": 6.39,
+   "term": "卓榮",
+   "count_1d": 10,
+   "count_30d": 23,
+   "score": 6.29,
    "sample_ids": [
-    "f89eb185bfa1e8c3",
-    "5e9d7c5cc9037521",
-    "c2ea33f4bd5b0e32",
-    "7b467a3d53dff66a",
-    "f1493b7fc8ddfa49"
-   ]
-  },
-  {
-   "term": "twa00",
-   "count_1d": 8,
-   "count_30d": 15,
-   "score": 6.07,
-   "sample_ids": [
-    "fef9befa848ad5b3",
-    "417b5e6ecef9566d",
-    "77202e8ff8386098",
-    "b5e9decb146452bd",
-    "945d781ea691efcc"
-   ]
-  },
-  {
-   "term": "dead",
-   "count_1d": 6,
-   "count_30d": 6,
-   "score": 6.0,
-   "sample_ids": [
-    "ca048e637eae37fa",
-    "f2197902a99d2f04",
-    "bcc98ee2f3488ead",
-    "bae0f0cb00cec4f0",
-    "666448d966305ba9"
-   ]
-  },
-  {
-   "term": "norman",
-   "count_1d": 6,
-   "count_30d": 6,
-   "score": 6.0,
-   "sample_ids": [
-    "f9374a2f0b2a9e79",
-    "4aa1fe35f71da622",
-    "30017eb854086819",
-    "4aa0a53c379ec4cd",
-    "fb9326b8b5a9bc4f"
-   ]
-  },
-  {
-   "term": "perplexity",
-   "count_1d": 6,
-   "count_30d": 6,
-   "score": 6.0,
-   "sample_ids": [
-    "7b467a3d53dff66a",
-    "b87ba8702c346af9",
-    "5fb6d20d299cb0cb",
-    "19f4fef2812c7bcd",
-    "4fce5edada06d70a"
+    "adcff6dd60c097b7",
+    "fc0060fb5f6345e1",
+    "b8ee6646c4fbb063",
+    "2517babd06037216",
+    "acc1e2169d0e7fa4"
    ]
   }
  ]

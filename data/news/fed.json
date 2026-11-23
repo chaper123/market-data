@@ -1,12 +1,11 @@
 {
- "generated_at_taipei": "2026-11-23 08:20",
+ "generated_at_taipei": "2026-11-23 11:10",
  "days": 7,
  "feeds": [
   {
    "name": "Fed 新聞稿",
-   "ok": false,
-   "count": 0,
-   "error": "HTTP 404"
+   "ok": true,
+   "count": 4
   },
   {
    "name": "Fed 演講",
@@ -17,11 +16,27 @@
  "items": [
   {
    "date": "2026-11-21",
+   "title": "Federal Reserve announces College Fed Challenge winners",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120b.htm",
+   "type": "press",
+   "published_taipei": "2026-11-21 05:15",
+   "published_utc": "2026-11-20T21:15:00Z"
+  },
+  {
+   "date": "2026-11-21",
    "title": "Cook, The U.S. Economy in Global Context",
    "link": "https://www.federalreserve.gov/newsevents/speech/cook20261120a.htm",
    "type": "speech",
    "published_taipei": "2026-11-21 01:15",
    "published_utc": "2026-11-20T17:15:00Z"
+  },
+  {
+   "date": "2026-11-20",
+   "title": "Federal Reserve Board releases results from survey of senior financial officers at banks about their strategies and practices for managing reserve balances",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120a.htm",
+   "type": "press",
+   "published_taipei": "2026-11-20 23:00",
+   "published_utc": "2026-11-20T15:00:00Z"
   },
   {
    "date": "2026-11-20",
@@ -32,12 +47,28 @@
    "published_utc": "2026-11-20T13:25:00Z"
   },
   {
+   "date": "2026-11-20",
+   "title": "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261119a.htm",
+   "type": "press",
+   "published_taipei": "2026-11-20 00:00",
+   "published_utc": "2026-11-19T16:00:00Z"
+  },
+  {
    "date": "2026-11-19",
    "title": "Jefferson, Monetary Policy amid Frequent and Complex Shocks",
    "link": "https://www.federalreserve.gov/newsevents/speech/jefferson20261119a.htm",
    "type": "speech",
    "published_taipei": "2026-11-19 22:25",
    "published_utc": "2026-11-19T14:25:00Z"
+  },
+  {
+   "date": "2026-11-19",
+   "title": "Minutes of the Federal Open Market Committee, October 27-28, 2026",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm",
+   "type": "press",
+   "published_taipei": "2026-11-19 03:00",
+   "published_utc": "2026-11-18T19:00:00Z"
   },
   {
    "date": "2026-11-19",
