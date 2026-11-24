@@ -203,7 +203,11 @@ class NewsTest(unittest.TestCase):
         doc, fed, md, meta = self.run_main()
         deal = self.item(doc, "Nvidia shares rise")
         self.assertEqual(deal["url"], "https://publisher.example/" + gid("Nvidia shares rise on new AI deal"))
-        self.assertTrue(deal["link"].startswith(GN_BASE))  # 原本的 link 保留
+        self.assertIsNone(deal["link"])  # 已經解出 url 的 Google News 項目，link 寫成 null（鍵還在，見 test_agreed_format）
+        self.assertEqual(len(deal["id"]), 16)  # id 在 link 變 null 之前算好
+        # 解不出 url 的 Google News 項目保留 link
+        self.assertTrue(self.item(doc, "Banks rally")["link"].startswith(GN_BASE))
+        self.assertTrue(self.item(doc, "Nvidia stock")["link"].startswith(GN_BASE))  # tier 4 不解 url
         self.assertEqual(self.item(doc, "Trump threatens")["url"],
                          "https://publisher.example/" + gid("Trump threatens new tariffs on chips"))
         self.assertEqual(self.item(doc, "台積電法說會")["url"], "https://publisher.example/" + gid("台積電法說會釋出樂觀展望"))
@@ -574,6 +578,23 @@ class NullLinkTest(unittest.TestCase):
         self.assertIsNone(other["link"])  # 上一份是 null 的，不會被補回 link
         self.assertNotIn(gid("Nvidia shares rise on new AI deal"), PAGES)  # 有 url 的不重新解碼
         self.assertGreaterEqual(doc["stats"]["url"]["cached"], 2)
+
+    def test_own_output_roundtrip_keeps_ids_and_cap(self):
+        first, *_ = self.run_main()
+        nulls = [it for it in first["items"] if it["link"] is None]
+        self.assertTrue(nulls)
+        for it in nulls:  # id 是用 link 算的（寫成 null 之前）
+            self.assertEqual(it["id"], news.hashlib.sha1((GN_BASE + gid(it["title"])).encode()).hexdigest()[:16])
+        self.assertTrue(all(it["url"] and not news.gn_article_id(it["link"]) for it in nulls))
+        for it in first["items"]:  # 中央社、Fed 的 link 等於 url，不動
+            if it["source"] in ("Federal Reserve", "中央社"):
+                self.assertEqual(it["link"], it["url"])
+        second, *_ = self.run_main(previous=first)  # 同樣的 RSS 再跑一次，吃自己上一份的輸出
+        self.assertEqual([(it["id"], it["link"], it["url"], it["title"]) for it in second["items"]],
+                         [(it["id"], it["link"], it["url"], it["title"]) for it in first["items"]])
+        self.assertEqual(second["stats"]["by_tier"], first["stats"]["by_tier"])  # cap 上限沒有失效
+        self.assertEqual(sum(1 for it in second["items"] if not it["title_match"]),
+                         sum(1 for it in first["items"] if not it["title_match"]))
 
     def test_old_format_with_link_still_readable(self):
         old = {"title": "Nvidia old format", "source": "Reuters", "source_url": "https://www.reuters.com", "tier": 2,

@@ -21,6 +21,9 @@ symbols 只依標題判斷（查詢關鍵字，以及兩檔主動 ETF 前十大�
 保留最近 window_hours 小時（會合併上一次的輸出）。
 url：Tier 1～2、最近 url_hours 小時的項目解開 Google News 轉址得到原文網址（讀文章頁拿簽章、再呼叫 batchexecute，
 一次 10 則；解過的沿用；每次有數量與時間上限），解不開或範圍外是 null；Fed 的 link 本來就是原文。
+link：已經解出 url 的 Google News 項目輸出時 link 寫成 null（鍵保留，讀取端用 url || link；2026-11-24 起，為了縮小
+headlines.json 的成長）；id 沿用上一份檔案裡存的，所以讀回上一份時用 is_google_news（link 是 Google News 網址，或
+link 是 null 而 url 有值）判斷是不是 Google News，merge 的排序與 cap 的上限都靠它。中央社、Fed 的 link 等於 url，不動。
 發布時間可疑：同一次抓取中同一來源有 time_suspect_min 則以上發布時間完全相同（Google 重新索引時會把一批舊文標成同一個
 時間），就讀原文頁（JSON-LD datePublished、article:published_time 等，最後看網址裡的日期）找回日期：找得回來就改正並記
 time_fixed_from，改正後超出時間窗的拿掉；找不回來的移到頂層 suspect_items（附 suspect_reason）。結果存在 time_check_cache。
@@ -620,9 +623,13 @@ def item_id(it):
 
 
 def serialize(it):
+    """link 鍵保留；只有「Google News 轉址、而且已經解出 url」的項目寫成 null（轉址連結是 base64、平均 311 字元，
+    壓不下去，佔 headlines.json 每版新增量的 66%）。中央社、Fed 的 link 等於 url，解不出 url 的 Google News 項目
+    也保留 link。id 在這之前算好（新抓到的用 link 算，之後沿用檔案裡存的），所以不受影響。"""
+    link = None if gn_article_id(it["link"]) and it.get("url") else it["link"]
     return {"id": item_id(it), "published_utc": utc_text(it["published"]), "published_taipei": tpe(it["published"]),
             "source": it["source"], "source_url": it.get("source_url"), "tier": it["tier"], "rank": it.get("rank"),
-            "lang": it["lang"], "title": it["title"], "link": it["link"], "url": it.get("url"), "symbols": it["symbols"],
+            "lang": it["lang"], "title": it["title"], "link": link, "url": it.get("url"), "symbols": it["symbols"],
             "topics": it["topics"], "queries": it["queries"], "title_queries": it["title_queries"],
             "title_match": it["title_match"], "also": it["also"], "time_fixed_from": it.get("time_fixed_from")}
 
