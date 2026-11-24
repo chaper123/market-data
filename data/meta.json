@@ -783,36 +783,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-24 11:10",
-   "items": 2037,
+   "last": "2026-11-24 13:40",
+   "items": 2133,
    "by_tier": {
-    "2": 1606,
-    "4": 409,
+    "2": 1707,
+    "4": 404,
     "1": 15,
     "3": 7
    },
    "feeds_ok": "50/50",
    "errors": 0,
-   "url_ok": 1290,
-   "url_total": 1290,
+   "url_ok": 1373,
+   "url_total": 1373,
    "time_suspect_detected": 38,
-   "time_fixed": 38,
-   "time_removed": 0
+   "time_fixed": 36,
+   "time_removed": 2
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-21",
-   "checked_at_taipei": "2026-11-24 11:10",
+   "checked_at_taipei": "2026-11-24 13:40",
    "items": 9
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-24 10:34",
-   "items": 204,
+   "last": "2026-11-24 12:35",
+   "items": 218,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-24 11:10"
+   "checked_at_taipei": "2026-11-24 13:40"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -866,22 +866,22 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-24 11:10",
+   "last": "2026-11-24 13:40",
    "days_available": 24,
    "rising_topic": "export_controls",
    "rising_terms": [
     "仁勳回",
     "回歸",
     "回鍋",
-    "return",
-    "卓揆"
+    "仁勳重",
+    "return"
    ]
   },
   "news/nsf": {
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-23",
-   "checked_at_taipei": "2026-11-24 11:10",
+   "checked_at_taipei": "2026-11-24 13:40",
    "items": 10
   }
  },

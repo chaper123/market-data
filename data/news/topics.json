@@ -1,5 +1,5 @@
 {
- "generated_at_taipei": "2026-11-24 11:10",
+ "generated_at_taipei": "2026-11-24 13:40",
  "rule": "count_1d＝最近 24 小時；count_7d／count_30d＝最近 7／30 個台北日曆日（含今天）；rise＝(count_7d/7)÷(count_30d/30)，歷史不足時分母用已有天數；rising_terms 的 score＝近 24 小時則數÷(今天以外的日平均＋1)。固定規則計數，不做預測",
  "days_available": 24,
  "history_since": "2026-11-01",
@@ -7,22 +7,22 @@
   {
    "topic": "fed",
    "label": "Fed／利率",
-   "count_1d": 42,
-   "count_7d": 169,
-   "count_30d": 476,
-   "rise": 1.22,
+   "count_1d": 39,
+   "count_7d": 168,
+   "count_30d": 475,
+   "rise": 1.21,
    "sample_ids": [
     "137217fbade893d4",
     "62496b2db1339ced",
     "241d9c35f2a8e1cf",
-    "3de197534d871d62",
-    "bff7ec6b5457747f"
+    "d1a0a80801dc5e52",
+    "18045156d1295537"
    ]
   },
   {
    "topic": "tariff",
    "label": "關稅",
-   "count_1d": 26,
+   "count_1d": 25,
    "count_7d": 66,
    "count_30d": 225,
    "rise": 1.01,
@@ -37,56 +37,57 @@
   {
    "topic": "export_controls",
    "label": "出口管制",
-   "count_1d": 10,
-   "count_7d": 45,
-   "count_30d": 86,
-   "rise": 1.79,
+   "count_1d": 11,
+   "count_7d": 46,
+   "count_30d": 87,
+   "rise": 1.81,
    "sample_ids": [
+    "e683b4f859c0d1ec",
     "a6267fac86b77e20",
     "afd7bd98ad07ecfa",
     "b12d51b70f7b9309",
-    "c57d181cbee677d4",
-    "dbf0a6309accf155"
+    "c57d181cbee677d4"
    ]
   },
   {
    "topic": "china",
    "label": "中國",
-   "count_1d": 55,
-   "count_7d": 278,
-   "count_30d": 799,
-   "rise": 1.19,
+   "count_1d": 51,
+   "count_7d": 282,
+   "count_30d": 803,
+   "rise": 1.2,
    "sample_ids": [
-    "4c6a88b33ca75781",
-    "2e088b8ae84334b7",
-    "f463857732392089",
-    "c024234c05fc1a2d",
-    "f4ed5184c22407f5"
+    "91c79c60b1dcd747",
+    "4518cc34ab16e432",
+    "8c88e31160318f2f",
+    "86ba16b18b1f72c1",
+    "4c6a88b33ca75781"
    ]
   },
   {
    "topic": "taiwan",
    "label": "台灣",
-   "count_1d": 62,
-   "count_7d": 222,
-   "count_30d": 638,
-   "rise": 1.19,
+   "count_1d": 65,
+   "count_7d": 229,
+   "count_30d": 645,
+   "rise": 1.22,
    "sample_ids": [
     "7012fdf3b52960fe",
     "fec3e8e0bcb973e8",
-    "98e7d92f96fe8e22",
-    "52b67191acc02f00",
-    "37b228fb637f260c"
+    "3afab1b291f7d5c5",
+    "5080988cb89b5bc5",
+    "24e02886fd64dfd8"
    ]
   },
   {
    "topic": "oil",
    "label": "油價",
-   "count_1d": 3,
-   "count_7d": 12,
-   "count_30d": 79,
-   "rise": 0.52,
+   "count_1d": 4,
+   "count_7d": 13,
+   "count_30d": 80,
+   "rise": 0.56,
    "sample_ids": [
+    "d50a32130842e6b6",
     "7b9a0fb69cbb83f4",
     "d788a676e7e6aaf9",
     "ef64e5a921ab2726",
@@ -96,10 +97,10 @@
   {
    "topic": "war",
    "label": "戰爭與地緣",
-   "count_1d": 7,
-   "count_7d": 37,
-   "count_30d": 102,
-   "rise": 1.24,
+   "count_1d": 6,
+   "count_7d": 36,
+   "count_30d": 101,
+   "rise": 1.22,
    "sample_ids": [
     "960dbad303438d40",
     "78f5bf381e1678cb",
@@ -138,15 +139,15 @@
    "topic": "earnings",
    "label": "財報",
    "count_1d": 9,
-   "count_7d": 150,
-   "count_30d": 685,
+   "count_7d": 151,
+   "count_30d": 686,
    "rise": 0.75,
    "sample_ids": [
-    "6235b9547eeac4ab",
+    "e227f4b5d6889a95",
+    "18045156d1295537",
     "5305fd8b067821fb",
     "24a073e4fc3a6731",
-    "0280e3a53ab36723",
-    "c5a71f68f7bc0882"
+    "0280e3a53ab36723"
    ]
   },
   {
@@ -161,16 +162,16 @@
   {
    "topic": "merger",
    "label": "併購",
-   "count_1d": 10,
-   "count_7d": 24,
-   "count_30d": 114,
-   "rise": 0.72,
+   "count_1d": 12,
+   "count_7d": 26,
+   "count_30d": 116,
+   "rise": 0.77,
    "sample_ids": [
+    "cb5abb851d7d2ea7",
+    "379984e690d54e12",
     "f463857732392089",
     "2ea6fb1686dbd6ee",
-    "87319b9fb2c6b250",
-    "9b06359eda81c88e",
-    "33052e10bdd99db4"
+    "87319b9fb2c6b250"
    ]
   }
  ],
@@ -178,197 +179,197 @@
  "rising_terms": [
   {
    "term": "仁勳回",
-   "count_1d": 55,
-   "count_30d": 65,
-   "score": 38.33,
+   "count_1d": 76,
+   "count_30d": 86,
+   "score": 52.97,
    "sample_ids": [
-    "f189c2073db3973d",
-    "b70105804d909e2f",
-    "291bcfec43bb5c1c",
-    "52b67191acc02f00",
-    "9ca6d4b5e4680d94"
+    "5080988cb89b5bc5",
+    "5885315204ba8bb3",
+    "1122dd6c2088927b",
+    "b32f7622e4bb228f",
+    "52f17ffb5e699495"
    ]
   },
   {
    "term": "回歸",
-   "count_1d": 32,
-   "count_30d": 37,
-   "score": 26.29,
+   "count_1d": 44,
+   "count_30d": 49,
+   "score": 36.14,
    "sample_ids": [
-    "f189c2073db3973d",
-    "291bcfec43bb5c1c",
-    "52b67191acc02f00",
-    "9ca6d4b5e4680d94",
-    "44cfb5356356d258"
+    "5080988cb89b5bc5",
+    "1122dd6c2088927b",
+    "52f17ffb5e699495",
+    "7c6439be828bce9c",
+    "cf4db63bf6422ad7"
    ]
   },
   {
    "term": "回鍋",
-   "count_1d": 30,
-   "count_30d": 35,
-   "score": 24.64,
+   "count_1d": 33,
+   "count_30d": 38,
+   "score": 27.11,
    "sample_ids": [
-    "b70105804d909e2f",
-    "fe08092d09a7cb5e",
-    "10b3eb67c62bc02c",
-    "a70c8fea2e7f1ba8",
-    "1daca14f8b65275f"
+    "5885315204ba8bb3",
+    "b32f7622e4bb228f",
+    "89ddaf13931e91f7",
+    "3568c695ee1ce768",
+    "8243159a8dc5bf6b"
+   ]
+  },
+  {
+   "term": "仁勳重",
+   "count_1d": 23,
+   "count_30d": 23,
+   "score": 23.0,
+   "sample_ids": [
+    "d11c43941db214db",
+    "3418c98a47d2a3a4",
+    "a28c7189cfbc6027",
+    "f03cb9e79e586727",
+    "1d6ccad3ef39c0b8"
    ]
   },
   {
    "term": "return",
-   "count_1d": 61,
-   "count_30d": 102,
-   "score": 21.92,
+   "count_1d": 62,
+   "count_30d": 105,
+   "score": 21.61,
    "sample_ids": [
-    "36849f98a6d4c85f",
-    "e87ff06ca2df3baf",
-    "4d5104ed07d97ac9",
-    "781024e1bc9fd271",
-    "b1388eb6c90e953a"
+    "91c79c60b1dcd747",
+    "b1388eb6c90e953a",
+    "fdc80d167f0fb986",
+    "1f7c2c5ed2fa7722",
+    "08eacba8b4fc38f0"
+   ]
+  },
+  {
+   "term": "掌輝",
+   "count_1d": 18,
+   "count_30d": 18,
+   "score": 18.0,
+   "sample_ids": [
+    "d11c43941db214db",
+    "a28c7189cfbc6027",
+    "3c482b6e5ffef7ea",
+    "1d6ccad3ef39c0b8",
+    "a2274d59a9881f19"
+   ]
+  },
+  {
+   "term": "重掌",
+   "count_1d": 18,
+   "count_30d": 20,
+   "score": 16.56,
+   "sample_ids": [
+    "d11c43941db214db",
+    "a28c7189cfbc6027",
+    "3c482b6e5ffef7ea",
+    "1d6ccad3ef39c0b8",
+    "a2274d59a9881f19"
+   ]
+  },
+  {
+   "term": "復職",
+   "count_1d": 15,
+   "count_30d": 15,
+   "score": 15.0,
+   "sample_ids": [
+    "533951846b8ec52f",
+    "f76f84b5cb73d485",
+    "297439ff3d24ce8a",
+    "52e649e52b02f99c",
+    "ea7c999644455e3d"
+   ]
+  },
+  {
+   "term": "仁勳復",
+   "count_1d": 14,
+   "count_30d": 14,
+   "score": 14.0,
+   "sample_ids": [
+    "533951846b8ec52f",
+    "f76f84b5cb73d485",
+    "297439ff3d24ce8a",
+    "52e649e52b02f99c",
+    "ea7c999644455e3d"
+   ]
+  },
+  {
+   "term": "激勵",
+   "count_1d": 14,
+   "count_30d": 14,
+   "score": 14.0,
+   "sample_ids": [
+    "5885315204ba8bb3",
+    "3418c98a47d2a3a4",
+    "89ddaf13931e91f7",
+    "79775aab3a748a70",
+    "291bcfec43bb5c1c"
    ]
   },
   {
    "term": "卓揆",
-   "count_1d": 17,
-   "count_30d": 18,
-   "score": 16.29,
+   "count_1d": 15,
+   "count_30d": 17,
+   "score": 13.8,
    "sample_ids": [
     "d9571e46e510091c",
-    "040bc1e46127771f",
+    "fa93dc060c500f69",
     "0bbc07c2eed6fba2",
     "addafc10230a8dc3",
     "a61e7fb6937a151e"
    ]
   },
   {
-   "term": "仁勳重",
-   "count_1d": 16,
-   "count_30d": 16,
-   "score": 16.0,
-   "sample_ids": [
-    "a2274d59a9881f19",
-    "5dbd269dc415b55e",
-    "d09550afb56704fc",
-    "5515c5ba969b01e3",
-    "2e088b8ae84334b7"
-   ]
-  },
-  {
-   "term": "掌輝",
-   "count_1d": 14,
-   "count_30d": 14,
-   "score": 14.0,
-   "sample_ids": [
-    "a2274d59a9881f19",
-    "5dbd269dc415b55e",
-    "d09550afb56704fc",
-    "2e088b8ae84334b7",
-    "5e780d08b04e9297"
-   ]
-  },
-  {
-   "term": "永豐",
-   "count_1d": 13,
-   "count_30d": 13,
-   "score": 13.0,
-   "sample_ids": [
-    "b26246bc2e32d0fd",
-    "c5a71f68f7bc0882",
-    "bde75b7d1a8d95dc",
-    "9cebdfcfa80d14fa",
-    "0e8f7e1f6cf83095"
-   ]
-  },
-  {
-   "term": "重掌",
-   "count_1d": 14,
-   "count_30d": 16,
-   "score": 12.88,
-   "sample_ids": [
-    "a2274d59a9881f19",
-    "5dbd269dc415b55e",
-    "d09550afb56704fc",
-    "2e088b8ae84334b7",
-    "5e780d08b04e9297"
-   ]
-  },
-  {
    "term": "reinstates",
-   "count_1d": 13,
-   "count_30d": 14,
-   "score": 12.46,
+   "count_1d": 14,
+   "count_30d": 15,
+   "score": 13.42,
    "sample_ids": [
     "0bf53ee25330b714",
-    "4106394f2017292e",
     "78afc5110d5f6819",
     "eb7e186385d4c8cc",
-    "fc309036a7be26c1"
+    "fc309036a7be26c1",
+    "9ecab092a65071f2"
    ]
   },
   {
-   "term": "製程",
-   "count_1d": 15,
-   "count_30d": 20,
-   "score": 12.32,
+   "term": "漲停",
+   "count_1d": 78,
+   "count_30d": 197,
+   "score": 12.63,
    "sample_ids": [
-    "306ba8f0e4652a34",
-    "96ff7d376d5fc70d",
-    "2c4e307116cdd71f",
-    "f73c281d7efee9f4",
-    "2698ff13315527e7"
+    "cdb135f14d1d36c1",
+    "5885315204ba8bb3",
+    "1122dd6c2088927b",
+    "3418c98a47d2a3a4",
+    "cb1079d2e6d7db70"
    ]
   },
   {
-   "term": "不應",
+   "term": "正面",
    "count_1d": 12,
    "count_30d": 12,
    "score": 12.0,
    "sample_ids": [
-    "96ff7d376d5fc70d",
-    "f73c281d7efee9f4",
-    "2698ff13315527e7",
-    "0d3c23abced73305",
-    "105bef2d82a4f94b"
+    "438f8fec7ed830e9",
+    "d4f0f43ca9912cf2",
+    "3a178699d0888238",
+    "499ae483012b9519",
+    "6b6bc1ebd6db0c9f"
    ]
   },
   {
-   "term": "供不",
+   "term": "股暴漲",
    "count_1d": 12,
    "count_30d": 12,
    "score": 12.0,
    "sample_ids": [
-    "96ff7d376d5fc70d",
-    "f73c281d7efee9f4",
-    "2698ff13315527e7",
-    "0d3c23abced73305",
-    "105bef2d82a4f94b"
-   ]
-  },
-  {
-   "term": "復職",
-   "count_1d": 12,
-   "count_30d": 12,
-   "score": 12.0,
-   "sample_ids": [
-    "ea7c999644455e3d",
-    "4000e19fee4d240a",
-    "2ac1e15cd53a53b6",
-    "c7bf781b6bdb88df",
-    "f84a683c0c689661"
-   ]
-  },
-  {
-   "term": "應求",
-   "count_1d": 12,
-   "count_30d": 12,
-   "score": 12.0,
-   "sample_ids": [
-    "96ff7d376d5fc70d",
-    "f73c281d7efee9f4",
-    "2698ff13315527e7",
-    "0d3c23abced73305",
-    "105bef2d82a4f94b"
+    "48a54cd85dc219ac",
+    "2c972d47dadaa979",
+    "2b2db5e0573fff00",
+    "f1c3d9d78ad6e9d7",
+    "05a7add9dff371cc"
    ]
   }
  ]
