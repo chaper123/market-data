@@ -175,7 +175,7 @@ def tag(item, cfg, names):
 def merge(items):
     """同標題或高度相似的合併：保留等級最高、其次是原文連結（官方 RSS，例如中央社）、再其次最早的那則，
     其他來源列在 also。"""
-    items = sorted(items, key=lambda x: (x["tier"], gn_article_id(x.get("link")) is not None, x["published"]))
+    items = sorted(items, key=lambda x: (x["tier"], is_google_news(x), x["published"]))
     kept = []
     for it in items:
         tk = tokens(it["title"])
@@ -198,7 +198,7 @@ def cap(items, low_tier_per_topic, off_title_per_topic):
     （一則屬於多個查詢時，任一查詢還有名額就留）。官方（Fed）與原文連結的官方 RSS（中央社）一律保留。"""
     used, out = {}, []
     for it in sorted(items, key=lambda x: (x["tier"], -x["published"].timestamp())):
-        direct = it["tier"] == 1 or not gn_article_id(it.get("link"))  # 官方、中央社 RSS 這類原文連結不限
+        direct = it["tier"] == 1 or not is_google_news(it)  # 官方、中央社 RSS 這類原文連結不限
         kind = None if direct else "off" if not it["title_match"] else "low" if it["tier"] == 4 else None
         if kind is None:
             out.append(it)
@@ -316,6 +316,14 @@ def gn_article_id(link):
     if p.netloc != "news.google.com" or "/articles/" not in p.path:
         return None
     return p.path.rsplit("/", 1)[-1]
+
+
+def is_google_news(it):
+    """這則是不是 Google News 轉址來的：link 是 Google News 網址，或 link 是 null 而 url 有值
+    （檔案裡已經解出原文網址的 Google News 項目會把 link 寫成 null，見 serialize；中央社、Fed 的 link 等於 url，不是 null）。
+    merge 的排序與 cap 的上限都靠它，不能只看 link。"""
+    link = it.get("link")
+    return gn_article_id(link) is not None or (link is None and bool(it.get("url")))
 
 
 def good_url(url):
@@ -607,7 +615,8 @@ def utc_text(t):
 
 
 def item_id(it):
-    return hashlib.sha1((it.get("link") or it["title"]).encode("utf-8")).hexdigest()[:16]
+    """上一份檔案裡存的 id 一律沿用（link 之後可能是 null，不能再從 link 算）；新抓到的標題才用 sha1(link or title)。"""
+    return it.get("id") or hashlib.sha1((it.get("link") or it["title"]).encode("utf-8")).hexdigest()[:16]
 
 
 def serialize(it):
@@ -635,7 +644,7 @@ def load_previous(path, tiers):
         tier, rank = tier_of(it.get("source_url"), tiers)
         # 舊格式（10/22 第一版）的 topics 是查詢名稱
         queries = it.get("queries") or (it.get("topics") if isinstance(it.get("tier"), str) else None) or []
-        out.append({"title": it["title"], "link": it.get("link"), "source": it.get("source", ""),
+        out.append({"id": it.get("id"), "title": it["title"], "link": it.get("link"), "source": it.get("source", ""),
                     "source_url": it.get("source_url"), "published": t, "tier": tier, "rank": rank,
                     "lang": it.get("lang", "en"), "queries": list(queries), "also": list(it.get("also", [])),
                     "url": it.get("url"), "time_fixed_from": it.get("time_fixed_from")})

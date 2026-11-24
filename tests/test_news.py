@@ -533,5 +533,102 @@ class CnaTest(unittest.TestCase):
         self.assertTrue(any(it["source"] == "Reuters" for it in doc["items"]))  # 其他 feed 不受影響
 
 
+# ---------------------------------------------------------------- link 可能是 null（HEADLINES_SIZE.md：E1m）
+class NullLinkTest(unittest.TestCase):
+    """上一份檔案裡 Google News 項目的 link 可能是 null（url 有值）。讀回後 id、url 要沿用，
+    merge 排序與 cap 上限要照常把它當 Google News。第一階段（輸出仍寫 link）與第二階段（寫 null）都要過。"""
+    run_main = NewsTest.run_main
+    item = NewsTest.item
+
+    @staticmethod
+    def prev_item(title, n, *, link=None, url=None, source="Reuters", source_url="https://www.reuters.com",
+                  published="2026-10-21T21:00:00Z", queries=("NVDA",)):
+        url = url or f"https://publisher.example/old{n}"
+        return {"id": f"{n:016x}", "title": title, "source": source, "source_url": source_url, "tier": 2, "lang": "en",
+                "queries": list(queries), "also": [], "link": link, "url": url, "published_utc": published}
+
+    def loaded(self, items):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = os.path.join(tmp, "h.json")
+            json.dump({"items": items}, open(path, "w", encoding="utf-8"))
+            return news.load_previous(path, CFG["tiers"])
+
+    def test_is_google_news(self):
+        gn = news.is_google_news
+        self.assertTrue(gn({"link": GN_BASE + "CBMiabc", "url": None}))
+        self.assertTrue(gn({"link": GN_BASE + "CBMiabc", "url": "https://x.example/a"}))
+        self.assertTrue(gn({"link": None, "url": "https://x.example/a"}))  # 已解出 url、link 寫成 null
+        self.assertFalse(gn({"link": "https://www.cna.com.tw/news/a.aspx", "url": "https://www.cna.com.tw/news/a.aspx"}))
+        self.assertFalse(gn({"link": "https://www.federalreserve.gov/x", "url": "https://www.federalreserve.gov/x"}))
+        self.assertFalse(gn({"link": None, "url": None}))  # 沒有任何線索就不當 Google News
+
+    def test_null_link_previous_keeps_id_and_url_without_decoding(self):
+        # 同標題的新抓到那則（link 是 Google News、發布時間較晚）與上一份的 null link 項目合併，留較早的上一份
+        prev = {"items": [self.prev_item("Nvidia shares rise on new AI deal", 1),
+                          self.prev_item("Nvidia supply chain update", 2, published="2026-10-21T20:00:00Z")]}
+        doc, *_ = self.run_main(previous=prev)
+        deal = self.item(doc, "Nvidia shares rise")
+        self.assertEqual((deal["id"], deal["url"]), (f"{1:016x}", "https://publisher.example/old1"))  # id 不是 sha1(標題)
+        other = self.item(doc, "Nvidia supply chain")
+        self.assertEqual((other["id"], other["url"]), (f"{2:016x}", "https://publisher.example/old2"))
+        self.assertIsNone(other["link"])  # 上一份是 null 的，不會被補回 link
+        self.assertNotIn(gid("Nvidia shares rise on new AI deal"), PAGES)  # 有 url 的不重新解碼
+        self.assertGreaterEqual(doc["stats"]["url"]["cached"], 2)
+
+    def test_old_format_with_link_still_readable(self):
+        old = {"title": "Nvidia old format", "source": "Reuters", "source_url": "https://www.reuters.com", "tier": 2,
+               "lang": "en", "queries": ["NVDA"], "also": [], "link": GN_BASE + "OldFormat",
+               "published_utc": "2026-10-21T20:00:00Z"}  # 沒有 id 欄位（更早的格式）
+        got = self.loaded([old, dict(old, title="Nvidia with id", id="abcdef0123456789", link=GN_BASE + "WithId")])
+        self.assertEqual([news.item_id(it) for it in got],
+                         [news.hashlib.sha1((GN_BASE + "OldFormat").encode()).hexdigest()[:16], "abcdef0123456789"])
+        self.assertTrue(all(news.is_google_news(it) for it in got))
+
+    def test_cap_still_limits_old_items_without_link(self):
+        titles = ["Quarterly recap alpha", "Beta forecast revised", "Gamma outlook mixed", "Delta shipments slip",
+                  "Epsilon margins widen", "Zeta backlog grows", "Eta pricing firm", "Theta demand cools",
+                  "Iota inventory builds", "Kappa guidance trimmed", "Lambda orders recover", "Mu costs ease"]
+        mk = lambda link: self.loaded([self.prev_item(t, i, link=link(i), source="MarketBeat",  # noqa: E731
+                                                      source_url="https://www.marketbeat.com")
+                                       for i, t in enumerate(titles, 1)])
+        for label, prev in (("link 是 null", mk(lambda i: None)), ("link 還在", mk(lambda i: GN_BASE + f"Recap{i}"))):
+            items = news.build(CFG, [], prev, [], NOW, names={})
+            self.assertEqual(len(items), 1, label)  # 標題無關：每個查詢只留 off_title_per_topic=1 則
+        # 對照：link 等於 url 的原文連結（中央社這類）不受上限
+        direct = self.loaded([self.prev_item(t, i, link=f"https://www.cna.com.tw/n/{i}", url=f"https://www.cna.com.tw/n/{i}",
+                                             source="中央社", source_url="https://www.cna.com.tw")
+                              for i, t in enumerate(titles, 1)])
+        self.assertEqual(len(news.build(CFG, [], direct, [], NOW, names={})), 12)
+
+    def test_merge_keeps_official_rss_over_google_news(self):
+        def mk(source, link, url, published):
+            return {"title": "台積電法說會釋出樂觀展望", "link": link, "url": url, "source": source, "tier": 2, "rank": "A",
+                    "published": published, "queries": ["2330"], "also": []}
+        cna = mk("中央社", "https://www.cna.com.tw/n/1", "https://www.cna.com.tw/n/1", NOW)  # 較晚
+        for gn_link in (GN_BASE + "abc", None):  # Google News 那則（較早）：link 還在、或已寫成 null
+            gn = mk("經濟日報", gn_link, "https://publisher.example/a", NOW - dt.timedelta(hours=1))
+            for order in ([gn, cna], [cna, gn]):
+                kept = news.merge(order)
+                self.assertEqual([k["source"] for k in kept], ["中央社"])
+                self.assertEqual(kept[0]["also"], ["經濟日報"])
+
+    def test_time_check_cache_hit_by_carried_id(self):
+        cfg = dict(CFG, time_suspect_min=5)
+        when = NOW - dt.timedelta(hours=5)
+        items = [{"id": f"{n:016x}", "title": f"經濟日報舊文 {n}", "link": None, "url": f"https://publisher.example/c{n}",
+                  "source": "經濟日報", "tier": 2, "lang": "zh", "published": when, "queries": ["2330"], "also": []}
+                 for n in range(1, 6)]
+        fixed = (NOW - dt.timedelta(hours=30)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        cache = {f"{n:016x}": {"published_utc": fixed, "by": "datePublished", "checked_at": "2026-10-21T00:00:00Z"}
+                 for n in range(1, 6)}
+
+        def no_network(*a, **kw):
+            raise AssertionError("id 沒有沿用，快取沒命中，跑去連網了")
+        with mock.patch.object(news, "fetch_page", no_network), mock.patch.object(news, "http", no_network):
+            kept, moved, stats = news.check_times(items, items, cfg, NOW, cache, [])
+        self.assertEqual((stats["detected"], stats["cached"], stats["fixed"], len(kept), moved), (5, 5, 5, 5, []))
+        self.assertTrue(all(it["published"].strftime("%Y-%m-%dT%H:%M:%SZ") == fixed for it in kept))
+
+
 if __name__ == "__main__":
     unittest.main()
