@@ -1,5 +1,5 @@
 {
- "generated_at_taipei": "2026-11-24 06:15",
+ "generated_at_taipei": "2026-11-25 06:15",
  "tw_market": {
   "source": "https://openapi.twse.com.tw/v1/holidaySchedule/holidaySchedule",
   "entries": [
@@ -287,11 +287,11 @@
  ],
  "earnings": {
   "source": "Yahoo quoteSummary（經 data/valuation/us.json）",
-  "fetched_at_taipei": "2026-11-24 06:15",
+  "fetched_at_taipei": "2026-11-25 06:15",
   "symbols": {
    "GOOGL": {
     "dates": [
-     "2026-10-28"
+     "2027-02-03"
     ],
     "is_estimate": false,
     "stale": false
@@ -312,16 +312,16 @@
    },
    "SPCX": {
     "dates": [
-     "2026-10-20"
+     "2027-02-09"
     ],
-    "is_estimate": false,
+    "is_estimate": true,
     "stale": false
    },
    "AAPL": {
     "dates": [
      "2027-01-28"
     ],
-    "is_estimate": true,
+    "is_estimate": false,
     "stale": false
    }
   }

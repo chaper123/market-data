@@ -1,54 +1,54 @@
 {
- "fetched_at_taipei": "2026-11-24 06:15",
- "time_utc": "2026-11-23T21:49:52+00:00",
- "score": 16.97,
+ "fetched_at_taipei": "2026-11-25 06:15",
+ "time_utc": "2026-11-24T21:58:30+00:00",
+ "score": 17.42,
  "rating": "extreme fear",
- "previous_close": 9.67,
- "previous_1_week": 31.07,
+ "previous_close": 16.97,
+ "previous_1_week": 25.95,
  "previous_1_month": 16.69,
- "previous_1_year": 5.66,
+ "previous_1_year": 13.69,
  "components": {
   "market_momentum_sp500": {
-   "score": 3.2,
+   "score": 3,
    "rating": "extreme fear",
-   "time_utc": "2026-11-23T21:42:33Z",
-   "value": 7237.17
+   "time_utc": "2026-11-24T21:54:10Z",
+   "value": 7201.09
   },
   "stock_price_strength": {
    "score": 28.4,
    "rating": "fear",
-   "time_utc": "2026-11-23T21:49:52Z",
-   "value": -6.330666185017921
+   "time_utc": "2026-11-24T21:58:30Z",
+   "value": -6.41342407957348
   },
   "stock_price_breadth": {
-   "score": 17,
+   "score": 16.6,
    "rating": "extreme fear",
-   "time_utc": "2026-11-23T21:49:52Z",
-   "value": 288.021799731804
+   "time_utc": "2026-11-24T21:58:30Z",
+   "value": 261.208576415407
   },
   "put_call_options": {
-   "score": 6.6,
+   "score": 8.8,
    "rating": "extreme fear",
-   "time_utc": "2026-11-23T21:48:40Z",
-   "value": 0.914900970818755
+   "time_utc": "2026-11-24T21:50:32Z",
+   "value": 0.902847349753949
   },
   "market_volatility_vix": {
-   "score": 38.961038961039,
+   "score": 42.9487179487179,
    "rating": "fear",
-   "time_utc": "2026-11-23T21:15:01Z",
-   "value": 26.62
+   "time_utc": "2026-11-24T21:15:01Z",
+   "value": 26.36
   },
   "junk_bond_demand": {
-   "score": 18.2,
+   "score": 17.8,
    "rating": "extreme fear",
-   "time_utc": "2026-11-23T21:10:00Z",
-   "value": 1.27412828153615
+   "time_utc": "2026-11-24T21:10:00Z",
+   "value": 1.2747967452873998
   },
   "safe_haven_demand": {
-   "score": 6.4,
+   "score": 4.4,
    "rating": "extreme fear",
-   "time_utc": "2026-11-23T20:59:59Z",
-   "value": -6.74985042603144
+   "time_utc": "2026-11-24T20:59:59Z",
+   "value": -7.7869139522523305
   }
  },
  "source": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
