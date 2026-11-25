@@ -779,36 +779,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-24 21:00",
-   "items": 2351,
+   "last": "2026-11-25 08:20",
+   "items": 2570,
    "by_tier": {
-    "4": 404,
-    "2": 1922,
-    "3": 9,
-    "1": 16
+    "2": 2151,
+    "4": 394,
+    "1": 16,
+    "3": 9
    },
    "feeds_ok": "50/50",
    "errors": 0,
-   "url_ok": 1525,
-   "url_total": 1525,
-   "time_suspect_detected": 10,
-   "time_fixed": 10,
-   "time_removed": 0
+   "url_ok": 1294,
+   "url_total": 1310,
+   "time_suspect_detected": 42,
+   "time_fixed": 39,
+   "time_removed": 3
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
-   "last": "2026-11-21",
-   "checked_at_taipei": "2026-11-24 21:00",
+   "last": "2026-11-25",
+   "checked_at_taipei": "2026-11-25 08:20",
    "items": 9
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-24 19:57",
-   "items": 274,
+   "last": "2026-11-25 07:55",
+   "items": 308,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-24 21:00"
+   "checked_at_taipei": "2026-11-25 08:20"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -862,22 +862,22 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-24 21:00",
-   "days_available": 24,
+   "last": "2026-11-25 08:20",
+   "days_available": 25,
    "rising_topic": "export_controls",
    "rising_terms": [
     "仁勳回",
     "勳回歸",
-    "勳回鍋",
-    "仁勳重",
-    "return"
+    "破發",
+    "回鍋",
+    "仁勳重"
    ]
   },
   "news/nsf": {
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-23",
-   "checked_at_taipei": "2026-11-24 21:00",
+   "checked_at_taipei": "2026-11-25 08:20",
    "items": 10
   }
  },

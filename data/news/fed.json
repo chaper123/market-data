@@ -1,19 +1,27 @@
 {
- "generated_at_taipei": "2026-11-24 21:00",
+ "generated_at_taipei": "2026-11-25 08:20",
  "days": 7,
  "feeds": [
   {
    "name": "Fed 新聞稿",
    "ok": true,
-   "count": 4
+   "count": 5
   },
   {
    "name": "Fed 演講",
    "ok": true,
-   "count": 5
+   "count": 4
   }
  ],
  "items": [
+  {
+   "date": "2026-11-25",
+   "title": "Minutes of the Board's discount rate meetings on October 19 and October 28, 2026",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261124a.htm",
+   "type": "press",
+   "published_taipei": "2026-11-25 03:00",
+   "published_utc": "2026-11-24T19:00:00Z"
+  },
   {
    "date": "2026-11-21",
    "title": "Federal Reserve announces College Fed Challenge winners",
@@ -77,14 +85,6 @@
    "type": "speech",
    "published_taipei": "2026-11-19 02:35",
    "published_utc": "2026-11-18T18:35:00Z"
-  },
-  {
-   "date": "2026-11-17",
-   "title": "Waller, Considerations at the Intersection of Payments and Tokenized Markets",
-   "link": "https://www.federalreserve.gov/newsevents/speech/waller20261117a.htm",
-   "type": "speech",
-   "published_taipei": "2026-11-17 22:10",
-   "published_utc": "2026-11-17T14:10:00Z"
   }
  ]
 }
