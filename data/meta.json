@@ -779,36 +779,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-25 11:10",
-   "items": 2668,
+   "last": "2026-11-25 13:40",
+   "items": 2749,
    "by_tier": {
-    "4": 399,
-    "2": 2244,
+    "4": 397,
+    "2": 2327,
     "1": 16,
     "3": 9
    },
    "feeds_ok": "50/50",
    "errors": 0,
-   "url_ok": 1328,
-   "url_total": 1343,
-   "time_suspect_detected": 37,
-   "time_fixed": 36,
-   "time_removed": 1
+   "url_ok": 1360,
+   "url_total": 1365,
+   "time_suspect_detected": 32,
+   "time_fixed": 32,
+   "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-25",
-   "checked_at_taipei": "2026-11-25 11:10",
+   "checked_at_taipei": "2026-11-25 13:40",
    "items": 9
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-25 09:53",
-   "items": 313,
+   "last": "2026-11-25 12:10",
+   "items": 336,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-25 11:10"
+   "checked_at_taipei": "2026-11-25 13:40"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -862,22 +862,22 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-25 11:10",
+   "last": "2026-11-25 13:40",
    "days_available": 25,
    "rising_topic": "export_controls",
    "rising_terms": [
     "破發",
-    "仁勳回",
-    "勳回歸",
     "關稅",
-    "德州"
+    "德州",
+    "below",
+    "發行價"
    ]
   },
   "news/nsf": {
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-23",
-   "checked_at_taipei": "2026-11-25 11:10",
+   "checked_at_taipei": "2026-11-25 13:40",
    "items": 10
   }
  },
