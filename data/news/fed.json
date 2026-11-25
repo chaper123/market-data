@@ -1,5 +1,5 @@
 {
- "generated_at_taipei": "2026-11-25 16:30",
+ "generated_at_taipei": "2026-11-25 21:00",
  "days": 7,
  "feeds": [
   {
@@ -10,10 +10,18 @@
   {
    "name": "Fed 演講",
    "ok": true,
-   "count": 4
+   "count": 5
   }
  ],
  "items": [
+  {
+   "date": "2026-11-25",
+   "title": "Bowman, Modernizing Banking Supervision: A Shared Agenda for the Americas",
+   "link": "https://www.federalreserve.gov/newsevents/speech/bowman20261125a.htm",
+   "type": "speech",
+   "published_taipei": "2026-11-25 20:25",
+   "published_utc": "2026-11-25T12:25:00Z"
+  },
   {
    "date": "2026-11-25",
    "title": "Minutes of the Board's discount rate meetings on October 19 and October 28, 2026",
