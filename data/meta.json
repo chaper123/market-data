@@ -778,36 +778,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-26 11:10",
-   "items": 3075,
+   "last": "2026-11-26 13:40",
+   "items": 3097,
    "by_tier": {
-    "4": 404,
-    "2": 2643,
-    "1": 18,
-    "3": 10
+    "4": 411,
+    "2": 2658,
+    "3": 10,
+    "1": 18
    },
    "feeds_ok": "50/50",
    "errors": 0,
-   "url_ok": 1238,
-   "url_total": 1238,
-   "time_suspect_detected": 32,
-   "time_fixed": 32,
+   "url_ok": 1291,
+   "url_total": 1297,
+   "time_suspect_detected": 35,
+   "time_fixed": 35,
    "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-26",
-   "checked_at_taipei": "2026-11-26 11:10",
+   "checked_at_taipei": "2026-11-26 13:40",
    "items": 10
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-26 10:53",
-   "items": 408,
+   "last": "2026-11-26 13:05",
+   "items": 419,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-26 11:10"
+   "checked_at_taipei": "2026-11-26 13:40"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -861,22 +861,22 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-26 11:10",
+   "last": "2026-11-26 13:40",
    "days_available": 26,
    "rising_topic": "tariff",
    "rising_terms": [
     "關稅",
-    "satellites",
+    "fcc",
     "典禮",
-    "擴建",
-    "亞利"
+    "亞利",
+    "利桑"
    ]
   },
   "news/nsf": {
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-23",
-   "checked_at_taipei": "2026-11-26 11:10",
+   "checked_at_taipei": "2026-11-26 13:40",
    "items": 10
   }
  },
