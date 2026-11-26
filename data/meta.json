@@ -778,36 +778,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-26 13:40",
-   "items": 3097,
+   "last": "2026-11-26 16:30",
+   "items": 3069,
    "by_tier": {
-    "4": 411,
-    "2": 2658,
+    "2": 2634,
+    "4": 408,
     "3": 10,
-    "1": 18
+    "1": 17
    },
    "feeds_ok": "50/50",
    "errors": 0,
-   "url_ok": 1291,
-   "url_total": 1297,
-   "time_suspect_detected": 35,
-   "time_fixed": 35,
+   "url_ok": 1342,
+   "url_total": 1342,
+   "time_suspect_detected": 23,
+   "time_fixed": 23,
    "time_removed": 0
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-26",
-   "checked_at_taipei": "2026-11-26 13:40",
+   "checked_at_taipei": "2026-11-26 16:30",
    "items": 10
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-26 13:05",
-   "items": 419,
+   "last": "2026-11-26 16:08",
+   "items": 416,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-26 13:40"
+   "checked_at_taipei": "2026-11-26 16:30"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -861,22 +861,22 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-26 13:40",
+   "last": "2026-11-26 16:30",
    "days_available": 26,
    "rising_topic": "tariff",
    "rising_terms": [
     "關稅",
-    "fcc",
-    "典禮",
-    "亞利",
-    "利桑"
+    "child",
+    "satellites",
+    "every",
+    "fcc"
    ]
   },
   "news/nsf": {
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-23",
-   "checked_at_taipei": "2026-11-26 13:40",
+   "checked_at_taipei": "2026-11-26 16:30",
    "items": 10
   }
  },
