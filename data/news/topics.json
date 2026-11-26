@@ -1,5 +1,5 @@
 {
- "generated_at_taipei": "2026-11-26 16:30",
+ "generated_at_taipei": "2026-11-26 21:00",
  "rule": "count_1d＝最近 24 小時；count_7d／count_30d＝最近 7／30 個台北日曆日（含今天）；rise＝(count_7d/7)÷(count_30d/30)，歷史不足時分母用已有天數；rising_terms 的 score＝近 24 小時則數÷(今天以外的日平均＋1)。固定規則計數，不做預測",
  "days_available": 26,
  "history_since": "2026-11-01",
@@ -7,10 +7,10 @@
   {
    "topic": "fed",
    "label": "Fed／利率",
-   "count_1d": 50,
-   "count_7d": 160,
-   "count_30d": 521,
-   "rise": 1.14,
+   "count_1d": 51,
+   "count_7d": 163,
+   "count_30d": 524,
+   "rise": 1.16,
    "sample_ids": [
     "137217fbade893d4",
     "62496b2db1339ced",
@@ -22,73 +22,73 @@
   {
    "topic": "tariff",
    "label": "關稅",
-   "count_1d": 126,
-   "count_7d": 229,
-   "count_30d": 396,
-   "rise": 2.15,
+   "count_1d": 130,
+   "count_7d": 244,
+   "count_30d": 411,
+   "rise": 2.21,
    "sample_ids": [
-    "8bb137a6ee84e4d4",
-    "86ffc65dc6ef5133",
-    "9ee630073cca8118",
-    "9b6a895c0863eea3",
-    "08acd29ea771f941"
+    "93703577b25e37dd",
+    "d652f1ee05a1b075",
+    "e9da2d64946267f2",
+    "0dbb46a50e793e39",
+    "5c7f42202e212c9f"
    ]
   },
   {
    "topic": "export_controls",
    "label": "出口管制",
-   "count_1d": 11,
-   "count_7d": 39,
-   "count_30d": 93,
-   "rise": 1.56,
+   "count_1d": 13,
+   "count_7d": 41,
+   "count_30d": 95,
+   "rise": 1.6,
    "sample_ids": [
+    "1e06ae43870e8969",
     "75529b48bd64e84b",
     "959d3d4c0ba041d9",
     "179ed43c7bcb4377",
-    "95ea0c5db8c86cb6",
-    "d9666061c2da222f"
+    "95ea0c5db8c86cb6"
    ]
   },
   {
    "topic": "china",
    "label": "中國",
    "count_1d": 75,
-   "count_7d": 278,
-   "count_30d": 889,
-   "rise": 1.16,
+   "count_7d": 282,
+   "count_30d": 893,
+   "rise": 1.17,
    "sample_ids": [
-    "e2757afb902e922f",
-    "86ffc65dc6ef5133",
-    "75529b48bd64e84b",
-    "590dc60b9e356688",
-    "ce4ed16efbc0235a"
+    "d652f1ee05a1b075",
+    "4592c62125ef55ab",
+    "0dbb46a50e793e39",
+    "5c7f42202e212c9f",
+    "8b29716ad217291c"
    ]
   },
   {
    "topic": "taiwan",
    "label": "台灣",
-   "count_1d": 57,
-   "count_7d": 225,
-   "count_30d": 714,
-   "rise": 1.17,
+   "count_1d": 66,
+   "count_7d": 240,
+   "count_30d": 729,
+   "rise": 1.22,
    "sample_ids": [
     "6cae25ddfff8f4fe",
-    "7012fdf3b52960fe",
-    "367584bbc1329247",
-    "08acd29ea771f941",
-    "cf9aeca7b26a4461"
+    "4592c62125ef55ab",
+    "efb7ca8e3b8d9033",
+    "305ffa042da1aa39",
+    "5b8e115c8df23978"
    ]
   },
   {
    "topic": "oil",
    "label": "油價",
-   "count_1d": 5,
-   "count_7d": 15,
-   "count_30d": 87,
-   "rise": 0.64,
+   "count_1d": 3,
+   "count_7d": 14,
+   "count_30d": 86,
+   "rise": 0.6,
    "sample_ids": [
-    "ba80ab454e68591c",
-    "08bead9279f87115",
+    "bf0c9f1f354c680a",
+    "137d2836a6a39fe1",
     "e26208c564999c9c",
     "70a754bf50e3a9d7",
     "62ccc67a9d776c0a"
@@ -98,9 +98,9 @@
    "topic": "war",
    "label": "戰爭與地緣",
    "count_1d": 3,
-   "count_7d": 24,
-   "count_30d": 103,
-   "rise": 0.87,
+   "count_7d": 25,
+   "count_30d": 104,
+   "rise": 0.89,
    "sample_ids": [
     "e5e19ffc5db559bc",
     "ff46fc5cef39fccd",
@@ -112,10 +112,10 @@
   {
    "topic": "cpi",
    "label": "通膨",
-   "count_1d": 20,
-   "count_7d": 44,
-   "count_30d": 163,
-   "rise": 1.0,
+   "count_1d": 15,
+   "count_7d": 43,
+   "count_30d": 162,
+   "rise": 0.99,
    "sample_ids": [
     "46e0aaf8ca79b160",
     "b052b7f8940bbe0a",
@@ -136,105 +136,52 @@
   {
    "topic": "earnings",
    "label": "財報",
-   "count_1d": 12,
-   "count_7d": 58,
-   "count_30d": 708,
-   "rise": 0.3,
+   "count_1d": 18,
+   "count_7d": 65,
+   "count_30d": 715,
+   "rise": 0.34,
    "sample_ids": [
+    "bdd4848bff070c04",
+    "7a5c6b35d859b0ea",
     "34527c79115f4c6e",
-    "49d09879dba53169",
-    "6093ccfb1d061e93",
-    "0add3a12e968fc84",
-    "c05db79bec55d0eb"
+    "335d2bb5821cea6b",
+    "49d09879dba53169"
    ]
   },
   {
    "topic": "antitrust",
    "label": "反壟斷",
-   "count_1d": 2,
-   "count_7d": 2,
-   "count_30d": 5,
-   "rise": 1.49,
+   "count_1d": 1,
+   "count_7d": 1,
+   "count_30d": 4,
+   "rise": 0.93,
    "sample_ids": [
-    "983c688001c21b91",
-    "5336d368cb710f2e"
+    "983c688001c21b91"
    ]
   },
   {
    "topic": "merger",
    "label": "併購",
-   "count_1d": 13,
-   "count_7d": 44,
-   "count_30d": 137,
-   "rise": 1.19,
+   "count_1d": 8,
+   "count_7d": 41,
+   "count_30d": 134,
+   "rise": 1.14,
    "sample_ids": [
     "f5c7d63425f4e4ff",
-    "08bead9279f87115",
     "a7b442acdf49d756",
     "626d363c53dbd016",
-    "6fdc4e2fa62f79cc"
+    "6fdc4e2fa62f79cc",
+    "fbf80e77b6e65741"
    ]
   }
  ],
  "rising_topic": "tariff",
  "rising_terms": [
   {
-   "term": "關稅",
-   "count_1d": 37,
-   "count_30d": 67,
-   "score": 16.82,
-   "sample_ids": [
-    "08acd29ea771f941",
-    "4d79df4074fbcd83",
-    "8aee870c6dad5645",
-    "fd74d4f1f86390ac",
-    "b22acd6ffeeaf6f1"
-   ]
-  },
-  {
-   "term": "child",
-   "count_1d": 13,
-   "count_30d": 13,
-   "score": 13.0,
-   "sample_ids": [
-    "543cf37bbb82c890",
-    "b6a76496982bdebf",
-    "543cf37bbb82c890",
-    "19057716fef5ad5f",
-    "80f115626aaa1f9e"
-   ]
-  },
-  {
-   "term": "satellites",
-   "count_1d": 13,
-   "count_30d": 13,
-   "score": 13.0,
-   "sample_ids": [
-    "6299f820f02369cf",
-    "e105f7ccfb6c2232",
-    "5a39a00334bcc6c1",
-    "6e2d0fdb8d812c49",
-    "7030797238b7eaa7"
-   ]
-  },
-  {
-   "term": "every",
-   "count_1d": 12,
-   "count_30d": 12,
-   "score": 12.0,
-   "sample_ids": [
-    "543cf37bbb82c890",
-    "9dc7fee1d0013ec5",
-    "fcaa717da607e73b",
-    "543cf37bbb82c890",
-    "19057716fef5ad5f"
-   ]
-  },
-  {
    "term": "fcc",
-   "count_1d": 12,
-   "count_30d": 12,
-   "score": 12.0,
+   "count_1d": 18,
+   "count_30d": 18,
+   "score": 18.0,
    "sample_ids": [
     "42bfdcccb513ad31",
     "0615bea8bd11e4ff",
@@ -244,23 +191,140 @@
    ]
   },
   {
-   "term": "approval",
-   "count_1d": 14,
-   "count_30d": 20,
-   "score": 11.29,
+   "term": "關稅",
+   "count_1d": 38,
+   "count_30d": 69,
+   "score": 16.96,
+   "sample_ids": [
+    "9f1b4833374a90e9",
+    "1641dbd87ae375be",
+    "1c28e78d851e28fb",
+    "acac1182f6c47fd1",
+    "d236c2241d252dfd"
+   ]
+  },
+  {
+   "term": "satellites",
+   "count_1d": 16,
+   "count_30d": 16,
+   "score": 16.0,
    "sample_ids": [
     "6299f820f02369cf",
     "e105f7ccfb6c2232",
+    "5a39a00334bcc6c1",
+    "6e2d0fdb8d812c49",
+    "7030797238b7eaa7"
+   ]
+  },
+  {
+   "term": "approval",
+   "count_1d": 15,
+   "count_30d": 22,
+   "score": 11.72,
+   "sample_ids": [
+    "2ba8288e8f93700e",
+    "6299f820f02369cf",
+    "e105f7ccfb6c2232",
     "dbd0d9ee50c7ac61",
-    "c1c5cbb3af111619",
     "c1c5cbb3af111619"
    ]
   },
   {
-   "term": "proposes",
+   "term": "every",
    "count_1d": 11,
    "count_30d": 11,
    "score": 11.0,
+   "sample_ids": [
+    "543cf37bbb82c890",
+    "9dc7fee1d0013ec5",
+    "fcaa717da607e73b",
+    "543cf37bbb82c890",
+    "543cf37bbb82c890"
+   ]
+  },
+  {
+   "term": "twa00",
+   "count_1d": 13,
+   "count_30d": 20,
+   "score": 10.16,
+   "sample_ids": [
+    "3be10f0394d13b3d",
+    "0c676599ca423e54",
+    "e4967e7b6f2cbf60",
+    "cd4fb4f6e60bcb29",
+    "2f437d8dc9d58ef5"
+   ]
+  },
+  {
+   "term": "southeast",
+   "count_1d": 10,
+   "count_30d": 10,
+   "score": 10.0,
+   "sample_ids": [
+    "a9f1e2bf8104d191",
+    "1e06ae43870e8969",
+    "99fcadc0503f5c34",
+    "7f12e100140dc765",
+    "eff4a142c2709e90"
+   ]
+  },
+  {
+   "term": "partners",
+   "count_1d": 13,
+   "count_30d": 22,
+   "score": 9.56,
+   "sample_ids": [
+    "5c7f42202e212c9f",
+    "86ffc65dc6ef5133",
+    "9ee630073cca8118",
+    "9b6a895c0863eea3",
+    "ab42135aaa5b8693"
+   ]
+  },
+  {
+   "term": "衛星",
+   "count_1d": 13,
+   "count_30d": 22,
+   "score": 9.56,
+   "sample_ids": [
+    "8893db5ea8f895a4",
+    "45a6ad53902e7df2",
+    "51102ec1785834d9",
+    "b05733720312f487",
+    "8040e94fca6cef20"
+   ]
+  },
+  {
+   "term": "tariffs",
+   "count_1d": 73,
+   "count_30d": 239,
+   "score": 9.55,
+   "sample_ids": [
+    "93703577b25e37dd",
+    "d652f1ee05a1b075",
+    "0dbb46a50e793e39",
+    "c234880b61f37eac",
+    "1329ce7e9ea052a0"
+   ]
+  },
+  {
+   "term": "black",
+   "count_1d": 10,
+   "count_30d": 12,
+   "score": 9.26,
+   "sample_ids": [
+    "abc14d75ad7bb4ad",
+    "b468e8a5c9ac2bcc",
+    "205aa3a8054a6d9c",
+    "2557a58e6bbd0055",
+    "beb3f36fa22da90c"
+   ]
+  },
+  {
+   "term": "proposes",
+   "count_1d": 10,
+   "count_30d": 12,
+   "score": 9.26,
    "sample_ids": [
     "983bd579c0d0ad0d",
     "1cc41d1fc9d23cc0",
@@ -270,107 +334,42 @@
    ]
   },
   {
-   "term": "tariffs",
-   "count_1d": 75,
-   "count_30d": 231,
-   "score": 10.36,
-   "sample_ids": [
-    "8bb137a6ee84e4d4",
-    "86ffc65dc6ef5133",
-    "9b6a895c0863eea3",
-    "161165e578cbd4ba",
-    "590dc60b9e356688"
-   ]
-  },
-  {
-   "term": "典禮",
-   "count_1d": 12,
-   "count_30d": 16,
-   "score": 10.34,
-   "sample_ids": [
-    "981c6ece9f44b84a",
-    "0786c4d16aa17769",
-    "f803779593ecbf84",
-    "4c5e17234f1ffbd5",
-    "a8646767a25cffe5"
-   ]
-  },
-  {
-   "term": "衛星",
-   "count_1d": 13,
-   "count_30d": 20,
-   "score": 10.16,
-   "sample_ids": [
-    "45a6ad53902e7df2",
-    "51102ec1785834d9",
-    "b05733720312f487",
-    "8040e94fca6cef20",
-    "8b26fe3fefbe551b"
-   ]
-  },
-  {
-   "term": "中信投",
+   "term": "deploy",
    "count_1d": 9,
    "count_30d": 9,
    "score": 9.0,
    "sample_ids": [
-    "80935456fc035af5",
-    "e3556f95dcb35d52",
-    "cc0843393f539516",
-    "a67dec9a7a052826",
-    "be683ff6a6804686"
-   ]
-  },
-  {
-   "term": "centers",
-   "count_1d": 14,
-   "count_30d": 29,
-   "score": 8.75,
-   "sample_ids": [
     "5a39a00334bcc6c1",
-    "6e2d0fdb8d812c49",
-    "b69c8546fa755b0f",
-    "c1c5cbb3af111619",
-    "c1c5cbb3af111619"
+    "d76243a87cf3cb9a",
+    "43035829ff5b13f5",
+    "f77f169253f6dbf7",
+    "f6b7ec3d9d25f23d"
    ]
   },
   {
-   "term": "space",
-   "count_1d": 12,
-   "count_30d": 24,
-   "score": 8.11,
+   "term": "thanksgiving",
+   "count_1d": 9,
+   "count_30d": 9,
+   "score": 9.0,
    "sample_ids": [
-    "5a39a00334bcc6c1",
-    "7030797238b7eaa7",
-    "c1c5cbb3af111619",
-    "c1c5cbb3af111619",
-    "d76243a87cf3cb9a"
+    "72ff7758c4888eb5",
+    "c234880b61f37eac",
+    "26b95ed589988b91",
+    "ed9f188858b6d1a4",
+    "2f09f77481181fd8"
    ]
   },
   {
-   "term": "partners",
-   "count_1d": 10,
-   "count_30d": 16,
-   "score": 8.06,
+   "term": "wins",
+   "count_1d": 9,
+   "count_30d": 9,
+   "score": 9.0,
    "sample_ids": [
-    "86ffc65dc6ef5133",
-    "9ee630073cca8118",
-    "9b6a895c0863eea3",
-    "ab42135aaa5b8693",
-    "891c27f009e975ea"
-   ]
-  },
-  {
-   "term": "cowos",
-   "count_1d": 8,
-   "count_30d": 8,
-   "score": 8.0,
-   "sample_ids": [
-    "b65186396a45cc9c",
-    "32d7d0e42d237eb8",
-    "4cf1f5d5e6279388",
-    "02d7d8983cdd21df",
-    "0838517e0ad97c23"
+    "82b4bc31511f119c",
+    "e105f7ccfb6c2232",
+    "a6c80db5b08ac33a",
+    "c1c5cbb3af111619",
+    "43035829ff5b13f5"
    ]
   }
  ]
