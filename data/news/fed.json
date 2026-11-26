@@ -1,19 +1,35 @@
 {
- "generated_at_taipei": "2026-11-25 21:00",
+ "generated_at_taipei": "2026-11-26 08:20",
  "days": 7,
  "feeds": [
   {
    "name": "Fed 新聞稿",
    "ok": true,
-   "count": 5
+   "count": 6
   },
   {
    "name": "Fed 演講",
    "ok": true,
-   "count": 5
+   "count": 4
   }
  ],
  "items": [
+  {
+   "date": "2026-11-26",
+   "title": "Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261125b.htm",
+   "type": "press",
+   "published_taipei": "2026-11-26 04:00",
+   "published_utc": "2026-11-25T20:00:00Z"
+  },
+  {
+   "date": "2026-11-26",
+   "title": "Agencies announce dollar thresholds for smaller loan exemption from appraisal requirements for higher-priced mortgage loans",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261125a.htm",
+   "type": "press",
+   "published_taipei": "2026-11-26 04:00",
+   "published_utc": "2026-11-25T20:00:00Z"
+  },
   {
    "date": "2026-11-25",
    "title": "Bowman, Modernizing Banking Supervision: A Shared Agenda for the Americas",
@@ -77,22 +93,6 @@
    "type": "speech",
    "published_taipei": "2026-11-19 22:25",
    "published_utc": "2026-11-19T14:25:00Z"
-  },
-  {
-   "date": "2026-11-19",
-   "title": "Minutes of the Federal Open Market Committee, October 27-28, 2026",
-   "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm",
-   "type": "press",
-   "published_taipei": "2026-11-19 03:00",
-   "published_utc": "2026-11-18T19:00:00Z"
-  },
-  {
-   "date": "2026-11-19",
-   "title": "Barr, Investing in America’s Underserved Communities",
-   "link": "https://www.federalreserve.gov/newsevents/speech/barr20261118a.htm",
-   "type": "speech",
-   "published_taipei": "2026-11-19 02:35",
-   "published_utc": "2026-11-18T18:35:00Z"
   }
  ]
 }
