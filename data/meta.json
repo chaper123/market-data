@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-11-26T22:15:15Z",
- "generated_at_taipei": "2026-11-27 06:15",
+ "generated_at_utc": "2026-11-27T03:36:53Z",
+ "generated_at_taipei": "2026-11-27 11:36",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -240,16 +240,16 @@
   "tv/snapshot": {
    "status": "ok",
    "symbols": 15,
-   "tw_bar_is_intraday": false,
+   "tw_bar_is_intraday": true,
    "us_bar_is_intraday": false
   },
   "fx/usdtwd_mid": {
    "status": "ok",
    "source": "Yahoo TWD=X 收盤（市場中間價，不是台銀即期賣出）",
    "rows": 518,
-   "first": "2024-11-26",
-   "last": "2026-11-26",
-   "last_rate": 32.927
+   "first": "2024-11-27",
+   "last": "2026-11-27",
+   "last_rate": 32.934
   },
   "macro/SPX": {
    "status": "ok",
@@ -318,9 +318,10 @@
    "last_close": 103.78199768066406,
    "prev_close": 103.66999816894531,
    "name": "美元指數",
-   "cutoff": "2026-11-26",
+   "cutoff": "2026-11-25",
    "cutoff_rule": "24h-v1：美東 17:10～18:00 收當天，其餘只收到前一天；不收週末",
-   "cross_check": "2026-11-26 收盤 103.78199768066406 vs cnyes 103.78（差 +0.00%）",
+   "last_kept_from_previous": "2026-11-26",
+   "cross_check": "cnyes 無 2026-11-26 資料（cnyes 最後 2026-11-25）",
    "cross_check_ok": true
   },
   "macro/GOLD": {
@@ -332,8 +333,9 @@
    "last_close": 3593.39990234375,
    "prev_close": 3535.800048828125,
    "name": "COMEX 黃金期貨（近月）",
-   "cutoff": "2026-11-26",
+   "cutoff": "2026-11-25",
    "cutoff_rule": "24h-v1：美東 17:10～18:00 收當天，其餘只收到前一天；不收週末",
+   "last_kept_from_previous": "2026-11-26",
    "cross_check": "無第二來源，未核對"
   },
   "macro/WTI": {
@@ -345,8 +347,9 @@
    "last_close": 84.91000366210938,
    "prev_close": 83.68000030517578,
    "name": "WTI 原油期貨（近月）",
-   "cutoff": "2026-11-26",
+   "cutoff": "2026-11-25",
    "cutoff_rule": "24h-v1：美東 17:10～18:00 收當天，其餘只收到前一天；不收週末",
+   "last_kept_from_previous": "2026-11-26",
    "cross_check": "無第二來源，未核對"
   },
   "macro/TSM": {
@@ -370,10 +373,10 @@
    "status": "ok",
    "source": "yahoo ^KS11",
    "rows": 486,
-   "first": "2024-11-26",
-   "last": "2026-11-25",
-   "last_close": 4697.509765625,
-   "prev_close": 5006.02978515625,
+   "first": "2024-11-27",
+   "last": "2026-11-26",
+   "last_close": 4711.2099609375,
+   "prev_close": 4697.509765625,
    "name": "韓國綜合指數",
    "cross_check": "無第二來源，未核對"
   },
@@ -399,7 +402,7 @@
    "last_rate": 33.02,
    "last_spot_buy": 32.92,
    "last_cash_sell": 33.24,
-   "cross_check": "2026-11-26 即期賣出 33.02 vs Yahoo 中間價 32.927（差 +0.093 元，正常 -0.3～+0.4）",
+   "cross_check": "2026-11-26 即期賣出 33.02 vs Yahoo 中間價 33.189（差 -0.169 元，正常 -0.3～+0.4）",
    "cross_check_ok": true
   },
   "valuation/earnings": {
@@ -517,9 +520,7 @@
    "rows": 34,
    "first": "2026-10-07",
    "last": "2026-11-26",
-   "added": [
-    "2026-11-26"
-   ],
+   "added": [],
    "latest_foreign": -49181133625,
    "latest_total": -15102907225,
    "cross_check": "合計＝分項加總",
@@ -531,9 +532,7 @@
    "rows": 34,
    "first": "2026-10-07",
    "last": "2026-11-26",
-   "added": [
-    "2026-11-26"
-   ],
+   "added": [],
    "latest_margin_amount_k": 434484476,
    "cross_check": "單一來源，未核對"
   },
@@ -543,9 +542,7 @@
    "rows": 170,
    "first": "2026-10-07",
    "last": "2026-11-26",
-   "added": [
-    "2026-11-26"
-   ],
+   "added": [],
    "latest_total": {
     "00411A": 93653,
     "0050": 20335664,
@@ -661,7 +658,7 @@
    "codes": [
     "2330"
    ],
-   "changed": 1,
+   "changed": 0,
    "cross_check": "單一來源，未核對"
   },
   "chips/tw_holders": {
