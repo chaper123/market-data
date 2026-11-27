@@ -1,5 +1,5 @@
 {
- "fetched_at_taipei": "2026-11-27 17:03",
+ "fetched_at_taipei": "2026-11-27 18:08",
  "week_limit_pct": 20,
  "symbols": {
   "VOO": {
@@ -110,7 +110,7 @@
    "pe": 39.6,
    "price": 355.58,
    "price_date": "2026-11-25",
-   "price_time": "Nov 25, 2026, 4:00 PM EST",
+   "price_time": "Nov 25, 2026, 1:00 PM EST",
    "market_state": "closed",
    "source": "https://stockanalysis.com/stocks/aapl/statistics/",
    "implied_eps": 9.4193,

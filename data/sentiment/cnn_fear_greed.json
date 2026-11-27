@@ -1,6 +1,6 @@
 {
- "fetched_at_taipei": "2026-11-27 17:03",
- "time_utc": "2026-11-27T08:46:01+00:00",
+ "fetched_at_taipei": "2026-11-27 18:08",
+ "time_utc": "2026-11-27T09:56:01+00:00",
  "score": 17.86,
  "rating": "extreme fear",
  "previous_close": 15.6,
@@ -35,8 +35,8 @@
   "market_volatility_vix": {
    "score": 50,
    "rating": "neutral",
-   "time_utc": "2026-11-27T08:46:01Z",
-   "value": 24.74
+   "time_utc": "2026-11-27T09:56:01Z",
+   "value": 24.92
   },
   "junk_bond_demand": {
    "score": 13.2,
