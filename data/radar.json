@@ -1,6 +1,6 @@
 {
  "generated_from": "repo 日線（indicators.py）；綜合評分來自 TradingView",
- "tv_fetched_at_taipei": "2026-11-27 12:29",
+ "tv_fetched_at_taipei": "2026-11-27 13:41",
  "rules": {
   "trend_adx": 25,
   "range_adx": 20
@@ -562,10 +562,10 @@
    "close": 13.71,
    "change_pct": 2.9279279279279313,
    "rating": {
-    "all": "賣出",
-    "ma": "強力賣出",
-    "osc": "賣出",
-    "all_value": -0.39860139860139865
+    "all": "無資料",
+    "ma": "無資料",
+    "osc": "無資料",
+    "all_value": null
    },
    "one_line": "空方趨勢成立，不宜接刀",
    "structure": "有趨勢（ADX 37.8 > 25，空方主導）",
@@ -609,7 +609,7 @@
    },
    "last_date": "2026-11-26",
    "rows": 195,
-   "rating_skipped": null
+   "rating_skipped": "收盤 13.66 ≠ 13.71（可能是盤中數字）"
   },
   "00981A": {
    "code": "00981A",
@@ -668,7 +668,7 @@
    },
    "last_date": "2026-11-26",
    "rows": 368,
-   "rating_skipped": "收盤 21.70 ≠ 21.89（可能是盤中數字）；SMA20 不一致"
+   "rating_skipped": "收盤 21.57 ≠ 21.89（可能是盤中數字）；SMA20 不一致"
   },
   "00411A": {
    "code": "00411A",
@@ -723,7 +723,7 @@
    },
    "last_date": "2026-11-26",
    "rows": 62,
-   "rating_skipped": "收盤 8.28 ≠ 8.20（可能是盤中數字）"
+   "rating_skipped": "收盤 8.31 ≠ 8.20（可能是盤中數字）"
   },
   "0050": {
    "code": "0050",
@@ -731,10 +731,10 @@
    "close": 92.85,
    "change_pct": 2.8239202657807327,
    "rating": {
-    "all": "賣出",
-    "ma": "強力賣出",
-    "osc": "中立",
-    "all_value": -0.4
+    "all": "無資料",
+    "ma": "無資料",
+    "osc": "無資料",
+    "all_value": null
    },
    "one_line": "空方趨勢成立，不宜接刀",
    "structure": "有趨勢（ADX 37.4 > 25，空方主導）",
@@ -782,7 +782,7 @@
    },
    "last_date": "2026-11-26",
    "rows": 477,
-   "rating_skipped": null
+   "rating_skipped": "收盤 92.40 ≠ 92.85（可能是盤中數字）"
   },
   "2330": {
    "code": "2330",
@@ -831,7 +831,7 @@
    },
    "last_date": "2026-11-26",
    "rows": 482,
-   "rating_skipped": "收盤 2,175.00 ≠ 2,145.00（可能是盤中數字）"
+   "rating_skipped": "收盤 2,160.00 ≠ 2,145.00（可能是盤中數字）"
   }
  }
 }

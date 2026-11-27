@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-11-27T04:29:39Z",
- "generated_at_taipei": "2026-11-27 12:29",
+ "generated_at_utc": "2026-11-27T05:41:34Z",
+ "generated_at_taipei": "2026-11-27 13:41",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -240,7 +240,7 @@
   "tv/snapshot": {
    "status": "ok",
    "symbols": 15,
-   "tw_bar_is_intraday": true,
+   "tw_bar_is_intraday": false,
    "us_bar_is_intraday": false
   },
   "fx/usdtwd_mid": {
@@ -249,7 +249,7 @@
    "rows": 518,
    "first": "2024-11-27",
    "last": "2026-11-27",
-   "last_rate": 32.961
+   "last_rate": 32.914
   },
   "macro/SPX": {
    "status": "ok",
@@ -312,44 +312,41 @@
   "macro/DXY": {
    "status": "ok",
    "source": "yahoo DX-Y.NYB",
-   "rows": 504,
+   "rows": 503,
    "first": "2024-11-26",
-   "last": "2026-11-26",
-   "last_close": 103.78199768066406,
-   "prev_close": 103.66999816894531,
+   "last": "2026-11-25",
+   "last_close": 103.66999816894531,
+   "prev_close": 103.80999755859375,
    "name": "美元指數",
-   "cutoff": "2026-11-25",
+   "cutoff": "2026-11-26",
    "cutoff_rule": "24h-v1：美東 17:10～18:00 收當天，其餘只收到前一天；不收週末",
-   "last_kept_from_previous": "2026-11-26",
-   "cross_check": "cnyes 無 2026-11-26 資料（cnyes 最後 2026-11-25）",
+   "cross_check": "2026-11-25 收盤 103.66999816894531 vs cnyes 103.665（差 +0.00%）",
    "cross_check_ok": true
   },
   "macro/GOLD": {
    "status": "ok",
    "source": "yahoo GC=F",
-   "rows": 504,
+   "rows": 503,
    "first": "2024-11-26",
-   "last": "2026-11-26",
-   "last_close": 3593.39990234375,
-   "prev_close": 3535.800048828125,
+   "last": "2026-11-25",
+   "last_close": 3535.800048828125,
+   "prev_close": 3561.89990234375,
    "name": "COMEX 黃金期貨（近月）",
-   "cutoff": "2026-11-25",
+   "cutoff": "2026-11-26",
    "cutoff_rule": "24h-v1：美東 17:10～18:00 收當天，其餘只收到前一天；不收週末",
-   "last_kept_from_previous": "2026-11-26",
    "cross_check": "無第二來源，未核對"
   },
   "macro/WTI": {
    "status": "ok",
    "source": "yahoo CL=F",
-   "rows": 504,
+   "rows": 503,
    "first": "2024-11-26",
-   "last": "2026-11-26",
-   "last_close": 84.91000366210938,
-   "prev_close": 83.68000030517578,
+   "last": "2026-11-25",
+   "last_close": 83.68000030517578,
+   "prev_close": 82.05000305175781,
    "name": "WTI 原油期貨（近月）",
-   "cutoff": "2026-11-25",
+   "cutoff": "2026-11-26",
    "cutoff_rule": "24h-v1：美東 17:10～18:00 收當天，其餘只收到前一天；不收週末",
-   "last_kept_from_previous": "2026-11-26",
    "cross_check": "無第二來源，未核對"
   },
   "macro/TSM": {
