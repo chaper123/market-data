@@ -781,36 +781,36 @@
   "news/headlines": {
    "status": "ok",
    "source": "Google News RSS（news.py）",
-   "last": "2026-11-26 21:00",
-   "items": 3051,
+   "last": "2026-11-27 08:20",
+   "items": 2888,
    "by_tier": {
     "4": 404,
-    "2": 2621,
-    "3": 10,
-    "1": 16
+    "2": 2463,
+    "1": 13,
+    "3": 8
    },
    "feeds_ok": "50/50",
    "errors": 0,
-   "url_ok": 1379,
-   "url_total": 1379,
-   "time_suspect_detected": 28,
-   "time_fixed": 22,
-   "time_removed": 6
+   "url_ok": 1124,
+   "url_total": 1124,
+   "time_suspect_detected": 51,
+   "time_fixed": 50,
+   "time_removed": 1
   },
   "news/fed": {
    "status": "ok",
    "source": "federalreserve.gov RSS",
    "last": "2026-11-26",
-   "checked_at_taipei": "2026-11-26 21:00",
-   "items": 10
+   "checked_at_taipei": "2026-11-27 08:20",
+   "items": 8
   },
   "news/cna": {
    "status": "ok",
    "source": "中央社官方 RSS",
-   "last": "2026-11-26 20:43",
-   "items": 434,
+   "last": "2026-11-27 07:33",
+   "items": 427,
    "feeds_ok": "4/4",
-   "checked_at_taipei": "2026-11-26 21:00"
+   "checked_at_taipei": "2026-11-27 08:20"
   },
   "longterm/tw_business_cycle": {
    "status": "ok",
@@ -864,22 +864,22 @@
   "news/topics": {
    "status": "ok",
    "source": "headlines.json 的 topics 與標題詞（topics.py）",
-   "last": "2026-11-26 21:00",
-   "days_available": 26,
+   "last": "2026-11-27 08:20",
+   "days_available": 27,
    "rising_topic": "tariff",
    "rising_terms": [
-    "fcc",
-    "關稅",
-    "satellites",
-    "approval",
-    "every"
+    "違約",
+    "southeast",
+    "約交割",
+    "shipments",
+    "countries"
    ]
   },
   "news/nsf": {
    "status": "ok",
    "source": "財政部 國家金融安定基金訊息",
    "last": "2026-11-23",
-   "checked_at_taipei": "2026-11-26 21:00",
+   "checked_at_taipei": "2026-11-27 08:20",
    "items": 10
   }
  },
