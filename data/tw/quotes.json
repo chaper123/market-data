@@ -1,5 +1,5 @@
 {
- "fetched_at_taipei": "2026-11-27 11:36",
+ "fetched_at_taipei": "2026-11-27 12:29",
  "quotes": {
   "TWS:009816:STOCK": {
    "price": 13.71,
@@ -9,63 +9,63 @@
    "high": 13.78,
    "low": 13.56,
    "prev_close": 13.71,
-   "volume_lots": 59342.0,
-   "time_taipei": "2026-11-27 11:37"
+   "volume_lots": 69501.0,
+   "time_taipei": "2026-11-27 12:30"
   },
   "TWS:00981A:STOCK": {
-   "price": 21.67,
-   "change": -0.22,
-   "change_pct": -1.01,
+   "price": 21.69,
+   "change": -0.2,
+   "change_pct": -0.91,
    "open": 21.91,
    "high": 22.0,
    "low": 21.44,
    "prev_close": 21.89,
-   "volume_lots": 214500.0,
-   "time_taipei": "2026-11-27 11:37"
+   "volume_lots": 228066.0,
+   "time_taipei": "2026-11-27 12:30"
   },
   "TWS:00411A:STOCK": {
-   "price": 8.27,
-   "change": 0.07,
-   "change_pct": 0.85,
+   "price": 8.28,
+   "change": 0.08,
+   "change_pct": 0.98,
    "open": 8.15,
-   "high": 8.27,
+   "high": 8.3,
    "low": 8.12,
    "prev_close": 8.2,
-   "volume_lots": 964.0,
-   "time_taipei": "2026-11-27 11:36"
+   "volume_lots": 1320.0,
+   "time_taipei": "2026-11-27 12:30"
   },
   "TWS:0050:STOCK": {
-   "price": 92.45,
-   "change": -0.4,
-   "change_pct": -0.43,
+   "price": 92.65,
+   "change": -0.2,
+   "change_pct": -0.22,
    "open": 92.8,
    "high": 93.0,
    "low": 91.6,
    "prev_close": 92.85,
-   "volume_lots": 69915.0,
-   "time_taipei": "2026-11-27 11:37"
+   "volume_lots": 79447.0,
+   "time_taipei": "2026-11-27 12:30"
   },
   "TWS:2330:STOCK": {
-   "price": 2170.0,
-   "change": 25.0,
-   "change_pct": 1.17,
+   "price": 2175.0,
+   "change": 30.0,
+   "change_pct": 1.4,
    "open": 2145.0,
    "high": 2175.0,
    "low": 2135.0,
    "prev_close": 2145.0,
-   "volume_lots": 16326.0,
-   "time_taipei": "2026-11-27 11:37"
+   "volume_lots": 19267.0,
+   "time_taipei": "2026-11-27 12:30"
   },
   "TWS:TSE01:INDEX": {
-   "price": 39291.34,
-   "change": 139.53,
-   "change_pct": 0.36,
+   "price": 39316.9,
+   "change": 165.09,
+   "change_pct": 0.42,
    "open": 39168.57,
    "high": 39495.41,
    "low": 38890.53,
    "prev_close": 39151.81,
-   "volume_lots": 5728706.0,
-   "time_taipei": "2026-11-27 11:37"
+   "volume_lots": 6400199.0,
+   "time_taipei": "2026-11-27 12:30"
   }
  }
 }

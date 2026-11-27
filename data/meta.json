@@ -1,6 +1,6 @@
 {
- "generated_at_utc": "2026-11-27T03:36:53Z",
- "generated_at_taipei": "2026-11-27 11:36",
+ "generated_at_utc": "2026-11-27T04:29:39Z",
+ "generated_at_taipei": "2026-11-27 12:29",
  "datasets": {
   "us/VOO": {
    "status": "ok",
@@ -249,7 +249,7 @@
    "rows": 518,
    "first": "2024-11-27",
    "last": "2026-11-27",
-   "last_rate": 32.934
+   "last_rate": 32.961
   },
   "macro/SPX": {
    "status": "ok",
