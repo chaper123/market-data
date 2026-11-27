@@ -1,11 +1,11 @@
 {
- "fetched_at_taipei": "2026-11-27 13:41",
- "time_utc": "2026-11-26T01:59:59+00:00",
- "score": 15.0,
+ "fetched_at_taipei": "2026-11-27 17:03",
+ "time_utc": "2026-11-27T08:46:01+00:00",
+ "score": 17.86,
  "rating": "extreme fear",
- "previous_close": 15.23,
- "previous_1_week": 15.87,
- "previous_1_month": 29.83,
+ "previous_close": 15.6,
+ "previous_1_week": 18.59,
+ "previous_1_month": 32.89,
  "previous_1_year": 17.66,
  "components": {
   "market_momentum_sp500": {
@@ -33,10 +33,10 @@
    "value": 0.917365722615182
   },
   "market_volatility_vix": {
-   "score": 34.1772151898734,
-   "rating": "fear",
-   "time_utc": "2026-11-25T21:15:01Z",
-   "value": 28.29
+   "score": 50,
+   "rating": "neutral",
+   "time_utc": "2026-11-27T08:46:01Z",
+   "value": 24.74
   },
   "junk_bond_demand": {
    "score": 13.2,
